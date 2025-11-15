@@ -1,0 +1,20 @@
+# Criteria extraction task configuration
+
+name: "criteria"
+type: "binary_classification"
+
+label_column: "label"
+status_column: "status"
+criterion_column: "criterion_id"
+post_id_column: "post_id"
+
+metrics:
+  - "accuracy"
+  - "precision_macro"
+  - "recall_macro"
+  - "f1_macro"
+  - "auroc_macro"
+
+loss:
+  name: "cross_entropy"
+  class_weights: null

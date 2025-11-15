@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "StudySummaryReport",
+  "description": "Study-level summary report referencing the best trial and high-level aggregates (optional artifact; does not replace per-trial reports)",
+  "type": "object",
+  "required": [
+    "report_id",
+    "study_id",
+    "generated_at",
+    "best_trial_id",
+    "best_validation_score",
+    "best_trial_report_path"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique report identifier"
+    },
+    "study_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Identifier for the HPO study"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Report generation timestamp"
+    },
+    "best_trial_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Trial that achieved the best validation score on the optimization metric"
+    },
+    "best_validation_score": {
+      "type": "number",
+      "description": "Best validation score achieved on the optimization metric across the study"
+    },
+    "best_trial_report_path": {
+      "type": "string",
+      "description": "Path to the per-trial EvaluationReport JSON for the best trial"
+    },
+    "optimization_metric_name": {
+      "type": "string",
+      "description": "Optimization metric name used in the study"
+    },
+    "trials_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of completed trials in the study"
+    },
+    "top_trials": {
+      "type": "array",
+      "description": "Optional: Top-N trials summary (id and validation scores)",
+      "items": {
+        "type": "object",
+        "required": ["trial_id", "validation_score"],
+        "properties": {
+          "trial_id": { "type": "string", "format": "uuid" },
+          "validation_score": { "type": "number" }
+        }
+      }
+    },
+    "report_file_path": {
+      "type": "string",
+      "description": "Path to this JSON report file"
+    }
+  }
+}

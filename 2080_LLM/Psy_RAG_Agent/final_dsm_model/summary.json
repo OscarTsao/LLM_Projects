@@ -1,0 +1,12 @@
+{
+  "total_examples": 189925,
+  "train_size": 132950,
+  "test_accuracy": 0.9651432181971357,
+  "test_f1_score": 0.9651641731680001,
+  "gpu_used": "NVIDIA GeForce RTX 3090",
+  "training_params": {
+    "batch_size": 128,
+    "max_features": 8000,
+    "num_epochs": 20
+  }
+}

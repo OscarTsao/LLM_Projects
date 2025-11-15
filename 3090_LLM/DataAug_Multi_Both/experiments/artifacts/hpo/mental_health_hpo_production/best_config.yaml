@@ -1,0 +1,30 @@
+dataset:
+  id: irlab-udc/redsm5
+  revision: null
+deterministic: false
+hardware:
+  grad_accumulation_steps: 1
+  max_length: 512
+  per_device_batch_size: 14
+params:
+  aug.num_methods: 25
+  aug.prob: 0.4233589392465845
+  head.dropout: 0.02904180608409973
+  head.type: mlp
+  loss.focal.alpha_pos: 0.39308947463495336
+  loss.focal.gamma: 1.8764339456056545
+  loss.name: focal
+  optim.lr_encoder: 1.6338208828908808e-05
+  optim.lr_head: 0.00015304852121831474
+  optim.weight_decay: 0.009290082543999545
+  pooling: cls
+  sched.warmup_ratio: 0.013010318597055905
+stage_a:
+  metric: 0.6157383853488603
+  threshold: 0.2798695128633439
+  trial: 1
+stage_b:
+  metric: 0.6573114005772315
+  threshold: 0.5960000000000001
+  trial: 0
+total_trials: 500

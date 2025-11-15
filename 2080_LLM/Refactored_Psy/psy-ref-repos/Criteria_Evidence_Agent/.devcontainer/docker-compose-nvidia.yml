@@ -1,0 +1,22 @@
+name: criteria_evidence_agent
+
+services:
+  dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    working_dir: /workspace
+    runtime: nvidia
+    environment:
+      PYTHONPATH: /workspace/src
+    shm_size: '16gb'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+              count: all
+    command: sleep infinity

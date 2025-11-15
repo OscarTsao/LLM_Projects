@@ -1,0 +1,14 @@
+# MentalBERT configuration
+
+encoder_name: "mental/mental-bert-base-uncased"
+max_length: 512
+gradient_checkpointing: false
+dropout: 0.1
+
+head_hidden_dim: 256
+
+lora:
+  enabled: false
+  r: 8
+  alpha: 16
+  dropout: 0.1

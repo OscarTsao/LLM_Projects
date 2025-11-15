@@ -1,0 +1,21 @@
+# Thorough training configuration for best results
+num_epochs: 30
+batch_size: 32
+learning_rate: 0.0005
+weight_decay: 0.02
+test_size: 0.15
+val_size: 0.15
+random_state: 42
+
+# GPU-specific overrides
+rtx_3090:
+  batch_size: 64
+  num_epochs: 40
+
+standard_gpu:
+  batch_size: 32
+  num_epochs: 30
+
+cpu:
+  batch_size: 16
+  num_epochs: 20

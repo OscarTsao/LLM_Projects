@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.tmp
+*.swp
+.DS_Store
+.env
+.venv
+outputs/
+multirun/
+artifacts/
+optuna.db
+mlruns/
+.dvc/
+*.pt

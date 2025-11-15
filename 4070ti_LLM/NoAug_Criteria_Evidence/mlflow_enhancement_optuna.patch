@@ -1,0 +1,182 @@
+--- a/src/psy_agents_noaug/hpo/optuna_runner.py
++++ b/src/psy_agents_noaug/hpo/optuna_runner.py
+@@ -2,6 +2,7 @@
+ 
+ import json
+ from collections.abc import Callable
++from contextlib import contextmanager
+ from pathlib import Path
+ from typing import Any
+ 
+@@ -178,29 +179,113 @@ class OptunaRunner:
+     def optimize(
+         self,
+         objective_fn: Callable,
+         n_trials: int,
+         search_space: dict[str, dict[str, Any]],
+         mlflow_tracking_uri: str | None = None,
++        mlflow_experiment_name: str | None = None,
+         timeout: float | None = None,
+     ):
+         """
+         Run hyperparameter optimization with comprehensive MLflow tracking.
+ 
+         Args:
+             objective_fn: Objective function to optimize
+             n_trials: Number of trials to run
+             search_space: Hyperparameter search space
+             mlflow_tracking_uri: Optional MLflow tracking URI
++            mlflow_experiment_name: Optional MLflow experiment name for nested runs
+             timeout: Optional timeout in seconds
+         """
+-        # Setup MLflow callback
+-        callbacks = []
++        # Setup MLflow for HPO tracking
+         if mlflow_tracking_uri:
+             mlflow.set_tracking_uri(mlflow_tracking_uri)
+-            mlflow_callback = MLflowCallback(
+-                tracking_uri=mlflow_tracking_uri,
+-                metric_name=self.metric,
++
++        # Get or create parent MLflow run for this HPO study
++        parent_run_id = None
++        if mlflow.active_run():
++            parent_run_id = mlflow.active_run().info.run_id
++        elif mlflow_experiment_name:
++            # Create parent run for HPO study
++            try:
++                experiment_id = mlflow.create_experiment(mlflow_experiment_name)
++            except Exception:
++                experiment = mlflow.get_experiment_by_name(mlflow_experiment_name)
++                experiment_id = experiment.experiment_id if experiment else None
++
++            parent_run = mlflow.start_run(
++                experiment_id=experiment_id,
++                run_name=f"HPO_{self.study_name}",
++                tags={
++                    "hpo_study": self.study_name,
++                    "hpo_metric": self.metric,
++                    "hpo_direction": self.direction,
++                    "hpo_n_trials": str(n_trials),
++                },
+             )
+-            callbacks.append(mlflow_callback)
++            parent_run_id = parent_run.info.run_id
++            mlflow.end_run()
+ 
+         # Create wrapped objective
+         def wrapped_objective(trial):
+-            # Suggest hyperparameters
++            # Start nested MLflow run for this trial
++            trial_run_name = f"trial_{trial.number:04d}"
++
++            with mlflow.start_run(
++                run_name=trial_run_name,
++                nested=True,
++                tags={
++                    "hpo_study": self.study_name,
++                    "trial_number": str(trial.number),
++                    "trial_state": str(trial.state),
++                },
++            ) as trial_run:
++                # Suggest hyperparameters
+-            params = self.suggest_hyperparameters(trial, search_space)
++                params = self.suggest_hyperparameters(trial, search_space)
++
++                # Log trial hyperparameters
++                mlflow.log_params({f"hpo/{k}": v for k, v in params.items()})
++
++                # Log trial metadata
++                mlflow.log_params(
++                    {
++                        "trial_number": trial.number,
++                        "study_name": self.study_name,
++                    }
++                )
+ 
+-            # Call user objective function
+-            return objective_fn(trial, params)
++                try:
++                    # Call user objective function
++                    metric_value = objective_fn(trial, params)
++
++                    # Log trial result
++                    mlflow.log_metrics(
++                        {
++                            f"trial/{self.metric}": metric_value,
++                            "trial/number": trial.number,
++                        }
++                    )
++
++                    return metric_value
++
++                except Exception as e:
++                    # Log failed trial
++                    mlflow.log_param("trial_error", str(e)[:500])
++                    mlflow.set_tag("trial_status", "FAILED")
++                    raise
+ 
+-        # Run optimization
++        # Run optimization with trial tracking
++        callbacks = []
+         self.study.optimize(
+             wrapped_objective,
+             n_trials=n_trials,
+@@ -220,6 +305,47 @@ class OptunaRunner:
+             show_progress_bar=True,
+         )
++
++        # Log HPO study summary to parent run
++        if parent_run_id and mlflow_tracking_uri:
++            with mlflow.start_run(run_id=parent_run_id):
++                # Log best trial results
++                best_trial = self.study.best_trial
++                mlflow.log_params({f"best_hpo/{k}": v for k, v in best_trial.params.items()})
++                mlflow.log_metrics(
++                    {
++                        f"best_{self.metric}": best_trial.value,
++                        "best_trial_number": best_trial.number,
++                        "total_trials": len(self.study.trials),
++                        "completed_trials": len(
++                            [
++                                t
++                                for t in self.study.trials
++                                if t.state == optuna.trial.TrialState.COMPLETE
++                            ]
++                        ),
++                        "pruned_trials": len(
++                            [
++                                t
++                                for t in self.study.trials
++                                if t.state == optuna.trial.TrialState.PRUNED
++                            ]
++                        ),
++                        "failed_trials": len(
++                            [
++                                t
++                                for t in self.study.trials
++                                if t.state == optuna.trial.TrialState.FAIL
++                            ]
++                        ),
++                    }
++                )
++
++                # Log trial history as artifact
++                import pandas as pd
++
++                trials_df = self.study.trials_dataframe()
++                trials_csv_path = Path("hpo_trials_history.csv")
++                trials_df.to_csv(trials_csv_path, index=False)
++                mlflow.log_artifact(str(trials_csv_path))
++                trials_csv_path.unlink()
++
++                # Log optimization history plot if optuna viz available
++                try:
++                    import optuna.visualization as vis
++
++                    fig = vis.plot_optimization_history(self.study)
++                    mlflow.log_figure(fig, "hpo_optimization_history.html")
++                except ImportError:
++                    pass
+ 
+     def get_best_params(self) -> dict[str, Any]:

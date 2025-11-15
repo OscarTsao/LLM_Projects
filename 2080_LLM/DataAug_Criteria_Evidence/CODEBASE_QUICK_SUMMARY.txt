@@ -1,0 +1,218 @@
+========================================================================
+CODEBASE STRUCTURE - QUICK REFERENCE
+PSY Agents NO-AUG (Criteria & Evidence Extraction)
+========================================================================
+
+KEY STATISTICS:
+- Total Python files: 169
+- Source code lines: ~15,000
+- Test functions: 400+
+- Documentation files: 23
+- Configuration files: 23 YAML
+
+========================================================================
+CRITICAL ISSUES IDENTIFIED:
+========================================================================
+
+1. DUPLICATE ARCHITECTURE IMPLEMENTATIONS (376KB + 528KB = 904KB total)
+
+   src/Project/                    [DUPLICATE #1: 376KB]
+   - Contains: Criteria, Evidence, Joint, Share architectures
+   - Status: Used by standalone scripts (train_criteria.py, etc.)
+   - Issue: Entire directory is DUPLICATE of architectures/
+
+   src/psy_agents_noaug/architectures/  [DUPLICATE #2: 528KB]
+   - Contains: Identical Criteria, Evidence, Joint, Share architectures
+   - Status: NOT used by main CLI or Makefile targets
+   - Issue: Includes train/eval engines that aren't used
+
+   RECOMMENDATION: Remove src/Project/ entirely, use architectures/ only
+   IMPACT: -376KB disk space, eliminates confusion
+
+---
+
+2. AUGMENTATION CODE IN NO-AUG PROJECT (100KB total)
+
+   src/psy_agents_noaug/augmentation/     [32KB - UNUSED]
+   ├── pipeline.py                        (11KB - AugmenterPipeline)
+   ├── registry.py                        (6.6KB - Registry)
+   └── tfidf_cache.py                     (2.4KB - Caching)
+
+   src/psy_agents_noaug/data/augmentation_utils.py  [UNUSED]
+   src/psy_agents_noaug/data/classification_loader.py  [UNUSED]
+
+   Test files (55KB):
+   - test_augmentation_registry.py (12KB)
+   - test_augmentation_utils.py (19KB)
+   - test_tfidf_cache.py (771B)
+   - test_tfidf_cache_extended.py (11KB)
+
+   Dependencies (unused):
+   - nlpaug>=1.1.11,<2.0
+   - textattack>=0.3.10,<1.0
+
+   Issue: This is a "NO-AUG" baseline, yet has extensive augmentation code
+   RECOMMENDATION: Remove all augmentation modules, imports, tests, and dependencies
+   IMPACT: -100KB code + faster pip install + clearer mission
+
+---
+
+3. UNUSED/HIDDEN SCRIPTS (7 of 16 scripts are unclear or unused)
+
+   PRODUCTION-READY BUT NOT EXPOSED:
+   - scripts/train_criteria.py (416 lines) - HIDDEN
+   - scripts/eval_criteria.py (306 lines) - HIDDEN
+
+   PARTIALLY UNCLEAR:
+   - scripts/make_groundtruth.py - likely duplicates CLI command
+   - scripts/gpu_utilization.py - no Makefile target
+   - scripts/profile_augmentation.py - profiling augmentation (NO-AUG?)
+   - scripts/train_best.py - router script with unclear usage
+   - scripts/run_hpo_stage.py - HPO integration unclear
+
+   RECOMMENDATION: Document or expose production-ready scripts
+   IMPACT: Improved discoverability for users
+
+---
+
+4. NEAR-DUPLICATE TEST FILES
+
+   test_train_smoke.py (208 bytes) - MINIMAL, near-empty
+   vs.
+   test_training_smoke.py (4.7KB) - COMPREHENSIVE
+
+   RECOMMENDATION: Remove test_train_smoke.py
+   IMPACT: Minimal (-200 bytes)
+
+---
+
+5. DOCUMENTATION CONSOLIDATION OPPORTUNITIES
+
+   Can merge:
+   - OPTIMIZATION_SUMMARY.md + CLEANUP_SUMMARY.md
+   - docs/README.md vs root README.md (possible overlap)
+
+   Unclear relevance:
+   - AGENTS.md (seems historical)
+
+   IMPACT: Minimal (organizational cleanup)
+
+========================================================================
+FILE INVENTORY BY STATUS:
+========================================================================
+
+ACTIVELY USED:
+- src/psy_agents_noaug/ (main package)
+  - cli.py (though mostly stubs)
+  - training/ (train_loop.py, evaluate.py)
+  - data/ (groundtruth.py, datasets.py, loaders.py)
+  - hpo/ (optuna_runner.py)
+  - utils/ (reproducibility.py, mlflow_utils.py)
+  - models/ (encoders, heads)
+
+- scripts/ (7 Makefile-referenced scripts)
+  - audit_security.py
+  - bench_dataloader.py
+  - generate_licenses.py
+  - generate_sbom.py
+  - run_all_hpo.py
+  - tune_max.py
+  - verify_determinism.py
+
+- configs/ (all 23 YAML files)
+  - Hydra composition system (working well)
+
+- tests/ (most test files active)
+  - 400+ test functions across 23 files
+  - Excellent coverage for training pipeline
+
+HIGH CONFIDENCE UNUSED:
+- src/Project/ (entire directory - DUPLICATE)
+- src/psy_agents_noaug/augmentation/
+- src/psy_agents_noaug/data/augmentation_utils.py
+- src/psy_agents_noaug/data/classification_loader.py
+- tests/test_augmentation_registry.py
+- tests/test_augmentation_utils.py
+- tests/test_tfidf_cache.py
+- tests/test_tfidf_cache_extended.py
+- tests/test_train_smoke.py
+- nlpaug (dependency)
+- textattack (dependency)
+
+PARTIALLY UNCLEAR:
+- scripts/train_criteria.py (production-ready but hidden)
+- scripts/eval_criteria.py (production-ready but hidden)
+- scripts/make_groundtruth.py (duplicates CLI?)
+- scripts/train_best.py (conditional use)
+- scripts/run_hpo_stage.py (integration unclear)
+- scripts/gpu_utilization.py (no target)
+- scripts/profile_augmentation.py (no target)
+
+========================================================================
+CONSOLIDATION ROADMAP (Priority Order):
+========================================================================
+
+PHASE 1: REMOVE AUGMENTATION (1-2 hours)
+  - Remove src/psy_agents_noaug/augmentation/
+  - Remove augmentation_utils.py, classification_loader.py
+  - Remove augmentation imports
+  - Remove test_augmentation_*.py files
+  - Remove nlpaug, textattack dependencies
+
+PHASE 2: CONSOLIDATE ARCHITECTURES (2-4 hours)
+  - Remove src/Project/ entirely
+  - Update scripts to use psy_agents_noaug.architectures
+  - Consolidate duplicate utilities
+
+PHASE 3: CLARIFY SCRIPTS (1-2 hours)
+  - Document production-ready scripts
+  - Add Makefile targets or deprecate accordingly
+  - Clarify script purposes
+
+PHASE 4: CLEAN TESTS (<1 hour)
+  - Remove test_train_smoke.py
+  - Mark/remove augmentation tests
+
+PHASE 5: DOCUMENTATION (<1 hour)
+  - Merge similar docs
+  - Verify AGENTS.md relevance
+
+TOTAL ESTIMATED EFFORT: 5-9 hours
+SPACE SAVINGS: 500KB+ code + faster pip install
+
+========================================================================
+STRUCTURE HIGHLIGHTS (WORKING WELL):
+========================================================================
+
+STRENGTHS:
++ Hydra configuration system (excellent organization)
++ Field separation enforcement (strict validation)
++ Comprehensive test coverage (400+ tests)
++ Clear training/evaluation split
++ MLflow integration for experiment tracking
++ Multiple model options (BERT, RoBERTa, DeBERTa)
++ Four architecture implementations (Criteria, Evidence, Joint, Share)
++ HPO system (multi-stage + maximal options)
+
+AREAS NEEDING WORK:
+- Remove code duplication (Project/ + architectures/)
+- Remove augmentation code (inconsistent with "NO-AUG" mission)
+- Clarify script exposure (hidden but production-ready scripts)
+- Consolidate overlapping documentation
+
+========================================================================
+CONCLUSION:
+========================================================================
+
+The codebase is PRODUCTION-READY for the stated NO-AUG baseline but
+has accumulated technical debt from:
+
+1. Parallel architecture implementations (architectural debt)
+2. Augmentation code despite being a NO-AUG project (mission creep)
+3. Hidden production scripts (discoverability issue)
+
+Recommended: Execute Phase 1-2 consolidation for significant improvement.
+
+For detailed analysis, see: CODEBASE_STRUCTURE_ANALYSIS.md
+
+========================================================================

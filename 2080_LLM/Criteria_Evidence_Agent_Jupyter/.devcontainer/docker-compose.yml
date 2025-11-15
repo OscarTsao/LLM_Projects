@@ -1,0 +1,53 @@
+services:
+  dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/workspace:cached
+    working_dir: /workspace
+    runtime: nvidia
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      MLFLOW_EXPERIMENT_NAME: redsm5_classification
+      OPTUNA_STORAGE_URL: postgresql://mlflow:mlflow@postgres:5432/mlflow
+      PYTHONPATH: /workspace/src
+    shm_size: '16gb'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+              count: all
+    depends_on:
+      - postgres
+      - mlflow
+  postgres:
+    image: postgres:15
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: mlflow
+      POSTGRES_PASSWORD: mlflow
+      POSTGRES_DB: mlflow
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+  mlflow:
+    build:
+      context: .
+      dockerfile: Dockerfile.mlflow
+    restart: unless-stopped
+    command: >
+      mlflow server --backend-store-uri postgresql://mlflow:mlflow@postgres:5432/mlflow --default-artifact-root /mlflow/artifacts --host 0.0.0.0 --port 5000
+    ports:
+      - '5000:5000'
+    environment:
+      MLFLOW_TRACKING_URI: http://0.0.0.0:5000
+    volumes:
+      - mlflow-artifacts:/mlflow/artifacts
+    depends_on:
+      - postgres
+
+volumes:
+  mlflow-artifacts:
+  postgres-data:

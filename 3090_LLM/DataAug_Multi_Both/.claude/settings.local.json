@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(test:*)",
+      "Bash(.specify/scripts/bash/check-prerequisites.sh:*)",
+      "Bash(.specify/scripts/bash/setup-plan.sh:*)",
+      "Bash(.specify/scripts/bash/update-agent-context.sh:*)",
+      "Bash(find:*)",
+      "Bash(chmod:*)",
+      "WebSearch",
+      "Bash(poetry lock:*)",
+      "Bash(poetry install:*)",
+      "Bash(poetry --version)",
+      "Bash(poetry env:*)",
+      "Bash(poetry cache clear:*)",
+      "Bash(poetry show:*)",
+      "Bash(poetry config:*)",
+      "Bash(pip install:*)",
+      "Bash(python:*)",
+      "Bash(pip uninstall:*)",
+      "Bash(pip show:*)",
+      "Bash(make:*)",
+      "Bash(if [ -f \"experiments/hpo_quick_test.db\" ])",
+      "Bash(then python -c \"\nimport optuna\nstudy = optuna.load_study(''hpo_quick_test'', ''sqlite:///experiments/hpo_quick_test.db'')\nprint(f''Study: {study.study_name}'')\nprint(f''Total trials: {len(study.trials)}'')\nprint(f''COMPLETE: {len([t for t in study.trials if t.state == optuna.trial.TrialState.COMPLETE])}'')\nprint(f''PRUNED: {len([t for t in study.trials if t.state == optuna.trial.TrialState.PRUNED])}'')\nprint(f''FAIL: {len([t for t in study.trials if t.state == optuna.trial.TrialState.FAIL])}'')\nif study.best_trial:\n    print(f''\\nBest trial:'')\n    print(f''  Value: {study.best_trial.value}'')\n    print(f''  Params: {study.best_trial.params}'')\n\")",
+      "Bash(fi)",
+      "Bash(tree:*)",
+      "Bash(xargs -I {} python -c \"import json; print(json.dumps(json.load(open(''''{}'''')), indent=2))\")",
+      "Bash(xargs cat:*)",
+      "Bash(nvidia-smi:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

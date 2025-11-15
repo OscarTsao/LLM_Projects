@@ -1,0 +1,30 @@
+defaults:
+  - data: evidence_pairs
+  - model: deberta_v3
+  - trainer: cv
+  - loss: weighted_ce
+  - cv: default
+  - logger: mlflow
+  - runtime: default
+  - _self_
+
+project:
+  name: "5-fold-deberta-evidence"
+  seed: 1337
+
+paths:
+  repo_root: ${oc.env:PROJECT_ROOT,/home/oscartsao/Developer/Evidence_Sentence_NoAug}
+  mlflow_tracking_uri: sqlite:///mlflow.db
+  mlflow_artifact_root: ./mlruns
+  outputs_dir: outputs
+  datasets_dir: outputs/datasets
+  manifests_dir: outputs/manifests
+  metrics_dir: outputs/metrics
+
+data: ${data}
+model: ${model}
+trainer: ${trainer}
+loss: ${loss}
+cv: ${cv}
+logger: ${logger}
+runtime: ${runtime}

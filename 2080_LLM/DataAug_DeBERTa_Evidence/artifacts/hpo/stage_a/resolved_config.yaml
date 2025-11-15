@@ -1,0 +1,214 @@
+seed: 902335198
+encoder:
+  model_name: microsoft/deberta-v3-base
+  revision: main
+  tokenizer_name: microsoft/deberta-v3-base
+  gradient_checkpointing: false
+tokenizer:
+  max_length: 256
+  padding: true
+  truncation: true
+train:
+  num_epochs: 100
+  per_device_batch_size: 16
+  grad_accum_steps: 4
+  max_length: 256
+  amp: fp16
+  grad_clip_norm: 1.0
+  torch_compile: false
+  logging_steps: 25
+  eval_frequency: 1
+  save_frequency: 1
+  num_workers: 2
+  deterministic: true
+  early_stopping:
+    patience: 20
+    min_delta: 1.0e-06
+optim:
+  optimizer: lion
+  lr_encoder: 7.345340153697028e-06
+  lr_head: 9.931670973408442e-05
+  weight_decay: 0.00013214583524101325
+  betas:
+  - 0.9
+  - 0.999
+  eps: 1.0e-08
+sched:
+  type: linear
+  warmup_ratio: 0.16883408979383943
+  num_cycles: 0
+  min_lr_ratio: 0.0
+loss:
+  label_smoothing: 0.04037069042458968
+  class_weighting: inverse_freq
+mtl:
+  task_weight_evidence: 0.5690408472900506
+heads:
+  evidence:
+    num_classes: 3
+    pooler_type: max
+    type: mlp
+    activation: relu
+    dropout: 0.02078642952519605
+    norm: layernorm
+    layers: 1
+    hidden: 512
+  criteria:
+    num_classes: 5
+    pooler_type: cls
+    type: linear
+    activation: silu
+    dropout: 0.014986794936338976
+    norm: layernorm
+objective:
+  primary_metric: val_ev_macro_f1
+  composite:
+    enabled: false
+    weights:
+      val_ev_macro_f1: 0.5
+      val_cr_macro_f1: 0.5
+checkpoint:
+  dir: ./experiments
+  filename: checkpoint.pt
+  save_best_only: true
+data:
+  dataset_id: local/smoke
+  revision: '0'
+  splits:
+    train: train
+    validation: validation
+    test: test
+  cache_dir: ./Data/cache
+  token_cache_dir: ./Data/token_cache
+  fields:
+    text: text
+    evidence: evidence
+    evidence_label: evidence_label
+    criteria_label: criteria_label
+  max_examples: null
+  smoke_dataset_size: 32
+  stratify: false
+augmentation:
+  seed: 42
+  apply_to: evidence
+  sample_limit: 10
+  artifact_subdir: augmentation
+  simple:
+    compose: sequence
+    enabled_mask:
+      EDA: false
+      CharSwap: false
+      Embedding: false
+      BackTranslation: false
+      CheckList: true
+      CLARE: true
+    params:
+      EDA:
+        p_token: 0.1
+        tpe: 1
+      CharSwap:
+        p_token: 0.1
+        tpe: 1
+      Embedding:
+        p_token: 0.1
+        tpe: 1
+      BackTranslation:
+        p_token: 0.1
+        tpe: 1
+      CheckList:
+        p_token: 0.15172699018071767
+        tpe: 2
+      CLARE:
+        p_token: 0.24559637101456838
+        tpe: 1
+  ta:
+    enabled_mask:
+      TextFoolerJin2019: true
+      PWWSRen2019: false
+      DeepWordBugGao2018: false
+      HotFlipEbrahimi2017: false
+      IGAWang2019: false
+      Kuleshov2017: false
+      CheckList2020: false
+      BAEGarg2019: false
+    params:
+      TextFoolerJin2019:
+        p_token: 0.2544585540437554
+        tpe: 0
+      PWWSRen2019:
+        p_token: 0.1
+        tpe: 1
+      DeepWordBugGao2018:
+        p_token: 0.1
+        tpe: 1
+      HotFlipEbrahimi2017:
+        p_token: 0.1
+        tpe: 1
+      IGAWang2019:
+        p_token: 0.1
+        tpe: 1
+      Kuleshov2017:
+        p_token: 0.1
+        tpe: 1
+      CheckList2020:
+        p_token: 0.1
+        tpe: 1
+      BAEGarg2019:
+        p_token: 0.1
+        tpe: 1
+  compose_cross_family: serial_then_attack
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment_name: deberta_v3_evidence
+  artifact_location: ./mlruns
+  buffer:
+    dir: ./artifacts/mlflow_buffer
+    backoff_initial: 1.0
+    backoff_max: 60.0
+    max_records_per_replay: 200
+hpo:
+  storage: sqlite:///optuna.db
+  study_base_name: deberta_v3_evidence
+  direction: maximize
+  objective_metric: val_ev_macro_f1
+  total_trial_cap: 500
+  plateau_patience: 120
+  driver:
+    timeout_seconds: 604800
+    k_top: 5
+    global_seed: 42
+  stage_a:
+    name_suffix: stage_a
+    trials: 380
+    epochs: 100
+    timeout_ratio: 0.6
+    sampler:
+      type: tpe
+      seed: 42
+      params:
+        multivariate: true
+        group: true
+        n_startup_trials: 60
+        n_ei_candidates: 128
+    pruner:
+      type: hyperband
+      min_resource: 1
+      reduction_factor: 3
+  stage_b:
+    name_suffix: stage_b
+    trials: 120
+    epochs: 100
+    timeout_ratio: 0.4
+    sampler:
+      type: tpe
+      seed: 123
+      params:
+        multivariate: true
+        group: true
+        n_startup_trials: 30
+        n_ei_candidates: 128
+    pruner:
+      type: percentile
+      percentile: 25.0
+      n_startup_trials: 10
+      n_warmup_steps: 2

@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/utils/mlflow_setup.py
+# hypothesis_version: 6.140.3
+
+['Ended MLflow run', 'artifact_uri', 'end_time', 'experiment_id', 'metrics', 'params', 'records', 'run_id', 'sqlite:///', 'start_time', 'status', 'tags']

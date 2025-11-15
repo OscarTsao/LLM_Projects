@@ -1,0 +1,41 @@
+Post_ID,Post_Text,Agoraphobia_A,Agoraphobia_B,Agoraphobia_C,Agoraphobia_D,Agoraphobia_E,Agoraphobia_F,Agoraphobia_G,Agoraphobia_H,Agoraphobia_I,Anxiety Disorder Due to Another Medical Condition_A,Anxiety Disorder Due to Another Medical Condition_B,Anxiety Disorder Due to Another Medical Condition_C,Anxiety Disorder Due to Another Medical Condition_D,Anxiety Disorder Due to Another Medical Condition_E,Depressive Disorder Due to Another Medical Condition_A,Depressive Disorder Due to Another Medical Condition_B,Depressive Disorder Due to Another Medical Condition_C,Depressive Disorder Due to Another Medical Condition_D,Depressive Disorder Due to Another Medical Condition_E,Disruptive Mood Dysregulation Disorder_A,Disruptive Mood Dysregulation Disorder_B,Disruptive Mood Dysregulation Disorder_C,Disruptive Mood Dysregulation Disorder_D,Disruptive Mood Dysregulation Disorder_E,Disruptive Mood Dysregulation Disorder_F,Disruptive Mood Dysregulation Disorder_G,Disruptive Mood Dysregulation Disorder_H,Disruptive Mood Dysregulation Disorder_I,Disruptive Mood Dysregulation Disorder_J,Disruptive Mood Dysregulation Disorder_K,Generalized Anxiety Disorder_A,Generalized Anxiety Disorder_B,Generalized Anxiety Disorder_C,Generalized Anxiety Disorder_D,Generalized Anxiety Disorder_E,Generalized Anxiety Disorder_F,Major Depressive Disorder_A,Major Depressive Disorder_B,Major Depressive Disorder_C,Major Depressive Disorder_D,Major Depressive Disorder_E,Panic Disorder_A,Panic Disorder_B,Panic Disorder_C,Panic Disorder_D,Persistent Depressive Disorder (Dysthymia)_A,Persistent Depressive Disorder (Dysthymia)_B,Persistent Depressive Disorder (Dysthymia)_C,Persistent Depressive Disorder (Dysthymia)_D,Persistent Depressive Disorder (Dysthymia)_E,Persistent Depressive Disorder (Dysthymia)_F,Persistent Depressive Disorder (Dysthymia)_G,Persistent Depressive Disorder (Dysthymia)_H,Premenstrual Dysphoric Disorder_A,Premenstrual Dysphoric Disorder_B,Premenstrual Dysphoric Disorder_C,Premenstrual Dysphoric Disorder_D,Premenstrual Dysphoric Disorder_E,Premenstrual Dysphoric Disorder_F,Premenstrual Dysphoric Disorder_G,Selective Mutism_A,Selective Mutism_B,Selective Mutism_C,Selective Mutism_D,Selective Mutism_E,Selective Mutism_F,Selective Mutism_G,Separation Anxiety Disorder_A,Separation Anxiety Disorder_B,Separation Anxiety Disorder_C,Separation Anxiety Disorder_D,Social Anxiety Disorder (Social Phobia)_A,Social Anxiety Disorder (Social Phobia)_B,Social Anxiety Disorder (Social Phobia)_C,Social Anxiety Disorder (Social Phobia)_D,Social Anxiety Disorder (Social Phobia)_E,Social Anxiety Disorder (Social Phobia)_F,Social Anxiety Disorder (Social Phobia)_G,Social Anxiety Disorder (Social Phobia)_H,Social Anxiety Disorder (Social Phobia)_I,Social Anxiety Disorder (Social Phobia)_J,Specific Phobia_A,Specific Phobia_B,Specific Phobia_C,Specific Phobia_D,Specific Phobia_E,Specific Phobia_F,Specific Phobia_G,Substance/Medication-Induced Anxiety Disorder_A,Substance/Medication-Induced Anxiety Disorder_B,Substance/Medication-Induced Anxiety Disorder_C,Substance/Medication-Induced Anxiety Disorder_D,Substance/Medication-Induced Anxiety Disorder_E,Substance/Medication-Induced Depressive Disorder_A,Substance/Medication-Induced Depressive Disorder_B,Substance/Medication-Induced Depressive Disorder_C,Substance/Medication-Induced Depressive Disorder_D,Substance/Medication-Induced Depressive Disorder_E
+0,"assistant
+原文：Post: Having a really bad stretch of days.. Hi all, I know this sub moves kinda fast bu...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+1,"assistant
+原文：I'm not even sure what's going on with my body, but I think I need to get back on track...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+2,"assistant
+原文：I've been dealing with depression and anxiety for months, and the whole situation is re...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+3,"assistant
+原文：I'm 33, had a full-time job for several years and have a young son. I took a leave from...",0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,1,1,1,1,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,1
+4,"assistant
+原文：
+原PO: @TAIDE
+
+翻譯：
+我剛剛完成了人生中的第一次心理治療，我不太確定自己是否喜歡這種感覺。今天我試著很開放地談了很多事，但她（治療師）只稍微提到了我曾有過的自殺...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+5,"assistant
+原文：
+
+原翻譯：
+
+我該如何避免再次崩潰？ 我今年過得很差， 曾經有過想自殺的念頭， 我的愛人離開了， 我在大學裡不及格， 身體上也被打， 也被性侵， 今天我爺爺過世了。 我覺得...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+6,"assistant
+原文：
+原貼文：(無提供原文內容)
+你要我翻譯的原文是另一則貼文的內容，並非你所提到的那段文字。如果你需要我翻譯某則特定的英文貼文，請提供該則貼文的內容，我將協助翻譯。
+
+假設你需...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+7,"assistant
+原文：1. I've been struggling to find my place in the world and feeling disconnected from my ...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+8,"assistant
+
+原文：
+
+原文中提及的個人經歷和想法，可能涉及個人隱私和敏感議題，為確保翻譯內容的準確性和敏感性，以下是修正後的翻譯：
+
+我感覺就像我所想的，似乎我是唯一一個有這種想法的人。 我...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+9,"assistant
+原文：
+原翻譯已大致正確，但為求精確，以下是修正版：
+
+原文：Does anyone else's depression causes them to constantly day...",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

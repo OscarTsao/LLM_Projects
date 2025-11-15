@@ -1,0 +1,218 @@
+# Hardware-optimized configuration for RTX 3090 + i7-8700 system
+# This configuration extracts all performance-related settings from Optuna search
+# and sets them to optimal values for this specific hardware configuration
+
+defaults:
+  - default
+  - _self_
+
+# Fixed hardware-optimized settings (removed from Optuna search space)
+# RTX 3090: 24GB VRAM, Ampere architecture with TF32, BF16 support
+# i7-8700: 6 cores, 12 threads, 46GB RAM
+
+# Conservative batch sizes for RTX 3090 (accounting for other processes)
+train_loader:
+  batch_size: 64   # Conservative for RTX 3090 with BERT-base + torch.compile
+  shuffle: true
+  num_workers: 8   # Optimal for i7-8700 (6 cores, leave 4 for system)
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+  drop_last: false
+
+val_loader:
+  batch_size: 128  # Larger batch for evaluation (no gradients)
+  shuffle: false
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+  drop_last: false
+
+test_loader:
+  batch_size: 128  # Larger batch for evaluation (no gradients)
+  shuffle: false
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+  drop_last: false
+
+eval_batch_size: 128  # Keep consistent with loaders
+
+# Training optimizations for RTX 3090
+training:
+  num_epochs: 100
+  gradient_accumulation_steps: 1  # RTX 3090 has enough VRAM for large batches
+  clip_grad_norm: 1.0  # Conservative gradient clipping
+  use_compile: false   # Disabled to reduce memory usage during testing
+  use_amp: true        # Mixed precision for RTX 3090
+  amp_dtype: bfloat16  # BF16 is optimal for Ampere architecture
+  use_grad_checkpointing: false  # Disable with large VRAM to maximize speed
+  threshold: 0.5       # Standard classification threshold
+  max_steps_per_epoch: null  # No artificial limits
+  max_checkpoints: 5
+  early_stopping_patience: 10
+  save_checkpoints: true
+  save_best_only: false
+  save_optimizer_state: true
+  save_history: true
+  include_history_in_checkpoint: true
+  save_config_in_checkpoint: true
+
+# Hardware-specific optimizations
+hardware:
+  dataloader_pin_memory: true
+  enable_tf32: true              # TF32 for Ampere GPUs
+  cudnn_benchmark: true          # Optimize for consistent input sizes
+  use_bfloat16_if_available: true  # Use BF16 on RTX 3090
+  num_threads: 8                 # Optimal for i7-8700
+
+# Optimizer settings (removed from search space)
+optimizer:
+  _target_: torch.optim.AdamW
+  lr: 2e-5           # Standard BERT learning rate
+  weight_decay: 0.01  # Standard weight decay
+  betas: [0.9, 0.999]  # Standard Adam betas
+  eps: 1e-8          # Standard epsilon
+
+# Scheduler settings (removed from search space)
+scheduler:
+  _target_: torch.optim.lr_scheduler.ReduceLROnPlateau
+  mode: max
+  factor: 0.5
+  patience: 5
+  min_lr: 1e-7
+
+# Model settings (dropout kept in search space)
+model:
+  _target_: model.get_pairwise_model
+  model_name: bert-base-uncased
+  device: null  # auto-detect
+  dropout: 0.1  # Will be overridden by Optuna
+
+# Loss function (kept in search space)
+loss:
+  _target_: model.AdaptiveFocalLoss
+  alpha: 0.25
+  gamma: 2.0
+  delta: 1.0
+  reduction: mean
+
+# Monitoring
+monitor_metric: f1
+monitor_mode: max
+
+# Paths
+output_dir: outputs/training
+
+# Optuna configuration for model/method parameters only
+optuna:
+  enabled: false  # Will be overridden when used
+  n_trials: 200
+  direction: maximize
+  timeout: null
+  seed: 42
+  study_name: model_method_hpo
+  storage: null
+  load_if_exists: true
+  cleanup_trial_dirs: false
+  keep_best_trial_dir: true
+  remove_best_trial_dir_after_export: false
+  artifact_root: null
+
+# Reduced search space - only model/method parameters
+search_space:
+  # Model architecture parameters
+  dropout:
+    method: uniform
+    low: 0.0
+    high: 0.5
+
+  # Loss function exploration
+  loss_function:
+    method: categorical
+    choices: [
+      "bce",
+      "weighted_bce",
+      "focal",
+      "adaptive_focal",
+      "hybrid_bce_focal",
+      "hybrid_bce_adaptive_focal"
+    ]
+
+  # Loss function parameters
+  alpha:  # For focal losses
+    method: uniform
+    low: 0.1
+    high: 0.75
+  gamma:  # For focal losses
+    method: uniform
+    low: 0.5
+    high: 5.0
+  delta:  # For adaptive focal
+    method: uniform
+    low: 0.25
+    high: 3.0
+  bce_weight:  # For hybrid loss
+    method: uniform
+    low: 0.1
+    high: 0.9
+  pos_weight:  # For weighted BCE
+    method: loguniform
+    low: 0.1
+    high: 10.0
+
+  # Learning parameters
+  learning_rate:
+    method: loguniform
+    low: 5e-6
+    high: 1e-4
+  weight_decay:
+    method: loguniform
+    low: 1e-6
+    high: 5e-2
+
+  # Training dynamics
+  threshold:
+    method: uniform
+    low: 0.1
+    high: 0.9
+  early_stopping_patience:
+    method: categorical
+    choices: [5, 7, 10, 15, 20]
+
+  # Optimizer parameters
+  optimizer_type:
+    method: categorical
+    choices: ["adamw", "adam"]
+  beta1:
+    method: uniform
+    low: 0.85
+    high: 0.95
+  beta2:
+    method: uniform
+    low: 0.99
+    high: 0.999
+  eps:
+    method: loguniform
+    low: 1e-10
+    high: 1e-6
+
+  # Scheduler parameters
+  scheduler_type:
+    method: categorical
+    choices: ["plateau", "cosine", "linear", "exponential"]
+  scheduler_patience:
+    method: categorical
+    choices: [3, 5, 7, 10, 15]
+  scheduler_factor:
+    method: uniform
+    low: 0.1
+    high: 0.8
+
+hydra:
+  run:
+    dir: outputs/training/${now:%Y%m%d_%H%M%S}
+  sweep:
+    dir: outputs/training/multirun/${now:%Y%m%d_%H%M%S}

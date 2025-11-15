@@ -1,0 +1,26 @@
+# @package _global_
+
+data:
+  # Paths for data loading (train.py compatibility)
+  dsm5_dir: "data/DSM5"
+  csv_path: "data/redsm5/posts.csv"
+  annotations_path: "data/redsm5/annotations.csv"
+
+  # Dataset parameters
+  pos_neg_ratio: 3  # 1:3 positive to negative ratio
+  max_length: 512   # Max token length for DeBERTa
+
+  # Output paths
+  output_pairs: "${paths.datasets_dir}/evidence_pairs.parquet"
+  manifest_path: "${paths.manifests_dir}/folds.json"
+
+  # Sampling strategy
+  neg_strategy: "stratified"
+
+  # Text normalization
+  text_normalization:
+    lowercase: true
+    strip_whitespace: true
+
+  seed: 1337
+  allow_small_folds: false

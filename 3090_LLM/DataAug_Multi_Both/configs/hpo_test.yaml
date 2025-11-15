@@ -1,0 +1,33 @@
+# HPO Test Configuration
+# Small-scale test for validating the HPO pipeline
+
+# Study configuration
+study_name: "hpo_test_${now:%Y%m%d_%H%M%S}"
+n_trials: 3  # Small number for testing
+
+# Dataset configuration
+dataset:
+  id: "irlab-udc/redsm5"
+  revision: "main"
+  cache_dir: "~/.cache/huggingface"
+
+# MLflow configuration
+mlflow:
+  tracking_uri: "sqlite:///experiments/mlflow_db/mlflow.db"
+  experiment_name: "hpo_test"
+
+# Checkpoint retention policy
+retention_policy:
+  keep_last_n: 1
+  keep_best_k: 1
+  keep_best_k_max: 2
+  max_total_size_gb: 5.0
+
+# Logging
+logging:
+  level: INFO
+  json_log_file: "experiments/logs/hpo_test_${now:%Y%m%d_%H%M%S}.json"
+
+# Directories
+experiments_dir: "experiments"
+study_db: "experiments/hpo_test.db"

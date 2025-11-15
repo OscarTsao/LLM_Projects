@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: criteria-binder-dev:latest
+    container_name: criteria-binder-devcontainer
+    working_dir: /app
+    user: appuser
+    volumes:
+      - ..:/app
+      - ${HOME}/.cache/huggingface:/home/appuser/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    command: ["sleep", "infinity"]
+

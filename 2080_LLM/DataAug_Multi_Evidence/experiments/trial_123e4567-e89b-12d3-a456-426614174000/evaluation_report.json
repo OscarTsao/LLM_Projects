@@ -1,0 +1,31 @@
+{
+  "report_id": "8a271209-bfb6-4123-91e4-f1bf436a7ef8",
+  "trial_id": "123e4567-e89b-12d3-a456-426614174000",
+  "generated_at": "2025-10-17T09:49:00.981300+00:00",
+  "config": {
+    "placeholder": true
+  },
+  "optimization_metric_name": "val_f1_macro",
+  "best_validation_score": 0.0,
+  "evaluated_checkpoints": [
+    {
+      "checkpoint_id": "92361842-0bc6-4e98-8026-a9dc78a6fea2",
+      "path": "experiments/trial_123e4567-e89b-12d3-a456-426614174000/checkpoints/best.pt",
+      "epoch": 0,
+      "step": 0,
+      "validation_metric": 0.0,
+      "co_best": false
+    }
+  ],
+  "test_metrics": {
+    "evidence_binding": {
+      "span_f1": 0.0,
+      "precision": 0.0,
+      "recall": 0.0,
+      "exact_match": 0.0,
+      "char_f1": 0.0,
+      "null_span_accuracy": 0.0
+    }
+  },
+  "report_file_path": "/media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Multi_Evidence/experiments/trial_123e4567-e89b-12d3-a456-426614174000/evaluation_report.json"
+}

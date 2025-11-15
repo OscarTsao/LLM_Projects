@@ -1,0 +1,26 @@
+# Memory-optimized DeBERTa configuration for 32GB GPU
+pretrained_model_name: microsoft/deberta-base
+classifier_hidden_sizes: []  # Start with no classifier layers to save memory
+classifier_dropout: 0.1
+max_seq_length: 256  # Conservative sequence length
+
+# Optimizer settings
+warmup_ratio: 0.1
+learning_rate: 2e-5
+weight_decay: 0.01
+optimizer: adamw_torch
+scheduler: linear
+adam_eps: 1e-8
+max_grad_norm: 1.0
+
+# Memory-conservative batch settings
+batch_size: 16  # Reduced from 32 for DeBERTa
+gradient_accumulation_steps: 2  # Effective batch = 32
+num_epochs: 5
+
+# Performance optimizations
+compile_model: false  # Disabled for memory safety
+use_bfloat16: false   # Disabled for DeBERTa due to overflow issues
+
+# Memory management
+use_gradient_checkpointing: true  # Trade compute for memory

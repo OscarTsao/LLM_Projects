@@ -1,0 +1,59 @@
+# Default Augmentation Configuration
+# Controls data augmentation during training
+#
+# Usage:
+#   python -m psy_agents_noaug.cli train augmentation=default
+#   python -m psy_agents_noaug.cli train augmentation.enabled=false  # Disable
+
+augmentation:
+  # Master switch: enable/disable all augmentation
+  enabled: false  # Set to true to enable augmentation
+
+  # Augmentation scope: when to apply augmentation
+  # Options: 'train_only' (recommended), 'all', 'none'
+  scope: train_only
+
+  # Seed for deterministic augmentation (set to null for non-deterministic)
+  seed: 42
+
+  # Augmentation probability: chance of augmenting each sample
+  p_apply: 0.15  # 15% of samples will be augmented
+
+  # Number of augmentation operations per sample
+  ops_per_sample: 1  # Apply 1 transformation per sample
+
+  # Maximum ratio of words to replace in each operation
+  max_replace_ratio: 0.3  # Replace up to 30% of words
+
+  # TF-IDF model path for synonym replacement (optional)
+  # If null, will use default WordNet-based synonyms
+  tfidf_model_path: null
+
+  # Reserved words mapping (optional)
+  # JSON file mapping domain-specific terms to preserve
+  reserved_map_path: null
+
+  # Specific augmentation methods configuration
+  # Available methods from src/psy_agents_noaug/augmentation/registry.py
+  methods:
+    - "all"  # Use all available methods, or specify: ["synonym", "contextual", ...]
+
+  # Per-method configuration overrides
+  method_kwargs:
+    # Example: Configure synonym replacement
+    # "nlpaug/word/SynonymAug":
+    #   aug_src: "wordnet"
+    #   aug_p: 0.1
+
+    # Example: Configure character-level augmentation
+    # "nlpaug/char/KeyboardAug":
+    #   aug_char_p: 0.05
+
+  # Cache configuration for performance
+  cache:
+    enabled: true
+    backend: "memory"  # Options: "memory", "disk"
+    max_size_mb: 512   # Maximum cache size in MB
+
+  # Example limit for logging augmentation examples
+  example_limit: 32  # Store first 32 examples for inspection

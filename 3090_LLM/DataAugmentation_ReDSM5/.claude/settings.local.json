@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//home/oscartsao/.config/**)",
+      "Read(//home/oscartsao/**)",
+      "Bash(claude-code:*)",
+      "Bash(python -m ruff check:*)",
+      "Bash(python:*)",
+      "Bash(git init:*)",
+      "Bash(git branch:*)",
+      "Bash(chmod:*)",
+      "Bash(docker compose:*)",
+      "Bash(docker logs:*)",
+      "Bash(lsof:*)",
+      "Bash(netstat:*)",
+      "Bash(curl:*)",
+      "Bash(kill:*)",
+      "Bash(docker start:*)",
+      "Bash(docker ps:*)",
+      "Bash(docker exec:*)",
+      "Bash(nvidia-smi:*)",
+      "Bash(docker inspect:*)",
+      "Bash(docker stop:*)",
+      "Read(//experiment/YuNing/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

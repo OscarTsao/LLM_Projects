@@ -1,0 +1,34 @@
+defaults:
+  - dataset: original
+  - model: bert_base
+  - _self_
+
+seed: 1337
+output_dir: outputs/train
+log_dir: logs
+resume: true
+save_total_limit: 1
+metric_for_best_model: roc_auc
+regression_threshold: 0.5
+
+dataloader:
+  num_workers: 16  # Optimized for 28 CPU cores + RTX 5090
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 8  # Higher prefetch for GPU speed
+
+metrics:
+  - accuracy
+  - precision
+  - recall
+  - f1
+  - roc_auc
+
+scheduler_kwargs: {}
+notes: ""
+n_trials: 500
+timeout: null
+evaluation:
+  checkpoint: null
+  output_path: test_metrics.json
+  split: test

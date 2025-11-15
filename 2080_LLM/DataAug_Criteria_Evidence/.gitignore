@@ -1,0 +1,73 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local experiment state (never commit)
+mlflow.db
+optuna.db
+mlruns/
+runs/
+outputs/
+artifacts/
+_rundir/
+_runs/
+_optuna/
+*.log
+
+# Editors/OS
+.DS_Store
+.vscode/
+.idea/
+
+# Tool caches (DO NOT COMMIT)
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+htmlcov_*/
+
+# Temporary and backup files
+*.patch
+*.backup
+*.bak
+*.log
+*.tmp
+
+# Generated reports (regenerate from source)
+bandit_report.*
+pip_audit_report.*
+licenses_summary.json
+profiling_*.json
+profiling_*.csv
+
+# SBOM files (keep only SBOM.txt)
+SBOM.json
+sbom.json
+
+# Status and completion reports
+PRODUCTION_*.md
+BENCHMARK_*.md
+SECURITY_*.md
+OPTIMIZATION_*.md
+ANALYSIS_*.md
+*_SUMMARY.md
+*_COMPLETE.md
+*_REPORT.md
+FILE_MANIFEST.txt
+INVENTORY.md
+CODEBASE_GUIDE.md
+EXPLORATION_SUMMARY.md
+COMPLIANCE_SUMMARY.txt
+COVERAGE_SUMMARY.txt
+
+# Runtime artifacts
+_optuna/
+_runs/
+artifacts/
+mlruns/
+optuna.db
+*.db-journal

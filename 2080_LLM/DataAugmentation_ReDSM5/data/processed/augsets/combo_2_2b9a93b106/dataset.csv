@@ -1,0 +1,94 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I habe t9at i'm cryinL rn.,I habe t9at i'm cryinL rn.,I hate that i am crying rn.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I eate thDt i'm cr$ing rn.,I eate thDt i'm cr$ing rn.,I hate that i am crying rn.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I'm 3ery sad.,I'm 3ery sad.,I am very sad.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_411_1189_1
+I'm hery sad.,I'm hery sad.,I am very sad.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_411_1189_1
+I've beHn feel9ng Fown on and off.,I've beHn feel9ng Fown on and off.,I have been feeling down on and off.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I'm vBry depressCd also.,I'm vBry depressCd also.,I am very depressed also.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_131_822_0
+I'm vern depressed Zlso.,I'm vern depressed Zlso.,I am very depressed also.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_131_822_0
+I'm 2eing t2rtured.,I'm 2eing t2rtured.,I am being tortured.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm b$ing torGured.,I'm b$ing torGured.,I am being tortured.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm v6ry ti+ed.,I'm v6ry ti+ed.,I am very tired.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm ve_y tfred.,I'm ve_y tfred.,I am very tired.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm. . vadness,I'm. . vadness,I am.. sadness,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I'm. . sJdness,I'm. . sJdness,I am.. sadness,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I'm mor1 thPn annoyed.,I'm mor1 thPn annoyed.,I am more than annoyed.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_1296_12_9
+I'm more tqan Xnnoyed.,I'm more tqan Xnnoyed.,I am more than annoyed.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_1296_12_9
+I'm worthhess.,I'm worthhess.,I am worthless.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_2415_2_3
+I'm worthleso.,I'm worthleso.,I am worthless.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_2415_2_3
+I'm hopelzss.,I'm hopelzss.,I am hopeless.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2415_2_4
+I'm hopFless.,I'm hopFless.,I am hopeless.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2415_2_4
+I'm extremply s7icidal atm.,I'm extremply s7icidal atm.,I am extremely suicidal atm.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I'm eCtremely suicAdal atm.,I'm eCtremely suicAdal atm.,I am extremely suicidal atm.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I've alreadM 3lanned my own s8icide.,I've alreadM 3lanned my own s8icide.,I have already planned my own suicide.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1989_742_0
+I've alread5 p!anned my own suicyde.,I've alread5 p!anned my own suicyde.,I have already planned my own suicide.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1989_742_0
+But I'm feeFing viserable.,But I'm feeFing viserable.,But I am feeling miserable.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_2415_600_3
+But I'm Oeeling miserabme.,But I'm Oeeling miserabme.,But I am feeling miserable.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_2415_600_3
+I'm sad waEting.,I'm sad waEting.,I am sad waiting.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I'm sad wai(ing.,I'm sad wai(ing.,I am sad waiting.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I've issOes in focusXng and bttention.,I've issOes in focusXng and bttention.,I have issues in focusing and attention.,nlp_randchar_sub+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+I caLt f0cus and i've no eoergy.,I caLt f0cus and i've no eoergy.,I cant focus and i have no energy.,nlp_randchar_sub+ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+I jus8 don ' t Phink I'd Vike to liOe anymore.,I jus8 don ' t Phink I'd Vike to liOe anymore.,I just don't think I would like to live anymore.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I've adways Vailed.,I've adways Vailed.,I have always failed.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_356_95_6
+I'm fuckiGg CBYING.,I'm fuckiGg CBYING.,I am fucking CRYING.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm fucIing CoYING.,I'm fucIing CoYING.,I am fucking CRYING.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm in a constanz di@emma.,I'm in a constanz di@emma.,I am in a constant dilemma.,nlp_randchar_sub+ta_contraction,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm in a Fonstant divemma.,I'm in a Fonstant divemma.,I am in a constant dilemma.,nlp_randchar_sub+ta_contraction,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm veey lobely now.,I'm veey lobely now.,I am very lonely now.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm v_ry lon&ly now.,I'm v_ry lon&ly now.,I am very lonely now.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm kynda angSy all the tim(.,I'm kynda angSy all the tim(.,I am kinda angry all the time.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I'm kin9a Bngry all the tLme.,I'm kin9a Bngry all the tLme.,I am kinda angry all the time.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I'm tir#d.,I'm tir#d.,I am tired.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_681_475_2
+I'm tjred.,I'm tjred.,I am tired.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_681_475_2
+I'd really like soBe freQ energy righW now.,I'd really like soBe freQ energy righW now.,I would really like some free energy right now.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_969_1077_3
+I'd really lPke some frXe energy rTght now.,I'd really lPke some frXe energy rTght now.,I would really like some free energy right now.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_969_1077_3
+i've Fothing to kive for wersonally.,i've Fothing to kive for wersonally.,i have nothing to live for personally.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+I'm 3ery foeused on sex.,I'm 3ery foeused on sex.,I am very focused on sex.,nlp_randchar_sub+ta_contraction,SPECIAL_CASE,1,s_731_903_4
+I'm veMy focus3d on sex.,I'm veMy focus3d on sex.,I am very focused on sex.,nlp_randchar_sub+ta_contraction,SPECIAL_CASE,1,s_731_903_4
+I'm faiying miserabxy.,I'm faiying miserabxy.,I am failing miserably.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_993_720_4
+I'm 1ailing muserably.,I'm 1ailing muserably.,I am failing miserably.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_993_720_4
+EJen my low pa4n days I've no Dnergy.,EJen my low pa4n days I've no Dnergy.,Even my low pain days I have no energy.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_1749_905_17
+EvNn my low 1ain dayw I've no energy.,EvNn my low 1ain dayw I've no energy.,Even my low pain days I have no energy.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_1749_905_17
+"I'm ir!itated, yes.","I'm ir!itated, yes.","I am irritated, yes.",nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+"I'm ir*itated, yes.","I'm ir*itated, yes.","I am irritated, yes.",nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+"I've so muc$ Euilt and reqorse, Danny.","I've so muc$ Euilt and reqorse, Danny.","I have so much guilt and remorse, Danny.",nlp_randchar_sub+ta_contraction,WORTHLESSNESS,0,s_1674_10_490
+SoZe niglts I'd get no sceep at all.,SoZe niglts I'd get no sceep at all.,Some nights I would get no sleep at all.,nlp_randchar_sub+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+I've Gound comfort in my saNness,I've Gound comfort in my saNness,I have found comfort in my sadness,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_2415_116_0
+I'm so exhau3ted.,I'm so exhau3ted.,I am so exhausted.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_697_17_12
+I'm so exha!sted.,I'm so exha!sted.,I am so exhausted.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_697_17_12
+I'm asso restlEss.,I'm asso restlEss.,I am also restless.,nlp_randchar_sub+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm alsL restCess.,I'm alsL restCess.,I am also restless.,nlp_randchar_sub+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm feeling suici#al anain.,I'm feeling suici#al anain.,I am feeling suicidal again.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_993_450_6
+I'm feeling suAcidal agBin.,I'm feeling suAcidal agBin.,I am feeling suicidal again.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_993_450_6
+I've Zost motivatjon.,I've Zost motivatjon.,I have lost motivation.,nlp_randchar_sub+ta_contraction,ANHEDONIA,1,s_2415_566_0
+Mentallh I've no Energy eithem.,Mentallh I've no Energy eithem.,Mentally I have no energy either.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_1404_852_6
+MayIe a aetter future t&at i could've,MayIe a aetter future t&at i could've,Maybe a better future that i could have,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe a bettdr fueure th8t i could've,Maybe a bettdr fueure th8t i could've,Maybe a better future that i could have,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+MayIe a aetter future t&at i could've,MayIe a aetter future t&at i could've,Maybe a better future that i could have,nlp_randchar_sub+ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+Maybe a bettdr fueure th8t i could've,Maybe a bettdr fueure th8t i could've,Maybe a better future that i could have,nlp_randchar_sub+ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+I'm juCt sad.,I'm juCt sad.,I am just sad.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_1681_1030_1
+I'm jast sad.,I'm jast sad.,I am just sad.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_1681_1030_1
+I've morw ene3gy.,I've morw ene3gy.,I have more energy.,nlp_randchar_sub+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I'm fuckUng HNGRY now.,I'm fuckUng HNGRY now.,I am fucking ANGRY now.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_188_399_2
+I'm fuckiLg ANXRY now.,I'm fuckiLg ANXRY now.,I am fucking ANGRY now.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_188_399_2
+Yet I'm #epressed.,Yet I'm #epressed.,Yet I am depressed.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+Yet I'm dapressed.,Yet I'm dapressed.,Yet I am depressed.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+I'm sucD an irr@table tick.,I'm sucD an irr@table tick.,I am such an irritable dick.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+I'm buch an irrita9le Qick.,I'm buch an irrita9le Qick.,I am such an irritable dick.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+I'm anxio)s mucg of the timB.,I'm anxio)s mucg of the timB.,I am anxious much of the time.,nlp_randchar_sub+ta_contraction,PSYCHOMOTOR,1,s_716_38_24
+I'm a^xious mCch of the t3me.,I'm a^xious mCch of the t3me.,I am anxious much of the time.,nlp_randchar_sub+ta_contraction,PSYCHOMOTOR,1,s_716_38_24
+"CrLss my hear(, I'd cry some2imes.","CrLss my hear(, I'd cry some2imes.","Cross my heart, I would cry sometimes.",nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,0,s_469_428_1
+I've sl#ep problemw too.,I've sl#ep problemw too.,I have sleep problems too.,nlp_randchar_sub+ta_contraction,SLEEP_ISSUES,0,s_2502_62_2
+I've s^eep mroblems too.,I've s^eep mroblems too.,I have sleep problems too.,nlp_randchar_sub+ta_contraction,SLEEP_ISSUES,0,s_2502_62_2
+I'm feeliSg de_ressed.,I'm feeliSg de_ressed.,I am feeling depressed.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_993_781_1
+I'm fedling depressmd.,I'm fedling depressmd.,I am feeling depressed.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_993_781_1
+I've a ver1 hardtime mFking deci&ions.,I've a ver1 hardtime mFking deci&ions.,I have a very hardtime making decisions.,nlp_randchar_sub+ta_contraction,COGNITIVE_ISSUES,1,s_759_88_0
+i'm Kngry all the tim&.,i'm Kngry all the tim&.,i am angry all the time.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2107_89_1
+i'm Nngry all the ti0e.,i'm Nngry all the ti0e.,i am angry all the time.,nlp_randchar_sub+ta_contraction,DEPRESSED_MOOD,1,s_2107_89_1
+"I ' ve aIways felt Rretty guilty about the amount that I not Inly sleep talk but sleep shUut, actuaily, I pretty much only sleep ehout. .. If I ' m shouting angrily at someone in my dream theD chan1es are I'll shout it out load too, wakilg us both up.","I ' ve aIways felt Rretty guilty about the amount that I not Inly sleep talk but sleep shUut, actuaily, I pretty much only sleep ehout. .. If I ' m shouting angrily at someone in my dream theD chan1es are I'll shout it out load too, wakilg us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_2727_538_0
+I'm j+st tired at thiu plint.,I'm j+st tired at thiu plint.,I am just tired at this point.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_592_276_0
+I'm just tiKed at thds %oint.,I'm just tiKed at thds %oint.,I am just tired at this point.,nlp_randchar_sub+ta_contraction,FATIGUE,1,s_592_276_0
+I 6ont want to suitide because I'd feeN Yuilty.,I 6ont want to suitide because I'd feeN Yuilty.,I dont want to suicide because I would feel guilty.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont wact to suicide because I'd feeE guiltX.,I dont wact to suicide because I'd feeE guiltX.,I dont want to suicide because I would feel guilty.,nlp_randchar_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont wact to suicide because I'd feeE guiltX.,I dont wact to suicide because I'd feeE guiltX.,I dont want to suicide because I would feel guilty.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_1404_218_6
+I 6ont want to suitide because I'd feeN Yuilty.,I 6ont want to suitide because I'd feeN Yuilty.,I dont want to suicide because I would feel guilty.,nlp_randchar_sub+ta_contraction,WORTHLESSNESS,1,s_1404_218_6

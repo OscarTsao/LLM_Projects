@@ -1,0 +1,19 @@
+# Hybrid augmentation configuration
+enabled: true
+pipeline: hybrid_pipeline
+
+# Augmentation parameters
+ratio: 0.5
+max_aug_per_sample: 2
+seed: 42
+
+# Hybrid mix proportions (must sum to 1.0)
+mix_proportions:
+  nlpaug_synonym: 0.5
+  textattack_wordnet: 0.5
+
+# Balance preservation
+preserve_balance: true
+
+# CRITICAL: Only augment training data
+train_only: true

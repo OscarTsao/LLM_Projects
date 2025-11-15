@@ -1,0 +1,160 @@
+dataset:
+  name: original
+  include_original: true
+  use_augmented: []
+  ground_truth_path: Data/GroundTruth/Final_Ground_Truth.json
+  augmented_sources:
+    nlpaug: Data/Augmentation/nlpaug_dataset_*.csv
+    textattack: Data/Augmentation/textattack_dataset_*.csv
+    hybrid: Data/Augmentation/hybrid_dataset_*.csv
+  splits:
+    train: 0.7
+    val: 0.15
+    test: 0.15
+  shuffle_seed: 42
+  max_examples: null
+model:
+  pretrained_model_name: google-bert/bert-base-uncased
+  classifier_hidden_sizes: []
+  classifier_dropout: 0.1
+  max_seq_length: 256
+  warmup_ratio: 0.1
+  learning_rate: 2.0e-05
+  weight_decay: 0.01
+  optimizer: adamw_torch
+  scheduler: linear
+  batch_size: 32
+  eval_batch_size: 64
+  gradient_accumulation_steps: 1
+  num_epochs: 100
+  adam_eps: 1.0e-08
+  max_grad_norm: 1.0
+  compile_model: true
+  use_bfloat16: true
+  early_stopping_patience: 20
+training_mode:
+  agent:
+    model_name: google-bert/bert-base-uncased
+    max_seq_length: 512
+    dropout: 0.1
+    shared_encoder: true
+    freeze_encoder_epochs: 0
+    criteria_loss_weight: 0.5
+    evidence_loss_weight: 0.5
+    classifier_hidden_sizes:
+    - 256
+    loss_type: adaptive_focal
+    alpha: 0.25
+    gamma: 2.0
+    delta: 1.0
+    label_smoothing: 0.0
+    max_span_length: 50
+    span_threshold: 0.5
+    learning_rate: 2.0e-05
+    weight_decay: 0.01
+    warmup_ratio: 0.1
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    num_epochs: 100
+    max_grad_norm: 1.0
+    optimizer: adamw_torch
+    adam_eps: 1.0e-08
+    scheduler: linear
+    use_amp: true
+    use_compile: false
+    use_gradient_checkpointing: true
+    early_stopping_patience: 10
+    metric_for_best_model: combined_f1
+    ground_truth_path: Data/GroundTruth/Final_Ground_Truth.json
+    posts_path: Data/ReDSM5/redsm5_posts.csv
+    annotations_path: Data/ReDSM5/redsm5_annotations.csv
+    criteria_path: null
+  training_mode: joint
+  data:
+    ground_truth_path: ${training_mode.agent.ground_truth_path}
+    posts_path: ${training_mode.agent.posts_path}
+    annotations_path: ${training_mode.agent.annotations_path}
+    criteria_path: ${training_mode.agent.criteria_path}
+  model:
+    pretrained_model_name: ${training_mode.agent.model_name}
+    max_seq_length: ${training_mode.agent.max_seq_length}
+    classifier_dropout: ${training_mode.agent.dropout}
+    shared_encoder: ${training_mode.agent.shared_encoder}
+    freeze_encoder_epochs: ${training_mode.agent.freeze_encoder_epochs}
+    criteria_loss_weight: ${training_mode.agent.criteria_loss_weight}
+    evidence_loss_weight: ${training_mode.agent.evidence_loss_weight}
+    classifier_hidden_sizes: ${training_mode.agent.classifier_hidden_sizes}
+    loss_type: ${training_mode.agent.loss_type}
+    alpha: ${training_mode.agent.alpha}
+    gamma: ${training_mode.agent.gamma}
+    delta: ${training_mode.agent.delta}
+    label_smoothing: ${training_mode.agent.label_smoothing}
+    max_span_length: ${training_mode.agent.max_span_length}
+    span_threshold: ${training_mode.agent.span_threshold}
+    learning_rate: ${training_mode.agent.learning_rate}
+    weight_decay: ${training_mode.agent.weight_decay}
+    warmup_ratio: ${training_mode.agent.warmup_ratio}
+    batch_size: ${training_mode.agent.batch_size}
+    gradient_accumulation_steps: ${training_mode.agent.gradient_accumulation_steps}
+    num_epochs: ${training_mode.agent.num_epochs}
+    max_grad_norm: ${training_mode.agent.max_grad_norm}
+    optimizer: ${training_mode.agent.optimizer}
+    adam_eps: ${training_mode.agent.adam_eps}
+    scheduler: ${training_mode.agent.scheduler}
+    use_amp: ${training_mode.agent.use_amp}
+    compile_model: true
+    use_gradient_checkpointing: ${training_mode.agent.use_gradient_checkpointing}
+  early_stopping_patience: ${training_mode.agent.early_stopping_patience}
+  metric_for_best_model: combined_f1
+  output_dir: outputs/joint/${now:%Y%m%d_%H%M%S}
+  dataloader:
+    num_workers: 24
+    pin_memory: true
+    persistent_workers: true
+    prefetch_factor: 4
+  optuna:
+    n_trials: 500
+    timeout: null
+    study_name: joint_training_hpo
+    storage: sqlite:///optuna_joint.db
+    direction: maximize
+seed: 1337
+output_dir: outputs/train
+log_dir: logs
+resume: true
+save_total_limit: 1
+metric_for_best_model: roc_auc
+regression_threshold: 0.5
+early_stopping_patience: 20
+dataloader:
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+metrics:
+- accuracy
+- precision
+- recall
+- f1
+- roc_auc
+logging:
+  wandb:
+    enabled: false
+    project: redsm5-classification
+    entity: null
+    group: null
+    tags: []
+    mode: null
+    run_name: null
+mlflow:
+  enabled: true
+  tracking_uri: ${oc.env:MLFLOW_TRACKING_URI,"sqlite:///mlflow.db"}
+  fallback_tracking_uri: ${oc.env:MLFLOW_FALLBACK_TRACKING_URI,"mlruns"}
+  experiments:
+    training: redsm5-classification
+scheduler_kwargs: {}
+notes: ''
+evaluation:
+  checkpoint: null
+  output_path: test_metrics.json
+  split: test

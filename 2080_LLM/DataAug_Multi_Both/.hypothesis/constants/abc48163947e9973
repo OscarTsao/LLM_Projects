@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/data/augmentation.py
+# hypothesis_version: 6.140.3
+
+[0.0, 0.1, 0.3, 0.5, 'augmentation_applied', 'augmented_evidence', 'char_perturb', 'eda', 'evidence_spans', 'insert', 'none', 'original_evidence', 'swap', 'synonym', 'text']

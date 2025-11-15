@@ -1,0 +1,34 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I hte tat i'm cryig rn.,I hte tat i'm cryig rn.,I hate that i am crying rn.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I hae hat i'm cryng rn.,I hae hat i'm cryng rn.,I hate that i am crying rn.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I'm eing totured.,I'm eing totured.,I am being tortured.,nlp_randchar_del+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm beng ortured.,I'm beng ortured.,I am being tortured.,nlp_randchar_del+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm sleep deprive I nee elp,I'm sleep deprive I nee elp,I am sleep deprived I need help,nlp_randchar_del+ta_contraction,SLEEP_ISSUES,1,s_1313_32_0
+I'm slee deprived I ned hel,I'm slee deprived I ned hel,I am sleep deprived I need help,nlp_randchar_del+ta_contraction,SLEEP_ISSUES,1,s_1313_32_0
+I'm supe epressed rght now.,I'm supe epressed rght now.,I am super depressed right now.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_993_726_1
+I'm sper epressed ight now.,I'm sper epressed ight now.,I am super depressed right now.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_993_726_1
+I'm vry tred.,I'm vry tred.,I am very tired.,nlp_randchar_del+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm ery ired.,I'm ery ired.,I am very tired.,nlp_randchar_del+ta_contraction,FATIGUE,1,s_1030_1290_8
+I've ' t lept in ays.,I've ' t lept in ays.,I haven't slept in days.,nlp_randchar_del+ta_contraction,SLEEP_ISSUES,1,s_1535_1109_0
+I'm. . adness,I'm. . adness,I am.. sadness,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I'm. . sadnes,I'm. . sadnes,I am.. sadness,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I jus don ' t think I'd lik to ive anmore.,I jus don ' t think I'd lik to ive anmore.,I just don't think I would like to live anymore.,nlp_randchar_del+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I've alwys filed.,I've alwys filed.,I have always failed.,nlp_randchar_del+ta_contraction,WORTHLESSNESS,1,s_356_95_6
+I'm fuckng CRYIN.,I'm fuckng CRYIN.,I am fucking CRYING.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm fuckin CRYIG.,I'm fuckin CRYIG.,I am fucking CRYING.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm vey lonel now.,I'm vey lonel now.,I am very lonely now.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm vey loney now.,I'm vey loney now.,I am very lonely now.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm kida angr all the tie.,I'm kida angr all the tie.,I am kinda angry all the time.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I'm inda agry all the tim.,I'm inda agry all the tim.,I am kinda angry all the time.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I'm jst terrifid of faiing.,I'm jst terrifid of faiing.,I am just terrified of failing.,nlp_randchar_del+ta_contraction,WORTHLESSNESS,1,s_1601_203_31
+I'm jut terrifie of faiing.,I'm jut terrifie of faiing.,I am just terrified of failing.,nlp_randchar_del+ta_contraction,WORTHLESSNESS,1,s_1601_203_31
+I'm alo restles.,I'm alo restles.,I am also restless.,nlp_randchar_del+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm lso rstless.,I'm lso rstless.,I am also restless.,nlp_randchar_del+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I've mre energ.,I've mre energ.,I have more energy.,nlp_randchar_del+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I've ore enegy.,I've ore enegy.,I have more energy.,nlp_randchar_del+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I'm suh an irritale dck.,I'm suh an irritale dck.,I am such an irritable dick.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+I'm suh an irritble dik.,I'm suh an irritble dik.,I am such an irritable dick.,nlp_randchar_del+ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+I'm anious muc of the ime.,I'm anious muc of the ime.,I am anxious much of the time.,nlp_randchar_del+ta_contraction,PSYCHOMOTOR,1,s_716_38_24
+I'm anxous muh of the tim.,I'm anxous muh of the tim.,I am anxious much of the time.,nlp_randchar_del+ta_contraction,PSYCHOMOTOR,1,s_716_38_24
+I'm jus tired at thi poin.,I'm jus tired at thi poin.,I am just tired at this point.,nlp_randchar_del+ta_contraction,FATIGUE,1,s_592_276_0
+I'm just tred at thi poin.,I'm just tred at thi poin.,I am just tired at this point.,nlp_randchar_del+ta_contraction,FATIGUE,1,s_592_276_0

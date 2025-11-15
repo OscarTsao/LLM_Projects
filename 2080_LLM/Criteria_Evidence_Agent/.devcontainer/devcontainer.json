@@ -1,0 +1,44 @@
+{
+  "name": "Criteria Evidence Agent",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "dev",
+  "workspaceFolder": "/workspace",
+  "runServices": [
+    "postgres",
+    "mlflow",
+    "dev"
+  ],
+  "postCreateCommand": "pip install -e .[dev]",
+  "remoteEnv": {
+    "MLFLOW_TRACKING_URI": "http://mlflow:5000",
+    "MLFLOW_EXPERIMENT_NAME": "redsm5_classification",
+    "OPTUNA_STORAGE_URL": "postgresql://mlflow:mlflow@postgres:5432/mlflow",
+    "PYTHONPATH": "/workspace/src"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-azuretools.vscode-docker",
+        "GitHub.copilot"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "python.defaultInterpreterPath": "/usr/bin/python",
+        "python.linting.enabled": true,
+        "python.formatting.provider": "black",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [5000],
+  "portsAttributes": {
+    "5000": {
+      "label": "MLflow UI",
+      "onAutoForward": "notify"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+pretrained_model_name: roberta-base
+max_seq_length: 288
+doc_stride: 48
+classifier_hidden_sizes:
+  - 768
+  - 768
+  - 768
+  - 768
+dropout: 0.46
+base_model_dropout: 0.46
+base_model_attention_dropout: 0.46
+pooling: max
+activation: relu
+loss_type: focal
+alpha: 0.54
+alpha_strategy: effective_num
+alpha_beta: 0.9985
+gamma: 4.0
+delta: 0.0
+use_gradient_checkpointing: true

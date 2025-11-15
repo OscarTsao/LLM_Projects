@@ -1,0 +1,48 @@
+# @package _global_.training
+batch_size: 8
+val_batch_size: 16
+test_batch_size: 16
+num_workers: 8
+gradient_accumulation_steps: 1
+max_epochs: 100
+
+optimizer:
+  name: adamw
+  learning_rate: 2e-5
+  weight_decay: 0.01
+  eps: 1e-8
+  layerwise_lr_decay: 1.0  # 1.0 = no decay, 0.9 = 10% decay per layer
+
+scheduler:
+  name: linear
+  warmup_ratio: 0.1
+  cosine_cycles: 0.5
+  onecycle_max_lr: 5e-5
+  onecycle_pct_start: 0.3
+  plateau_patience: 2
+  plateau_factor: 0.5
+  polynomial_power: 1.0
+
+max_grad_norm: 1.0
+amp: true
+bf16: true
+logging_interval: 50
+ema_decay: 0.0  # 0.0 = disabled, 0.9999 = typical EMA
+
+focal:
+  initial_gamma: 2.0
+  target_positive_rate: 0.25
+  alpha: 0.25
+  min_gamma: 1.0
+  max_gamma: 5.0
+
+early_stopping:
+  patience: 3
+  monitor: val_symptom_labels_macro_f1
+  min_delta: 0.001
+
+loss_weights:
+  symptom_labels: 1.0
+  evidence_token: 1.0
+  evidence_span_start: 1.0
+  evidence_span_end: 1.0

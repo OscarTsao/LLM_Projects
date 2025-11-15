@@ -1,0 +1,10 @@
+dataset:
+  path: data/redsm5_sample.jsonl
+  text_field: text
+  id_field: post_id
+splits:
+  dir: configs/data/splits
+  train: ${splits.dir}/train.jsonl
+  dev: ${splits.dir}/dev.jsonl
+  test: ${splits.dir}/test.jsonl
+seed: 42

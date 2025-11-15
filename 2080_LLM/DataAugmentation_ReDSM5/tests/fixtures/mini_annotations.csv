@@ -1,0 +1,16 @@
+post_id,post_text,evidence,criterion,label
+r1_short,"I feel great today! Life is good and everything is wonderful.","Life is good","criterion_A",positive
+r2_long,"The patient has exhibited persistent patterns of behavior over the past several months including difficulty maintaining relationships, impulsive decision-making without regard for consequences, rapid mood fluctuations that can change within hours, and a chronic feeling of emptiness that pervades daily functioning.","persistent patterns of behavior over the past several months including difficulty maintaining relationships, impulsive decision-making without regard for consequences","criterion_B",clinical
+r3_special,"Warning!!! This is @critical #urgent $$$$ Need help ASAP!!!","@critical #urgent $$$$","criterion_C",urgent
+r4_unicode,"Me siento muy triste hoy 😢 No puedo más... Es difícil für mich ñoño","muy triste hoy 😢 No puedo","criterion_D",multilingual
+r5_multisentence,"The symptoms started gradually. They worsened over time. Now they are constant. The patient reports daily distress.","They worsened over time. Now they are constant.","criterion_E",progressive
+r6_start,"Patient denies all allegations and refuses to cooperate with treatment recommendations provided by clinical staff.","Patient denies all allegations","criterion_F",resistance
+r7_end,"Multiple assessments have been conducted. Various interventions attempted. All strategies ultimately proved ineffective.","All strategies ultimately proved ineffective.","criterion_G",outcome
+r8_repeated,"The patient patient shows repeated repeated behaviors with certain certain word word patterns patterns.","repeated repeated behaviors with certain certain word word patterns","criterion_H",repetition
+r9_ambiguous,"The doctor said the doctor would review the case. The doctor was thorough.","The doctor was thorough.","criterion_I",ambiguous
+r10_similar,"Quality filter test case with very similar evidence span.","Quality filter test","criterion_J",quality
+r11_mismatch,"This is the post text without the evidence.","Evidence not in post at all","criterion_K",skipped
+r12_whitespace,"Text  with   irregular     spacing
+and newlines
+  everywhere  here","irregular     spacing
+and newlines","criterion_L",whitespace

@@ -1,0 +1,36 @@
+{
+  "name": "PSY Agents NO-AUG",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
+  "service": "app",
+  "workspaceFolder": "/workspace",
+  "runServices": [
+    "mlflow"
+  ],
+  "shutdownAction": "stopCompose",
+  "hostRequirements": {
+    "gpu": "required"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "charliermarsh.ruff",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/workspace/.venv/bin/python"
+      }
+    }
+  },
+  "containerEnv": {
+    "MLFLOW_TRACKING_URI": "sqlite:///mlflow.db",
+    "MLFLOW_ARTIFACT_URI": "file:///workspace/mlruns",
+    "TORCH_VERSION": "2.1.2",
+    "TORCH_INDEX_URL": "https://download.pytorch.org/whl/cu121"
+  },
+  "postCreateCommand": "bash -lc 'poetry install --with dev && poetry run pip install --no-cache-dir --index-url ${TORCH_INDEX_URL:-https://download.pytorch.org/whl/cu121} torch==${TORCH_VERSION:-2.1.2}'",
+  "remoteUser": "vscode"
+}

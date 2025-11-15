@@ -1,0 +1,25 @@
+{
+  "combo_methods": [
+    "nlp_keyboard",
+    "ta_wordswap_homoglyph"
+  ],
+  "combo_id": "a18cb2620b",
+  "variants_per_sample": 2,
+  "seed": 42,
+  "rows": 362,
+  "source_input": "/experiment/YuNing/DataAugmentation_ReDSM5/Data/ReDSM5/redsm5_annotations.csv",
+  "columns": [
+    "post_text",
+    "evidence",
+    "evidence_original",
+    "source_combo",
+    "DSM5_symptom",
+    "status",
+    "sentence_id"
+  ],
+  "timing": {
+    "duration_seconds": 978.6479439735413,
+    "rows_per_second": 0.3698980842665774,
+    "rows_skipped": 0
+  }
+}

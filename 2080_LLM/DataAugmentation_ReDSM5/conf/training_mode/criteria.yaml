@@ -1,0 +1,63 @@
+# Training mode configuration for criteria matching only (Mode 1)
+
+defaults:
+  - /agent: criteria
+  - _self_
+
+# Override base config for criteria-only training
+training_mode: criteria_only
+
+# Use existing dataset configuration
+dataset: original
+
+# Data configuration
+data:
+  posts_path: ${agent.posts_path}
+  annotations_path: ${agent.annotations_path}
+  criteria_path: ${agent.criteria_path}
+
+# Model configuration (inherits from agent config)
+model:
+  pretrained_model_name: ${agent.model_name}
+  max_seq_length: ${agent.max_seq_length}
+  classifier_dropout: ${agent.dropout}
+  classifier_hidden_sizes: ${agent.classifier_hidden_sizes}
+  loss_type: ${agent.loss_type}
+  alpha: ${agent.alpha}
+  gamma: ${agent.gamma}
+  delta: ${agent.delta}
+  learning_rate: ${agent.learning_rate}
+  weight_decay: ${agent.weight_decay}
+  warmup_ratio: ${agent.warmup_ratio}
+  batch_size: ${agent.batch_size}
+  gradient_accumulation_steps: ${agent.gradient_accumulation_steps}
+  num_epochs: ${agent.num_epochs}
+  max_grad_norm: ${agent.max_grad_norm}
+  optimizer: ${agent.optimizer}
+  adam_eps: ${agent.adam_eps}
+  scheduler: ${agent.scheduler}
+  use_amp: ${agent.use_amp}
+  compile_model: ${agent.use_compile}
+  use_gradient_checkpointing: ${agent.use_gradient_checkpointing}
+
+# Training configuration
+early_stopping_patience: ${agent.early_stopping_patience}
+metric_for_best_model: ${agent.metric_for_best_model}
+
+# Output directory
+output_dir: outputs/criteria/${now:%Y%m%d_%H%M%S}
+
+# Dataloader configuration
+dataloader:
+  num_workers: 4
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 2
+
+# Optuna configuration for HPO
+optuna:
+  n_trials: 500
+  timeout: null
+  study_name: criteria_matching_hpo
+  storage: sqlite:///optuna_criteria.db
+  direction: maximize

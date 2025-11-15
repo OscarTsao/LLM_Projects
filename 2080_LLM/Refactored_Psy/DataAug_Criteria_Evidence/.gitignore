@@ -1,0 +1,74 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# MLflow
+mlruns/
+mlflow.db
+
+# Optuna
+optuna.db
+
+# Hydra
+outputs/
+multirun/
+
+# Data
+data/raw/
+data/processed/
+data/augmented/
+*.csv
+*.tsv
+*.json
+!data/dsm_criteria.json
+
+# Models
+models/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Logs
+*.log
+logs/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db

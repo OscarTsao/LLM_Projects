@@ -1,0 +1,19 @@
+ground_truth_path: ../gemini_reranker/baselines/dataaug_trial_0043/data/groundtruth/Final_Ground_Truth.json
+augmentation_dir: ../gemini_reranker/baselines/dataaug_trial_0043/data/augmentation
+augmentation_patterns:
+  hybrid: hybrid_dataset_*.csv
+  nlpaug: nlpaug_dataset_*.csv
+  textattack: textattack_dataset_*.csv
+include_original: true
+use_augmented:
+  - hybrid
+  - nlpaug
+  - textattack
+augmented_to_train_only: true
+splits:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+shuffle_seed: 42
+cache_in_memory: true
+cache_max_ram_fraction: 0.9

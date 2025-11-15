@@ -1,0 +1,130 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I hate that i'm _ rn.,I hate that i'm _ rn.,I hate that i am crying rn.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I've _ feeling down on and off.,I've _ feeling down on and off.,I have been feeling down on and off.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I've been feeling _ on and off.,I've been feeling _ on and off.,I have been feeling down on and off.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I'm _ depressed also.,I'm _ depressed also.,I am very depressed also.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_131_822_0
+I'm very depressed _.,I'm very depressed _.,I am very depressed also.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_131_822_0
+I'm being _.,I'm being _.,I am being tortured.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm sleep _ I need help,I'm sleep _ I need help,I am sleep deprived I need help,nlp_randword_sub+ta_contraction,SLEEP_ISSUES,1,s_1313_32_0
+I'm _ deprived I need help,I'm _ deprived I need help,I am sleep deprived I need help,nlp_randword_sub+ta_contraction,SLEEP_ISSUES,1,s_1313_32_0
+I'm _ depressed right now.,I'm _ depressed right now.,I am super depressed right now.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_993_726_1
+I'm super depressed right _.,I'm super depressed right _.,I am super depressed right now.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_993_726_1
+"I'd kill _ before I helped build _ godless trucks. ""","I'd kill _ before I helped build _ godless trucks. ""","I would kill myself before I helped build those godless trucks. """,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,0,s_1514_914_163
+"I'd kill _ _ I helped build those godless trucks. ""","I'd kill _ _ I helped build those godless trucks. ""","I would kill myself before I helped build those godless trucks. """,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,0,s_1514_914_163
+I am scared I won't be _ successful man in _ future,I am scared I won't be _ successful man in _ future,I am scared I will not be a successful man in the future,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+I _ scared I won't _ a successful man in the future,I _ scared I won't _ a successful man in the future,I am scared I will not be a successful man in the future,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+I'm _ tired.,I'm _ tired.,I am very tired.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm _ anxiety medications.,I'm _ anxiety medications.,I am prescribed anxiety medications.,nlp_randword_sub+ta_contraction,PSYCHOMOTOR,1,s_103_32_3
+I'm prescribed _ medications.,I'm prescribed _ medications.,I am prescribed anxiety medications.,nlp_randword_sub+ta_contraction,PSYCHOMOTOR,1,s_103_32_3
+_ I'd get really angry at times.,_ I'd get really angry at times.,Then I would get really angry at times.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_84_60_2
+I've already _ my own suicide.,I've already _ my own suicide.,I have already planned my own suicide.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1989_742_0
+I've already planned my _ suicide.,I've already planned my _ suicide.,I have already planned my own suicide.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1989_742_0
+_ I'd cry so hard.,_ I'd cry so hard.,And I would cry so hard.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2190_134_3
+I don't like _ about myself.,I don't like _ about myself.,I do not like anything about myself.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_356_102_12
+_ I'm feeling miserable.,_ I'm feeling miserable.,But I am feeling miserable.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_2415_600_3
+I'm _ waiting.,I'm _ waiting.,I am sad waiting.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I've issues in focusing and _.,I've issues in focusing and _.,I have issues in focusing and attention.,nlp_randword_sub+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+I've _ in focusing and attention.,I've _ in focusing and attention.,I have issues in focusing and attention.,nlp_randword_sub+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+I _ focus and i've no energy.,I _ focus and i've no energy.,I cant focus and i have no energy.,nlp_randword_sub+ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+I just don ' t think I'd _ to live _.,I just don ' t think I'd _ to live _.,I just don't think I would like to live anymore.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I just don ' t _ I'd _ to live anymore.,I just don ' t _ I'd _ to live anymore.,I just don't think I would like to live anymore.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I've _ failed.,I've _ failed.,I have always failed.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_356_95_6
+I'm _ CRYING.,I'm _ CRYING.,I am fucking CRYING.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm in a _ dilemma.,I'm in a _ dilemma.,I am in a constant dilemma.,nlp_randword_sub+ta_contraction,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm very _ now.,I'm very _ now.,I am very lonely now.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm _ lonely now.,I'm _ lonely now.,I am very lonely now.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+"i've _ the _ too, imm just suffering so much man","i've _ the _ too, imm just suffering so much man","i dont have the energy too, imm just suffering so much man",nlp_randword_sub+ta_contraction,FATIGUE,1,s_8_303_0
+I'm kinda angry _ the time.,I'm kinda angry _ the time.,I am kinda angry all the time.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I'm just terrified of _.,I'm just terrified of _.,I am just terrified of failing.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_1601_203_31
+I'd really like some free _ right now.,I'd really like some free _ right now.,I would really like some free energy right now.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_969_1077_3
+I'd _ like some free energy right now.,I'd _ like some free energy right now.,I would really like some free energy right now.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_969_1077_3
+i've nothing to live _ personally.,i've nothing to live _ personally.,i have nothing to live for personally.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+I'm very focused _ sex.,I'm very focused _ sex.,I am very focused on sex.,nlp_randword_sub+ta_contraction,SPECIAL_CASE,1,s_731_903_4
+_ it knows how sad I'm,_ it knows how sad I'm,Wow it knows how sad I am,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_694_827_0
+Wow _ knows how sad I'm,Wow _ knows how sad I'm,Wow it knows how sad I am,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_694_827_0
+I'm failing _.,I'm failing _.,I am failing miserably.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_993_720_4
+I've _ the energy for that!,I've _ the energy for that!,I dont have the energy for that!,nlp_randword_sub+ta_contraction,FATIGUE,1,s_2832_876_0
+_ my low pain days I've no energy.,_ my low pain days I've no energy.,Even my low pain days I have no energy.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_1749_905_17
+Even my low pain days I've no _.,Even my low pain days I've no _.,Even my low pain days I have no energy.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_1749_905_17
+"I'm irritated, _.","I'm irritated, _.","I am irritated, yes.",nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+I'm now _ more relaxed.,I'm now _ more relaxed.,I am now considerably more relaxed.,nlp_randword_sub+ta_contraction,SPECIAL_CASE,1,s_2301_443_1
+"I've so much guilt and remorse, _.","I've so much guilt and remorse, _.","I have so much guilt and remorse, Danny.",nlp_randword_sub+ta_contraction,WORTHLESSNESS,0,s_1674_10_490
+_ nights I'd get no sleep at all.,_ nights I'd get no sleep at all.,Some nights I would get no sleep at all.,nlp_randword_sub+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+Some nights I'd get no _ at all.,Some nights I'd get no _ at all.,Some nights I would get no sleep at all.,nlp_randword_sub+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+I've found comfort in my _,I've found comfort in my _,I have found comfort in my sadness,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_2415_116_0
+Youd never know that I've _ thoughts.,Youd never know that I've _ thoughts.,Youd never know that I have suicidal thoughts.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1488_204_5
+I've dreams _ him and I cry sometimes.,I've dreams _ him and I cry sometimes.,I have dreams about him and I cry sometimes.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_1404_48_15
+I'm _ exhausted.,I'm _ exhausted.,I am so exhausted.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_697_17_12
+I'm _ restless.,I'm _ restless.,I am also restless.,nlp_randword_sub+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm feeling _ again.,I'm feeling _ again.,I am feeling suicidal again.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_993_450_6
+I'm _ suicidal again.,I'm _ suicidal again.,I am feeling suicidal again.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_993_450_6
+Every _ that i've has lost all meaning.,Every _ that i've has lost all meaning.,Every hobby that i have has lost all meaning.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_356_98_0
+Every _ that i've has lost all meaning.,Every _ that i've has lost all meaning.,Every hobby that i have has lost all meaning.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_356_98_0
+I've _ motivation.,I've _ motivation.,I have lost motivation.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_2415_566_0
+In fact lately I've _ pretty depressed.,In fact lately I've _ pretty depressed.,In fact lately I have been pretty depressed.,nlp_randword_sub+ta_contraction,SPECIAL_CASE,1,s_2415_566_1
+In fact lately I've been _ depressed.,In fact lately I've been _ depressed.,In fact lately I have been pretty depressed.,nlp_randword_sub+ta_contraction,SPECIAL_CASE,1,s_2415_566_1
+Mentally I've no _ either.,Mentally I've no _ either.,Mentally I have no energy either.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_1404_852_6
+_ I've no energy either.,_ I've no energy either.,Mentally I have no energy either.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_1404_852_6
+I've lost interest in everything it _.,I've lost interest in everything it _.,I have lost interest in everything it seems.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_993_959_4
+I've lost interest in _ it seems.,I've lost interest in _ it seems.,I have lost interest in everything it seems.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_993_959_4
+I've lost interest in _ it seems.,I've lost interest in _ it seems.,I have lost interest in everything it seems.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_993_959_4
+I've lost interest in everything it _.,I've lost interest in everything it _.,I have lost interest in everything it seems.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_993_959_4
+I've _ hope but it feels hopeless.,I've _ hope but it feels hopeless.,I wanna have hope but it feels hopeless .,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_258_544_2
+I've hope _ the future.,I've hope _ the future.,I have hope for the future.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_1230_158_13
+I've _ for the future.,I've _ for the future.,I have hope for the future.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_1230_158_13
+im a long _ so I've _ about 12 hours per day that im awake to do stuff.,im a long _ so I've _ about 12 hours per day that im awake to do stuff.,im a long sleeper so I only have about 12 hours per day that im awake to do stuff.,nlp_randword_sub+ta_contraction,SLEEP_ISSUES,0,s_1404_116_9
+I've no one to _ but myself.,I've no one to _ but myself.,I have no one to blame but myself.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+I've no one to blame but _.,I've no one to blame but _.,I have no one to blame but myself.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+Maybe a _ future that i could've,Maybe a _ future that i could've,Maybe a better future that i could have,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe a better future that i've _,Maybe a better future that i've _,Maybe a better future that i could have,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe a _ future that i could've,Maybe a _ future that i could've,Maybe a better future that i could have,nlp_randword_sub+ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+Maybe a better future that i've _,Maybe a better future that i've _,Maybe a better future that i could have,nlp_randword_sub+ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+I've _ a lesser appetite.,I've _ a lesser appetite.,I usually have a lesser appetite.,nlp_randword_sub+ta_contraction,APPETITE_CHANGE,1,s_701_746_0
+I'm just _.,I'm just _.,I am just sad.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_1681_1030_1
+I've _ thoughts but I ' m not suicidal,I've _ thoughts but I ' m not suicidal,I have suicidal thoughts but I'm not suicidal,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1748_197_0
+I've more _.,I've more _.,I have more energy.,nlp_randword_sub+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I'm _ ANGRY now.,I'm _ ANGRY now.,I am fucking ANGRY now.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_188_399_2
+_ I'm depressed.,_ I'm depressed.,Yet I am depressed.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+I'm such an _ dick.,I'm such an _ dick.,I am such an irritable dick.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+I'm such _ irritable dick.,I'm such _ irritable dick.,I am such an irritable dick.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+I'm _ much of the time.,I'm _ much of the time.,I am anxious much of the time.,nlp_randword_sub+ta_contraction,PSYCHOMOTOR,1,s_716_38_24
+I'm anxious much of _ time.,I'm anxious much of _ time.,I am anxious much of the time.,nlp_randword_sub+ta_contraction,PSYCHOMOTOR,1,s_716_38_24
+Now I'm _.,Now I'm _.,Now I am sad.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+_ I'm sad.,_ I'm sad.,Now I am sad.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+I'm big sad right _.,I'm big sad right _.,I am big sad right now.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2080_955_0
+I'm big _ right now.,I'm big _ right now.,I am big sad right now.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2080_955_0
+I've _ been crying on and off all week.,I've _ been crying on and off all week.,I honestly have been crying on and off all week.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_464_138_3
+Oh yea I'd like to _,Oh yea I'd like to _,Oh yea I would like to die,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+Oh _ I'd like to die,Oh _ I'd like to die,Oh yea I would like to die,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+I feel like I've lost the _ to focus,I feel like I've lost the _ to focus,I feel like I have lost the ability to focus,nlp_randword_sub+ta_contraction,COGNITIVE_ISSUES,0,s_1247_1004_0
+I feel _ I've lost the ability to focus,I feel _ I've lost the ability to focus,I feel like I have lost the ability to focus,nlp_randword_sub+ta_contraction,COGNITIVE_ISSUES,0,s_1247_1004_0
+i've no more _.,i've no more _.,i have no more energy.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_2107_102_4
+Sex isn't that _ to me.,Sex isn't that _ to me.,Sex is not that important to me.,nlp_randword_sub+ta_contraction,ANHEDONIA,0,s_1931_496_0
+Sex isn't _ important to me.,Sex isn't _ important to me.,Sex is not that important to me.,nlp_randword_sub+ta_contraction,ANHEDONIA,0,s_1931_496_0
+I've _ problems too.,I've _ problems too.,I have sleep problems too.,nlp_randword_sub+ta_contraction,SLEEP_ISSUES,0,s_2502_62_2
+I've sleep problems _.,I've sleep problems _.,I have sleep problems too.,nlp_randword_sub+ta_contraction,SLEEP_ISSUES,0,s_2502_62_2
+I'm _ depressed.,I'm _ depressed.,I am feeling depressed.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_993_781_1
+I've lost _ interest.,I've lost _ interest.,I have lost all interest.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_993_781_12
+I've _ all interest.,I've _ all interest.,I have lost all interest.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_993_781_12
+I've a _ hardtime making decisions.,I've a _ hardtime making decisions.,I have a very hardtime making decisions.,nlp_randword_sub+ta_contraction,COGNITIVE_ISSUES,1,s_759_88_0
+_ ' m very hopeful i'll.,_ ' m very hopeful i'll.,i'm very hopeful i will.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+I am not suicidal _ I'd never be ',I am not suicidal _ I'd never be ',I am not suicidal and I would never be',nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+I am not suicidal and I'd _ be ',I am not suicidal and I'd _ be ',I am not suicidal and I would never be',nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+i'm angry all the _.,i'm angry all the _.,i am angry all the time.,nlp_randword_sub+ta_contraction,DEPRESSED_MOOD,1,s_2107_89_1
+I've become almost ashamed of _ I am.,I've become almost ashamed of _ I am.,I have become almost ashamed of everything I am.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_1601_666_1
+I've become almost ashamed of _ I am.,I've become almost ashamed of _ I am.,I have become almost ashamed of everything I am.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_1601_666_1
+"I ' ve always felt pretty guilty about the amount _ _ not _ sleep talk but sleep shout, actually, I pretty much _ sleep shout. .. If I ' m shouting angrily _ someone in my dream then chances are I'll shout it out loud too, waking us both up.","I ' ve always felt pretty guilty about the amount _ _ not _ sleep talk but sleep shout, actually, I pretty much _ sleep shout. .. If I ' m shouting angrily _ someone in my dream then chances are I'll shout it out loud too, waking us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_2727_538_0
+"I ' ve always felt pretty guilty about the amount that I _ only sleep talk but sleep _, actually, I pretty much only _ shout. .. If I ' m shouting angrily at someone in my dream _ chances are I'll shout it out loud too, waking _ both up.","I ' ve always felt pretty guilty about the amount that I _ only sleep talk but sleep _, actually, I pretty much only _ shout. .. If I ' m shouting angrily at someone in my dream _ chances are I'll shout it out loud too, waking _ both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_2727_538_0
+I think I'd _ just shoot myself.,I think I'd _ just shoot myself.,I think I would rather just shoot myself.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I think I'd rather just shoot _.,I think I'd rather just shoot _.,I think I would rather just shoot myself.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I'm _ tired at this point.,I'm _ tired at this point.,I am just tired at this point.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_592_276_0
+I'm just _ at this point.,I'm just _ at this point.,I am just tired at this point.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_592_276_0
+I've no energy _ study.,I've no energy _ study.,I have no energy to study.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_1404_90_5
+I've _ energy to study.,I've _ energy to study.,I have no energy to study.,nlp_randword_sub+ta_contraction,FATIGUE,1,s_1404_90_5
+I dont _ to suicide because I'd feel guilty.,I dont _ to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to suicide _ I'd feel guilty.,I dont want to suicide _ I'd feel guilty.,I dont want to suicide because I would feel guilty.,nlp_randword_sub+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to suicide _ I'd feel guilty.,I dont want to suicide _ I'd feel guilty.,I dont want to suicide because I would feel guilty.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_1404_218_6
+I dont _ to suicide because I'd feel guilty.,I dont _ to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,nlp_randword_sub+ta_contraction,WORTHLESSNESS,1,s_1404_218_6
+I needn't _ energy.,I needn't _ energy.,I need concentration not energy.,nlp_randword_sub+ta_contraction,COGNITIVE_ISSUES,0,s_1750_1_0
+I've been unable to enjoy _ in life.,I've been unable to enjoy _ in life.,I have been unable to enjoy anything in life.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_1404_398_2
+I've been _ to enjoy anything in life.,I've been _ to enjoy anything in life.,I have been unable to enjoy anything in life.,nlp_randword_sub+ta_contraction,ANHEDONIA,1,s_1404_398_2

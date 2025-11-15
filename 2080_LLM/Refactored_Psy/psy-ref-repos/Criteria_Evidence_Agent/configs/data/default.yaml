@@ -1,0 +1,26 @@
+# @package _global_.data
+root_dir: ${hydra:runtime.cwd}/Data
+groundtruth_path: ${data.root_dir}/groundtruth/redsm5_ground_truth.json
+posts_path: ${data.root_dir}/redsm5/redsm5_posts.csv
+id_field: post_id
+text_field: text
+
+multi_label_fields:
+  - ANHEDONIA
+  - APPETITE_CHANGE
+  - COGNITIVE_ISSUES
+  - DEPRESSED_MOOD
+  - FATIGUE
+  - PSYCHOMOTOR
+  - SLEEP_ISSUES
+  - SPECIAL_CASE
+  - SUICIDAL_THOUGHTS
+  - WORTHLESSNESS
+
+evidence_char_spans_field: null
+evidence_token_labels_field: null
+
+max_length: 256
+val_size: 0.15
+test_size: 0.15
+seed: 42

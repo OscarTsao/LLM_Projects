@@ -1,0 +1,21 @@
+metric: 0.6931461179756524
+params:
+  head.dropout: 0.3123613159564109
+  head.msd.alpha: 0.12084929799045005
+  head.msd.n_samples: 7
+  head.type: msd
+  loss.asym.gamma_neg: 0.8919168498080794
+  loss.asym.gamma_pos: 1.202663289018576
+  loss.name: asymmetric
+  optim.lr_encoder: 2.289676910616747e-05
+  optim.lr_head: 0.00017419420467760285
+  optim.name: adamw
+  optim.weight_decay: 0.19620470638579257
+  pooling: cls
+  pred.threshold.global: 0.2526282103848102
+  pred.threshold.policy: opt_global
+  sched.name: linear
+  sched.warmup_ratio: 0.018596898129338874
+  train.grad_clip_norm: 1.1881300161844255
+stage: stage_A
+threshold: 0.2526282103848102

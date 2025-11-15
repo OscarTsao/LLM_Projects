@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+
+# Logs
+*.log
+
+# Editor
+*.tmp
+*.swp
+.DS_Store
+
+# Environment
+.env
+.venv/
+venv/
+env/
+
+# Hydra outputs
+outputs/
+multirun/
+
+# MLflow
+artifacts/
+mlruns/
+
+# Optuna
+*.db
+*.db-journal
+
+# DVC
+.dvc/
+
+# Model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# IDE
+.vscode/
+.idea/
+
+# Ruff cache
+.ruff_cache/

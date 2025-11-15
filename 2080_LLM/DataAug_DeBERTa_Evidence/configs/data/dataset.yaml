@@ -1,0 +1,9 @@
+dataset:
+  id: irlab-udc/redsm5
+  revision: main           # optional: pin revision/tag/commit
+  splits:
+    train: train
+    validation: validation
+    test: test
+  streaming: false
+  cache_dir: ${oc.env:HF_HOME,~/.cache/huggingface}

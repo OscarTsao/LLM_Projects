@@ -1,0 +1,17 @@
+{
+  "run_id": "933998902e99482ab4cfcf75785de867",
+  "training_metrics": {
+    "val_ev_macro_f1": 0.4444444444444444,
+    "val_ev_accuracy": 0.3333333333333333,
+    "val_cri_macro_f1": 0.16666666666666666,
+    "val_cri_accuracy": 0.5,
+    "val_macro_f1_mean": 0.3055555555555555
+  },
+  "test_metrics": {
+    "test_ev_macro_f1": 0.31746031746031744,
+    "test_ev_accuracy": 0.2857142857142857,
+    "test_cri_macro_f1": 0.0625,
+    "test_cri_accuracy": 0.14285714285714285,
+    "test_macro_f1_mean": 0.18998015873015872
+  }
+}

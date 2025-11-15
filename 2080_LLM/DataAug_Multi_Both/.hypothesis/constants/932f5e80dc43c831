@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/models/encoders/hf_encoder.py
+# hypothesis_version: 6.140.3
+
+[401, 403, '401', '403', 'access denied', 'credential', 'forbidden', 'private', 'response', 'status_code', 'token', 'unauthorized']

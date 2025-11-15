@@ -1,0 +1,46 @@
+seed: 42
+output_dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}-dpo
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment_name: gemini_reranker_dpo
+  run_name: ${hydra.job.name}
+  artifact_root: ./mlruns
+  autolog: false
+hardware:
+  device: auto
+  gradient_checkpointing: true
+  batch_size_per_device: 1
+  gradient_accumulation_steps: 8
+  max_length: 2048
+  bf16: true
+  fp16: false
+  lora:
+    use_lora: true
+    r: 16
+    alpha: 32
+    dropout: 0.05
+    target_modules:
+      - q_proj
+      - k_proj
+      - v_proj
+      - o_proj
+train:
+  learning_rate: 5e-6
+  beta: 0.1
+  max_steps: 1000
+  warmup_ratio: 0.1
+  logging_steps: 10
+  save_steps: 200
+  eval_steps: null
+  num_train_epochs: null
+  deepspeed_config: null
+model:
+  base_model_path: /path/to/base_model
+  reference_model_path: null
+  tokenizer_name: null
+  trust_remote_code: false
+data:
+  path_or_name: /path/to/dpo_dataset.jsonl
+  max_samples: null
+  shuffle_seed: 42
+  format: jsonl

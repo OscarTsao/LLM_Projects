@@ -1,0 +1,10 @@
+model:
+  name: deberta-v3-base  # TODO: pick best family via HPO
+  max_len: 256
+train:
+  lr: 3e-5
+  dropout: 0.1
+  loss: CE
+hpo:
+  enable: false
+

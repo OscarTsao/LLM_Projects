@@ -1,0 +1,15 @@
+name: original_textattack
+include_original: true
+use_augmented:
+  - textattack
+ground_truth_path: Data/GroundTruth/Final_Ground_Truth.json
+augmented_sources:
+  nlpaug: Data/Augmentation/nlpaug_dataset_*.csv
+  textattack: Data/Augmentation/textattack_dataset_*.csv
+  hybrid: Data/Augmentation/hybrid_dataset_*.csv
+splits:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+shuffle_seed: 42
+max_examples: null

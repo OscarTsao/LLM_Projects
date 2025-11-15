@@ -1,0 +1,20 @@
+# Default Hydra configuration for DSM-5 Criteria Classification
+defaults:
+  - _self_
+  - training: default
+  - model: basic
+
+# Data paths
+data:
+  translated_posts_path: "Data/translated_posts.csv"
+  criteria_path: "Data/DSM-5/DSM_Criteria_Array_Fixed_Simplify.json"
+  groundtruth_path: "Data/Groundtruth/criteria_evaluation.csv"
+
+# Output
+output:
+  model_dir: "./hydra_dsm_model"
+  save_best_only: true
+
+# GPU optimization
+gpu:
+  auto_optimize: true

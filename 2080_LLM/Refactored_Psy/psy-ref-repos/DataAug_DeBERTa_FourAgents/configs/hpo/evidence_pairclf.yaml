@@ -1,0 +1,15 @@
+study:
+  sampler: TPE
+  pruner: ASHA
+  direction: maximize
+
+space:
+  model_name: [deberta-v3-base, deberta-v3-large, PubMedBERT, ClinicalBERT]
+  lr: [1e-5, 6e-5]
+  dropout: [0.0, 0.3]
+  max_len: [192, 256, 384]
+  loss: [CE, Focal]
+  pos_weight: [0.5, 3.0]
+
+objective: macro_F1_present + 0.2*neg_precision - 0.5*ECE
+

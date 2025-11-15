@@ -1,0 +1,45 @@
+# Test configuration with smaller model for quick testing
+model:
+  name: "prajjwal1/bert-tiny"  # Much smaller model for testing
+  use_label_head: true
+  num_labels: 2
+  max_length: 128
+  doc_stride: 64
+  max_answer_len: 32
+  lambda_span: 0.5
+  dropout: 0.1
+
+train:
+  batch_size: 2
+  grad_accum: 1
+  epochs: 1
+  lr: 2.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.06
+  fp16: false  # Disable for CPU testing
+  eval_every_steps: 100
+  save_k_best: 1
+  early_stop_patience: 3
+
+data:
+  train_path: "data/examples/train.jsonl"
+  dev_path: "data/examples/dev.jsonl"
+  test_path: "data/examples/test.jsonl"
+  num_workers: 0  # Single threaded for testing
+
+decode:
+  top_k: 3
+  nms_iou_thresh: 0.5
+  allow_overlap: false
+
+logging:
+  output_dir: "test_outputs"
+  wandb: false
+  project: "criteria_binder_test"
+  run_name: "test_run"
+  seed: 42
+
+metrics:
+  span_iou_thresh: 0.5
+  combined_weight_span: 0.5
+  combined_weight_label: 0.5

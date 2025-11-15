@@ -1,0 +1,181 @@
+# Main Configuration for REDSM5 Augmentation Cache and HPO Pipeline
+
+# Dataset Settings
+dataset:
+  name: "redsm5"
+  text_field: "evidence_sentence"
+  label_fields:
+    - "criteria_label"
+    - "evidence_label"
+  base_path: "data/redsm5/base"
+  splits:
+    - "train"
+    - "val"
+    - "test"
+
+# Combination Settings
+combinations:
+  k_max: 3  # Maximum augmentation pipeline length (1, 2, or 3)
+  
+  # Exclude incompatible augmenter pairs
+  exclusions:
+    # Back-translation augmenters are mutually exclusive
+    - ["en_de_en", "en_fr_en"]
+    - ["en_de_en", "en_es_en"]
+    - ["en_de_en", "en_zh_en"]
+    - ["en_de_en", "en_ru_en"]
+    - ["en_fr_en", "en_es_en"]
+    - ["en_fr_en", "en_zh_en"]
+    - ["en_fr_en", "en_ru_en"]
+    - ["en_es_en", "en_zh_en"]
+    - ["en_es_en", "en_ru_en"]
+    - ["en_zh_en", "en_ru_en"]
+    
+    # MLM infill models are mutually exclusive
+    - ["mlm_infill_bert", "mlm_infill_roberta"]
+    
+    # Contraction operations are mutually exclusive
+    - ["contraction_expand", "contraction_collapse"]
+  
+  # Safety caps to control combinatorial explosion
+  safety_caps:
+    max_single: 28        # All 28 individual augmenters
+    max_pairs: 300        # Cap on k=2 combinations
+    max_triples: 1000     # Cap on k=3 combinations
+    
+  # Filter out low-diversity combinations
+  min_stage_diversity: 2  # Require at least 2 different stages in k>=2 combos
+
+# I/O Settings
+io:
+  # Parquet configuration
+  parquet:
+    compression: "zstd"   # Fast compression with good ratio
+    compression_level: 3
+    row_group_size: 10000
+    
+  # Chunking for memory efficiency
+  chunking:
+    cache_generation: 1000   # Process 1000 examples at a time
+    hpo_training: 5000       # Batch size for HPO training
+    
+  # Cache paths
+  cache:
+    combos_dir: "data/redsm5/combos"
+    naming_pattern: "aug_{combo_hash}_{split}.parquet"
+    metadata_file: "data/redsm5/combos/metadata.json"
+
+# HPO Settings
+hpo:
+  # Engine selection
+  engine: "optuna"  # Options: "optuna" or "ray"
+  
+  # Stage 1: Augmenter Selection
+  stage1:
+    objective: "maximize"
+    metric: "val_f1_macro"
+    
+    trials: 100
+    timeout_hours: 24
+    
+    # Resources per trial
+    resources:
+      cpu: 4
+      gpu: 0.5  # Share GPUs across trials
+      memory_gb: 16
+    
+    # Search space
+    search_space:
+      combo_size: [1, 2, 3]  # Will sample from valid combinations
+      
+    # Pruning
+    pruning:
+      enabled: true
+      patience: 3  # Prune if no improvement for 3 epochs
+      min_epochs: 2
+      
+  # Stage 2: Hyperparameter Tuning
+  stage2:
+    objective: "maximize"
+    metric: "val_f1_macro"
+    
+    trials: 50
+    timeout_hours: 12
+    
+    resources:
+      cpu: 4
+      gpu: 1.0
+      memory_gb: 32
+    
+    # Fixed augmentation combo from Stage 1
+    fixed_combo: null  # Will be set after Stage 1
+    
+    # Tune augmentation parameters + model hyperparameters
+    search_space:
+      # Model hyperparameters
+      model:
+        learning_rate: [1e-6, 1e-4]  # log-uniform
+        batch_size: [8, 16, 32]
+        weight_decay: [0.0, 0.1]
+        warmup_ratio: [0.0, 0.2]
+        max_epochs: [3, 10]
+        
+      # Augmentation intensity (per-augmenter parameters)
+      augmentation:
+        intensity: [0.1, 0.5]  # Will be mapped to specific params
+        
+    pruning:
+      enabled: true
+      patience: 2
+      min_epochs: 1
+
+# Global Settings
+global:
+  seed: 13
+  deterministic: true
+  verbose: true
+  
+  # Logging
+  logging:
+    level: "INFO"
+    format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    save_logs: true
+    log_dir: "logs"
+  
+  # Checkpointing
+  checkpointing:
+    enabled: true
+    checkpoint_dir: "checkpoints"
+    save_best: true
+    save_last: true
+
+# Model Settings (baseline for HPO)
+model:
+  name: "microsoft/deberta-v3-base"
+  num_labels: 2  # Binary classification
+  max_length: 256
+  pooling: "cls"  # Options: "cls", "mean", "max"
+
+# Training Settings (defaults, can be overridden by HPO)
+training:
+  learning_rate: 2e-5
+  batch_size: 16
+  num_epochs: 5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  gradient_clip: 1.0
+  
+  # Mixed precision
+  fp16: true
+  
+  # Evaluation
+  eval_steps: 500
+  save_steps: 500
+  logging_steps: 100
+  
+  # Early stopping
+  early_stopping:
+    enabled: true
+    patience: 3
+    metric: "val_f1_macro"
+    mode: "max"

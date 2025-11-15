@@ -1,0 +1,6 @@
+artifact_location: /media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Multi_Evidence/experiments/mlruns_smoke/264925634531218875
+creation_time: 1760677332888
+experiment_id: '264925634531218875'
+last_update_time: 1760677332888
+lifecycle_stage: active
+name: smoke_hpo_local

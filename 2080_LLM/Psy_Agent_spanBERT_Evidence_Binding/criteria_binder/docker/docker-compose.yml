@@ -1,0 +1,129 @@
+# File: docker/docker-compose.yml
+
+version: '3.8'
+
+services:
+  criteria-binder:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: criteria-binder:latest
+    container_name: criteria-binder
+
+    # GPU support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+    # Environment variables
+    environment:
+      - HF_HUB_ENABLE_HF_TRANSFER=1
+      - CUDA_VISIBLE_DEVICES=0
+
+    # Volume mounts
+    volumes:
+      - ..:/app  # Mount project directory
+      - ~/.cache/huggingface:/home/appuser/.cache/huggingface  # Cache directory
+      - criteria-binder-outputs:/app/outputs  # Persistent outputs
+
+    # Working directory
+    working_dir: /app
+
+    # Network mode
+    network_mode: "host"
+
+    # Keep container running
+    tty: true
+    stdin_open: true
+
+    # Default command
+    command: ["python", "-m", "src.cli", "--help"]
+
+  # Development service with different setup
+  criteria-binder-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: criteria-binder:latest
+    container_name: criteria-binder-dev
+
+    # GPU support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+    # Environment variables
+    environment:
+      - HF_HUB_ENABLE_HF_TRANSFER=1
+      - CUDA_VISIBLE_DEVICES=0
+      - PYTHONPATH=/app
+
+    # Volume mounts for development
+    volumes:
+      - ..:/app
+      - ~/.cache/huggingface:/home/appuser/.cache/huggingface
+      - criteria-binder-outputs:/app/outputs
+      - criteria-binder-logs:/app/logs
+
+    # Working directory
+    working_dir: /app
+
+    # Network mode
+    network_mode: "host"
+
+    # Keep container running for development
+    tty: true
+    stdin_open: true
+
+    # Override entrypoint for development
+    entrypoint: ["/bin/bash"]
+
+  # Training service
+  criteria-binder-train:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    image: criteria-binder:latest
+    container_name: criteria-binder-train
+
+    # GPU support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+    # Environment variables
+    environment:
+      - HF_HUB_ENABLE_HF_TRANSFER=1
+      - CUDA_VISIBLE_DEVICES=0
+      - OUTPUT_DIR=/app/outputs/docker_run
+
+    # Volume mounts
+    volumes:
+      - ..:/app
+      - ~/.cache/huggingface:/home/appuser/.cache/huggingface
+      - criteria-binder-outputs:/app/outputs
+      - criteria-binder-logs:/app/logs
+
+    # Working directory
+    working_dir: /app
+
+    # Training command
+    command: ["./scripts/train.sh"]
+
+volumes:
+  criteria-binder-outputs:
+    driver: local
+  criteria-binder-logs:
+    driver: local

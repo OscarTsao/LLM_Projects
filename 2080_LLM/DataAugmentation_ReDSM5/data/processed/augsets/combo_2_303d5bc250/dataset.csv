@@ -1,0 +1,458 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I so oppressed.,I so oppressed.,I feel so oppressed.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_1955_1069_2
+I feel so.,I feel so.,I feel so oppressed.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_1955_1069_2
+"100% know that if I Nave to go to college alonS without family or any support Im gonna end up killing myself....Im barely keeping mf self alive now, I can't imagine being all by and dealing with thoughts and emotions!","100% know that if I Nave to go to college alonS without family or any support Im gonna end up killing myself....Im barely keeping mf self alive now, I can't imagine being all by and dealing with thoughts and emotions!","I 100% know that if I have to go to college alone without my family or any support Im gonna end up killing myself....Im barely keeping my self alive now, I can't imagine being all by myself and dealing with my thoughts and emotions!",ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_156_366_1
+"I 100% know that if I Nave go to college alonS without jy family or any support Im gonna end up killing myself.... barely keeping mf self now, I can't imagine being all by myself and with my thoughts and emotions!","I 100% know that if I Nave go to college alonS without jy family or any support Im gonna end up killing myself.... barely keeping mf self now, I can't imagine being all by myself and with my thoughts and emotions!","I 100% know that if I have to go to college alone without my family or any support Im gonna end up killing myself....Im barely keeping my self alive now, I can't imagine being all by myself and dealing with my thoughts and emotions!",ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_156_366_1
+I cant crying.,I cant crying.,I cant stop crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2334_738_1
+I cant stop.,I cant stop.,I cant stop crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2334_738_1
+I like me.,I like me.,I don't like me.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_816_5
+I don't me.,I don't me.,I don't like me.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_816_5
+I began tX.,I began tX.,I began to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2815_1660_107
+I began cry.,I began cry.,I began to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2815_1660_107
+I Xardly.,I Xardly.,I hardly sleep.,ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_697_81_3
+I sleep.,I sleep.,I hardly sleep.,ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_697_81_3
+I am verh.,I am verh.,I am very sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_411_1189_1
+I verP sad.,I verP sad.,I am very sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_411_1189_1
+"been like this for a long time now wherein I sleep ut arounB 9 or 10pm, hoping to wake up early in the az around 7-8pm, then all of a sudden I wake at g2 or 2am in the feeling and now I cant get pack bed.","been like this for a long time now wherein I sleep ut arounB 9 or 10pm, hoping to wake up early in the az around 7-8pm, then all of a sudden I wake at g2 or 2am in the feeling and now I cant get pack bed.","I've been like this for a long time now wherein I sleep at around 9 or 10pm, hoping to wake up early in the morning at around 7-8pm, then all of a sudden I wake up at 12 or 2am in the morning feeling groggy and now I cant get back bed.",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_852_229_1
+Im tirew,Im tirew,Im so tired,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2434_365_0
+so tired,so tired,Im so tired,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2434_365_0
+Ehis had me,Ehis had me,This had me crying,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2464_412_0
+Tois had crying,Tois had crying,This had me crying,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2464_412_0
+I wanX to,I wanX to,I want to die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2118_413_1
+I waHt die,I waHt die,I want to die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2118_413_1
+ldst my libido.,ldst my libido.,I lost my libido.,ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_2904_522_5
+I ldst libido.,I ldst libido.,I lost my libido.,ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_2904_522_5
+am Geing tortured.,am Geing tortured.,I am being tortured.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_1351_120_5
+I hm being.,I hm being.,I am being tortured.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_1351_120_5
+"I was able to experience novelty and joy even iR I did still/ deprewsed and would self harm , I haC the ability to enjoy feel like the me - now all Dhats gone and Ive just gotten buried into a hole where everyday is lived robotically or ghostly.","I was able to experience novelty and joy even iR I did still/ deprewsed and would self harm , I haC the ability to enjoy feel like the me - now all Dhats gone and Ive just gotten buried into a hole where everyday is lived robotically or ghostly.","I was able to experience novelty and joy even if I did still feel lonely/ depressed and would self harm , I had the ability to enjoy and feel like the real me - now all thats gone and Ive just gotten buried into a depressive hole where everyday is lived robotically or ghostly.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_258_546_2
+"Masturbating right before and during sleep I feel like its affectinh my sleep If I uO tired in the morning when I should co back to sleep, instead I start masturbating also affects how much rest I get.","Masturbating right before and during sleep I feel like its affectinh my sleep If I uO tired in the morning when I should co back to sleep, instead I start masturbating also affects how much rest I get.","Masturbating right before and also during sleep I feel like its affecting my sleep quality If I wake up tired in the morning when I should go back to sleep, instead I start masturbating which also affects how much rest I get.",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_1404_1455_0
+"Masturbating right before and alVo during sleep I feel like its affectinh my sleep quality If I wake uO tired in the morning when I should co back to sleep, masturbating also affects how much rest I get.","Masturbating right before and alVo during sleep I feel like its affectinh my sleep quality If I wake uO tired in the morning when I should co back to sleep, masturbating also affects how much rest I get.","Masturbating right before and also during sleep I feel like its affecting my sleep quality If I wake up tired in the morning when I should go back to sleep, instead I start masturbating which also affects how much rest I get.",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_1404_1455_0
+So want to die,So want to die,i do want to die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_141_110_0
+do want to dPe,do want to dPe,i do want to die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_141_110_0
+I erytLme,I erytLme,I cry erytime,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_523_60_1
+cCy erytime,cCy erytime,I cry erytime,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_523_60_1
+i hatw myself,i hatw myself,i really hate myself,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1194_31_4
+i really hYte,i really hYte,i really hate myself,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1194_31_4
+I'm quite,I'm quite,I'm quite angry,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2188_1006_0
+quite angru,quite angru,I'm quite angry,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2188_1006_0
+rtally tired.,rtally tired.,I'm really tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_547_567_2
+I'm tired.,I'm tired.,I'm really tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_547_567_2
+"I work from home, I don't sleep well for the most part (I have inGomnia and completely rely on sleep aids, afd they tAnd not to gAve you a good night's rest, which results iV fatigue a few hours after waking), so at some point the day, I usually a little tired and thz urge to just into bed Ond oinish my work later (which I do, but staying awake doing it right then would be better).","I work from home, I don't sleep well for the most part (I have inGomnia and completely rely on sleep aids, afd they tAnd not to gAve you a good night's rest, which results iV fatigue a few hours after waking), so at some point the day, I usually a little tired and thz urge to just into bed Ond oinish my work later (which I do, but staying awake doing it right then would be better).","I work from home, and I don't sleep well for the most part (I have insomnia and completely rely on sleep aids, and they tend not to give you a good night's rest, which results in fatigue a few hours after waking up), so at some point during the day, I usually get a little tired and have the urge to just crawl into bed and finish my work later (which I could do, but staying awake and doing it right then would be better).",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_2292_402_1
+"I work from home, and I don't well fow the most part (I have insomnia completely on sleep aids, and they tend nDt give you a good night's rest, which results in fatigue a few hours after waking up), so at some point during the dad, usHally get a little tired and Pave the urge to crawl into bed and finish my work later (which I could do, but staying and dSing it right would be metter).","I work from home, and I don't well fow the most part (I have insomnia completely on sleep aids, and they tend nDt give you a good night's rest, which results in fatigue a few hours after waking up), so at some point during the dad, usHally get a little tired and Pave the urge to crawl into bed and finish my work later (which I could do, but staying and dSing it right would be metter).","I work from home, and I don't sleep well for the most part (I have insomnia and completely rely on sleep aids, and they tend not to give you a good night's rest, which results in fatigue a few hours after waking up), so at some point during the day, I usually get a little tired and have the urge to just crawl into bed and finish my work later (which I could do, but staying awake and doing it right then would be better).",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_2292_402_1
+I was.,I was.,I was useless.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1899_440_13
+wau useless.,wau useless.,I was useless.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1899_440_13
+vm very tired.,vm very tired.,I am very tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1030_1290_8
+I ad tired.,I ad tired.,I am very tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1030_1290_8
+useless.,useless.,I'm useless.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1933_175_32
+Hating Hy.,Hating Hy.,Hating my failure.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2815_1585_9
+Hating mz.,Hating mz.,Hating my failure.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2815_1585_9
+"makey me sad.""","makey me sad.""","It makes me sad.""",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1115_951_1
+"IY me sad.""","IY me sad.""","It makes me sad.""",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1115_951_1
+I hSte.,I hSte.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1601_880_7
+hSte myself.,hSte myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1601_880_7
+aK.. sadness,aK.. sadness,I am.. sadness,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_855_1863_0
+aV.. sadness,aV.. sadness,I am.. sadness,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_855_1863_0
+hSte myself.,hSte myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2006_107_7
+hate myxelf.,hate myxelf.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2006_107_7
+I'm tirRd.,I'm tirRd.,I'm so tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2006_107_10
+so tirRd.,so tirRd.,I'm so tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2006_107_10
+I'X tired.,I'X tired.,I'm so tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2006_107_16
+so tiIed.,so tiIed.,I'm so tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2006_107_16
+I  hHte.,I  hHte.,I  hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_614_5
+I  myself.,I  myself.,I  hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_614_5
+Life hell.,Life hell.,Life is hell.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2415_614_6
+iY hell.,iY hell.,Life is hell.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2415_614_6
+Im so now.,Im so now.,Im so angry now.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2953_1058_27
+Im so vngry.,Im so vngry.,Im so angry now.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2953_1058_27
+"It has been a rough school yeZr for me with a lot of brought me to the pFint of uncontrollable crying Dos two days a row, migraines, muscle tension, and an inability to get any work done with my students.","It has been a rough school yeZr for me with a lot of brought me to the pFint of uncontrollable crying Dos two days a row, migraines, muscle tension, and an inability to get any work done with my students.","It has been a rough school year for me with a lot of changes that brought me to the point of uncontrollable crying for two days in a row, migraines, muscle tension, and an inability to really get any work done with my students.",ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_1190_67_2
+"It has been a rough school for me with a lot of changes that brought me to the of uncontrollable crying Dos two in a row, migraines, muscle tension, and an inability really get any work done with my students.","It has been a rough school for me with a lot of changes that brought me to the of uncontrollable crying Dos two in a row, migraines, muscle tension, and an inability really get any work done with my students.","It has been a rough school year for me with a lot of changes that brought me to the point of uncontrollable crying for two days in a row, migraines, muscle tension, and an inability to really get any work done with my students.",ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_1190_67_2
+trash.,trash.,I'm trash.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2130_82_12
+am worthlesP.,am worthlesP.,I am worthless.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_2_3
+I worthless.,I worthless.,I am worthless.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_2_3
+I hopeleUs.,I hopeleUs.,I am hopeless.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2415_2_4
+am hopeleUs.,am hopeleUs.,I am hopeless.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2415_2_4
+hatW myself.,hatW myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_2_8
+I myself.,I myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_2_8
+I attempSed.,I attempSed.,I attempted suicide.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_982_722_0
+attempted suiSide.,attempted suiSide.,I attempted suicide.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_982_722_0
+failed at liOe.,failed at liOe.,I've failed at life.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2130_1123_14
+I've failed ac.,I've failed ac.,I've failed at life.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2130_1123_14
+"I have HAS(NarcissisticAbuseSyndrome), severe with CONSTANT suicidal ideation...I've suicide 4 times, being successful on the second but lived ultimately, and that's where I had a near/post death experience that will shape the of mx life, for however long that may bX.","I have HAS(NarcissisticAbuseSyndrome), severe with CONSTANT suicidal ideation...I've suicide 4 times, being successful on the second but lived ultimately, and that's where I had a near/post death experience that will shape the of mx life, for however long that may bX.","I have NAS(NarcissisticAbuseSyndrome), severe depression with CONSTANT suicidal ideation...I've attempted suicide 4 times, actually being successful on the second but lived ultimately, and that's where I had a near/post death experience that will shape the rest of my life, for however long that may be.",ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_552_263_41
+"I have HAS(NarcissisticAbuseSyndrome), severe depression with CONSTANT suicidal ideation...I've attemptrd suicide 4 times, actually being successful on the second but lived ultimately, and that's where I a near/ death experience that will shape the rest of life, for however long may bX.","I have HAS(NarcissisticAbuseSyndrome), severe depression with CONSTANT suicidal ideation...I've attemptrd suicide 4 times, actually being successful on the second but lived ultimately, and that's where I a near/ death experience that will shape the rest of life, for however long may bX.","I have NAS(NarcissisticAbuseSyndrome), severe depression with CONSTANT suicidal ideation...I've attempted suicide 4 times, actually being successful on the second but lived ultimately, and that's where I had a near/post death experience that will shape the rest of my life, for however long that may be.",ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_552_263_41
+Im about give up,Im about give up,Im about to give up,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2800_49_3
+Nm about give up,Nm about give up,Im about to give up,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2800_49_3
+I wanna kiFl,I wanna kiFl,I wanna kill myself,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_1586_1434_1
+I wanna myself,I wanna myself,I wanna kill myself,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_1586_1434_1
+feeO successful,feeO successful,I feel successful,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_276_620_0
+feLl successful,feLl successful,I feel successful,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_276_620_0
+"Occasionally I've taken 25/50mg to geJ sleep at night but I've definitely never experienced anything on it before otheK than getting drowsy..., like twenty later I'm getting in bed, and I turn this thite noise ten hnur youtube video soZetimes use to help me sleep.","Occasionally I've taken 25/50mg to geJ sleep at night but I've definitely never experienced anything on it before otheK than getting drowsy..., like twenty later I'm getting in bed, and I turn this thite noise ten hnur youtube video soZetimes use to help me sleep.","Occasionally I've taken 25/50mg to get to sleep at night but I've definitely never experienced anything on it before other than getting drowsy...so, like twenty minutes later I'm getting in bed, and I turn on this white noise ten hour youtube video I sometimes use to help me sleep.",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_1965_10_8
+"Occasionally I've taken 25/50mg tP get to sleep at night but z've defPnitely never experienced anything on it before other than getting drowsy...so, twenty minutes later I'm getting in bed, and I tuen on white noise ten hour youtube video I sometimes to sleep.","Occasionally I've taken 25/50mg tP get to sleep at night but z've defPnitely never experienced anything on it before other than getting drowsy...so, twenty minutes later I'm getting in bed, and I tuen on white noise ten hour youtube video I sometimes to sleep.","Occasionally I've taken 25/50mg to get to sleep at night but I've definitely never experienced anything on it before other than getting drowsy...so, like twenty minutes later I'm getting in bed, and I turn on this white noise ten hour youtube video I sometimes use to help me sleep.",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_1965_10_8
+"SoOe suicide attempts left mw crying qfter all the pain once, the thought of my mother just at the other side of the door and she waking me cheerfully next morning, but, living Wor others can only go so fqr, and this is the breaking point the pHint of not caring anymore if I can yes rcd this pain is becoming and coming closer again.","SoOe suicide attempts left mw crying qfter all the pain once, the thought of my mother just at the other side of the door and she waking me cheerfully next morning, but, living Wor others can only go so fqr, and this is the breaking point the pHint of not caring anymore if I can yes rcd this pain is becoming and coming closer again.","Some suicide attempts left mw crying qfter all the pain and once, the thought of my mother just at the other side of the door and she waking me up cheerfully the next morning, but again, living for others can only go so fqr, and this is the breaking point where the point of not caring anymore if I can get rid of this pain is becoming stronger and coming closer again.",ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_782_6_12
+"Some suicide attempts left mw crying qfter all the pain and, tVe thought of my mother just at the other side of the and Whe waking me up cheerfully the next mozning, but again, living for others can only go so fqr, and is the breaking poiht wrlre the of not caring anymFre if I can get rid this pain is becoming stronger coming again.","Some suicide attempts left mw crying qfter all the pain and, tVe thought of my mother just at the other side of the and Whe waking me up cheerfully the next mozning, but again, living for others can only go so fqr, and is the breaking poiht wrlre the of not caring anymFre if I can get rid this pain is becoming stronger coming again.","Some suicide attempts left mw crying qfter all the pain and once, the thought of my mother just at the other side of the door and she waking me up cheerfully the next morning, but again, living for others can only go so fqr, and this is the breaking point where the point of not caring anymore if I can get rid of this pain is becoming stronger and coming closer again.",ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_782_6_12
+I don't Sex,I don't Sex,I don't like Sex,ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_2456_821_1
+don't like SeK,don't like SeK,I don't like Sex,ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_2456_821_1
+mmself,mmself,Kill myself,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_1201_307_0
+myself,myself,Kill myself,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_1201_307_0
+am skd waiting.,am skd waiting.,I am sad waiting.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_577_923_1
+I Em waiting.,I Em waiting.,I am sad waiting.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_577_923_1
+ForeveZ,ForeveZ,Forever Alone,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2908_76_0
+ForeveG,ForeveG,Forever Alone,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2908_76_0
+I cOied too.,I cOied too.,I cried today too.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2035_67_1
+I cried todah.,I cried todah.,I cried today too.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2035_67_1
+i hate now.,i hate now.,i hate myself now.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2326_622_1
+i myself now.,i myself now.,i hate myself now.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2326_622_1
+"I tried to up lonxer past 3 pm but I got way tCo tired and fell asleep until 11 pm and now I cant get any sleep not tired and Cy tics want to come out, I cant let them since my pom will be angry.","I tried to up lonxer past 3 pm but I got way tCo tired and fell asleep until 11 pm and now I cant get any sleep not tired and Cy tics want to come out, I cant let them since my pom will be angry.","I tried to stay up longer past 3 pm yesterday but I got way too tired and fell asleep until 11 pm and now I cant get any sleep since Im not tired and my tics want to come out, but I cant let them since my mom will be angry.",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_2434_538_2
+"I tried to up past 3 pm Uesterday but I got way tCo tired and fell asleep until 11 pm and now cant get any sleep since Im not tired and Cy tics want to come out, but I them since my pom will be angry.","I tried to up past 3 pm Uesterday but I got way tCo tired and fell asleep until 11 pm and now cant get any sleep since Im not tired and Cy tics want to come out, but I them since my pom will be angry.","I tried to stay up longer past 3 pm yesterday but I got way too tired and fell asleep until 11 pm and now I cant get any sleep since Im not tired and my tics want to come out, but I cant let them since my mom will be angry.",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_2434_538_2
+"I've done Qome thinking as to why I feel, one thing that stood out is the fact that always looking for new things wn life to fill some gind of hole or need
+
+this has become destructive though, as I will eaW a lot for the Qake uf eatiXg it feels good and different from feeling g depressed, I'll just by random crap just because is new
+
+and ohe this gs I used to like to do, like programming or reading, I don't find as fun anymore
+
+I'm not sure if this is just a part of depression or ets entirely something different.","I've done Qome thinking as to why I feel, one thing that stood out is the fact that always looking for new things wn life to fill some gind of hole or need
+
+this has become destructive though, as I will eaW a lot for the Qake uf eatiXg it feels good and different from feeling g depressed, I'll just by random crap just because is new
+
+and ohe this gs I used to like to do, like programming or reading, I don't find as fun anymore
+
+I'm not sure if this is just a part of depression or ets entirely something different.","I've done some thinking as to why I may feel depressed, and one thing that stood out is the fact that I'm always looking for new things in my life to fill some kind of hole or need
+
+this has become destructive though, as I will eat a lot just for the sake of eating because it feels good and different from feeling g depressed, or I'll just by random crap just because it is new
+
+and the this gs I used to like to do, like programming or reading, I just don't find as fun anymore
+
+I'm not sure if this is just a part of depression or if its entirely something different.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1808_2_2
+"I've done some thinking aj to wht I may feel deFressed, and one thing that stood is fact that I'm aRways looking for things my life to fill kind of holc or need
+
+this has become destructive though, as I will eat a lot juvt for the sake of eating because good and different from feeling g decressed, or I'll just by random just it is new
+
+and the this gs I used to lTke to do, likd programming or reading, I just don't find as fun anymore
+
+I'm not sure Of this is a part of depression or if its entirely different.","I've done some thinking aj to wht I may feel deFressed, and one thing that stood is fact that I'm aRways looking for things my life to fill kind of holc or need
+
+this has become destructive though, as I will eat a lot juvt for the sake of eating because good and different from feeling g decressed, or I'll just by random just it is new
+
+and the this gs I used to lTke to do, likd programming or reading, I just don't find as fun anymore
+
+I'm not sure Of this is a part of depression or if its entirely different.","I've done some thinking as to why I may feel depressed, and one thing that stood out is the fact that I'm always looking for new things in my life to fill some kind of hole or need
+
+this has become destructive though, as I will eat a lot just for the sake of eating because it feels good and different from feeling g depressed, or I'll just by random crap just because it is new
+
+and the this gs I used to like to do, like programming or reading, I just don't find as fun anymore
+
+I'm not sure if this is just a part of depression or if its entirely something different.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1808_2_2
+I wao so tired.,I wao so tired.,And I was so tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1514_213_111
+And I waw tired.,And I waw tired.,And I was so tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1514_213_111
+I'm noy happy.,I'm noy happy.,I'm just not happy.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2143_312_17
+I'm just njt.,I'm just njt.,I'm just not happy.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2143_312_17
+truly wact to die.,truly wact to die.,i truly want to die.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_8_309_1
+i truly tK die.,i truly tK die.,i truly want to die.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_8_309_1
+Im so jad.,Im so jad.,Im so not sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2815_562_47
+Im sA not.,Im sA not.,Im so not sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2815_562_47
+I'm depresscd.,I'm depresscd.,Now I'm depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1276_718_3
+NLw depressed.,NLw depressed.,Now I'm depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1276_718_3
+And Iom sad.,And Iom sad.,And now I'm sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_18_228_26
+And noj I'm.,And noj I'm.,And now I'm sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_18_228_26
+I'm noo.,I'm noo.,I'm not happy.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1900_293_0
+IPm not.,IPm not.,I'm not happy.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1900_293_0
+I am fuckAng.,I am fuckAng.,I am fucking CRYING.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_74_207_1
+I fuckAng CRYING.,I fuckAng CRYING.,I am fucking CRYING.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_74_207_1
+I cryiRg.,I cryiRg.,I keep crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2100_307_1
+I keep.,I keep.,I keep crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2100_307_1
+wanna dix,wanna dix,i wanna die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_41_1224_0
+i die,i die,i wanna die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_41_1224_0
+I myxelf.,I myxelf.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1899_295_2
+I hSte.,I hSte.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1899_295_2
+I insfmnia.,I insfmnia.,I have insomnia.,ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_341_1177_1
+I insomFia.,I insomFia.,I have insomnia.,ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_341_1177_1
+I aI.,I aI.,I am tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_681_475_2
+Em tired.,Em tired.,I am tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_681_475_2
+I cry every,I cry every,I cry every time,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2023_1299_0
+cry every timP,cry every timP,I cry every time,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2023_1299_0
+I cried sz.,I cried sz.,I cried so hard.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1499_700_10
+I so hard.,I so hard.,I cried so hard.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1499_700_10
+Ill myself now.,Ill myself now.,Ill kill myself now.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_587_278_2
+Ill kilx myself.,Ill kilx myself.,Ill kill myself now.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_587_278_2
+"But now I feel like Im hitting a wDll, it becomes so I feel like I get burnt, und then end up Oeeling like I need to force myself into doing however just end thinking about it all ddy and do it last minute if that, and if I to it i reDlly beat myself up over it the next day and it becomes harder.","But now I feel like Im hitting a wDll, it becomes so I feel like I get burnt, und then end up Oeeling like I need to force myself into doing however just end thinking about it all ddy and do it last minute if that, and if I to it i reDlly beat myself up over it the next day and it becomes harder.","But now I feel like Im hitting a wall, it becomes so frustrating I feel like I get burnt out, and then end up feeling like I need to force myself into doing something however I just end up thinking about it all day and maybe do it last minute if that, and if I dont do it i really beat myself up over it the next day and it becomes harder.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_1551_7_5
+"But now I feel like Im hitting a wDll, it becomes so frustrating I feel like I get burnt out, und then up Oeeling like I need force myself into doing something however I just end uu about it all ddy and maybe do last minute if that, and if I to it i reDlly beat myself up over it next day and it harder.","But now I feel like Im hitting a wDll, it becomes so frustrating I feel like I get burnt out, und then up Oeeling like I need force myself into doing something however I just end uu about it all ddy and maybe do last minute if that, and if I to it i reDlly beat myself up over it next day and it harder.","But now I feel like Im hitting a wall, it becomes so frustrating I feel like I get burnt out, and then end up feeling like I need to force myself into doing something however I just end up thinking about it all day and maybe do it last minute if that, and if I dont do it i really beat myself up over it the next day and it becomes harder.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_1551_7_5
+I'm stoll.,I'm stoll.,I'm still depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2401_0_9
+I'm depressed.,I'm depressed.,I'm still depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2401_0_9
+closer sHicide,closer sHicide,closer to suicide,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2584_14_0
+closer tk,closer tk,closer to suicide,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2584_14_0
+ill start feeling extremely about myself afterwNrds as already have low self esteem ill start to feel Pike it was something i said or if jts my fauBt its really affecting my mental health as well like ixl start to myself im the toxic one for tJinking that she needs act the i do i dont even know.,ill start feeling extremely about myself afterwNrds as already have low self esteem ill start to feel Pike it was something i said or if jts my fauBt its really affecting my mental health as well like ixl start to myself im the toxic one for tJinking that she needs act the i do i dont even know.,ill start feeling extremely shitty about myself afterwards as i already have low self esteem ill start to feel like it was something i said or if its my fault its really affecting my mental health as well like ill start to myself im the toxic one for thinking that she always needs to act the same i do i honestly dont even know.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1194_0_4
+ill start feeling extremely shitty about myself afterwNrds as i already have low self ill start to Pike was something i said or jts my fauBt really affecting mental health as well like ixl start to myself im the toxic one for tJinking that she always needs to act the same i do i honestly dont even know.,ill start feeling extremely shitty about myself afterwNrds as i already have low self ill start to Pike was something i said or jts my fauBt really affecting mental health as well like ixl start to myself im the toxic one for tJinking that she always needs to act the same i do i honestly dont even know.,ill start feeling extremely shitty about myself afterwards as i already have low self esteem ill start to feel like it was something i said or if its my fault its really affecting my mental health as well like ill start to myself im the toxic one for thinking that she always needs to act the same i do i honestly dont even know.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1194_0_4
+Wanted cOy.,Wanted cOy.,Wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1586_538_1
+to cry.,to cry.,Wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1586_538_1
+"Somedays are good some are not...I feel like a complete failure Jo my I can't even do school right I can't even start ny dLy right I feel like anything I do iv wrong and I feel alone sure I have people I to at school that me their friend but I still alonc I have no one cloxe Uo one to share with and it edts me up, 16 and my life feels like a like it was never meant to be I'm only 16 why me why ?","Somedays are good some are not...I feel like a complete failure Jo my I can't even do school right I can't even start ny dLy right I feel like anything I do iv wrong and I feel alone sure I have people I to at school that me their friend but I still alonc I have no one cloxe Uo one to share with and it edts me up, 16 and my life feels like a like it was never meant to be I'm only 16 why me why ?","Somedays are good some are not...I feel like a complete failure to my family I can't even do school right I can't even start my day right I feel like anything I do is wrong and I feel alone sure I have people I talk to at school that call me their friend but I still feel alone I have no one close no one to share this with and it eats me up inside, I'm 16 and my life feels like a huge mistake like it was never meant to be I'm only 16 why me why ?",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_931_428_1
+I'm very loneqy.,I'm very loneqy.,I'm so very lonely.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_356_60_8
+I'm very lonelP.,I'm very lonelP.,I'm so very lonely.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_356_60_8
+I hopBless.,I hopBless.,I feel hopeless.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_993_743_9
+beel hopeless.,beel hopeless.,I feel hopeless.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_993_743_9
+I feei pathetic.,I feei pathetic.,I feel so pathetic.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_356_186_14
+I feei so.,I feei so.,I feel so pathetic.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_356_186_14
+I wanN to.,I wanN to.,I want to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2000_255_7
+I to crx.,I to crx.,I want to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2000_255_7
+ljve myself,ljve myself,I love myself,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_2781_822_0
+lwve myself,lwve myself,I love myself,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_2781_822_0
+I mQself!,I mQself!,I hate myself!,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2455_42_2
+I hate!,I hate!,I hate myself!,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2455_42_2
+I wish I cEy.,I wish I cEy.,I wish I could cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2679_40_0
+I I coulK cry.,I I coulK cry.,I wish I could cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2679_40_0
+"I have not tI good do to thCughts, stress, iO other words emotions and also night time is the only time of it's peace and quitA so I tend to take a hour or sR rf that in... have a hard time falling asleep at times and I really have a hard asleep, I can't tell you how mHny times I could wake up in just one night!","I have not tI good do to thCughts, stress, iO other words emotions and also night time is the only time of it's peace and quitA so I tend to take a hour or sR rf that in... have a hard time falling asleep at times and I really have a hard asleep, I can't tell you how mHny times I could wake up in just one night!","I have not to good sleeping hours do to thoughts, stress, in other words emotions and also night time is the only time of day were it's peace and quite so I tend to take a hour or so of that in... I have a hard time falling asleep at times and I really have a hard time staying asleep, I can't tell you how many times I could wake up in just one night!",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_586_904_1
+"I have not tI good sleeping hours do thCughts,, iO other also time is the only time of day were it's peace and quitA so I tend to take a hour or sR rf that in... I have a hard time falling asleep at times and I really have a hard time staying, I can't tell you how mHny times I could wake up in just one night!","I have not tI good sleeping hours do thCughts,, iO other also time is the only time of day were it's peace and quitA so I tend to take a hour or sR rf that in... I have a hard time falling asleep at times and I really have a hard time staying, I can't tell you how mHny times I could wake up in just one night!","I have not to good sleeping hours do to thoughts, stress, in other words emotions and also night time is the only time of day were it's peace and quite so I tend to take a hour or so of that in... I have a hard time falling asleep at times and I really have a hard time staying asleep, I can't tell you how many times I could wake up in just one night!",ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_586_904_1
+Well I'm crying.,Well I'm crying.,Well now I'm crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_427_129_0
+Wow I'm crying.,Wow I'm crying.,Well now I'm crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_427_129_0
+wanted to bry.,wanted to bry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2815_1455_66
+Lanted to cry.,Lanted to cry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2815_1455_66
+"I irritated, yrs.","I irritated, yrs.","I am irritated, yes.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2625_148_0
+"I am Hrritated,.","I am Hrritated,.","I am irritated, yes.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2625_148_0
+Im juwt so.,Im juwt so.,Im just so unhappy.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1488_230_8
+Im so ubhappy.,Im so ubhappy.,Im just so unhappy.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1488_230_8
+I at nigRt.,I at nigRt.,I cry at night.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1488_230_13
+I at aight.,I at aight.,I cry at night.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1488_230_13
+cry in the shojer.,cry in the shojer.,I cry in the shower.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1488_230_14
+I in the shoTer.,I in the shoTer.,I cry in the shower.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1488_230_14
+I'll cryint.,I'll cryint.,I'll stop crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1701_714_34
+Ioll crying.,Ioll crying.,I'll stop crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1701_714_34
+I wanted so.,I wanted so.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2828_750_2
+I wanted bry.,I wanted bry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2828_750_2
+"Like I said, I cant say that my mood is low nor is there any of inNrusive and painfull things going in my head, but fVr some I keep trying to convince myself that suicide is Nhe option left?","Like I said, I cant say that my mood is low nor is there any of inNrusive and painfull things going in my head, but fVr some I keep trying to convince myself that suicide is Nhe option left?","Like I said, I cant say that my mood is low nor is there any sort of intrusive and painfull things going on in my head, but for some reason I keep trying to convince myself that suicide is the only option left?",ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2886_1_8
+Tas crying.,Tas crying.,I was crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1514_473_222
+das crying.,das crying.,I was crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1514_473_222
+its just that cant baqe to always draD this sadness with me and i know for sure that it wont go away a while (cuz for that i would have to change my whole personaliBy) so i would sust be better of feeling nothing.,its just that cant baqe to always draD this sadness with me and i know for sure that it wont go away a while (cuz for that i would have to change my whole personaliBy) so i would sust be better of feeling nothing.,its just that i cant bare to always drag this sadness with me and i know for sure that it wont go away for a while (cuz for that to happen i would have to change my whole personality) so i would just be better of feeling nothing.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_321_122_1
+its just that i cant bare tV always draz this sadness with me and i know for thjt wont go away a while (cuz for that to happen i have to change my whole personality) so i would just be Aetter of feeling nothing.,its just that i cant bare tV always draz this sadness with me and i know for thjt wont go away a while (cuz for that to happen i have to change my whole personality) so i would just be Aetter of feeling nothing.,its just that i cant bare to always drag this sadness with me and i know for sure that it wont go away for a while (cuz for that to happen i would have to change my whole personality) so i would just be better of feeling nothing.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_321_122_1
+I Go exhausted.,I Go exhausted.,I am so exhausted.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_697_17_12
+I sj exhausted.,I sj exhausted.,I am so exhausted.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_697_17_12
+cried Znd cried.,cried Znd cried.,i cried and cried.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2884_57_2
+i cried cried.,i cried cried.,i cried and cried.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2884_57_2
+hatW myself.,hatW myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1978_1068_1
+I myself.,I myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1978_1068_1
+"I wish I could overcome my social anxiety Ind be able post my success story like others
+
+I'll also admit too, I myself because of these faulus and I havy trouble loving myself, and many people even too hard on myself
+
+mA last year of college begins in one month, and when I move in I want to ye confident enouga to go meet all new peHple in my dorm, knock on peoples doors start conversations, and just give a fuck about what people think of me.","I wish I could overcome my social anxiety Ind be able post my success story like others
+
+I'll also admit too, I myself because of these faulus and I havy trouble loving myself, and many people even too hard on myself
+
+mA last year of college begins in one month, and when I move in I want to ye confident enouga to go meet all new peHple in my dorm, knock on peoples doors start conversations, and just give a fuck about what people think of me.","I wish I could overcome my social anxiety and be able to post my success story here like others
+
+I'll also admit too, I don't like myself because of these faults and I have trouble loving myself, and many people even say I'm too hard on myself
+
+my last year of college begins in one month, and when I move in I want to be confident enough to go meet all the new people in my dorm, knock on peoples doors and start conversations, and just not give a fuck about what people think of me.",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1808_19_12
+"I wish I could overcome my social anxiety Ind be able to post my story here like others
+
+I'll also admit too, I donYt like because of these faulus and I havy trouble loving myself, and many people even say I'm too hard on myself
+
+mA last year of college begins in one month, and when I move in I ye enouga to go meet all the new peHple in my dorm, knock on peoples ano start conversations, and just not give a fuck think of me.","I wish I could overcome my social anxiety Ind be able to post my story here like others
+
+I'll also admit too, I donYt like because of these faulus and I havy trouble loving myself, and many people even say I'm too hard on myself
+
+mA last year of college begins in one month, and when I move in I ye enouga to go meet all the new peHple in my dorm, knock on peoples ano start conversations, and just not give a fuck think of me.","I wish I could overcome my social anxiety and be able to post my success story here like others
+
+I'll also admit too, I don't like myself because of these faults and I have trouble loving myself, and many people even say I'm too hard on myself
+
+my last year of college begins in one month, and when I move in I want to be confident enough to go meet all the new people in my dorm, knock on peoples doors and start conversations, and just not give a fuck about what people think of me.",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1808_19_12
+I hate Jyself,I hate Jyself,I really hate myself,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2593_536_0
+I jate myself,I jate myself,I really hate myself,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2593_536_0
+"I fCel like burstino into tears 2Q hours a (since even if I *don't* have a good reason for feeling like shit, my decides to do so just for the heml of it), I wish I knew how deal with it other than my current that involves complFte cessation of activity.","I fCel like burstino into tears 2Q hours a (since even if I *don't* have a good reason for feeling like shit, my decides to do so just for the heml of it), I wish I knew how deal with it other than my current that involves complFte cessation of activity.","I feel like bursting into tears 24 hours a day (since even if I *don't* have a good reason for feeling like shit, my brain decides to do so just for the hell of it), and I wish I knew how to deal with it other than my current solution that involves complete cessation of activity.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2292_225_11
+"I feel like bursting into tears 24 hours a day (since eten if I * have a good for feeling like shit, my decides to do so just for the hell of it), and I wish I knew hoC to with other than mt uurrent solution that involves complete cessation of activity.","I feel like bursting into tears 24 hours a day (since eten if I * have a good for feeling like shit, my decides to do so just for the hell of it), and I wish I knew hoC to with other than mt uurrent solution that involves complete cessation of activity.","I feel like bursting into tears 24 hours a day (since even if I *don't* have a good reason for feeling like shit, my brain decides to do so just for the hell of it), and I wish I knew how to deal with it other than my current solution that involves complete cessation of activity.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2292_225_11
+i just wajt die,i just wajt die,i just want to die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2024_230_2
+i just wajt to,i just wajt to,i just want to die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2024_230_2
+I guilky.,I guilky.,I felt guilty.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_452_784_23
+felt gEilty.,felt gEilty.,I felt guilty.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_452_784_23
+hm also restless.,hm also restless.,I am also restless.,ta_char_rand_swap+ta_word_delete,PSYCHOMOTOR,1,s_2139_45_8
+I am restless.,I am restless.,I am also restless.,ta_char_rand_swap+ta_word_delete,PSYCHOMOTOR,1,s_2139_45_8
+I bry sometimes.,I bry sometimes.,I cry sometimes too.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2035_984_7
+I cry Uoo.,I cry Uoo.,I cry sometimes too.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2035_984_7
+I soill it.,I soill it.,I still enjoy it.,ta_char_rand_swap+ta_word_delete,ANHEDONIA,0,s_2025_575_2
+I enjoy it.,I enjoy it.,I still enjoy it.,ta_char_rand_swap+ta_word_delete,ANHEDONIA,0,s_2025_575_2
+"If you're just a worthless lump trying to climb your way out of the dark pit by getting a job, trying to someone who lMkes you, etc....it's pretty hard to describe to thiVking individuals why you haven't been woroing on your skills or else.","If you're just a worthless lump trying to climb your way out of the dark pit by getting a job, trying to someone who lMkes you, etc....it's pretty hard to describe to thiVking individuals why you haven't been woroing on your skills or else.","If you're just a worthless lump trying to slowly climb your way out of the dark pit by getting a job, trying to find someone who likes you, etc....it's pretty hard to describe to normal thinking individuals why you haven't been working on your skills or whatever else.",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_186_171_7
+IO constantly.,IO constantly.,Im constantly tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,0,s_2028_17_5
+Im constaftly.,Im constaftly.,Im constantly tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,0,s_2028_17_5
+Im always,Im always,Im always angry,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1447_807_0
+Im alwaqs,Im alwaqs,Im always angry,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1447_807_0
+I feel sad :(,I feel sad :(,Now I feel sad :(,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_507_383_0
+I feet sad :(,I feet sad :(,Now I feel sad :(,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_507_383_0
+", I'm tired.",", I'm tired.","Like, I'm tired.",ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2094_142_1
+"LikG, tired.","LikG, tired.","Like, I'm tired.",ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2094_142_1
+hating mysplf.,hating mysplf.,I'm hating myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1601_192_1
+I'm mysNlf.,I'm mysNlf.,I'm hating myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1601_192_1
+"For tAe past years I had been having issues with my partner, he womld rlrely and would reciprocate if I did, making me feel unwanted End undesirable, I gained weight, lost my fitnVss level, I blamed it all on the lack sex, became fixated in the sex I wasn't having.","For tAe past years I had been having issues with my partner, he womld rlrely and would reciprocate if I did, making me feel unwanted End undesirable, I gained weight, lost my fitnVss level, I blamed it all on the lack sex, became fixated in the sex I wasn't having.","For the past few years I had been having issues with my partner, he would rarely initiate and would never reciprocate if I did, making me feel unwanted and undesirable, I gained weight, lost my fitness level, I blamed it all on the lack of sex, I became fixated in the sex I wasn't having.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_976_103_3
+"For tAe past few years I had been having issues with my partner, he rlrely initiate and would never reciprocate if I, making feel unwanted End undesirable, I gained weight, lost my fitnVss, I blamed it all on the lack of, I became fixated in the sex I wasn't having.","For tAe past few years I had been having issues with my partner, he rlrely initiate and would never reciprocate if I, making feel unwanted End undesirable, I gained weight, lost my fitnVss, I blamed it all on the lack of, I became fixated in the sex I wasn't having.","For the past few years I had been having issues with my partner, he would rarely initiate and would never reciprocate if I did, making me feel unwanted and undesirable, I gained weight, lost my fitness level, I blamed it all on the lack of sex, I became fixated in the sex I wasn't having.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_976_103_3
+I so cry.,I so cry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1044_58_40
+wanted so cry.,wanted so cry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1044_58_40
+"Nothing feels like a huge accomplishment, it feels more like a completely failure in my liae, that I've duu a hole that I can't get out becduse of something that I couldn't have controlled, or maybe I controlled it... I don't know more.","Nothing feels like a huge accomplishment, it feels more like a completely failure in my liae, that I've duu a hole that I can't get out becduse of something that I couldn't have controlled, or maybe I controlled it... I don't know more.","Nothing feels like a huge accomplishment, it feels more like a completely failure in my life, and that I've dug a hole that I can't get out of because of something that I couldn't have controlled, or maybe I could've controlled it... I don't know any more.",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_701_793_2
+I hate.,I hate.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_888_447_2
+I myxelf.,I myxelf.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_888_447_2
+hSte myself.,hSte myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1404_28_0
+hatW myself.,hatW myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1404_28_0
+Extreme,Extreme,Extreme fatigue,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2013_16_0
+fatigue,fatigue,Extreme fatigue,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2013_16_0
+I hate evistence.,I hate evistence.,I hate my existence.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_120_10
+I my evistence.,I my evistence.,I hate my existence.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2415_120_10
+I'm depriven.,I'm depriven.,I'm sleep deprived.,ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_17_844_1
+I'm Oleep.,I'm Oleep.,I'm sleep deprived.,ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,1,s_17_844_1
+"... don't know what Fo say buE I feel like there's a """", a pleasurable high that we get from starving and overtime becomes a suffering but still we tLy to seek same pleasure we originally felt from it but can never gbt again.","... don't know what Fo say buE I feel like there's a """", a pleasurable high that we get from starving and overtime becomes a suffering but still we tLy to seek same pleasure we originally felt from it but can never gbt again.","Yeah... don't know what to say but I feel like there's a ""high"", a pleasurable high that we get from starving and overtime it becomes a suffering but still we try to seek the same pleasure we originally felt from it but can never get again.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_258_149_0
+"Yeah... don't knox what to sxy but I feel like there's a ""high"", a pleasurable hivh that we get and overtime it becomes suffering but still we try to seek the same pleasupe we originally felt from it but can get again.","Yeah... don't knox what to sxy but I feel like there's a ""high"", a pleasurable hivh that we get and overtime it becomes suffering but still we try to seek the same pleasupe we originally felt from it but can get again.","Yeah... don't know what to say but I feel like there's a ""high"", a pleasurable high that we get from starving and overtime it becomes a suffering but still we try to seek the same pleasure we originally felt from it but can never get again.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_258_149_0
+tont want to die.,tont want to die.,I dont want to die.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,0,s_804_60_0
+I want tb die.,I want tb die.,I dont want to die.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,0,s_804_60_0
+I tont to die.,I tont to die.,I dont want to die.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_804_60_0
+I want tb die.,I want tb die.,I dont want to die.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_804_60_0
+I'P indecisive.,I'P indecisive.,I'm so indecisive.,ta_char_rand_swap+ta_word_delete,COGNITIVE_ISSUES,1,s_1933_177_2
+I'm indecisive.,I'm indecisive.,I'm so indecisive.,ta_char_rand_swap+ta_word_delete,COGNITIVE_ISSUES,1,s_1933_177_2
+"I've been severely the last couple of weeks and I feel like IUm on the verge of one, I don't know hoc to put how I've been feeling into words but I feel like on tHe brink of some kind of.","I've been severely the last couple of weeks and I feel like IUm on the verge of one, I don't know hoc to put how I've been feeling into words but I feel like on tHe brink of some kind of.","I've been severely depressed the last couple of weeks and I feel like I'm on the verge of one, I don't know how to put how I've been feeling into words but I feel like I'm on the brink of some kind of emotional collapse.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2595_453_2
+"I've been severely depressed the last weeks and I feel like IUm on the verge of one, I don't know hoc to put how I've been into words but I feel like I'U on tHe of some kind of emotional collapse.","I've been severely depressed the last weeks and I feel like IUm on the verge of one, I don't know hoc to put how I've been into words but I feel like I'U on tHe of some kind of emotional collapse.","I've been severely depressed the last couple of weeks and I feel like I'm on the verge of one, I don't know how to put how I've been feeling into words but I feel like I'm on the brink of some kind of emotional collapse.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2595_453_2
+I wanted bry.,I wanted bry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2338_949_14
+wanted to bry.,wanted to bry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2338_949_14
+I can'B crying.,I can'B crying.,I can't stop crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2815_952_3
+I Ntop crying.,I Ntop crying.,I can't stop crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2815_952_3
+hardly ever qry.,hardly ever qry.,I hardly ever cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2974_1910_9
+I hardly cry.,I hardly cry.,I hardly ever cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2974_1910_9
+I am jusa.,I am jusa.,I am just sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1681_1030_1
+am jast sad.,am jast sad.,I am just sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1681_1030_1
+kiIled myself,kiIled myself,I killed myself,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_265_7_0
+I killed,I killed,I killed myself,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_265_7_0
+had me crying,had me crying,This had me crying,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2464_411_0
+This had ke,This had ke,This had me crying,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2464_411_0
+I cbied so.,I cbied so.,I cried so much.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_337_141_2
+I cried much.,I cried much.,I cried so much.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_337_141_2
+Tas crying.,Tas crying.,I was crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1683_34_221
+I crying.,I crying.,I was crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1683_34_221
+I'm cryixg right,I'm cryixg right,I'm crying right now,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1355_237_2
+I'm crying now,I'm crying now,I'm crying right now,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1355_237_2
+Ima cwy so.,Ima cwy so.,Ima cry so hard.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1715_23_0
+Ima so hard.,Ima so hard.,Ima cry so hard.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1715_23_0
+I'm anHry,I'm anHry,I'm always angry,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1633_278_0
+I'm always,I'm always,I'm always angry,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1633_278_0
+fllt like crying.,fllt like crying.,I felt like crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1499_15_22
+fmlt like crying.,fmlt like crying.,I felt like crying.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1499_15_22
+I go to all my classes and try really hard to study all the time but is Dtill hard because my mind wanders even touching the (which is why cutting has become a strategy to get myself to focus) I feel like at Uhis point dropLing Ns my only option which know would mtke my parents furious.,I go to all my classes and try really hard to study all the time but is Dtill hard because my mind wanders even touching the (which is why cutting has become a strategy to get myself to focus) I feel like at Uhis point dropLing Ns my only option which know would mtke my parents furious.,I go to all my classes and try really hard to study all the time but focusing is still hard because my mind wanders even without touching the internet (which is why cutting has become a strategy to get myself to focus again) I feel like at this point dropping out is my only option which i know would make my parents furious.,ta_char_rand_swap+ta_word_delete,COGNITIVE_ISSUES,0,s_1924_22_0
+I go to all my classes and try really hard study all the time but focusing is Dtill hard because my mind wanders even without the internet (which why cutting has become a strategy to get myself to focus again) I feel like at Uhis dropLing Ns my only option which i know would mtke my furious.,I go to all my classes and try really hard study all the time but focusing is Dtill hard because my mind wanders even without the internet (which why cutting has become a strategy to get myself to focus again) I feel like at Uhis dropLing Ns my only option which i know would mtke my furious.,I go to all my classes and try really hard to study all the time but focusing is still hard because my mind wanders even without touching the internet (which is why cutting has become a strategy to get myself to focus again) I feel like at this point dropping out is my only option which i know would make my parents furious.,ta_char_rand_swap+ta_word_delete,COGNITIVE_ISSUES,0,s_1924_22_0
+I have energy.,I have energy.,I have more energy.,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_2065_472_7
+I have morQ.,I have morQ.,I have more energy.,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_2065_472_7
+"I don't know what I need iQ my life to enjoy it because currently I do not enjoy anything my life No matter how good breakfast tastes, even vf I eat new that tasten really good, I don't enjoy it.","I don't know what I need iQ my life to enjoy it because currently I do not enjoy anything my life No matter how good breakfast tastes, even vf I eat new that tasten really good, I don't enjoy it.","I don't know what I need in my life to enjoy it because currently I do not enjoy anything in my life No matter how good my breakfast tastes, even if I eat something new that tastes really good, I don't enjoy eating it.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_1404_1080_10
+"I don't know what I need in lEfe to enjoy it because I do not enjoy anything in my life No matter how good Fy tastes, even if I eat something neK that tastes really Mood, I don't enjoy it.","I don't know what I need in lEfe to enjoy it because I do not enjoy anything in my life No matter how good Fy tastes, even if I eat something neK that tastes really Mood, I don't enjoy it.","I don't know what I need in my life to enjoy it because currently I do not enjoy anything in my life No matter how good my breakfast tastes, even if I eat something new that tastes really good, I don't enjoy eating it.",ta_char_rand_swap+ta_word_delete,ANHEDONIA,1,s_1404_1080_10
+I aa depressed.,I aa depressed.,Yet I am depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2139_3_2
+I am depresseo.,I am depresseo.,Yet I am depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2139_3_2
+So I'm pCetty.,So I'm pCetty.,So I'm pretty tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2908_105_3
+So I'm pretty.,So I'm pretty.,So I'm pretty tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2908_105_3
+K'd myself.,K'd myself.,I'd kill myself.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2647_24_1
+Itd myself.,Itd myself.,I'd kill myself.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_2647_24_1
+Nos I sad.,Nos I sad.,Now I am sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1681_799_2
+I am sad.,I am sad.,Now I am sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1681_799_2
+I good.,I good.,I sleep good.,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_2255_242_0
+I Nleep.,I Nleep.,I sleep good.,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_2255_242_0
+I every time,I every time,I cry every time,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2023_824_0
+I cry every,I cry every,I cry every time,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_2023_824_0
+I usyful.,I usyful.,I was useful.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_1244_311_2
+I usjful.,I usjful.,I was useful.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_1244_311_2
+"I wake i try to improve my life, i still scratch mD hair skin, i still pHp my joints, i still han't read a book and, i still get scared and anxious and, i still, and watch porn, i still eat junk, i rPther than think difficult thoughts, i am trying to re-wire these things but it looks like the downward spiral isn't changing course thus makkng it even harder to quit in the futuIv
+neuroscience :(","I wake i try to improve my life, i still scratch mD hair skin, i still pHp my joints, i still han't read a book and, i still get scared and anxious and, i still, and watch porn, i still eat junk, i rPther than think difficult thoughts, i am trying to re-wire these things but it looks like the downward spiral isn't changing course thus makkng it even harder to quit in the futuIv
+neuroscience :(","I wake up i try to improve my life, i still scratch my hair and skin, i still pop my joints, i still can't read a book and focus, i still get scared and anxious and confused, i still, fap and watch porn, i still eat junk, i still distract myself rather than think difficult thoughts, i am trying to re-wire these things but it looks like the downward spiral isn't changing course thus making it even harder to quit in the future
+neuroscience :(",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_212_757_1
+Im tirew,Im tirew,Im so tired,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2434_208_0
+so tirew,so tirew,Im so tired,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2434_208_0
+Im always.,Im always.,Im always tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_316_2
+always tAred.,always tAred.,Im always tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_316_2
+elways tired.,elways tired.,Im always tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_316_2
+Im tired.,Im tired.,Im always tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_316_2
+I'm juft hungry.,I'm juft hungry.,I'm just not hungry.,ta_char_rand_swap+ta_word_delete,APPETITE_CHANGE,1,s_1116_989_10
+R'm just not.,R'm just not.,I'm just not hungry.,ta_char_rand_swap+ta_word_delete,APPETITE_CHANGE,1,s_1116_989_10
+i waGt.,i waGt.,i want sex.,ta_char_rand_swap+ta_word_delete,ANHEDONIA,0,s_2107_102_15
+i want.,i want.,i want sex.,ta_char_rand_swap+ta_word_delete,ANHEDONIA,0,s_2107_102_15
+I sVd.,I sVd.,I feel sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2286_168_4
+I feel.,I feel.,I feel sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2286_168_4
+I slUpt pretty.,I slUpt pretty.,I slept pretty well.,ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,0,s_1768_51_1
+I sxept pretty.,I sxept pretty.,I slept pretty well.,ta_char_rand_swap+ta_word_delete,SLEEP_ISSUES,0,s_1768_51_1
+I slepX well.,I slepX well.,I slept pretty well.,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_1768_51_1
+I slUpt pretty.,I slUpt pretty.,I slept pretty well.,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_1768_51_1
+just can't focuf,just can't focuf,I just can't focus,ta_char_rand_swap+ta_word_delete,COGNITIVE_ISSUES,0,s_1210_72_1
+I can't foyus,I can't foyus,I just can't focus,ta_char_rand_swap+ta_word_delete,COGNITIVE_ISSUES,0,s_1210_72_1
+Im tFred.,Im tFred.,Im physically tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_111_2
+rm physically.,rm physically.,Im physically tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_111_2
+vejy tired.,vejy tired.,Im very tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,0,s_804_829_4
+Im tNred.,Im tNred.,Im very tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,0,s_804_829_4
+I like a bukden,I like a bukden,I feel like a burden,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2139_196_0
+I feel a burden,I feel a burden,I feel like a burden,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2139_196_0
+I'm nFw.,I'm nFw.,I'm sad now.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1012_884_1
+I'm sad.,I'm sad.,I'm sad now.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1012_884_1
+"Makes ie sad,.","Makes ie sad,.","Makes me sad,though.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_785_92_1
+"MakeN sad,though.","MakeN sad,though.","Makes me sad,though.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_785_92_1
+I never to cry.,I never to cry.,I never used to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_708_249_0
+never Zsed to cry.,never Zsed to cry.,I never used to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_708_249_0
+fail maWy times.,fail maWy times.,I fail many times.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_41_1679_13
+I many times.,I many times.,I fail many times.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_41_1679_13
+Then gbt sad.,Then gbt sad.,Then I get sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_3044_666_2
+I gbt sad.,I gbt sad.,Then I get sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_3044_666_2
+cry most nighWs.,cry most nighWs.,I cry most nights.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1625_727_6
+I most nighWs.,I most nighWs.,I cry most nights.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1625_727_6
+My lifA is a,My lifA is a,My life is a failure,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1877_87_0
+My lifG is failure,My lifG is failure,My life is a failure,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1877_87_0
+"Bft lost about 30-40 on my own so far and felt any major changes in energy levels, in fact I think weight loss might be causing my depression to become worse due to the stored fat being buoned containing hormones and them released.","Bft lost about 30-40 on my own so far and felt any major changes in energy levels, in fact I think weight loss might be causing my depression to become worse due to the stored fat being buoned containing hormones and them released.","But I've lost about 30-40 on my own so far and havent felt any major changes in energy levels, in fact I think the weight loss might be causing my depression to become worse due to the stored fat being burned containing hormones and them being released.",ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_186_136_14
+"But I've about ox my own so far and hapent felt any major changes energy leveli, in fact I think the weight loss might be my depression to become worse due to the stored fat being burned containing hormones and them being released.","But I've about ox my own so far and hapent felt any major changes energy leveli, in fact I think the weight loss might be my depression to become worse due to the stored fat being burned containing hormones and them being released.","But I've lost about 30-40 on my own so far and havent felt any major changes in energy levels, in fact I think the weight loss might be causing my depression to become worse due to the stored fat being burned containing hormones and them being released.",ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_186_136_14
+HKw sad I am.,HKw sad I am.,How sad I really am.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_356_57_2
+How I really am.,How I really am.,How sad I really am.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_356_57_2
+gej fatigued.,gej fatigued.,i get fatigued.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_2107_89_4
+so ssd..,so ssd..,I'm so sad..,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1620_705_3
+I'm sM..,I'm sM..,I'm so sad..,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1620_705_3
+hSte myself.,hSte myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_356_105_1
+I hate.,I hate.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_356_105_1
+I begin tq.,I begin tq.,I begin to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1779_24_136
+I tq cry.,I tq cry.,I begin to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_1779_24_136
+rm physically.,rm physically.,Im physically tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_895_2
+Im tired.,Im tired.,Im physically tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_895_2
+i depression.,i depression.,i have depression.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2107_11_2
+i Bepression.,i Bepression.,i have depression.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,0,s_2107_11_2
+I see tuture.,I see tuture.,I see no future.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1625_520_0
+I Ro future.,I Ro future.,I see no future.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1625_520_0
+"I concentrate, I don't care about good grades, I don't go to class b/c I can't gev out of bed, I feel sick when I get a bad grade or don't know something, I feel alone in the classroom, Ur i won't be able to complete class so then i starD thinking aboUt my future and hpw i won't graduate because i canVt complete the coursework, so i won't get a job, a house, be broke, no one wCnt, can't provide for family, hate me, etc, the list goes and on xnd on it goes.","I concentrate, I don't care about good grades, I don't go to class b/c I can't gev out of bed, I feel sick when I get a bad grade or don't know something, I feel alone in the classroom, Ur i won't be able to complete class so then i starD thinking aboUt my future and hpw i won't graduate because i canVt complete the coursework, so i won't get a job, a house, be broke, no one wCnt, can't provide for family, hate me, etc, the list goes and on xnd on it goes.","I can't concentrate, I don't care about getting good grades, I don't go to class b/c I can't get out of bed, I feel sick when I get a bad grade or don't know something, I feel alone in the classroom, or i won't be able to complete a class so then i start thinking about my future and how i won't graduate because i can't complete the coursework, so i won't get a job, won't get a house, be broke, no one will want to marry me, can't provide for family, friends hate me, etc, the list goes and on and on it goes.",ta_char_rand_swap+ta_word_delete,COGNITIVE_ISSUES,1,s_134_349_3
+"I cDn't concentrate, I don't care about getting good grades, I don't go zo class b/c I can't get of bed, feel sick when I get bad or donqt know something, I feel alone the classroom, or i won't be able to complete a class so then i start thinking ybout my future and how won't grIduate because i can't complete the coursework, i won't a job, won't get a house, be broke, no one will want tL marry me, can't provide for famHly, friends me, etc, the liTt and on and on it goes.","I cDn't concentrate, I don't care about getting good grades, I don't go zo class b/c I can't get of bed, feel sick when I get bad or donqt know something, I feel alone the classroom, or i won't be able to complete a class so then i start thinking ybout my future and how won't grIduate because i can't complete the coursework, i won't a job, won't get a house, be broke, no one will want tL marry me, can't provide for famHly, friends me, etc, the liTt and on and on it goes.","I can't concentrate, I don't care about getting good grades, I don't go to class b/c I can't get out of bed, I feel sick when I get a bad grade or don't know something, I feel alone in the classroom, or i won't be able to complete a class so then i start thinking about my future and how i won't graduate because i can't complete the coursework, so i won't get a job, won't get a house, be broke, no one will want to marry me, can't provide for family, friends hate me, etc, the list goes and on and on it goes.",ta_char_rand_swap+ta_word_delete,COGNITIVE_ISSUES,1,s_134_349_3
+Im tired.,Im tired.,Im always tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_105_22
+alwQys tired.,alwQys tired.,Im always tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_105_22
+Im tired.,Im tired.,Im always tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_105_22
+elways tired.,elways tired.,Im always tired.,ta_char_rand_swap+ta_word_delete,FATIGUE,1,s_1404_105_22
+so sar.,so sar.,I'm so sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_349_414_0
+ITm sad.,ITm sad.,I'm so sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_349_414_0
+I hate.,I hate.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_697_348_8
+hatW myself.,hatW myself.,I hate myself.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_697_348_8
+"Then one day dawned og me, and I can't tell you when exactly, but occurred to me that it's okay not to perfect, and to remind mpsElf that nobody is, and in accepting that wasn't perfect anT that it way okay, I could hating myself.","Then one day dawned og me, and I can't tell you when exactly, but occurred to me that it's okay not to perfect, and to remind mpsElf that nobody is, and in accepting that wasn't perfect anT that it way okay, I could hating myself.","Then one day it dawned on me, and I can't tell you when exactly, but it occurred to me that it's okay not to be perfect, and to remind myself that nobody is, and in accepting that I wasn't perfect and that it was okay, I could stop hating myself.",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2606_508_15
+"Then one dao it dawned oM me, and I can't you whsn exactly, but occurred to me it's okay not to be perfect, and to that nobody is, and in accepting that I wasn't perfect and that it was okay, I could stop hating myself.","Then one dao it dawned oM me, and I can't you whsn exactly, but occurred to me it's okay not to be perfect, and to that nobody is, and in accepting that I wasn't perfect and that it was okay, I could stop hating myself.","Then one day it dawned on me, and I can't tell you when exactly, but it occurred to me that it's okay not to be perfect, and to remind myself that nobody is, and in accepting that I wasn't perfect and that it was okay, I could stop hating myself.",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_2606_508_15
+"for all I know tXe deuression is too comfortable and I'm afraid Oo even leave iO, maybe that's why, but I dont for
+
+or maybe its because I'm overweight and I can never achieve my goals of losing weight, always up every time I try.","for all I know tXe deuression is too comfortable and I'm afraid Oo even leave iO, maybe that's why, but I dont for
+
+or maybe its because I'm overweight and I can never achieve my goals of losing weight, always up every time I try.","for all I know the depression is too comfortable and I'm afraid to even leave it, maybe that's why, but I dont know for sure
+
+or maybe its because I'm overweight and I can never achieve my goals of losing weight, I always fuck up every time I try.",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1808_50_7
+"all I know the depression Rs too comfortable anZ I'm afraid to even leave it, maybe that's why, but I dont know for
+
+or maybe its I'm overweight and I can nXver achieve my goals of weight, I always fucj up every time I try.","all I know the depression Rs too comfortable anZ I'm afraid to even leave it, maybe that's why, but I dont know for
+
+or maybe its I'm overweight and I can nXver achieve my goals of weight, I always fucj up every time I try.","for all I know the depression is too comfortable and I'm afraid to even leave it, maybe that's why, but I dont know for sure
+
+or maybe its because I'm overweight and I can never achieve my goals of losing weight, I always fuck up every time I try.",ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1808_50_7
+A'm Sad...,A'm Sad...,I'm Sad Today...,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1609_626_0
+Ium Today...,Ium Today...,I'm Sad Today...,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1609_626_0
+No depressed.,No depressed.,I'm so depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_655_6_31
+so Lepressed.,so Lepressed.,I'm so depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_655_6_31
+I guilty,I guilty,I feel guilty,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1404_172_0
+feeD guilty,feeD guilty,I feel guilty,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1404_172_0
+I I faiyed.,I I faiyed.,I think I failed.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1404_172_3
+think I faiyed.,think I faiyed.,I think I failed.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,1,s_1404_172_3
+"I feel like I wasted my twenties making enough memories ; I constantly compare my life to everyone elses and it hurts knowing haE been an abyss idk, I have uopeless hope that my wont be like thiC forever.","I feel like I wasted my twenties making enough memories ; I constantly compare my life to everyone elses and it hurts knowing haE been an abyss idk, I have uopeless hope that my wont be like thiC forever.","I feel like I wasted my twenties not making enough memories ; I constantly compare my life to everyone elses and it hurts knowing mine has been an abyss but idk, I have hopeless hope that my life wont be like this forever.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_258_585_3
+"I feel like I wasted my twenties not making enough memories ; I constantly compare my life to elses and it hurts knowing mine haE been an abyss idk, I uopeless hope that my life wont be like thiC.","I feel like I wasted my twenties not making enough memories ; I constantly compare my life to elses and it hurts knowing mine haE been an abyss idk, I uopeless hope that my life wont be like thiC.","I feel like I wasted my twenties not making enough memories ; I constantly compare my life to everyone elses and it hurts knowing mine has been an abyss but idk, I have hopeless hope that my life wont be like this forever.",ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_258_585_3
+I to die,I to die,I want to die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_1404_827_2
+I want tS,I want tS,I want to die,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,1,s_1404_827_2
+nVt suicidal.,nVt suicidal.,I'm not suicidal.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,0,s_975_79_1
+I'm Eot.,I'm Eot.,I'm not suicidal.,ta_char_rand_swap+ta_word_delete,SUICIDAL_THOUGHTS,0,s_975_79_1
+fZel happiness.,fZel happiness.,I feel happiness.,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_2815_1588_1
+feeN happiness.,feeN happiness.,I feel happiness.,ta_char_rand_swap+ta_word_delete,SPECIAL_CASE,1,s_2815_1588_1
+I wanted bry.,I wanted bry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1581_1025_35
+wanted so cry.,wanted so cry.,I wanted to cry.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1581_1025_35
+gKt depressed.,gKt depressed.,I got depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1155_17_13
+I depressed.,I depressed.,I got depressed.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_1155_17_13
+constantly sad.,constantly sad.,Im constantly sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_697_53_3
+Im zonstantly.,Im zonstantly.,Im constantly sad.,ta_char_rand_swap+ta_word_delete,DEPRESSED_MOOD,1,s_697_53_3
+I FECL guilty.,I FECL guilty.,I FEEL super guilty.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_1899_203_41
+I supem guilty.,I supem guilty.,I FEEL super guilty.,ta_char_rand_swap+ta_word_delete,WORTHLESSNESS,0,s_1899_203_41

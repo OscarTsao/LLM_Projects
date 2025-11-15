@@ -1,0 +1,63 @@
+defaults:
+  - dataset: original
+  - model: bert_base
+  - optional training_mode: null
+  - _self_
+
+seed: 1337
+output_dir: outputs/train
+log_dir: logs
+resume: true
+save_total_limit: 1
+metric_for_best_model: roc_auc
+regression_threshold: 0.5
+
+dataloader:
+  num_workers: 0  # Disabled for Docker container (no multiprocessing)
+  pin_memory: false  # Disabled to troubleshoot hanging
+  persistent_workers: false  # Disabled for Docker environment
+  prefetch_factor: null
+
+metrics:
+  - accuracy
+  - precision
+  - recall
+  - f1
+  - roc_auc
+
+logging:
+  wandb:
+    enabled: false
+    project: redsm5-classification
+    entity: null
+    group: null
+    tags: []
+    mode: null
+    run_name: null
+
+mlflow:
+  enabled: true
+  tracking_uri: ${oc.env:MLFLOW_TRACKING_URI,"sqlite:///mlflow.db"}
+  fallback_tracking_uri: ${oc.env:MLFLOW_FALLBACK_TRACKING_URI,"mlruns"}
+  experiments:
+    training: redsm5-classification
+    optuna: redsm5-optuna
+    criteria_optuna: redsm5-optuna-criteria
+    joint_optuna: redsm5-optuna-joint
+
+scheduler_kwargs: {}
+notes: ""
+n_trials: 500
+timeout: null
+
+optuna:
+  n_trials: 500
+  timeout: null
+  study_name: default_hpo
+  storage: null
+  direction: maximize
+
+evaluation:
+  checkpoint: null
+  output_path: test_metrics.json
+  split: test

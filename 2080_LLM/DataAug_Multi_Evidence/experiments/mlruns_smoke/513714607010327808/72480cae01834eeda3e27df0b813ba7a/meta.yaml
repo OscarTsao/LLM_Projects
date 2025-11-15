@@ -1,0 +1,15 @@
+artifact_uri: /media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Multi_Evidence/experiments/mlruns_smoke/513714607010327808/72480cae01834eeda3e27df0b813ba7a/artifacts
+end_time: 1760677332889
+entry_point_name: ''
+experiment_id: '513714607010327808'
+lifecycle_stage: active
+run_id: 72480cae01834eeda3e27df0b813ba7a
+run_name: study::smoke_hpo_local
+run_uuid: 72480cae01834eeda3e27df0b813ba7a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1760677328399
+status: 4
+tags: []
+user_id: cvrlab308

@@ -1,0 +1,58 @@
+# Training mode configuration for evidence binding only (Mode 2)
+
+defaults:
+  - /agent: evidence
+  - _self_
+
+# Override base config for evidence-only training
+training_mode: evidence_only
+
+# Data configuration
+data:
+  posts_path: ${training_mode.agent.posts_path}
+  annotations_path: ${training_mode.agent.annotations_path}
+  criteria_path: ${training_mode.agent.criteria_path}
+
+# Model configuration (inherits from agent config)
+model:
+  pretrained_model_name: ${training_mode.agent.model_name}
+  max_seq_length: ${training_mode.agent.max_seq_length}
+  classifier_dropout: ${training_mode.agent.dropout}
+  label_smoothing: ${training_mode.agent.label_smoothing}
+  max_span_length: ${training_mode.agent.max_span_length}
+  span_threshold: ${training_mode.agent.span_threshold}
+  learning_rate: ${training_mode.agent.learning_rate}
+  weight_decay: ${training_mode.agent.weight_decay}
+  warmup_ratio: ${training_mode.agent.warmup_ratio}
+  batch_size: ${training_mode.agent.batch_size}
+  gradient_accumulation_steps: ${training_mode.agent.gradient_accumulation_steps}
+  num_epochs: ${training_mode.agent.num_epochs}
+  max_grad_norm: ${training_mode.agent.max_grad_norm}
+  optimizer: ${training_mode.agent.optimizer}
+  adam_eps: ${training_mode.agent.adam_eps}
+  scheduler: ${training_mode.agent.scheduler}
+  use_amp: ${training_mode.agent.use_amp}
+  compile_model: false  # Disable torch.compile to avoid fp16 overflow issues
+  use_gradient_checkpointing: ${training_mode.agent.use_gradient_checkpointing}
+
+# Training configuration
+early_stopping_patience: ${training_mode.agent.early_stopping_patience}
+metric_for_best_model: ${training_mode.agent.metric_for_best_model}
+
+# Output directory
+output_dir: outputs/evidence/${now:%Y%m%d_%H%M%S}
+
+# Dataloader configuration
+dataloader:
+  num_workers: 24
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+
+# Optuna configuration for HPO
+optuna:
+  n_trials: 500
+  timeout: null
+  study_name: evidence_binding_hpo
+  storage: sqlite:///optuna_evidence.db
+  direction: maximize

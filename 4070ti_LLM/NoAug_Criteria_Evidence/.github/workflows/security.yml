@@ -1,0 +1,96 @@
+name: Security Scanning
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    # Run weekly on Monday at 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+jobs:
+  security-scan:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      
+      - name: Install dependencies
+        run: |
+          poetry install --no-interaction
+      
+      - name: Install security tools
+        run: |
+          poetry run pip install pip-audit pip-licenses pipdeptree
+      
+      - name: Run Bandit security scan
+        run: |
+          poetry run bandit -r src/ -f json -o bandit_report.json
+          poetry run bandit -r src/ -f txt -o bandit_report.txt
+          echo "### Bandit Security Scan Results" >> $GITHUB_STEP_SUMMARY
+          poetry run bandit -r src/ -ll -i >> $GITHUB_STEP_SUMMARY || true
+      
+      - name: Run pip-audit vulnerability scan
+        run: |
+          poetry run pip-audit --desc --format json > pip_audit_report.json || true
+          echo "### Dependency Vulnerability Scan" >> $GITHUB_STEP_SUMMARY
+          poetry run pip-audit --desc >> $GITHUB_STEP_SUMMARY || true
+      
+      - name: Generate SBOM
+        run: |
+          poetry run pipdeptree --json-tree > SBOM.json
+          poetry run pipdeptree > SBOM.txt
+      
+      - name: Generate License Report
+        run: |
+          poetry run pip-licenses --with-urls --format=markdown > THIRD_PARTY_LICENSES.md
+          poetry run pip-licenses --format=json > licenses_summary.json
+      
+      - name: Check for critical vulnerabilities
+        run: |
+          # Fail if critical vulnerabilities found
+          if poetry run pip-audit --desc | grep -i "critical"; then
+            echo "::error::Critical vulnerabilities found!"
+            exit 1
+          fi
+        continue-on-error: false
+      
+      - name: Upload security artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: security-reports
+          path: |
+            bandit_report.json
+            bandit_report.txt
+            pip_audit_report.json
+            SBOM.json
+            SBOM.txt
+            THIRD_PARTY_LICENSES.md
+            licenses_summary.json
+          retention-days: 90
+      
+      - name: Create security summary
+        run: |
+          echo "## Security Scan Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date**: $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch**: ${{ github.ref }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Artifacts Generated" >> $GITHUB_STEP_SUMMARY
+          echo "- Bandit security scan report" >> $GITHUB_STEP_SUMMARY
+          echo "- pip-audit vulnerability report" >> $GITHUB_STEP_SUMMARY
+          echo "- SBOM (Software Bill of Materials)" >> $GITHUB_STEP_SUMMARY
+          echo "- Third-party license report" >> $GITHUB_STEP_SUMMARY

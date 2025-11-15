@@ -1,0 +1,8 @@
+name: "SpanBERT/spanbert-base-cased"
+use_label_head: true
+num_labels: 2
+max_length: 384
+doc_stride: 128
+max_answer_len: 64
+lambda_span: 0.5
+dropout: 0.1

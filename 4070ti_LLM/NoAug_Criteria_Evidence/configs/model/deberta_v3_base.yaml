@@ -1,0 +1,12 @@
+# DeBERTa v3 base configuration
+
+encoder_name: "microsoft/deberta-v3-base"
+max_length: 512
+gradient_checkpointing: true
+dropout: 0.1
+
+lora:
+  enabled: false
+  r: 8
+  alpha: 16
+  dropout: 0.1

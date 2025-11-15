@@ -1,0 +1,11 @@
+{
+  "best_metric": 0.12334017969455516,
+  "best_epoch": 1,
+  "test_metrics": {
+    "val_loss": 0.43050932032721384,
+    "val_symptom_labels_micro_f1": 0.0,
+    "val_symptom_labels_macro_f1": 0.0,
+    "val_symptom_labels_roc_auc": 0.5703917906418547
+  },
+  "test_loss": 0.43050932032721384
+}

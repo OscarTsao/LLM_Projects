@@ -1,0 +1,17 @@
+# RoBERTa-base configuration
+#
+# Keys map to encoder construction and optional PEFT (LoRA) settings.
+# - encoder_name: HF identifier used by AutoModel/AutoTokenizer
+# - max_length: default tokenizer max sequence length
+# - gradient_checkpointing: enable for memory savings (slower)
+
+encoder_name: "roberta-base"
+max_length: 512
+gradient_checkpointing: false
+dropout: 0.1
+
+lora:
+  enabled: false
+  r: 8
+  alpha: 16
+  dropout: 0.1

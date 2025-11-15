@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  dataaug-app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: dataaug-multi-both
+    volumes:
+      - ../:/app
+      - ../experiments:/app/experiments
+      - ../mlruns:/app/mlruns
+      - ../Data:/app/Data
+    environment:
+      - PYTHONPATH=/app/src
+      - MLFLOW_TRACKING_URI=sqlite:///experiments/mlflow_db/mlflow.db
+      - HYDRA_FULL_ERROR=1
+    working_dir: /app
+    ports:
+      - "5000:5000"  # MLflow UI
+    stdin_open: true
+    tty: true
+    command: bash
+
+  mlflow-ui:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: dataaug-mlflow-ui
+    volumes:
+      - ../experiments:/app/experiments
+    environment:
+      - MLFLOW_TRACKING_URI=sqlite:///experiments/mlflow_db/mlflow.db
+    ports:
+      - "5001:5000"
+    command: >
+      bash -c "poetry run mlflow ui 
+      --backend-store-uri sqlite:///experiments/mlflow_db/mlflow.db 
+      --host 0.0.0.0 
+      --port 5000"
+    depends_on:
+      - dataaug-app

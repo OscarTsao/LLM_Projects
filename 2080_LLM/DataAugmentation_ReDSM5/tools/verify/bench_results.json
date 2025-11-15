@@ -1,0 +1,35 @@
+{
+  "cpu_methods": {
+    "success": true,
+    "methods_tested": [
+      "nlp_wordnet_syn",
+      "nlp_randchar_ins",
+      "ta_wordswap_wordnet",
+      "ta_char_rand_del",
+      "ta_word_delete"
+    ],
+    "duration_sec": 9.91,
+    "total_rows": 33,
+    "throughput_rows_per_sec": 3.33
+  },
+  "gpu_methods": {
+    "cuda_available": true,
+    "success": true,
+    "method_tested": "nlp_cwe_sub_roberta",
+    "duration_sec": 7.6,
+    "total_rows": 11,
+    "throughput_rows_per_sec": 1.45
+  },
+  "disk_cache": {
+    "success": true,
+    "first_run_sec": 8.13,
+    "second_run_sec": 5.12,
+    "speedup_factor": 1.59
+  },
+  "multiprocessing": {
+    "success": true,
+    "num_proc_1_sec": 9.27,
+    "num_proc_4_sec": 24.39,
+    "speedup_factor": 0.38
+  }
+}

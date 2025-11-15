@@ -1,0 +1,620 @@
+================================================================================
+REFACTORED_PSY COMPREHENSIVE FILE INVENTORY
+Generated: 2025-10-23
+Location: /experiment/YuNing/Refactored_Psy
+================================================================================
+
+DIRECTORY SUMMARY
+================================================================================
+
+Total Size: 198.6 MB
+Total Directories: 18 major directories
+Total Configuration Files: 40+ YAML files
+Total Data Files: Multiple ReDSM-5 copies + DSM-5 criteria
+
+ROOT LEVEL STRUCTURE
+================================================================================
+
+/experiment/YuNing/Refactored_Psy/
+├── NoAug_Criteria_Evidence/              (8.3 MB) [TARGET 1]
+├── DataAug_Criteria_Evidence/            (8.3 MB) [TARGET 2]
+└── psy-ref-repos/                        (182 MB) [SOURCE REPOS]
+
+================================================================================
+TARGET DIRECTORIES INVENTORY
+================================================================================
+
+1. NoAug_Criteria_Evidence
+   Location: /experiment/YuNing/Refactored_Psy/NoAug_Criteria_Evidence
+   Size: 8.3 MB
+   Purpose: Criteria + Evidence models WITHOUT data augmentation
+   
+   Key Files:
+   - pyproject.toml                      (1.1 KB) [Template]
+   - README.md                           (1.2 KB) [Generic template]
+   - .git/                               [Git repo, 1 commit]
+   - mlflow.db                           [SQLite database]
+   - optuna.db                           [SQLite database]
+   
+   Source Structure:
+   - src/Project/Criteria/               [Criteria matching task]
+   - src/Project/Evidence/               [Evidence binding task]
+   - src/Project/Joint/                  [Joint training task]
+   - src/Project/Share/
+     ├── models/model.py                 (Base model wrapper)
+     ├── data/dataset.py                 (Dataset utilities)
+     ├── engine/
+     │  ├── train_engine.py              (Training loop)
+     │  └── eval_engine.py               (Evaluation loop)
+     └── utils/
+        ├── checkpoint.py                (Model checkpointing)
+        ├── mlflow_utils.py              (MLflow integration)
+        ├── optuna_utils.py              (Optuna integration)
+        ├── log.py                       (Logging utilities)
+        └── seed.py                      (Reproducibility)
+   
+   Data:
+   - data/redsm5/
+     ├── redsm5_posts.csv                (2,125 lines, ~2.3 MB)
+     ├── redsm5_annotations.csv          (2,082 lines, ~951 KB)
+     └── README.md
+   - data/processed/
+     └── redsm5_matched_evidence.csv     (Processed evidence)
+   
+   Configuration:
+   - configs/
+     ├── criteria/                       [Criteria-specific configs]
+     ├── evidence/                       [Evidence-specific configs]
+     ├── joint/                          [Joint training configs]
+     ├── share/                          [Shared configs]
+     └── data/                           [Data loading configs]
+   
+   Infrastructure:
+   - artifacts/                          [Empty - for model weights]
+   - outputs/                            [Empty - for training outputs]
+   - mlruns/                             [MLflow tracking]
+   - tests/                              [Test directory]
+   - .devcontainer/                      [VS Code dev container]
+   - .git/                               [Git repository]
+
+2. DataAug_Criteria_Evidence
+   Location: /experiment/YuNing/Refactored_Psy/DataAug_Criteria_Evidence
+   Size: 8.3 MB
+   Purpose: Criteria + Evidence models WITH data augmentation
+   
+   Structure: IDENTICAL to NoAug_Criteria_Evidence
+   Difference: Intended for augmented data training pipeline
+   
+   Key Files: [Same as NoAug]
+   - pyproject.toml, README.md, .git/, mlflow.db, optuna.db
+   - src/Project/ [Criteria, Evidence, Joint, Share]
+   - data/redsm5/ + data/processed/
+   - configs/, artifacts/, outputs/, mlruns/, tests/, .devcontainer/
+
+================================================================================
+SOURCE REPOSITORIES INVENTORY (psy-ref-repos/)
+================================================================================
+
+Total Size: 182 MB
+Total Repos: 14 reference repositories
+
+PRIMARY SOURCES (Most Important for Integration)
+================================================================================
+
+1. DataAugmentation_ReDSM5
+   Location: /experiment/YuNing/Refactored_Psy/psy-ref-repos/DataAugmentation_ReDSM5
+   Size: 9.0 MB
+   Type: AUGMENTATION + AGENT SOURCE
+   Importance: CRITICAL - Contains augmentation pipelines and agent implementations
+   
+   Source Code:
+   src/
+   ├── agents/
+   │  ├── base.py                        (BaseAgent, AgentConfig classes)
+   │  ├── criteria_matching.py           (CriteriaMatchingAgent)
+   │  ├── evidence_binding.py            (EvidenceBindingAgent)
+   │  └── multi_agent_pipeline.py        (MultiAgentPipeline, orchestration)
+   ├── augmentation/
+   │  ├── base.py                        (AugmentationConfig base class)
+   │  ├── nlpaug_pipeline.py             (Synonym replacement, embeddings)
+   │  ├── textattack_pipeline.py         (Back-translation, paraphrase)
+   │  └── hybrid_pipeline.py             (Combines NLPAug + TextAttack)
+   ├── data/
+   │  ├── redsm5_loader.py               (Data loading utilities)
+   │  ├── criteria_descriptions.py       (DSM-5 criteria loading)
+   │  ├── evidence_loader.py             (Evidence data loading)
+   │  └── joint_dataset.py               (Multi-task dataset)
+   ├── training/
+   │  ├── train.py                       (Generic training entry)
+   │  ├── train_criteria.py              (Criteria-only training)
+   │  ├── train_evidence.py              (Evidence-only training)
+   │  ├── train_joint.py                 (Joint training)
+   │  ├── train_optuna.py                (Optuna HPO)
+   │  ├── train_evidence_optuna.py       (Evidence HPO)
+   │  ├── train_criteria_optuna.py       (Criteria HPO)
+   │  ├── train_joint_optuna.py          (Joint HPO)
+   │  ├── evaluate.py                    (Evaluation metrics)
+   │  ├── evaluate_criteria.py           (Criteria evaluation)
+   │  ├── evaluate_evidence.py           (Evidence evaluation)
+   │  ├── evaluate_joint.py              (Joint evaluation)
+   │  ├── data_module.py                 (Data module orchestration)
+   │  ├── dataset_builder.py             (Dataset construction)
+   │  ├── modeling.py                    (Model definitions)
+   │  └── engine.py                      (Training/eval engine)
+   └── utils/
+
+   Configuration (Hydra):
+   conf/
+   ├── config.yaml                       (Main configuration, n_trials: 500)
+   ├── model/
+   │  ├── bert_base.yaml
+   │  ├── bert_base_rtx5090.yaml
+   │  ├── roberta_base.yaml
+   │  ├── roberta_base_rtx5090.yaml
+   │  ├── deberta_base.yaml
+   │  └── deberta_base_rtx5090.yaml
+   ├── dataset/
+   │  ├── original.yaml
+   │  ├── original_nlpaug.yaml
+   │  ├── original_textattack.yaml
+   │  ├── original_hybrid.yaml
+   │  └── original_nlpaug_textattack.yaml
+   ├── agent/
+   │  ├── criteria.yaml
+   │  ├── evidence.yaml
+   │  └── joint.yaml
+   └── training_mode/
+      ├── criteria.yaml
+      ├── evidence.yaml
+      └── joint.yaml
+
+   Data:
+   Data/
+   ├── ReDSM5/
+   │  ├── redsm5_posts.csv               (2,125 lines)
+   │  └── redsm5_annotations.csv         (2,082 lines)
+   ├── GroundTruth/
+   │  └── Final_Ground_Truth.json        (48,973 lines, 3.2 MB)
+   └── Augmentation/                     [Empty - for augmented output]
+
+   Tests:
+   tests/
+   ├── agents/
+   │  ├── test_criteria_matching.py
+   │  └── test_multi_agent_pipeline.py
+   ├── training/
+   │  └── test_dataset_builder.py
+   └── utils/
+      └── test_timestamp.py
+
+2. Criteria_Evidence_Agent
+   Location: /experiment/YuNing/Refactored_Psy/psy-ref-repos/Criteria_Evidence_Agent
+   Size: 11 MB
+   Type: DSM-5 CRITERIA + REFERENCE IMPLEMENTATION
+   Importance: CRITICAL - Contains DSM-5 criteria definitions
+   
+   Key Data Files:
+   Data/DSM-5/
+   ├── DSM_Criteria_Array_Fixed.json            (42 KB) [COMPLETE]
+   ├── DSM_Criteria_Array_Fixed_Simplify.json   (27 KB) [SIMPLIFIED]
+   ├── DSM_Criteria_Array_Fixed_Major_Depressive.json (1.9 KB) [SPECIFIC]
+   └── single_disorder_dsm.json                 (1.7 KB) [TEMPLATE]
+   
+   Data/groundtruth/
+   └── redsm5_ground_truth.json
+   
+   Data/redsm5/
+   ├── redsm5_posts.csv
+   └── redsm5_annotations.csv
+
+   Source Code:
+   src/
+   ├── data/                             [Data handling modules]
+   ├── models/                           [Model implementations]
+   └── utils/
+
+   Documentation:
+   ├── AGENTS.md                         (Multi-agent system description)
+   ├── CLAUDE.md                         (Development guidelines - DETAILED)
+   ├── OPTIMIZATION_REPORT.md            (HPO results)
+   ├── README.md
+   └── metrics.json                      (Performance metrics)
+
+3. DataAug_Multi_Both
+   Location: /experiment/YuNing/Refactored_Psy/psy-ref-repos/DataAug_Multi_Both
+   Size: 32 MB
+   Type: IMPLEMENTATION REFERENCE
+   Importance: HIGH - Complete training pipeline example
+   
+   Source Code:
+   src/dataaug_multi_both/
+   ├── cli/                              [Command-line interface]
+   ├── data/
+   │  └── augmentation.py                [Data augmentation implementation]
+   ├── hpo/                              [Hyperparameter optimization]
+   ├── training/                         [Training logic]
+   └── utils/
+
+   Configuration:
+   ├── pyproject.toml                    [Poetry-based]
+   ├── poetry.lock                       [Locked dependencies]
+   └── configs/                          [Hydra YAML configs]
+
+4. Psy_RAG
+   Location: /experiment/YuNing/Refactored_Psy/psy-ref-repos/Psy_RAG
+   Size: 22 MB
+   Type: RAG IMPLEMENTATION
+   Importance: MEDIUM - Alternative approach
+   
+   Source Code:
+   src/
+   ├── config/                           [RAG configuration]
+   ├── models/                           [RAG model implementations]
+   └── utils/
+
+   Data:
+   Data/DSM-5/                           [DSM-5 criteria for RAG]
+
+   Configuration:
+   ├── pyproject.toml                    [Poetry-based]
+   ├── poetry.lock
+   ├── Makefile
+   └── Extensive specs (.specify/, .claude/, .codex/)
+
+OTHER SOURCE REPOSITORIES (Supporting)
+================================================================================
+
+5. DataAug_DeBERTa_Criteria
+   Size: 38 MB
+   Purpose: DeBERTa-based criteria matching
+   Contains: Model configs, specs, DSM-5 criteria
+
+6. DataAug_DeBERTa_Evidence
+   Size: 32 MB
+   Purpose: DeBERTa-based evidence binding
+   Contains: Test suite, specs, DSM-5 criteria
+
+7. Criteria_Agent_Training
+   Size: 34 MB
+   Purpose: Training pipeline for criteria matching
+   Contains: Makefile-based workflow, complete DSM-5
+
+8. Psy_redsm5_Criteria_Evidence_Agent
+   Size: 4.6 MB
+   Purpose: Combined criteria and evidence agent
+   Contains: ReDSM-5 integration
+
+9. NoAug_Criteria_Evidence (Source)
+   Size: 332 KB
+   Purpose: Reference implementation (no augmentation)
+   Contains: Basic structure
+
+10. DataAug_Multi_Evidence
+    Size: 416 KB
+    Purpose: Evidence binding agent
+    Contains: Lightweight reference
+
+11. DataAug_DeBERTa_FourAgents
+    Size: 928 KB
+    Purpose: Four-agent architecture
+    Contains: Schema definitions (JSON)
+
+12. Psy_RAG_Agent
+    Size: 120 KB
+    Purpose: RAG agent wrapper
+    Contains: Lightweight implementation
+
+13. DataAugmentation_Evaluation
+    Size: 120 KB
+    Purpose: Evaluation utilities
+    Contains: Metrics calculation
+
+================================================================================
+KEY DATA FILES SUMMARY
+================================================================================
+
+ReDSM-5 DATASET (Psychiatric Data)
+Location Instances: Multiple repos have copies for redundancy
+- redsm5_posts.csv
+  Copies at: 7 locations (NoAug target, DataAug target, + 5 source repos)
+  Size: ~2.3 MB
+  Lines: 2,125
+  Content: Reddit posts (psychiatric discussion text)
+
+- redsm5_annotations.csv
+  Copies at: 7 locations
+  Size: ~951 KB
+  Lines: 2,082
+  Content: DSM-5 symptom annotations/labels
+
+- Final_Ground_Truth.json
+  Location: DataAugmentation_ReDSM5/Data/GroundTruth/
+  Size: 3.2 MB
+  Lines: 48,973
+  Content: Comprehensive ground truth labels
+
+- redsm5_matched_evidence.csv
+  Locations: Both target directories (processed/)
+  Content: Processed evidence matching
+
+DSM-5 CRITERIA DEFINITIONS (Psychiatric Classification)
+- DSM_Criteria_Array_Fixed.json
+  Locations: 7 source repos
+  Size: 42 KB
+  Content: Complete disorder criteria set
+  Format: Array of criteria with disorder mappings
+
+- DSM_Criteria_Array_Fixed_Simplify.json
+  Locations: 7 source repos
+  Size: 27 KB
+  Content: Simplified criteria (reduced verbosity)
+
+- DSM_Criteria_Array_Fixed_Major_Depressive.json
+  Locations: 5 source repos
+  Size: 1.9 KB
+  Content: Major Depressive Disorder criteria only
+
+- single_disorder_dsm.json
+  Locations: 7 source repos
+  Size: 1.7 KB
+  Content: Single disorder template structure
+
+CONFIGURATION FILES
+Total Hydra YAML configs: 40+
+Locations:
+- DataAugmentation_ReDSM5/conf/        [24 files]
+- All source repos with configs/       [16+ files]
+- Target directories configs/          [8 directories]
+
+================================================================================
+CODE COMPONENT INVENTORY
+================================================================================
+
+AGENT IMPLEMENTATIONS
+- BaseAgent (abstract base class)
+- CriteriaMatchingAgent (maps text to DSM-5 criteria)
+- EvidenceBindingAgent (identifies supporting evidence)
+- JointTrainingModel (combined criteria + evidence)
+- MultiAgentPipeline (orchestrates multiple agents)
+
+AUGMENTATION PIPELINES
+- NLPAug Pipeline (synonym replacement, word embeddings)
+- TextAttack Pipeline (back-translation, paraphrasing)
+- Hybrid Pipeline (combines NLPAug + TextAttack)
+
+MODEL ARCHITECTURES
+- BERT base (from HuggingFace)
+- RoBERTa base
+- DeBERTa base
+- Each with standard and GPU-specific (RTX5090) variants
+
+TRAINING INFRASTRUCTURE
+- Hydra configuration framework
+- MLflow experiment tracking
+- Optuna hyperparameter optimization
+- PyTorch training engines
+- Mixed precision (AMP) support
+- Checkpoint management
+
+UTILITIES
+- Checkpoint management
+- MLflow integration
+- Optuna integration
+- Logging and monitoring
+- Seed management (reproducibility)
+- Dataset utilities
+- Metrics calculation
+
+TESTING
+- Unit tests for agents
+- Unit tests for pipelines
+- Unit tests for dataset builders
+- Utility function tests
+
+================================================================================
+DEPENDENCY ECOSYSTEM
+================================================================================
+
+PYTHON VERSION
+- Requirement: Python 3.10+
+- Recommended: 3.10+
+
+CORE DEEP LEARNING
+- torch >= 2.2.0
+- transformers >= 4.40
+- peft (for LoRA fine-tuning)
+
+EXPERIMENT MANAGEMENT
+- mlflow >= 2.8
+- optuna >= 3.4 (hyperparameter optimization)
+- hydra-core >= 1.3
+
+DATA PROCESSING
+- pandas >= 2.0.0
+- numpy >= 1.24.0
+- scikit-learn >= 1.3.0
+
+TEXT AUGMENTATION
+- nlpaug (NLPAug pipeline)
+- textattack (TextAttack pipeline)
+- back-translation models (implicit)
+
+CONFIGURATION
+- pyyaml >= 6.0.1
+- hydra-optuna-sweeper >= 1.2.0
+
+DEVELOPMENT
+- pytest >= 7.4
+- ruff >= 0.6
+- black >= 24.3
+- mypy >= 1.8
+
+PACKAGE MANAGEMENT
+- setuptools >= 68 (target directories)
+- poetry >= 1.0 (some source repos)
+
+================================================================================
+CONFIGURATION & INFRASTRUCTURE DATABASES
+================================================================================
+
+MLflow Tracking
+- Location: */mlflow.db (SQLite in each directory)
+- Dirs:
+  - /experiment/YuNing/Refactored_Psy/NoAug_Criteria_Evidence/mlflow.db
+  - /experiment/YuNing/Refactored_Psy/DataAug_Criteria_Evidence/mlflow.db
+- Tracking runs in: */mlruns/
+
+Optuna Optimization
+- Location: */optuna.db (SQLite in each directory)
+- Dirs:
+  - /experiment/YuNing/Refactored_Psy/NoAug_Criteria_Evidence/optuna.db
+  - /experiment/YuNing/Refactored_Psy/DataAug_Criteria_Evidence/optuna.db
+
+Development Containers
+- Locations: .devcontainer/ in targets and source repos
+- File: devcontainer.json (VS Code configuration)
+
+================================================================================
+GIT REPOSITORIES
+================================================================================
+
+Target Repositories
+- NoAug_Criteria_Evidence: Git initialized, 1 commit
+- DataAug_Criteria_Evidence: Git initialized, 1 commit
+
+Source Repositories
+- All 14 repos in psy-ref-repos/ have .git directories
+- Full commit histories present
+
+================================================================================
+WHAT EXISTS - SUMMARY
+================================================================================
+
+✅ Target Directory Structure
+   - Both NoAug and DataAug targets exist with proper organization
+   - src/Project structure with Criteria, Evidence, Joint, Share modules
+   - Hydra configuration framework in place
+   - Data directories with ReDSM-5 dataset
+
+✅ Source Repositories (14 repos)
+   - Complete implementations with augmentation, agents, training
+   - Comprehensive configuration examples
+   - Unit tests and evaluation utilities
+
+✅ ReDSM-5 Dataset
+   - Posts and annotations in multiple locations
+   - Ground truth labels available
+   - Data loaders implemented
+
+✅ DSM-5 Criteria Definitions
+   - Complete, simplified, and disorder-specific variants
+   - Available in 7 source repositories
+   - JSON format, ready to use
+
+✅ Augmentation Pipelines
+   - NLPAug, TextAttack, and Hybrid implementations
+   - Fully functional code
+   - Configuration support
+
+✅ Agent Implementations
+   - Base classes and concrete agents
+   - Multi-agent orchestration
+   - Training and evaluation logic
+
+✅ Training Infrastructure
+   - Hydra configuration framework (40+ configs)
+   - MLflow experiment tracking
+   - Optuna HPO support
+   - PyTorch training engines
+
+✅ Utilities and Tools
+   - Checkpoint management
+   - Logging utilities
+   - Metrics calculation
+   - Reproducibility (seeding)
+
+================================================================================
+WHAT NEEDS MIGRATION/CUSTOMIZATION
+================================================================================
+
+⚠️ pyproject.toml Customization
+   - Target pyproject.toml is template-based
+   - Needs actual dependencies from source repos
+   - Needs package naming
+
+⚠️ Augmentation Code Integration
+   - ReDSM5 augmentation modules need to be ported
+   - Should go into src/Project/Share/augmentation/
+
+⚠️ Agent Code Integration
+   - ReDSM5 agent implementations need to be ported
+   - Should be structured under src/Project/agents/
+
+⚠️ Training Entry Points
+   - Need to create/port training scripts
+   - train.py, train_criteria.py, train_evidence.py, etc.
+
+⚠️ Hydra Configuration
+   - Target configs need to be populated from source
+   - Model, dataset, agent, training_mode configs
+
+⚠️ DSM-5 Criteria Files
+   - Should be copied to target data/dsm5/ directory
+   - Multiple formats available (fixed, simplified, specific)
+
+⚠️ Test Suite
+   - Should be ported from source repos
+   - pytest configuration
+
+⚠️ README Files
+   - Target README.md files are generic templates
+   - Need project-specific documentation
+
+⚠️ Data Loaders
+   - Should be ported from DataAugmentation_ReDSM5/src/data/
+   - Place in src/Project/Share/data/
+
+================================================================================
+CRITICAL PATHS FOR INTEGRATION
+================================================================================
+
+Source -> Target Mapping:
+
+FROM: /psy-ref-repos/DataAugmentation_ReDSM5/src/augmentation/
+TO:   /*/src/Project/Share/augmentation/
+FILES: *.py (base.py, nlpaug_pipeline.py, textattack_pipeline.py, hybrid_pipeline.py)
+
+FROM: /psy-ref-repos/DataAugmentation_ReDSM5/src/agents/
+TO:   /*/src/Project/agents/
+FILES: *.py (base.py, criteria_matching.py, evidence_binding.py, multi_agent_pipeline.py)
+
+FROM: /psy-ref-repos/DataAugmentation_ReDSM5/src/training/
+TO:   /*/src/
+FILES: train*.py (train.py, train_criteria.py, train_evidence.py, train_joint.py)
+
+FROM: /psy-ref-repos/DataAugmentation_ReDSM5/src/data/
+TO:   /*/src/Project/Share/data/
+FILES: *.py (redsm5_loader.py, criteria_descriptions.py, evidence_loader.py, joint_dataset.py)
+
+FROM: /psy-ref-repos/DataAugmentation_ReDSM5/conf/
+TO:   /*/configs/
+FILES: *.yaml (all configuration files)
+
+FROM: /psy-ref-repos/Criteria_Evidence_Agent/Data/DSM-5/
+TO:   /*/data/dsm5/
+FILES: *.json (all DSM-5 criteria files)
+
+================================================================================
+TOTAL FILE COUNT ESTIMATES
+================================================================================
+
+Python Source Files: ~150+
+YAML Configuration Files: 40+
+JSON Data Files: 10+
+CSV Data Files: 4+ (multiple locations)
+Test Files: 10+
+Documentation Files: 20+
+Configuration Files (.git, .devcontainer, etc.): 30+
+Total: ~265+ files across 198.6 MB
+
+================================================================================

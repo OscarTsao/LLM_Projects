@@ -1,0 +1,499 @@
+[0;34m======================================================================
+  Running Super-Max HPO for ALL Architectures Sequentially
+======================================================================[0m 
+
+[0;33mSequence: Criteria → Evidence → Share → Joint[0m 
+[0;33mTotal trials: ~19,000 (5000+8000+3000+3000)[0m 
+[0;33mEstimated time: ~80-120 hours with PAR=4[0m 
+
+[0;32mStarting...[0m 
+
+[0;34m[1/4] Running Criteria (5000 trials)...[0m 
+make[1]: Entering directory '/media/user/SSD1/YuNing/NoAug_Criteria_Evidence'
+[0;34mRunning SUPER-MAX HPO for Criteria...[0m 
+Trials: 5000 | Parallel: 3 (reduced from 4 to prevent GPU OOM) | Epochs: 100 | Patience: 20
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python HPO_EPOCHS=100 HPO_PATIENCE=20 poetry run python scripts/tune_max.py \
+	--agent criteria --study noaug-criteria-supermax \
+	--n-trials 5000 --parallel 3 \
+	--outdir ./_runs
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``group`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``constant_liar`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py:969: ExperimentalWarning: PatientPruner is experimental (supported from v2.8.0). The interface can change in the future.
+  return PatientPruner(hb, patience=4)  # More patient (was 2)
+[I 2025-10-31 00:06:41,796] Using an existing study with name 'noaug-criteria-supermax' instead of creating a new one.
+[I 2025-10-31 00:06:45,870] Trial 2684 pruned. Pruned: Large model with bsz=32, accum=2 (effective_batch=64) likely causes OOM (24GB GPU limit)
+[I 2025-10-31 00:06:46,075] Trial 2686 pruned. Pruned: Large model with bsz=24, accum=4 (effective_batch=96) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+✓ Configuration validation passed
+  Agent: criteria
+  Epochs: 100 | Patience: 20
+  Output: ./_runs
+[HPO] agent=criteria epochs=100 storage=sqlite:////media/user/SSD1/YuNing/NoAug_Criteria_Evidence/_optuna/noaug.db
+[HPO] Study 'noaug-criteria-supermax' is compatible. Resuming optimization.
+
+================================================================================
+TRIAL 2685 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 8
+  Learning rate: 7.42834628954059e-06
+  Dropout: 0.43945990556022396
+================================================================================
+
+
+================================================================================
+TRIAL 2687 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 16
+  Learning rate: 5.296762329097353e-06
+  Dropout: 0.1269052783185971
+================================================================================
+
+
+================================================================================
+TRIAL 2688 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 6.193548737573674e-05
+  Dropout: 0.13027142327275315
+================================================================================
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [96,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [97,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [98,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [99,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [100,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [101,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [102,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [103,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [104,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [105,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [106,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [107,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [108,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [109,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [110,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [111,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [112,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [113,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [114,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [115,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [116,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [117,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [118,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [119,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [120,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [121,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [122,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [123,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [124,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [125,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [126,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [142,0,0], thread: [127,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [32,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [33,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [34,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [35,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [36,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [37,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [38,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [39,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [40,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [41,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [42,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [43,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [44,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [45,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [46,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [47,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [48,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [49,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [50,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [51,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [52,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [53,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [54,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [55,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [56,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [57,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [58,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [59,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [60,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [61,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [62,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [2,0,0], thread: [63,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+[W 2025-10-31 00:06:49,790] Trial 2685 failed with parameters: {'seed': 52283, 'model.name': 'roberta-base', 'tok.max_length': 224, 'tok.doc_stride': 80, 'tok.use_fast': True, 'train.batch_size': 8, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 7.42834628954059e-06, 'optim.weight_decay': 3.3678490244328916e-05, 'optim.beta1': 0.898777047899544, 'optim.beta2': 0.9742141673920469, 'optim.eps': 1.914490881272582e-09, 'sched.name': 'linear', 'sched.warmup_ratio': 0.14517902292756246, 'train.clip_grad': 0.3872599231246671, 'model.dropout': 0.43945990556022396, 'model.attn_dropout': 0.04685123570637426, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 6, 'optim.layerwise_lr_decay': 0.9167754854264716, 'head.pooling': 'attn', 'head.layers': 2, 'head.hidden': 1024, 'head.activation': 'silu', 'head.dropout': 0.25085545338038, 'loss.cls.type': 'ce_label_smooth', 'loss.cls.label_smoothing': 0.12784476216952742, 'loss.cls.balance': 'effective_num'} because of the following error: RuntimeError('CUDA context corrupted after 3 consecutive failures. Process must restart.').
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1075, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 809, in run_training_eval
+    logits = model(input_ids, attention_mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/src/Project/Criteria/models/model.py", line 119, in forward
+    outputs = self.encoder(
+              ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 862, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 606, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 513, in forward
+    self_attention_outputs = self.attention(
+                             ^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 449, in forward
+    attention_output = self.output(self_outputs[0], hidden_states)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 389, in forward
+    hidden_states = self.LayerNorm(hidden_states + input_tensor)
+                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1163, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted after 3 consecutive failures. Process must restart.
+[W 2025-10-31 00:06:49,800] Trial 2685 failed with value None.
+[W 2025-10-31 00:06:50,036] Trial 2687 failed with parameters: {'seed': 23665, 'model.name': 'xlm-roberta-base', 'tok.max_length': 384, 'tok.doc_stride': 32, 'tok.use_fast': False, 'train.batch_size': 16, 'train.grad_accum': 4, 'optim.name': 'adamw', 'optim.lr': 5.296762329097353e-06, 'optim.weight_decay': 0.0370648053477025, 'optim.beta1': 0.8710064126828339, 'optim.beta2': 0.9891671542629772, 'optim.eps': 7.0462479106052945e-09, 'sched.name': 'linear', 'sched.warmup_ratio': 0.038053883510770777, 'train.clip_grad': 0.4178845488149595, 'model.dropout': 0.1269052783185971, 'model.attn_dropout': 0.019678603179964144, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 2, 'optim.layerwise_lr_decay': 0.9479790648796599, 'head.pooling': 'max', 'head.layers': 2, 'head.hidden': 768, 'head.activation': 'silu', 'head.dropout': 0.05746237889193572, 'loss.cls.type': 'ce', 'loss.cls.label_smoothing': 0.04337361009552558, 'loss.cls.balance': 'effective_num'} because of the following error: RuntimeError('CUDA context corrupted after 3 consecutive failures. Process must restart.').
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1075, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 809, in run_training_eval
+    logits = model(input_ids, attention_mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/src/Project/Criteria/models/model.py", line 119, in forward
+    outputs = self.encoder(
+              ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 789, in forward
+    embedding_output = self.embeddings(
+                       ^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 112, in forward
+    token_type_embeddings = self.token_type_embeddings(token_type_ids)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/sparse.py", line 192, in forward
+    return F.embedding(
+           ^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/functional.py", line 2542, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1163, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted after 3 consecutive failures. Process must restart.
+[W 2025-10-31 00:06:50,037] Trial 2687 failed with value None.
+[W 2025-10-31 00:06:50,197] Trial 2688 failed with parameters: {'seed': 49851, 'model.name': 'roberta-base', 'tok.max_length': 384, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 64, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 6.193548737573674e-05, 'optim.weight_decay': 0.004617250179249509, 'optim.beta1': 0.9064153343031537, 'optim.beta2': 0.988163933440924, 'optim.eps': 1.279033218066528e-09, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.013132519848815527, 'sched.poly_power': 1.8098011210699942, 'train.clip_grad': 1.2107557897471488, 'model.dropout': 0.13027142327275315, 'model.attn_dropout': 0.27120985656117125, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 0, 'optim.layerwise_lr_decay': 0.8670006198036166, 'head.pooling': 'attn', 'head.layers': 4, 'head.hidden': 768, 'head.activation': 'gelu', 'head.dropout': 0.2622397336068605, 'loss.cls.type': 'focal', 'loss.cls.gamma': 4.9828107915423825, 'loss.cls.alpha': 0.42916504926856014, 'loss.cls.balance': 'weighted'} because of the following error: RuntimeError('CUDA context corrupted after 3 consecutive failures. Process must restart.').
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1075, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 739, in run_training_eval
+    model = safe_to_device(model, device)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 726, in safe_to_device
+    model = model.to(target_device)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1371, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1357, in convert
+    return t.to(
+           ^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1163, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted after 3 consecutive failures. Process must restart.
+[W 2025-10-31 00:06:50,198] Trial 2688 failed with value None.
+Warning: Error during model cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during model cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during CUDA cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during CUDA cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+[CUDA ERROR] Trial 2685 encountered CUDA error (consecutive failures: 3):
+  Error Type: AcceleratorError
+  Model: roberta-base
+  Batch size: 8
+  Learning rate: 7.42834628954059e-06
+  Dropout: 0.43945990556022396
+  Error: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+
+================================================================================
+FATAL: 3 consecutive CUDA failures detected!
+This indicates CUDA context corruption that cannot be recovered.
+Raising fatal error to trigger process restart...
+================================================================================
+
+
+[CUDA ERROR] Trial 2688 encountered CUDA error (consecutive failures: 3):
+  Error Type: AcceleratorError
+  Model: roberta-base
+  Batch size: 64
+  Learning rate: 6.193548737573674e-05
+  Dropout: 0.13027142327275315
+  Error: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+
+================================================================================
+FATAL: 3 consecutive CUDA failures detected!
+This indicates CUDA context corruption that cannot be recovered.
+Raising fatal error to trigger process restart...
+================================================================================
+
+
+[CUDA ERROR] Trial 2687 encountered CUDA error (consecutive failures: 3):
+  Error Type: AcceleratorError
+  Model: xlm-roberta-base
+  Batch size: 16
+  Learning rate: 5.296762329097353e-06
+  Dropout: 0.1269052783185971
+  Error: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+
+================================================================================
+FATAL: 3 consecutive CUDA failures detected!
+This indicates CUDA context corruption that cannot be recovered.
+Raising fatal error to trigger process restart...
+================================================================================
+
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1075, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 809, in run_training_eval
+    logits = model(input_ids, attention_mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/src/Project/Criteria/models/model.py", line 119, in forward
+    outputs = self.encoder(
+              ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 862, in forward
+    encoder_outputs = self.encoder(
+                      ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 606, in forward
+    layer_outputs = layer_module(
+                    ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 513, in forward
+    self_attention_outputs = self.attention(
+                             ^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/utils/deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 449, in forward
+    attention_output = self.output(self_outputs[0], hidden_states)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/modeling_roberta.py", line 389, in forward
+    hidden_states = self.LayerNorm(hidden_states + input_tensor)
+                                   ~~~~~~~~~~~~~~^~~~~~~~~~~~~~
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1618, in <module>
+    main()
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1567, in main
+    study.optimize(
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/study.py", line 490, in optimize
+    _optimize(
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 100, in _optimize
+    f.result()
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial_id = _run_trial(study, func, catch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 258, in _run_trial
+    raise func_err
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1163, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted after 3 consecutive failures. Process must restart.
+[W1031 00:07:31.661313124 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
+make[1]: *** [Makefile:368: tune-criteria-supermax] Error 1
+make[1]: Leaving directory '/media/user/SSD1/YuNing/NoAug_Criteria_Evidence'
+make: *** [Makefile:413: tune-all-supermax] Error 2

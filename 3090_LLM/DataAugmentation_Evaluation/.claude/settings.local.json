@@ -1,0 +1,43 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(command -v:*)",
+      "Bash(mamba env:*)",
+      "Bash(make:*)",
+      "Bash(mamba run:*)",
+      "Bash(mamba:*)",
+      "Bash(env)",
+      "Read(//home/user/**)",
+      "Bash(cat:*)",
+      "Bash(conda config:*)",
+      "Bash(timeout 15 make train-criteria-optuna)",
+      "Bash(timeout 20 make train-criteria-optuna)",
+      "Bash(timeout 10 make train-optuna)",
+      "Bash(conda:*)",
+      "Bash(mlflow server:*)",
+      "Bash(curl:*)",
+      "Bash(timeout 20 make train-optuna)",
+      "Bash(WANDB_MODE=disabled timeout 20 make train-optuna)",
+      "Bash(timeout 10 make train-optuna HYDRA_ARGS=\"logging.wandb.enabled=false\")",
+      "Bash(timeout 15 make train-optuna)",
+      "Bash(docker start:*)",
+      "Bash(docker exec:*)",
+      "Bash(tee:*)",
+      "Read(//tmp/**)",
+      "Bash(python3:*)",
+      "Bash(python:*)",
+      "WebSearch",
+      "Bash(gh auth:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh api:*)",
+      "Bash(git config:*)",
+      "Bash(gh repo create:*)",
+      "Bash(git push:*)",
+      "Bash(nvidia-smi:*)",
+      "Bash(lscpu:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

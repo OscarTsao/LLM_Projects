@@ -1,0 +1,28 @@
+# configs/pipeline/default.yaml
+data: redsm5
+paths:
+  mlflow_uri: "file:./mlruns"
+  out_hpo: "outputs/hpo"
+  out_train: "outputs/training"
+  out_eval: "outputs/evaluation"
+  artifacts: "artifacts"
+evidence:
+  model_name: "microsoft/deberta-v3-base"
+  max_len: 256
+  batch_size: 32
+  lr: 2e-5
+  epochs: 6
+  dropout: 0.1
+  loss: "ce"        # ce|focal
+  pos_weight: 1.0
+criteria:
+  symptoms: [DEPRESSED_MOOD, ANHEDONIA, APPETITE_CHANGE, SLEEP_ISSUES, PSYCHOMOTOR, FATIGUE, WORTHLESSNESS, COGNITIVE_ISSUES, SUICIDAL_THOUGHTS]
+  key_symptoms: [DEPRESSED_MOOD, ANHEDONIA]
+  thresholds_path: "artifacts/calibration.json"
+  temperature: 1.0
+suggest:
+  top_k: 3
+  uncertain_low: 0.35
+  uncertain_high: 0.65
+eval:
+  primary: "f1_macro_present"

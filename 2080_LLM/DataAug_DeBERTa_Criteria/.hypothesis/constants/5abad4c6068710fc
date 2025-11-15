@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/utils/storage_monitor.py
+# hypothesis_version: 6.140.3
+
+[5.0, 10.0, 20.0, 100, 1024, 'experiments', 'free_bytes', 'free_gb', 'percent_free', 'percent_used', 'total_bytes', 'total_gb', 'used_bytes', 'used_gb']

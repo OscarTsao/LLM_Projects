@@ -1,0 +1,5 @@
+# configs/criteria/aggregator.yaml
+symptoms: [DEPRESSED_MOOD, ANHEDONIA, APPETITE_CHANGE, SLEEP_ISSUES, PSYCHOMOTOR, FATIGUE, WORTHLESSNESS, COGNITIVE_ISSUES, SUICIDAL_THOUGHTS]
+key_symptoms: [DEPRESSED_MOOD, ANHEDONIA]
+thresholds_path: "artifacts/calibration.json"
+temperature: 1.0

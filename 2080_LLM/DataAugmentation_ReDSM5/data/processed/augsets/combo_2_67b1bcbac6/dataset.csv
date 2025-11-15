@@ -1,0 +1,142 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I hate that i'm tears rn.,I hate that i'm tears rn.,I hate that i am crying rn.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_321_219_4
+I hate whose i'm crying rn.,I hate whose i'm crying rn.,I hate that i am crying rn.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_321_219_4
+I'm quite sad.,I'm quite sad.,I am very sad.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_411_1189_1
+I'm very unlucky.,I'm very unlucky.,I am very sad.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_411_1189_1
+I've been feeling ashore on and off.,I've been feeling ashore on and off.,I have been feeling down on and off.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2035_91_6
+I've endured feeling down on and off.,I've endured feeling down on and off.,I have been feeling down on and off.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2035_91_6
+I'm eminently depressed also.,I'm eminently depressed also.,I am very depressed also.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_131_822_0
+I'm very depressed additionally.,I'm very depressed additionally.,I am very depressed also.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_131_822_0
+I'm being tormenting.,I'm being tormenting.,I am being tortured.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,0,s_1351_120_5
+I'm being torturing.,I'm being torturing.,I am being tortured.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,0,s_1351_120_5
+That's all I've energy for after collaborated.,That's all I've energy for after collaborated.,That's all I have energy for after work.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1483_10_2
+That's all I've energies for after work.,That's all I've energies for after work.,That's all I have energy for after work.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1483_10_2
+I've no energy at everything.,I've no energy at everything.,I have no energy at all.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1455_72_50
+I've no energy at everybody.,I've no energy at everybody.,I have no energy at all.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1455_72_50
+I'm very fatigued.,I'm very fatigued.,I am very tired.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1030_1290_8
+I'm supremely tired.,I'm supremely tired.,I am very tired.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1030_1290_8
+I'm more than upset.,I'm more than upset.,I am more than annoyed.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_1296_12_9
+I'm bigger than annoyed.,I'm bigger than annoyed.,I am more than annoyed.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_1296_12_9
+I'm useless.,I'm useless.,I am worthless.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_2415_2_3
+I'm pointless.,I'm pointless.,I am worthless.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_2415_2_3
+Then I'd get indeed angry at times.,Then I'd get indeed angry at times.,Then I would get really angry at times.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_84_60_2
+Then I'd get really angry at timeframe.,Then I'd get really angry at timeframe.,Then I would get really angry at times.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_84_60_2
+I'm highly suicidal atm.,I'm highly suicidal atm.,I am extremely suicidal atm.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I'm extremely suicidal ga.,I'm extremely suicidal ga.,I am extremely suicidal atm.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I've already contemplated my own suicide.,I've already contemplated my own suicide.,I have already planned my own suicide.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_1989_742_0
+I've already planned my exclusive suicide.,I've already planned my exclusive suicide.,I have already planned my own suicide.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_1989_742_0
+Nor I'd cry so hard.,Nor I'd cry so hard.,And I would cry so hard.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2190_134_3
+And I'd crying so hard.,And I'd crying so hard.,And I would cry so hard.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2190_134_3
+But I'm feeling wretched.,But I'm feeling wretched.,But I am feeling miserable.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_2415_600_3
+But I'm sentiment miserable.,But I'm sentiment miserable.,But I am feeling miserable.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_2415_600_3
+I'm regretful waiting.,I'm regretful waiting.,I am sad waiting.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_577_923_1
+I'm sorrowful waiting.,I'm sorrowful waiting.,I am sad waiting.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_577_923_1
+I've issues among focusing and attention.,I've issues among focusing and attention.,I have issues in focusing and attention.,ta_contraction+ta_wordswap_embedding,COGNITIVE_ISSUES,0,s_2257_110_29
+I've issues at focusing and attention.,I've issues at focusing and attention.,I have issues in focusing and attention.,ta_contraction+ta_wordswap_embedding,COGNITIVE_ISSUES,0,s_2257_110_29
+I cant focus and i've no vitality.,I cant focus and i've no vitality.,I cant focus and i have no energy.,ta_contraction+ta_wordswap_embedding,COGNITIVE_ISSUES,1,s_1404_729_2
+I cant focus and i've neither energy.,I cant focus and i've neither energy.,I cant focus and i have no energy.,ta_contraction+ta_wordswap_embedding,COGNITIVE_ISSUES,1,s_1404_729_2
+I just don't believing I'd like to live anymore.,I just don't believing I'd like to live anymore.,I just don't think I would like to live anymore.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I only don't think I'd like to live anymore.,I only don't think I'd like to live anymore.,I just don't think I would like to live anymore.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I've always faulted.,I've always faulted.,I have always failed.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_356_95_6
+I've unceasingly failed.,I've unceasingly failed.,I have always failed.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_356_95_6
+I'm fucking BAWLING.,I'm fucking BAWLING.,I am fucking CRYING.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_74_207_1
+I'm fucking MOURNS.,I'm fucking MOURNS.,I am fucking CRYING.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_74_207_1
+I'm at a constant dilemma.,I'm at a constant dilemma.,I am in a constant dilemma.,ta_contraction+ta_wordswap_embedding,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm in a constant predicament.,I'm in a constant predicament.,I am in a constant dilemma.,ta_contraction+ta_wordswap_embedding,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm extremely lonely now.,I'm extremely lonely now.,I am very lonely now.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm very lonely nu.,I'm very lonely nu.,I am very lonely now.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm kinda angry all de time.,I'm kinda angry all de time.,I am kinda angry all the time.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_1749_859_23
+I'm kinda angry all the timeline.,I'm kinda angry all the timeline.,I am kinda angry all the time.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_1749_859_23
+I'm fatigue.,I'm fatigue.,I am tired.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_681_475_2
+I'm jaded.,I'm jaded.,I am tired.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_681_475_2
+I'd indeed like some free energy right now.,I'd indeed like some free energy right now.,I would really like some free energy right now.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_969_1077_3
+I'd really like approximately free energy right now.,I'd really like approximately free energy right now.,I would really like some free energy right now.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_969_1077_3
+I'm very focused regarding sex.,I'm very focused regarding sex.,I am very focused on sex.,ta_contraction+ta_wordswap_embedding,SPECIAL_CASE,1,s_731_903_4
+I'm highly focused on sex.,I'm highly focused on sex.,I am very focused on sex.,ta_contraction+ta_wordswap_embedding,SPECIAL_CASE,1,s_731_903_4
+Woah it knows how sad I'm,Woah it knows how sad I'm,Wow it knows how sad I am,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_694_827_0
+Wow ey knows how sad I'm,Wow ey knows how sad I'm,Wow it knows how sad I am,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_694_827_0
+I'm failing badly.,I'm failing badly.,I am failing miserably.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_993_720_4
+I'm failing tragically.,I'm failing tragically.,I am failing miserably.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_993_720_4
+Till my low pain days I've no energy.,Till my low pain days I've no energy.,Even my low pain days I have no energy.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1749_905_17
+Again my low pain days I've no energy.,Again my low pain days I've no energy.,Even my low pain days I have no energy.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1749_905_17
+"I'm enraged, yes.","I'm enraged, yes.","I am irritated, yes.",ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2625_148_0
+"I'm infuriated, yes.","I'm infuriated, yes.","I am irritated, yes.",ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2625_148_0
+"I've so much culpable and remorse, Danny.","I've so much culpable and remorse, Danny.","I have so much guilt and remorse, Danny.",ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,0,s_1674_10_490
+"I've accordingly much guilt and remorse, Danny.","I've accordingly much guilt and remorse, Danny.","I have so much guilt and remorse, Danny.",ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,0,s_1674_10_490
+Roughly nights I'd get no sleep at all.,Roughly nights I'd get no sleep at all.,Some nights I would get no sleep at all.,ta_contraction+ta_wordswap_embedding,SLEEP_ISSUES,0,s_697_322_2
+Some noche I'd get no sleep at all.,Some noche I'd get no sleep at all.,Some nights I would get no sleep at all.,ta_contraction+ta_wordswap_embedding,SLEEP_ISSUES,0,s_697_322_2
+I've found comfort in my spite,I've found comfort in my spite,I have found comfort in my sadness,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_2415_116_0
+I've found comfort throughout my sadness,I've found comfort throughout my sadness,I have found comfort in my sadness,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_2415_116_0
+I'm therefore exhausted.,I'm therefore exhausted.,I am so exhausted.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_697_17_12
+I'm so bushed.,I'm so bushed.,I am so exhausted.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_697_17_12
+I'm also flustered.,I'm also flustered.,I am also restless.,ta_contraction+ta_wordswap_embedding,PSYCHOMOTOR,1,s_2139_45_8
+I'm also turbulent.,I'm also turbulent.,I am also restless.,ta_contraction+ta_wordswap_embedding,PSYCHOMOTOR,1,s_2139_45_8
+I'm feeling exaggerated again.,I'm feeling exaggerated again.,I am feeling suicidal again.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_993_450_6
+I'm feeling suicidal still.,I'm feeling suicidal still.,I am feeling suicidal again.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_993_450_6
+I've lost motivator.,I've lost motivator.,I have lost motivation.,ta_contraction+ta_wordswap_embedding,ANHEDONIA,1,s_2415_566_0
+I've lost motive.,I've lost motive.,I have lost motivation.,ta_contraction+ta_wordswap_embedding,ANHEDONIA,1,s_2415_566_0
+Intellectually I've no energy either.,Intellectually I've no energy either.,Mentally I have no energy either.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1404_852_6
+Mentally I've without energy either.,Mentally I've without energy either.,Mentally I have no energy either.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1404_852_6
+I've hope for to future.,I've hope for to future.,I have hope for the future.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_1230_158_13
+I've expectation for the future.,I've expectation for the future.,I have hope for the future.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_1230_158_13
+I've no eden to blame but myself.,I've no eden to blame but myself.,I have no one to blame but myself.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_1955_911_1
+I've no one per blame but myself.,I've no one per blame but myself.,I have no one to blame but myself.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_1955_911_1
+Maybe one better future that i could've,Maybe one better future that i could've,Maybe a better future that i could have,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe a better future which i could've,Maybe a better future which i could've,Maybe a better future that i could have,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe one better future that i could've,Maybe one better future that i could've,Maybe a better future that i could have,ta_contraction+ta_wordswap_embedding,SPECIAL_CASE,1,s_2401_24_0
+Maybe a better future which i could've,Maybe a better future which i could've,Maybe a better future that i could have,ta_contraction+ta_wordswap_embedding,SPECIAL_CASE,1,s_2401_24_0
+I'm just lamentable.,I'm just lamentable.,I am just sad.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_1681_1030_1
+I'm exclusively sad.,I'm exclusively sad.,I am just sad.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_1681_1030_1
+"I didnt think I'd cries, but I did.","I didnt think I'd cries, but I did.","I didnt think I would cry, but I did.",ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_3066_1007_7
+"I couldnt think I'd cry, but I did.","I couldnt think I'd cry, but I did.","I didnt think I would cry, but I did.",ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_3066_1007_7
+Im in a diet y I've cravings.,Im in a diet y I've cravings.,Im in a diet and I have cravings.,ta_contraction+ta_wordswap_embedding,APPETITE_CHANGE,0,s_299_514_0
+Im onto a diet and I've cravings.,Im onto a diet and I've cravings.,Im in a diet and I have cravings.,ta_contraction+ta_wordswap_embedding,APPETITE_CHANGE,0,s_299_514_0
+I've wider energy.,I've wider energy.,I have more energy.,ta_contraction+ta_wordswap_embedding,SPECIAL_CASE,1,s_2065_472_7
+I've more electricity.,I've more electricity.,I have more energy.,ta_contraction+ta_wordswap_embedding,SPECIAL_CASE,1,s_2065_472_7
+I'm fucking ANGRY here.,I'm fucking ANGRY here.,I am fucking ANGRY now.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_188_399_2
+I'm fucking ANGERED now.,I'm fucking ANGERED now.,I am fucking ANGRY now.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_188_399_2
+Still I'm depressed.,Still I'm depressed.,Yet I am depressed.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2139_3_2
+Yet I'm despondent.,Yet I'm despondent.,Yet I am depressed.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2139_3_2
+I'm such an irritated dick.,I'm such an irritated dick.,I am such an irritable dick.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_1749_691_5
+I'm such bringing irritable dick.,I'm such bringing irritable dick.,I am such an irritable dick.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_1749_691_5
+I'm anxious many of the time.,I'm anxious many of the time.,I am anxious much of the time.,ta_contraction+ta_wordswap_embedding,PSYCHOMOTOR,1,s_716_38_24
+I'm anxious greatly of the time.,I'm anxious greatly of the time.,I am anxious much of the time.,ta_contraction+ta_wordswap_embedding,PSYCHOMOTOR,1,s_716_38_24
+Now I'm lamentable.,Now I'm lamentable.,Now I am sad.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_1681_799_2
+Now I'm hapless.,Now I'm hapless.,Now I am sad.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_1681_799_2
+"Cross my heart, I'd cry ordinarily.","Cross my heart, I'd cry ordinarily.","Cross my heart, I would cry sometimes.",ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_469_428_1
+"Cross months heart, I'd cry sometimes.","Cross months heart, I'd cry sometimes.","Cross my heart, I would cry sometimes.",ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_469_428_1
+I'm big sad right nowadays.,I'm big sad right nowadays.,I am big sad right now.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2080_955_0
+I'm grande sad right now.,I'm grande sad right now.,I am big sad right now.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2080_955_0
+Uhh yea I'd like to die,Uhh yea I'd like to die,Oh yea I would like to die,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_2781_521_0
+i've no larger energy.,i've no larger energy.,i have no more energy.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_2107_102_4
+i've nah more energy.,i've nah more energy.,i have no more energy.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_2107_102_4
+"I desperately need sleep but every single fucking time that 'thing' taps und bangs, I fear if i sleep it'll come out of the fireplace and decorate my room in my remains, my international is lightheaded, I'm going to tries to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps und bangs, I fear if i sleep it'll come out of the fireplace and decorate my room in my remains, my international is lightheaded, I'm going to tries to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",ta_contraction+ta_wordswap_embedding,SLEEP_ISSUES,0,s_2544_1099_12
+I've sleep disorders too.,I've sleep disorders too.,I have sleep problems too.,ta_contraction+ta_wordswap_embedding,SLEEP_ISSUES,0,s_2502_62_2
+I've sleep questions too.,I've sleep questions too.,I have sleep problems too.,ta_contraction+ta_wordswap_embedding,SLEEP_ISSUES,0,s_2502_62_2
+I've failed all my formerly attempts.,I've failed all my formerly attempts.,I have failed all my previous attempts.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_2409_43_9
+I've failed all my previous try.,I've failed all my previous try.,I have failed all my previous attempts.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_2409_43_9
+I'm sensation depressed.,I'm sensation depressed.,I am feeling depressed.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_993_781_1
+I'm sentiment depressed.,I'm sentiment depressed.,I am feeling depressed.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_993_781_1
+I've forfeited all interest.,I've forfeited all interest.,I have lost all interest.,ta_contraction+ta_wordswap_embedding,ANHEDONIA,1,s_993_781_12
+I've outof all interest.,I've outof all interest.,I have lost all interest.,ta_contraction+ta_wordswap_embedding,ANHEDONIA,1,s_993_781_12
+I've a supremely hardtime making decisions.,I've a supremely hardtime making decisions.,I have a very hardtime making decisions.,ta_contraction+ta_wordswap_embedding,COGNITIVE_ISSUES,1,s_759_88_0
+I've a very hardtime making rulings.,I've a very hardtime making rulings.,I have a very hardtime making decisions.,ta_contraction+ta_wordswap_embedding,COGNITIVE_ISSUES,1,s_759_88_0
+i'm quite hopeful i'll.,i'm quite hopeful i'll.,i'm very hopeful i will.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_2640_8_1
+i'm very encouraging i'll.,i'm very encouraging i'll.,i'm very hopeful i will.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_2640_8_1
+I am not exaggerated and I'd never be',I am not exaggerated and I'd never be',I am not suicidal and I would never be',ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,0,s_2476_278_1
+I am not bomber and I'd never be',I am not bomber and I'd never be',I am not suicidal and I would never be',ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,0,s_2476_278_1
+i'm angry whole the time.,i'm angry whole the time.,i am angry all the time.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2107_89_1
+i'm angry totality the time.,i'm angry totality the time.,i am angry all the time.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,1,s_2107_89_1
+i've recession.,i've recession.,i have depression.,ta_contraction+ta_wordswap_embedding,DEPRESSED_MOOD,0,s_2107_11_2
+"I've always felt pretty guilty about the amounts that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at everybody in my dream then chances are I'll shout it out loud too, waking american both up.","I've always felt pretty guilty about the amounts that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at everybody in my dream then chances are I'll shout it out loud too, waking american both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_2727_538_0
+"I've always felt perfectly guilty about the amount that I not only sleep talk albeit sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my daydreaming then chances are I'll shout it out loud too, waking us both up.","I've always felt perfectly guilty about the amount that I not only sleep talk albeit sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my daydreaming then chances are I'll shout it out loud too, waking us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_2727_538_0
+I think I'd rather only shoot myself.,I think I'd rather only shoot myself.,I think I would rather just shoot myself.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I believing I'd rather just shoot myself.,I believing I'd rather just shoot myself.,I think I would rather just shoot myself.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I'm just fatigued at this point.,I'm just fatigued at this point.,I am just tired at this point.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_592_276_0
+I'm just mangy at this point.,I'm just mangy at this point.,I am just tired at this point.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_592_276_0
+I've no energy pour study.,I've no energy pour study.,I have no energy to study.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1404_90_5
+I've no energy the study.,I've no energy the study.,I have no energy to study.,ta_contraction+ta_wordswap_embedding,FATIGUE,1,s_1404_90_5
+I dont want to overkill because I'd feel guilty.,I dont want to overkill because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to bomber because I'd feel guilty.,I dont want to bomber because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction+ta_wordswap_embedding,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to overkill because I'd feel guilty.,I dont want to overkill because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_1404_218_6
+I dont want to bomber because I'd feel guilty.,I dont want to bomber because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction+ta_wordswap_embedding,WORTHLESSNESS,1,s_1404_218_6

@@ -1,0 +1,17 @@
+# Local CSV dataset configuration (mirrors canonical layout)
+
+source: "local"
+data_dir: "data/raw/redsm5"
+
+field_map: "configs/data/field_map.yaml"
+dsm_criteria: "data/raw/redsm5/dsm_criteria.json"
+output_dir: "data/processed"
+
+# Split handling (grouped by post_id)
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+
+# File names inside data_dir
+posts_file: "posts.csv"
+annotations_file: "annotations.csv"

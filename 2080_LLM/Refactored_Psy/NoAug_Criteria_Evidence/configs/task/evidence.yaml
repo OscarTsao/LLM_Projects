@@ -1,0 +1,20 @@
+# Evidence extraction task configuration (sentence-level classification)
+
+name: "evidence"
+type: "multi_label_classification"
+
+label_column: "label"
+cases_column: "cases"
+criterion_column: "criterion_id"
+post_id_column: "post_id"
+text_column: "evidence_text"
+
+metrics:
+  - "precision_micro"
+  - "recall_micro"
+  - "f1_micro"
+  - "f1_macro"
+
+loss:
+  name: "bce_with_logits"
+  positive_weight: null

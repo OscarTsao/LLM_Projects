@@ -1,0 +1,47 @@
+optuna:
+  storage: sqlite:///optuna.db
+  study_name: criteria_hpo
+  direction: maximize
+  n_trials: 25
+  timeout: null
+  sampler: tpe
+  pruner: median
+
+search_space:
+  training.train_batch_size:
+    distribution: categorical
+    choices: [8, 16, 32]
+  training.eval_batch_size:
+    distribution: categorical
+    choices: [16, 32, 64]
+  training.learning_rate:
+    distribution: loguniform
+    low: 1.0e-6
+    high: 5.0e-4
+  training.optimizer.name:
+    distribution: categorical
+    choices: [adamw, adam, adafactor]
+  training.optimizer.weight_decay:
+    distribution: loguniform
+    low: 1.0e-6
+    high: 1.0e-1
+  training.scheduler.name:
+    distribution: categorical
+    choices: [linear, cosine, cosine_with_restarts, none]
+  training.scheduler.warmup_steps:
+    distribution: int
+    low: 0
+    high: 1000
+  model.classifier_dropout:
+    distribution: uniform
+    low: 0.05
+    high: 0.3
+  model.classifier_layer_num:
+    distribution: int
+    low: 1
+    high: 3
+  model.classifier_hidden_dims:
+    choices:
+      - []
+      - [384]
+      - [512, 256]

@@ -1,0 +1,102 @@
+================================================================================
+AUG REPOSITORY - FILES CHECKLIST
+================================================================================
+
+Root: /experiment/YuNing/Refactored_Psy/DataAug_Criteria_Evidence/
+
+CONFIGURATION FILES:
+[✓] pyproject.toml
+[✓] configs/config.yaml
+[✓] configs/data/hf_redsm5_aug.yaml
+[✓] configs/data/local_csv_aug.yaml
+[✓] configs/model/mental_bert.yaml
+[✓] configs/training/default_aug.yaml
+[✓] configs/augmentation/nlpaug_default.yaml
+[✓] configs/augmentation/textattack_default.yaml
+[✓] configs/augmentation/hybrid_default.yaml
+[✓] configs/augmentation/disabled.yaml
+
+AUGMENTATION MODULE (NEW):
+[✓] src/psy_agents_aug/augment/__init__.py
+[✓] src/psy_agents_aug/augment/base_augmentor.py
+[✓] src/psy_agents_aug/augment/nlpaug_pipeline.py
+[✓] src/psy_agents_aug/augment/textattack_pipeline.py
+[✓] src/psy_agents_aug/augment/hybrid_pipeline.py
+[✓] src/psy_agents_aug/augment/backtranslation.py
+
+DATA MODULE (ENHANCED):
+[✓] src/psy_agents_aug/data/__init__.py
+[✓] src/psy_agents_aug/data/loaders.py (augmentation-aware)
+[✓] src/psy_agents_aug/data/groundtruth.py
+[✓] src/psy_agents_aug/data/splits.py
+
+OTHER MODULES (COPIED FROM NO-AUG):
+[✓] src/psy_agents_aug/__init__.py
+[✓] src/psy_agents_aug/cli.py
+[✓] src/psy_agents_aug/models/__init__.py
+[✓] src/psy_agents_aug/models/encoders.py
+[✓] src/psy_agents_aug/models/criteria_head.py
+[✓] src/psy_agents_aug/models/evidence_head.py
+[✓] src/psy_agents_aug/training/__init__.py
+[✓] src/psy_agents_aug/training/train_loop.py
+[✓] src/psy_agents_aug/training/evaluate.py
+[✓] src/psy_agents_aug/hpo/__init__.py
+[✓] src/psy_agents_aug/hpo/optuna_runner.py
+[✓] src/psy_agents_aug/utils/__init__.py
+[✓] src/psy_agents_aug/utils/logging.py
+[✓] src/psy_agents_aug/utils/mlflow_utils.py
+[✓] src/psy_agents_aug/utils/reproducibility.py
+
+SCRIPTS:
+[✓] scripts/make_groundtruth.py
+[✓] scripts/test_augmentation.py (NEW)
+[✓] scripts/run_hpo_stage.py
+[✓] scripts/train_best.py
+[✓] scripts/export_metrics.py
+
+TESTS (NEW):
+[✓] tests/__init__.py
+[✓] tests/test_augment_contract.py
+[✓] tests/test_augment_pipelines.py
+[✓] tests/test_augment_no_leak.py
+
+DEVELOPMENT FILES:
+[✓] .gitignore
+[✓] .pre-commit-config.yaml
+[✓] Makefile
+
+DOCUMENTATION:
+[✓] README.md
+[✓] STRUCTURE.md
+[✓] SETUP_SUMMARY.md
+[✓] ABSOLUTE_PATHS.md
+[✓] COMPLETION_REPORT.md
+[✓] FILES_CHECKLIST.txt (this file)
+
+================================================================================
+TOTAL: 51+ FILES CREATED/CONFIGURED
+================================================================================
+
+KEY FEATURES IMPLEMENTED:
+✓ Multiple augmentation pipelines (NLPAug, TextAttack, Hybrid, Back-translation)
+✓ STRICT train-only augmentation (CRITICAL)
+✓ Deterministic augmentation with seed control
+✓ Augmentation-aware data loaders
+✓ Comprehensive test suite
+✓ Hydra configuration system
+✓ Development tooling (pre-commit, Makefile)
+✓ Complete documentation
+
+CRITICAL GUARANTEES:
+✓ Augmentation ONLY on training data (NEVER val/test)
+✓ Deterministic behavior (same seed = same results)
+✓ STRICT data validation (status→criteria, cases→evidence)
+✓ Increased training epochs (12 vs 10 for NO-AUG)
+
+NEXT STEPS:
+1. cd /experiment/YuNing/Refactored_Psy/DataAug_Criteria_Evidence
+2. poetry install
+3. make verify-aug
+4. make test-aug
+
+================================================================================

@@ -1,0 +1,5 @@
+# @package _global_
+
+loss:
+  type: "weighted_ce"
+  # Class weights will be computed from data

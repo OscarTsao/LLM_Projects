@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git commit:*)",
+      "Bash(find:*)",
+      "Bash(tree:*)",
+      "Bash(python:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(git add:*)",
+      "Bash(timeout:*)",
+      "Read(//home/user/.cache/huggingface/hub/**)",
+      "Read(//home/user/.config/**)",
+      "Read(//home/user/**)",
+      "WebSearch",
+      "Bash(echo \"Once you have your GitHub token, run this command (replace YOUR_TOKEN with your actual token):\n\nclaude mcp add github --scope user --env GITHUB_PERSONAL_ACCESS_TOKEN=YOUR_TOKEN -- npx -y @modelcontextprotocol/server-github\n\nThen restart Claude Code to load the GitHub MCP tools.\")",
+      "Bash(git checkout:*)",
+      "Bash(make:*)",
+      "Bash(pkill:*)",
+      "Read(//tmp/**)",
+      "Bash(sqlite3:*)",
+      "Bash(lsof:*)",
+      "Bash(HYDRA_FULL_ERROR=1 python -m src.optuna_search optuna.n_trials=1 training.optimizer.name=adafactor training.optimizer.relative_step=true)",
+      "Bash(/bashes)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,12 @@
+metrics:
+  evidence_f1_present_key: evidence_macro_f1_present
+  negation_precision_key: negation_precision
+  criteria_auroc_key: criteria_auroc
+  ece_key: ece
+
+gates:
+  negation_precision_min: 0.90
+  criteria_auroc_min: 0.80
+  ece_max: 0.05
+  # evidence_f1_min: null  # set to enable absolute F1 min gate
+

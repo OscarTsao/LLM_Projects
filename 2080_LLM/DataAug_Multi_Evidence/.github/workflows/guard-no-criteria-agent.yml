@@ -1,0 +1,45 @@
+name: Guard No Criteria Agent
+
+on:
+  pull_request:
+    branches: [ "**" ]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fail if criteria-agent semantics are present
+        run: |
+          set -euo pipefail
+          echo "Scanning for banned phrases..."
+          # Build combined ripgrep command with exclusions
+          RG_EXCLUDES=(
+            "--glob" "!Data/_archive/**"
+            "--glob" "!**/*.png"
+            "--glob" "!**/*.jpg"
+          )
+          # Patterns (case-insensitive)
+          PATTERNS=(
+            "(?i)criteria matching agent"
+            "(?i)criteria[_ -]?matching[^a-zA-Z0-9]?agent"
+            "(?i)criteria[_ -]?agent"
+            "(?i)dual[- ]agent"
+            "(?i)criteria[_ -]?head"
+          )
+          set +e
+          MATCHED=0
+          for pat in "${PATTERNS[@]}"; do
+            rg -n -S "${pat}" . "${RG_EXCLUDES[@]}"
+            if [ $? -eq 0 ]; then
+              MATCHED=1
+            fi
+          done
+          set -e
+          if [ $MATCHED -ne 0 ]; then
+            echo "::error::Banned criteria-agent semantics detected. Remove criteria-agent references before merging."
+            exit 1
+          fi
+          echo "No banned phrases found."

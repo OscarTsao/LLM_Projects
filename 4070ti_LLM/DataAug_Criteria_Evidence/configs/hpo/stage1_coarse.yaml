@@ -1,0 +1,86 @@
+# Stage 1: Coarse-grained search
+
+stage: 1
+stage_name: "coarse_search"
+description: "Broad search over major hyperparameters"
+
+# Optuna settings
+n_trials: 40
+timeout: null
+direction: "maximize"  # Maximize validation F1 macro
+metric: "val_f1_macro"
+
+# Training overrides
+num_epochs: 6
+
+# Unified search space
+search_space:
+  learning_rate:
+    type: "loguniform"
+    low: 1.0e-6
+    high: 5.0e-5
+
+  weight_decay:
+    type: "loguniform"
+    low: 1.0e-5
+    high: 1.0e-1
+
+  warmup_ratio:
+    type: "uniform"
+    low: 0.0
+    high: 0.2
+
+  dropout:
+    type: "uniform"
+    low: 0.0
+    high: 0.3
+
+  batch_size:
+    type: "categorical"
+    choices: [8, 16, 32]
+
+  max_length:
+    type: "categorical"
+    choices: [256, 384, 512]
+
+  scheduler:
+    type: "categorical"
+    choices: ["linear", "cosine", "cosine_with_restarts"]
+
+  encoder:
+    type: "categorical"
+    choices:
+      - "bert-base-uncased"
+      - "roberta-base"
+      - "microsoft/deberta-v3-base"
+      - "answerdotai/ModernBERT-base"
+      - "answerdotai/ModernBERT-large"
+
+  lora_enabled:
+    type: "categorical"
+    choices: [false, true]
+
+  lora_r:
+    type: "categorical"
+    choices: [8, 16]
+
+  lora_alpha:
+    type: "categorical"
+    choices: [16, 32]
+
+# Sampler
+sampler:
+  type: "tpe"
+  n_startup_trials: 10
+  multivariate: true
+  group: true
+
+# Pruner
+pruner:
+  type: "median"
+  n_startup_trials: 5
+  n_warmup_steps: 2
+  interval_steps: 1
+## HPO Stage 1 — Coarse search
+#
+# Broad search ranges with moderate trials to explore head/optim/scheduler spaces.

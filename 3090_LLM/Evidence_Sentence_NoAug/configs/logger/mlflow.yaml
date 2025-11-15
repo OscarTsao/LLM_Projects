@@ -1,0 +1,9 @@
+# @package _global_
+
+mlflow:
+  tracking_uri: "${paths.mlflow_tracking_uri}"
+  artifact_root: "${paths.mlflow_artifact_root}"
+  experiment_name: "evidence-binding-cv"
+  run_tags:
+    project: "${project.name}"
+    seed: "${project.seed}"

@@ -1,0 +1,78 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I hate that i'm crying rn.,I hate that i'm crying rn.,I hate that i am crying rn.,ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I'm very sad.,I'm very sad.,I am very sad.,ta_contraction,DEPRESSED_MOOD,0,s_411_1189_1
+I've been feeling down on and off.,I've been feeling down on and off.,I have been feeling down on and off.,ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I'm very depressed also.,I'm very depressed also.,I am very depressed also.,ta_contraction,DEPRESSED_MOOD,1,s_131_822_0
+I'm being tortured.,I'm being tortured.,I am being tortured.,ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+That's all I've energy for after work.,That's all I've energy for after work.,That's all I have energy for after work.,ta_contraction,FATIGUE,1,s_1483_10_2
+I've no energy at all.,I've no energy at all.,I have no energy at all.,ta_contraction,FATIGUE,1,s_1455_72_50
+I am scared I won't be a successful man in the future,I am scared I won't be a successful man in the future,I am scared I will not be a successful man in the future,ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+I'm very tired.,I'm very tired.,I am very tired.,ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm.. sadness,I'm.. sadness,I am.. sadness,ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I'm more than annoyed.,I'm more than annoyed.,I am more than annoyed.,ta_contraction,DEPRESSED_MOOD,1,s_1296_12_9
+I'm worthless.,I'm worthless.,I am worthless.,ta_contraction,WORTHLESSNESS,1,s_2415_2_3
+I'm hopeless.,I'm hopeless.,I am hopeless.,ta_contraction,DEPRESSED_MOOD,1,s_2415_2_4
+Then I'd get really angry at times.,Then I'd get really angry at times.,Then I would get really angry at times.,ta_contraction,DEPRESSED_MOOD,1,s_84_60_2
+I'm extremely suicidal atm.,I'm extremely suicidal atm.,I am extremely suicidal atm.,ta_contraction,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I've already planned my own suicide.,I've already planned my own suicide.,I have already planned my own suicide.,ta_contraction,SUICIDAL_THOUGHTS,1,s_1989_742_0
+And I'd cry so hard.,And I'd cry so hard.,And I would cry so hard.,ta_contraction,DEPRESSED_MOOD,1,s_2190_134_3
+But I'm feeling miserable.,But I'm feeling miserable.,But I am feeling miserable.,ta_contraction,WORTHLESSNESS,1,s_2415_600_3
+I'm sad waiting.,I'm sad waiting.,I am sad waiting.,ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I've issues in focusing and attention.,I've issues in focusing and attention.,I have issues in focusing and attention.,ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+I cant focus and i've no energy.,I cant focus and i've no energy.,I cant focus and i have no energy.,ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+I just don't think I'd like to live anymore.,I just don't think I'd like to live anymore.,I just don't think I would like to live anymore.,ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I've always failed.,I've always failed.,I have always failed.,ta_contraction,WORTHLESSNESS,1,s_356_95_6
+I'm fucking CRYING.,I'm fucking CRYING.,I am fucking CRYING.,ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm in a constant dilemma.,I'm in a constant dilemma.,I am in a constant dilemma.,ta_contraction,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm very lonely now.,I'm very lonely now.,I am very lonely now.,ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm kinda angry all the time.,I'm kinda angry all the time.,I am kinda angry all the time.,ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I've insomnia.,I've insomnia.,I have insomnia.,ta_contraction,SLEEP_ISSUES,1,s_341_1177_1
+I'm tired.,I'm tired.,I am tired.,ta_contraction,FATIGUE,1,s_681_475_2
+I'd really like some free energy right now.,I'd really like some free energy right now.,I would really like some free energy right now.,ta_contraction,FATIGUE,1,s_969_1077_3
+i've nothing to live for personally.,i've nothing to live for personally.,i have nothing to live for personally.,ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+I'm very focused on sex.,I'm very focused on sex.,I am very focused on sex.,ta_contraction,SPECIAL_CASE,1,s_731_903_4
+Wow it knows how sad I'm,Wow it knows how sad I'm,Wow it knows how sad I am,ta_contraction,DEPRESSED_MOOD,1,s_694_827_0
+I'm failing miserably.,I'm failing miserably.,I am failing miserably.,ta_contraction,WORTHLESSNESS,1,s_993_720_4
+Even my low pain days I've no energy.,Even my low pain days I've no energy.,Even my low pain days I have no energy.,ta_contraction,FATIGUE,1,s_1749_905_17
+"I'm irritated, yes.","I'm irritated, yes.","I am irritated, yes.",ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+"I've so much guilt and remorse, Danny.","I've so much guilt and remorse, Danny.","I have so much guilt and remorse, Danny.",ta_contraction,WORTHLESSNESS,0,s_1674_10_490
+Some nights I'd get no sleep at all.,Some nights I'd get no sleep at all.,Some nights I would get no sleep at all.,ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+I've found comfort in my sadness,I've found comfort in my sadness,I have found comfort in my sadness,ta_contraction,DEPRESSED_MOOD,0,s_2415_116_0
+I'm so exhausted.,I'm so exhausted.,I am so exhausted.,ta_contraction,FATIGUE,1,s_697_17_12
+I'm also restless.,I'm also restless.,I am also restless.,ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm feeling suicidal again.,I'm feeling suicidal again.,I am feeling suicidal again.,ta_contraction,SUICIDAL_THOUGHTS,1,s_993_450_6
+I've lost motivation.,I've lost motivation.,I have lost motivation.,ta_contraction,ANHEDONIA,1,s_2415_566_0
+Mentally I've no energy either.,Mentally I've no energy either.,Mentally I have no energy either.,ta_contraction,FATIGUE,1,s_1404_852_6
+I've hope for the future.,I've hope for the future.,I have hope for the future.,ta_contraction,DEPRESSED_MOOD,0,s_1230_158_13
+I've no one to blame but myself.,I've no one to blame but myself.,I have no one to blame but myself.,ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+Maybe a better future that i could've,Maybe a better future that i could've,Maybe a better future that i could have,ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe a better future that i could've,Maybe a better future that i could've,Maybe a better future that i could have,ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+I'm just sad.,I'm just sad.,I am just sad.,ta_contraction,DEPRESSED_MOOD,1,s_1681_1030_1
+"I didnt think I'd cry, but I did.","I didnt think I'd cry, but I did.","I didnt think I would cry, but I did.",ta_contraction,DEPRESSED_MOOD,0,s_3066_1007_7
+Im in a diet and I've cravings.,Im in a diet and I've cravings.,Im in a diet and I have cravings.,ta_contraction,APPETITE_CHANGE,0,s_299_514_0
+I've more energy.,I've more energy.,I have more energy.,ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I'm fucking ANGRY now.,I'm fucking ANGRY now.,I am fucking ANGRY now.,ta_contraction,DEPRESSED_MOOD,0,s_188_399_2
+Yet I'm depressed.,Yet I'm depressed.,Yet I am depressed.,ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+I'm such an irritable dick.,I'm such an irritable dick.,I am such an irritable dick.,ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+I'm anxious much of the time.,I'm anxious much of the time.,I am anxious much of the time.,ta_contraction,PSYCHOMOTOR,1,s_716_38_24
+Now I'm sad.,Now I'm sad.,Now I am sad.,ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+"Cross my heart, I'd cry sometimes.","Cross my heart, I'd cry sometimes.","Cross my heart, I would cry sometimes.",ta_contraction,DEPRESSED_MOOD,0,s_469_428_1
+I'm big sad right now.,I'm big sad right now.,I am big sad right now.,ta_contraction,DEPRESSED_MOOD,1,s_2080_955_0
+Oh yea I'd like to die,Oh yea I'd like to die,Oh yea I would like to die,ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+i've no more energy.,i've no more energy.,i have no more energy.,ta_contraction,FATIGUE,1,s_2107_102_4
+"I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it'll come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it'll come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",ta_contraction,SLEEP_ISSUES,0,s_2544_1099_12
+I've sleep problems too.,I've sleep problems too.,I have sleep problems too.,ta_contraction,SLEEP_ISSUES,0,s_2502_62_2
+I've failed all my previous attempts.,I've failed all my previous attempts.,I have failed all my previous attempts.,ta_contraction,WORTHLESSNESS,1,s_2409_43_9
+I'm feeling depressed.,I'm feeling depressed.,I am feeling depressed.,ta_contraction,DEPRESSED_MOOD,1,s_993_781_1
+I've lost all interest.,I've lost all interest.,I have lost all interest.,ta_contraction,ANHEDONIA,1,s_993_781_12
+I've a very hardtime making decisions.,I've a very hardtime making decisions.,I have a very hardtime making decisions.,ta_contraction,COGNITIVE_ISSUES,1,s_759_88_0
+i'm very hopeful i'll.,i'm very hopeful i'll.,i'm very hopeful i will.,ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+I am not suicidal and I'd never be',I am not suicidal and I'd never be',I am not suicidal and I would never be',ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+i'm angry all the time.,i'm angry all the time.,i am angry all the time.,ta_contraction,DEPRESSED_MOOD,1,s_2107_89_1
+i've depression.,i've depression.,i have depression.,ta_contraction,DEPRESSED_MOOD,0,s_2107_11_2
+"I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I'll shout it out loud too, waking us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I'll shout it out loud too, waking us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",ta_contraction,WORTHLESSNESS,1,s_2727_538_0
+I think I'd rather just shoot myself.,I think I'd rather just shoot myself.,I think I would rather just shoot myself.,ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I'm just tired at this point.,I'm just tired at this point.,I am just tired at this point.,ta_contraction,FATIGUE,1,s_592_276_0
+I've no energy to study.,I've no energy to study.,I have no energy to study.,ta_contraction,FATIGUE,1,s_1404_90_5
+I dont want to suicide because I'd feel guilty.,I dont want to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to suicide because I'd feel guilty.,I dont want to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction,WORTHLESSNESS,1,s_1404_218_6

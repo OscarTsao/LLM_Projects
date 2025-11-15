@@ -1,0 +1,2 @@
+{"post_id": "P1", "sentences": [{"sentence_id": "S1", "text": "I feel down most days."}, {"sentence_id": "S2", "text": "Nothing excites me anymore."}], "labels": [{"sentence_id": "S1", "symptom": "DEPRESSED_MOOD", "status": 1}, {"sentence_id": "S2", "symptom": "ANHEDONIA", "status": 1}]}
+{"post_id": "P2", "sentences": [{"sentence_id": "S1", "text": "Sleep is fine."}, {"sentence_id": "S2", "text": "I am eating well."}], "labels": [{"sentence_id": "S1", "symptom": "SLEEP_ISSUES", "status": 0}, {"sentence_id": "S2", "symptom": "APPETITE_CHANGE", "status": 0}]}

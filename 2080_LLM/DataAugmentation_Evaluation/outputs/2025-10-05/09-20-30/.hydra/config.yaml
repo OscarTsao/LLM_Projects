@@ -1,0 +1,59 @@
+dataset:
+  name: original_nlpaug_textattack
+  include_original: true
+  use_augmented:
+  - nlpaug
+  - textattack
+  ground_truth_path: Data/GroundTruth/Final_Ground_Truth.json
+  augmented_sources:
+    nlpaug: Data/Augmentation/nlpaug_dataset_*.csv
+    textattack: Data/Augmentation/textattack_dataset_*.csv
+    hybrid: Data/Augmentation/hybrid_dataset_*.csv
+  splits:
+    train: 0.7
+    val: 0.15
+    test: 0.15
+  shuffle_seed: 42
+  max_examples: null
+model:
+  pretrained_model_name: google-bert/bert-base-uncased
+  classifier_hidden_sizes: []
+  classifier_dropout: 0.1
+  max_seq_length: 256
+  warmup_ratio: 0.1
+  learning_rate: 2.0e-05
+  weight_decay: 0.01
+  optimizer: adamw_torch
+  scheduler: linear
+  batch_size: 32
+  gradient_accumulation_steps: 1
+  num_epochs: 5
+  adam_eps: 1.0e-08
+  max_grad_norm: 1.0
+  compile_model: false
+seed: 1337
+output_dir: outputs/train
+log_dir: logs
+resume: true
+save_total_limit: 1
+metric_for_best_model: roc_auc
+regression_threshold: 0.5
+dataloader:
+  num_workers: 16
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 8
+metrics:
+- accuracy
+- precision
+- recall
+- f1
+- roc_auc
+scheduler_kwargs: {}
+notes: ''
+n_trials: 500
+timeout: null
+evaluation:
+  checkpoint: null
+  output_path: test_metrics.json
+  split: test

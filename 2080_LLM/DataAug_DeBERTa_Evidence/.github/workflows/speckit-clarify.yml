@@ -1,0 +1,173 @@
+name: Speckit Clarify
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
+
+jobs:
+  clarify:
+    if: |
+      startsWith(github.event.comment.body, '/speckit.clarify') && (
+        github.event.comment.author_association == 'OWNER' ||
+        github.event.comment.author_association == 'MEMBER' ||
+        github.event.comment.author_association == 'COLLABORATOR'
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - name: Parse command and args
+        id: parse
+        shell: bash
+        run: |
+          body=${{ toJSON(github.event.comment.body) }}
+          # Normalize newlines and strip quotes from toJSON
+          body=$(printf %b "$body" | sed 's/^"//; s/"$//; s/\\n/\n/g')
+          cmd=$(echo "$body" | awk '{print tolower($1)}')
+          args=$(echo "$body" | cut -d' ' -f2-)
+          echo "cmd=$cmd" >> "$GITHUB_OUTPUT"
+          echo "args=$args" >> "$GITHUB_OUTPUT"
+
+      - name: Detect PR context
+        id: ctx
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const isPr = !!context.payload.issue.pull_request;
+            let headRepo = null, headRef = null, headSha = null, number = context.issue.number;
+            if (isPr) {
+              const pr = await github.rest.pulls.get({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number: number,
+              });
+              headRepo = pr.data.head.repo.full_name;
+              headRef = pr.data.head.ref;
+              headSha = pr.data.head.sha;
+            }
+            core.setOutput('is_pr', String(isPr));
+            core.setOutput('head_repo', headRepo || '');
+            core.setOutput('head_ref', headRef || '');
+            core.setOutput('head_sha', headSha || '');
+
+      - name: Checkout code (PR head if applicable)
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ steps.ctx.outputs.is_pr == 'true' && steps.ctx.outputs.head_repo || github.repository }}
+          # Prefer the head SHA when available for exact analysis
+          ref: ${{ steps.ctx.outputs.is_pr == 'true' && steps.ctx.outputs.head_sha || github.ref }}
+
+      - name: Generate clarification checklist
+        id: gen
+        shell: bash
+        env:
+          IS_PR: ${{ steps.ctx.outputs.is_pr }}
+          HEAD_REF: ${{ steps.ctx.outputs.head_ref }}
+        run: |
+          set -euo pipefail
+
+          # Determine feature directory
+          FEATURE_DIR=""
+          if [[ "$IS_PR" == "true" && "$HEAD_REF" =~ ^[0-9]{3}- ]]; then
+            if [[ -d "specs/$HEAD_REF" ]]; then
+              FEATURE_DIR="specs/$HEAD_REF"
+            fi
+          fi
+          if [[ -z "$FEATURE_DIR" ]]; then
+            # Fallback: choose highest-numbered feature dir
+            FEATURE_DIR=$(ls -1d specs/* 2>/dev/null | awk -F/ '{print $2}' | grep -E '^[0-9]{3}-' | sort -V | tail -n1)
+            [[ -n "$FEATURE_DIR" ]] && FEATURE_DIR="specs/$FEATURE_DIR"
+          fi
+
+          if [[ -z "$FEATURE_DIR" || ! -d "$FEATURE_DIR" ]]; then
+            echo "::warning::No feature directory found under specs/." >&2
+            echo "feature_dir=" >> "$GITHUB_OUTPUT"
+            echo "has_items=false" >> "$GITHUB_OUTPUT"
+            printf "No feature directory found under specs/. Add one with /speckit.specify.\n" > clarify.md
+            exit 0
+          fi
+
+          echo "feature_dir=$FEATURE_DIR" >> "$GITHUB_OUTPUT"
+
+          # Candidate files to scan
+          files=(
+            "$FEATURE_DIR/spec.md"
+            "$FEATURE_DIR/plan.md"
+            "$FEATURE_DIR/tasks.md"
+            "$FEATURE_DIR/research.md"
+            "$FEATURE_DIR/data-model.md"
+            "$FEATURE_DIR/quickstart.md"
+          )
+
+          echo "Scanning files:" >&2
+          printf ' - %s\n' "${files[@]}" >&2
+
+          found=false
+          {
+            echo "### Clarifications Needed"
+            echo
+            echo "Feature: \`$FEATURE_DIR\`"
+            echo
+            for f in "${files[@]}"; do
+              [[ -f "$f" ]] || continue
+              # Find NEEDS CLARIFICATION markers
+              while IFS= read -r line; do
+                # Parse: file:line:content
+                file="${line%%:*}"; rest="${line#*:}"; lnum="${rest%%:*}"; content="${rest#*:}"
+                # Extract the guidance inside the marker if present
+                prompt=$(echo "$content" | sed -n 's/.*\[NEEDS CLARIFICATION: \(.*\)\].*/\1/p')
+                if [[ -z "$prompt" ]]; then
+                  # Only treat bare markers if they appear in spec/plan/tasks docs, not generic mentions
+                  prompt=$(echo "$content" | sed -n 's/.*\[NEEDS CLARIFICATION\].*/Unspecified clarification required/p')
+                fi
+                title=$(basename "$file")
+                echo "- ${prompt} (\`$title:$lnum\`)"
+                found=true
+              done < <(grep -Rni "NEEDS CLARIFICATION" -- "$f" || true)
+            done
+
+            if ! $found; then
+              echo "No NEEDS CLARIFICATION markers found in scanned docs."
+              echo
+              echo "Reply to this comment with Q/A to record clarifications,"
+              echo "or add [NEEDS CLARIFICATION: ...] markers to spec/plan/tasks."
+            else
+              echo
+              echo "Reply with answers in this format to capture decisions:"
+              echo "- Q: <copied prompt> → A: <your answer>"
+            fi
+          } > clarify.md
+
+          echo "has_items=$found" >> "$GITHUB_OUTPUT"
+
+      - name: Post clarification checklist as comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('clarify.md', 'utf8');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+
+      - name: React to command comment
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.reactions.createForIssueComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: context.payload.comment.id,
+                content: '+1'
+              });
+            } catch (e) {
+              core.warning('Failed to add reaction: ' + e.message);
+            }

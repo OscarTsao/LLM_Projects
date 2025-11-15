@@ -1,0 +1,37 @@
+# DeBERTa-v3-base model configuration for dual-agent architecture
+name: "microsoft/deberta-v3-base"
+type: "huggingface"
+
+# Encoder mode: "shared" or "separate"
+# - shared: Single DeBERTa-v3-base encoder for both criteria and evidence
+# - separate: Two DeBERTa-v3-base encoders (one for criteria, one for evidence)
+encoder_mode: "shared"
+
+# Embedding combination method: "concat" or "add"
+# - concat: Concatenate criteria and evidence embeddings (2x hidden_size)
+# - add: Element-wise addition of embeddings (hidden_size)
+combination_method: "concat"
+
+# Model architecture
+encoder:
+  model_id: "microsoft/deberta-v3-base"
+  cache_dir: "~/.cache/huggingface"
+  gradient_checkpointing: false
+
+# Task heads
+heads:
+  criteria_matching:
+    num_labels: 9  # Number of mental health criteria
+    dropout: 0.1
+    pooling_strategy: "cls"  # Options: cls, mean, max
+    combination_method: "concat"  # Options: concat, add
+
+  evidence_embedding:
+    dropout: 0.1
+    pooling_strategy: "cls"  # Options: cls, mean, max
+
+# Training hyperparameters
+learning_rate: 2e-5
+weight_decay: 0.01
+warmup_steps: 500
+max_grad_norm: 1.0

@@ -1,0 +1,2469 @@
+[0;34m======================================================================
+  Running Super-Max HPO for ALL Architectures Sequentially
+======================================================================[0m 
+
+[0;33mSequence: Criteria → Evidence → Share → Joint[0m 
+[0;33mTotal trials: ~19,000 (5000+8000+3000+3000)[0m 
+[0;33mEstimated time: ~80-120 hours with PAR=4[0m 
+
+[0;32mStarting...[0m 
+
+[0;34m[1/4] Running Criteria (5000 trials)...[0m 
+make[1]: Entering directory '/media/user/SSD1/YuNing/NoAug_Criteria_Evidence'
+[0;34mRunning SUPER-MAX HPO for Criteria...[0m 
+Trials: 5000 | Parallel: 3 (reduced from 4 to prevent GPU OOM) | Epochs: 100 | Patience: 20
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python HPO_EPOCHS=100 HPO_PATIENCE=20 poetry run python scripts/tune_max.py \
+	--agent criteria --study noaug-criteria-supermax \
+	--n-trials 5000 --parallel 3 \
+	--outdir ./_runs
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``group`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``constant_liar`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py:969: ExperimentalWarning: PatientPruner is experimental (supported from v2.8.0). The interface can change in the future.
+  return PatientPruner(hb, patience=4)  # More patient (was 2)
+[I 2025-10-28 14:41:17,837] Using an existing study with name 'noaug-criteria-supermax' instead of creating a new one.
+[W 2025-10-28 14:41:20,934] The parameter `tok.doc_stride` in Trial#1781 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+HTTP Error 504 thrown while requesting HEAD https://huggingface.co/roberta-base/resolve/main/config.json
+Retrying in 1s [Retry 1/5].
+HTTP Error 504 thrown while requesting HEAD https://huggingface.co/roberta-base/resolve/main/config.json
+Retrying in 1s [Retry 1/5].
+HTTP Error 504 thrown while requesting HEAD https://huggingface.co/bert-base-uncased/resolve/main/config.json
+Retrying in 1s [Retry 1/5].
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+✓ Configuration validation passed
+  Agent: criteria
+  Epochs: 100 | Patience: 20
+  Output: ./_runs
+[HPO] agent=criteria epochs=100 storage=sqlite:////media/user/SSD1/YuNing/NoAug_Criteria_Evidence/_optuna/noaug.db
+[HPO] Study 'noaug-criteria-supermax' is compatible. Resuming optimization.
+
+================================================================================
+TRIAL 1783 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 1.8250907504324644e-05
+  Dropout: 0.31090543329643616
+================================================================================
+
+
+================================================================================
+TRIAL 1781 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 8
+  Learning rate: 1.4253733317618952e-05
+  Dropout: 0.43646214230442765
+================================================================================
+
+
+================================================================================
+TRIAL 1782 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 32
+  Learning rate: 4.4917422254482584e-05
+  Dropout: 0.1163832302981445
+================================================================================
+
+[I 2025-10-28 14:45:54,568] Trial 1782 pruned. Pruned at step 9 with metric 0.5439
+[I 2025-10-28 14:45:54,990] Trial 1784 pruned. Pruned: Large model with bsz=48, accum=3 (effective_batch=144) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1785 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 3.497184982627427e-05
+  Dropout: 0.04990257339363147
+================================================================================
+
+[I 2025-10-28 14:47:11,795] Trial 1783 pruned. Pruned at step 10 with metric 0.5827
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1786 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 32
+  Learning rate: 3.601225799122757e-05
+  Dropout: 0.12206918984024503
+================================================================================
+
+[I 2025-10-28 14:48:05,559] Trial 1785 pruned. Pruned at step 10 with metric 0.6494
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1787 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 8
+  Learning rate: 3.014329623627139e-05
+  Dropout: 0.19591695509133678
+================================================================================
+
+[I 2025-10-28 14:48:12,514] Trial 1786 pruned. OOM: roberta-base bs=32 len=128
+
+[OOM] Trial 1786 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 32 (effective: 64 with grad_accum=2)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 48.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 62.25 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1788 - Configuration:
+  Model: {'name': 'bert-large-uncased'}
+  Batch size: 16
+  Learning rate: 1.3787361341694842e-05
+  Dropout: 0.1778540548343774
+================================================================================
+
+[I 2025-10-28 14:48:17,327] Trial 1787 pruned. OOM: microsoft/deberta-v3-large bs=8 len=352
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1787 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 8 (effective: 8 with grad_accum=1)
+  Max length: 352
+  Error: CUDA out of memory. Tried to allocate 62.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 56.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1789 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 2.3089811047548612e-05
+  Dropout: 0.04501311397646941
+================================================================================
+
+[I 2025-10-28 14:56:41,436] Trial 1781 pruned. Pruned at step 14 with metric 0.5176
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1790 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 16
+  Learning rate: 1.2678575428032763e-05
+  Dropout: 0.12955946238085403
+================================================================================
+
+[I 2025-10-28 15:16:50,300] Trial 1790 finished with value: 0.6857370615648761 and parameters: {'seed': 29233, 'model.name': 'roberta-base', 'tok.max_length': 128, 'tok.doc_stride': 32, 'tok.use_fast': False, 'train.batch_size': 16, 'train.grad_accum': 2, 'optim.name': 'adamw', 'optim.lr': 1.2678575428032763e-05, 'optim.weight_decay': 0.0016376445194613521, 'optim.beta1': 0.8374867291083572, 'optim.beta2': 0.988640618948955, 'optim.eps': 2.05791922816544e-08, 'sched.name': 'one_cycle', 'sched.warmup_ratio': 0.026938012513860368, 'sched.cosine_cycles': 2, 'train.clip_grad': 0.7732410582517448, 'model.dropout': 0.12955946238085403, 'model.attn_dropout': 0.19958883931921026, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 2, 'optim.layerwise_lr_decay': 0.9096117813368882, 'head.pooling': 'max', 'head.layers': 2, 'head.hidden': 768, 'head.activation': 'silu', 'head.dropout': 0.041067453970349214, 'loss.cls.type': 'ce', 'loss.cls.label_smoothing': 0.13276213913590929, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 40 (patience=20)
+
+================================================================================
+TRIAL 1791 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 8
+  Learning rate: 9.2179649347362e-06
+  Dropout: 0.2255844810153816
+================================================================================
+
+[I 2025-10-28 15:28:40,813] Trial 1788 pruned. Pruned at step 14 with metric 0.5732
+[I 2025-10-28 15:28:41,221] Trial 1792 pruned. Pruned: Large model with bsz=24, accum=4 (effective_batch=96) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 15:28:41,603] Trial 1793 pruned. Pruned: Large model with bsz=24, accum=3 (effective_batch=72) likely causes OOM (24GB GPU limit)
+[W 2025-10-28 15:28:41,950] The parameter `tok.doc_stride` in Trial#1794 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+[I 2025-10-28 15:28:41,999] Trial 1794 pruned. Pruned: Large model with bsz=24, accum=3 (effective_batch=72) likely causes OOM (24GB GPU limit)
+
+================================================================================
+TRIAL 1795 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 16
+  Learning rate: 6.1335113097139065e-06
+  Dropout: 0.24394532720094447
+================================================================================
+
+[I 2025-10-28 15:30:30,365] Trial 1789 finished with value: 0.6881946881946882 and parameters: {'seed': 50946, 'model.name': 'roberta-base', 'tok.max_length': 224, 'tok.doc_stride': 48, 'tok.use_fast': True, 'train.batch_size': 12, 'train.grad_accum': 2, 'optim.name': 'adamw', 'optim.lr': 2.3089811047548612e-05, 'optim.weight_decay': 0.036718957886268964, 'optim.beta1': 0.8627470852837722, 'optim.beta2': 0.991295258497263, 'optim.eps': 1.889455703208795e-08, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.05390863778512721, 'sched.poly_power': 0.828150724141457, 'train.clip_grad': 1.4415791784685088, 'model.dropout': 0.04501311397646941, 'model.attn_dropout': 0.2539267535810259, 'train.grad_checkpointing': False, 'train.freeze_encoder_layers': 3, 'optim.layerwise_lr_decay': 0.8119655568460118, 'head.pooling': 'attn', 'head.layers': 4, 'head.hidden': 1536, 'head.activation': 'silu', 'head.dropout': 0.14317631094603683, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.516719691866945, 'loss.cls.alpha': 0.29795151870346737, 'loss.cls.balance': 'weighted'}. Best is trial 835 with value: 0.7757724911129341.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 34 (patience=20)
+
+================================================================================
+TRIAL 1796 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 8
+  Learning rate: 2.5370813696583328e-05
+  Dropout: 0.28730148492858537
+================================================================================
+
+[I 2025-10-28 15:40:51,009] Trial 1791 pruned. Pruned at step 27 with metric 0.6417
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1797 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 1.822822292496034e-05
+  Dropout: 0.06286200960292712
+================================================================================
+
+[I 2025-10-28 15:45:05,643] Trial 1796 pruned. Pruned at step 10 with metric 0.6583
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1798 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 1.185591182039868e-05
+  Dropout: 0.18680509034235201
+================================================================================
+
+[I 2025-10-28 15:47:30,319] Trial 1797 pruned. Pruned at step 11 with metric 0.6042
+[W 2025-10-28 15:47:30,733] The parameter `tok.doc_stride` in Trial#1799 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1799 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 6.141270099220126e-06
+  Dropout: 0.059427451807669035
+================================================================================
+
+[I 2025-10-28 15:48:17,197] Trial 1798 pruned. Pruned at step 11 with metric 0.5927
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1800 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 1.1591811680823346e-05
+  Dropout: 0.12781040060012488
+================================================================================
+
+[I 2025-10-28 15:56:23,372] Trial 1799 pruned. Pruned at step 12 with metric 0.5593
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1801 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 8.168888388510212e-06
+  Dropout: 0.14750396959882459
+================================================================================
+
+[I 2025-10-28 15:58:59,205] Trial 1795 pruned. Pruned at step 16 with metric 0.6492
+[I 2025-10-28 15:58:59,618] Trial 1802 pruned. Pruned: Large model with bsz=24, accum=3 (effective_batch=72) likely causes OOM (24GB GPU limit)
+
+================================================================================
+TRIAL 1803 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 48
+  Learning rate: 8.915332386699974e-05
+  Dropout: 0.02679859437320222
+================================================================================
+
+[I 2025-10-28 15:59:04,780] Trial 1803 pruned. OOM: bert-base-uncased bs=48 len=384
+[I 2025-10-28 15:59:05,970] Trial 1801 pruned. OOM: roberta-base bs=12 len=192
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1803 exceeded GPU memory:
+  Model: bert-base-uncased
+  Batch size: 48 (effective: 48 with grad_accum=1)
+  Max length: 384
+  Error: CUDA out of memory. Tried to allocate 216.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 52.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proc
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1804 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 8
+  Learning rate: 3.073328624294696e-05
+  Dropout: 0.003890429927027164
+================================================================================
+
+
+[OOM] Trial 1801 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 12 (effective: 48 with grad_accum=4)
+  Max length: 192
+  Error: CUDA out of memory. Tried to allocate 148.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 132.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1805 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 24
+  Learning rate: 7.076978244847365e-05
+  Dropout: 0.0321572426373694
+================================================================================
+
+[I 2025-10-28 16:09:00,620] Trial 1805 pruned. Pruned at step 15 with metric 0.5548
+[W 2025-10-28 16:09:00,974] The parameter `tok.doc_stride` in Trial#1806 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1806 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 32
+  Learning rate: 3.1092542383812274e-05
+  Dropout: 0.2712654901063518
+================================================================================
+
+[I 2025-10-28 16:26:43,695] Trial 1806 pruned. Pruned at step 27 with metric 0.6083
+
+================================================================================
+TRIAL 1807 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 24
+  Learning rate: 6.811003091991868e-05
+  Dropout: 0.4129548405711308
+================================================================================
+
+[I 2025-10-28 16:30:32,014] Trial 1807 pruned. Pruned at step 8 with metric 0.6286
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1808 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 24
+  Learning rate: 2.2687920795801106e-05
+  Dropout: 0.3461494596410607
+================================================================================
+
+[I 2025-10-28 16:39:17,646] Trial 1808 pruned. Pruned at step 10 with metric 0.6601
+
+================================================================================
+TRIAL 1809 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 12
+  Learning rate: 1.5968081153992645e-05
+  Dropout: 0.02707580097652225
+================================================================================
+
+[I 2025-10-28 16:49:39,575] Trial 1809 pruned. Pruned at step 11 with metric 0.5788
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1810 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 32
+  Learning rate: 1.3447563158985354e-05
+  Dropout: 0.0015107978786141688
+================================================================================
+
+[I 2025-10-28 16:55:30,104] Trial 1810 pruned. Pruned at step 15 with metric 0.6112
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1811 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 48
+  Learning rate: 1.1370862454849133e-05
+  Dropout: 0.48902426859449294
+================================================================================
+
+[I 2025-10-28 16:55:36,974] Trial 1811 pruned. OOM: roberta-base bs=48 len=384
+[I 2025-10-28 16:55:37,396] Trial 1812 pruned. Pruned: Large model with bsz=64, accum=4 (effective_batch=256) likely causes OOM (24GB GPU limit)
+[W 2025-10-28 16:55:37,748] The parameter `tok.doc_stride` in Trial#1813 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+[I 2025-10-28 16:55:37,794] Trial 1813 pruned. Pruned: Large model with bsz=24, accum=3 (effective_batch=72) likely causes OOM (24GB GPU limit)
+
+[OOM] Trial 1811 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 48 (effective: 192 with grad_accum=4)
+  Max length: 384
+  Error: CUDA out of memory. Tried to allocate 62.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 61.50 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1814 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 32
+  Learning rate: 8.711844455134142e-06
+  Dropout: 0.37707346155696864
+================================================================================
+
+[I 2025-10-28 17:03:50,319] Trial 1814 pruned. Pruned at step 16 with metric 0.6242
+[W 2025-10-28 17:03:50,684] The parameter `tok.doc_stride` in Trial#1815 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1815 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 12
+  Learning rate: 1.6026055849426048e-05
+  Dropout: 0.08783959949364081
+================================================================================
+
+[I 2025-10-28 17:04:25,378] Trial 1804 pruned. OOM: roberta-base bs=8 len=128
+[I 2025-10-28 17:04:25,856] Trial 1816 pruned. Pruned: Large model with bsz=64, accum=8 (effective_batch=512) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 17:04:26,270] Trial 1817 pruned. Pruned: Large model with bsz=32, accum=4 (effective_batch=128) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 17:04:27,420] Trial 1815 pruned. OOM: microsoft/deberta-v3-large bs=12 len=128
+[I 2025-10-28 17:04:27,760] Trial 1800 pruned. OOM: roberta-large bs=8 len=384
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1804 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 8 (effective: 8 with grad_accum=1)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 12.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 36.25 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1815 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 12 (effective: 12 with grad_accum=1)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 12.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 36.25 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1800 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 48 with grad_accum=6)
+  Max length: 384
+  Error: CUDA out of memory. Tried to allocate 12.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 36.25 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1818 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 2.622363009466875e-05
+  Dropout: 0.38495514654195606
+================================================================================
+
+
+================================================================================
+TRIAL 1819 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 8
+  Learning rate: 2.0906601108211058e-05
+  Dropout: 0.15427972357328296
+================================================================================
+
+
+================================================================================
+TRIAL 1820 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 48
+  Learning rate: 1.3614155586654897e-05
+  Dropout: 0.17102879184268463
+================================================================================
+
+[I 2025-10-28 17:14:18,424] Trial 1820 pruned. Pruned at step 27 with metric 0.6450
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1821 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 1.0353724318940952e-05
+  Dropout: 0.1824681543526947
+================================================================================
+
+[I 2025-10-28 17:44:41,886] Trial 1819 pruned. Pruned at step 27 with metric 0.5180
+
+================================================================================
+TRIAL 1822 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 24
+  Learning rate: 2.7885665533483895e-05
+  Dropout: 0.42992848122916494
+================================================================================
+
+[I 2025-10-28 17:50:00,440] Trial 1822 pruned. Pruned at step 17 with metric 0.5732
+[I 2025-10-28 17:50:00,877] Trial 1823 pruned. Pruned: Large model with bsz=24, accum=1 (effective_batch=24) likely causes OOM (24GB GPU limit)
+
+================================================================================
+TRIAL 1824 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 12
+  Learning rate: 1.0431542635106656e-05
+  Dropout: 0.3828101220736087
+================================================================================
+
+[I 2025-10-28 17:52:54,577] Trial 1821 finished with value: 0.7446710081491762 and parameters: {'seed': 51176, 'model.name': 'roberta-large', 'tok.max_length': 128, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 8, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 1.0353724318940952e-05, 'optim.weight_decay': 0.010670951047906486, 'optim.beta1': 0.8647422170585227, 'optim.beta2': 0.9734342372264747, 'optim.eps': 3.993816691572838e-09, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.1825962631564286, 'sched.poly_power': 0.6505801729441052, 'train.clip_grad': 0.8270818222626222, 'model.dropout': 0.1824681543526947, 'model.attn_dropout': 0.1410591672268497, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 4, 'optim.layerwise_lr_decay': 0.8959825712957001, 'head.pooling': 'cls', 'head.layers': 4, 'head.hidden': 1536, 'head.activation': 'relu', 'head.dropout': 0.25498824096888134, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.6770354901590743, 'loss.cls.alpha': 0.5144292340148908, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+EarlyStopping triggered at epoch 27 (patience=20)
+
+================================================================================
+TRIAL 1825 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 48
+  Learning rate: 6.615440052018478e-06
+  Dropout: 0.3013907287671315
+================================================================================
+
+[I 2025-10-28 18:01:33,117] Trial 1825 pruned. Pruned at step 22 with metric 0.6273
+[I 2025-10-28 18:01:33,528] Trial 1826 pruned. Pruned: Large model with bsz=32, accum=6 (effective_batch=192) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1827 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 24
+  Learning rate: 3.591121698303367e-05
+  Dropout: 0.1260620062824374
+================================================================================
+
+[I 2025-10-28 18:01:38,457] Trial 1827 pruned. OOM: microsoft/deberta-v3-base bs=24 len=384
+[I 2025-10-28 18:01:41,394] Trial 1824 pruned. OOM: xlm-roberta-base bs=12 len=160
+
+[OOM] Trial 1827 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 24 (effective: 48 with grad_accum=2)
+  Max length: 384
+  Error: CUDA out of memory. Tried to allocate 162.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 78.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proc
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1828 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 48
+  Learning rate: 1.7759098885736334e-05
+  Dropout: 0.10902839718405867
+================================================================================
+
+
+[OOM] Trial 1824 exceeded GPU memory:
+  Model: xlm-roberta-base
+  Batch size: 12 (effective: 12 with grad_accum=1)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 734.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 538.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1829 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 8.427326771411764e-06
+  Dropout: 0.03403559130952502
+================================================================================
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[I 2025-10-28 18:01:46,662] Trial 1828 pruned. OOM: microsoft/deberta-v3-base bs=48 len=192
+[I 2025-10-28 18:01:48,146] Trial 1818 pruned. OOM: roberta-base bs=12 len=224
+[I 2025-10-28 18:01:48,677] Trial 1831 pruned. Pruned: Large model with bsz=16, accum=6 (effective_batch=96) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 18:01:49,378] Trial 1829 pruned. OOM: roberta-large bs=8 len=128
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[I 2025-10-28 18:01:49,788] Trial 1832 pruned. Pruned: Large model with bsz=24, accum=8 (effective_batch=192) likely causes OOM (24GB GPU limit)
+
+[OOM] Trial 1828 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 48 (effective: 48 with grad_accum=1)
+  Max length: 192
+  Error: CUDA out of memory. Tried to allocate 108.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 136.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1830 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 1.7958676077231945e-05
+  Dropout: 0.31348691263461537
+================================================================================
+
+
+[OOM] Trial 1818 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 12 (effective: 36 with grad_accum=3)
+  Max length: 224
+  Error: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 40.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1829 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 40.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+[I 2025-10-28 18:01:50,716] Trial 1834 pruned. Pruned: Large model with bsz=24, accum=8 (effective_batch=192) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1833 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 1.4215369786992832e-05
+  Dropout: 0.25650563219771594
+================================================================================
+
+
+================================================================================
+TRIAL 1835 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 8.618619952778707e-06
+  Dropout: 0.20681990865203423
+================================================================================
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[I 2025-10-28 18:17:27,052] Trial 1835 finished with value: 0.7254298642533936 and parameters: {'seed': 50297, 'model.name': 'roberta-base', 'tok.max_length': 160, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 64, 'train.grad_accum': 6, 'optim.name': 'adamw', 'optim.lr': 8.618619952778707e-06, 'optim.weight_decay': 0.001030129600497382, 'optim.beta1': 0.8893731537011534, 'optim.beta2': 0.9674526130071955, 'optim.eps': 2.0589264528767205e-09, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.1565844066739619, 'sched.poly_power': 0.657213291903021, 'train.clip_grad': 0.6900186368343982, 'model.dropout': 0.20681990865203423, 'model.attn_dropout': 0.13787408563617126, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 4, 'optim.layerwise_lr_decay': 0.8661990335153819, 'head.pooling': 'cls', 'head.layers': 3, 'head.hidden': 1536, 'head.activation': 'relu', 'head.dropout': 0.1952260334821796, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.423461926136825, 'loss.cls.alpha': 0.5339155478276483, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+[I 2025-10-28 18:17:27,455] Trial 1836 pruned. Pruned: Large model with bsz=64, accum=8 (effective_batch=512) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 18:17:27,843] Trial 1837 pruned. Pruned: Large model with bsz=48, accum=8 (effective_batch=384) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 30 (patience=20)
+
+================================================================================
+TRIAL 1838 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 9.068484363193199e-06
+  Dropout: 0.16896697173641675
+================================================================================
+
+[I 2025-10-28 18:32:49,989] Trial 1833 finished with value: 0.4429347826086957 and parameters: {'seed': 49733, 'model.name': 'roberta-large', 'tok.max_length': 160, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 8, 'train.grad_accum': 2, 'optim.name': 'adamw', 'optim.lr': 1.4215369786992832e-05, 'optim.weight_decay': 0.0036291150392930966, 'optim.beta1': 0.9409476969387032, 'optim.beta2': 0.9759938145693484, 'optim.eps': 2.191434751099074e-09, 'sched.name': 'linear', 'sched.warmup_ratio': 0.06915668382297925, 'train.clip_grad': 1.3743858669585607, 'model.dropout': 0.25650563219771594, 'model.attn_dropout': 0.26188428774719585, 'train.grad_checkpointing': False, 'train.freeze_encoder_layers': 1, 'optim.layerwise_lr_decay': 0.9445787734388857, 'head.pooling': 'cls', 'head.layers': 2, 'head.hidden': 1536, 'head.activation': 'relu', 'head.dropout': 0.3018828582569715, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.7461099864290635, 'loss.cls.alpha': 0.6080686710393457, 'loss.cls.balance': 'none'}. Best is trial 835 with value: 0.7757724911129341.
+[I 2025-10-28 18:32:50,415] Trial 1839 pruned. Pruned: Large model with bsz=48, accum=6 (effective_batch=288) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 21 (patience=20)
+
+================================================================================
+TRIAL 1840 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 48
+  Learning rate: 2.034887839359458e-05
+  Dropout: 0.30645479442046897
+================================================================================
+
+[I 2025-10-28 18:32:53,611] Trial 1840 pruned. OOM: roberta-base bs=48 len=352
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+[I 2025-10-28 18:32:57,643] Trial 1830 pruned. OOM: roberta-large bs=8 len=128
+
+[OOM] Trial 1840 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 48 (effective: 192 with grad_accum=4)
+  Max length: 352
+  Error: CUDA out of memory. Tried to allocate 198.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 198.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1841 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 12
+  Learning rate: 1.388518436070914e-05
+  Dropout: 0.2906541489459971
+================================================================================
+
+
+[OOM] Trial 1830 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 50.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1842 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 1.484769757355595e-05
+  Dropout: 0.022759069493594564
+================================================================================
+
+[I 2025-10-28 18:33:04,506] Trial 1841 pruned. OOM: microsoft/deberta-v3-large bs=12 len=160
+[I 2025-10-28 18:33:06,695] Trial 1838 pruned. OOM: roberta-large bs=8 len=160
+[I 2025-10-28 18:33:06,844] Trial 1842 pruned. OOM: roberta-large bs=8 len=160
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[I 2025-10-28 18:33:07,370] Trial 1844 pruned. Pruned: Large model with bsz=32, accum=4 (effective_batch=128) likely causes OOM (24GB GPU limit)
+
+[OOM] Trial 1841 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 12 (effective: 36 with grad_accum=3)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 42.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1843 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 1.377532567326494e-05
+  Dropout: 0.16517202830933347
+================================================================================
+
+
+[OOM] Trial 1842 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 42.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1838 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 42.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1845 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 7.719751289176345e-06
+  Dropout: 0.29173514425995056
+================================================================================
+
+
+================================================================================
+TRIAL 1846 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 24
+  Learning rate: 1.4932232984771423e-05
+  Dropout: 0.21940367414696088
+================================================================================
+
+[I 2025-10-28 18:33:17,221] Trial 1843 pruned. OOM: roberta-large bs=8 len=160
+[I 2025-10-28 18:33:17,665] Trial 1847 pruned. Pruned: Large model with bsz=64, accum=3 (effective_batch=192) likely causes OOM (24GB GPU limit)
+
+[OOM] Trial 1843 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 8 with grad_accum=1)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 48.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1848 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 12
+  Learning rate: 1.1375717282664627e-05
+  Dropout: 0.03649645201545203
+================================================================================
+
+[I 2025-10-28 18:33:24,791] Trial 1848 pruned. OOM: microsoft/deberta-v3-large bs=12 len=384
+[W 2025-10-28 18:33:25,280] The parameter `tok.doc_stride` in Trial#1849 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+[I 2025-10-28 18:33:28,098] Trial 1845 pruned. OOM: roberta-base bs=64 len=192
+[I 2025-10-28 18:33:28,246] Trial 1846 pruned. OOM: microsoft/deberta-v3-base bs=24 len=160
+[I 2025-10-28 18:33:28,900] Trial 1851 pruned. Pruned: Large model with bsz=24, accum=6 (effective_batch=144) likely causes OOM (24GB GPU limit)
+
+[OOM] Trial 1848 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 12 (effective: 12 with grad_accum=1)
+  Max length: 384
+  Error: CUDA out of memory. Tried to allocate 144.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 168.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1849 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 12
+  Learning rate: 5.647056061208783e-06
+  Dropout: 0.3632761080710343
+================================================================================
+
+
+[OOM] Trial 1846 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 24 (effective: 72 with grad_accum=3)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 90.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 56.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1845 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 64 (effective: 384 with grad_accum=6)
+  Max length: 192
+  Error: CUDA out of memory. Tried to allocate 144.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 56.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proc
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1850 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 32
+  Learning rate: 8.626655422667059e-06
+  Dropout: 0.18362074860426353
+================================================================================
+
+
+================================================================================
+TRIAL 1852 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 8
+  Learning rate: 1.4905543701935896e-05
+  Dropout: 0.36833616456909574
+================================================================================
+
+[I 2025-10-28 18:38:51,996] Trial 1850 pruned. Pruned at step 9 with metric 0.5732
+[I 2025-10-28 18:38:52,488] Trial 1853 pruned. Pruned: Large model with bsz=64, accum=4 (effective_batch=256) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 18:38:52,882] Trial 1854 pruned. Pruned: Large model with bsz=64, accum=1 (effective_batch=64) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1855 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 8
+  Learning rate: 7.235971668003125e-06
+  Dropout: 0.22016081672894222
+================================================================================
+
+[I 2025-10-28 18:50:49,122] Trial 1849 finished with value: 0.6733304360423005 and parameters: {'seed': 35559, 'model.name': 'microsoft/deberta-v3-base', 'tok.max_length': 128, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 12, 'train.grad_accum': 1, 'optim.name': 'adamw', 'optim.lr': 5.647056061208783e-06, 'optim.weight_decay': 0.0021296777660558025, 'optim.beta1': 0.9200682525827066, 'optim.beta2': 0.9850436377849282, 'optim.eps': 1.7368069225640325e-08, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.14681957545759183, 'sched.poly_power': 0.6584441779083265, 'train.clip_grad': 0.6299949113406249, 'model.dropout': 0.3632761080710343, 'model.attn_dropout': 0.09115001813280828, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 2, 'optim.layerwise_lr_decay': 0.8116038454676991, 'head.pooling': 'cls', 'head.layers': 2, 'head.hidden': 1536, 'head.activation': 'relu', 'head.dropout': 0.24939106769330727, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.3559603399163427, 'loss.cls.alpha': 0.616931257948256, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+EarlyStopping triggered at epoch 24 (patience=20)
+
+================================================================================
+TRIAL 1856 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 16
+  Learning rate: 1.3642550195492941e-05
+  Dropout: 0.19283918155849308
+================================================================================
+
+[I 2025-10-28 18:53:08,267] Trial 1856 pruned. Pruned at step 7 with metric 0.5949
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1857 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 1.1306931772236341e-05
+  Dropout: 0.16462920360387984
+================================================================================
+
+[I 2025-10-28 19:05:03,000] Trial 1857 pruned. Pruned at step 10 with metric 0.6407
+[W 2025-10-28 19:05:03,376] The parameter `tok.doc_stride` in Trial#1858 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1858 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 3.135522847446804e-05
+  Dropout: 0.2416865058820852
+================================================================================
+
+[I 2025-10-28 19:13:50,592] Trial 1858 finished with value: 0.7090322580645161 and parameters: {'seed': 39032, 'model.name': 'roberta-base', 'tok.max_length': 128, 'tok.doc_stride': 32, 'tok.use_fast': False, 'train.batch_size': 12, 'train.grad_accum': 1, 'optim.name': 'adamw', 'optim.lr': 3.135522847446804e-05, 'optim.weight_decay': 0.008263987207736294, 'optim.beta1': 0.8399834620526256, 'optim.beta2': 0.9880871561328125, 'optim.eps': 2.801658974130442e-08, 'sched.name': 'one_cycle', 'sched.warmup_ratio': 0.1301293927523653, 'sched.cosine_cycles': 3, 'train.clip_grad': 0.4224476305607015, 'model.dropout': 0.2416865058820852, 'model.attn_dropout': 0.0643981171750042, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 2, 'optim.layerwise_lr_decay': 0.8093043173547988, 'head.pooling': 'attn', 'head.layers': 1, 'head.hidden': 1536, 'head.activation': 'silu', 'head.dropout': 0.08256958287494329, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.8030510196399256, 'loss.cls.alpha': 0.601579347000629, 'loss.cls.balance': 'weighted'}. Best is trial 835 with value: 0.7757724911129341.
+EarlyStopping triggered at epoch 25 (patience=20)
+
+================================================================================
+TRIAL 1859 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 24
+  Learning rate: 1.988184553275087e-05
+  Dropout: 0.16190279969175655
+================================================================================
+
+[I 2025-10-28 19:21:24,641] Trial 1859 pruned. Pruned at step 14 with metric 0.6388
+[W 2025-10-28 19:21:25,005] The parameter `tok.doc_stride` in Trial#1860 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1860 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 1.8894777987137565e-05
+  Dropout: 0.39751563005099044
+================================================================================
+
+[I 2025-10-28 19:32:24,502] Trial 1860 finished with value: 0.740329338400078 and parameters: {'seed': 64123, 'model.name': 'roberta-base', 'tok.max_length': 128, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 24, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 1.8894777987137565e-05, 'optim.weight_decay': 0.11866175205438521, 'optim.beta1': 0.8967571102179703, 'optim.beta2': 0.9714264358582388, 'optim.eps': 4.3498931267112177e-08, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.08850255252019473, 'sched.poly_power': 0.8162882988722234, 'train.clip_grad': 0.9854594883958561, 'model.dropout': 0.39751563005099044, 'model.attn_dropout': 0.24387731821326228, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 4, 'optim.layerwise_lr_decay': 0.8842077154747245, 'head.pooling': 'cls', 'head.layers': 4, 'head.hidden': 1024, 'head.activation': 'silu', 'head.dropout': 0.4965266285925665, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.517399972752468, 'loss.cls.alpha': 0.5216823082581755, 'loss.cls.balance': 'none'}. Best is trial 835 with value: 0.7757724911129341.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 47 (patience=20)
+
+================================================================================
+TRIAL 1861 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 48
+  Learning rate: 3.0939404679787506e-05
+  Dropout: 0.3537799509370311
+================================================================================
+
+[I 2025-10-28 19:36:46,294] Trial 1861 finished with value: 0.6628934184863666 and parameters: {'seed': 55919, 'model.name': 'roberta-base', 'tok.max_length': 128, 'tok.doc_stride': 48, 'tok.use_fast': True, 'train.batch_size': 48, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 3.0939404679787506e-05, 'optim.weight_decay': 0.007259909375681658, 'optim.beta1': 0.8624499610861983, 'optim.beta2': 0.9847609038669587, 'optim.eps': 1.3403233418844743e-07, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.0045379426459633, 'sched.poly_power': 1.0851976677342905, 'train.clip_grad': 0.7908947225324331, 'model.dropout': 0.3537799509370311, 'model.attn_dropout': 0.2808045794295976, 'train.grad_checkpointing': False, 'train.freeze_encoder_layers': 6, 'optim.layerwise_lr_decay': 0.9233323168993656, 'head.pooling': 'cls', 'head.layers': 4, 'head.hidden': 512, 'head.activation': 'relu', 'head.dropout': 0.33802679681431563, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.2121060755153423, 'loss.cls.alpha': 0.5999291679356286, 'loss.cls.balance': 'none'}. Best is trial 835 with value: 0.7757724911129341.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 25 (patience=20)
+
+================================================================================
+TRIAL 1862 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 1.763710556775981e-05
+  Dropout: 0.2616937496777825
+================================================================================
+
+[I 2025-10-28 19:39:24,621] Trial 1862 pruned. Pruned at step 10 with metric 0.5866
+
+================================================================================
+TRIAL 1863 - Configuration:
+  Model: {'name': 'bert-large-uncased'}
+  Batch size: 8
+  Learning rate: 1.147872770170417e-05
+  Dropout: 0.26225699248932577
+================================================================================
+
+[I 2025-10-28 20:03:25,834] Trial 1863 finished with value: 0.4474393530997305 and parameters: {'seed': 48971, 'model.name': 'bert-large-uncased', 'tok.max_length': 160, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 8, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 1.147872770170417e-05, 'optim.weight_decay': 0.003980015552216552, 'optim.beta1': 0.9164575366004609, 'optim.beta2': 0.9975329982208379, 'optim.eps': 7.616956471260585e-09, 'sched.name': 'one_cycle', 'sched.warmup_ratio': 0.15568789390455598, 'sched.cosine_cycles': 4, 'train.clip_grad': 0.3964432567572679, 'model.dropout': 0.26225699248932577, 'model.attn_dropout': 0.03063242651640956, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 5, 'optim.layerwise_lr_decay': 0.8616542925941327, 'head.pooling': 'max', 'head.layers': 1, 'head.hidden': 1024, 'head.activation': 'relu', 'head.dropout': 0.07539756893113268, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.043765849000977, 'loss.cls.alpha': 0.5348888252525386, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 21 (patience=20)
+
+================================================================================
+TRIAL 1864 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 2.149956861878456e-05
+  Dropout: 0.005649163376208695
+================================================================================
+
+[I 2025-10-28 20:03:33,360] Trial 1852 finished with value: 0.6893939393939394 and parameters: {'seed': 41296, 'model.name': 'xlm-roberta-base', 'tok.max_length': 256, 'tok.doc_stride': 64, 'tok.use_fast': False, 'train.batch_size': 8, 'train.grad_accum': 1, 'optim.name': 'adamw', 'optim.lr': 1.4905543701935896e-05, 'optim.weight_decay': 0.013731493964779023, 'optim.beta1': 0.8983700535963659, 'optim.beta2': 0.9934410191327121, 'optim.eps': 1.1801671802273462e-09, 'sched.name': 'one_cycle', 'sched.warmup_ratio': 0.1573909022413054, 'sched.cosine_cycles': 4, 'train.clip_grad': 0.60286582499563, 'model.dropout': 0.36833616456909574, 'model.attn_dropout': 0.05876469516808905, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 5, 'optim.layerwise_lr_decay': 0.9312346702528229, 'head.pooling': 'attn', 'head.layers': 1, 'head.hidden': 1024, 'head.activation': 'silu', 'head.dropout': 0.2888626643762704, 'loss.cls.type': 'ce', 'loss.cls.label_smoothing': 0.07741310816583893, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+[I 2025-10-28 20:03:33,767] Trial 1865 pruned. Pruned: Large model with bsz=32, accum=4 (effective_batch=128) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 25 (patience=20)
+
+================================================================================
+TRIAL 1866 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 2.0738465142911828e-05
+  Dropout: 0.35828607906929477
+================================================================================
+
+[I 2025-10-28 20:17:34,339] Trial 1864 pruned. Pruned at step 11 with metric 0.6159
+
+================================================================================
+TRIAL 1867 - Configuration:
+  Model: {'name': 'bert-large-uncased'}
+  Batch size: 8
+  Learning rate: 9.536635142626882e-06
+  Dropout: 0.4380428304413315
+================================================================================
+
+[I 2025-10-28 20:36:45,429] Trial 1866 finished with value: 0.6916871752802844 and parameters: {'seed': 55640, 'model.name': 'roberta-base', 'tok.max_length': 128, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 24, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 2.0738465142911828e-05, 'optim.weight_decay': 0.0004783596914083675, 'optim.beta1': 0.9019480899270317, 'optim.beta2': 0.9670373410064086, 'optim.eps': 1.7418719562988028e-09, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.061919300268304237, 'sched.poly_power': 0.9583396247465608, 'train.clip_grad': 1.485222940757738, 'model.dropout': 0.35828607906929477, 'model.attn_dropout': 0.20476963685168592, 'train.grad_checkpointing': False, 'train.freeze_encoder_layers': 2, 'optim.layerwise_lr_decay': 0.8903252451449695, 'head.pooling': 'max', 'head.layers': 2, 'head.hidden': 256, 'head.activation': 'relu', 'head.dropout': 0.28513396922864165, 'loss.cls.type': 'ce_label_smooth', 'loss.cls.label_smoothing': 0.16599692645453318, 'loss.cls.balance': 'none'}. Best is trial 835 with value: 0.7757724911129341.
+EarlyStopping triggered at epoch 26 (patience=20)
+
+================================================================================
+TRIAL 1868 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 64
+  Learning rate: 5.260979026753411e-05
+  Dropout: 0.007972042951959114
+================================================================================
+
+[I 2025-10-28 20:44:29,419] Trial 1868 pruned. Pruned at step 16 with metric 0.5962
+[W 2025-10-28 20:44:29,807] The parameter `tok.doc_stride` in Trial#1869 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1869 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 32
+  Learning rate: 7.994259927750468e-06
+  Dropout: 0.4077012403270483
+================================================================================
+
+[I 2025-10-28 20:44:38,798] Trial 1869 pruned. OOM: microsoft/deberta-v3-base bs=32 len=128
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1869 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 32 (effective: 192 with grad_accum=6)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 48.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 38.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1870 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 12
+  Learning rate: 5.910946270654077e-06
+  Dropout: 0.1392923534740538
+================================================================================
+
+[I 2025-10-28 20:44:47,570] Trial 1870 pruned. OOM: roberta-large bs=12 len=224
+[I 2025-10-28 20:44:47,734] Trial 1855 pruned. OOM: microsoft/deberta-v3-large bs=8 len=128
+[I 2025-10-28 20:44:48,240] Trial 1871 pruned. Pruned: Large model with bsz=16, accum=8 (effective_batch=128) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 20:44:49,335] Trial 1867 pruned. OOM: bert-large-uncased bs=8 len=128
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[W 2025-10-28 20:44:50,136] The parameter `tok.doc_stride` in Trial#1874 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+[I 2025-10-28 20:44:50,185] Trial 1874 pruned. Pruned: Large model with bsz=24, accum=4 (effective_batch=96) likely causes OOM (24GB GPU limit)
+
+[OOM] Trial 1855 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 38.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1870 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 12 (effective: 36 with grad_accum=3)
+  Max length: 224
+  Error: CUDA out of memory. Tried to allocate 42.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 38.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1872 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 8.820863784782332e-06
+  Dropout: 0.09460547291515518
+================================================================================
+
+
+[OOM] Trial 1867 exceeded GPU memory:
+  Model: bert-large-uncased
+  Batch size: 8 (effective: 64 with grad_accum=8)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 38.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1873 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 24
+  Learning rate: 2.8496228551267545e-05
+  Dropout: 0.4382930940936104
+================================================================================
+
+[I 2025-10-28 20:44:52,555] Trial 1875 pruned. Pruned: Large model with bsz=48, accum=3 (effective_batch=144) likely causes OOM (24GB GPU limit)
+[W 2025-10-28 20:44:52,910] The parameter `tok.doc_stride` in Trial#1876 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+[I 2025-10-28 20:44:52,965] Trial 1876 pruned. Pruned: Large model with bsz=64, accum=1 (effective_batch=64) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 20:44:53,424] Trial 1877 pruned. Pruned: Large model with bsz=48, accum=3 (effective_batch=144) likely causes OOM (24GB GPU limit)
+[W 2025-10-28 20:44:53,876] The parameter `tok.doc_stride` in Trial#1878 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+
+================================================================================
+TRIAL 1878 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 16
+  Learning rate: 2.6360314629499136e-05
+  Dropout: 0.48614846458792615
+================================================================================
+
+[I 2025-10-28 20:44:58,942] Trial 1872 pruned. OOM: roberta-base bs=64 len=352
+[I 2025-10-28 20:44:59,139] Trial 1873 pruned. OOM: microsoft/deberta-v3-base bs=24 len=320
+[W 2025-10-28 20:44:59,850] The parameter `tok.doc_stride` in Trial#1879 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+[I 2025-10-28 20:44:59,909] Trial 1879 pruned. Pruned: Large model with bsz=24, accum=4 (effective_batch=96) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 20:45:00,500] Trial 1878 pruned. OOM: microsoft/deberta-v3-base bs=16 len=128
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1872 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 64 (effective: 384 with grad_accum=6)
+  Max length: 352
+  Error: CUDA out of memory. Tried to allocate 66.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 54.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1873 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 24 (effective: 96 with grad_accum=4)
+  Max length: 320
+  Error: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 54.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1880 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 8
+  Learning rate: 1.6501638031264385e-05
+  Dropout: 0.4544763591909368
+================================================================================
+
+
+[OOM] Trial 1878 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 16 (effective: 16 with grad_accum=1)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 48.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 52.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1881 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 3.424772503944801e-05
+  Dropout: 0.23504345547815836
+================================================================================
+
+
+================================================================================
+TRIAL 1882 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 64
+  Learning rate: 8.498810637818433e-06
+  Dropout: 0.4198030400672346
+================================================================================
+
+[I 2025-10-28 20:50:32,319] Trial 1882 pruned. Pruned at step 11 with metric 0.6254
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1883 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 12
+  Learning rate: 4.7240745621711666e-05
+  Dropout: 0.0004319942376272007
+================================================================================
+
+[I 2025-10-28 20:55:19,990] Trial 1881 pruned. Pruned at step 9 with metric 0.6079
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1884 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 0.000105352127466669
+  Dropout: 0.14324562138436242
+================================================================================
+
+[I 2025-10-28 21:07:29,560] Trial 1884 finished with value: 0.44141689373297005 and parameters: {'seed': 47403, 'model.name': 'roberta-base', 'tok.max_length': 128, 'tok.doc_stride': 32, 'tok.use_fast': False, 'train.batch_size': 24, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 0.000105352127466669, 'optim.weight_decay': 1.2528090168723768e-05, 'optim.beta1': 0.9451198543065759, 'optim.beta2': 0.978622204271716, 'optim.eps': 1.183810464268627e-09, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.17050005357729606, 'sched.poly_power': 0.8637203755679979, 'train.clip_grad': 1.1543179297390838, 'model.dropout': 0.14324562138436242, 'model.attn_dropout': 0.18173787151489382, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 2, 'optim.layerwise_lr_decay': 0.8589701655204397, 'head.pooling': 'attn', 'head.layers': 4, 'head.hidden': 768, 'head.activation': 'relu', 'head.dropout': 0.491108422874394, 'loss.cls.type': 'ce', 'loss.cls.label_smoothing': 0.16681397153587688, 'loss.cls.balance': 'none'}. Best is trial 835 with value: 0.7757724911129341.
+[I 2025-10-28 21:07:29,966] Trial 1885 pruned. Pruned: Large model with bsz=64, accum=4 (effective_batch=256) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+EarlyStopping triggered at epoch 21 (patience=20)
+
+================================================================================
+TRIAL 1886 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 64
+  Learning rate: 4.3859678304134447e-05
+  Dropout: 0.36742451668027964
+================================================================================
+
+[I 2025-10-28 21:07:35,020] Trial 1886 pruned. OOM: microsoft/deberta-v3-base bs=64 len=160
+
+[OOM] Trial 1886 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 64 (effective: 64 with grad_accum=1)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 30.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 61.38 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1887 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 12
+  Learning rate: 1.187728775363254e-05
+  Dropout: 0.24432440458332735
+================================================================================
+
+[I 2025-10-28 21:16:16,678] Trial 1883 finished with value: 0.4429347826086957 and parameters: {'seed': 49314, 'model.name': 'roberta-large', 'tok.max_length': 192, 'tok.doc_stride': 80, 'tok.use_fast': True, 'train.batch_size': 12, 'train.grad_accum': 1, 'optim.name': 'adamw', 'optim.lr': 4.7240745621711666e-05, 'optim.weight_decay': 0.006353865472361363, 'optim.beta1': 0.8323256333597004, 'optim.beta2': 0.9698893723439709, 'optim.eps': 1.4010354378925565e-08, 'sched.name': 'cosine', 'sched.warmup_ratio': 0.17629730464908408, 'train.clip_grad': 1.1349936156255347, 'model.dropout': 0.0004319942376272007, 'model.attn_dropout': 0.2731751595338085, 'train.grad_checkpointing': False, 'train.freeze_encoder_layers': 5, 'optim.layerwise_lr_decay': 0.8492551459227204, 'head.pooling': 'max', 'head.layers': 2, 'head.hidden': 512, 'head.activation': 'gelu', 'head.dropout': 0.2539015393394923, 'loss.cls.type': 'ce_label_smooth', 'loss.cls.label_smoothing': 0.1536112843356876, 'loss.cls.balance': 'none'}. Best is trial 835 with value: 0.7757724911129341.
+[I 2025-10-28 21:16:17,127] Trial 1888 pruned. Pruned: Large model with bsz=48, accum=2 (effective_batch=96) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 21 (patience=20)
+
+================================================================================
+TRIAL 1889 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 5.293559020719693e-06
+  Dropout: 0.18568379645114402
+================================================================================
+
+[I 2025-10-28 21:27:14,716] Trial 1889 finished with value: 0.7254175858808698 and parameters: {'seed': 51239, 'model.name': 'roberta-base', 'tok.max_length': 224, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 64, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 5.293559020719693e-06, 'optim.weight_decay': 0.0006183135328387843, 'optim.beta1': 0.8591101658623898, 'optim.beta2': 0.9860299554097076, 'optim.eps': 7.745337598619367e-09, 'sched.name': 'linear', 'sched.warmup_ratio': 0.18112842832808038, 'train.clip_grad': 1.0018224516775422, 'model.dropout': 0.18568379645114402, 'model.attn_dropout': 0.11475177731056826, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 5, 'optim.layerwise_lr_decay': 0.8589942842824788, 'head.pooling': 'cls', 'head.layers': 3, 'head.hidden': 1536, 'head.activation': 'relu', 'head.dropout': 0.44100311071370213, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.8784125473863202, 'loss.cls.alpha': 0.5465601558587303, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+[I 2025-10-28 21:27:15,118] Trial 1890 pruned. Pruned: Large model with bsz=12, accum=6 (effective_batch=72) likely causes OOM (24GB GPU limit)
+EarlyStopping triggered at epoch 41 (patience=20)
+
+================================================================================
+TRIAL 1891 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 64
+  Learning rate: 6.465547977351036e-06
+  Dropout: 0.1366826220707964
+================================================================================
+
+[I 2025-10-28 21:27:21,637] Trial 1891 pruned. OOM: bert-base-uncased bs=64 len=320
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1891 exceeded GPU memory:
+  Model: bert-base-uncased
+  Batch size: 64 (effective: 256 with grad_accum=4)
+  Max length: 320
+  Error: CUDA out of memory. Tried to allocate 240.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 218.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1892 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 32
+  Learning rate: 1.132375427524237e-05
+  Dropout: 0.2690786332271453
+================================================================================
+
+[I 2025-10-28 21:44:06,916] Trial 1892 finished with value: 0.6646341463414634 and parameters: {'seed': 10644, 'model.name': 'roberta-base', 'tok.max_length': 256, 'tok.doc_stride': 32, 'tok.use_fast': False, 'train.batch_size': 32, 'train.grad_accum': 2, 'optim.name': 'adamw', 'optim.lr': 1.132375427524237e-05, 'optim.weight_decay': 0.058046574584704025, 'optim.beta1': 0.8512815719918331, 'optim.beta2': 0.9698782947308396, 'optim.eps': 5.342622976441726e-09, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.15122757754189978, 'sched.poly_power': 0.8351340153176708, 'train.clip_grad': 1.2528435739456563, 'model.dropout': 0.2690786332271453, 'model.attn_dropout': 0.2121267156289512, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 2, 'optim.layerwise_lr_decay': 0.8819806485457875, 'head.pooling': 'cls', 'head.layers': 4, 'head.hidden': 256, 'head.activation': 'relu', 'head.dropout': 0.275595924174408, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.631101404714694, 'loss.cls.alpha': 0.5869176171056792, 'loss.cls.balance': 'weighted'}. Best is trial 835 with value: 0.7757724911129341.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 48 (patience=20)
+
+================================================================================
+TRIAL 1893 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 9.431018975831792e-06
+  Dropout: 0.06100352849406482
+================================================================================
+
+[I 2025-10-28 21:48:13,258] Trial 1893 pruned. Pruned at step 13 with metric 0.5900
+
+================================================================================
+TRIAL 1894 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 32
+  Learning rate: 6.26668284889985e-06
+  Dropout: 0.08713940318847517
+================================================================================
+
+[I 2025-10-28 21:50:58,121] Trial 1894 pruned. Pruned at step 11 with metric 0.6250
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1895 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 9.06379909827125e-06
+  Dropout: 0.1534407199825325
+================================================================================
+
+[I 2025-10-28 21:54:44,019] Trial 1895 pruned. Pruned at step 13 with metric 0.6518
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1896 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 9.02938738084486e-06
+  Dropout: 0.20292117327714232
+================================================================================
+
+[I 2025-10-28 21:57:28,387] Trial 1896 pruned. Pruned at step 9 with metric 0.6242
+
+================================================================================
+TRIAL 1897 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 24
+  Learning rate: 1.252450165838747e-05
+  Dropout: 0.1323103072594421
+================================================================================
+
+[I 2025-10-28 22:00:01,181] Trial 1880 pruned. Pruned at step 9 with metric 0.6207
+
+================================================================================
+TRIAL 1898 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 32
+  Learning rate: 5.212845623609186e-06
+  Dropout: 0.48733713681815777
+================================================================================
+
+[I 2025-10-28 22:21:58,666] Trial 1897 finished with value: 0.7152777777777778 and parameters: {'seed': 63976, 'model.name': 'bert-base-uncased', 'tok.max_length': 256, 'tok.doc_stride': 96, 'tok.use_fast': False, 'train.batch_size': 24, 'train.grad_accum': 4, 'optim.name': 'adamw', 'optim.lr': 1.252450165838747e-05, 'optim.weight_decay': 0.04313046626131548, 'optim.beta1': 0.9147375843380362, 'optim.beta2': 0.9959760462294336, 'optim.eps': 1.1926637686357984e-08, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.09250678713147807, 'sched.poly_power': 0.758665440258355, 'train.clip_grad': 0.8745841230029532, 'model.dropout': 0.1323103072594421, 'model.attn_dropout': 0.10590046553336027, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 2, 'optim.layerwise_lr_decay': 0.92472143994471, 'head.pooling': 'cls', 'head.layers': 2, 'head.hidden': 768, 'head.activation': 'silu', 'head.dropout': 0.04136104713384069, 'loss.cls.type': 'ce', 'loss.cls.label_smoothing': 0.09313889252561369, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+[I 2025-10-28 22:21:59,104] Trial 1899 pruned. Pruned: Large model with bsz=24, accum=8 (effective_batch=192) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 22:21:59,507] Trial 1900 pruned. Pruned: Large model with bsz=64, accum=4 (effective_batch=256) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 22:21:59,906] Trial 1901 pruned. Pruned: Large model with bsz=24, accum=8 (effective_batch=192) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 22:22:00,306] Trial 1902 pruned. Pruned: Large model with bsz=48, accum=4 (effective_batch=192) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+EarlyStopping triggered at epoch 57 (patience=20)
+
+================================================================================
+TRIAL 1903 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 8
+  Learning rate: 5.913455371492806e-06
+  Dropout: 0.2018229262309074
+================================================================================
+
+[I 2025-10-28 22:22:08,770] Trial 1887 pruned. OOM: microsoft/deberta-v3-base bs=12 len=320
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1887 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 12 (effective: 24 with grad_accum=2)
+  Max length: 320
+  Error: CUDA out of memory. Tried to allocate 90.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 106.81 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proc
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1904 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 1.664422668682944e-05
+  Dropout: 0.31289095674304085
+================================================================================
+
+[I 2025-10-28 22:22:17,823] Trial 1898 pruned. OOM: bert-base-uncased bs=32 len=224
+[W 2025-10-28 22:22:18,237] The parameter `tok.doc_stride` in Trial#1905 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+[I 2025-10-28 22:22:18,793] Trial 1903 pruned. OOM: microsoft/deberta-v3-large bs=8 len=128
+
+[OOM] Trial 1898 exceeded GPU memory:
+  Model: bert-base-uncased
+  Batch size: 32 (effective: 128 with grad_accum=4)
+  Max length: 224
+  Error: CUDA out of memory. Tried to allocate 22.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 30.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1903 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 30.75 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1905 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 8
+  Learning rate: 7.181794955511849e-06
+  Dropout: 0.21664934417526924
+================================================================================
+
+
+================================================================================
+TRIAL 1906 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 16
+  Learning rate: 6.3890009863305285e-06
+  Dropout: 0.24653039732880427
+================================================================================
+
+[I 2025-10-28 22:24:48,924] Trial 1904 pruned. Pruned at step 9 with metric 0.6537
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1907 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 7.990047266058732e-06
+  Dropout: 0.3393351881526259
+================================================================================
+
+[I 2025-10-28 22:33:02,602] Trial 1907 finished with value: 0.6951219512195121 and parameters: {'seed': 50033, 'model.name': 'roberta-base', 'tok.max_length': 192, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 64, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 7.990047266058732e-06, 'optim.weight_decay': 0.14748611105974124, 'optim.beta1': 0.8423111453996488, 'optim.beta2': 0.9941856605873682, 'optim.eps': 1.949329376011854e-09, 'sched.name': 'one_cycle', 'sched.warmup_ratio': 0.16199580397473445, 'sched.cosine_cycles': 1, 'train.clip_grad': 0.3574466287174156, 'model.dropout': 0.3393351881526259, 'model.attn_dropout': 0.19520526822556375, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 3, 'optim.layerwise_lr_decay': 0.8563880455126952, 'head.pooling': 'max', 'head.layers': 1, 'head.hidden': 1536, 'head.activation': 'silu', 'head.dropout': 0.12653991099883022, 'loss.cls.type': 'ce', 'loss.cls.label_smoothing': 0.1617068600163665, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 30 (patience=20)
+
+================================================================================
+TRIAL 1908 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 32
+  Learning rate: 6.829242263169491e-06
+  Dropout: 0.3326624762894371
+================================================================================
+
+[I 2025-10-28 22:37:42,187] Trial 1906 pruned. Pruned at step 27 with metric 0.6530
+[I 2025-10-28 22:37:42,607] Trial 1909 pruned. Pruned: Large model with bsz=32, accum=1 (effective_batch=32) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 22:37:43,031] Trial 1910 pruned. Pruned: Large model with bsz=32, accum=1 (effective_batch=32) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1911 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 16
+  Learning rate: 9.307340219293392e-06
+  Dropout: 0.0019787157072581885
+================================================================================
+
+[I 2025-10-28 22:39:12,726] Trial 1908 pruned. Pruned at step 16 with metric 0.6346
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1912 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 5.101015289938245e-06
+  Dropout: 0.34419478700612605
+================================================================================
+
+[I 2025-10-28 22:39:18,192] Trial 1905 pruned. OOM: microsoft/deberta-v3-large bs=8 len=128
+[I 2025-10-28 22:39:18,727] Trial 1913 pruned. Pruned: Large model with bsz=32, accum=1 (effective_batch=32) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 22:39:19,114] Trial 1914 pruned. Pruned: Large model with bsz=64, accum=4 (effective_batch=256) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+[OOM] Trial 1905 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 8 (effective: 32 with grad_accum=4)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 32.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 50.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1915 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 12
+  Learning rate: 6.068115803385917e-06
+  Dropout: 0.32578142476411254
+================================================================================
+
+[I 2025-10-28 22:39:24,923] Trial 1911 pruned. OOM: microsoft/deberta-v3-base bs=16 len=192
+[W 2025-10-28 22:39:25,411] The parameter `tok.doc_stride` in Trial#1916 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+
+[OOM] Trial 1911 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 16 (effective: 64 with grad_accum=4)
+  Max length: 192
+  Error: CUDA out of memory. Tried to allocate 36.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 56.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1916 - Configuration:
+  Model: {'name': 'bert-large-uncased'}
+  Batch size: 12
+  Learning rate: 6.79485643799759e-06
+  Dropout: 0.22605005427948824
+================================================================================
+
+[I 2025-10-28 22:39:29,793] Trial 1916 pruned. OOM: bert-large-uncased bs=12 len=128
+[I 2025-10-28 22:39:30,214] Trial 1917 pruned. Pruned: Large model with bsz=64, accum=4 (effective_batch=256) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 22:39:31,511] Trial 1912 pruned. OOM: roberta-large bs=8 len=192
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1916 exceeded GPU memory:
+  Model: bert-large-uncased
+  Batch size: 12 (effective: 36 with grad_accum=3)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 38.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1918 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 7.934608374921423e-06
+  Dropout: 0.444889978931184
+================================================================================
+
+
+[OOM] Trial 1912 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 192
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 38.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1919 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 9.440281013637554e-06
+  Dropout: 0.32588390342593543
+================================================================================
+
+[I 2025-10-28 22:39:38,314] Trial 1919 pruned. OOM: roberta-large bs=8 len=128
+[W 2025-10-28 22:39:38,794] The parameter `tok.doc_stride` in Trial#1920 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+
+[OOM] Trial 1919 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 46.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1920 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 64
+  Learning rate: 7.669176714326428e-05
+  Dropout: 0.3841807357549257
+================================================================================
+
+[I 2025-10-28 22:39:47,791] Trial 1918 pruned. OOM: roberta-base bs=24 len=224
+[I 2025-10-28 22:39:47,943] Trial 1920 pruned. OOM: bert-base-uncased bs=64 len=128
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1920 exceeded GPU memory:
+  Model: bert-base-uncased
+  Batch size: 64 (effective: 384 with grad_accum=6)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 44.56 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1918 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 24 (effective: 192 with grad_accum=8)
+  Max length: 224
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 44.56 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1921 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 8.143178100729346e-06
+  Dropout: 0.09255517248668617
+================================================================================
+
+
+================================================================================
+TRIAL 1922 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 2.7472514781462954e-05
+  Dropout: 0.3475376615237471
+================================================================================
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[I 2025-10-28 22:39:52,111] Trial 1922 pruned. OOM: roberta-base bs=12 len=128
+
+[OOM] Trial 1922 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 12 (effective: 72 with grad_accum=6)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 18.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 40.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1923 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 24
+  Learning rate: 7.976286891625505e-06
+  Dropout: 0.2685126063345514
+================================================================================
+
+[I 2025-10-28 22:39:55,635] Trial 1923 pruned. OOM: bert-base-uncased bs=24 len=384
+[I 2025-10-28 22:39:56,079] Trial 1924 pruned. Pruned: Large model with bsz=64, accum=2 (effective_batch=128) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 22:39:57,747] Trial 1921 pruned. OOM: roberta-large bs=8 len=128
+
+[OOM] Trial 1923 exceeded GPU memory:
+  Model: bert-base-uncased
+  Batch size: 24 (effective: 192 with grad_accum=8)
+  Max length: 384
+  Error: CUDA out of memory. Tried to allocate 54.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 38.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1925 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 8
+  Learning rate: 7.898838319175306e-06
+  Dropout: 0.22962515508328918
+================================================================================
+
+
+[OOM] Trial 1921 exceeded GPU memory:
+  Model: roberta-large
+  Batch size: 8 (effective: 32 with grad_accum=4)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 16.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 38.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1926 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 12
+  Learning rate: 5.95533110153194e-06
+  Dropout: 0.1660201611914234
+================================================================================
+
+[I 2025-10-28 22:40:07,314] Trial 1915 pruned. OOM: microsoft/deberta-v3-large bs=12 len=160
+[I 2025-10-28 22:40:07,555] Trial 1926 pruned. OOM: microsoft/deberta-v3-large bs=12 len=160
+[I 2025-10-28 22:40:08,040] Trial 1927 pruned. Pruned: Large model with bsz=12, accum=8 (effective_batch=96) likely causes OOM (24GB GPU limit)
+
+[OOM] Trial 1926 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 12 (effective: 36 with grad_accum=3)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 44.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1915 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 12 (effective: 12 with grad_accum=1)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 44.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1928 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 24
+  Learning rate: 4.1620271531722e-05
+  Dropout: 0.07800501727657023
+================================================================================
+
+
+================================================================================
+TRIAL 1929 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 64
+  Learning rate: 1.3168953425979032e-05
+  Dropout: 0.4135992915190528
+================================================================================
+
+[I 2025-10-28 22:44:40,395] Trial 1929 pruned. Pruned at step 13 with metric 0.5866
+[I 2025-10-28 22:44:40,815] Trial 1930 pruned. Pruned: Large model with bsz=32, accum=3 (effective_batch=96) likely causes OOM (24GB GPU limit)
+[I 2025-10-28 22:44:41,200] Trial 1931 pruned. Pruned: Large model with bsz=48, accum=4 (effective_batch=192) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1932 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 16
+  Learning rate: 1.1074576641550313e-05
+  Dropout: 0.37535002599163025
+================================================================================
+
+[I 2025-10-28 22:53:58,733] Trial 1928 pruned. Pruned at step 8 with metric 0.5945
+[I 2025-10-28 22:53:59,183] Trial 1933 pruned. Pruned: Large model with bsz=24, accum=1 (effective_batch=24) likely causes OOM (24GB GPU limit)
+
+================================================================================
+TRIAL 1934 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 12
+  Learning rate: 1.600968118238099e-05
+  Dropout: 0.49398880059363165
+================================================================================
+
+[I 2025-10-28 22:57:06,964] Trial 1932 pruned. Pruned at step 9 with metric 0.6125
+[I 2025-10-28 22:57:07,516] Trial 1935 pruned. Pruned: Large model with bsz=32, accum=4 (effective_batch=128) likely causes OOM (24GB GPU limit)
+[W 2025-10-28 22:57:07,911] The parameter `tok.doc_stride` in Trial#1936 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+
+================================================================================
+TRIAL 1936 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 8
+  Learning rate: 1.0068022361157526e-05
+  Dropout: 0.16769138650767507
+================================================================================
+
+[I 2025-10-28 23:00:16,586] Trial 1925 pruned. Pruned at step 23 with metric 0.6279
+[I 2025-10-28 23:00:17,004] Trial 1937 pruned. Pruned: Large model with bsz=64, accum=3 (effective_batch=192) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1938 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 8.742639175860411e-06
+  Dropout: 0.30153592017556324
+================================================================================
+
+[I 2025-10-28 23:08:56,777] Trial 1938 finished with value: 0.7650878533231474 and parameters: {'seed': 59148, 'model.name': 'roberta-base', 'tok.max_length': 224, 'tok.doc_stride': 32, 'tok.use_fast': False, 'train.batch_size': 64, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 8.742639175860411e-06, 'optim.weight_decay': 4.8277822392452076e-05, 'optim.beta1': 0.8639535472577546, 'optim.beta2': 0.9845132265323444, 'optim.eps': 2.8239687229150506e-08, 'sched.name': 'cosine', 'sched.warmup_ratio': 0.18465673510013067, 'train.clip_grad': 0.8884693207860523, 'model.dropout': 0.30153592017556324, 'model.attn_dropout': 0.03716435748174206, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 5, 'optim.layerwise_lr_decay': 0.8728337409196066, 'head.pooling': 'max', 'head.layers': 4, 'head.hidden': 768, 'head.activation': 'relu', 'head.dropout': 0.4320966237327419, 'loss.cls.type': 'focal', 'loss.cls.gamma': 4.106746344171854, 'loss.cls.alpha': 0.5515911843240457, 'loss.cls.balance': 'effective_num'}. Best is trial 835 with value: 0.7757724911129341.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 33 (patience=20)
+
+================================================================================
+TRIAL 1939 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 48
+  Learning rate: 1.1505205139260397e-05
+  Dropout: 0.3501828058299122
+================================================================================
+
+[I 2025-10-28 23:11:34,956] Trial 1939 pruned. Pruned at step 13 with metric 0.6254
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+
+================================================================================
+TRIAL 1940 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-base'}
+  Batch size: 8
+  Learning rate: 4.4499675843119555e-05
+  Dropout: 0.3097127990800406
+================================================================================
+
+[I 2025-10-28 23:15:08,729] Trial 1936 pruned. Pruned at step 9 with metric 0.6038
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1941 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 2.4766986434880685e-05
+  Dropout: 0.17246327848755327
+================================================================================
+
+[I 2025-10-28 23:18:49,840] Trial 1941 pruned. Pruned at step 9 with metric 0.6397
+
+================================================================================
+TRIAL 1942 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 8
+  Learning rate: 9.938134650597181e-06
+  Dropout: 0.2348014797876452
+================================================================================
+
+[I 2025-10-28 23:35:48,789] Trial 1942 pruned. Pruned at step 16 with metric 0.6027
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1943 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 1.4263939781036891e-05
+  Dropout: 0.37641878852274213
+================================================================================
+
+[I 2025-10-28 23:40:15,585] Trial 1943 pruned. Pruned at step 11 with metric 0.6411
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1944 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 5.020417627664467e-06
+  Dropout: 0.13607198749345906
+================================================================================
+
+[I 2025-10-28 23:45:53,741] Trial 1944 pruned. Pruned at step 21 with metric 0.5656
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1945 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 48
+  Learning rate: 1.5088825819511324e-05
+  Dropout: 0.4759961454366124
+================================================================================
+
+[I 2025-10-28 23:46:21,274] Trial 1934 pruned. Pruned at step 27 with metric 0.6390
+[I 2025-10-28 23:46:21,957] Trial 1946 pruned. Pruned: Large model with bsz=64, accum=3 (effective_batch=192) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1947 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 7.437136409383897e-06
+  Dropout: 0.33065475520624427
+================================================================================
+
+[I 2025-10-28 23:49:16,928] Trial 1945 pruned. Pruned at step 8 with metric 0.6298
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1948 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 8.20700558170177e-06
+  Dropout: 0.09268304333055877
+================================================================================
+
+[I 2025-10-28 23:49:27,017] Trial 1940 pruned. OOM: microsoft/deberta-v3-base bs=8 len=128
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1940 exceeded GPU memory:
+  Model: microsoft/deberta-v3-base
+  Batch size: 8 (effective: 24 with grad_accum=3)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 376.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 264.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1949 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 48
+  Learning rate: 2.8827770571594987e-05
+  Dropout: 0.3162811898540686
+================================================================================
+
+[I 2025-10-28 23:49:33,231] Trial 1949 pruned. OOM: roberta-base bs=48 len=224
+[I 2025-10-28 23:49:33,382] Trial 1948 pruned. OOM: roberta-base bs=64 len=256
+[I 2025-10-28 23:49:33,433] Trial 1947 pruned. OOM: roberta-base bs=64 len=160
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1947 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 64 (effective: 512 with grad_accum=8)
+  Max length: 160
+  Error: CUDA out of memory. Tried to allocate 30.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 58.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1948 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 64 (effective: 64 with grad_accum=1)
+  Max length: 256
+  Error: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 238.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1949 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 48 (effective: 48 with grad_accum=1)
+  Max length: 224
+  Error: CUDA out of memory. Tried to allocate 126.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 118.88 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this pro
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1950 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 1.4942785863328473e-05
+  Dropout: 0.4150436328530739
+================================================================================
+
+
+================================================================================
+TRIAL 1951 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 8.59960829144891e-06
+  Dropout: 0.36055038544483897
+================================================================================
+
+
+================================================================================
+TRIAL 1952 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 8.644142643938574e-06
+  Dropout: 0.11581028836241693
+================================================================================
+
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+[I 2025-10-29 00:00:22,404] Trial 1951 finished with value: 0.7883870967741935 and parameters: {'seed': 53388, 'model.name': 'roberta-base', 'tok.max_length': 288, 'tok.doc_stride': 48, 'tok.use_fast': True, 'train.batch_size': 24, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 8.59960829144891e-06, 'optim.weight_decay': 0.00038841240432591507, 'optim.beta1': 0.8463819196936152, 'optim.beta2': 0.973543619639023, 'optim.eps': 7.815413272890754e-09, 'sched.name': 'cosine_restart', 'sched.warmup_ratio': 0.1679785560263145, 'sched.cosine_cycles': 2, 'train.clip_grad': 0.5122365722624754, 'model.dropout': 0.36055038544483897, 'model.attn_dropout': 0.062475812578792936, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 6, 'optim.layerwise_lr_decay': 0.8973513729098584, 'head.pooling': 'max', 'head.layers': 4, 'head.hidden': 768, 'head.activation': 'relu', 'head.dropout': 0.46202151606868036, 'loss.cls.type': 'focal', 'loss.cls.gamma': 4.004449635904317, 'loss.cls.alpha': 0.5446164676484659, 'loss.cls.balance': 'effective_num'}. Best is trial 1951 with value: 0.7883870967741935.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 26 (patience=20)
+
+================================================================================
+TRIAL 1953 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 8.24594535431429e-06
+  Dropout: 0.19054546369569414
+================================================================================
+
+[I 2025-10-29 00:08:29,611] Trial 1950 pruned. Pruned at step 11 with metric 0.6269
+[I 2025-10-29 00:08:30,032] Trial 1954 pruned. Pruned: Large model with bsz=24, accum=4 (effective_batch=96) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1955 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 32
+  Learning rate: 8.052326764863676e-06
+  Dropout: 0.3378221038318604
+================================================================================
+
+[I 2025-10-29 00:13:06,104] Trial 1953 finished with value: 0.7184065934065934 and parameters: {'seed': 57980, 'model.name': 'roberta-base', 'tok.max_length': 288, 'tok.doc_stride': 64, 'tok.use_fast': True, 'train.batch_size': 24, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 8.24594535431429e-06, 'optim.weight_decay': 0.002884500234241794, 'optim.beta1': 0.8930329616465558, 'optim.beta2': 0.9813688692374954, 'optim.eps': 1.0136352103053318e-08, 'sched.name': 'cosine_restart', 'sched.warmup_ratio': 0.1192255427608919, 'sched.cosine_cycles': 1, 'train.clip_grad': 0.24859616538363394, 'model.dropout': 0.19054546369569414, 'model.attn_dropout': 0.09593244734591036, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 6, 'optim.layerwise_lr_decay': 0.8986420115501319, 'head.pooling': 'max', 'head.layers': 4, 'head.hidden': 768, 'head.activation': 'relu', 'head.dropout': 0.39242147058199395, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.6209054503953357, 'loss.cls.alpha': 0.6268760308181428, 'loss.cls.balance': 'effective_num'}. Best is trial 1951 with value: 0.7883870967741935.
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-large and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+EarlyStopping triggered at epoch 29 (patience=20)
+
+================================================================================
+TRIAL 1956 - Configuration:
+  Model: {'name': 'roberta-large'}
+  Batch size: 8
+  Learning rate: 1.3514912547346212e-05
+  Dropout: 0.23504999171009228
+================================================================================
+
+[I 2025-10-29 00:22:04,765] Trial 1955 pruned. Pruned at step 27 with metric 0.6139
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1957 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 32
+  Learning rate: 1.8224868604229826e-05
+  Dropout: 0.0999463654846778
+================================================================================
+
+[I 2025-10-29 00:31:13,054] Trial 1957 pruned. Pruned at step 19 with metric 0.6245
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1958 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 6.859143008070703e-06
+  Dropout: 0.3388236139024608
+================================================================================
+
+[I 2025-10-29 00:37:21,964] Trial 1958 pruned. Pruned at step 9 with metric 0.5962
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1959 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 12
+  Learning rate: 9.781852101552526e-06
+  Dropout: 0.21302064434127477
+================================================================================
+
+[I 2025-10-29 00:44:27,379] Trial 1952 pruned. Pruned at step 15 with metric 0.6472
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1960 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 32
+  Learning rate: 1.7178398060377917e-05
+  Dropout: 0.18435976942687288
+================================================================================
+
+[I 2025-10-29 00:45:53,294] Trial 1959 pruned. Pruned at step 9 with metric 0.5783
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1961 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 2.55072336142795e-05
+  Dropout: 0.19940108681133348
+================================================================================
+
+[I 2025-10-29 00:50:17,450] Trial 1961 pruned. Pruned at step 10 with metric 0.6067
+
+================================================================================
+TRIAL 1962 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 32
+  Learning rate: 1.5050712371776297e-05
+  Dropout: 0.2971034702534391
+================================================================================
+
+[I 2025-10-29 00:50:32,286] Trial 1956 finished with value: 0.43213296398891965 and parameters: {'seed': 60807, 'model.name': 'roberta-large', 'tok.max_length': 160, 'tok.doc_stride': 32, 'tok.use_fast': True, 'train.batch_size': 8, 'train.grad_accum': 1, 'optim.name': 'adamw', 'optim.lr': 1.3514912547346212e-05, 'optim.weight_decay': 3.570167577740617e-05, 'optim.beta1': 0.8077348986539624, 'optim.beta2': 0.9750796529703091, 'optim.eps': 1.8173882891227242e-09, 'sched.name': 'cosine_restart', 'sched.warmup_ratio': 0.18674407061497125, 'sched.cosine_cycles': 2, 'train.clip_grad': 0.7037474824250262, 'model.dropout': 0.23504999171009228, 'model.attn_dropout': 0.08075200671894232, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 5, 'optim.layerwise_lr_decay': 0.9146845457746324, 'head.pooling': 'max', 'head.layers': 4, 'head.hidden': 768, 'head.activation': 'relu', 'head.dropout': 0.3715951272763483, 'loss.cls.type': 'ce_label_smooth', 'loss.cls.label_smoothing': 0.10386052734912617, 'loss.cls.balance': 'effective_num'}. Best is trial 1951 with value: 0.7883870967741935.
+EarlyStopping triggered at epoch 21 (patience=20)
+
+================================================================================
+TRIAL 1963 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 16
+  Learning rate: 4.575295458307371e-05
+  Dropout: 0.03315914599457008
+================================================================================
+
+[I 2025-10-29 00:54:47,236] Trial 1960 pruned. Pruned at step 7 with metric 0.5962
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1964 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 1.3249174426951183e-05
+  Dropout: 0.2859109314681967
+================================================================================
+
+[I 2025-10-29 00:59:25,508] Trial 1962 pruned. Pruned at step 13 with metric 0.6083
+[W 2025-10-29 00:59:25,894] The parameter `tok.doc_stride` in Trial#1965 is sampled independently using `RandomSampler` instead of `TPESampler`, potentially degrading the optimization performance. This fallback happend because dynamic search space is not supported for `multivariate=True`. You can suppress this warning by setting `warn_independent_sampling` to `False` in the constructor of `TPESampler` if this independent sampling is intended behavior.
+
+================================================================================
+TRIAL 1965 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 32
+  Learning rate: 1.549736740365632e-05
+  Dropout: 0.4155952533672681
+================================================================================
+
+[I 2025-10-29 01:00:49,454] Trial 1963 pruned. Pruned at step 14 with metric 0.6250
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1966 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 8.198219331852566e-06
+  Dropout: 0.02775095116963243
+================================================================================
+
+[I 2025-10-29 01:05:41,867] Trial 1965 pruned. Pruned at step 8 with metric 0.6167
+[I 2025-10-29 01:05:42,301] Trial 1967 pruned. Pruned: Large model with bsz=24, accum=3 (effective_batch=72) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1968 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 1.8936858403423253e-05
+  Dropout: 0.05298423979516336
+================================================================================
+
+[I 2025-10-29 01:06:04,231] Trial 1966 pruned. Pruned at step 9 with metric 0.5859
+[I 2025-10-29 01:06:04,672] Trial 1969 pruned. Pruned: Large model with bsz=24, accum=3 (effective_batch=72) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+================================================================================
+TRIAL 1970 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 64
+  Learning rate: 0.00010554228197949177
+  Dropout: 0.013670353984577778
+================================================================================
+
+[I 2025-10-29 01:06:12,013] Trial 1970 pruned. OOM: roberta-base bs=64 len=288
+[I 2025-10-29 01:06:12,167] Trial 1964 pruned. OOM: roberta-base bs=24 len=384
+[I 2025-10-29 01:06:12,226] Trial 1968 pruned. OOM: roberta-base bs=64 len=128
+[I 2025-10-29 01:06:13,098] Trial 1971 pruned. Pruned: Large model with bsz=64, accum=3 (effective_batch=192) likely causes OOM (24GB GPU limit)
+Some weights of RobertaModel were not initialized from the model checkpoint at roberta-base and are newly initialized: ['pooler.dense.bias', 'pooler.dense.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+
+[OOM] Trial 1964 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 24 (effective: 72 with grad_accum=3)
+  Max length: 384
+  Error: CUDA out of memory. Tried to allocate 108.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 86.25 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proc
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1970 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 64 (effective: 128 with grad_accum=2)
+  Max length: 288
+  Error: CUDA out of memory. Tried to allocate 54.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 66.25 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 1968 exceeded GPU memory:
+  Model: roberta-base
+  Batch size: 64 (effective: 384 with grad_accum=6)
+  Max length: 128
+  Error: CUDA out of memory. Tried to allocate 24.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 46.25 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 1972 - Configuration:
+  Model: {'name': 'roberta-base'}
+  Batch size: 24
+  Learning rate: 6.6535006495865526e-06
+  Dropout: 0.48492704781351226
+================================================================================
+
+
+================================================================================
+TRIAL 1973 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 12
+  Learning rate: 3.2326823413138755e-05
+  Dropout: 0.37117182074405786
+================================================================================
+
+
+================================================================================
+TRIAL 1974 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 24
+  Learning rate: 7.766960189001414e-06
+  Dropout: 0.17627613561291705
+================================================================================
+
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [32,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [33,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [34,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [35,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [36,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [37,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [38,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [39,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [40,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [41,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [42,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [43,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [44,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [45,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [46,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [47,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [48,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [49,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [50,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [51,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [52,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [53,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [54,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [55,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [56,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [57,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [58,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [59,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [60,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [61,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [62,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [8,0,0], thread: [63,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [32,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [33,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [34,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [35,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [36,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [37,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [38,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [39,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [40,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [41,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [42,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [43,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [44,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [45,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [46,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [47,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [48,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [49,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [50,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [51,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [52,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [53,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [54,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [55,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [56,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [57,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [58,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [59,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [60,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [61,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [62,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [90,0,0], thread: [63,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+[W 2025-10-29 01:06:16,546] Trial 1972 failed with parameters: {'seed': 50214, 'model.name': 'roberta-base', 'tok.max_length': 288, 'tok.doc_stride': 48, 'tok.use_fast': True, 'train.batch_size': 24, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 6.6535006495865526e-06, 'optim.weight_decay': 8.263621907497416e-06, 'optim.beta1': 0.882612654112873, 'optim.beta2': 0.9979829213027583, 'optim.eps': 1.420767089812974e-08, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.1801386296486488, 'sched.poly_power': 0.6458913155927235, 'train.clip_grad': 0.5884509039351582, 'model.dropout': 0.48492704781351226, 'model.attn_dropout': 0.020817355786733865, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 5, 'optim.layerwise_lr_decay': 0.8529422270885535, 'head.pooling': 'attn', 'head.layers': 4, 'head.hidden': 768, 'head.activation': 'relu', 'head.dropout': 0.43134948642797366, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.5568605504417756, 'loss.cls.alpha': 0.5403419105030467, 'loss.cls.balance': 'effective_num'} because of the following error: RuntimeError('CUDA context corrupted after 3 consecutive failures. Process must restart.').
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1075, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 857, in run_training_eval
+    optimizer.step()
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/optim/optimizer.py", line 82, in _use_grad
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/optim/adam.py", line 237, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/optim/adam.py", line 181, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+                          ^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1163, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted after 3 consecutive failures. Process must restart.
+[W 2025-10-29 01:06:16,548] Trial 1972 failed with value None.
+[W 2025-10-29 01:06:16,795] Trial 1974 failed with parameters: {'seed': 57714, 'model.name': 'bert-base-uncased', 'tok.max_length': 384, 'tok.doc_stride': 80, 'tok.use_fast': False, 'train.batch_size': 24, 'train.grad_accum': 8, 'optim.name': 'adamw', 'optim.lr': 7.766960189001414e-06, 'optim.weight_decay': 0.0019619969913258098, 'optim.beta1': 0.8891387947000902, 'optim.beta2': 0.9643739864621855, 'optim.eps': 1.3088123264618985e-09, 'sched.name': 'cosine_restart', 'sched.warmup_ratio': 0.19395290701443602, 'sched.cosine_cycles': 2, 'train.clip_grad': 0.6581590338203893, 'model.dropout': 0.17627613561291705, 'model.attn_dropout': 0.18410238198680534, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 4, 'optim.layerwise_lr_decay': 0.8446741976269201, 'head.pooling': 'mean', 'head.layers': 2, 'head.hidden': 768, 'head.activation': 'relu', 'head.dropout': 0.2142957485462358, 'loss.cls.type': 'focal', 'loss.cls.gamma': 3.9255283124661937, 'loss.cls.alpha': 0.5319367613034695, 'loss.cls.balance': 'effective_num'} because of the following error: RuntimeError('CUDA context corrupted after 3 consecutive failures. Process must restart.').
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1075, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 850, in run_training_eval
+    loss.backward()
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/_tensor.py", line 625, in backward
+    torch.autograd.backward(
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/autograd/__init__.py", line 354, in backward
+    _engine_run_backward(
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/autograd/graph.py", line 841, in _engine_run_backward
+    return Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: CUDA error: CUBLAS_STATUS_INTERNAL_ERROR when calling `cublasSgemm( handle, opa, opb, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc)`
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1163, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted after 3 consecutive failures. Process must restart.
+[W 2025-10-29 01:06:16,796] Trial 1974 failed with value None.
+[W 2025-10-29 01:06:16,942] Trial 1973 failed with parameters: {'seed': 44896, 'model.name': 'xlm-roberta-base', 'tok.max_length': 160, 'tok.doc_stride': 64, 'tok.use_fast': True, 'train.batch_size': 12, 'train.grad_accum': 4, 'optim.name': 'adamw', 'optim.lr': 3.2326823413138755e-05, 'optim.weight_decay': 0.021589742846884898, 'optim.beta1': 0.9279882150612339, 'optim.beta2': 0.9716393688438292, 'optim.eps': 5.948230398716243e-08, 'sched.name': 'one_cycle', 'sched.warmup_ratio': 0.10469686427174094, 'sched.cosine_cycles': 1, 'train.clip_grad': 1.1527968790590095, 'model.dropout': 0.37117182074405786, 'model.attn_dropout': 0.21064270910705124, 'train.grad_checkpointing': True, 'train.freeze_encoder_layers': 5, 'optim.layerwise_lr_decay': 0.8450847931287168, 'head.pooling': 'cls', 'head.layers': 4, 'head.hidden': 256, 'head.activation': 'silu', 'head.dropout': 0.4928762555505003, 'loss.cls.type': 'focal', 'loss.cls.gamma': 4.304070656868849, 'loss.cls.alpha': 0.5532572016432773, 'loss.cls.balance': 'none'} because of the following error: RuntimeError('CUDA context corrupted after 3 consecutive failures. Process must restart.').
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1075, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 809, in run_training_eval
+    logits = model(input_ids, attention_mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/src/Project/Criteria/models/model.py", line 119, in forward
+    outputs = self.encoder(
+              ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 789, in forward
+    embedding_output = self.embeddings(
+                       ^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 112, in forward
+    token_type_embeddings = self.token_type_embeddings(token_type_ids)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/sparse.py", line 192, in forward
+    return F.embedding(
+           ^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/functional.py", line 2542, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1163, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted after 3 consecutive failures. Process must restart.
+[W 2025-10-29 01:06:16,945] Trial 1973 failed with value None.
+Warning: Error during model cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during CUDA cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during model cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during model cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during CUDA cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during CUDA cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+[CUDA ERROR] Trial 1972 encountered CUDA error (consecutive failures: 3):
+  Error Type: AcceleratorError
+  Model: roberta-base
+  Batch size: 24
+  Learning rate: 6.6535006495865526e-06
+  Dropout: 0.48492704781351226
+  Error: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+
+================================================================================
+FATAL: 3 consecutive CUDA failures detected!
+This indicates CUDA context corruption that cannot be recovered.
+Raising fatal error to trigger process restart...
+================================================================================
+
+
+[CUDA ERROR] Trial 1973 encountered CUDA error (consecutive failures: 3):
+  Error Type: AcceleratorError
+  Model: xlm-roberta-base
+  Batch size: 12
+  Learning rate: 3.2326823413138755e-05
+  Dropout: 0.37117182074405786
+  Error: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+
+================================================================================
+FATAL: 3 consecutive CUDA failures detected!
+This indicates CUDA context corruption that cannot be recovered.
+Raising fatal error to trigger process restart...
+================================================================================
+
+
+[CUDA ERROR] Trial 1974 encountered CUDA error (consecutive failures: 3):
+  Error Type: RuntimeError
+  Model: bert-base-uncased
+  Batch size: 24
+  Learning rate: 7.766960189001414e-06
+  Dropout: 0.17627613561291705
+  Error: CUDA error: CUBLAS_STATUS_INTERNAL_ERROR when calling `cublasSgemm( handle, opa, opb, m, n, k, &alpha, a, lda, b, ldb, &beta, c, ldc)`
+
+
+================================================================================
+FATAL: 3 consecutive CUDA failures detected!
+This indicates CUDA context corruption that cannot be recovered.
+Raising fatal error to trigger process restart...
+================================================================================
+
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1075, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 857, in run_training_eval
+    optimizer.step()
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/optim/optimizer.py", line 517, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/optim/optimizer.py", line 82, in _use_grad
+    ret = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/optim/adam.py", line 237, in step
+    has_complex = self._init_group(
+                  ^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/optim/adam.py", line 181, in _init_group
+    state["exp_avg_sq"] = torch.zeros_like(
+                          ^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1618, in <module>
+    main()
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1567, in main
+    study.optimize(
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/study.py", line 490, in optimize
+    _optimize(
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 100, in _optimize
+    f.result()
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial_id = _run_trial(study, func, catch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 258, in _run_trial
+    raise func_err
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1163, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted after 3 consecutive failures. Process must restart.
+[W1029 01:07:18.474021759 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
+make[1]: *** [Makefile:368: tune-criteria-supermax] Error 1
+make[1]: Leaving directory '/media/user/SSD1/YuNing/NoAug_Criteria_Evidence'
+make: *** [Makefile:413: tune-all-supermax] Error 2

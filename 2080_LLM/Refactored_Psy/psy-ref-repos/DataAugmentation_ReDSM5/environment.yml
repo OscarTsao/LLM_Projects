@@ -1,0 +1,20 @@
+name: redsm5
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - pandas
+  - scikit-learn
+  - tqdm
+  - pip:
+      - --pre torch torchvision --index-url https://download.pytorch.org/whl/nightly/cu130
+      - -r requirements.txt
+variables:
+  MLFLOW_TRACKING_URI: http://host.docker.internal:5500
+  DVC_NO_ANALYTICS: "1"
+  PYTHONDONTWRITEBYTECODE: "1"
+  WANDB_MODE: disabled

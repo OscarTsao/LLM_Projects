@@ -1,0 +1,102 @@
+================================================================================
+PARALLEL AUGMENTATION - QUICK START
+================================================================================
+
+OPTION A: PROGRESSIVE K-VALUE GENERATION (RECOMMENDED)
+-------------------------------------------------------
+
+Single command to generate k=2, k=3, k=4 with decision gates:
+   $ ./tools/progressive_k_runner.sh
+
+Or auto-approve all phases:
+   $ ./tools/progressive_k_runner.sh --auto-approve
+
+Generate larger k values (k=2 to k=28):
+   $ ./tools/progressive_k_runner.sh --start-k 2 --end-k 28 --auto-approve
+
+
+OPTION B: MANUAL K-VALUE GENERATION
+------------------------------------
+
+1. Launch augmentation for specific k value (e.g., k=2):
+   $ MAX_COMBO_SIZE=2 ./tools/run_parallel_augment.sh
+
+2. Monitor progress (in another terminal):
+   $ python tools/monitor_augment.py --follow
+
+3. Merge results:
+   $ ./tools/merge_shard_manifests.sh
+
+
+WHAT YOU GET:
+-------------
+- 7 parallel augmentation processes
+- ~5-6x speedup vs sequential
+- Real-time progress monitoring
+- CSV format datasets (changed from parquet)
+- Merged manifest: data/processed/augsets/manifest_final.csv
+- Augmented datasets: data/processed/augsets/combo_K_*/dataset.csv
+
+
+TESTING FIRST:
+--------------
+$ ./tools/run_parallel_augment.sh --dry-run            # Test configuration
+$ MAX_COMBO_SIZE=2 ./tools/run_parallel_augment.sh --dry-run  # Test k=2
+$ ./tools/progressive_k_runner.sh --help               # View progressive options
+$ ./tools/test_parallel_infrastructure.sh              # Quick 2-shard test
+
+
+TROUBLESHOOTING:
+----------------
+Check logs:         tail -f logs/augment/shard_0_of_7.log
+Check processes:    ps aux | grep generate_augsets.py
+Check output:       ls -la data/processed/augsets/
+Monitor progress:   python tools/monitor_augment.py
+
+
+CLEAN START:
+------------
+$ rm -rf data/processed/augsets data/cache logs/augment
+$ ./tools/run_parallel_augment.sh
+
+
+EXPECTED TIMELINE:
+------------------
+Startup:          1-2 minutes
+Per combo:        2-5 minutes
+k=2 (singletons): 2-4 hours (7 shards)
+k=3:              4-8 hours (depends on method count)
+k=4:              8-16 hours (combinatorial growth)
+Progressive k=2-4: 14-28 hours total
+
+
+NEXT STEPS:
+-----------
+After completion:
+1. Check manifest:   cat data/processed/augsets/manifest_final.csv
+2. Verify datasets:  python tools/verify/verify_augmentation.py
+3. Use in training:  python tools/train_model.py --augmented-dataset ...
+
+
+HELP & DOCS:
+------------
+./tools/progressive_k_runner.sh --help
+./tools/run_parallel_augment.sh --help
+python tools/monitor_augment.py --help
+./tools/merge_shard_manifests.sh --help
+
+Full docs: tools/PARALLEL_AUGMENTATION.md
+Quick ref: tools/README_PARALLEL.md
+
+
+K-VALUE CONFIGURATION:
+----------------------
+Default k=2:          ./tools/run_parallel_augment.sh
+Custom k value:       MAX_COMBO_SIZE=5 ./tools/run_parallel_augment.sh
+Progressive k=2-4:    ./tools/progressive_k_runner.sh
+Progressive k=2-10:   ./tools/progressive_k_runner.sh --start-k 2 --end-k 10
+
+
+================================================================================
+Ready to run: ./tools/progressive_k_runner.sh  (or)  ./tools/run_parallel_augment.sh
+================================================================================

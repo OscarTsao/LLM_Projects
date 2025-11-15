@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "mcp__ide__getDiagnostics",
+      "Bash(python:*)",
+      "Bash(mkdir:*)",
+      "Bash(pip install:*)",
+      "Bash(PYTHONPATH=/experiment/YuNing/Criteria_Evidence_Agent:$PYTHONPATH python -c \"from src.data import DataModule; from src.models import EvidenceModel; from src.utils import set_seed; print(''All imports successful'')\")",
+      "Bash(PYTHONPATH=/experiment/YuNing/Criteria_Evidence_Agent:$PYTHONPATH python src/train.py --help)",
+      "Bash(pip show:*)",
+      "Bash(export:*)",
+      "Bash(/home/lab308/miniforge3/bin/python -c \"from src.data import DataModule; from src.models import EvidenceModel; from src.utils import set_seed; print(''All imports successful'')\")",
+      "Bash(PYTHONPATH=. python src/train.py --help)",
+      "Bash(PYTHONPATH=. python src/hpo.py --help)",
+      "Bash(make:*)",
+      "Read(//home/lab308/.config/Code/logs/20251007T154220/window1/exthost/ms-vscode-remote.remote-containers/**)",
+      "WebSearch",
+      "Bash(docker:*)",
+      "Bash(nvidia-smi:*)",
+      "Bash(curl:*)",
+      "Bash(sudo gpg:*)",
+      "Bash(curl -s -L https://nvidia.github.io/libnvidia-container/stable/deb/nvidia-container-toolkit.list)",
+      "Bash(sudo tee:*)",
+      "Read(//home/lab308/.config/Code/logs/**)",
+      "Bash(dpkg:*)",
+      "Bash(docker-compose:*)",
+      "Bash(echo $MLFLOW_TRACKING_URI)",
+      "Bash(sudo lsof:*)",
+      "Bash(netstat:*)",
+      "Bash(ss:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

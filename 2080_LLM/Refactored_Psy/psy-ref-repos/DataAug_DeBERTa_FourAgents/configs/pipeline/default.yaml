@@ -1,0 +1,12 @@
+mlflow:
+  tracking_uri: file:./mlruns
+
+outputs:
+  root: outputs
+  training_dir: ${outputs.root}/training
+  evaluation_dir: ${outputs.root}/evaluation
+  hpo_dir: ${outputs.root}/hpo
+
+artifacts:
+  calibration: artifacts/calibration.json
+

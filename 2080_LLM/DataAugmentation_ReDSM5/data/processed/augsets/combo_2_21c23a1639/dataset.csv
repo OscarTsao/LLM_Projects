@@ -1,0 +1,44 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I detest that i'm crying rn.,I detest that i'm crying rn.,I hate that i am crying rn.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I've been feeling downwards on and off.,I've been feeling downwards on and off.,I have been feeling down on and off.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I've been sense downward on and off.,I've been sense downward on and off.,I have been feeling down on and off.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I've no free energy at all.,I've no free energy at all.,I have no energy at all.,nlp_wordnet_syn+ta_contraction,FATIGUE,1,s_1455_72_50
+I've no vigor at all.,I've no vigor at all.,I have no energy at all.,nlp_wordnet_syn+ta_contraction,FATIGUE,1,s_1455_72_50
+I'm more than than annoyed.,I'm more than than annoyed.,I am more than annoyed.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_1296_12_9
+Then I'd get truly angry at time.,Then I'd get truly angry at time.,Then I would get really angry at times.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_84_60_2
+I've already planned my ain suicide.,I've already planned my ain suicide.,I have already planned my own suicide.,nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,1,s_1989_742_0
+And I'd cry so heavy.,And I'd cry so heavy.,And I would cry so hard.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_2190_134_3
+I've issues in centre and care.,I've issues in centre and care.,I have issues in focusing and attention.,nlp_wordnet_syn+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+I've effect in focusing and attention.,I've effect in focusing and attention.,I have issues in focusing and attention.,nlp_wordnet_syn+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+Iodine tilt focus and i've no energy.,Iodine tilt focus and i've no energy.,I cant focus and i have no energy.,nlp_wordnet_syn+ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+I cant over focus and i've no push.,I cant over focus and i've no push.,I cant focus and i have no energy.,nlp_wordnet_syn+ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+One just don ' t think I'd like to live anymore.,One just don ' t think I'd like to live anymore.,I just don't think I would like to live anymore.,nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I'm in a constant quandary.,I'm in a constant quandary.,I am in a constant dilemma.,nlp_wordnet_syn+ta_contraction,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'd really wish some free energy right now.,I'd really wish some free energy right now.,I would really like some free energy right now.,nlp_wordnet_syn+ta_contraction,FATIGUE,1,s_969_1077_3
+I'd really like some free energy properly at once.,I'd really like some free energy properly at once.,I would really like some free energy right now.,nlp_wordnet_syn+ta_contraction,FATIGUE,1,s_969_1077_3
+i've nothing to endure for personally.,i've nothing to endure for personally.,i have nothing to live for personally.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+i've nothing to exist for personally.,i've nothing to exist for personally.,i have nothing to live for personally.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+I'm real focus on sex.,I'm real focus on sex.,I am very focused on sex.,nlp_wordnet_syn+ta_contraction,SPECIAL_CASE,1,s_731_903_4
+Some night I'd get under one's skin no sleep at all.,Some night I'd get under one's skin no sleep at all.,Some nights I would get no sleep at all.,nlp_wordnet_syn+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+I've found puff in my sadness,I've found puff in my sadness,I have found comfort in my sadness,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,0,s_2415_116_0
+I'm likewise restless.,I'm likewise restless.,I am also restless.,nlp_wordnet_syn+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I've no one to charge but myself.,I've no one to charge but myself.,I have no one to blame but myself.,nlp_wordnet_syn+ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+I've no ace to blame simply myself.,I've no ace to blame simply myself.,I have no one to blame but myself.,nlp_wordnet_syn+ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+Perhaps a better future that i could've,Perhaps a better future that i could've,Maybe a better future that i could have,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+Perhaps a better future that i could've,Perhaps a better future that i could've,Maybe a better future that i could have,nlp_wordnet_syn+ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+"Iodin didnt think I'd cry, simply I did.","Iodin didnt think I'd cry, simply I did.","I didnt think I would cry, but I did.",nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,0,s_3066_1007_7
+"I didnt believe I'd cry, but Iodin did.","I didnt believe I'd cry, but Iodin did.","I didnt think I would cry, but I did.",nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,0,s_3066_1007_7
+"Cross my heart, I'd holler sometimes.","Cross my heart, I'd holler sometimes.","Cross my heart, I would cry sometimes.",nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,0,s_469_428_1
+Oh yea I'd like to conk,Oh yea I'd like to conk,Oh yea I would like to die,nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+Oh yea I'd like to cash in one's chips,Oh yea I'd like to cash in one's chips,Oh yea I would like to die,nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+I'm feel dismay.,I'm feel dismay.,I am feeling depressed.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,1,s_993_781_1
+I've lose all stake.,I've lose all stake.,I have lost all interest.,nlp_wordnet_syn+ta_contraction,ANHEDONIA,1,s_993_781_12
+i ' one thousand rattling hopeful i'll.,i ' one thousand rattling hopeful i'll.,i'm very hopeful i will.,nlp_wordnet_syn+ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+Unity am not suicidal and I'd never be ',Unity am not suicidal and I'd never be ',I am not suicidal and I would never be',nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+I am not self destructive and I'd never be ',I am not self destructive and I'd never be ',I am not suicidal and I would never be',nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+I remember I'd rather just shoot myself.,I remember I'd rather just shoot myself.,I think I would rather just shoot myself.,nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+Ane think I'd rather just film myself.,Ane think I'd rather just film myself.,I think I would rather just shoot myself.,nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I've no department of energy to take.,I've no department of energy to take.,I have no energy to study.,nlp_wordnet_syn+ta_contraction,FATIGUE,1,s_1404_90_5
+I've no energy to meditate.,I've no energy to meditate.,I have no energy to study.,nlp_wordnet_syn+ta_contraction,FATIGUE,1,s_1404_90_5
+Iodin dont desire to suicide because I'd feel guilty.,Iodin dont desire to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,nlp_wordnet_syn+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+Iodin dont desire to suicide because I'd feel guilty.,Iodin dont desire to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,nlp_wordnet_syn+ta_contraction,WORTHLESSNESS,1,s_1404_218_6

@@ -1,0 +1,6 @@
+# @package _global_
+
+loss:
+  type: "focal"
+  gamma: 2.0
+  alpha: null  # Will be computed from class frequencies if not specified

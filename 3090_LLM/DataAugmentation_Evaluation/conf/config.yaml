@@ -1,0 +1,58 @@
+defaults:
+  - dataset: original
+  - model: bert_base
+  - training_mode: gpu_workstation
+  - optional agent: null
+  - _self_
+
+seed: 1337
+output_dir: outputs/train
+log_dir: logs
+resume: true
+save_total_limit: 1
+metric_for_best_model: roc_auc
+regression_threshold: 0.5
+early_stopping_patience: 20
+
+dataloader:
+  num_workers: 8  # Optimal: CPU threads (12) - 2 for main/GPU = ~8-10 workers
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+
+metrics:
+  - accuracy
+  - precision
+  - recall
+  - f1
+  - roc_auc
+
+logging:
+  wandb:
+    enabled: false
+    project: redsm5-classification
+    entity: null
+    group: null
+    tags: []
+    mode: null
+    run_name: null
+
+mlflow:
+  enabled: true
+  tracking_uri: ${oc.env:MLFLOW_TRACKING_URI,"sqlite:///mlflow.db"}
+  fallback_tracking_uri: ${oc.env:MLFLOW_FALLBACK_TRACKING_URI,"mlruns"}
+  experiments:
+    training: redsm5-classification
+
+scheduler_kwargs: {}
+notes: ""
+
+evaluation:
+  checkpoint: null
+  output_path: test_metrics.json
+  split: test
+
+# Hydra output configuration - ensures unique timestamped directories
+hydra:
+  run:
+    dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S-%f}

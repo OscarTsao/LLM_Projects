@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp)",
+      "WebFetch(domain:github.com)",
+      "WebSearch",
+      "Bash(claude mcp add:*)",
+      "Bash(claude mcp:*)",
+      "Bash(echo $HF_TOKEN)",
+      "Bash(env)",
+      "WebFetch(domain:medium.com)",
+      "mcp__github__get_file_contents"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

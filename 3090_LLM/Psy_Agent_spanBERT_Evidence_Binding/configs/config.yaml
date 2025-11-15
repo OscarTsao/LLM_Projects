@@ -1,0 +1,115 @@
+defaults: []
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job_logging:
+    root:
+      level: INFO
+
+data:
+  groundtruth_path: Data/groundtruth/redsm5_ground_truth.json
+  annotations_path: Data/redsm5/redsm5_annotations.csv
+  positive_only: true
+  train_ratio: 0.8
+  val_ratio: 0.1
+  test_ratio: 0.1
+  seed: 42
+
+model:
+  pretrained_model_name_or_path: SpanBERT/spanbert-base-cased
+  dropout: 0.1
+  local_files_only: true
+  gradient_checkpointing: false  # Enable to save memory at cost of ~20% speed
+
+features:
+  max_length: 384
+  doc_stride: 128
+  n_best_size: 20
+  max_answer_length: 60
+
+training:
+  num_train_epochs: 100
+  train_batch_size: 8
+  eval_batch_size: 8
+  gradient_accumulation_steps: 1
+  learning_rate: 3.0e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  max_grad_norm: 1.0
+  adam_epsilon: 1.0e-8
+  optimizer:
+    name: adamw_torch  # adamw_torch, adamw_hf, adam, adamax, rmsprop, sgd, adafactor
+    betas: [0.9, 0.999]
+    momentum: 0.9
+    nesterov: false
+    amsgrad: false
+    use_fused: auto
+    alpha: 0.99
+    centered: false
+    relative_step: false
+    scale_parameter: false
+    warmup_init: false
+  scheduler:
+    name: linear  # linear, cosine, cosine_with_restarts, polynomial, constant, constant_with_warmup
+    warmup_ratio: null
+    warmup_steps: null
+    num_cycles: 0.5
+    power: 1.0
+    gamma: 0.1
+    step_size: 1000
+    lr_end: 0.0
+    lr_end_ratio: 0.0
+    t_max: null
+    t_max_ratio: 1.0
+    eta_min: 0.0
+    eta_min_ratio: 0.0
+  num_workers: 4  # Optimized for most systems
+  pin_memory: auto  # Enables on CUDA for faster GPU transfer
+  persistent_workers: auto  # Keeps workers alive between epochs
+  prefetch_factor: 2  # Prefetch 2 batches per worker
+  eval_prefetch_factor: 2
+  test_prefetch_factor: 2
+  drop_last: true  # More stable batch normalization
+  shuffle_train: true
+  dataloader_timeout: 0  # Avoid timeout issues
+  mixed_precision: auto  # Uses fp16 on CUDA for ~2-3x speedup
+  amp_dtype: auto
+  seed: 42
+  eval_every_steps: null
+  log_every_steps: 20
+  artifact_dir: artifacts
+  save_best_k: 1
+  device: auto
+  compile_model: true  # PyTorch 2.0+ compilation for 10-20% speedup
+  compile_mode: default  # Most stable compilation mode
+  compile_backend: inductor
+  compile_dynamic: false  # Faster, assumes consistent shapes
+  compile_fullgraph: false  # More stable, avoids CUDA graph issues
+  cudnn_benchmark: true  # Auto-tune cuDNN algorithms
+  cudnn_deterministic: false  # Faster, seeds handle reproducibility
+  max_steps: null
+
+optimization:
+  patience: 2
+  min_delta: 0.0
+  warmup_epochs: 0
+  cooldown_epochs: 0
+  metric: f1
+  higher_is_better: true
+
+logging:
+  use_tqdm: true
+
+optuna:
+  n_trials: 100
+  timeout: 604800  # 1 week
+  study_name: spanbert_qa_optimization  # Study name for persistent storage
+  storage_path: optuna_studies  # Directory for SQLite database
+  sampler: tpe  # tpe, random, cmaes
+  sampler_seed: 42
+  pruner:
+    name: patient
+    patience: 2
+    warmup_steps: 5

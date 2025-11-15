@@ -1,0 +1,5 @@
+# configs/eval/default.yaml
+primary_metric: "f1_macro_present"
+faithfulness_gate: true
+ece_target: 0.05
+neg_precision_target: 0.9

@@ -1,0 +1,95 @@
+# HPO Stage A: Baseline Model Optimization (No Augmentation)
+#
+# This stage optimizes model architecture and training hyperparameters
+# WITHOUT data augmentation to establish baseline performance.
+#
+# Usage:
+#   python scripts/tune_max.py --config-name stage_a_baseline
+
+# @package _global_
+
+hpo:
+  # Study configuration
+  study_name: "stage_a_baseline"
+  n_trials: 50
+  timeout_hours: 24
+
+  # Optimization direction
+  direction: "maximize"  # Maximize val_f1_macro
+  metric: "val_f1_macro"
+
+  # Search space: Model architecture and training hyperparameters
+  search_space:
+    # Model backbone selection
+    model_name:
+      type: "categorical"
+      choices:
+        - "bert-base-uncased"
+        - "roberta-base"
+        - "microsoft/deberta-v3-base"
+
+    # Training hyperparameters
+    learning_rate:
+      type: "loguniform"
+      low: 1.0e-6
+      high: 1.0e-4
+
+    batch_size:
+      type: "categorical"
+      choices: [16, 32, 64]
+
+    num_epochs:
+      type: "int"
+      low: 10
+      high: 50
+
+    warmup_ratio:
+      type: "uniform"
+      low: 0.0
+      high: 0.2
+
+    weight_decay:
+      type: "loguniform"
+      low: 1.0e-4
+      high: 1.0e-1
+
+    # Dropout and regularization
+    dropout:
+      type: "uniform"
+      low: 0.1
+      high: 0.5
+
+    # Gradient clipping
+    max_grad_norm:
+      type: "uniform"
+      low: 0.5
+      high: 2.0
+
+    # Learning rate scheduler
+    scheduler_type:
+      type: "categorical"
+      choices:
+        - "linear"
+        - "cosine"
+        - "polynomial"
+
+  # Augmentation DISABLED for Stage A
+  augmentation:
+    enabled: false
+    scope: "none"
+
+  # Pruning configuration (early stopping for poor trials)
+  pruning:
+    enabled: true
+    patience: 5
+    min_delta: 0.001
+    warmup_steps: 3  # Don't prune before epoch 3
+
+  # Sampler configuration
+  sampler:
+    type: "TPESampler"
+    n_startup_trials: 10
+    multivariate: true
+## HPO Stage A — Baseline sweep
+#
+# Establish a baseline over core hyperparameters before enabling augmentation.

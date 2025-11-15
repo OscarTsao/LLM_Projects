@@ -1,0 +1,18 @@
+# Basic model configuration
+max_features: 5000
+hidden_dim: 256
+dropout_rate: 0.3
+num_labels: 2
+
+# GPU-specific overrides
+rtx_3090:
+  max_features: 8000
+  hidden_dim: 512
+
+standard_gpu:
+  max_features: 5000
+  hidden_dim: 256
+
+cpu:
+  max_features: 3000
+  hidden_dim: 128

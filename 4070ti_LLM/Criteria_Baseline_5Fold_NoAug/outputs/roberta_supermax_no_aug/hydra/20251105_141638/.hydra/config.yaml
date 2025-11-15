@@ -1,0 +1,82 @@
+dataset:
+  ground_truth_path: data/redsm5
+  ground_truth_format: redsm5
+  include_original: true
+  use_augmented: []
+  augmented_to_train_only: true
+  shuffle_seed: 42
+  cross_validation:
+    num_folds: 5
+    shuffle_seed: 42
+  cache_in_memory: true
+  cache_max_ram_fraction: 0.9
+model:
+  pretrained_model_name: roberta-base
+  max_seq_length: 288
+  doc_stride: 48
+  classifier_hidden_sizes:
+  - 768
+  - 768
+  - 768
+  - 768
+  dropout: 0.46
+  base_model_dropout: 0.46
+  base_model_attention_dropout: 0.46
+  pooling: max
+  activation: relu
+  loss_type: focal
+  alpha: 0.54
+  alpha_strategy: effective_num
+  alpha_beta: 0.9985
+  gamma: 4.0
+  delta: 0.0
+  use_gradient_checkpointing: false
+training:
+  num_epochs: 100
+  batch_size: 32
+  eval_batch_size: 24
+  learning_rate: 8.6e-06
+  weight_decay: 0.00039
+  warmup_ratio: 0.168
+  adam_eps: 7.8e-09
+  adam_beta1: 0.846
+  adam_beta2: 0.974
+  gradient_accumulation_steps: 1
+  max_grad_norm: 0.51
+  layerwise_lr_decay: 0.897
+  freeze_encoder_layers: 6
+  early_stopping_patience: 10
+  metric_for_best: f1_macro
+  use_amp: true
+  auto_resume: false
+  resume_checkpoint: null
+  num_workers: 12
+  prefetch_factor: 8
+  persistent_workers: true
+  scheduler_type: cosine_with_restarts
+  scheduler_num_cycles: 2
+  enable_tf32: true
+  float32_matmul_precision: high
+  cudnn_benchmark: true
+  non_blocking_transfers: true
+  pin_memory_device: cuda
+  torch_compile: false
+  torch_compile_mode: max-autotune
+  torch_compile_backend: null
+  torch_compile_dynamic: null
+  torch_compile_fullgraph: null
+logging:
+  eval_every_steps: 0
+  save_every_epochs: 0
+mlflow:
+  experiment_name: criteria-baseline
+  tracking_db: mlflow.db
+  artifact_store: mlruns
+  run_name: null
+  tags: {}
+evaluation:
+  checkpoint: ${paths.output_dir}/fold_1/best_model.pt
+  fold_index: 1
+seed: 12530
+paths:
+  output_dir: outputs/roberta_supermax_no_aug

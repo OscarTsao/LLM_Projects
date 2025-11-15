@@ -1,0 +1,17 @@
+pretrained_model_name: roberta-base
+max_seq_length: 288
+doc_stride: 48
+classifier_hidden_sizes:
+  - 768
+  - 768
+  - 768
+  - 768
+dropout: 0.46
+classifier_activation: relu
+pooling: max
+loss_type: balanced_focal
+alpha: auto
+gamma: 4.0
+effective_beta: 0.9999
+use_gradient_checkpointing: true
+freeze_encoder_layers: 6

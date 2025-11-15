@@ -1,0 +1,14 @@
+# MentalBERT-base configuration
+#
+# HF identifier for the public MentalBERT checkpoint plus optional PEFT knobs.
+
+encoder_name: "mental/mental-bert-base-uncased"
+max_length: 512
+gradient_checkpointing: false
+dropout: 0.1
+
+lora:
+  enabled: false
+  r: 8
+  alpha: 16
+  dropout: 0.1

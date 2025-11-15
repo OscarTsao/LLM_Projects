@@ -1,0 +1,15 @@
+# PsychBERT (mnaylor) configuration
+#
+# HuggingFace model card: mnaylor/psychbert-finetuned-mentalhealth
+# Mirrors the standard encoder block params used by other configs.
+
+encoder_name: "mnaylor/psychbert-finetuned-mentalhealth"
+max_length: 512
+gradient_checkpointing: false
+dropout: 0.1
+
+lora:
+  enabled: false
+  r: 8
+  alpha: 16
+  dropout: 0.1

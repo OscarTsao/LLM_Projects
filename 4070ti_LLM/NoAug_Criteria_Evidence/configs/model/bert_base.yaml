@@ -1,0 +1,12 @@
+# BERT-base configuration
+
+encoder_name: "bert-base-uncased"
+max_length: 512
+gradient_checkpointing: false
+dropout: 0.1
+
+lora:
+  enabled: false
+  r: 8
+  alpha: 16
+  dropout: 0.1

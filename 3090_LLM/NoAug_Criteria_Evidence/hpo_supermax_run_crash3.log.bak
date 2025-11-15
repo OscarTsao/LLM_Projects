@@ -1,0 +1,345 @@
+[0;34m======================================================================
+  Running Super-Max HPO for ALL Architectures Sequentially
+======================================================================[0m 
+
+[0;33mSequence: Criteria → Evidence → Share → Joint[0m 
+[0;33mTotal trials: ~19,000 (5000+8000+3000+3000)[0m 
+[0;33mEstimated time: ~120-180 hours with PAR=2 (reduced for GPU stability)[0m 
+
+[0;32mStarting...[0m 
+
+[0;34m[1/4] Running Criteria (5000 trials)...[0m 
+make[1]: Entering directory '/media/user/SSD1/YuNing/NoAug_Criteria_Evidence'
+[0;34mRunning SUPER-MAX HPO for Criteria...[0m 
+Trials: 5000 | Parallel: 2 (reduced 4→3→2 for stability) | Epochs: 100 | Patience: 20
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python HPO_EPOCHS=100 HPO_PATIENCE=20 poetry run python scripts/tune_max.py \
+	--agent criteria --study noaug-criteria-supermax \
+	--n-trials 5000 --parallel 2 \
+	--outdir ./_runs
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``group`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``constant_liar`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py:975: ExperimentalWarning: PatientPruner is experimental (supported from v2.8.0). The interface can change in the future.
+  return PatientPruner(hb, patience=4)  # More patient (was 2)
+[I 2025-11-11 14:24:57,919] Using an existing study with name 'noaug-criteria-supermax' instead of creating a new one.
+[I 2025-11-11 14:25:06,806] Trial 5991 pruned. Pruned: Large model with bsz=32, accum=3 (effective_batch=96) likely causes OOM (24GB GPU limit)
+[I 2025-11-11 14:25:07,534] Trial 5992 pruned. Pruned: Large model with bsz=48, accum=8 (effective_batch=384) likely causes OOM (24GB GPU limit)
+[I 2025-11-11 14:25:08,134] Trial 5993 pruned. Pruned: Large model with bsz=16, accum=8 (effective_batch=128) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+[I 2025-11-11 14:25:10,235] Trial 5994 pruned. Pruned: Large model with bsz=48, accum=1 (effective_batch=48) likely causes OOM (24GB GPU limit)
+✓ Configuration validation passed
+  Agent: criteria
+  Epochs: 100 | Patience: 20
+  Output: ./_runs
+[HPO] agent=criteria epochs=100 storage=sqlite:////media/user/SSD1/YuNing/NoAug_Criteria_Evidence/_optuna/noaug.db
+[HPO] Study 'noaug-criteria-supermax' is compatible. Resuming optimization.
+
+================================================================================
+TRIAL 5990 - Configuration:
+  Model: {'name': 'microsoft/deberta-v3-large'}
+  Batch size: 8
+  Learning rate: 1.233663201906013e-05
+  Dropout: 0.4060426434596973
+================================================================================
+
+
+================================================================================
+TRIAL 5995 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 8
+  Learning rate: 1.0148799532499166e-05
+  Dropout: 0.38638217974890865
+================================================================================
+
+[I 2025-11-11 14:25:31,139] Trial 5990 pruned. OOM: microsoft/deberta-v3-large bs=8 len=352
+[I 2025-11-11 14:25:31,369] Trial 5995 pruned. OOM: xlm-roberta-base bs=8 len=192
+[I 2025-11-11 14:25:32,120] Trial 5996 pruned. Pruned: Large model with bsz=48, accum=6 (effective_batch=288) likely causes OOM (24GB GPU limit)
+[I 2025-11-11 14:25:32,526] Trial 5997 pruned. Pruned: Large model with bsz=48, accum=2 (effective_batch=96) likely causes OOM (24GB GPU limit)
+[I 2025-11-11 14:25:33,247] Trial 5998 pruned. Pruned: Large model with bsz=24, accum=2 (effective_batch=48) likely causes OOM (24GB GPU limit)
+
+[OOM] Trial 5995 exceeded GPU memory:
+  Model: xlm-roberta-base
+  Batch size: 8 (effective: 8 with grad_accum=1)
+  Max length: 192
+  Error: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 46.00 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+[OOM] Trial 5990 exceeded GPU memory:
+  Model: microsoft/deberta-v3-large
+  Batch size: 8 (effective: 8 with grad_accum=1)
+  Max length: 352
+  Error: CUDA out of memory. Tried to allocate 62.00 MiB. GPU 0 has a total capacity of 23.56 GiB of which 46.00 MiB is free. Process 2565 has 258.00 MiB memory in use. Including non-PyTorch memory, this proce
+  Pruning trial to allow Optuna to learn memory constraints.
+
+
+================================================================================
+TRIAL 5999 - Configuration:
+  Model: {'name': 'xlm-roberta-base'}
+  Batch size: 8
+  Learning rate: 1.033577115723303e-05
+  Dropout: 0.06172159874691571
+================================================================================
+
+
+================================================================================
+TRIAL 6000 - Configuration:
+  Model: {'name': 'bert-base-uncased'}
+  Batch size: 64
+  Learning rate: 6.571497283590875e-06
+  Dropout: 0.3660294765520259
+================================================================================
+
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [160,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [161,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [162,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [163,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [164,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [165,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [166,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [167,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [168,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [169,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [170,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [171,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [172,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [173,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [174,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [175,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [176,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [177,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [178,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [179,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [180,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [181,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [182,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [183,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [184,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [185,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [186,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [187,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [188,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [189,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [190,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+/pytorch/aten/src/ATen/native/cuda/IndexKernelUtils.cu:16: vectorized_gather_kernel: block: [162,0,0], thread: [191,0,0] Assertion `ind >=0 && ind < ind_dim_size && "vectorized gather kernel index out of bounds"` failed.
+[W 2025-11-11 14:25:36,257] Trial 6000 failed with parameters: {'seed': 42754, 'model.name': 'bert-base-uncased', 'tok.max_length': 352, 'tok.doc_stride': 64, 'tok.use_fast': False, 'train.batch_size': 64, 'train.grad_accum': 4, 'optim.name': 'adamw', 'optim.lr': 6.571497283590875e-06, 'optim.weight_decay': 4.7861530963664225e-05, 'optim.beta1': 0.8722661068682422, 'optim.beta2': 0.9663468405606105, 'optim.eps': 2.364948323698927e-09, 'sched.name': 'polynomial', 'sched.warmup_ratio': 0.059758787749493086, 'sched.poly_power': 1.4503388059754672, 'train.clip_grad': 0.6872014332857335, 'model.dropout': 0.3660294765520259, 'model.attn_dropout': 0.25858603861740337, 'train.grad_checkpointing': False, 'train.freeze_encoder_layers': 3, 'optim.layerwise_lr_decay': 0.914349050235686, 'head.pooling': 'mean', 'head.layers': 3, 'head.hidden': 256, 'head.activation': 'relu', 'head.dropout': 0.4065881392038299, 'loss.cls.type': 'focal', 'loss.cls.gamma': 4.668217449200759, 'loss.cls.alpha': 0.30926341072198343, 'loss.cls.balance': 'effective_num'} because of the following error: RuntimeError('CUDA context corrupted (health check failed after cleanup). Process must restart.').
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1081, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 745, in run_training_eval
+    model = safe_to_device(model, device)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 732, in safe_to_device
+    model = model.to(target_device)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1371, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1357, in convert
+    return t.to(
+           ^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1198, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted (health check failed after cleanup). Process must restart.
+[W 2025-11-11 14:25:36,258] Trial 6000 failed with value None.
+[W 2025-11-11 14:25:36,420] Trial 5999 failed with parameters: {'seed': 35007, 'model.name': 'xlm-roberta-base', 'tok.max_length': 224, 'tok.doc_stride': 80, 'tok.use_fast': True, 'train.batch_size': 8, 'train.grad_accum': 3, 'optim.name': 'adamw', 'optim.lr': 1.033577115723303e-05, 'optim.weight_decay': 1.3232406241216622e-06, 'optim.beta1': 0.936143815681859, 'optim.beta2': 0.9797165938833711, 'optim.eps': 6.010049024394821e-09, 'sched.name': 'one_cycle', 'sched.warmup_ratio': 0.012521748612744382, 'sched.cosine_cycles': 3, 'train.clip_grad': 1.4274797451373207, 'model.dropout': 0.06172159874691571, 'model.attn_dropout': 0.09497129124989354, 'train.grad_checkpointing': False, 'train.freeze_encoder_layers': 1, 'optim.layerwise_lr_decay': 0.876304974846385, 'head.pooling': 'max', 'head.layers': 2, 'head.hidden': 1024, 'head.activation': 'silu', 'head.dropout': 0.4562342175310945, 'loss.cls.type': 'focal', 'loss.cls.gamma': 4.198606589931105, 'loss.cls.alpha': 0.3127926454427592, 'loss.cls.balance': 'none'} because of the following error: RuntimeError('CUDA context corrupted (health check failed after cleanup). Process must restart.').
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1081, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 815, in run_training_eval
+    logits = model(input_ids, attention_mask)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/src/Project/Criteria/models/model.py", line 119, in forward
+    outputs = self.encoder(
+              ^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 789, in forward
+    embedding_output = self.embeddings(
+                       ^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/xlm_roberta/modeling_xlm_roberta.py", line 112, in forward
+    token_type_embeddings = self.token_type_embeddings(token_type_ids)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/sparse.py", line 192, in forward
+    return F.embedding(
+           ^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/functional.py", line 2542, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1198, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted (health check failed after cleanup). Process must restart.
+[W 2025-11-11 14:25:36,422] Trial 5999 failed with value None.
+Warning: Error during model cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Warning: Error during CUDA cleanup: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+[CUDA ERROR] Trial 6000 encountered CUDA error (consecutive failures: 2):
+  Error Type: AcceleratorError
+  Model: bert-base-uncased
+  Batch size: 64
+  Learning rate: 6.571497283590875e-06
+  Dropout: 0.3660294765520259
+  Error: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+  This trial will be pruned. HPO will continue.
+
+
+================================================================================
+FATAL: CUDA health check failed after error cleanup!
+CUDA context is corrupted and cannot be recovered.
+Raising fatal error to trigger process restart...
+================================================================================
+
+
+[CUDA ERROR] Trial 5999 encountered CUDA error (consecutive failures: 2):
+  Error Type: AcceleratorError
+  Model: xlm-roberta-base
+  Batch size: 8
+  Learning rate: 1.033577115723303e-05
+  Dropout: 0.06172159874691571
+  Error: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+  This trial will be pruned. HPO will continue.
+
+
+================================================================================
+FATAL: CUDA health check failed after error cleanup!
+CUDA context is corrupted and cannot be recovered.
+Raising fatal error to trigger process restart...
+================================================================================
+
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1081, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb}, trial_number=trial.number)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 745, in run_training_eval
+    model = safe_to_device(model, device)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 732, in safe_to_device
+    model = model.to(target_device)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1371, in to
+    return self._apply(convert)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 930, in _apply
+    module._apply(fn)
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 957, in _apply
+    param_applied = fn(param)
+                    ^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/torch/nn/modules/module.py", line 1357, in convert
+    return t.to(
+           ^^^^^
+torch.AcceleratorError: CUDA error: device-side assert triggered
+Search for `cudaErrorAssert' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1624, in <module>
+    main()
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1573, in main
+    study.optimize(
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/study.py", line 490, in optimize
+    _optimize(
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 100, in _optimize
+    f.result()
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 160, in _optimize_sequential
+    frozen_trial_id = _run_trial(study, func, catch)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 258, in _run_trial
+    raise func_err
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 1198, in _obj
+    raise RuntimeError(
+RuntimeError: CUDA context corrupted (health check failed after cleanup). Process must restart.
+[W1111 14:25:57.943187086 AllocatorConfig.cpp:28] Warning: PYTORCH_CUDA_ALLOC_CONF is deprecated, use PYTORCH_ALLOC_CONF instead (function operator())
+make[1]: *** [Makefile:369: tune-criteria-supermax] Error 1
+make[1]: Leaving directory '/media/user/SSD1/YuNing/NoAug_Criteria_Evidence'
+make: *** [Makefile:414: tune-all-supermax] Error 2

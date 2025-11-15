@@ -1,0 +1,79 @@
+# Optimized Training Configuration for Maximum Speed and Reproducibility
+# Based on PyTorch 2025 best practices
+
+# Basic training parameters tuned for RTX 3090 (24GB) + 6C/12T CPU
+num_epochs: 10
+batch_size: 32
+eval_batch_size: 64
+learning_rate: 2.0e-5
+weight_decay: 0.01
+max_length: 512
+gradient_clip: 1.0
+gradient_accumulation_steps: 1
+
+# Optimizer configuration
+optimizer:
+  name: "adamw"
+  betas: [0.9, 0.999]
+  eps: 1.0e-8
+
+# Learning rate scheduler
+scheduler:
+  type: "cosine"  # Options: linear, cosine, cosine_with_restarts, polynomial, constant
+  warmup_ratio: 0.06  # 6% of training steps
+  num_cycles: 1  # For cosine_with_restarts
+
+# Mixed Precision Training (AMP)
+# Best Practices:
+# - BFloat16: More stable, no gradient scaling needed, requires Ampere+ GPU
+# - Float16: Needs gradient scaling, works on older GPUs
+# - Choose based on GPU compute capability
+amp:
+  enabled: true
+  dtype: "float16"  # Options: float16, bfloat16
+  # RTX 3090 (SM 8.6) delivers best throughput with FP16
+
+# Early Stopping
+early_stopping:
+  metric: "val_f1_macro"  # Metric to monitor
+  mode: "max"  # max for metrics to maximize, min for loss
+  patience: 3  # Number of epochs without improvement
+  min_delta: 0.0001  # Minimum change to qualify as improvement
+
+# Logging
+logging_steps: 100  # Log training metrics every N steps
+eval_steps: 500  # Evaluate on validation set every N steps
+
+# Reproducibility Settings
+# For reproducibility: deterministic=true, cudnn_benchmark=false
+# For speed: deterministic=false, cudnn_benchmark=true
+deterministic: false  # Allow fastest kernels (non-deterministic)
+cudnn_benchmark: true  # Enable autotuned cuDNN kernels
+
+# DataLoader Optimization
+# Best Practices (2025):
+# - num_workers: Start with 2x CPU cores per GPU, tune for best performance
+# - pin_memory: Always true for GPU training (faster host->device transfer)
+# - persistent_workers: True to avoid reinitializing workers each epoch
+# - prefetch_factor: Default of 2 is usually optimal
+num_workers: 10  # 12 logical cores -> reserve headroom for the main process
+pin_memory: true  # Always true for GPU training
+persistent_workers: true  # Keep workers alive between epochs (requires num_workers > 0)
+prefetch_factor: 4  # Aggressive prefetch to keep the GPU saturated
+
+# Hardware-Specific Settings
+device: "cuda"  # cuda, cpu, or specific device like cuda:0
+
+# Gradient Checkpointing (Trade memory for computation)
+# Enable for large models that don't fit in GPU memory
+gradient_checkpointing: false
+
+# Compilation (PyTorch 2.0+)
+# torch.compile for faster training (experimental)
+compile_model: true  # RTX 3090 + torch>=2.2 benefits from reduce-overhead mode
+compile_mode: "reduce-overhead"
+
+# Additional Optimizations
+# TF32 mode (Ampere+ GPUs) - automatically enabled by PyTorch
+# Provides near-FP32 accuracy with FP16 speed
+tf32_enabled: true  # Only effective on Ampere (8.0+) and later GPUs

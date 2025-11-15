@@ -1,0 +1,17 @@
+# @package _global_
+
+defaults:
+  - model: default
+  - data: redsm5
+  - train: default
+  - decode: default
+  - logging: default
+  - metrics: default
+
+logging:
+  log_level: INFO
+
+hydra:
+  run:
+    dir: ${logging.output_dir}
+  output_subdir: null

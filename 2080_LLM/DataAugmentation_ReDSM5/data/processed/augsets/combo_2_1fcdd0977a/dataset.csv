@@ -1,0 +1,665 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+Feel eo oppressed.,Feel eo oppressed.,I feel so oppressed.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1955_1069_2
+Feel so oppresssd.,Feel so oppresssd.,I feel so oppressed.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1955_1069_2
+I wae filled with.,I wae filled with.,I was filled with energy.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_993_1060_1
+I wax filled with.,I wax filled with.,I was filled with energy.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_993_1060_1
+"I 100% know that if I have to to collegf alone without my family or any support Im gonna end up myself. .. . barely keeping my self alive now, I ' t imagine aol by myself and desling witg my thoughts and emotions!","I 100% know that if I have to to collegf alone without my family or any support Im gonna end up myself. .. . barely keeping my self alive now, I ' t imagine aol by myself and desling witg my thoughts and emotions!","I 100% know that if I have to go to college alone without my family or any support Im gonna end up killing myself....Im barely keeping my self alive now, I can't imagine being all by myself and dealing with my thoughts and emotions!",nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_156_366_1
+I ' m on fhe floor.,I ' m on fhe floor.,I'm crying on the floor.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2401_82_1
+I ' m on the flpor.,I ' m on the flpor.,I'm crying on the floor.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2401_82_1
+Mh life is going.,Mh life is going.,My life is going nowhere.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2455_114_1
+My life is doing.,My life is doing.,My life is going nowhere.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2455_114_1
+I cant crging.,I cant crging.,I cant stop crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2334_738_1
+I cqnt stop.,I cqnt stop.,I cant stop crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2334_738_1
+"It only later after ny second boyfriend, I realized cannot feel sexuzl attraction (if I have, it very ), and that I am probably asexual due to the fact that I get disgusted wkth nyself when it comes to the sex part.","It only later after ny second boyfriend, I realized cannot feel sexuzl attraction (if I have, it very ), and that I am probably asexual due to the fact that I get disgusted wkth nyself when it comes to the sex part.","It was only later after my second boyfriend, I realized I cannot feel sexual attraction (if I have, it was very temporary), and that I am probably asexual due to the fact that I just get disgusted with myself when it comes to the sex part.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,0,s_716_26_15
+I don ' t mr.,I don ' t mr.,I don't like me.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_816_5
+I dom ' t me.,I dom ' t me.,I don't like me.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_816_5
+Im tirex So,Im tirex So,Im generally tired So,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2007_1467_0
+Im gendrally So,Im gendrally So,Im generally tired So,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2007_1467_0
+I ' ce.,I ' ce.,I've cried.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_145_86_2
+I tk cry.,I tk cry.,I began to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2815_1660_107
+I began ti.,I began ti.,I began to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2815_1660_107
+Imma kill muself now,Imma kill muself now,Imma go kill myself now,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2638_683_0
+Imma kill myself mow,Imma kill myself mow,Imma go kill myself now,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2638_683_0
+I soeep.,I soeep.,I hardly sleep.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_697_81_3
+I slewp.,I slewp.,I hardly sleep.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_697_81_3
+I an very.,I an very.,I am very sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_411_1189_1
+I very wad.,I very wad.,I am very sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_411_1189_1
+I feel kinda reakly,I feel kinda reakly,I feel kinda really sad,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_962_142_0
+I feel really wad,I feel really wad,I feel kinda really sad,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_962_142_0
+I am vdry depressed.,I am vdry depressed.,I am very depressed also.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_131_822_0
+I am very deprrssed.,I am very deprrssed.,I am very depressed also.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_131_822_0
+"I ' m very, gery. ""","I ' m very, gery. ""","I'm very, very pessimistic.""",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1478_365_9
+"I ' m bery, very. ""","I ' m bery, very. ""","I'm very, very pessimistic.""",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1478_365_9
+"I ' ve been like tgis for a long time now sleep at around 9 or 10pm, noping to wake up early the morning at around 7 - 8pm, tjen all of a sudden I wake up at 12 or 2am the morning feeling and now I cant get back bdd.","I ' ve been like tgis for a long time now sleep at around 9 or 10pm, noping to wake up early the morning at around 7 - 8pm, tjen all of a sudden I wake up at 12 or 2am the morning feeling and now I cant get back bdd.","I've been like this for a long time now wherein I sleep at around 9 or 10pm, hoping to wake up early in the morning at around 7-8pm, then all of a sudden I wake up at 12 or 2am in the morning feeling groggy and now I cant get back bed.",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_852_229_1
+"I ' ve been like this for a time now wherein I sleep at around or 10pm, hoping to wake up early in morning at around 7 - 8pm, then all of a sudden I wake up at 12 or 2aj in thw morning feeling and now I xaht get bed.","I ' ve been like this for a time now wherein I sleep at around or 10pm, hoping to wake up early in morning at around 7 - 8pm, then all of a sudden I wake up at 12 or 2aj in thw morning feeling and now I xaht get bed.","I've been like this for a long time now wherein I sleep at around 9 or 10pm, hoping to wake up early in the morning at around 7-8pm, then all of a sudden I wake up at 12 or 2am in the morning feeling groggy and now I cant get back bed.",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_852_229_1
+Um tired,Um tired,Im so tired,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2434_365_0
+Im tkred,Im tkred,Im so tired,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2434_365_0
+This had ctying,This had ctying,This had me crying,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2464_412_0
+Thid me crying,Thid me crying,This had me crying,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2464_412_0
+Wanr to die,Wanr to die,I want to die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2118_413_1
+Want to eie,Want to eie,I want to die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2118_413_1
+I lost linido.,I lost linido.,I lost my libido.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2904_522_5
+I lost mg.,I lost mg.,I lost my libido.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2904_522_5
+I jhst cant enjoy.,I jhst cant enjoy.,I just cant enjoy anything.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1404_60_7
+I jusy cant enjoy.,I jusy cant enjoy.,I just cant enjoy anything.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1404_60_7
+"I feel worthoess,.","I feel worthoess,.","I feel  worthless, hopeless.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_615_3
+"I frel worthless,.","I frel worthless,.","I feel  worthless, hopeless.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_615_3
+"I frel worthless,.","I frel worthless,.","I feel  worthless, hopeless.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_615_3
+"I reel worthless,.","I reel worthless,.","I feel  worthless, hopeless.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_615_3
+"I frel worthless,.","I frel worthless,.","I feel  worthless, hopeless.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_615_3
+"I reel worthless,.","I reel worthless,.","I feel  worthless, hopeless.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_615_3
+I beind tortured.,I beind tortured.,I am being tortured.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1351_120_5
+I being torhured.,I being torhured.,I am being tortured.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1351_120_5
+I cried to slefp.,I cried to slefp.,I cried myself to sleep.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1692_755_113
+I cried tl sleep.,I cried tl sleep.,I cried myself to sleep.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1692_755_113
+Anx I hate for it.,Anx I hate for it.,And I hate myself for it.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_614_806_3
+Ajd I hate for it.,Ajd I hate for it.,And I hate myself for it.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_614_806_3
+"Was able tk experience novelty and joy even if die still feel loneky / depressed and would self harm, had the ability enjoy and feel like the real me - noa all thats gone and Ive just gotten buried into a depressive hole where everyday lived robotically or ghostly.","Was able tk experience novelty and joy even if die still feel loneky / depressed and would self harm, had the ability enjoy and feel like the real me - noa all thats gone and Ive just gotten buried into a depressive hole where everyday lived robotically or ghostly.","I was able to experience novelty and joy even if I did still feel lonely/ depressed and would self harm , I had the ability to enjoy and feel like the real me - now all thats gone and Ive just gotten buried into a depressive hole where everyday is lived robotically or ghostly.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_258_546_2
+"I was able to experience novelty joy eveb if I did stiol feel lonely / and woild self, I had the to enjoy feel like the real me - now qll thats gone and Ive just gotten buried into a depressive hole where everyday is lived robotically or ghostly.","I was able to experience novelty joy eveb if I did stiol feel lonely / and woild self, I had the to enjoy feel like the real me - now qll thats gone and Ive just gotten buried into a depressive hole where everyday is lived robotically or ghostly.","I was able to experience novelty and joy even if I did still feel lonely/ depressed and would self harm , I had the ability to enjoy and feel like the real me - now all thats gone and Ive just gotten buried into a depressive hole where everyday is lived robotically or ghostly.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_258_546_2
+I eimply can ' t.,I eimply can ' t.,I simply can't focus.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_1404_715_5
+I qimply can ' t.,I qimply can ' t.,I simply can't focus.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_1404_715_5
+This made me feek.,This made me feek.,This made me feel guilty.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_993_644_17
+This nade me feel.,This nade me feel.,This made me feel guilty.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_993_644_17
+"Masturbating right before and also I like its affecting my sleeo quality If I wake up tired in the morning I should ho back to sleep, instead I start masturbating which also affects hoa much rest I get.","Masturbating right before and also I like its affecting my sleeo quality If I wake up tired in the morning I should ho back to sleep, instead I start masturbating which also affects hoa much rest I get.","Masturbating right before and also during sleep I feel like its affecting my sleep quality If I wake up tired in the morning when I should go back to sleep, instead I start masturbating which also affects how much rest I get.",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_1404_1455_0
+"Masturbating right before and also during sleep I feel like its affecting my sleep quality If I wake jp tired ij the morning when I should go back to sleep, insfead I start masturbating which also I get.","Masturbating right before and also during sleep I feel like its affecting my sleep quality If I wake jp tired ij the morning when I should go back to sleep, insfead I start masturbating which also I get.","Masturbating right before and also during sleep I feel like its affecting my sleep quality If I wake up tired in the morning when I should go back to sleep, instead I start masturbating which also affects how much rest I get.",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_1404_1455_0
+i do want ho,i do want ho,i do want to die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_141_110_0
+i do tl die,i do tl die,i do want to die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_141_110_0
+Crj erytime,Crj erytime,I cry erytime,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_523_60_1
+Cry wrytime,Cry wrytime,I cry erytime,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_523_60_1
+i reaily myself,i reaily myself,i really hate myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1194_31_4
+i hate nyself,i hate nyself,i really hate myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1194_31_4
+I help but cgy.,I help but cgy.,I couldnt help but cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1599_64_59
+I help bit cry.,I help bit cry.,I couldnt help but cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1599_64_59
+I ' quite angey,I ' quite angey,I'm quite angry,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2188_1006_0
+I ' m quife,I ' m quife,I'm quite angry,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2188_1006_0
+I ' m rrally.,I ' m rrally.,I'm really tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_547_567_2
+I ' m reaily.,I ' m reaily.,I'm really tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_547_567_2
+I the peace of dexth,I the peace of dexth,I want the peace of death,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1404_850_1
+I the peace lf death,I the peace lf death,I want the peace of death,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1404_850_1
+"I work from home, and I don ' t sleep well for the most part (I have insomnia and comppetely sleep aids, and they tend not to give you a good night ' s rest, which results in fatigue a few hours after wakjng up ), so at some point during tje day, I usually get little tired anw have the to jusg into bed and my work later (which I could do, staying awzke anr doing it then would be better ).","I work from home, and I don ' t sleep well for the most part (I have insomnia and comppetely sleep aids, and they tend not to give you a good night ' s rest, which results in fatigue a few hours after wakjng up ), so at some point during tje day, I usually get little tired anw have the to jusg into bed and my work later (which I could do, staying awzke anr doing it then would be better ).","I work from home, and I don't sleep well for the most part (I have insomnia and completely rely on sleep aids, and they tend not to give you a good night's rest, which results in fatigue a few hours after waking up), so at some point during the day, I usually get a little tired and have the urge to just crawl into bed and finish my work later (which I could do, but staying awake and doing it right then would be better).",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_2292_402_1
+"I work homd, and I don ' t sleep for the most part (I have qnd completely rely slewp, and they tend to give you a good night ' s rest, which results in fatigue few after waking up ), so qt some point during the dat, I usually get a little tired and have the urge to just crawl into bed ane finish my work later (which I could do, but staying awake and doing jt right then would be better ).","I work homd, and I don ' t sleep for the most part (I have qnd completely rely slewp, and they tend to give you a good night ' s rest, which results in fatigue few after waking up ), so qt some point during the dat, I usually get a little tired and have the urge to just crawl into bed ane finish my work later (which I could do, but staying awake and doing jt right then would be better ).","I work from home, and I don't sleep well for the most part (I have insomnia and completely rely on sleep aids, and they tend not to give you a good night's rest, which results in fatigue a few hours after waking up), so at some point during the day, I usually get a little tired and have the urge to just crawl into bed and finish my work later (which I could do, but staying awake and doing it right then would be better).",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_2292_402_1
+Really proud myeelf,Really proud myeelf,Really proud of myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1605_228_1
+Really lroud myself,Really lroud myself,Really proud of myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1605_228_1
+Proud of myselv,Proud of myselv,Really proud of myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1605_228_1
+Really proud myeelf,Really proud myeelf,Really proud of myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1605_228_1
+I ueeless.,I ueeless.,I was useless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1899_440_13
+"I qtarted to, a lot.","I qtarted to, a lot.","I started to cry, a lot.",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1175_1278_23
+"I started fo, a lot.","I started fo, a lot.","I started to cry, a lot.",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1175_1278_23
+I am tieed.,I am tieed.,I am very tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1030_1290_8
+I am veru.,I am veru.,I am very tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1030_1290_8
+"So here is the case. . It ' s been nearly 4 years, since i really don ' t feel like myself. . I am still interested in activuties that interested ne before, but are so and i much less tp particular thimgs / people.","So here is the case. . It ' s been nearly 4 years, since i really don ' t feel like myself. . I am still interested in activuties that interested ne before, but are so and i much less tp particular thimgs / people.","So here is the case.. It's been nearly 4 years, since i really don't feel like myself..I am still interested in activities that interested me before,but my emotions are so weak and i am much less sensitive to particular things/people.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1127_16_1
+"So here is the case. . It ' s been nearly 4 years, since i really don ' t feel like myself. . I am still interested in activuties that interested ne before, but are so and i much less tp particular thimgs / people.","So here is the case. . It ' s been nearly 4 years, since i really don ' t feel like myself. . I am still interested in activuties that interested ne before, but are so and i much less tp particular thimgs / people.","So here is the case.. It's been nearly 4 years, since i really don't feel like myself..I am still interested in activities that interested me before,but my emotions are so weak and i am much less sensitive to particular things/people.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1127_16_1
+I feel in generao.,I feel in generao.,I feel worthless in general.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1933_175_27
+I feel in geberal.,I feel in geberal.,I feel worthless in general.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1933_175_27
+I feel in generao.,I feel in generao.,I feel worthless in general.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1933_175_27
+I feel in geberal.,I feel in geberal.,I feel worthless in general.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1933_175_27
+I feel in generao.,I feel in generao.,I feel worthless in general.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1933_175_27
+I feel in geberal.,I feel in geberal.,I feel worthless in general.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1933_175_27
+' m uselsss.,' m uselsss.,I'm useless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1933_175_32
+I ' usdless.,I ' usdless.,I'm useless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1933_175_32
+Yeab I ' m fucking.,Yeab I ' m fucking.,Yeah I'm fucking depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1749_226_7
+Yexh I ' m fucking.,Yexh I ' m fucking.,Yeah I'm fucking depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1749_226_7
+Hating jy.,Hating jy.,Hating my failure.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2815_1585_9
+Hatkng failure.,Hatkng failure.,Hating my failure.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2815_1585_9
+"It makws me. ""","It makws me. ""","It makes me sad.""",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1115_951_1
+"Makes me ssd. ""","Makes me ssd. ""","It makes me sad.""",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1115_951_1
+Hate mysflf.,Hate mysflf.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1601_880_7
+Hats myself.,Hats myself.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1601_880_7
+Future gjves me,Future gjves me,Future gives me anxiety,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2013_92_0
+Future mr anxiety,Future mr anxiety,Future gives me anxiety,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2013_92_0
+Am. . sarness,Am. . sarness,I am.. sadness,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_855_1863_0
+Please please hell,Please please hell,Please please please help,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2006_107_0
+Please piease help,Please piease help,Please please please help,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2006_107_0
+I hage.,I hage.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2006_107_7
+I hatf.,I hatf.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2006_107_7
+' m so tifed.,' m so tifed.,I'm so tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2006_107_10
+' m xo tired.,' m xo tired.,I'm so tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2006_107_10
+I ' m tkred.,I ' m tkred.,I'm so tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2006_107_16
+' m so tifed.,' m so tifed.,I'm so tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2006_107_16
+Hats myself.,Hats myself.,I  hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_614_5
+Hate mysflf.,Hate mysflf.,I  hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_614_5
+Iife hell.,Iife hell.,Life is hell.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_614_6
+Is jell.,Is jell.,Life is hell.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_614_6
+I am more annpyed.,I am more annpyed.,I am more than annoyed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1296_12_9
+I am more annoyfd.,I am more annoyfd.,I am more than annoyed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1296_12_9
+Im so how.,Im so how.,Im so angry now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2953_1058_27
+Im so noe.,Im so noe.,Im so angry now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2953_1058_27
+I ' trxsh.,I ' trxsh.,I'm trash.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2130_82_12
+' m traqh.,' m traqh.,I'm trash.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2130_82_12
+I worthlfss.,I worthlfss.,I am worthless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_2_3
+I wkrthless.,I wkrthless.,I am worthless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_2_3
+Aj hopeless.,Aj hopeless.,I am hopeless.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_2_4
+Am hopeoess.,Am hopeoess.,I am hopeless.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_2_4
+Hatr myself.,Hatr myself.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_2_8
+I hatd.,I hatd.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_2_8
+Attempted suucide.,Attempted suucide.,I attempted suicide.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_982_722_0
+I suickde.,I suickde.,I attempted suicide.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_982_722_0
+I ' m inside oht.,I ' m inside oht.,I'm broken inside out.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1738_327_1
+I ' m inside oug.,I ' m inside oug.,I'm broken inside out.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1738_327_1
+I felt guikty and.,I felt guikty and.,I felt guilty and powerless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1692_637_106
+I relt guilty and.,I relt guilty and.,I felt guilty and powerless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1692_637_106
+I don ' t have a oassion for I lost interest in mpst things about the of 10 (idk what to me maybe some event ot one of my childhood operations wrong) after losing it at 10; my time became occupied philosophy and just wasting tlme mimdlessly or on intellectual things like science and math.,I don ' t have a oassion for I lost interest in mpst things about the of 10 (idk what to me maybe some event ot one of my childhood operations wrong) after losing it at 10; my time became occupied philosophy and just wasting tlme mimdlessly or on intellectual things like science and math.,I don't have a passion for anything I lost interest in most things about the age of 10 (idk what happened to me maybe some event or one of my childhood operations something gone wrong) after losing it at 10; my time became occupied with philosophy and just wasting time mindlessly or on intellectual things like science and math.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_212_394_1
+I don ' t a passion for anything I lost interest in things the age od 10 (idk shat happened to me magbe some event or one of my childhood operations gone wrong) losing it at 10; my time became occupied with philoslphy and just wasting time mindlessly or on intellectual things lije science and.,I don ' t a passion for anything I lost interest in things the age od 10 (idk shat happened to me magbe some event or one of my childhood operations gone wrong) losing it at 10; my time became occupied with philoslphy and just wasting time mindlessly or on intellectual things lije science and.,I don't have a passion for anything I lost interest in most things about the age of 10 (idk what happened to me maybe some event or one of my childhood operations something gone wrong) after losing it at 10; my time became occupied with philosophy and just wasting time mindlessly or on intellectual things like science and math.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_212_394_1
+I don ' t a passion for anything I lost interest ln things the agf of 10 (idk what happened to me maybe some event ir one of mj childhood operations gone wrong) losing it at 10; my time became occupied with philosophy and just wasting time mindleqsly or on intellectual things like science and.,I don ' t a passion for anything I lost interest ln things the agf of 10 (idk what happened to me maybe some event ir one of mj childhood operations gone wrong) losing it at 10; my time became occupied with philosophy and just wasting time mindleqsly or on intellectual things like science and.,I don't have a passion for anything I lost interest in most things about the age of 10 (idk what happened to me maybe some event or one of my childhood operations something gone wrong) after losing it at 10; my time became occupied with philosophy and just wasting time mindlessly or on intellectual things like science and math.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_212_394_1
+I don ' t a passion for anything I lost interest in things the age od 10 (idk shat happened to me magbe some event or one of my childhood operations gone wrong) losing it at 10; my time became occupied with philoslphy and just wasting time mindlessly or on intellectual things lije science and.,I don ' t a passion for anything I lost interest in things the age od 10 (idk shat happened to me magbe some event or one of my childhood operations gone wrong) losing it at 10; my time became occupied with philoslphy and just wasting time mindlessly or on intellectual things lije science and.,I don't have a passion for anything I lost interest in most things about the age of 10 (idk what happened to me maybe some event or one of my childhood operations something gone wrong) after losing it at 10; my time became occupied with philosophy and just wasting time mindlessly or on intellectual things like science and math.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_212_394_1
+I ' fakled at life.,I ' fakled at life.,I've failed at life.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2130_1123_14
+I ' failed at lufe.,I ' failed at lufe.,I've failed at life.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2130_1123_14
+"I have NAS (NarcissisticAbuseSyndrome ), severe ddpression with CONSTANT ideation. .. I ' ve suicide 4 times, actually being successful oj but livdd ultimately, and tyat ' where I had a / post death experience that will shape the rest of my life, for however long that may be.","I have NAS (NarcissisticAbuseSyndrome ), severe ddpression with CONSTANT ideation. .. I ' ve suicide 4 times, actually being successful oj but livdd ultimately, and tyat ' where I had a / post death experience that will shape the rest of my life, for however long that may be.","I have NAS(NarcissisticAbuseSyndrome), severe depression with CONSTANT suicidal ideation...I've attempted suicide 4 times, actually being successful on the second but lived ultimately, and that's where I had a near/post death experience that will shape the rest of my life, for however long that may be.",nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_552_263_41
+I het really.,I het really.,I get really irritable.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_993_600_2
+I get rdally.,I get rdally.,I get really irritable.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_993_600_2
+I cant fpod anymore.,I cant fpod anymore.,I cant eat food anymore.,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,1,s_2815_1699_178
+I cant foow anymore.,I cant foow anymore.,I cant eat food anymore.,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,1,s_2815_1699_178
+Me cry evert time.,Me cry evert time.,Makes me cry every time.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2903_576_1
+Makes me crg time.,Makes me crg time.,Makes me cry every time.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2903_576_1
+Best od my life.,Best od my life.,Best decision of my life.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1913_223_1
+Best of mg life.,Best of mg life.,Best decision of my life.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1913_223_1
+I ' m unlovabld.,I ' m unlovabld.,I'm extremely unlovable.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1738_320_0
+I ' m unlovanle.,I ' m unlovanle.,I'm extremely unlovable.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1738_320_0
+I deserve ho hated.,I deserve ho hated.,I deserve to be hated.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1738_320_1
+I feserve to hated.,I feserve to hated.,I deserve to be hated.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1738_320_1
+I am extrejely atm.,I am extrejely atm.,I am extremely suicidal atm.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I am extdemely atm.,I am extdemely atm.,I am extremely suicidal atm.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2800_49_0
+Ij about to up,Ij about to up,Im about to give up,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2800_49_3
+Im about tp give,Im about tp give,Im about to give up,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2800_49_3
+Antideprrssant side,Antideprrssant side,Antidepressant side effects,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_1329_146_0
+Antidepressant siee,Antidepressant siee,Antidepressant side effects,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_1329_146_0
+I hate delressed.,I hate delressed.,I hate being depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1506_1_8
+I hate beibg.,I hate beibg.,I hate being depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1506_1_8
+Ive a lot of woro.,Ive a lot of woro.,Ive missed a lot of work.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_2023_576_6
+Ive a lpt of work.,Ive a lpt of work.,Ive missed a lot of work.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_2023_576_6
+Day I wish to wie.,Day I wish to wie.,Every day I wish to die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1483_222_23
+Every daj I wish to.,Every daj I wish to.,Every day I wish to die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1483_222_23
+Kr sometimes I ' ll.,Kr sometimes I ' ll.,Or sometimes I'll cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1160_93_3
+Or sometimes I ' pl.,Or sometimes I ' pl.,Or sometimes I'll cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1160_93_3
+And I would cry sp.,And I would cry sp.,And I would cry so hard.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2190_134_3
+And I would cry wo.,And I would cry wo.,And I would cry so hard.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2190_134_3
+I cry flr my family.,I cry flr my family.,I cry out for my family.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1692_774_55
+I cry ouy my family.,I cry ouy my family.,I cry out for my family.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1692_774_55
+I wanja myself,I wanja myself,I wanna kill myself,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1586_1434_1
+I wajna myself,I wajna myself,I wanna kill myself,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1586_1434_1
+Im donna myself.,Im donna myself.,Im gonna kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2139_27_8
+Im kili myself.,Im kili myself.,Im gonna kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2139_27_8
+Agreed I also myselc,Agreed I also myselc,Agreed I also hate myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1867_656_0
+I wlso hate myself,I wlso hate myself,Agreed I also hate myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1867_656_0
+Feel succeesful,Feel succeesful,I feel successful,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_276_620_0
+Fesl successful,Fesl successful,I feel successful,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_276_620_0
+Self esteem is gonr.,Self esteem is gonr.,My self esteem is gone.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_102_11
+My delf esteem is.,My delf esteem is.,My self esteem is gone.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_102_11
+Self esteem ks gone.,Self esteem ks gone.,My self esteem is gone.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_102_11
+My self estewm is.,My self estewm is.,My self esteem is gone.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_102_11
+I get feal fast,I get feal fast,I get tired real fast,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_17_969_1
+I tired real cast,I tired real cast,I get tired real fast,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_17_969_1
+"Some suicide attempts mw crying qfter all pain and once, the thought of my mother just at the other side of tge door and she waking me up cheerfully the morning, again, living for others can only go so fqr, and this is the point whdre the poiht of not caring angmore if I can get of thls pain bscoming stronger and coming closer again.","Some suicide attempts mw crying qfter all pain and once, the thought of my mother just at the other side of tge door and she waking me up cheerfully the morning, again, living for others can only go so fqr, and this is the point whdre the poiht of not caring angmore if I can get of thls pain bscoming stronger and coming closer again.","Some suicide attempts left mw crying qfter all the pain and once, the thought of my mother just at the other side of the door and she waking me up cheerfully the next morning, but again, living for others can only go so fqr, and this is the breaking point where the point of not caring anymore if I can get rid of this pain is becoming stronger and coming closer again.",nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_782_6_12
+"Some suicide left mw crying qfter all pain and once, the thought of my mother at the other dide oe the and she waking me up cheerfully the next, bur again, living for others can only go so, and rhis is the point where tbe point of not caring anymore if I can get rid of this pain is becoming stronver and coming closer again.","Some suicide left mw crying qfter all pain and once, the thought of my mother at the other dide oe the and she waking me up cheerfully the next, bur again, living for others can only go so, and rhis is the point where tbe point of not caring anymore if I can get rid of this pain is becoming stronver and coming closer again.","Some suicide attempts left mw crying qfter all the pain and once, the thought of my mother just at the other side of the door and she waking me up cheerfully the next morning, but again, living for others can only go so fqr, and this is the breaking point where the point of not caring anymore if I can get rid of this pain is becoming stronger and coming closer again.",nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_782_6_12
+Dln ' t like Sex,Dln ' t like Sex,I don't like Sex,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2456_821_1
+I ' t like Zex,I ' t like Zex,I don't like Sex,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2456_821_1
+I con ' t enjoy.,I con ' t enjoy.,I don't enjoy anything.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2415_550_8
+I ron ' t enjoy.,I ron ' t enjoy.,I don't enjoy anything.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2415_550_8
+Mysekf,Mysekf,Kill myself,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1201_307_0
+Myswlf,Myswlf,Kill myself,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1201_307_0
+I aj waiting.,I aj waiting.,I am sad waiting.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_577_923_1
+I am waiging.,I am waiging.,I am sad waiting.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_577_923_1
+I toway too.,I toway too.,I cried today too.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2035_67_1
+I todqy too.,I todqy too.,I cried today too.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2035_67_1
+i hate bow.,i hate bow.,i hate myself now.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2326_622_1
+i hate noa.,i hate noa.,i hate myself now.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2326_622_1
+Qaaaand i myself,Qaaaand i myself,Aaaaand i hate myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_683_112_0
+Aaaaand i mydelf,Aaaaand i mydelf,Aaaaand i hate myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_683_112_0
+"I tried to stay up longer past 3 pm yesterday but I got wzy tired and fell asleep until 11 pm and now I cant get any sleep Im not and my tics want to come, hut I cant let them since my mom wilo wngry.","I tried to stay up longer past 3 pm yesterday but I got wzy tired and fell asleep until 11 pm and now I cant get any sleep Im not and my tics want to come, hut I cant let them since my mom wilo wngry.","I tried to stay up longer past 3 pm yesterday but I got way too tired and fell asleep until 11 pm and now I cant get any sleep since Im not tired and my tics want to come out, but I cant let them since my mom will be angry.",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_2434_538_2
+And was zo tired.,And was zo tired.,And I was so tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1514_213_111
+And was si tired.,And was si tired.,And I was so tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1514_213_111
+I ' m jhst not.,I ' m jhst not.,I'm just not happy.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2143_312_17
+I ' m just nkt.,I ' m just nkt.,I'm just not happy.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2143_312_17
+Nobody to blaje but.,Nobody to blaje but.,Nobody to blame but myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2908_119_21
+Nobody tk blame but.,Nobody tk blame but.,Nobody to blame but myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2908_119_21
+I ' m cryimg right.,I ' m cryimg right.,I'm crying right now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_174_66_1
+I ' m cryjng right.,I ' m cryjng right.,I'm crying right now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_174_66_1
+truly want tl die.,truly want tl die.,i truly want to die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_8_309_1
+i truly wanr die.,i truly wanr die.,i truly want to die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_8_309_1
+"nkw, commit suicide.","nkw, commit suicide.","right now, commit suicide.",nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_8_309_2
+"now, cokmit suicide.","now, cokmit suicide.","right now, commit suicide.",nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_8_309_2
+I have failsd.,I have failsd.,I have always failed.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_95_6
+I hzve failed.,I hzve failed.,I have always failed.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_95_6
+I ' M HATINV MYSELF.,I ' M HATINV MYSELF.,I'M FUCKING HATING MYSELF.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2959_19_12
+I ' M HATING MYSDLF.,I ' M HATING MYSDLF.,I'M FUCKING HATING MYSELF.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2959_19_12
+Im eo sad.,Im eo sad.,Im so not sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2815_562_47
+Im so dad.,Im so dad.,Im so not sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2815_562_47
+I ' m deprwssed.,I ' m deprwssed.,Now I'm depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1276_718_3
+Nod I ' m sad.,Nod I ' m sad.,And now I'm sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_18_228_26
+Mow I ' m sad.,Mow I ' m sad.,And now I'm sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_18_228_26
+I ' nit happy.,I ' nit happy.,I'm not happy.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1900_293_0
+I ' m nor.,I ' m nor.,I'm not happy.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1900_293_0
+I fuckijg CRYING.,I fuckijg CRYING.,I am fucking CRYING.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_74_207_1
+I an fucking.,I an fucking.,I am fucking CRYING.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_74_207_1
+I ak in a constant.,I ak in a constant.,I am in a constant dilemma.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_2415_1014_1
+I am ij a constant.,I am ij a constant.,I am in a constant dilemma.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_2415_1014_1
+I an very lonely.,I an very lonely.,I am very lonely now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_1014_9
+I verj lonely now.,I verj lonely now.,I am very lonely now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_1014_9
+I cryijg.,I cryijg.,I keep crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2100_307_1
+I keel.,I keel.,I keep crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2100_307_1
+aanna die,aanna die,i wanna die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_41_1224_0
+I hatd.,I hatd.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1899_295_2
+I hatf.,I hatf.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1899_295_2
+Uave insomnia.,Uave insomnia.,I have insomnia.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_341_1177_1
+Havd insomnia.,Havd insomnia.,I have insomnia.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_341_1177_1
+Am tlred.,Am tlred.,I am tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_681_475_2
+Am tured.,Am tured.,I am tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_681_475_2
+I tired very easioy.,I tired very easioy.,I get tired very easily.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2669_4_3
+I tired very eaqily.,I tired very eaqily.,I get tired very easily.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2669_4_3
+I cey time,I cey time,I cry every time,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2023_1299_0
+I fry every,I fry every,I cry every time,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2023_1299_0
+I ' d rathfr kill.,I ' d rathfr kill.,I'd rather kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_342_141_4
+I ' d rather kilo.,I ' d rather kilo.,I'd rather kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_342_141_4
+I si hard.,I si hard.,I cried so hard.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1499_700_10
+I cridd so.,I cridd so.,I cried so hard.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1499_700_10
+Kill myseif now.,Kill myseif now.,Ill kill myself now.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_587_278_2
+Kill myseof now.,Kill myseof now.,Ill kill myself now.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_587_278_2
+"But now I feel like Im hitting wall, it becomes so frustrating I feel like get burnt out, yhen end up feeling like need to force myself into doing something however I just end up thinking about it apl way and eo it last minute if, ajd if I dont do if i really beat myself up over it the next day and it harder.","But now I feel like Im hitting wall, it becomes so frustrating I feel like get burnt out, yhen end up feeling like need to force myself into doing something however I just end up thinking about it apl way and eo it last minute if, ajd if I dont do if i really beat myself up over it the next day and it harder.","But now I feel like Im hitting a wall, it becomes so frustrating I feel like I get burnt out, and then end up feeling like I need to force myself into doing something however I just end up thinking about it all day and maybe do it last minute if that, and if I dont do it i really beat myself up over it the next day and it becomes harder.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1551_7_5
+"But now I feel like Jm hitting wall, it becomes so frustrating I feel like get burnt out, then end up feeling like need to force myself into doing something however I just ens up thinking about it alo day and dp it last minute if, and kf I dont do it i really beat myself up over it thr next day and it harder.","But now I feel like Jm hitting wall, it becomes so frustrating I feel like get burnt out, then end up feeling like need to force myself into doing something however I just ens up thinking about it alo day and dp it last minute if, and kf I dont do it i really beat myself up over it thr next day and it harder.","But now I feel like Im hitting a wall, it becomes so frustrating I feel like I get burnt out, and then end up feeling like I need to force myself into doing something however I just end up thinking about it all day and maybe do it last minute if that, and if I dont do it i really beat myself up over it the next day and it becomes harder.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1551_7_5
+I spextacularly.,I spextacularly.,I failed spectacularly.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1465_799_2
+I spectafularly.,I spectafularly.,I failed spectacularly.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1465_799_2
+I ' etill depressed.,I ' etill depressed.,I'm still depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2401_0_9
+I ' m depresswd.,I ' m depresswd.,I'm still depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2401_0_9
+I am focised on sex.,I am focised on sex.,I am very focused on sex.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_731_903_4
+I sm focused on sex.,I sm focused on sex.,I am very focused on sex.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_731_903_4
+My kife skills weak.,My kife skills weak.,My life skills are weak.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1738_394_8
+My oife skills weak.,My oife skills weak.,My life skills are weak.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1738_394_8
+clpser to,clpser to,closer to suicide,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2584_14_0
+closed suicide,closed suicide,closer to suicide,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2584_14_0
+I don ' t get enougb,I don ' t get enougb,I don't get enough sleep,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_1034_161_0
+I don ' t ger enough,I don ' t ger enough,I don't get enough sleep,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_1034_161_0
+I ' m wnd sad. : (,I ' m wnd sad. : (,I'm confused and sad. :(,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1086_415_8
+I ' m and dad. : (,I ' m and dad. : (,I'm confused and sad. :(,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1086_415_8
+ill start feeling extremely shitty about afterwards as i already have self esteem ill start to feel luke it was something i said or ie its my fault its affecting my mental health as well llke ili shart myself im the toxic one for thinking she always to act the same i do i honestly dont even know.,ill start feeling extremely shitty about afterwards as i already have self esteem ill start to feel luke it was something i said or ie its my fault its affecting my mental health as well llke ili shart myself im the toxic one for thinking she always to act the same i do i honestly dont even know.,ill start feeling extremely shitty about myself afterwards as i already have low self esteem ill start to feel like it was something i said or if its my fault its really affecting my mental health as well like ill start to myself im the toxic one for thinking that she always needs to act the same i do i honestly dont even know.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1194_0_4
+ill start feeling extremely shitty about afterwards as i already have self esteem ill start yo feel like it sas something i said og if its my fault its affecting my mental health as well likf ill start myself im ths toxic one for thinking she always to act the same i do i honestly dont even know.,ill start feeling extremely shitty about afterwards as i already have self esteem ill start yo feel like it sas something i said og if its my fault its affecting my mental health as well likf ill start myself im ths toxic one for thinking she always to act the same i do i honestly dont even know.,ill start feeling extremely shitty about myself afterwards as i already have low self esteem ill start to feel like it was something i said or if its my fault its really affecting my mental health as well like ill start to myself im the toxic one for thinking that she always needs to act the same i do i honestly dont even know.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1194_0_4
+Wanfed cry.,Wanfed cry.,Wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1586_538_1
+Wanted cfy.,Wanted cfy.,Wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1586_538_1
+I faiping miserably.,I faiping miserably.,I am failing miserably.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_993_720_4
+I am mjserably.,I am mjserably.,I am failing miserably.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_993_720_4
+"Somedays are good some are not. .. I fsel like complete failure to my family I can ' t even do school right I can ' t even start my say right I feel anythinv I do ks wrong and I alkne sure I have people I talk to at scnool that call me friend but I alone I have no one ckkse no one to share this with and it eats me up inside, I ' m 16 and life feels like a huge mistake like was nevfr meant to be I ' m only 16 me why?","Somedays are good some are not. .. I fsel like complete failure to my family I can ' t even do school right I can ' t even start my say right I feel anythinv I do ks wrong and I alkne sure I have people I talk to at scnool that call me friend but I alone I have no one ckkse no one to share this with and it eats me up inside, I ' m 16 and life feels like a huge mistake like was nevfr meant to be I ' m only 16 me why?","Somedays are good some are not...I feel like a complete failure to my family I can't even do school right I can't even start my day right I feel like anything I do is wrong and I feel alone sure I have people I talk to at school that call me their friend but I still feel alone I have no one close no one to share this with and it eats me up inside, I'm 16 and my life feels like a huge mistake like it was never meant to be I'm only 16 why me why ?",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_931_428_1
+I ' m very llnely.,I ' m very llnely.,I'm so very lonely.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_356_60_8
+I ' sl very lonely.,I ' sl very lonely.,I'm so very lonely.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_356_60_8
+"When I met het I was in a depressed sgate, I was harming mysepf everyday wnd was almost going to kill myself, then I met hee, she was so perfect she mzde laugh for the first time in years, she talked daily with me till, she kept me froj all the bad thoughts, while we daged things kept getting better and better, I really thought I was ho be okay, but then qhe left me, now hate thzt I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I ' m harming myself again, I that I ' m back smoking and, I hate that I ' m failing college, I hate that everything I do reminds ke of her, I hate that zhr blocked me, I hate myself, I.","When I met het I was in a depressed sgate, I was harming mysepf everyday wnd was almost going to kill myself, then I met hee, she was so perfect she mzde laugh for the first time in years, she talked daily with me till, she kept me froj all the bad thoughts, while we daged things kept getting better and better, I really thought I was ho be okay, but then qhe left me, now hate thzt I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I ' m harming myself again, I that I ' m back smoking and, I hate that I ' m failing college, I hate that everything I do reminds ke of her, I hate that zhr blocked me, I hate myself, I.","When I met her I was in a depressed state, I was harming myself everyday and was almost going to kill myself, then I met her, she was so perfect she made me laugh for the first time in years, she talked daily with me till dawn, she kept me away from all the bad thoughts, while we dated things kept getting better and better, I really thought I was going to be okay, but then she left me, now I hate that I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I'm harming myself again, I hate that I'm back to smoking and drinking, I hate that I'm failing college, I hate that everything I do reminds me of her, I hate that she blocked me, I hate myself, I hate everything.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_293_38_1
+"When I met her I was in a depressed state, I was harming myself everyday and wad almost going to kill myself, thej I met her, she was so perfect she made laugh for the firsg time in years, she talked dsily with me till, she kept mr from all the bzd thoughts, while we dated things kept getting better and better, I really thought I wae to be okay, bkt then she left je, now hate that I ever mef her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I ' m harming mysele again, I that I ' m back smlking and, I hate that I ' m failing college, I hate thwt everything I do remonds me of her, I hate that she blocked me, I hate myself, I.","When I met her I was in a depressed state, I was harming myself everyday and wad almost going to kill myself, thej I met her, she was so perfect she made laugh for the firsg time in years, she talked dsily with me till, she kept mr from all the bzd thoughts, while we dated things kept getting better and better, I really thought I wae to be okay, bkt then she left je, now hate that I ever mef her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I ' m harming mysele again, I that I ' m back smlking and, I hate that I ' m failing college, I hate thwt everything I do remonds me of her, I hate that she blocked me, I hate myself, I.","When I met her I was in a depressed state, I was harming myself everyday and was almost going to kill myself, then I met her, she was so perfect she made me laugh for the first time in years, she talked daily with me till dawn, she kept me away from all the bad thoughts, while we dated things kept getting better and better, I really thought I was going to be okay, but then she left me, now I hate that I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I'm harming myself again, I hate that I'm back to smoking and drinking, I hate that I'm failing college, I hate that everything I do reminds me of her, I hate that she blocked me, I hate myself, I hate everything.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_293_38_1
+"When I met het I was in a depressed sgate, I was harming mysepf everyday wnd was almost going to kill myself, then I met hee, she was so perfect she mzde laugh for the first time in years, she talked daily with me till, she kept me froj all the bad thoughts, while we daged things kept getting better and better, I really thought I was ho be okay, but then qhe left me, now hate thzt I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I ' m harming myself again, I that I ' m back smoking and, I hate that I ' m failing college, I hate that everything I do reminds ke of her, I hate that zhr blocked me, I hate myself, I.","When I met het I was in a depressed sgate, I was harming mysepf everyday wnd was almost going to kill myself, then I met hee, she was so perfect she mzde laugh for the first time in years, she talked daily with me till, she kept me froj all the bad thoughts, while we daged things kept getting better and better, I really thought I was ho be okay, but then qhe left me, now hate thzt I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I ' m harming myself again, I that I ' m back smoking and, I hate that I ' m failing college, I hate that everything I do reminds ke of her, I hate that zhr blocked me, I hate myself, I.","When I met her I was in a depressed state, I was harming myself everyday and was almost going to kill myself, then I met her, she was so perfect she made me laugh for the first time in years, she talked daily with me till dawn, she kept me away from all the bad thoughts, while we dated things kept getting better and better, I really thought I was going to be okay, but then she left me, now I hate that I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I'm harming myself again, I hate that I'm back to smoking and drinking, I hate that I'm failing college, I hate that everything I do reminds me of her, I hate that she blocked me, I hate myself, I hate everything.",nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_293_38_1
+"When I met her I was in a depressed state, I was harming myself everyday and wad almost going to kill myself, thej I met her, she was so perfect she made laugh for the firsg time in years, she talked dsily with me till, she kept mr from all the bzd thoughts, while we dated things kept getting better and better, I really thought I wae to be okay, bkt then she left je, now hate that I ever mef her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I ' m harming mysele again, I that I ' m back smlking and, I hate that I ' m failing college, I hate thwt everything I do remonds me of her, I hate that she blocked me, I hate myself, I.","When I met her I was in a depressed state, I was harming myself everyday and wad almost going to kill myself, thej I met her, she was so perfect she made laugh for the firsg time in years, she talked dsily with me till, she kept mr from all the bzd thoughts, while we dated things kept getting better and better, I really thought I wae to be okay, bkt then she left je, now hate that I ever mef her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I ' m harming mysele again, I that I ' m back smlking and, I hate that I ' m failing college, I hate thwt everything I do remonds me of her, I hate that she blocked me, I hate myself, I.","When I met her I was in a depressed state, I was harming myself everyday and was almost going to kill myself, then I met her, she was so perfect she made me laugh for the first time in years, she talked daily with me till dawn, she kept me away from all the bad thoughts, while we dated things kept getting better and better, I really thought I was going to be okay, but then she left me, now I hate that I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I'm harming myself again, I hate that I'm back to smoking and drinking, I hate that I'm failing college, I hate that everything I do reminds me of her, I hate that she blocked me, I hate myself, I hate everything.",nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_293_38_1
+Veel hopeless.,Veel hopeless.,I feel hopeless.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_993_743_9
+Fdel hopeless.,Fdel hopeless.,I feel hopeless.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_993_743_9
+I fedl pathetic.,I fedl pathetic.,I feel so pathetic.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_186_14
+I so payhetic.,I so payhetic.,I feel so pathetic.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_186_14
+I ti cry.,I ti cry.,I want to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2000_255_7
+I want tl.,I want tl.,I want to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2000_255_7
+Love mysele,Love mysele,I love myself,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2781_822_0
+Lovf myself,Lovf myself,I love myself,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2781_822_0
+Gate myself!,Gate myself!,I hate myself!,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2455_42_2
+I mysdlf!,I mysdlf!,I hate myself!,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2455_42_2
+I I ckuld cry.,I I ckuld cry.,I wish I could cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2679_40_0
+I I could vry.,I I could vry.,I wish I could cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2679_40_0
+I ' m of mysepf. ..,I ' m of mysepf. ..,I'm ashamed of myself...,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1609_616_1
+I ' m of jyself. ..,I ' m of jyself. ..,I'm ashamed of myself...,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1609_616_1
+I feel do guilty and,I feel do guilty and,I feel so guilty and worried,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1404_870_8
+I feel ao guilty and,I feel ao guilty and,I feel so guilty and worried,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1404_870_8
+"I have not to good sleeping hours do thoughts, , other worde and also night time is the only time of day were it ' s peace quite so I tend go take a or so of that in. .. I yave a hard time falling asleep at times and I really have a hwrd time staging asledp, I can ' t tell you many times I could wake up on just one night!","I have not to good sleeping hours do thoughts, , other worde and also night time is the only time of day were it ' s peace quite so I tend go take a or so of that in. .. I yave a hard time falling asleep at times and I really have a hwrd time staging asledp, I can ' t tell you many times I could wake up on just one night!","I have not to good sleeping hours do to thoughts, stress, in other words emotions and also night time is the only time of day were it's peace and quite so I tend to take a hour or so of that in... I have a hard time falling asleep at times and I really have a hard time staying asleep, I can't tell you how many times I could wake up in just one night!",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_586_904_1
+"I not to good sleeping hours do to thoughts, stress, other words emotions and also night time is the only time of day were ' s peace and qukte so I tend ho hake hour or sk that kn. .. I have a hard time valling asleep at and I eeally have a hard time staying asleep, I can ' t tell you many times I could wake up in just one night!","I not to good sleeping hours do to thoughts, stress, other words emotions and also night time is the only time of day were ' s peace and qukte so I tend ho hake hour or sk that kn. .. I have a hard time valling asleep at and I eeally have a hard time staying asleep, I can ' t tell you many times I could wake up in just one night!","I have not to good sleeping hours do to thoughts, stress, in other words emotions and also night time is the only time of day were it's peace and quite so I tend to take a hour or so of that in... I have a hard time falling asleep at times and I really have a hard time staying asleep, I can't tell you how many times I could wake up in just one night!",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_586_904_1
+Npw I ' m crying.,Npw I ' m crying.,Well now I'm crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_427_129_0
+Well I ' m cryijg.,Well I ' m cryijg.,Well now I'm crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_427_129_0
+I ti cry.,I ti cry.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2815_1455_66
+I wanfed to.,I wanfed to.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2815_1455_66
+I fucking myselg.,I fucking myselg.,I fucking hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2525_20_0
+I hate mywelf.,I hate mywelf.,I fucking hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2525_20_0
+"I am irrihated,.","I am irrihated,.","I am irritated, yes.",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2625_148_0
+"I lrritated, yes.","I lrritated, yes.","I am irritated, yes.",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2625_148_0
+Obcious for me.,Obcious for me.,Obvious suicide for me.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,0,s_2402_815_0
+Obvkous for me.,Obvkous for me.,Obvious suicide for me.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,0,s_2402_815_0
+Im just unhsppy.,Im just unhsppy.,Im just so unhappy.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1488_230_8
+Ij just unhappy.,Ij just unhappy.,Im just so unhappy.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1488_230_8
+I cry ag.,I cry ag.,I cry at night.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1488_230_13
+I st night.,I st night.,I cry at night.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1488_230_13
+Cry in the shoser.,Cry in the shoser.,I cry in the shower.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1488_230_14
+Cry ln the shower.,Cry ln the shower.,I cry in the shower.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1488_230_14
+I want rie so much,I want rie so much,I want to die so much,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2593_451_1
+Wabt to die so much,Wabt to die so much,I want to die so much,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2593_451_1
+I ' ll crhing.,I ' ll crhing.,I'll stop crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1701_714_34
+I ' ll ztop.,I ' ll ztop.,I'll stop crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1701_714_34
+I wanted tp.,I wanted tp.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2828_750_2
+I wanted ti.,I wanted ti.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2828_750_2
+I ctying.,I ctying.,I was crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1514_473_222
+I frying.,I frying.,I was crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1514_473_222
+I only blame muself.,I only blame muself.,I can only blame myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_284_50_0
+I can blame mjself.,I can blame mjself.,I can only blame myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_284_50_0
+I zm exhausted.,I zm exhausted.,I am so exhausted.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_697_17_12
+i crier and.,i crier and.,i cried and cried.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2884_57_2
+i cried crier.,i cried crier.,i cried and cried.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2884_57_2
+Hate mysflf.,Hate mysflf.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1978_1068_1
+Hats myself.,Hats myself.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1978_1068_1
+"I wish I could overcome my social abxiehy and be able go post my success story here like otners I ' ll also admit too, I don ' t like myself because kf these faults and I have trouble loving myself, and many people even say I ' hoo hard on myself my year of college begins in one month, and when I move in want to be confident enough go meet the nfw people on my dorm, knock on peoples doods and start conversations, and give a fuck what people think me.","I wish I could overcome my social abxiehy and be able go post my success story here like otners I ' ll also admit too, I don ' t like myself because kf these faults and I have trouble loving myself, and many people even say I ' hoo hard on myself my year of college begins in one month, and when I move in want to be confident enough go meet the nfw people on my dorm, knock on peoples doods and start conversations, and give a fuck what people think me.","I wish I could overcome my social anxiety and be able to post my success story here like others
+
+I'll also admit too, I don't like myself because of these faults and I have trouble loving myself, and many people even say I'm too hard on myself
+
+my last year of college begins in one month, and when I move in I want to be confident enough to go meet all the new people in my dorm, knock on peoples doors and start conversations, and just not give a fuck about what people think of me.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1808_19_12
+I cant at anytbing.,I cant at anytbing.,I cant concentrate at anything.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_2401_11_1
+I cajt at anything.,I cajt at anything.,I cant concentrate at anything.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_2401_11_1
+I really kyself,I really kyself,I really hate myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2593_536_0
+Really hate mgself,Really hate mgself,I really hate myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2593_536_0
+I ' m usually jjst.,I ' m usually jjst.,I'm usually just depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2130_202_9
+I ' m isually just.,I ' m isually just.,I'm usually just depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2130_202_9
+Was a bit testless.,Was a bit testless.,I was a bit restless.,nlp_randword_delete+ta_wordswap_qwerty,PSYCHOMOTOR,1,s_2606_671_3
+Was a bit rdstless.,Was a bit rdstless.,I was a bit restless.,nlp_randword_delete+ta_wordswap_qwerty,PSYCHOMOTOR,1,s_2606_671_3
+i wabt to die,i wabt to die,i just want to die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2024_230_2
+i want yo die,i want yo die,i just want to die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2024_230_2
+Felt guiltt.,Felt guiltt.,I felt guilty.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_452_784_23
+I feit.,I feit.,I felt guilty.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_452_784_23
+To noy kill myself.,To noy kill myself.,Trying to not kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2822_443_1
+Tk not kill myself.,Tk not kill myself.,Trying to not kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2822_443_1
+I also gestless.,I also gestless.,I am also restless.,nlp_randword_delete+ta_wordswap_qwerty,PSYCHOMOTOR,1,s_2139_45_8
+Am wlso restless.,Am wlso restless.,I am also restless.,nlp_randword_delete+ta_wordswap_qwerty,PSYCHOMOTOR,1,s_2139_45_8
+I cry somrtimes.,I cry somrtimes.,I cry sometimes too.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2035_984_7
+I sometimes tok.,I sometimes tok.,I cry sometimes too.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2035_984_7
+I to eie so much.,I to eie so much.,I want to die so much.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_739_5_19
+I ti die so much.,I ti die so much.,I want to die so much.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_739_5_19
+I still ih.,I still ih.,I still enjoy it.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,0,s_2025_575_2
+Still enjoy if.,Still enjoy if.,I still enjoy it.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,0,s_2025_575_2
+Today I feek tired.,Today I feek tired.,Today I feel just tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_3003_343_1
+I fefl just tired.,I fefl just tired.,Today I feel just tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_3003_343_1
+I am reeling again.,I am reeling again.,I am feeling suicidal again.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_993_450_6
+I qm feeling again.,I qm feeling again.,I am feeling suicidal again.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_993_450_6
+I to ejjoy things.,I to ejjoy things.,I used to enjoy things.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_752_69_3
+I tl enjoy things.,I tl enjoy things.,I used to enjoy things.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_752_69_3
+I to ejjoy things.,I to ejjoy things.,I used to enjoy things.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_752_69_3
+I tl enjoy things.,I tl enjoy things.,I used to enjoy things.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_752_69_3
+"If you ' re just a worthless lump trying to climb your way out of the pjt by getting a jog, trying to someone who likes you, etc. .. . it ' s pretyy hard describe to normal thinking individuals why you haven ' t been working kn your skills or whatever.","If you ' re just a worthless lump trying to climb your way out of the pjt by getting a jog, trying to someone who likes you, etc. .. . it ' s pretyy hard describe to normal thinking individuals why you haven ' t been working kn your skills or whatever.","If you're just a worthless lump trying to slowly climb your way out of the dark pit by getting a job, trying to find someone who likes you, etc....it's pretty hard to describe to normal thinking individuals why you haven't been working on your skills or whatever else.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_186_171_7
+Constantly tifed.,Constantly tifed.,Im constantly tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,0,s_2028_17_5
+Im constqntly.,Im constqntly.,Im constantly tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,0,s_2028_17_5
+Alwats angry,Alwats angry,Im always angry,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1447_807_0
+In angry,In angry,Im always angry,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1447_807_0
+Now I fedl: (,Now I fedl: (,Now I feel sad :(,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_507_383_0
+Now I xad: (,Now I xad: (,Now I feel sad :(,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_507_383_0
+"Like, I ' tured.","Like, I ' tured.","Like, I'm tired.",nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2094_142_1
+"Liks, I ' m.","Liks, I ' m.","Like, I'm tired.",nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2094_142_1
+' m hating muself.,' m hating muself.,I'm hating myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1601_192_1
+I ' m hatiny.,I ' m hatiny.,I'm hating myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1601_192_1
+I ' m going ti kill!,I ' m going ti kill!,I'm going to kill myself!,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,0,s_2595_346_34
+I ' m goinh to kill!,I ' m goinh to kill!,I'm going to kill myself!,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,0,s_2595_346_34
+Cant stop tonigut.,Cant stop tonigut.,Cant stop crying tonight.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2023_201_0
+Cang stop tonight.,Cang stop tonight.,Cant stop crying tonight.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2023_201_0
+I have losf.,I have losf.,I have lost motivation.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2415_566_0
+I have losh.,I have losh.,I have lost motivation.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2415_566_0
+I tk cry.,I tk cry.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1044_58_40
+I wanted tp.,I wanted tp.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1044_58_40
+Hatr myself.,Hatr myself.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_888_447_2
+Hats myself.,Hats myself.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_888_447_2
+I for three minutez.,I for three minutez.,I cried for three minutes.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1499_540_49
+I crifd for three.,I crifd for three.,I cried for three minutes.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1499_540_49
+Hats myself.,Hats myself.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_28_0
+I hatd.,I hatd.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_28_0
+I hate myswlf much.,I hate myswlf much.,I hate myself so much.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_28_19
+I hatr so much.,I hatr so much.,I hate myself so much.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_28_19
+I self - harked in.,I self - harked in.,I self-harmed in December.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1499_1113_24
+I self - harmed on.,I self - harmed on.,I self-harmed in December.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1499_1113_24
+Thats how lkw my is.,Thats how lkw my is.,Thats how low my energy is.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,0,s_1404_116_13
+Thats how low ny is.,Thats how low ny is.,Thats how low my energy is.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,0,s_1404_116_13
+I hahe my.,I hahe my.,I hate my existence.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_120_10
+Hate my existsnce.,Hate my existsnce.,I hate my existence.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_120_10
+I ' m slesp.,I ' m slesp.,I'm sleep deprived.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_17_844_1
+I ' sleep deprivrd.,I ' sleep deprivrd.,I'm sleep deprived.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_17_844_1
+I don ' t enjot.,I don ' t enjot.,I don't enjoy anything.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2415_1024_4
+I ron ' t enjoy.,I ron ' t enjoy.,I don't enjoy anything.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_2415_1024_4
+I gef easily.,I gef easily.,I get irritated easily.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_1024_5
+I geg easily.,I geg easily.,I get irritated easily.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_1024_5
+"Yeah. .. don ' know what go but I feel like there ' s a "" high "", a pleasurable high that we get from starving anc overtime it becomes suffering but try to seek the same pleasure we originally felt from it but can nevrr gst again.","Yeah. .. don ' know what go but I feel like there ' s a "" high "", a pleasurable high that we get from starving anc overtime it becomes suffering but try to seek the same pleasure we originally felt from it but can nevrr gst again.","Yeah... don't know what to say but I feel like there's a ""high"", a pleasurable high that we get from starving and overtime it becomes a suffering but still we try to seek the same pleasure we originally felt from it but can never get again.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_258_149_0
+"Yeah. .. don ' t know what to say but I like there ' s a "" high "", a pleasurable bigy that we get fron starving and overtime it becomrs a suffering we try to seek the same we originally felt from it but never get again.","Yeah. .. don ' t know what to say but I like there ' s a "" high "", a pleasurable bigy that we get fron starving and overtime it becomrs a suffering we try to seek the same we originally felt from it but never get again.","Yeah... don't know what to say but I feel like there's a ""high"", a pleasurable high that we get from starving and overtime it becomes a suffering but still we try to seek the same pleasure we originally felt from it but can never get again.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_258_149_0
+Dont wwnt to die.,Dont wwnt to die.,I dont want to die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,0,s_804_60_0
+Dknt want to die.,Dknt want to die.,I dont want to die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,0,s_804_60_0
+Dont want to cie.,Dont want to cie.,I dont want to die.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_804_60_0
+Dknt want to die.,Dknt want to die.,I dont want to die.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_804_60_0
+I ' vf lived with.,I ' vf lived with.,I've lived with guilt.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_18_836_11
+I ' ve lived eith.,I ' ve lived eith.,I've lived with guilt.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_18_836_11
+' m so inddcisive.,' m so inddcisive.,I'm so indecisive.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_1933_177_2
+' m so inrecisive.,' m so inrecisive.,I'm so indecisive.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_1933_177_2
+"I ' ve been severely depressed the laat coupke of and I fewl like I ' m on the of one, I ' t know how to put how I ' ve been feeling into words but I like I ' m on the of some kind of emotional collapse.","I ' ve been severely depressed the laat coupke of and I fewl like I ' m on the of one, I ' t know how to put how I ' ve been feeling into words but I like I ' m on the of some kind of emotional collapse.","I've been severely depressed the last couple of weeks and I feel like I'm on the verge of one, I don't know how to put how I've been feeling into words but I feel like I'm on the brink of some kind of emotional collapse.",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2595_453_2
+I wanted ti.,I wanted ti.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2338_949_14
+I tk cry.,I tk cry.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2338_949_14
+I can ' t sfop.,I can ' t sfop.,I can't stop crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2815_952_3
+I dan ' t stop.,I dan ' t stop.,I can't stop crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2815_952_3
+I evef cry.,I evef cry.,I hardly ever cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2974_1910_9
+I hatdly cry.,I hatdly cry.,I hardly ever cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2974_1910_9
+I qm sad.,I qm sad.,I am just sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1681_1030_1
+I an just.,I an just.,I am just sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1681_1030_1
+I fail at attfmpts,I fail at attfmpts,I fail at my attempts,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1483_166_1
+I fail ay attempts,I fail ay attempts,I fail at my attempts,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1483_166_1
+I fail wt my,I fail wt my,I fail at my attempts,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1483_166_1
+I af my attempts,I af my attempts,I fail at my attempts,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1483_166_1
+Kipled myself,Kipled myself,I killed myself,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_265_7_0
+I mysdlf,I mysdlf,I killed myself,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_265_7_0
+This had ctying,This had ctying,This had me crying,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2464_411_0
+Thjs me crying,Thjs me crying,This had me crying,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2464_411_0
+I still feel giilty,I still feel giilty,I still feel guilty lol,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1499_89_12
+I still feel guikty,I still feel guikty,I still feel guilty lol,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1499_89_12
+I so mucb.,I so mucb.,I cried so much.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_337_141_2
+I so muvh.,I so muvh.,I cried so much.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_337_141_2
+I ctying.,I ctying.,I was crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1683_34_221
+I ' crying rught now,I ' crying rught now,I'm crying right now,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1355_237_2
+I ' crying right noe,I ' crying right noe,I'm crying right now,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1355_237_2
+Ika cry so.,Ika cry so.,Ima cry so hard.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1715_23_0
+Ima sl hard.,Ima sl hard.,Ima cry so hard.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1715_23_0
+Feeling ptoud of,Feeling ptoud of,Feeling proud of myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_2000_144_0
+Proud if myself,Proud if myself,Feeling proud of myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_2000_144_0
+Proud of myselv,Proud of myselv,Feeling proud of myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_2000_144_0
+Proud of mywelf,Proud of mywelf,Feeling proud of myself,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_2000_144_0
+I ' m qlways,I ' m qlways,I'm always angry,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1633_278_0
+I ' m alwwys,I ' m alwwys,I'm always angry,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1633_278_0
+I llke crying.,I llke crying.,I felt like crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1499_15_22
+Felt like vrying.,Felt like vrying.,I felt like crying.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1499_15_22
+I to kill mysepf.,I to kill mysepf.,I attempted to kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1135_282_56
+I attempted ho kill.,I attempted ho kill.,I attempted to kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1135_282_56
+I only blame muself.,I only blame muself.,I can only blame myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_891_797_86
+I cam blame myself.,I cam blame myself.,I can only blame myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_891_797_86
+I cried in jears.,I cried in jears.,I havent cried in years.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_781_193_17
+I cried in uears.,I cried in uears.,I havent cried in years.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_781_193_17
+I go to all my classes and hrt really all the time bit is still hard because my mind even without touching the internet (wbich is why cutting hzs become a strategy to get myself to focus again) I feel like at this point dropping is my only option which i know would make my parents furious.,I go to all my classes and hrt really all the time bit is still hard because my mind even without touching the internet (wbich is why cutting hzs become a strategy to get myself to focus again) I feel like at this point dropping is my only option which i know would make my parents furious.,I go to all my classes and try really hard to study all the time but focusing is still hard because my mind wanders even without touching the internet (which is why cutting has become a strategy to get myself to focus again) I feel like at this point dropping out is my only option which i know would make my parents furious.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1924_22_0
+I go to all my classes and try really hard ho study all hhe time but focusing is still hard because my mind even without touching the internet (which ahy cugting has become a strategy to get myself to again) I feel like at this point dropping out is only option know would make jy parents furious.,I go to all my classes and try really hard ho study all hhe time but focusing is still hard because my mind even without touching the internet (which ahy cugting has become a strategy to get myself to again) I feel like at this point dropping out is only option know would make jy parents furious.,I go to all my classes and try really hard to study all the time but focusing is still hard because my mind wanders even without touching the internet (which is why cutting has become a strategy to get myself to focus again) I feel like at this point dropping out is my only option which i know would make my parents furious.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1924_22_0
+Havr more energy.,Havr more energy.,I have more energy.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2065_472_7
+I have mote.,I have mote.,I have more energy.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2065_472_7
+.. .. I ' m cgying,.. .. I ' m cgying,....I'm definitely crying,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2603_13_0
+.. .. I ' m cryinb,.. .. I ' m cryinb,....I'm definitely crying,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2603_13_0
+"I dob ' t know whar I need in my life enjoy it because currently I do not enjoy anything in my life No matter how good my breakfast tastes, even I new thaf tasteq really good, I don ' enjoy eating it.","I dob ' t know whar I need in my life enjoy it because currently I do not enjoy anything in my life No matter how good my breakfast tastes, even I new thaf tasteq really good, I don ' enjoy eating it.","I don't know what I need in my life to enjoy it because currently I do not enjoy anything in my life No matter how good my breakfast tastes, even if I eat something new that tastes really good, I don't enjoy eating it.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1404_1080_10
+"I don ' t know what I need in my life enjoy it because currently I do not enjoy anything in my life Mo matter how good my breakfast tastes, even I new ghat tastes teally good, I don ' emjoy eating it.","I don ' t know what I need in my life enjoy it because currently I do not enjoy anything in my life Mo matter how good my breakfast tastes, even I new ghat tastes teally good, I don ' emjoy eating it.","I don't know what I need in my life to enjoy it because currently I do not enjoy anything in my life No matter how good my breakfast tastes, even if I eat something new that tastes really good, I don't enjoy eating it.",nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1404_1080_10
+I am fucking niw.,I am fucking niw.,I am fucking ANGRY now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_188_399_2
+I am fudking now.,I am fudking now.,I am fucking ANGRY now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_188_399_2
+I became even mote.,I became even mote.,I became even more agitated.,nlp_randword_delete+ta_wordswap_qwerty,PSYCHOMOTOR,0,s_1692_70_213
+I became egen more.,I became egen more.,I became even more agitated.,nlp_randword_delete+ta_wordswap_qwerty,PSYCHOMOTOR,0,s_1692_70_213
+Yet am delressed.,Yet am delressed.,Yet I am depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2139_3_2
+Yet zm depressed.,Yet zm depressed.,Yet I am depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2139_3_2
+Do ' m pretty tired.,Do ' m pretty tired.,So I'm pretty tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2908_105_3
+Sl I ' m pretty.,Sl I ' m pretty.,So I'm pretty tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2908_105_3
+I ' kill myqelf.,I ' kill myqelf.,I'd kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2647_24_1
+' d kilp myself.,' d kilp myself.,I'd kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2647_24_1
+Nos I sad.,Nos I sad.,Now I am sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1681_799_2
+Now I aj.,Now I aj.,Now I am sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1681_799_2
+I slewp.,I slewp.,I sleep good.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2255_242_0
+Sleep goox.,Sleep goox.,I sleep good.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2255_242_0
+I cry dvery,I cry dvery,I cry every time,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2023_824_0
+I cey time,I cey time,I cry every time,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2023_824_0
+I eat it the hime,I eat it the hime,I eat it all the time,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,0,s_634_65_0
+I it xll the time,I it xll the time,I eat it all the time,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,0,s_634_65_0
+I pove meeting new.,I pove meeting new.,I love meeting new people.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1773_564_2
+I love mweting new.,I love mweting new.,I love meeting new people.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1773_564_2
+I love mweting new.,I love mweting new.,I love meeting new people.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_1773_564_2
+I pove meeting new.,I pove meeting new.,I love meeting new people.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_1773_564_2
+I fear for ruture,I fear for ruture,I fear for the future,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_898_1730_1
+I gear for the,I gear for the,I fear for the future,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_898_1730_1
+I ak big sad now.,I ak big sad now.,I am big sad right now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2080_955_0
+I big sad right niw.,I big sad right niw.,I am big sad right now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2080_955_0
+Wxs useful.,Wxs useful.,I was useful.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1244_311_2
+Aas useful.,Aas useful.,I was useful.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1244_311_2
+Jm tired,Jm tired,Im so tired,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2434_208_0
+Um tired,Um tired,Im so tired,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2434_208_0
+Im aleays.,Im aleays.,Im always tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_316_2
+Jm tired.,Jm tired.,Im always tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_316_2
+Im tirex.,Im tirex.,Im always tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_316_2
+Always tlred.,Always tlred.,Im always tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_316_2
+I mysekf to sleep.,I mysekf to sleep.,I cried myself to sleep.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2606_888_3
+I myself ho sleep.,I myself ho sleep.,I cried myself to sleep.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2606_888_3
+' m just noy hungry.,' m just noy hungry.,I'm just not hungry.,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,1,s_1116_989_10
+I ' just nor hungry.,I ' just nor hungry.,I'm just not hungry.,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,1,s_1116_989_10
+i have no enedgy.,i have no enedgy.,i have no more energy.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2107_102_4
+i hage no more.,i hage no more.,i have no more energy.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2107_102_4
+wsnt sex.,wsnt sex.,i want sex.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,0,s_2107_102_15
+wanf sex.,wanf sex.,i want sex.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,0,s_2107_102_15
+I ' m neved anymore.,I ' m neved anymore.,I'm never hungry anymore.,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,1,s_71_327_1
+I ' m nevrr anymore.,I ' m nevrr anymore.,I'm never hungry anymore.,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,1,s_71_327_1
+I fsel.,I fsel.,I feel sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2286_168_4
+I ssd.,I ssd.,I feel sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2286_168_4
+I was so prohd of!!,I was so prohd of!!,I was so proud of myself!!,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_170_25_3
+I was so proud kf!!,I was so proud kf!!,I was so proud of myself!!,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_170_25_3
+I was so projd of!!,I was so projd of!!,I was so proud of myself!!,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_170_25_3
+I was so proud kf!!,I was so proud kf!!,I was so proud of myself!!,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_170_25_3
+I sleph pretty.,I sleph pretty.,I slept pretty well.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,0,s_1768_51_1
+I slepg well.,I slepg well.,I slept pretty well.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,0,s_1768_51_1
+I slept wekl.,I slept wekl.,I slept pretty well.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_1768_51_1
+I slepg well.,I slepg well.,I slept pretty well.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_1768_51_1
+Just cqn ' t focus,Just cqn ' t focus,I just can't focus,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1210_72_1
+I fan ' t focus,I fan ' t focus,I just can't focus,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1210_72_1
+Ajd if I dont Im.,Ajd if I dont Im.,And if I dont Im worthless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1551_325_2
+And if I dpnt Im.,And if I dpnt Im.,And if I dont Im worthless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1551_325_2
+Ik physically.,Ik physically.,Im physically tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_111_2
+Lm tired.,Lm tired.,Im physically tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_111_2
+Im vsry.,Im vsry.,Im very tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,0,s_804_829_4
+Im tirex.,Im tirex.,Im very tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,0,s_804_829_4
+i simply tl die.,i simply tl die.,i simply want to die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2584_3_15
+i simply to dke.,i simply to dke.,i simply want to die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2584_3_15
+I feel lioe a,I feel lioe a,I feel like a burden,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2139_196_0
+I feei like a,I feei like a,I feel like a burden,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2139_196_0
+Cannot concenfrate.,Cannot concenfrate.,I cannot concentrate.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1021_34_170
+' m sad nos.,' m sad nos.,I'm sad now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1012_884_1
+I ' m sxd.,I ' m sxd.,I'm sad now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1012_884_1
+"Makes ke sad,.","Makes ke sad,.","Makes me sad,though.",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_785_92_1
+"Makfs me, though.","Makfs me, though.","Makes me sad,though.",nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_785_92_1
+I never used vry.,I never used vry.,I never used to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_708_249_0
+Never usfd to cry.,Never usfd to cry.,I never used to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_708_249_0
+Fail many fimes.,Fail many fimes.,I fail many times.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_41_1679_13
+Fail manu times.,Fail manu times.,I fail many times.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_41_1679_13
+I get ssd.,I get ssd.,Then I get sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_3044_666_2
+I het sad.,I het sad.,Then I get sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_3044_666_2
+I mist nights.,I mist nights.,I cry most nights.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1625_727_6
+I cry mlst.,I cry mlst.,I cry most nights.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1625_727_6
+My life ks a,My life ks a,My life is a failure,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1877_87_0
+My is a failyre,My is a failyre,My life is a failure,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1877_87_0
+I ' m actuqlly.,I ' m actuqlly.,I'm actually depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1170_361_2
+I ' m actuaply.,I ' m actuaply.,I'm actually depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1170_361_2
+"I desperately need sleep but every fucking time that ' thing ' taps and bangs, I fear if i sleep it will out of the fireplace xnd decorate my remains, my world is spinning, I ' m going to gry to sleel tknight.","I desperately need sleep but every fucking time that ' thing ' taps and bangs, I fear if i sleep it will out of the fireplace xnd decorate my remains, my world is spinning, I ' m going to gry to sleel tknight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,0,s_2544_1099_12
+I have sleep tlo.,I have sleep tlo.,I have sleep problems too.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,0,s_2502_62_2
+I have sleep tok.,I have sleep tok.,I have sleep problems too.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,0,s_2502_62_2
+I like optimietic.,I like optimietic.,I like being optimistic.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_996_489_0
+I beijg optimistic.,I beijg optimistic.,I like being optimistic.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_996_489_0
+I sm feeling.,I sm feeling.,I am feeling depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_993_781_1
+I feeliny depressed.,I feeliny depressed.,I am feeling depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_993_781_1
+I lost alo interest.,I lost alo interest.,I have lost all interest.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_993_781_12
+I lost all intwrest.,I lost all intwrest.,I have lost all interest.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_993_781_12
+Just my worthlese.,Just my worthlese.,Just my worthless opinion.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_435_1045_4
+Juat my opinion.,Juat my opinion.,Just my worthless opinion.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_435_1045_4
+Hlw sad really am.,Hlw sad really am.,How sad I really am.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_356_57_2
+How sqd really am.,How sqd really am.,How sad I really am.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_356_57_2
+I ' m kiiling! [,I ' m kiiling! [,I'm killing myself ![,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1082_1774_0
+I ' m killimg! [,I ' m killimg! [,I'm killing myself ![,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1082_1774_0
+i datigued.,i datigued.,i get fatigued.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2107_89_4
+gey fatigued.,gey fatigued.,i get fatigued.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_2107_89_4
+I ' so saf..,I ' so saf..,I'm so sad..,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1620_705_3
+I ' so szd..,I ' so szd..,I'm so sad..,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1620_705_3
+I cry to slewp,I cry to slewp,I cry myself to sleep,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2487_330_0
+I cry to soeep,I cry to soeep,I cry myself to sleep,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2487_330_0
+Hatr myself.,Hatr myself.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_105_1
+I hage.,I hage.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_105_1
+I to fucking did.,I to fucking did.,I want to fucking die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_356_105_17
+I to fucking dis.,I to fucking dis.,I want to fucking die.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_356_105_17
+Begin to fry.,Begin to fry.,I begin to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1779_24_136
+Begib to cry.,Begib to cry.,I begin to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1779_24_136
+Bwst decision I made,Bwst decision I made,Best decision I ever made,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_299_1841_1
+Best I ecer made,Best I ecer made,Best decision I ever made,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_299_1841_1
+Physicaily tired.,Physicaily tired.,Im physically tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_895_2
+Physically tured.,Physically tured.,Im physically tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_895_2
+I lnly hate: ' /,I lnly hate: ' /,"I only hate myself 
+
+:'/",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1134_121_0
+I hate mysele: ' /,I hate mysele: ' /,"I only hate myself 
+
+:'/",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1134_121_0
+have deprsssion.,have deprsssion.,i have depression.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2107_11_2
+hsve depression.,hsve depression.,i have depression.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2107_11_2
+I ni future.,I ni future.,I see no future.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1625_520_0
+I see jo.,I see jo.,I see no future.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1625_520_0
+"I ' ve always felt pretty guilty about the amount that I not only sleep talk but skeep shout, actually, I pretty much only shout. .. If I ' m shouting angrily at someone in dream then chances are I shout out tpo, waoinb us both up.","I ' ve always felt pretty guilty about the amount that I not only sleep talk but skeep shout, actually, I pretty much only shout. .. If I ' m shouting angrily at someone in dream then chances are I shout out tpo, waoinb us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2727_538_0
+"But since I ' ve came home my nightmares have been the same, stopping me from going to sleep because I ' too scared tk, so I ' ve been staying up at like 3 - 4 in the morning fo completey ms, but I alwaya wake - 8 to get ready my course which starts at 9: 30 snd carries on till 4.","But since I ' ve came home my nightmares have been the same, stopping me from going to sleep because I ' too scared tk, so I ' ve been staying up at like 3 - 4 in the morning fo completey ms, but I alwaya wake - 8 to get ready my course which starts at 9: 30 snd carries on till 4.","But since I've came home my nightmares have been the same, stopping me from going to sleep because I've been too scared to, so I've been staying up at like 3-4 in the morning to completey exhaust me, but I always wake up around 7-8 to get ready for my course which starts at 9:30 and carries on till 4.",nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_2402_721_4
+I cannof anything.,I cannof anything.,I cannot enjoy anything.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1404_105_5
+I cannot anytuing.,I cannot anytuing.,I cannot enjoy anything.,nlp_randword_delete+ta_wordswap_qwerty,ANHEDONIA,1,s_1404_105_5
+I just camt focus.,I just camt focus.,I just cant focus anymore.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_1404_105_21
+I just cant fpcus.,I just cant fpcus.,I just cant focus anymore.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,1,s_1404_105_21
+Aoways tired.,Aoways tired.,Im always tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_105_22
+Km always.,Km always.,Im always tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_105_22
+Aoways tired.,Aoways tired.,Im always tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_105_22
+Always tlred.,Always tlred.,Im always tired.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_105_22
+I kust lost energy.,I kust lost energy.,I just lost my energy.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_105_33
+I lost my ehergy.,I lost my ehergy.,I just lost my energy.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_105_33
+Is ny energy so low?,Is ny energy so low?,Why is my energy so low?,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_105_36
+Is my eneggy so low?,Is my eneggy so low?,Why is my energy so low?,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_105_36
+I ' m eo.,I ' m eo.,I'm so sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_349_414_0
+I ' m qad.,I ' m qad.,I'm so sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_349_414_0
+Never blxme myself.,Never blxme myself.,I never blame myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1738_359_1
+I blaje myself.,I blaje myself.,I never blame myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1738_359_1
+Hatr myself.,Hatr myself.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_697_348_8
+I hatd.,I hatd.,I hate myself.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_697_348_8
+"Tten day it dawned on me, and I can ' tell you when exactly, but occurred to me that it ' s okay not to be perfext, and to remond myself that nobody is, and in accepting that I ' t perfect and that it was okay, I could stop hwting.","Tten day it dawned on me, and I can ' tell you when exactly, but occurred to me that it ' s okay not to be perfext, and to remond myself that nobody is, and in accepting that I ' t perfect and that it was okay, I could stop hwting.","Then one day it dawned on me, and I can't tell you when exactly, but it occurred to me that it's okay not to be perfect, and to remind myself that nobody is, and in accepting that I wasn't perfect and that it was okay, I could stop hating myself.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2606_508_15
+"One it dawned on me, and I can ' tell you when exactly, but it occurred to me it ' s okay jot to be perfect, and to remind myself that nobody js, and in accepting that I wasn ' t pfrfect and that ir was okay, I could stop hating myself.","One it dawned on me, and I can ' tell you when exactly, but it occurred to me it ' s okay jot to be perfect, and to remind myself that nobody js, and in accepting that I wasn ' t pfrfect and that ir was okay, I could stop hating myself.","Then one day it dawned on me, and I can't tell you when exactly, but it occurred to me that it's okay not to be perfect, and to remind myself that nobody is, and in accepting that I wasn't perfect and that it was okay, I could stop hating myself.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2606_508_15
+Guilt and shame ms.,Guilt and shame ms.,Guilt and shame grips me.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2139_39_13
+Guilt and stame me.,Guilt and stame me.,Guilt and shame grips me.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2139_39_13
+"for all I know depression is tol comfortable and I ' m afraid to even leave it, maybe thay ' s, but I dont knoa for sure maybe its becauss I ' m overweight and I can achieve my goals of losing weight, always fuck up every time I try.","for all I know depression is tol comfortable and I ' m afraid to even leave it, maybe thay ' s, but I dont knoa for sure maybe its becauss I ' m overweight and I can achieve my goals of losing weight, always fuck up every time I try.","for all I know the depression is too comfortable and I'm afraid to even leave it, maybe that's why, but I dont know for sure
+
+or maybe its because I'm overweight and I can never achieve my goals of losing weight, I always fuck up every time I try.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1808_50_7
+"fod all I know the depression is too comfortable and I ' m afraid even leave it, maybe that ' s, but I dont know for sure maybe its because I ' m overweight and I can never achieve mh goals losing deighr, I always fuck up every I try.","fod all I know the depression is too comfortable and I ' m afraid even leave it, maybe that ' s, but I dont know for sure maybe its because I ' m overweight and I can never achieve mh goals losing deighr, I always fuck up every I try.","for all I know the depression is too comfortable and I'm afraid to even leave it, maybe that's why, but I dont know for sure
+
+or maybe its because I'm overweight and I can never achieve my goals of losing weight, I always fuck up every time I try.",nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1808_50_7
+' m Sac Today. ..,' m Sac Today. ..,I'm Sad Today...,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1609_626_0
+I ' m Tkday. ..,I ' m Tkday. ..,I'm Sad Today...,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1609_626_0
+' m sl depressed.,' m sl depressed.,I'm so depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_655_6_31
+' m so ddpressed.,' m so ddpressed.,I'm so depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_655_6_31
+Im going to kipl.,Im going to kipl.,Im going to kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2340_50_0
+Im goijg to myself.,Im goijg to myself.,Im going to kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_2340_50_0
+That meand im.,That meand im.,That means im worthless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_1139_25
+That mesns im.,That mesns im.,That means im worthless.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_1139_25
+Feel duilty,Feel duilty,I feel guilty,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_172_0
+I tbink failed.,I tbink failed.,I think I failed.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_172_3
+I tnink failed.,I tnink failed.,I think I failed.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1404_172_3
+I have no tk study.,I have no tk study.,I have no energy to study.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_90_5
+I have bo to study.,I have bo to study.,I have no energy to study.,nlp_randword_delete+ta_wordswap_qwerty,FATIGUE,1,s_1404_90_5
+I my ability to vry.,I my ability to vry.,I lost my ability to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_3028_530_0
+I my ability fo cry.,I my ability fo cry.,I lost my ability to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_3028_530_0
+Want to eie,Want to eie,I want to die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1404_827_2
+I eant die,I eant die,I want to die,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1404_827_2
+' m bot suicidal.,' m bot suicidal.,I'm not suicidal.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,0,s_975_79_1
+' m npt suicidal.,' m npt suicidal.,I'm not suicidal.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,0,s_975_79_1
+I ' d rather kilo.,I ' d rather kilo.,I'd rather kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1858_13_3
+I ' d rather kilk.,I ' d rather kilk.,I'd rather kill myself.,nlp_randword_delete+ta_wordswap_qwerty,SUICIDAL_THOUGHTS,1,s_1858_13_3
+I sleep 23 hoyrs.,I sleep 23 hoyrs.,I sleep for 23 hours.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_1287_438_0
+I fot 23 hours.,I fot 23 hours.,I sleep for 23 hours.,nlp_randword_delete+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_1287_438_0
+Feel happinews.,Feel happinews.,I feel happiness.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2815_1588_1
+Fdel happiness.,Fdel happiness.,I feel happiness.,nlp_randword_delete+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2815_1588_1
+My experiments faol,My experiments faol,All my experiments fail,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1051_25_0
+All mu experiments,All mu experiments,All my experiments fail,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_1051_25_0
+I wanfed to.,I wanfed to.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1581_1025_35
+I wanted tp.,I wanted tp.,I wanted to cry.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1581_1025_35
+I ' t eat or slesp.,I ' t eat or slesp.,I can't eat or sleep.,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,1,s_888_1741_6
+I ' t eat ir sleep.,I ' t eat ir sleep.,I can't eat or sleep.,nlp_randword_delete+ta_wordswap_qwerty,APPETITE_CHANGE,1,s_888_1741_6
+I depresaed.,I depresaed.,I got depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1155_17_13
+I depeessed.,I depeessed.,I got depressed.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1155_17_13
+Im misedable.,Im misedable.,Im constantly miserable.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_697_53_1
+Ik constantly.,Ik constantly.,Im constantly miserable.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_697_53_1
+Im constqntly.,Im constqntly.,Im constantly miserable.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_697_53_1
+Ij miserable.,Ij miserable.,Im constantly miserable.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,1,s_697_53_1
+Im vonstantly.,Im vonstantly.,Im constantly sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_697_53_3
+Im constqntly.,Im constqntly.,Im constantly sad.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_697_53_3
+I ' m actually sae.,I ' m actually sae.,I'm actually sad now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1636_312_2
+I ' m actually sax.,I ' m actually sax.,I'm actually sad now.,nlp_randword_delete+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1636_312_2
+I neee not energy.,I neee not energy.,I need concentration not energy.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1750_1_0
+I meed not energy.,I meed not energy.,I need concentration not energy.,nlp_randword_delete+ta_wordswap_qwerty,COGNITIVE_ISSUES,0,s_1750_1_0
+I FEEL syper.,I FEEL syper.,I FEEL super guilty.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1899_203_41
+FEEL super guilfy.,FEEL super guilfy.,I FEEL super guilty.,nlp_randword_delete+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1899_203_41

@@ -1,0 +1,102 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I'm filled with joy.,I'm filled with joy.,I was filled with energy.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_993_1060_1
+I'm filled explosive energy.,I'm filled explosive energy.,I was filled with energy.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_993_1060_1
+I'd concentrate in all myself.,I'd concentrate in all myself.,I can't concentrate at all now.,nlp_cwe_sub_roberta+ta_contraction,COGNITIVE_ISSUES,1,s_993_1060_4
+I posted dat i'm quitting rn.,I posted dat i'm quitting rn.,I hate that i am crying rn.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I've loads of anxiety due to this.,I've loads of anxiety due to this.,I feel lot of guilt due to this.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,1,s_993_557_3
+I could kill myself right afterwards – no you'd guess why,I could kill myself right afterwards – no you'd guess why,I could kill myself right now and no one would know why,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_2449_137_0
+I'm without easily being one.,I'm without easily being one.,I cry more easily for one.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_1
+I've had feeling better early and off.,I've had feeling better early and off.,I have been feeling down on and off.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I've felt feeling down lately and low.,I've felt feeling down lately and low.,I have been feeling down on and off.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+My patience is depleted and I won't really experience life anymore.,My patience is depleted and I won't really experience life anymore.,My energy is depleted and I will probably never enjoy life anymore.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_1404_60_9
+That's all we've words for after that.,That's all we've words for after that.,That's all I have energy for after work.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_1483_10_2
+I'm crazy - crying anymore.,I'm crazy - crying anymore.,I wasnt sad or crying anymore.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_1897_77_60
+I'd sleep so Not to worry,I'd sleep so Not to worry,I don't sleep well due to worry,nlp_cwe_sub_roberta+ta_contraction,SLEEP_ISSUES,1,s_2338_145_2
+I now got nothing and I've no hope.,I now got nothing and I've no hope.,I have achieved nothing and I have no skills.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,1,s_1455_72_8
+I'd kill you while I just build those godless churches. —,I'd kill you while I just build those godless churches. —,"I would kill myself before I helped build those godless trucks. """,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,0,s_1514_914_163
+I am scared Ali won't be an safe man in the world,I am scared Ali won't be an safe man in the world,I am scared I will not be a successful man in the future,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+I grew scared I won't remain a white man in the world,I grew scared I won't remain a white man in the world,I am scared I will not be a successful man in the future,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+I'm rather than ready.,I'm rather than ready.,I am more than annoyed.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_1296_12_9
+I'm prescribed psych drugs.,I'm prescribed psych drugs.,I am prescribed anxiety medications.,nlp_cwe_sub_roberta+ta_contraction,PSYCHOMOTOR,1,s_103_32_3
+I'm taking three medications.,I'm taking three medications.,I am prescribed anxiety medications.,nlp_cwe_sub_roberta+ta_contraction,PSYCHOMOTOR,1,s_103_32_3
+Then I'd get home sick more times.,Then I'd get home sick more times.,Then I would get really angry at times.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_84_60_2
+Then we'd act really angry most times.,Then we'd act really angry most times.,Then I would get really angry at times.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_84_60_2
+I think that's if I'd dwell on things.,I think that's if I'd dwell on things.,I think that's why I can't focus on study.,nlp_cwe_sub_roberta+ta_contraction,COGNITIVE_ISSUES,1,s_1404_640_4
+I'm highly irritable.,I'm highly irritable.,I get really irritable.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_993_600_2
+I can't feel something inside you in way I'd before.,I can't feel something inside you in way I'd before.,I can't feel something to people the way I did before.,nlp_cwe_sub_roberta+ta_contraction,ANHEDONIA,1,s_2007_76_2
+I wasn't suicidal online.,I wasn't suicidal online.,I am extremely suicidal atm.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I'm going depressed.,I'm going depressed.,I hate being depressed.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_1506_1_8
+And you'd go so mad.,And you'd go so mad.,And I would cry so hard.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_2190_134_3
+I'm successful,I'm successful,I feel successful,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,1,s_276_620_0
+I'd do anything.,I'd do anything.,I don't enjoy anything.,nlp_cwe_sub_roberta+ta_contraction,ANHEDONIA,1,s_2415_550_8
+I'd really interfere in anything.,I'd really interfere in anything.,I couldn't really focus on anything.,nlp_cwe_sub_roberta+ta_contraction,COGNITIVE_ISSUES,1,s_984_874_1
+I've issues of focusing to speaking.,I've issues of focusing to speaking.,I have issues in focusing and attention.,nlp_cwe_sub_roberta+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+I didnt go and i've no motivation.,I didnt go and i've no motivation.,I cant focus and i have no energy.,nlp_cwe_sub_roberta+ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+And I'm also tired.,And I'm also tired.,And I was so tired.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_1514_213_111
+I just wonder what I'd like and hear anymore.,I just wonder what I'd like and hear anymore.,I just don't think I would like to live anymore.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I'd actually think anybody would like to die anymore.,I'd actually think anybody would like to die anymore.,I just don't think I would like to live anymore.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I've sleep throughout almost my month.,I've sleep throughout almost my month.,I have sleep paralysis almost every night.,nlp_cwe_sub_roberta+ta_contraction,SLEEP_ISSUES,1,s_2008_331_0
+I've been deprived almost every time.,I've been deprived almost every time.,I have sleep paralysis almost every night.,nlp_cwe_sub_roberta+ta_contraction,SLEEP_ISSUES,1,s_2008_331_0
+I've to escape then can't.,I've to escape then can't.,I want to cry but can't.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_1133_104_9
+I'm really lonely inside.,I'm really lonely inside.,I am very lonely now.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+But we can't've the energy to convince people about them.,But we can't've the energy to convince people about them.,But I don't have the energy to fight people about it.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_117_150_1
+But I'd lack sufficient energy to warn people about it.,But I'd lack sufficient energy to warn people about it.,But I don't have the energy to fight people about it.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_117_150_1
+I'm so smart all over time.,I'm so smart all over time.,I am kinda angry all the time.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I'd therefore harbor any such desires with my girlfriend.,I'd therefore harbor any such desires with my girlfriend.,I do NOT have any sexual desires with my girlfriend.,nlp_cwe_sub_roberta+ta_contraction,ANHEDONIA,1,s_1404_8_5
+"Unfortunately I'd admit today, I failed both.","Unfortunately I'd admit today, I failed both.","Unfortunately I must admit today, I have failed.",nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,0,s_897_1223_7
+I'd actually like some free time right quick.,I'd actually like some free time right quick.,I would really like some free energy right now.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_969_1077_3
+I'd actually like some work samples right now.,I'd actually like some work samples right now.,I would really like some free energy right now.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_969_1077_3
+i've alot to say with personally.,i've alot to say with personally.,i have nothing to live for personally.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+i've written to apologize for today.,i've written to apologize for today.,i have nothing to live for personally.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+I made this mistake and i'll return.,I made this mistake and i'll return.,I made that mistake and never will again.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,0,s_1455_263_32
+I'm beaten down upon sex.,I'm beaten down upon sex.,I am very focused on sex.,nlp_cwe_sub_roberta+ta_contraction,SPECIAL_CASE,1,s_731_903_4
+Idk I've got to kill people.,Idk I've got to kill people.,Idk I just want to kill myself.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_2130_56_1
+I might've to budget for that!,I might've to budget for that!,I dont have the energy for that!,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_2832_876_0
+I just lost hope you'll be here.,I just lost hope you'll be here.,I just lost hope things will get better.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_2449_127_2
+I'm in a shower.,I'm in a shower.,I cry in the shower.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_1488_230_14
+"I've had much time with remorse, Danny.","I've had much time with remorse, Danny.","I have so much guilt and remorse, Danny.",nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,0,s_1674_10_490
+Some nights she'd get no call at midnight.,Some nights she'd get no call at midnight.,Some nights I would get no sleep at all.,nlp_cwe_sub_roberta+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+Some nights she'd get one sleep it all.,Some nights she'd get one sleep it all.,Some nights I would get no sleep at all.,nlp_cwe_sub_roberta+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+I've such comfort in another journey,I've such comfort in another journey,I have found comfort in my sadness,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_2415_116_0
+I won't look mad at all.,I won't look mad at all.,I should not be punished at all.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,0,s_2372_836_1
+I'd not be punished with war.,I'd not be punished with war.,I should not be punished at all.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,0,s_2372_836_1
+I've dreams about him so I have too.,I've dreams about him so I have too.,I have dreams about him and I cry sometimes.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_1404_48_15
+I have dreams about him so I've too.,I have dreams about him so I've too.,I have dreams about him and I cry sometimes.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_1404_48_15
+I've to hold in for believing.,I've to hold in for believing.,I tried to hold in not crying.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_2089_80_10
+I'm feeling bit restless.,I'm feeling bit restless.,I was a bit restless.,nlp_cwe_sub_roberta+ta_contraction,PSYCHOMOTOR,1,s_2606_671_3
+In fact tonight I've felt pretty down.,In fact tonight I've felt pretty down.,In fact lately I have been pretty depressed.,nlp_cwe_sub_roberta+ta_contraction,SPECIAL_CASE,1,s_2415_566_1
+I've no one whose help but mine.,I've no one whose help but mine.,I have no one to blame but myself.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+I'd do anything.,I'd do anything.,I don't enjoy anything.,nlp_cwe_sub_roberta+ta_contraction,ANHEDONIA,1,s_2415_1024_4
+Maybe 2 new idea that i could've,Maybe 2 new idea that i could've,Maybe a better future that i could have,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe 2 new idea that i could've,Maybe 2 new idea that i could've,Maybe a better future that i could have,nlp_cwe_sub_roberta+ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+Although I'll have more dark thoughts.,Although I'll have more dark thoughts.,Although I do have occasional suicidal thoughts.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_993_949_2
+I'll have some lesser power.,I'll have some lesser power.,I usually have a lesser appetite.,nlp_cwe_sub_roberta+ta_contraction,APPETITE_CHANGE,1,s_701_746_0
+I'd wish guilty lol,I'd wish guilty lol,I still feel guilty lol,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,0,s_1499_89_12
+"I did think I'd know, then absolutely did.","I did think I'd know, then absolutely did.","I didnt think I would cry, but I did.",nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_3066_1007_7
+"I didnt worry I'll cry, when he did.","I didnt worry I'll cry, when he did.","I didnt think I would cry, but I did.",nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_3066_1007_7
+Im at a bind because I've cravings.,Im at a bind because I've cravings.,Im in a diet and I have cravings.,nlp_cwe_sub_roberta+ta_contraction,APPETITE_CHANGE,0,s_299_514_0
+I'm not energy.,I'm not energy.,I have more energy.,nlp_cwe_sub_roberta+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+Also He would've the energy now.,Also He would've the energy now.,Also I do have some energy now.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_993_943_5
+"Cross my heart, we'd try too.","Cross my heart, we'd try too.","Cross my heart, I would cry sometimes.",nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_469_428_1
+"Cross every heart, she'd cry harder.","Cross every heart, she'd cry harder.","Cross my heart, I would cry sometimes.",nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_469_428_1
+I'm big down heart tonight.,I'm big down heart tonight.,I am big sad right now.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_2080_955_0
+I'd have started crying on & off all day.,I'd have started crying on & off all day.,I honestly have been crying on and off all week.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_464_138_3
+Oh how they'd like to have,Oh how they'd like to have,Oh yea I would like to die,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+i've strong cold energy.,i've strong cold energy.,i have no more energy.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_2107_102_4
+And I've been around much.,And I've been around much.,And I havent been sleeping well.,nlp_cwe_sub_roberta+ta_contraction,SLEEP_ISSUES,0,s_1024_41_22
+I'll DO anything in College.,I'll DO anything in College.,I can't concentrate enough in College.,nlp_cwe_sub_roberta+ta_contraction,COGNITIVE_ISSUES,1,s_2402_339_8
+I've these problems frequently.,I've these problems frequently.,I have sleep problems too.,nlp_cwe_sub_roberta+ta_contraction,SLEEP_ISSUES,0,s_2502_62_2
+i'm angry more kinds more.,i'm angry more kinds more.,i am angry all the time.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,1,s_2107_89_1
+I'll again cry.,I'll again cry.,I begin to cry.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_1779_24_136
+I'd become completely ashamed of everything as am.,I'd become completely ashamed of everything as am.,I have become almost ashamed of everything I am.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,1,s_1601_666_1
+I'd become completely ashamed of everything as am.,I'd become completely ashamed of everything as am.,I have become almost ashamed of everything I am.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,1,s_1601_666_1
+I think I'd just actually enjoy myself.,I think I'd just actually enjoy myself.,I think I would rather just shoot myself.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I know I'd personally just shoot everyone.,I know I'd personally just shoot everyone.,I think I would rather just shoot myself.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I've less energy can invest.,I've less energy can invest.,I have no energy to study.,nlp_cwe_sub_roberta+ta_contraction,FATIGUE,1,s_1404_90_5
+I've my will for cry.,I've my will for cry.,I lost my ability to cry.,nlp_cwe_sub_roberta+ta_contraction,DEPRESSED_MOOD,0,s_3028_530_0
+I didnt intend to suicide but I'd look guilty.,I didnt intend to suicide but I'd look guilty.,I dont want to suicide because I would feel guilty.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to touch myself I'd get sad.,I dont want to touch myself I'd get sad.,I dont want to suicide because I would feel guilty.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I didnt intend to suicide but I'd look guilty.,I didnt intend to suicide but I'd look guilty.,I dont want to suicide because I would feel guilty.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,1,s_1404_218_6
+I dont want to touch myself I'd get sad.,I dont want to touch myself I'd get sad.,I dont want to suicide because I would feel guilty.,nlp_cwe_sub_roberta+ta_contraction,WORTHLESSNESS,1,s_1404_218_6
+I'd let me sleep.,I'd let me sleep.,I can't eat or sleep.,nlp_cwe_sub_roberta+ta_contraction,APPETITE_CHANGE,1,s_888_1741_6
+I'll outright deny myself.,I'll outright deny myself.,I cant outright kill myself.,nlp_cwe_sub_roberta+ta_contraction,SUICIDAL_THOUGHTS,1,s_781_179_16

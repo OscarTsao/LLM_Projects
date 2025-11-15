@@ -1,0 +1,10 @@
+{
+  "report_id": "b9514e18-1bd3-4d40-9cd6-cd3e8b30d13e",
+  "study_id": "11111111-1111-1111-1111-111111111111",
+  "generated_at": "2025-10-17T09:49:05.529097+00:00",
+  "best_trial_id": "123e4567-e89b-12d3-a456-426614174000",
+  "best_validation_score": 0.0,
+  "best_trial_report_path": "/media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Multi_Evidence/experiments/trial_123e4567-e89b-12d3-a456-426614174000/evaluation_report.json",
+  "optimization_metric_name": "val_f1_macro",
+  "report_file_path": "/media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Multi_Evidence/experiments/study_11111111-1111-1111-1111-111111111111/summary_report.json"
+}

@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/hpo/search_space.py
+# hypothesis_version: 6.140.3
+
+[0.0, 1e-06, 1e-05, 0.001, 0.01, 0.2, 0.5, 1.0, 5.0, 'OptunaSearchSpace', 'adam', 'adamw', 'augmentation_method', 'augmentation_prob', 'batch_size', 'bce', 'bert-base', 'categorical', 'char_perturb', 'clinicalbert', 'cls', 'dropout', 'eda', 'focal', 'focal_gamma', 'hybrid', 'insert', 'label_smoothing', 'learning_rate', 'log_uniform', 'loss_type', 'max', 'mean', 'mental-bert', 'model_name', 'none', 'optimizer', 'optuna.Trial', 'pooling_strategy', 'psychbert', 'roberta-base', 'sgd', 'swap', 'synonym', 'uniform', 'weight_decay', 'weighted_bce']

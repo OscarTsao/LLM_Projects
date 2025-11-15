@@ -1,0 +1,11 @@
+# configs/evidence/pairclf.yaml
+model_name: "microsoft/deberta-v3-base"
+max_len: 256
+batch_size: 32
+lr: 2e-5
+epochs: 6
+dropout: 0.1
+loss: "ce"        # ce|focal
+pos_weight: 1.0
+fp16: true
+seed: 17

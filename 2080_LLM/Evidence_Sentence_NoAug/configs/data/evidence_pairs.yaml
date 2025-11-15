@@ -1,0 +1,17 @@
+# Hydra config for DSM-5 evidence pair dataset
+posts_path: ${paths.repo_root}/data/redsm5/redsm5_posts.csv
+annotations_path: ${paths.repo_root}/data/redsm5/redsm5_annotations.csv
+csv_path: ${.annotations_path}
+criteria_dir: ${paths.repo_root}/data/DSM5
+dsm5_dir: ${.criteria_dir}
+output_pairs: ${paths.datasets_dir}/evidence_pairs.parquet
+manifest_path: ${paths.manifests_dir}/folds.json
+neg_strategy: stratified
+neg_ratio: 3
+pos_neg_ratio: 0.333
+max_length: 512
+text_normalization:
+  lowercase: true
+  strip_whitespace: true
+seed: 1337
+allow_small_folds: false

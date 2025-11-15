@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/training/losses.py
+# hypothesis_version: 6.140.3
+
+[0.0, 0.1, 0.2, 0.25, 0.5, 0.9, 1.0, 2.0, 5.0, 'bce', 'focal', 'none', 'weighted_bce']

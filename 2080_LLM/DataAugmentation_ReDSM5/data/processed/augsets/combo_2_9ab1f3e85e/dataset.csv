@@ -1,0 +1,47 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I'm very ѕad.,I'm very ѕad.,I am very sad.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,0,s_411_1189_1
+I'm verу sad.,I'm verу sad.,I am very sad.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,0,s_411_1189_1
+I'm being tortuⲅed.,I'm being tortuⲅed.,I am being tortured.,ta_contraction+ta_wordswap_homoglyph,WORTHLESSNESS,0,s_1351_120_5
+I'm bеing tortured.,I'm bеing tortured.,I am being tortured.,ta_contraction+ta_wordswap_homoglyph,WORTHLESSNESS,0,s_1351_120_5
+I'm very tіred.,I'm very tіred.,I am very tired.,ta_contraction+ta_wordswap_homoglyph,FATIGUE,1,s_1030_1290_8
+I'm ѵery tired.,I'm ѵery tired.,I am very tired.,ta_contraction+ta_wordswap_homoglyph,FATIGUE,1,s_1030_1290_8
+I'm.. sadneѕs,I'm.. sadneѕs,I am.. sadness,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_855_1863_0
+I'ｍ.. sadness,I'ｍ.. sadness,I am.. sadness,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_855_1863_0
+I'm worthleѕs.,I'm worthleѕs.,I am worthless.,ta_contraction+ta_wordswap_homoglyph,WORTHLESSNESS,1,s_2415_2_3
+I'm wor𝚝hless.,I'm wor𝚝hless.,I am worthless.,ta_contraction+ta_wordswap_homoglyph,WORTHLESSNESS,1,s_2415_2_3
+I'm hopeleѕs.,I'm hopeleѕs.,I am hopeless.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2415_2_4
+I'm hopеless.,I'm hopеless.,I am hopeless.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2415_2_4
+And I'd crу so hard.,And I'd crу so hard.,And I would cry so hard.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2190_134_3
+And I'd cry so հard.,And I'd cry so հard.,And I would cry so hard.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2190_134_3
+I'm ѕad waiting.,I'm ѕad waiting.,I am sad waiting.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,0,s_577_923_1
+I'm sad waitiոg.,I'm sad waitiոg.,I am sad waiting.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,0,s_577_923_1
+I've alwaуs failed.,I've alwaуs failed.,I have always failed.,ta_contraction+ta_wordswap_homoglyph,WORTHLESSNESS,1,s_356_95_6
+I've alwɑys failed.,I've alwɑys failed.,I have always failed.,ta_contraction+ta_wordswap_homoglyph,WORTHLESSNESS,1,s_356_95_6
+I'm fuϲking CRYING.,I'm fuϲking CRYING.,I am fucking CRYING.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_74_207_1
+I`m fucking CRYING.,I`m fucking CRYING.,I am fucking CRYING.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_74_207_1
+I'm very lonelу now.,I'm very lonelу now.,I am very lonely now.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm very lonely ոow.,I'm very lonely ոow.,I am very lonely now.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2415_1014_9
+I've insоmnia.,I've insоmnia.,I have insomnia.,ta_contraction+ta_wordswap_homoglyph,SLEEP_ISSUES,1,s_341_1177_1
+I'vе insomnia.,I'vе insomnia.,I have insomnia.,ta_contraction+ta_wordswap_homoglyph,SLEEP_ISSUES,1,s_341_1177_1
+I'm tіred.,I'm tіred.,I am tired.,ta_contraction+ta_wordswap_homoglyph,FATIGUE,1,s_681_475_2
+I`m tired.,I`m tired.,I am tired.,ta_contraction+ta_wordswap_homoglyph,FATIGUE,1,s_681_475_2
+"I'm irritatеd, yes.","I'm irritatеd, yes.","I am irritated, yes.",ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2625_148_0
+"I`m irritated, yes.","I`m irritated, yes.","I am irritated, yes.",ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2625_148_0
+I'm so exhausteԁ.,I'm so exhausteԁ.,I am so exhausted.,ta_contraction+ta_wordswap_homoglyph,FATIGUE,1,s_697_17_12
+I'm ѕo exhausted.,I'm ѕo exhausted.,I am so exhausted.,ta_contraction+ta_wordswap_homoglyph,FATIGUE,1,s_697_17_12
+I'm aⅼso restless.,I'm aⅼso restless.,I am also restless.,ta_contraction+ta_wordswap_homoglyph,PSYCHOMOTOR,1,s_2139_45_8
+I'm also res𝚝less.,I'm also res𝚝less.,I am also restless.,ta_contraction+ta_wordswap_homoglyph,PSYCHOMOTOR,1,s_2139_45_8
+I'm just sɑd.,I'm just sɑd.,I am just sad.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_1681_1030_1
+I'm juѕt sad.,I'm juѕt sad.,I am just sad.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_1681_1030_1
+I'ѵe more energy.,I'ѵe more energy.,I have more energy.,ta_contraction+ta_wordswap_homoglyph,SPECIAL_CASE,1,s_2065_472_7
+I've more enеrgy.,I've more enеrgy.,I have more energy.,ta_contraction+ta_wordswap_homoglyph,SPECIAL_CASE,1,s_2065_472_7
+Yet I'm depresseԁ.,Yet I'm depresseԁ.,Yet I am depressed.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2139_3_2
+Yet I'm depressеd.,Yet I'm depressеd.,Yet I am depressed.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,1,s_2139_3_2
+Now I'm sɑd.,Now I'm sɑd.,Now I am sad.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,0,s_1681_799_2
+Nоw I'm sad.,Nоw I'm sad.,Now I am sad.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,0,s_1681_799_2
+i've no ｍore energy.,i've no ｍore energy.,i have no more energy.,ta_contraction+ta_wordswap_homoglyph,FATIGUE,1,s_2107_102_4
+i've no more eneⲅgy.,i've no more eneⲅgy.,i have no more energy.,ta_contraction+ta_wordswap_homoglyph,FATIGUE,1,s_2107_102_4
+"I desperately need sleep but every single fucking time that 'thing' 𝚝aps and bangѕ, I fear if i sleep it'll come out оf the fireplace and ԁecorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' 𝚝aps and bangѕ, I fear if i sleep it'll come out оf the fireplace and ԁecorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",ta_contraction+ta_wordswap_homoglyph,SLEEP_ISSUES,0,s_2544_1099_12
+i've depresѕion.,i've depresѕion.,i have depression.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,0,s_2107_11_2
+i've depⲅession.,i've depⲅession.,i have depression.,ta_contraction+ta_wordswap_homoglyph,DEPRESSED_MOOD,0,s_2107_11_2
+"I've always felt pretty guilty about tհe amount that I not only sleеp talk but sleep shout, actually, I pretty ｍuch only sleep shout... If I'm shouting angrily at someone in my dream then chances are I'll shout it out loud tоo, waking us both up.","I've always felt pretty guilty about tհe amount that I not only sleеp talk but sleep shout, actually, I pretty ｍuch only sleep shout... If I'm shouting angrily at someone in my dream then chances are I'll shout it out loud tоo, waking us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",ta_contraction+ta_wordswap_homoglyph,WORTHLESSNESS,1,s_2727_538_0

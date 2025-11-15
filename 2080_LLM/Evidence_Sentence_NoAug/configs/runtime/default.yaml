@@ -1,0 +1,8 @@
+use_gpu: true
+bf16: true
+fp16: false
+fp32_only: false
+deterministic: true
+reinitialize_weights_each_fold: true
+extra_env:
+  TOKENIZERS_PARALLELISM: "false"

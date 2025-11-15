@@ -1,0 +1,23 @@
+# Single-task model configuration (criteria matching only)
+name: "microsoft/deberta-v3-base"
+type: "huggingface"
+
+# Model architecture
+encoder:
+  model_id: "microsoft/deberta-v3-base"
+  cache_dir: "~/.cache/huggingface"
+  trust_remote_code: false
+  use_safetensors: true
+
+# Task heads
+heads:
+  criteria_matching:
+    num_labels: 9  # Number of mental health criteria
+    dropout: 0.1
+
+# Training hyperparameters
+learning_rate: 2e-5
+weight_decay: 0.01
+warmup_steps: 500
+max_grad_norm: 1.0
+

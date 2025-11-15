@@ -1,0 +1,25 @@
+defaults:
+  - data: evidence_pairs
+  - model: deberta_v3
+  - training: cv
+  - loss: weighted_ce
+  - cv: default
+  - logger@mlflow: mlflow
+  - runtime: default
+  - _self_
+
+project:
+  name: "5-fold-deberta-evidence"
+  seed: 1337
+
+paths:
+  repo_root: ${hydra:runtime.cwd}
+  mlflow_tracking_uri: sqlite:///mlflow.db
+  mlflow_artifact_root: ./mlruns
+  outputs_dir: outputs
+  datasets_dir: outputs/datasets
+  manifests_dir: outputs/manifests
+  metrics_dir: outputs/metrics
+
+trainer: ${training}
+logger: ${mlflow}

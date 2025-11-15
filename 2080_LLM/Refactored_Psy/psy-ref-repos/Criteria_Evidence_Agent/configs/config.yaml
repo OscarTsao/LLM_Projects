@@ -1,0 +1,33 @@
+defaults:
+  - data: default
+  - model: roberta_base
+  - training: default
+  - hpo: default
+  - _self_
+
+seed: 1337
+
+mlflow:
+  tracking_uri: ${env:MLFLOW_TRACKING_URI, "sqlite:///artifacts/mlruns/mlflow.db"}
+  artifact_uri: ${env:MLFLOW_ARTIFACT_URI, "file:artifacts/mlruns/artifacts"}
+  experiment_name: ${env:MLFLOW_EXPERIMENT_NAME, "criteria_evidence_agent"}
+  nested: false
+  autolog: true
+
+wandb:
+  enabled: ${env:WANDB_ENABLED, false}
+  project: ${env:WANDB_PROJECT, "criteria-evidence-agent"}
+  entity: ${env:WANDB_ENTITY, ""}
+  group: ${env:WANDB_GROUP, ""}
+  job_type: ${env:WANDB_JOB_TYPE, "train"}
+  tags: []
+  mode: ${env:WANDB_MODE, "online"}
+  watch: false
+  log_artifacts: true
+
+hydra:
+  run:
+    dir: outputs/${model.encoder.type}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

@@ -1,0 +1,14 @@
+{
+  "adam_beta1": 0.8804242242959538,
+  "adam_beta2": 0.9899703722010125,
+  "batch_size": 4,
+  "epochs": 1,
+  "evidence_dropout": 0.1291229140198042,
+  "evidence_head_type": "start_end_linear",
+  "learning_rate": 2.0040871876541563e-05,
+  "model_id": "prajjwal1/bert-tiny",
+  "momentum": 0.04246782213565523,
+  "nesterov": false,
+  "optimizer": "sgd",
+  "weight_decay": 0.008324426408004218
+}

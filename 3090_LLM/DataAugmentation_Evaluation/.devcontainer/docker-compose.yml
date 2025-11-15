@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  redsm5-dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    container_name: redsm5-dev
+    volumes:
+      - ..:/workspaces/DataAugmentation_ReDSM5
+    working_dir: /workspaces/DataAugmentation_ReDSM5
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - PYTHONPATH=/workspaces/DataAugmentation_ReDSM5
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    shm_size: 1gb
+    ipc: host
+    stdin_open: true
+    tty: true
+    command: sleep infinity
+    ports:
+      - "6006:6006"  # TensorBoard
+      - "8080:8080"  # Optuna Dashboard
+      - "8888:8888"  # Jupyter

@@ -1,0 +1,40 @@
+[
+  {
+    "rank": 1,
+    "trial_number": 8,
+    "value": [
+      0.4489247311827957
+    ],
+    "params": {
+      "seed": 30691,
+      "model.name": "bert-base-uncased",
+      "tok.max_length": 384,
+      "tok.doc_stride": 128,
+      "tok.use_fast": false,
+      "train.batch_size": 12,
+      "train.grad_accum": 3,
+      "optim.name": "adamw",
+      "optim.lr": 0.00012989489249798375,
+      "optim.weight_decay": 6.604852634419806e-05,
+      "optim.beta1": 0.8234892671677452,
+      "optim.beta2": 0.9811972492637612,
+      "optim.eps": 4.325244974482201e-09,
+      "sched.name": "cosine",
+      "sched.warmup_ratio": 0.1838928813413595,
+      "train.clip_grad": 0.7226189861906098,
+      "model.dropout": 0.1201412551593165,
+      "model.attn_dropout": 0.28809683631476535,
+      "train.grad_checkpointing": true,
+      "train.freeze_encoder_layers": 2,
+      "optim.layerwise_lr_decay": 0.836460877759209,
+      "head.pooling": "cls",
+      "head.layers": 2,
+      "head.hidden": 768,
+      "head.activation": "gelu",
+      "head.dropout": 0.4644149154297366,
+      "loss.cls.type": "ce",
+      "loss.cls.label_smoothing": 0.13234919675296147,
+      "loss.cls.balance": "none"
+    }
+  }
+]

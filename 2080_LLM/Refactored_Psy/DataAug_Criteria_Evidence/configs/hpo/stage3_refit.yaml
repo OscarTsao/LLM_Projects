@@ -1,0 +1,33 @@
+# Stage 3: Refit with best hyperparameters
+
+stage: 3
+stage_name: "refit_best"
+description: "Retrain with best hyperparameters on full training data"
+
+# Optuna settings (single trial with best params)
+n_trials: 1
+timeout: null
+direction: "maximize"
+metric: "test_f1_macro"
+
+# No search space - use best params from stage 2
+search_space: {}
+
+# Training settings for final refit
+num_epochs: 15  # 20% more epochs
+early_stopping_patience: 5
+
+# Multiple seeds for robustness
+seeds: [42, 123, 456, 789, 2023]
+
+# Evaluation settings
+evaluate_on_test: true
+save_all_checkpoints: true
+generate_predictions: true
+
+# Ensemble settings (optional)
+ensemble:
+  enabled: false
+  n_models: 5
+  voting: "soft"
+  aggregation: "mean"

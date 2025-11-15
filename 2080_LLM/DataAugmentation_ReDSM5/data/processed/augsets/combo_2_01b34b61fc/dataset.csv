@@ -1,0 +1,74 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I hate that i'm ckying kn.,I hate that i'm ckying kn.,I hate that i am crying rn.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+1 hate that i'm crying kn.,1 hate that i'm crying kn.,I hate that i am crying rn.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I've 6een fee1ing down on and off.,I've 6een fee1ing down on and off.,I have been feeling down on and off.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I'm veky depressed a1so.,I'm veky depressed a1so.,I am very depressed also.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_131_822_0
+I'm 6eing tortured.,I'm 6eing tortured.,I am being tortured.,nlp_ocr+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm bein9 tortured.,I'm bein9 tortured.,I am being tortured.,nlp_ocr+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I've n0 enekgy at all.,I've n0 enekgy at all.,I have no energy at all.,nlp_ocr+ta_contraction,FATIGUE,1,s_1455_72_50
+I am scared 1 won't 6e a successfol man in the future,I am scared 1 won't 6e a successfol man in the future,I am scared I will not be a successful man in the future,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+1 am 8cared 1 won't be a successful man in the future,1 am 8cared 1 won't be a successful man in the future,I am scared I will not be a successful man in the future,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+I'm veky tiked.,I'm veky tiked.,I am very tired.,nlp_ocr+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm very tiked.,I'm very tiked.,I am very tired.,nlp_ocr+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm wokthless.,I'm wokthless.,I am worthless.,nlp_ocr+ta_contraction,WORTHLESSNESS,1,s_2415_2_3
+I'm hope1ess.,I'm hope1ess.,I am hopeless.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2415_2_4
+I'm h0peless.,I'm h0peless.,I am hopeless.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2415_2_4
+And I'd cky so hakd.,And I'd cky so hakd.,And I would cry so hard.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2190_134_3
+I've is8ues in focu8ing and attention.,I've is8ues in focu8ing and attention.,I have issues in focusing and attention.,nlp_ocr+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+1 cant focus and i've no enekgy.,1 cant focus and i've no enekgy.,I cant focus and i have no energy.,nlp_ocr+ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+1 cant focus and i've nu ener9y.,1 cant focus and i've nu ener9y.,I cant focus and i have no energy.,nlp_ocr+ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+I'm fucring CRYING.,I'm fucring CRYING.,I am fucking CRYING.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm fucking CRYINC.,I'm fucking CRYINC.,I am fucking CRYING.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm veky lonely nuw.,I'm veky lonely nuw.,I am very lonely now.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm rinda angry al1 the time.,I'm rinda angry al1 the time.,I am kinda angry all the time.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I've insumnia.,I've insumnia.,I have insomnia.,nlp_ocr+ta_contraction,SLEEP_ISSUES,1,s_341_1177_1
+I'm tiked.,I'm tiked.,I am tired.,nlp_ocr+ta_contraction,FATIGUE,1,s_681_475_2
+I'd really like 8ome fkee energy right n0w.,I'd really like 8ome fkee energy right n0w.,I would really like some free energy right now.,nlp_ocr+ta_contraction,FATIGUE,1,s_969_1077_3
+i've nothing tu live for peksonally.,i've nothing tu live for peksonally.,i have nothing to live for personally.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+i've nothin9 to 1ive for personally.,i've nothin9 to 1ive for personally.,i have nothing to live for personally.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+I'm veky focu8ed on sex.,I'm veky focu8ed on sex.,I am very focused on sex.,nlp_ocr+ta_contraction,SPECIAL_CASE,1,s_731_903_4
+Bven my low pain day8 I've no energy.,Bven my low pain day8 I've no energy.,Even my low pain days I have no energy.,nlp_ocr+ta_contraction,FATIGUE,1,s_1749_905_17
+"I'm ikritated, yes.","I'm ikritated, yes.","I am irritated, yes.",nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+"I'm ikritated, ye8.","I'm ikritated, ye8.","I am irritated, yes.",nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+Some nights I'd 9et n0 s1eep at all.,Some nights I'd 9et n0 s1eep at all.,Some nights I would get no sleep at all.,nlp_ocr+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+8ome nights I'd 9et no sleep at all.,8ome nights I'd 9et no sleep at all.,Some nights I would get no sleep at all.,nlp_ocr+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+I've f0und comfort in my sadne8s,I've f0und comfort in my sadne8s,I have found comfort in my sadness,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_2415_116_0
+I've found comfokt in my sadnes8,I've found comfokt in my sadnes8,I have found comfort in my sadness,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_2415_116_0
+I'm so exhau8ted.,I'm so exhau8ted.,I am so exhausted.,nlp_ocr+ta_contraction,FATIGUE,1,s_697_17_12
+I'm 8o exhausted.,I'm 8o exhausted.,I am so exhausted.,nlp_ocr+ta_contraction,FATIGUE,1,s_697_17_12
+I'm a1so restless.,I'm a1so restless.,I am also restless.,nlp_ocr+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+Menta1ly I've no ener9y either.,Menta1ly I've no ener9y either.,Mentally I have no energy either.,nlp_ocr+ta_contraction,FATIGUE,1,s_1404_852_6
+Mental1y I've nu energy either.,Mental1y I've nu energy either.,Mentally I have no energy either.,nlp_ocr+ta_contraction,FATIGUE,1,s_1404_852_6
+I've no une to 6lame but myself.,I've no une to 6lame but myself.,I have no one to blame but myself.,nlp_ocr+ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+I've no une to b1ame but myself.,I've no une to b1ame but myself.,I have no one to blame but myself.,nlp_ocr+ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+I've more enekgy.,I've more enekgy.,I have more energy.,nlp_ocr+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I'm fucking ANCRY nuw.,I'm fucking ANCRY nuw.,I am fucking ANGRY now.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_188_399_2
+I'm fucking ANCRY n0w.,I'm fucking ANCRY n0w.,I am fucking ANGRY now.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_188_399_2
+Yet I'm depkessed.,Yet I'm depkessed.,Yet I am depressed.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+Now I'm 8ad.,Now I'm 8ad.,Now I am sad.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+"Cro8s my heakt, I'd cry sometimes.","Cro8s my heakt, I'd cry sometimes.","Cross my heart, I would cry sometimes.",nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_469_428_1
+I'm big sad kight n0w.,I'm big sad kight n0w.,I am big sad right now.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2080_955_0
+I'm 6ig sad right n0w.,I'm 6ig sad right n0w.,I am big sad right now.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,1,s_2080_955_0
+Oh yea I'd 1ike tu die,Oh yea I'd 1ike tu die,Oh yea I would like to die,nlp_ocr+ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+i've nu more enekgy.,i've nu more enekgy.,i have no more energy.,nlp_ocr+ta_contraction,FATIGUE,1,s_2107_102_4
+i've nu moke energy.,i've nu moke energy.,i have no more energy.,nlp_ocr+ta_contraction,FATIGUE,1,s_2107_102_4
+I've failed all my previoos attempt8.,I've failed all my previoos attempt8.,I have failed all my previous attempts.,nlp_ocr+ta_contraction,WORTHLESSNESS,1,s_2409_43_9
+I've lost a1l intere8t.,I've lost a1l intere8t.,I have lost all interest.,nlp_ocr+ta_contraction,ANHEDONIA,1,s_993_781_12
+I've l0st all intekest.,I've l0st all intekest.,I have lost all interest.,nlp_ocr+ta_contraction,ANHEDONIA,1,s_993_781_12
+I've a very hardtime maring decisiuns.,I've a very hardtime maring decisiuns.,I have a very hardtime making decisions.,nlp_ocr+ta_contraction,COGNITIVE_ISSUES,1,s_759_88_0
+I've a veky hakdtime making decisions.,I've a veky hakdtime making decisions.,I have a very hardtime making decisions.,nlp_ocr+ta_contraction,COGNITIVE_ISSUES,1,s_759_88_0
+i ' m very h0peful i'll.,i ' m very h0peful i'll.,i'm very hopeful i will.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+i ' m very hopefol i'll.,i ' m very hopefol i'll.,i'm very hopeful i will.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+I am n0t suicidal and I'd nevek 6e ',I am n0t suicidal and I'd nevek 6e ',I am not suicidal and I would never be',nlp_ocr+ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+i've depres8ion.,i've depres8ion.,i have depression.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_2107_11_2
+i've depressi0n.,i've depressi0n.,i have depression.,nlp_ocr+ta_contraction,DEPRESSED_MOOD,0,s_2107_11_2
+"1 ' ve alway8 felt pketty guilty about the amount that I nut only s1eep talk but 8leep shout, actually, 1 pretty much only sleep shout. .. If I ' m shouting angrily at someone in my dream then chances are I'll 8hout it out loud too, waking us buth up.","1 ' ve alway8 felt pketty guilty about the amount that I nut only s1eep talk but 8leep shout, actually, 1 pretty much only sleep shout. .. If I ' m shouting angrily at someone in my dream then chances are I'll 8hout it out loud too, waking us buth up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",nlp_ocr+ta_contraction,WORTHLESSNESS,1,s_2727_538_0
+I thinr I'd rathek just shoot my8elf.,I thinr I'd rathek just shoot my8elf.,I think I would rather just shoot myself.,nlp_ocr+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I'm just tiked at this puint.,I'm just tiked at this puint.,I am just tired at this point.,nlp_ocr+ta_contraction,FATIGUE,1,s_592_276_0
+I'm ju8t tired at thi8 point.,I'm ju8t tired at thi8 point.,I am just tired at this point.,nlp_ocr+ta_contraction,FATIGUE,1,s_592_276_0
+I've no energy tu 8tudy.,I've no energy tu 8tudy.,I have no energy to study.,nlp_ocr+ta_contraction,FATIGUE,1,s_1404_90_5
+I've nu energy t0 study.,I've nu energy t0 study.,I have no energy to study.,nlp_ocr+ta_contraction,FATIGUE,1,s_1404_90_5
+1 dont want to suicide 6ecause I'd feel goilty.,1 dont want to suicide 6ecause I'd feel goilty.,I dont want to suicide because I would feel guilty.,nlp_ocr+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+1 dont want t0 suicide because I'd feel goilty.,1 dont want t0 suicide because I'd feel goilty.,I dont want to suicide because I would feel guilty.,nlp_ocr+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+1 dont want t0 suicide because I'd feel goilty.,1 dont want t0 suicide because I'd feel goilty.,I dont want to suicide because I would feel guilty.,nlp_ocr+ta_contraction,WORTHLESSNESS,1,s_1404_218_6
+1 dont want to suicide 6ecause I'd feel goilty.,1 dont want to suicide 6ecause I'd feel goilty.,I dont want to suicide because I would feel guilty.,nlp_ocr+ta_contraction,WORTHLESSNESS,1,s_1404_218_6

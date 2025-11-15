@@ -1,0 +1,16 @@
+ground_truth_path: data/redsm5
+ground_truth_format: redsm5
+include_original: true
+use_augmented: []
+augmented_to_train_only: true
+splits:
+  train: 0.7
+  val: 0.15
+  test: 0.15
+shuffle_seed: 42
+cross_validation:
+  enabled: true
+  num_folds: 5
+  shuffle_seed: 42
+cache_in_memory: true
+cache_max_ram_fraction: 0.9

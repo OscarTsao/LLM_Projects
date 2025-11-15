@@ -1,0 +1,47 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I'm very ssd.,I'm very ssd.,I am very sad.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_411_1189_1
+I'm very swd.,I'm very swd.,I am very sad.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_411_1189_1
+I'm being torturrd.,I'm being torturrd.,I am being tortured.,ta_contraction+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1351_120_5
+I'm beimg tortured.,I'm beimg tortured.,I am being tortured.,ta_contraction+ta_wordswap_qwerty,WORTHLESSNESS,0,s_1351_120_5
+I'm very tirdd.,I'm very tirdd.,I am very tired.,ta_contraction+ta_wordswap_qwerty,FATIGUE,1,s_1030_1290_8
+I'm very rired.,I'm very rired.,I am very tired.,ta_contraction+ta_wordswap_qwerty,FATIGUE,1,s_1030_1290_8
+I'n.. sadness,I'n.. sadness,I am.. sadness,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_855_1863_0
+I'm.. eadness,I'm.. eadness,I am.. sadness,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_855_1863_0
+I'm worthlfss.,I'm worthlfss.,I am worthless.,ta_contraction+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_2_3
+I'm wlrthless.,I'm wlrthless.,I am worthless.,ta_contraction+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2415_2_3
+I'm hopelews.,I'm hopelews.,I am hopeless.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_2_4
+I'm hopelees.,I'm hopelees.,I am hopeless.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_2_4
+And I'r cry so hard.,And I'r cry so hard.,And I would cry so hard.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2190_134_3
+And I'd cry so hare.,And I'd cry so hare.,And I would cry so hard.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2190_134_3
+I'j sad waiting.,I'j sad waiting.,I am sad waiting.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_577_923_1
+I'm aad waiting.,I'm aad waiting.,I am sad waiting.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_577_923_1
+I'vd always failed.,I'vd always failed.,I have always failed.,ta_contraction+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_95_6
+I've always failrd.,I've always failrd.,I have always failed.,ta_contraction+ta_wordswap_qwerty,WORTHLESSNESS,1,s_356_95_6
+I'm fuckinb CRYING.,I'm fuckinb CRYING.,I am fucking CRYING.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_74_207_1
+U'm fucking CRYING.,U'm fucking CRYING.,I am fucking CRYING.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_74_207_1
+I'n very lonely now.,I'n very lonely now.,I am very lonely now.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm very lobely now.,I'm very lobely now.,I am very lonely now.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2415_1014_9
+I've insomniz.,I've insomniz.,I have insomnia.,ta_contraction+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_341_1177_1
+K've insomnia.,K've insomnia.,I have insomnia.,ta_contraction+ta_wordswap_qwerty,SLEEP_ISSUES,1,s_341_1177_1
+I'n tired.,I'n tired.,I am tired.,ta_contraction+ta_wordswap_qwerty,FATIGUE,1,s_681_475_2
+I'm tiree.,I'm tiree.,I am tired.,ta_contraction+ta_wordswap_qwerty,FATIGUE,1,s_681_475_2
+"I'm irrirated, yes.","I'm irrirated, yes.","I am irritated, yes.",ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2625_148_0
+"I'm irritated, yex.","I'm irritated, yex.","I am irritated, yes.",ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2625_148_0
+I'm do exhausted.,I'm do exhausted.,I am so exhausted.,ta_contraction+ta_wordswap_qwerty,FATIGUE,1,s_697_17_12
+I'm so extausted.,I'm so extausted.,I am so exhausted.,ta_contraction+ta_wordswap_qwerty,FATIGUE,1,s_697_17_12
+I'm aoso restless.,I'm aoso restless.,I am also restless.,ta_contraction+ta_wordswap_qwerty,PSYCHOMOTOR,1,s_2139_45_8
+I'm also restlexs.,I'm also restlexs.,I am also restless.,ta_contraction+ta_wordswap_qwerty,PSYCHOMOTOR,1,s_2139_45_8
+I'm jusf sad.,I'm jusf sad.,I am just sad.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1681_1030_1
+I'm must sad.,I'm must sad.,I am just sad.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_1681_1030_1
+I've more ebergy.,I've more ebergy.,I have more energy.,ta_contraction+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2065_472_7
+I'ge more energy.,I'ge more energy.,I have more energy.,ta_contraction+ta_wordswap_qwerty,SPECIAL_CASE,1,s_2065_472_7
+Yet I'm delressed.,Yet I'm delressed.,Yet I am depressed.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2139_3_2
+Yef I'm depressed.,Yef I'm depressed.,Yet I am depressed.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,1,s_2139_3_2
+Now I'm dad.,Now I'm dad.,Now I am sad.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1681_799_2
+Nkw I'm sad.,Nkw I'm sad.,Now I am sad.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_1681_799_2
+i'be no more energy.,i'be no more energy.,i have no more energy.,ta_contraction+ta_wordswap_qwerty,FATIGUE,1,s_2107_102_4
+i've no more energh.,i've no more energh.,i have no more energy.,ta_contraction+ta_wordswap_qwerty,FATIGUE,1,s_2107_102_4
+"I deeperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it'll come ouy of the eireplace and decorate my room in my remains, my world is spinnkng, I'm going to try to sleep tonight.","I deeperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it'll come ouy of the eireplace and decorate my room in my remains, my world is spinnkng, I'm going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",ta_contraction+ta_wordswap_qwerty,SLEEP_ISSUES,0,s_2544_1099_12
+i've depressiom.,i've depressiom.,i have depression.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2107_11_2
+i've deoression.,i've deoression.,i have depression.,ta_contraction+ta_wordswap_qwerty,DEPRESSED_MOOD,0,s_2107_11_2
+"I've always felt pretty guilty about the amkunt thah I not only sleep takk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I'll shout it out loud too, wakind us both up.","I've always felt pretty guilty about the amkunt thah I not only sleep takk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I'll shout it out loud too, wakind us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",ta_contraction+ta_wordswap_qwerty,WORTHLESSNESS,1,s_2727_538_0

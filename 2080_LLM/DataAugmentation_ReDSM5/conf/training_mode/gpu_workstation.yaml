@@ -1,0 +1,16 @@
+# Training mode optimized for a single high-end GPU workstation (e.g. RTX/Blackwell 5090).
+
+defaults:
+  - _self_
+
+training_mode: gpu_workstation
+
+# Tune dataloader for fast host-to-device transfer on workstations with many CPU cores.
+dataloader:
+  num_workers: 24
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+
+# Keep the default output path but annotate the run.
+notes: "GPU workstation profile (RTX 5090)"

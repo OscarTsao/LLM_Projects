@@ -1,0 +1,6 @@
+# @package _global_
+
+model:
+  name: "microsoft/deberta-v3-base"
+  num_labels: 2
+  problem_type: "single_label_classification"

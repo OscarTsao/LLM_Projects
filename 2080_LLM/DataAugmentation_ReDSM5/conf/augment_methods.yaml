@@ -1,0 +1,231 @@
+methods:
+  - id: nlp_wordnet_syn
+    lib: nlpaug
+    kind: nlpaug.augmenter.word.SynonymAug
+    args:
+      aug_src: wordnet
+      aug_min: 1
+      aug_max: 2
+    requires_gpu: false
+
+  - id: nlp_randword_delete
+    lib: nlpaug
+    kind: nlpaug.augmenter.word.RandomWordAug
+    args:
+      action: delete
+      aug_min: 1
+      aug_p: 0.08
+    requires_gpu: false
+
+  - id: nlp_wordnet_insert
+    lib: nlpaug
+    kind: nlpaug.augmenter.word.SynonymAug
+    args:
+      aug_src: wordnet
+      aug_min: 1
+      aug_p: 0.08
+    requires_gpu: false
+
+  - id: nlp_randword_sub
+    lib: nlpaug
+    kind: nlpaug.augmenter.word.RandomWordAug
+    args:
+      action: substitute
+      aug_min: 1
+      aug_p: 0.08
+    requires_gpu: false
+
+  - id: nlp_randchar_ins
+    lib: nlpaug
+    kind: nlpaug.augmenter.char.RandomCharAug
+    args:
+      action: insert
+      aug_char_min: 1
+      aug_char_p: 0.06
+    requires_gpu: false
+
+  - id: nlp_randchar_del
+    lib: nlpaug
+    kind: nlpaug.augmenter.char.RandomCharAug
+    args:
+      action: delete
+      aug_char_min: 1
+      aug_char_p: 0.06
+    requires_gpu: false
+
+  - id: nlp_randchar_sub
+    lib: nlpaug
+    kind: nlpaug.augmenter.char.RandomCharAug
+    args:
+      action: substitute
+      aug_char_min: 1
+      aug_char_p: 0.06
+    requires_gpu: false
+
+  - id: nlp_randchar_swap
+    lib: nlpaug
+    kind: nlpaug.augmenter.char.RandomCharAug
+    args:
+      action: swap
+      aug_char_min: 1
+      aug_char_p: 0.06
+    requires_gpu: false
+
+  - id: nlp_keyboard
+    lib: nlpaug
+    kind: nlpaug.augmenter.char.KeyboardAug
+    args:
+      aug_char_min: 1
+      aug_char_p: 0.05
+    requires_gpu: false
+
+  - id: nlp_ocr
+    lib: nlpaug
+    kind: nlpaug.augmenter.char.OcrAug
+    args:
+      aug_char_min: 1
+      aug_char_p: 0.05
+    requires_gpu: false
+
+  - id: nlp_spelling
+    lib: nlpaug
+    kind: nlpaug.augmenter.word.SpellingAug
+    args:
+      aug_min: 1
+      aug_p: 0.08
+    requires_gpu: false
+
+  - id: nlp_cwe_sub_roberta
+    lib: nlpaug
+    kind: nlpaug.augmenter.word.ContextualWordEmbsAug
+    args:
+      model_path: roberta-base
+      action: substitute
+      top_k: 30
+      device: auto
+    requires_gpu: true
+
+  - id: nlp_cwe_insert_roberta
+    lib: nlpaug
+    kind: nlpaug.augmenter.word.ContextualWordEmbsAug
+    args:
+      model_path: roberta-base
+      action: insert
+      top_k: 30
+      device: auto
+    requires_gpu: true
+
+  - id: ta_wordswap_embedding
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapEmbedding
+    args:
+      max_candidates: 8
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_wordswap_wordnet
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapWordNet
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_wordswap_homoglyph
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapHomoglyphSwap
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_wordswap_qwerty
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapQWERTY
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_char_neighbor
+    lib: textattack
+    kind: textattack.transformations.WordSwapNeighboringCharacterSwap
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_char_rand_del
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapRandomCharacterDeletion
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_char_rand_ins
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapRandomCharacterInsertion
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_char_rand_swap
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapRandomCharacterSubstitution
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_word_delete
+    lib: textattack
+    kind: textattack.transformations.word_deletion.WordDeletion
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_word_insert_syn
+    lib: textattack
+    kind: textattack.transformations.word_insertions.word_insertion_random_synonym.WordInsertionRandomSynonym
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_mlm_sub_bert
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapMaskedLM
+    args:
+      masked_language_model: bert-base-uncased
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: true
+
+  - id: ta_mlm_sub_roberta
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapMaskedLM
+    args:
+      masked_language_model: roberta-base
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: true
+
+  - id: ta_word_swap_morph
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapInflections
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false
+
+  - id: ta_contraction
+    lib: textattack
+    kind: textattack.transformations.word_swaps.WordSwapContract
+    args:
+      augmenter_kwargs:
+        transformations_per_example: 2
+    requires_gpu: false

@@ -1,0 +1,96 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I detest that i'm crying rn.,I detest that i'm crying rn.,I hate that i am crying rn.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I've been feeling downward on and off.,I've been feeling downward on and off.,I have been feeling down on and off.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2035_91_6
+I'm rattling depressed also.,I'm rattling depressed also.,I am very depressed also.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_131_822_0
+I'm being excruciate.,I'm being excruciate.,I am being tortured.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm be tortured.,I'm be tortured.,I am being tortured.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I've no muscularity at all.,I've no muscularity at all.,I have no energy at all.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_1455_72_50
+I am scared I won't constitute a successful man in the hereafter,I am scared I won't constitute a successful man in the hereafter,I am scared I will not be a successful man in the future,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+I am frighten away I won't be a successful man in the future,I am frighten away I won't be a successful man in the future,I am scared I will not be a successful man in the future,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_65_110_0
+I'm. . unhappiness,I'm. . unhappiness,I am.. sadness,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+Then I'd get really angry at prison term.,Then I'd get really angry at prison term.,Then I would get really angry at times.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_84_60_2
+I'm highly suicidal atm.,I'm highly suicidal atm.,I am extremely suicidal atm.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I've already planned my own felo de se.,I've already planned my own felo de se.,I have already planned my own suicide.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_1989_742_0
+I've already planned my ain suicide.,I've already planned my ain suicide.,I have already planned my own suicide.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_1989_742_0
+Simply I'm feeling miserable.,Simply I'm feeling miserable.,But I am feeling miserable.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_2415_600_3
+But I'm feel miserable.,But I'm feel miserable.,But I am feeling miserable.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_2415_600_3
+I'm sad wait.,I'm sad wait.,I am sad waiting.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I'm pitiful waiting.,I'm pitiful waiting.,I am sad waiting.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I've issues in focalise and attention.,I've issues in focalise and attention.,I have issues in focusing and attention.,nlp_wordnet_insert+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+I've issues in focusing and aid.,I've issues in focusing and aid.,I have issues in focusing and attention.,nlp_wordnet_insert+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+Iodin cant focus and i've no energy.,Iodin cant focus and i've no energy.,I cant focus and i have no energy.,nlp_wordnet_insert+ta_contraction,COGNITIVE_ISSUES,1,s_1404_729_2
+I scarcely get into ' t think I'd like to live anymore.,I scarcely get into ' t think I'd like to live anymore.,I just don't think I would like to live anymore.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I've sleep palsy almost every night.,I've sleep palsy almost every night.,I have sleep paralysis almost every night.,nlp_wordnet_insert+ta_contraction,SLEEP_ISSUES,1,s_2008_331_0
+I've always fail.,I've always fail.,I have always failed.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_356_95_6
+I've always give way.,I've always give way.,I have always failed.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_356_95_6
+I'm fucking war cry.,I'm fucking war cry.,I am fucking CRYING.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm in a constant quandary.,I'm in a constant quandary.,I am in a constant dilemma.,nlp_wordnet_insert+ta_contraction,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm kinda wild all the time.,I'm kinda wild all the time.,I am kinda angry all the time.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_1749_859_23
+I'd very like some free energy right now.,I'd very like some free energy right now.,I would really like some free energy right now.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_969_1077_3
+I'd really care some free energy right now.,I'd really care some free energy right now.,I would really like some free energy right now.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_969_1077_3
+i've nothing to dwell for personally.,i've nothing to dwell for personally.,i have nothing to live for personally.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+i've zilch to live for personally.,i've zilch to live for personally.,i have nothing to live for personally.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_699_4_6
+I'm very focalise on sex.,I'm very focalise on sex.,I am very focused on sex.,nlp_wordnet_insert+ta_contraction,SPECIAL_CASE,1,s_731_903_4
+Wow it knows how sorry I'm,Wow it knows how sorry I'm,Wow it knows how sad I am,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_694_827_0
+I'm go bad miserably.,I'm go bad miserably.,I am failing miserably.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_993_720_4
+Even my low pain days I've no zip.,Even my low pain days I've no zip.,Even my low pain days I have no energy.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_1749_905_17
+Even my grim pain days I've no energy.,Even my grim pain days I've no energy.,Even my low pain days I have no energy.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_1749_905_17
+"I'm stung, yes.","I'm stung, yes.","I am irritated, yes.",nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+"I'm nettled, yes.","I'm nettled, yes.","I am irritated, yes.",nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+I'm now well more relaxed.,I'm now well more relaxed.,I am now considerably more relaxed.,nlp_wordnet_insert+ta_contraction,SPECIAL_CASE,1,s_2301_443_1
+Some nights I'd arrive no sleep at all.,Some nights I'd arrive no sleep at all.,Some nights I would get no sleep at all.,nlp_wordnet_insert+ta_contraction,SLEEP_ISSUES,0,s_697_322_2
+I've regain comfort in my sadness,I've regain comfort in my sadness,I have found comfort in my sadness,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_2415_116_0
+I'm thusly exhausted.,I'm thusly exhausted.,I am so exhausted.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_697_17_12
+I'm indeed exhausted.,I'm indeed exhausted.,I am so exhausted.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_697_17_12
+I'm likewise restless.,I'm likewise restless.,I am also restless.,nlp_wordnet_insert+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm finger suicidal again.,I'm finger suicidal again.,I am feeling suicidal again.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_993_450_6
+"I've sex, but I ' m pretty pessimistic.","I've sex, but I ' m pretty pessimistic.","I know, but I'm pretty pessimistic.",nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_775_184_0
+I've lost motive.,I've lost motive.,I have lost motivation.,nlp_wordnet_insert+ta_contraction,ANHEDONIA,1,s_2415_566_0
+In fact lately I've been pretty gloomy.,In fact lately I've been pretty gloomy.,In fact lately I have been pretty depressed.,nlp_wordnet_insert+ta_contraction,SPECIAL_CASE,1,s_2415_566_1
+Mentally I've no push either.,Mentally I've no push either.,Mentally I have no energy either.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_1404_852_6
+Mentally I've no vigour either.,Mentally I've no vigour either.,Mentally I have no energy either.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_1404_852_6
+I've go for for the future.,I've go for for the future.,I have hope for the future.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_1230_158_13
+I've no i to blame but myself.,I've no i to blame but myself.,I have no one to blame but myself.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_1955_911_1
+Mayhap a better future that i could've,Mayhap a better future that i could've,Maybe a better future that i could have,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe a expert future that i could've,Maybe a expert future that i could've,Maybe a better future that i could have,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2401_24_0
+Mayhap a better future that i could've,Mayhap a better future that i could've,Maybe a better future that i could have,nlp_wordnet_insert+ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+Maybe a expert future that i could've,Maybe a expert future that i could've,Maybe a better future that i could have,nlp_wordnet_insert+ta_contraction,SPECIAL_CASE,1,s_2401_24_0
+"Ane didnt think I'd cry, but I did.","Ane didnt think I'd cry, but I did.","I didnt think I would cry, but I did.",nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_3066_1007_7
+I've more than energy.,I've more than energy.,I have more energy.,nlp_wordnet_insert+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I've more vitality.,I've more vitality.,I have more energy.,nlp_wordnet_insert+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I'm know ANGRY now.,I'm know ANGRY now.,I am fucking ANGRY now.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_188_399_2
+Nevertheless I'm depressed.,Nevertheless I'm depressed.,Yet I am depressed.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+I'm such an irritable prick.,I'm such an irritable prick.,I am such an irritable dick.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+I'm such an irritable putz.,I'm such an irritable putz.,I am such an irritable dick.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_1749_691_5
+Right away I'm sad.,Right away I'm sad.,Now I am sad.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+Instantly I'm sad.,Instantly I'm sad.,Now I am sad.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+"Cross my essence, I'd cry sometimes.","Cross my essence, I'd cry sometimes.","Cross my heart, I would cry sometimes.",nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_469_428_1
+"Cross my heart and soul, I'd cry sometimes.","Cross my heart and soul, I'd cry sometimes.","Cross my heart, I would cry sometimes.",nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_469_428_1
+I'm big pitiful right now.,I'm big pitiful right now.,I am big sad right now.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2080_955_0
+I'm big sad rightfield now.,I'm big sad rightfield now.,I am big sad right now.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2080_955_0
+Oh yea I'd like to decease,Oh yea I'd like to decease,Oh yea I would like to die,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+Oh yea I'd care to die,Oh yea I'd care to die,Oh yea I would like to die,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_2781_521_0
+"I desperately need sleep but every single fucking fourth dimension that ' thing ' taps and bangs, I fear if i sleep it'll come out of the fireplace and decorate my way in my corpse, my world is spinning, I ' m going to try to sleep tonight.","I desperately need sleep but every single fucking fourth dimension that ' thing ' taps and bangs, I fear if i sleep it'll come out of the fireplace and decorate my way in my corpse, my world is spinning, I ' m going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",nlp_wordnet_insert+ta_contraction,SLEEP_ISSUES,0,s_2544_1099_12
+I've sleep trouble too.,I've sleep trouble too.,I have sleep problems too.,nlp_wordnet_insert+ta_contraction,SLEEP_ISSUES,0,s_2502_62_2
+I've failed all my previous try.,I've failed all my previous try.,I have failed all my previous attempts.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_2409_43_9
+I've failed all my previous endeavor.,I've failed all my previous endeavor.,I have failed all my previous attempts.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_2409_43_9
+I'm feeling deject.,I'm feeling deject.,I am feeling depressed.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_993_781_1
+I'm sense depressed.,I'm sense depressed.,I am feeling depressed.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_993_781_1
+I've lost all pursuit.,I've lost all pursuit.,I have lost all interest.,nlp_wordnet_insert+ta_contraction,ANHEDONIA,1,s_993_781_12
+I've lost all interest group.,I've lost all interest group.,I have lost all interest.,nlp_wordnet_insert+ta_contraction,ANHEDONIA,1,s_993_781_12
+I've a very hardtime making conclusion.,I've a very hardtime making conclusion.,I have a very hardtime making decisions.,nlp_wordnet_insert+ta_contraction,COGNITIVE_ISSUES,1,s_759_88_0
+i ' thousand very hopeful i'll.,i ' thousand very hopeful i'll.,i'm very hopeful i will.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+i ' 1000 very hopeful i'll.,i ' 1000 very hopeful i'll.,i'm very hopeful i will.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+I be not suicidal and I'd never be ',I be not suicidal and I'd never be ',I am not suicidal and I would never be',nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+I am not self destructive and I'd never be ',I am not self destructive and I'd never be ',I am not suicidal and I would never be',nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+i'm furious all the time.,i'm furious all the time.,i am angry all the time.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,1,s_2107_89_1
+i've natural depression.,i've natural depression.,i have depression.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_2107_11_2
+i've great depression.,i've great depression.,i have depression.,nlp_wordnet_insert+ta_contraction,DEPRESSED_MOOD,0,s_2107_11_2
+I think I'd rather just blast myself.,I think I'd rather just blast myself.,I think I would rather just shoot myself.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I think I'd sooner just shoot myself.,I think I'd sooner just shoot myself.,I think I would rather just shoot myself.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I'm just bore at this point.,I'm just bore at this point.,I am just tired at this point.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_592_276_0
+I've got no energy to study.,I've got no energy to study.,I have no energy to study.,nlp_wordnet_insert+ta_contraction,FATIGUE,1,s_1404_90_5
+I dont desire to suicide because I'd feel guilty.,I dont desire to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to suicide because I'd feel shamefaced.,I dont want to suicide because I'd feel shamefaced.,I dont want to suicide because I would feel guilty.,nlp_wordnet_insert+ta_contraction,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont desire to suicide because I'd feel guilty.,I dont desire to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_1404_218_6
+I dont want to suicide because I'd feel shamefaced.,I dont want to suicide because I'd feel shamefaced.,I dont want to suicide because I would feel guilty.,nlp_wordnet_insert+ta_contraction,WORTHLESSNESS,1,s_1404_218_6

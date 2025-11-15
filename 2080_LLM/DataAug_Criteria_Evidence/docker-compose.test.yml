@@ -1,0 +1,116 @@
+version: '3.8'
+
+services:
+  # ============================================================================
+  # Builder/Test Service - Full development environment for testing
+  # ============================================================================
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder  # Use builder stage for testing
+      args:
+        BUILD_DATE: ${BUILD_DATE:-2025-01-01T00:00:00Z}
+        VCS_REF: ${VCS_REF:-unknown}
+        VERSION: ${VERSION:-0.1.0}
+    image: psy-agents-noaug:builder
+    container_name: psy-agents-noaug-test
+    volumes:
+      # Mount test files (read-only)
+      - ./tests:/build/tests:ro
+      # Mount data (read-only)
+      - ./data:/build/data:ro
+      # Mount outputs (read-write for test artifacts)
+      - ./outputs:/build/outputs:rw
+    environment:
+      - PYTHONPATH=/build/src
+      - LOG_JSON=true
+      - CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0}
+    command: >
+      bash -c "
+        echo 'Running test suite...' &&
+        poetry run pytest tests/ -v --tb=short --cov=src --cov-report=term-missing --cov-report=html &&
+        echo 'Tests completed!'
+      "
+    # Optional GPU support for tests
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: ${GPU_COUNT:-1}
+              capabilities: [gpu]
+
+  # ============================================================================
+  # Runtime Service - Production environment
+  # ============================================================================
+  runtime:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime  # Production runtime stage
+      args:
+        BUILD_DATE: ${BUILD_DATE:-2025-01-01T00:00:00Z}
+        VCS_REF: ${VCS_REF:-unknown}
+        VERSION: ${VERSION:-0.1.0}
+    image: psy-agents-noaug:latest
+    container_name: psy-agents-noaug-runtime
+    volumes:
+      # Mount data (read-only)
+      - ./data:/app/data:ro
+      # Mount outputs (read-write)
+      - ./outputs:/app/outputs:rw
+      # Mount MLflow artifacts
+      - ./mlruns:/app/mlruns:rw
+      # Mount configs (read-only, allow overrides)
+      - ./configs:/app/configs:ro
+    environment:
+      - PYTHONPATH=/app/src
+      - LOG_JSON=true
+      - CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-0}
+      - MLFLOW_TRACKING_URI=sqlite:////app/mlruns/mlflow.db
+    ports:
+      - "${MLFLOW_PORT:-5000}:5000"
+    user: "1000:1000"  # Run as appuser
+    # Optional GPU support
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: ${GPU_COUNT:-1}
+              capabilities: [gpu]
+    # Override default command for interactive use
+    # Uncomment below for MLflow UI:
+    # command: ["/app/.venv/bin/mlflow", "ui", "--host", "0.0.0.0", "--port", "5000"]
+    # Or keep default help command:
+    command: ["/app/.venv/bin/python", "-m", "psy_agents_noaug.cli", "--help"]
+
+  # ============================================================================
+  # MLflow UI Service (optional standalone)
+  # ============================================================================
+  mlflow:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+      args:
+        BUILD_DATE: ${BUILD_DATE:-2025-01-01T00:00:00Z}
+        VCS_REF: ${VCS_REF:-unknown}
+        VERSION: ${VERSION:-0.1.0}
+    image: psy-agents-noaug:latest
+    container_name: psy-agents-noaug-mlflow
+    volumes:
+      - ./mlruns:/app/mlruns:rw
+    environment:
+      - MLFLOW_TRACKING_URI=sqlite:////app/mlruns/mlflow.db
+    ports:
+      - "${MLFLOW_PORT:-5000}:5000"
+    user: "1000:1000"
+    command: >
+      /app/.venv/bin/mlflow ui
+      --host 0.0.0.0
+      --port 5000
+      --backend-store-uri sqlite:////app/mlruns/mlflow.db
+    profiles:
+      - mlflow  # Only start with: docker-compose --profile mlflow up

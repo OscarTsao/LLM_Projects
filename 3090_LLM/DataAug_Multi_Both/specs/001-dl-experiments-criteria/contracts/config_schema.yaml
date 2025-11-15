@@ -1,0 +1,48 @@
+# Schema: TrialConfig (thresholds additions)
+$schema: https://json-schema.org/draft/2020-12/schema
+title: TrialConfig
+type: object
+properties:
+  criteria:
+    type: object
+    properties:
+      threshold_strategy:
+        type: string
+        enum: [global, per_class]
+        default: per_class
+      thresholds:
+        type: array
+        items:
+          type: number
+          minimum: 0.0
+          maximum: 1.0
+  evidence:
+    type: object
+    properties:
+      null_threshold:
+        type: number
+        minimum: 0.0
+        maximum: 1.0
+        default: 0.5
+      min_span_score:
+        type: number
+        minimum: 0.0
+        maximum: 1.0
+        default: 0.0
+  hpo:
+    type: object
+    properties:
+      tune_thresholds:
+        type: boolean
+        default: true
+  ui:
+    type: object
+    properties:
+      progress:
+        type: boolean
+        default: true
+      stdout_level:
+        type: string
+        enum: [INFO, DEBUG, WARNING]
+        default: INFO
+required: [criteria, hpo]

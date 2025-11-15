@@ -1,0 +1,312 @@
+# Registry of 28 Augmentation Methods for REDSM5 Pipeline
+# Each augmenter includes name, library, stage, defaults, and tunable parameter space
+
+augmenters:
+  # ============================================================================
+  # CHARACTER-LEVEL AUGMENTERS (6)
+  # ============================================================================
+  
+  - name: "random_delete"
+    lib: "nlpaug"
+    stage: "char"
+    description: "Randomly delete characters from text"
+    defaults:
+      aug_char_p: 0.1
+      aug_word_p: 0.0
+    param_space:
+      aug_char_p: [0.05, 0.3]  # log-uniform
+    
+  - name: "random_insert"
+    lib: "nlpaug"
+    stage: "char"
+    description: "Randomly insert characters into text"
+    defaults:
+      aug_char_p: 0.1
+      aug_word_p: 0.0
+    param_space:
+      aug_char_p: [0.05, 0.3]
+    
+  - name: "random_swap"
+    lib: "nlpaug"
+    stage: "char"
+    description: "Randomly swap adjacent characters"
+    defaults:
+      aug_char_p: 0.1
+      aug_word_p: 0.0
+    param_space:
+      aug_char_p: [0.05, 0.3]
+    
+  - name: "keyboard_error"
+    lib: "nlpaug"
+    stage: "char"
+    description: "Simulate keyboard typos based on physical layout"
+    defaults:
+      aug_char_p: 0.1
+      aug_word_p: 0.0
+    param_space:
+      aug_char_p: [0.05, 0.2]
+    
+  - name: "ocr_noise"
+    lib: "nlpaug"
+    stage: "char"
+    description: "Simulate OCR errors (e.g., 0->O, 1->l)"
+    defaults:
+      aug_char_p: 0.1
+      aug_word_p: 0.0
+    param_space:
+      aug_char_p: [0.05, 0.2]
+    
+  - name: "char_substitute"
+    lib: "nlpaug"
+    stage: "char"
+    description: "Substitute characters with similar-looking ones"
+    defaults:
+      aug_char_p: 0.1
+      aug_word_p: 0.0
+    param_space:
+      aug_char_p: [0.05, 0.3]
+  
+  # ============================================================================
+  # WORD-LEVEL AUGMENTERS (5)
+  # ============================================================================
+  
+  - name: "word_dropout"
+    lib: "nlpaug"
+    stage: "word"
+    description: "Randomly drop words from text"
+    defaults:
+      aug_p: 0.1
+    param_space:
+      aug_p: [0.05, 0.3]
+    
+  - name: "word_swap"
+    lib: "nlpaug"
+    stage: "word"
+    description: "Randomly swap adjacent words"
+    defaults:
+      aug_p: 0.1
+    param_space:
+      aug_p: [0.05, 0.3]
+    
+  - name: "wordnet_synonym"
+    lib: "nlpaug"
+    stage: "word"
+    description: "Replace words with WordNet synonyms"
+    defaults:
+      aug_p: 0.2
+      stopwords: true  # Preserve stopwords
+    param_space:
+      aug_p: [0.1, 0.4]
+    
+  - name: "embedding_substitute"
+    lib: "nlpaug"
+    stage: "word"
+    description: "Replace words using GloVe/Word2Vec embeddings"
+    defaults:
+      aug_p: 0.2
+      model_type: "glove"
+      model_path: "glove.6B.300d"
+    param_space:
+      aug_p: [0.1, 0.4]
+    
+  - name: "spelling_noise"
+    lib: "nlpaug"
+    stage: "word"
+    description: "Introduce realistic spelling errors"
+    defaults:
+      aug_p: 0.1
+      dict_path: "spelling_en.txt"
+    param_space:
+      aug_p: [0.05, 0.25]
+  
+  # ============================================================================
+  # CONTEXTUAL AUGMENTERS (4)
+  # ============================================================================
+  
+  - name: "mlm_infill_bert"
+    lib: "nlpaug"
+    stage: "contextual"
+    description: "Mask and infill with BERT"
+    defaults:
+      aug_p: 0.15
+      model_path: "bert-base-uncased"
+      top_k: 10
+    param_space:
+      aug_p: [0.1, 0.3]
+      top_k: [5, 20]
+    
+  - name: "mlm_infill_roberta"
+    lib: "nlpaug"
+    stage: "contextual"
+    description: "Mask and infill with RoBERTa"
+    defaults:
+      aug_p: 0.15
+      model_path: "roberta-base"
+      top_k: 10
+    param_space:
+      aug_p: [0.1, 0.3]
+      top_k: [5, 20]
+    
+  - name: "contextual_substitute"
+    lib: "nlpaug"
+    stage: "contextual"
+    description: "Context-aware word substitution with DistilBERT"
+    defaults:
+      aug_p: 0.2
+      model_path: "distilbert-base-uncased"
+      top_k: 10
+    param_space:
+      aug_p: [0.1, 0.4]
+      top_k: [5, 20]
+    
+  - name: "paraphrase_t5"
+    lib: "nlpaug"
+    stage: "contextual"
+    description: "Paraphrase entire text using T5"
+    defaults:
+      model_path: "t5-base"
+      temperature: 1.0
+      num_beams: 5
+    param_space:
+      temperature: [0.7, 1.3]
+      num_beams: [3, 10]
+  
+  # ============================================================================
+  # BACK-TRANSLATION AUGMENTERS (5)
+  # ============================================================================
+  
+  - name: "en_de_en"
+    lib: "nlpaug"
+    stage: "backtranslation"
+    description: "Back-translate through German"
+    defaults:
+      from_model: "Helsinki-NLP/opus-mt-en-de"
+      to_model: "Helsinki-NLP/opus-mt-de-en"
+    param_space: {}  # No tunable params (discrete choice)
+    
+  - name: "en_fr_en"
+    lib: "nlpaug"
+    stage: "backtranslation"
+    description: "Back-translate through French"
+    defaults:
+      from_model: "Helsinki-NLP/opus-mt-en-fr"
+      to_model: "Helsinki-NLP/opus-mt-fr-en"
+    param_space: {}
+    
+  - name: "en_es_en"
+    lib: "nlpaug"
+    stage: "backtranslation"
+    description: "Back-translate through Spanish"
+    defaults:
+      from_model: "Helsinki-NLP/opus-mt-en-es"
+      to_model: "Helsinki-NLP/opus-mt-es-en"
+    param_space: {}
+    
+  - name: "en_zh_en"
+    lib: "nlpaug"
+    stage: "backtranslation"
+    description: "Back-translate through Chinese"
+    defaults:
+      from_model: "Helsinki-NLP/opus-mt-en-zh"
+      to_model: "Helsinki-NLP/opus-mt-zh-en"
+    param_space: {}
+    
+  - name: "en_ru_en"
+    lib: "nlpaug"
+    stage: "backtranslation"
+    description: "Back-translate through Russian"
+    defaults:
+      from_model: "Helsinki-NLP/opus-mt-en-ru"
+      to_model: "Helsinki-NLP/opus-mt-ru-en"
+    param_space: {}
+  
+  # ============================================================================
+  # FORMATTING AUGMENTERS (8)
+  # ============================================================================
+  
+  - name: "whitespace_jitter"
+    lib: "textattack"
+    stage: "format"
+    description: "Add/remove random whitespace"
+    defaults:
+      jitter_prob: 0.1
+    param_space:
+      jitter_prob: [0.05, 0.2]
+    
+  - name: "punctuation_noise"
+    lib: "nlpaug"
+    stage: "format"
+    description: "Randomly add/remove punctuation"
+    defaults:
+      aug_p: 0.1
+    param_space:
+      aug_p: [0.05, 0.25]
+    
+  - name: "casing_jitter"
+    lib: "textattack"
+    stage: "format"
+    description: "Randomly change letter casing"
+    defaults:
+      aug_char_p: 0.1
+    param_space:
+      aug_char_p: [0.05, 0.3]
+    
+  - name: "contraction_expand"
+    lib: "nlpaug"
+    stage: "format"
+    description: "Expand contractions (can't -> cannot)"
+    defaults: {}
+    param_space: {}
+    
+  - name: "contraction_collapse"
+    lib: "nlpaug"
+    stage: "format"
+    description: "Collapse to contractions (cannot -> can't)"
+    defaults: {}
+    param_space: {}
+    
+  - name: "remove_punctuation"
+    lib: "textattack"
+    stage: "format"
+    description: "Remove all punctuation marks"
+    defaults:
+      keep_sentence_end: true
+    param_space: {}
+    
+  - name: "add_typos"
+    lib: "textattack"
+    stage: "format"
+    description: "Add common typo patterns"
+    defaults:
+      aug_p: 0.1
+    param_space:
+      aug_p: [0.05, 0.2]
+    
+  - name: "normalize_unicode"
+    lib: "textattack"
+    stage: "format"
+    description: "Normalize unicode characters (e.g., smart quotes)"
+    defaults:
+      form: "NFKC"  # Compatibility decomposition
+    param_space: {}
+
+# Stage definitions for reference
+stages:
+  - char
+  - word
+  - contextual
+  - backtranslation
+  - format
+
+# Summary statistics
+summary:
+  total_augmenters: 28
+  by_stage:
+    char: 6
+    word: 5
+    contextual: 4
+    backtranslation: 5
+    format: 8
+  by_library:
+    nlpaug: 23
+    textattack: 5

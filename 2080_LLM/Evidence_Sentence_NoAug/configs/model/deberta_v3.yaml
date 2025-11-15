@@ -1,0 +1,3 @@
+name: microsoft/deberta-v3-base
+max_length: 512
+gradient_checkpointing: false

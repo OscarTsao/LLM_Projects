@@ -1,0 +1,16 @@
+# @package _global_
+
+defaults:
+  - model: default
+  - data: redsm5
+  - decode: default
+  - logging: default
+  - metrics: default
+
+predict:
+  checkpoint: ???
+  input_path: ???
+  output_path: ???
+
+logging:
+  log_level: INFO

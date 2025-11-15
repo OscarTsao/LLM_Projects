@@ -1,0 +1,167 @@
+--- a/src/psy_agents_noaug/utils/mlflow_utils.py
++++ b/src/psy_agents_noaug/utils/mlflow_utils.py
+@@ -7,6 +7,8 @@ import subprocess
+ from pathlib import Path
+ from typing import Any
+ from urllib.parse import urlparse
+ 
+ import mlflow
++import mlflow.pytorch
++import torch
+ from omegaconf import DictConfig, OmegaConf
+ 
+@@ -306,11 +309,150 @@ def log_evaluation_report(
+ 
+ def save_model_to_mlflow(
+     model,
++    model_name: str = "model",
+     artifact_path: str = "model",
+     registered_model_name: str | None = None,
++    signature: mlflow.models.ModelSignature | None = None,
++    input_example: Any | None = None,
++    await_registration_for: int = 300,
+ ):
+     """
+-    Save PyTorch model to MLflow.
++    Save PyTorch model to MLflow with optional model registry.
+ 
+     Args:
+-        model: PyTorch model to save
++        model: PyTorch model
++        model_name: Model name for logging
+         artifact_path: Artifact path in MLflow
+         registered_model_name: Optional name for model registry
++        signature: Optional model signature
++        input_example: Optional input example for signature inference
++        await_registration_for: Seconds to wait for registration (default: 300)
+     """
+     try:
++        # Log model with all metadata
+         mlflow.pytorch.log_model(
+             model,
+             artifact_path=artifact_path,
+             registered_model_name=registered_model_name,
++            signature=signature,
++            input_example=input_example,
++            await_registration_for=await_registration_for,
+         )
++
++        if registered_model_name:
++            print(
++                f"Model registered as '{registered_model_name}' in MLflow Model Registry"
++            )
++
+     except Exception as e:
+         print(f"Warning: Could not save model to MLflow: {e}")
+ 
+ 
++def register_model(
++    model: torch.nn.Module,
++    model_name: str,
++    sample_input: torch.Tensor | None = None,
++    stage: str = "Staging",
++    artifact_path: str = "model",
++    tags: dict[str, str] | None = None,
++    description: str | None = None,
++) -> str | None:
++    """
++    Register trained model in MLflow Model Registry with comprehensive metadata.
++
++    Args:
++        model: PyTorch model to register
++        model_name: Name for the model in registry
++        sample_input: Sample input tensor for signature inference
++        stage: Model version stage (None, Staging, Production, Archived)
++        artifact_path: Artifact path for model storage
++        tags: Optional tags for model version
++        description: Optional description for model version
++
++    Returns:
++        Model version number if successful, None otherwise
++    """
++    if not mlflow.active_run():
++        print("Warning: No active MLflow run. Cannot register model.")
++        return None
++
++    try:
++        # Infer signature if sample input provided
++        signature = None
++        input_example = None
++        if sample_input is not None:
++            model.eval()
++            with torch.no_grad():
++                sample_output = model(sample_input)
++
++            # Convert to numpy for signature
++            import numpy as np
++
++            input_np = (
++                sample_input.cpu().numpy()
++                if isinstance(sample_input, torch.Tensor)
++                else sample_input
++            )
++            output_np = (
++                sample_output.cpu().numpy()
++                if isinstance(sample_output, torch.Tensor)
++                else sample_output
++            )
++
++            signature = mlflow.models.infer_signature(input_np, output_np)
++            input_example = input_np
++
++        # Log model to MLflow
++        model_info = mlflow.pytorch.log_model(
++            pytorch_model=model,
++            artifact_path=artifact_path,
++            signature=signature,
++            input_example=input_example,
++            registered_model_name=model_name,
++        )
++
++        print(f"Model logged to MLflow: {model_info.model_uri}")
++
++        # Get the registered model version
++        client = mlflow.tracking.MlflowClient()
++        model_versions = client.get_latest_versions(model_name, stages=["None"])
++
++        if not model_versions:
++            print(f"Warning: Model '{model_name}' registered but version not found")
++            return None
++
++        model_version = model_versions[0].version
++
++        # Add tags if provided
++        if tags:
++            for key, value in tags.items():
++                client.set_model_version_tag(model_name, model_version, key, value)
++
++        # Update description if provided
++        if description:
++            client.update_model_version(
++                name=model_name,
++                version=model_version,
++                description=description,
++            )
++
++        # Transition to specified stage
++        if stage in ["Staging", "Production", "Archived"]:
++            client.transition_model_version_stage(
++                name=model_name,
++                version=model_version,
++                stage=stage,
++                archive_existing_versions=False,
++            )
++            print(f"Model version {model_version} transitioned to '{stage}' stage")
++
++        print(f"Model '{model_name}' version {model_version} registered successfully")
++        return model_version
++
++    except Exception as e:
++        print(f"Error registering model: {e}")
++        import traceback
++
++        traceback.print_exc()
++        return None
++
++
+ def end_run(status: str = "FINISHED"):

@@ -1,0 +1,63 @@
+# @package _global_.model
+encoder:
+  type: roberta
+  pretrained_model_name_or_path: roberta-base
+  gradient_checkpointing: true
+  freeze_encoder: false
+  output_dropout: 0.2
+  pooling: cls
+  layer_norm_eps: 1e-12
+  lora:
+    enabled: false
+    r: 16
+    alpha: 32
+    dropout: 0.05
+    target_modules: ["query", "key", "value"]
+
+heads:
+  symptom_labels:
+    type: multi_label
+    labels: ${data.multi_label_fields}
+    layers:
+      hidden_dims: []  # 1 layer (direct to output)
+      activation: gelu
+      dropout: 0.1
+    classifier_dropout: 0.1  # Dropout before final linear layer
+    loss: bce  # Fixed: binary cross-entropy for multi-label
+    label_smoothing: 0.0
+    pos_weight: []  # Fixed: empty = no class weighting
+    thresholds:
+      ANHEDONIA: 0.5
+      APPETITE_CHANGE: 0.5
+      COGNITIVE_ISSUES: 0.5
+      DEPRESSED_MOOD: 0.5
+      FATIGUE: 0.5
+      PSYCHOMOTOR: 0.5
+      SLEEP_ISSUES: 0.5
+      SPECIAL_CASE: 0.5
+      SUICIDAL_THOUGHTS: 0.5
+      WORTHLESSNESS: 0.5
+
+  evidence_token:
+    enabled: false
+    type: token_classification
+    num_labels: 2
+    layers:
+      hidden_dims: []
+      activation: gelu
+      dropout: 0.1
+    classifier_dropout: 0.1
+    loss: cross_entropy  # Fixed: cross-entropy for token classification
+    ignore_index: -100
+    class_weights: []  # Fixed: empty = no class weighting
+
+  evidence_span:
+    enabled: false
+    type: span_classification
+    layers:
+      hidden_dims: []
+      activation: gelu
+      dropout: 0.1
+    classifier_dropout: 0.1
+    loss: cross_entropy  # Fixed: cross-entropy for span classification
+    ignore_index: -100

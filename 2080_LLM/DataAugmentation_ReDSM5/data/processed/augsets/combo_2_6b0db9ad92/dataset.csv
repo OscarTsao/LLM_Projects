@@ -1,0 +1,26 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I'm very depres also.,I'm very depres also.,I am very depressed also.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_131_822_0
+"If it'll up to me, i ' d kill myself.","If it'll up to me, i ' d kill myself.","If it was up to me, I'd kill myself.",nlp_spelling+ta_contraction,SUICIDAL_THOUGHTS,1,s_1483_18_3
+I'm very tierd.,I'm very tierd.,I am very tired.,nlp_spelling+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm ' so tired fot being so sad all the time.,I'm ' so tired fot being so sad all the time.,I'm so tired of being so sad all the time.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_1933_175_38
+I'm. . sadnesses,I'm. . sadnesses,I am.. sadness,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I'm ' trash.,I'm ' trash.,I'm trash.,nlp_spelling+ta_contraction,WORTHLESSNESS,1,s_2130_82_12
+I've issues in focusing sna attention.,I've issues in focusing sna attention.,I have issues in focusing and attention.,nlp_spelling+ta_contraction,COGNITIVE_ISSUES,0,s_2257_110_29
+I jsut don ' th think I'd like to live anymore.,I jsut don ' th think I'd like to live anymore.,I just don't think I would like to live anymore.,nlp_spelling+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I'm ' not happy.,I'm ' not happy.,I'm not happy.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_1900_293_0
+I'm fukking CRYING.,I'm fukking CRYING.,I am fucking CRYING.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm em a constant dilemma.,I'm em a constant dilemma.,I am in a constant dilemma.,nlp_spelling+ta_contraction,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm tiard.,I'm tiard.,I am tired.,nlp_spelling+ta_contraction,FATIGUE,1,s_681_475_2
+Wow it kwons how sad I'm,Wow it kwons how sad I'm,Wow it knows how sad I am,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_694_827_0
+"I'm irritated, ja.","I'm irritated, ja.","I am irritated, yes.",nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+I'll ' stop crying.,I'll ' stop crying.,I'll stop crying.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_1701_714_34
+Yet I'm deppresive.,Yet I'm deppresive.,Yet I am depressed.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+I'm ' such a fucking failure: ' (,I'm ' such a fucking failure: ' (,I'm such a fucking failure :'(,nlp_spelling+ta_contraction,WORTHLESSNESS,1,s_1492_318_2
+i've n'º more energy.,i've n'º more energy.,i have no more energy.,nlp_spelling+ta_contraction,FATIGUE,1,s_2107_102_4
+i ' m very hopefull i'll.,i ' m very hopefull i'll.,i'm very hopeful i will.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+i ' m vreay hopeful i'll.,i ' m vreay hopeful i'll.,i'm very hopeful i will.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,0,s_2640_8_1
+I and not suicidal and I'd never be ',I and not suicidal and I'd never be ',I am not suicidal and I would never be',nlp_spelling+ta_contraction,SUICIDAL_THOUGHTS,0,s_2476_278_1
+i've deprestion.,i've deprestion.,i have depression.,nlp_spelling+ta_contraction,DEPRESSED_MOOD,0,s_2107_11_2
+"Hi ' ve always felt pretty guilty about the disponibility that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout. .. If e ' m shouting angrily at someone in my dream then chances are I'll shout it out loud too, walking us both ap.","Hi ' ve always felt pretty guilty about the disponibility that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout. .. If e ' m shouting angrily at someone in my dream then chances are I'll shout it out loud too, walking us both ap.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",nlp_spelling+ta_contraction,WORTHLESSNESS,1,s_2727_538_0
+"I ' ve always felled pretty guilty about the amount tthat I not only sleep talk but sleep shout, actually, I pretti much olny sleep shout. .. If I ' m shouting angrily at someone in my dream then chances are I'll shout it out loud too, waking us both p.","I ' ve always felled pretty guilty about the amount tthat I not only sleep talk but sleep shout, actually, I pretti much olny sleep shout. .. If I ' m shouting angrily at someone in my dream then chances are I'll shout it out loud too, waking us both p.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",nlp_spelling+ta_contraction,WORTHLESSNESS,1,s_2727_538_0
+I'm ' Sad Today. ..,I'm ' Sad Today. ..,I'm Sad Today...,nlp_spelling+ta_contraction,DEPRESSED_MOOD,1,s_1609_626_0

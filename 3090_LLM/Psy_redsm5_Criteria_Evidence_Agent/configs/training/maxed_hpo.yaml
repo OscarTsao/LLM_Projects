@@ -1,0 +1,150 @@
+# Maxed out Optuna HPO configuration for comprehensive hyperparameter search
+# Designed for 2-7 day optimization runs with aggressive pruning and extensive search space
+# Hardware settings optimized for RTX 3090 + i7-8700 system
+
+defaults:
+  - optimized_hardware  # Use hardware-optimized base configuration
+  - _self_
+
+optuna:
+  enabled: true
+  n_trials: 500  # Comprehensive search for model/method parameters
+  direction: maximize
+  timeout: 604800  # 7 days timeout (in seconds)
+  seed: 42
+  study_name: optimized_model_method_hpo_v4
+  storage: sqlite:///optuna_optimized_v4.db  # Fresh database for optimized search
+  load_if_exists: false  # Start completely fresh
+  cleanup_trial_dirs: true  # Clean up failed/non-best trials
+  keep_best_trial_dir: true  # Keep best trial for analysis
+  remove_best_trial_dir_after_export: false  # Keep best trial after export for manual inspection
+  artifact_root: outputs/training
+
+  # Advanced pruning configuration for efficiency
+  pruning:
+    enabled: true
+    pruner: MedianPruner
+    n_startup_trials: 20  # No pruning for first 20 trials
+    n_warmup_steps: 5     # Wait 5 epochs before pruning
+    interval_steps: 1     # Check every epoch
+
+# Enhanced search space with more granular exploration
+# Hardware-specific settings (batch sizes, workers, etc.) are now fixed in optimized_hardware.yaml
+search_space:
+  # NOTE: Batch sizes, num_workers, and other hardware settings are now fixed
+  # in the optimized_hardware.yaml base configuration and removed from search
+
+  # Learning rate - expanded range with more precision
+  learning_rate:
+    method: loguniform
+    low: 5e-07  # Lower bound
+    high: 1e-04  # Higher bound
+
+  # Weight decay - fine-grained search
+  weight_decay:
+    method: loguniform
+    low: 1e-07
+    high: 5e-02
+
+  # Loss function exploration - comprehensive loss function testing
+  loss_function:
+    method: categorical
+    choices: [
+      "bce",              # Binary Cross Entropy
+      "weighted_bce",     # Weighted Binary Cross Entropy
+      "focal",            # Focal Loss
+      "adaptive_focal",   # Adaptive Focal Loss
+      "hybrid_bce_focal",
+      "hybrid_bce_adaptive_focal"
+    ]
+
+  # Loss function parameters - conditional on loss type
+  alpha:  # For focal losses
+    method: uniform
+    low: 0.05
+    high: 0.75
+  gamma:  # For focal losses
+    method: uniform
+    low: 0.5
+    high: 5.0
+  delta:  # For adaptive focal
+    method: uniform
+    low: 0.25
+    high: 3.0
+  bce_weight:  # For hybrid loss
+    method: uniform
+    low: 0.1
+    high: 0.9
+  pos_weight:  # For weighted BCE
+    method: loguniform
+    low: 0.1
+    high: 10.0
+
+  # Model architecture
+  dropout:
+    method: uniform
+    low: 0.0
+    high: 0.5
+
+  # Training dynamics (gradient_accumulation_steps fixed for RTX 3090)
+  threshold:
+    method: uniform
+    low: 0.05
+    high: 0.95
+
+  # Optimizer parameters
+  optimizer_type:
+    method: categorical
+    choices: ["adamw", "adam"]
+  beta1:  # For Adam/AdamW
+    method: uniform
+    low: 0.85
+    high: 0.95
+  beta2:  # For Adam/AdamW
+    method: uniform
+    low: 0.99
+    high: 0.999
+  eps:  # For Adam/AdamW
+    method: loguniform
+    low: 1e-10
+    high: 1e-06
+
+  # Scheduler parameters
+  scheduler_type:
+    method: categorical
+    choices: ["plateau", "cosine", "linear", "exponential"]
+  scheduler_patience:  # For ReduceLROnPlateau
+    method: categorical
+    choices: [3, 5, 7, 10, 15]
+  scheduler_factor:  # For ReduceLROnPlateau
+    method: uniform
+    low: 0.1
+    high: 0.8
+  warmup_steps:  # For cosine/linear
+    method: categorical
+    choices: [0, 50, 100, 200, 500]
+
+  # Early stopping
+  early_stopping_patience:
+    method: categorical
+    choices: [5, 7, 10, 15, 20, 25]
+
+# Override training settings for more aggressive optimization
+training:
+  num_epochs: 75  # Reduced from 100 to speed up trials
+  early_stopping_patience: 12  # Will be overridden by search space
+  max_checkpoints: 1
+  save_checkpoints: true
+  save_best_only: true
+  save_optimizer_state: false
+  save_history: false
+  include_history_in_checkpoint: false
+  save_config_in_checkpoint: true
+
+# Monitoring and checkpointing for long runs
+monitor_metric: f1
+monitor_mode: max
+
+hydra:
+  sweep:
+    dir: outputs/optimization/maxed_hpo/${now:%Y%m%d_%H%M%S}

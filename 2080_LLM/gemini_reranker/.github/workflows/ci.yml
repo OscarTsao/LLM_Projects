@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt', 'pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Cache HuggingFace
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: ${{ runner.os }}-hf-${{ hashFiles('pyproject.toml') }}
+          restore-keys: |
+            ${{ runner.os }}-hf-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+
+      - name: Lint
+        run: make lint
+
+      - name: Format Check
+        run: make fmt
+
+      - name: Type Check
+        run: make type
+
+      - name: Prepare demo data
+        run: make demo-data
+
+      - name: Test
+        env:
+          MLFLOW_TRACKING_URI: sqlite:///mlflow.db
+        run: pytest -q --maxfail=1 --disable-warnings

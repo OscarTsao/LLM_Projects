@@ -1,0 +1,11 @@
+early_stopping_patience: 20
+eval_steps: null
+gradient_accumulation_steps: 1
+logging_steps: 100
+max_grad_norm: 1.0
+metric_for_best_model: span_f1
+num_epochs: 100
+output_dir: outputs/train
+save_steps: null
+use_amp: true
+use_bfloat16: true

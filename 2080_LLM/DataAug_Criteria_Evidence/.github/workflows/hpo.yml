@@ -1,0 +1,99 @@
+name: Hyperparameter Optimization
+
+on:
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'HPO Task'
+        required: true
+        default: 'criteria'
+        type: choice
+        options:
+          - criteria
+          - evidence
+          - share
+          - joint
+      stage:
+        description: 'HPO Stage'
+        required: true
+        default: 'stage0_sanity'
+        type: choice
+        options:
+          - stage0_sanity
+          - stage1_coarse
+          - stage2_fine
+          - stage3_refit
+      n_trials:
+        description: 'Number of trials'
+        required: false
+        default: '8'
+        type: string
+
+jobs:
+  hpo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 480  # 8 hours
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        version: 1.7.1
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+
+    - name: Install dependencies
+      run: |
+        poetry install --no-interaction
+
+    - name: Download HuggingFace data
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        poetry run python -m psy_agents_noaug.cli make_groundtruth data=hf_redsm5
+
+    - name: Run HPO Stage
+      run: |
+        poetry run python scripts/run_hpo_stage.py \
+          --agent ${{ github.event.inputs.task }} \
+          --stage ${{ github.event.inputs.stage }} \
+          --n-trials ${{ github.event.inputs.n_trials }}
+
+    - name: Upload HPO results
+      uses: actions/upload-artifact@v4
+      with:
+        name: hpo-results-${{ github.event.inputs.task }}-${{ github.event.inputs.stage }}
+        path: |
+          outputs/hpo_${{ github.event.inputs.stage }}/
+          mlruns/
+          mlflow.db
+        retention-days: 30
+
+    - name: Generate HPO summary
+      run: |
+        poetry run python scripts/summarize_hpo.py \
+          --stage ${{ github.event.inputs.stage }} \
+          --task ${{ github.event.inputs.task }} \
+          --output hpo_summary.md
+
+    - name: Comment PR with results
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const fs = require('fs');
+          const summary = fs.readFileSync('hpo_summary.md', 'utf8');
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: summary
+          });

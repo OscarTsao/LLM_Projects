@@ -1,0 +1,1 @@
+checkpoint: ${paths.output_dir}/best_model.pt

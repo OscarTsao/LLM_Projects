@@ -1,0 +1,24 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I'm very nad.,I'm very nad.,I am very sad.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,0,s_411_1189_1
+I'm cery sad.,I'm cery sad.,I am very sad.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,0,s_411_1189_1
+I'm beinu tortured.,I'm beinu tortured.,I am being tortured.,ta_char_rand_swap+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm vury tired.,I'm vury tired.,I am very tired.,ta_char_rand_swap+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm morthless.,I'm morthless.,I am worthless.,ta_char_rand_swap+ta_contraction,WORTHLESSNESS,1,s_2415_2_3
+I'm sad waBting.,I'm sad waBting.,I am sad waiting.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I'm fucking COYING.,I'm fucking COYING.,I am fucking CRYING.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm fBcking CRYING.,I'm fBcking CRYING.,I am fucking CRYING.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm tHred.,I'm tHred.,I am tired.,ta_char_rand_swap+ta_contraction,FATIGUE,1,s_681_475_2
+"I'm irritated, yez.","I'm irritated, yez.","I am irritated, yes.",ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+I'm so exhaustwd.,I'm so exhaustwd.,I am so exhausted.,ta_char_rand_swap+ta_contraction,FATIGUE,1,s_697_17_12
+I'm so exhpusted.,I'm so exhpusted.,I am so exhausted.,ta_char_rand_swap+ta_contraction,FATIGUE,1,s_697_17_12
+I'm also yestless.,I'm also yestless.,I am also restless.,ta_char_rand_swap+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm also festless.,I'm also festless.,I am also restless.,ta_char_rand_swap+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm just Vad.,I'm just Vad.,I am just sad.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,1,s_1681_1030_1
+I'm just Lad.,I'm just Lad.,I am just sad.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,1,s_1681_1030_1
+I've morV energy.,I've morV energy.,I have more energy.,ta_char_rand_swap+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I've mJre energy.,I've mJre energy.,I have more energy.,ta_char_rand_swap+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+YeY I'm depressed.,YeY I'm depressed.,Yet I am depressed.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+Yet I'm desressed.,Yet I'm desressed.,Yet I am depressed.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+NXw I'm sad.,NXw I'm sad.,Now I am sad.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+Now I'm sLd.,Now I'm sLd.,Now I am sad.,ta_char_rand_swap+ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+"I've always felt pretty guilty about the amount that I not onli sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream ghen chances are I'll shouf it out loud too, waking us both Wp.","I've always felt pretty guilty about the amount that I not onli sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream ghen chances are I'll shouf it out loud too, waking us both Wp.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",ta_char_rand_swap+ta_contraction,WORTHLESSNESS,1,s_2727_538_0

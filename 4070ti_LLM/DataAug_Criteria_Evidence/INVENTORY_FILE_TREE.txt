@@ -1,0 +1,391 @@
+================================================================================
+COMPLETE FILE TREE - PSY AGENTS REPOSITORY
+================================================================================
+
+DataAug_Criteria_Evidence/
+│
+├── src/                                (Source code - 2 implementations)
+│   ├── psy_agents_noaug/              (ACTIVE - 5,356 LOC)
+│   │   ├── __init__.py
+│   │   │
+│   │   ├── augmentation/              (UNUSED - 4 files, ~500 LOC)
+│   │   │   ├── __init__.py
+│   │   │   ├── pipeline.py            (156 LOC) - AugmenterPipeline orchestration
+│   │   │   ├── registry.py            (300+ LOC) - 28+ augmenter methods
+│   │   │   └── tfidf_cache.py         (150+ LOC) - TF-IDF caching
+│   │   │
+│   │   ├── architectures/             (ACTIVE - 70+ files, ~4,000 LOC)
+│   │   │   ├── __init__.py
+│   │   │   ├── utils/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── heads.py           - Classification/span heads
+│   │   │   │   ├── outputs.py         - Output formatting
+│   │   │   │   ├── checkpoint.py      - Checkpoint utilities
+│   │   │   │   └── dsm_criteria.py    - DSM-5 criterion definitions
+│   │   │   │
+│   │   │   ├── criteria/              (Binary classification - PROD-READY)
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── models/
+│   │   │   │   │   └── model.py       - Transformer + classification head
+│   │   │   │   ├── data/
+│   │   │   │   │   └── dataset.py     - CriteriaDataset loader
+│   │   │   │   ├── engine/
+│   │   │   │   │   ├── train_engine.py - Training orchestration
+│   │   │   │   │   └── eval_engine.py  - Evaluation orchestration
+│   │   │   │   └── utils/             (5 files: seed, checkpoint, log, mlflow, optuna)
+│   │   │   │
+│   │   │   ├── evidence/              (Span extraction)
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── models/
+│   │   │   │   │   └── model.py       - Span prediction head
+│   │   │   │   ├── data/
+│   │   │   │   │   └── dataset.py     - EvidenceDataset loader
+│   │   │   │   ├── engine/
+│   │   │   │   │   ├── train_engine.py
+│   │   │   │   │   └── eval_engine.py
+│   │   │   │   └── utils/             (5 files: same pattern)
+│   │   │   │
+│   │   │   ├── share/                 (Shared encoder + dual heads)
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── models/model.py
+│   │   │   │   ├── data/dataset.py
+│   │   │   │   ├── engine/
+│   │   │   │   │   ├── train_engine.py
+│   │   │   │   │   └── eval_engine.py
+│   │   │   │   └── utils/             (5 files: same pattern)
+│   │   │   │
+│   │   │   └── joint/                 (Dual encoders + fusion)
+│   │   │       ├── __init__.py
+│   │   │       ├── models/model.py
+│   │   │       ├── data/dataset.py
+│   │   │       ├── engine/
+│   │   │       │   ├── train_engine.py
+│   │   │       │   └── eval_engine.py
+│   │   │       └── utils/             (5 files: same pattern)
+│   │   │
+│   │   ├── data/                      (PROD-READY - 6 files, ~1.5K LOC)
+│   │   │   ├── __init__.py
+│   │   │   ├── groundtruth.py         ⭐ (500+ LOC) CRITICAL - STRICT validation
+│   │   │   ├── loaders.py            (376 LOC) - ReDSM5DataLoader
+│   │   │   ├── datasets.py           (300+ LOC) - ClassificationDataset
+│   │   │   ├── splits.py             (180 LOC) - Train/val/test splitting
+│   │   │   ├── classification_loader.py (200+ LOC) - Legacy wrapper
+│   │   │   └── augmentation_utils.py (150+ LOC) - Augmentation integration
+│   │   │
+│   │   ├── hpo/                      (PROD-READY - 2 files, ~350 LOC)
+│   │   │   ├── __init__.py
+│   │   │   └── optuna_runner.py      (352 LOC) - OptunaRunner + search space
+│   │   │
+│   │   ├── models/                   (500 LOC)
+│   │   │   ├── __init__.py
+│   │   │   ├── encoders.py           (263 LOC) - Transformer encoder
+│   │   │   ├── criteria_head.py      (132 LOC) - Classification head
+│   │   │   └── evidence_head.py      (132 LOC) - Span head
+│   │   │
+│   │   ├── training/                 (PROD-READY - 4 files, ~1.1K LOC)
+│   │   │   ├── __init__.py
+│   │   │   ├── train_loop.py         (556 LOC) ⭐ CORE - Trainer class
+│   │   │   ├── evaluate.py           (451 LOC) - Evaluator class
+│   │   │   └── setup.py              (118 LOC) - Setup utilities
+│   │   │
+│   │   ├── utils/                    (PROD-READY - 7 files, ~800 LOC)
+│   │   │   ├── __init__.py
+│   │   │   ├── reproducibility.py    (198 LOC) - Seeds + device utils
+│   │   │   ├── mlflow_utils.py       (346 LOC) - MLflow tracking
+│   │   │   ├── logging.py            (73 LOC) - Logging setup
+│   │   │   ├── logging_config.py     (115 LOC) - Logging configuration
+│   │   │   └── type_aliases.py       (23 LOC) - Type definitions
+│   │   │
+│   │   └── cli.py                    (250+ LOC) ⭐ ENTRY POINT
+│   │       └── Typer CLI with train/tune/show-best commands
+│   │
+│   └── Project/                       (DUPLICATE - 800 LOC, used by scripts)
+│       ├── __init__.py
+│       ├── utils/
+│       │   ├── __init__.py
+│       │   └── checkpoint.py         (248 LOC)
+│       │
+│       ├── Criteria/                  (PROD-READY - used by train_criteria.py)
+│       │   ├── __init__.py
+│       │   ├── models/model.py
+│       │   ├── data/dataset.py
+│       │   ├── engine/
+│       │   │   ├── train_engine.py
+│       │   │   └── eval_engine.py
+│       │   └── utils/                (log, checkpoint, seed, optuna)
+│       │
+│       ├── Evidence/
+│       │   └── (same structure)
+│       │
+│       ├── Share/
+│       │   └── (same structure)
+│       │
+│       └── Joint/
+│           └── (same structure)
+│
+├── configs/                           (Hydra YAML - 12 groups, 27 files)
+│   ├── config.yaml                   - Main composition
+│   │
+│   ├── augmentation/
+│   │   └── default.yaml              - Augmentation settings
+│   │
+│   ├── data/                          ⭐ CRITICAL
+│   │   ├── field_map.yaml            - Field validation rules
+│   │   ├── hf_redsm5.yaml            - HuggingFace source
+│   │   └── local_csv.yaml            - Local CSV source
+│   │
+│   ├── model/
+│   │   ├── bert_base.yaml
+│   │   ├── roberta_base.yaml
+│   │   └── deberta_v3_base.yaml
+│   │
+│   ├── task/
+│   │   ├── criteria.yaml             - Binary classification
+│   │   └── evidence.yaml             - Span extraction
+│   │
+│   ├── training/
+│   │   ├── default.yaml              - Standard settings
+│   │   ├── optimized.yaml            - Performance-tuned
+│   │   └── supermax_optimized.yaml   - Super-max HPO
+│   │
+│   ├── hpo/
+│   │   ├── stage0_sanity.yaml        - 8 trials
+│   │   ├── stage1_coarse.yaml        - 20 trials
+│   │   ├── stage2_fine.yaml          - 50 trials
+│   │   ├── stage3_refit.yaml         - Refit on train+val
+│   │   ├── stage_a_baseline.yaml     - Baseline sweep
+│   │   └── stage_b_augmentation.yaml - Augmentation sweep
+│   │
+│   ├── criteria/
+│   │   ├── train.yaml
+│   │   └── hpo.yaml
+│   │
+│   ├── evidence/
+│   │   ├── train.yaml
+│   │   └── hpo.yaml
+│   │
+│   ├── share/
+│   │   ├── train.yaml
+│   │   └── hpo.yaml
+│   │
+│   └── joint/
+│       ├── train.yaml
+│       └── hpo.yaml
+│
+├── scripts/                          (Entry points - 17 Python scripts)
+│   ├── train_criteria.py             (416 LOC) ✓ PROD-READY
+│   ├── eval_criteria.py              (306 LOC) ✓ PROD-READY
+│   ├── tune_max.py                   (600+ LOC) ✓ PROD-READY - Maximal HPO
+│   ├── run_hpo_stage.py              (300+ LOC) ✓ PROD-READY - Multi-stage HPO
+│   ├── run_all_hpo.py                (200+ LOC) ✓ PROD-READY - All architectures
+│   ├── train_best.py                 (200+ LOC) - HPO integration router
+│   ├── make_groundtruth.py           - Ground truth generation
+│   ├── export_metrics.py             - MLflow metrics export
+│   ├── validate_installation.py      - Installation verification
+│   ├── bench_dataloader.py           - DataLoader benchmarking
+│   ├── profile_augmentation.py       - Augmentation profiling
+│   ├── verify_determinism.py         - Reproducibility verification
+│   ├── gpu_utilization.py            - GPU monitoring
+│   ├── generate_sbom.py              - Bill of materials
+│   ├── generate_licenses.py          - License report
+│   ├── audit_security.py             - Security audit
+│   └── run_two_stage_hpo.py          - Legacy two-stage runner
+│
+├── tests/                            (Test suite - 24 test files)
+│   ├── conftest.py                   - Pytest fixtures
+│   │
+│   ├── test_groundtruth.py           ⭐ CRITICAL - Field separation
+│   ├── test_loaders.py               - Data loader tests
+│   ├── test_integration.py           - End-to-end tests
+│   │
+│   ├── test_training_smoke.py        - Training smoke tests
+│   ├── test_train_smoke.py           - Alternative training tests
+│   ├── test_arch_shapes.py           - Architecture shapes
+│   ├── test_head_space.py            - Head configurations
+│   │
+│   ├── test_augmentation_registry.py - Augmenter registration
+│   ├── test_augmentation_utils.py    - Augmentation utilities
+│   ├── test_pipeline_comprehensive.py - Full pipeline
+│   ├── test_pipeline_extended.py     - Extended scenarios
+│   ├── test_pipeline_integration.py  - Integration tests
+│   ├── test_pipeline_scope.py        - Scope validation
+│   ├── test_tfidf_cache.py           - TF-IDF caching
+│   ├── test_tfidf_cache_extended.py  - Extended TF-IDF
+│   │
+│   ├── test_hpo_config.py            - HPO configuration
+│   ├── test_hpo_integration.py       - HPO integration
+│   │
+│   ├── test_cli_flags.py             - CLI arguments
+│   ├── test_qa_null_policy.py        - Null span handling
+│   ├── test_seed_determinism.py      - Reproducibility
+│   ├── test_smoke.py                 - Basic smoke tests
+│   ├── test_perf_contract.py         - Performance contracts
+│   ├── test_mlflow_artifacts.py      - MLflow tracking
+│   │
+│   └── test_benchmarks/
+│       └── test_performance_regression.py - Performance tracking
+│
+├── docs/                             (Documentation)
+│   ├── HPO_GUIDE.md                  - HPO system documentation
+│   ├── TRAINING_GUIDE.md             - Training best practices
+│   ├── CLI_AND_MAKEFILE_GUIDE.md    - CLI reference
+│   └── [other documentation]
+│
+├── Makefile                          (60+ targets)
+│   ├── Setup: setup, install, install-dev
+│   ├── Data: groundtruth, groundtruth-local
+│   ├── Training: train, train-evidence
+│   ├── HPO: hpo-s{0,1,2}, refit, full-hpo-all, maximal-hpo-all, tune-*-max, tune-*-supermax
+│   ├── Evaluation: eval, export
+│   ├── Testing: test, test-cov, test-groundtruth
+│   ├── Quality: lint, format, typecheck, pre-commit-*
+│   ├── Compliance: audit, sbom, licenses, compliance
+│   ├── Benchmarking: bench, verify-determinism
+│   └── Docker: docker-build, docker-test, docker-run, docker-clean
+│
+├── pyproject.toml                    - Poetry configuration
+│   ├── Dependencies: torch, transformers, optuna, hydra, mlflow, etc.
+│   ├── Augmentation: nlpaug, textattack (UNUSED)
+│   ├── Dev dependencies: pytest, coverage, ruff, black, mypy
+│   └── Package entry: psy-agents CLI
+│
+├── poetry.lock                       - Lock file
+│
+├── mlflow.db                         - MLflow backend (SQLite)
+│
+├── .devcontainer/                    - VS Code Dev Container
+│   ├── devcontainer.json             - Container configuration
+│   ├── Dockerfile                    - CUDA 12.1 + Python 3.10
+│   └── docker-compose.yml
+│
+├── .pre-commit-config.yaml          - Pre-commit hooks
+│
+├── .github/                          - GitHub workflows
+│
+├── README.md                         - Project overview
+│
+├── CLAUDE.md                         - Claude AI context (project instructions)
+│
+├── [Documentation Files]
+│   ├── INVENTORY.md                  (1,139 lines) ← COMPREHENSIVE REFERENCE
+│   ├── INVENTORY_QUICK_REFERENCE.md (139 lines) ← QUICK LOOKUP
+│   ├── INVENTORY_SUMMARY.txt         (533 lines) ← THIS SUMMARY
+│   ├── CODEBASE_STRUCTURE_ANALYSIS.md
+│   ├── TRANSFORMATION_STATUS.md
+│   ├── BENCHMARK_GUIDE.md
+│   ├── HPO_GUIDE.md
+│   └── [other status/analysis docs]
+│
+└── data/                             (Data directory)
+    └── [raw data files, if present]
+
+================================================================================
+ARCHITECTURE PATTERN (Repeated 4x: criteria, evidence, share, joint)
+================================================================================
+
+Each architecture follows:
+  architectures/<name>/
+    ├── __init__.py
+    ├── models/
+    │   └── model.py           - Model implementation
+    ├── data/
+    │   └── dataset.py         - Dataset loader
+    ├── engine/
+    │   ├── train_engine.py    - Training orchestration
+    │   └── eval_engine.py     - Evaluation orchestration
+    └── utils/
+        ├── checkpoint.py      - Model saving/loading
+        ├── seed.py           - Random seed management
+        ├── log.py            - Logging setup
+        ├── mlflow_utils.py   - MLflow integration
+        └── optuna_utils.py   - Optuna integration
+
+Total: 4 architectures × (1 init + 1 model + 1 dataset + 2 engines + 5 utils) = 40+ files
+
+================================================================================
+KEY STATISTICS
+================================================================================
+
+DIRECTORY COUNTS:
+  Total directories: 50+
+  Python packages: 15+
+  Configuration groups: 12
+
+FILE COUNTS:
+  Python files: 100+
+  YAML configs: 27
+  Test files: 24
+  Scripts: 17
+  Documentation: 15+
+
+CODE STATISTICS (by component):
+  psy_agents_noaug/          5,356 LOC
+  Project/                     800 LOC
+  scripts/                   ~3,000 LOC
+  tests/                     ~2,000 LOC
+  configs/                     ~30 LOC (YAML)
+  Total:                    ~11,186 LOC
+
+UNUSED CODE:
+  augmentation/                500 LOC (unused)
+  test_augmentation_*.py     ~2,000 LOC (unused tests)
+  Total dead code:           ~2,500 LOC
+
+================================================================================
+DEPENDENCY TREE
+================================================================================
+
+Core ML Stack:
+  torch >= 2.6.0
+  transformers >= 4.44
+  optuna >= 4.5.0
+
+Data Processing:
+  datasets >= 2.20
+  pandas >= 2.0
+  numpy >= 1.26
+  scikit-learn >= 1.4
+
+Augmentation (UNUSED):
+  nlpaug >= 1.1.11
+  textattack >= 0.3.10
+  nltk >= 3.8
+
+Infrastructure:
+  hydra-core >= 1.3.0
+  mlflow >= 3.1.0
+  typer >= 0.12
+  pydantic >= 2.8
+
+Monitoring:
+  psutil >= 7.1.1
+  pynvml >= 13.0.1
+
+Development:
+  pytest >= 8.0
+  pytest-cov >= 4.1
+  ruff >= 0.6
+  black >= 24.0
+  mypy >= 1.9
+
+================================================================================
+ENTRY POINT SUMMARY
+================================================================================
+
+Python Modules:
+  - python -m psy_agents_noaug.cli
+  - python scripts/train_criteria.py
+  - python scripts/eval_criteria.py
+  - python scripts/tune_max.py
+  - python scripts/run_hpo_stage.py
+
+Makefile Targets (60+):
+  - make train
+  - make hpo-s0/s1/s2
+  - make tune-criteria-max
+  - make full-hpo-all
+  - make test
+
+================================================================================
+END OF FILE TREE
+================================================================================

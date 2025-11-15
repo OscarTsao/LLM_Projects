@@ -1,0 +1,12 @@
+pytest
+pyyaml
+mlflow>=2.10
+optuna>=3.5
+numpy
+matplotlib
+# Optional heavy deps (not required for tests; used by real training)
+torch
+transformers
+datasets
+tokenizers
+lion-pytorch

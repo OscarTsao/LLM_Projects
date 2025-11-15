@@ -1,0 +1,120 @@
+name: Model Deployment Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      checkpoint:
+        description: 'Checkpoint path to deploy'
+        required: true
+        type: string
+      environment:
+        description: 'Deployment environment'
+        required: true
+        default: 'staging'
+        type: choice
+        options:
+          - staging
+          - production
+      task:
+        description: 'Model task'
+        required: true
+        default: 'criteria'
+        type: choice
+        options:
+          - criteria
+          - evidence
+          - share
+          - joint
+
+jobs:
+  validate:
+    name: Validate Model
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        version: 1.7.1
+
+    - name: Install dependencies
+      run: poetry install --no-interaction
+
+    - name: Download checkpoint
+      run: |
+        # Download checkpoint from artifact storage
+        echo "Downloading checkpoint: ${{ github.event.inputs.checkpoint }}"
+
+    - name: Run quality gates
+      id: quality_gates
+      run: |
+        poetry run python scripts/validate_quality_gates.py \
+          --checkpoint ${{ github.event.inputs.checkpoint }} \
+          --task ${{ github.event.inputs.task }} \
+          --output quality_gates.json
+
+        # Check if quality gates passed
+        GATES_PASSED=$(jq -r '.status' quality_gates.json)
+        echo "gates_passed=$GATES_PASSED" >> $GITHUB_OUTPUT
+
+    - name: Fail if quality gates failed
+      if: steps.quality_gates.outputs.gates_passed != 'passed'
+      run: |
+        echo "Quality gates failed!"
+        exit 1
+
+    - name: Upload validation results
+      uses: actions/upload-artifact@v4
+      with:
+        name: validation-results
+        path: quality_gates.json
+
+  deploy:
+    name: Deploy Model
+    needs: validate
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Deploy to ${{ github.event.inputs.environment }}
+      run: |
+        echo "Deploying model to ${{ github.event.inputs.environment }}"
+        echo "Checkpoint: ${{ github.event.inputs.checkpoint }}"
+        echo "Task: ${{ github.event.inputs.task }}"
+
+        # Add actual deployment commands here
+        # For example:
+        # - Upload model to model registry
+        # - Update API endpoint
+        # - Run smoke tests
+        # - Update monitoring dashboards
+
+    - name: Create deployment tag
+      run: |
+        TAG_NAME="deploy-${{ github.event.inputs.environment }}-$(date +%Y%m%d-%H%M%S)"
+        git tag -a "$TAG_NAME" -m "Deploy to ${{ github.event.inputs.environment }}"
+        git push origin "$TAG_NAME"
+
+    - name: Notify deployment
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.repos.createDeploymentStatus({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            deployment_id: context.payload.deployment.id,
+            state: 'success',
+            environment: '${{ github.event.inputs.environment }}',
+            description: 'Model deployed successfully'
+          });

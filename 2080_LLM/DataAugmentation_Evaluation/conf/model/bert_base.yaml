@@ -1,0 +1,18 @@
+pretrained_model_name: google-bert/bert-base-uncased
+classifier_hidden_sizes: []
+classifier_dropout: 0.1
+max_seq_length: 256
+warmup_ratio: 0.1
+learning_rate: 2e-5
+weight_decay: 0.01
+optimizer: adamw_torch
+scheduler: linear
+batch_size: 32
+eval_batch_size: 64  # Larger eval batch since no gradients needed
+gradient_accumulation_steps: 1
+num_epochs: 100
+adam_eps: 1e-8
+max_grad_norm: 1.0
+compile_model: true  # Enable PyTorch 2.x compilation for 20-40% speedup
+use_bfloat16: true   # More stable than float16 on RTX 3090 (Ampere+)
+early_stopping_patience: 20

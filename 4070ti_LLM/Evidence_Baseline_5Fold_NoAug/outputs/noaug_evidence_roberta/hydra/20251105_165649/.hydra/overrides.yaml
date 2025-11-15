@@ -1,0 +1,12 @@
+- training.auto_resume=false
+- training.batch_size=32
+- training.eval_batch_size=64
+- training.gradient_accumulation_steps=1
+- training.num_workers=12
+- training.prefetch_factor=8
+- training.use_torch_compile=true
+- training.torch_compile_mode=max-autotune
+- training.torch_compile_fullgraph=false
+- training.torch_compile_dynamic=true
+- model.use_gradient_checkpointing=false
+- logging.save_every_epochs=0

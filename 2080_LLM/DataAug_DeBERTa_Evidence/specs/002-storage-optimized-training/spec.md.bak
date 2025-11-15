@@ -1,0 +1,162 @@
+# Feature Specification: Storage-Optimized Training & HPO Pipeline
+
+**Feature Branch**: `002-storage-optimized-training`  
+**Created**: 2025-10-10  
+**Status**: Draft  
+**Input**: User description: "Storage-optimized training + HPO pipeline: limit artifacts/checkpoints while retaining metrics; load models from Hugging Face; keep MLflow tracking while pruning checkpoints; portable dev container setup for multi-machine training; evaluate best model per trial on test set and save metrics, config, and model checkpoint reference as JSON in trial directory."
+
+## Clarifications
+
+### Session 2025-10-10
+
+- Q: What is the expected scale of a typical HPO workload (e.g., number of trials, model size, data size)? → A: 1000trials, 1-10gb models, <10gb data
+- Q: How should the system authenticate with Hugging Face and the experiment tracking service? → A: huggingface-cli is logged in and experiments tracking with mlflow db in the project folder
+- Q: What container technology should be used for the portable environment? → A: Docker
+- Q: What are some specific out-of-scope items for this feature? → A: All of the above.
+- Q: How should the system handle versioning of external dependencies like the MLflow API or Hugging Face models? → A: A and B.
+- Q: When multiple checkpoints qualify as "best" (e.g., same validation metric), which tie-breaking rule should be applied? → A: Keep all tied checkpoints and mark as co-best.
+- Q: When the tracking backend is temporarily unreachable and metrics are buffered locally, what should be the buffer limit before failing? → A: Buffer to disk with no hard limit, only warn after 100MB.
+- Q: When should the retention policy trigger proactively to prevent storage exhaustion? → A: When available disk space drops below 10% of total capacity.
+- Q: Where should the test set data be located and in what format? → A: Hugging Face datasets hub identifier (loaded via datasets library).
+- Q: How should the system notify users of warnings and errors during long-running training/HPO jobs? → A: Structured JSON log file + human-readable stdout.
+- Q: Where should the training and validation data be located? → A: Same Hugging Face dataset as test set (different splits).
+- Q: Should HPO trials execute sequentially (one at a time) or in parallel (multiple trials concurrently)? → A: Sequential execution only (one trial at a time).
+- Q: What should be the minimum checkpoint frequency to prevent excessive storage churn? → A: Every epoch (complete pass through training data).
+- Q: How should the system determine which checkpoint is "best" for a trial? → A: User specifies a single metric to optimize (e.g., "accuracy").
+- Q: When optimizing the specified metric, should it be maximized or minimized? → A: Always maximize (higher is better).
+- Q: When a checkpoint write is interrupted (e.g., system crash during save), how should the system detect and handle corrupted checkpoints during resume? → A: Combination of atomic writes to prevent corruption + validation on resume as safety net.
+- Q: When aggressive pruning (triggered at <10% disk space) cannot free sufficient space to continue training, what specific information should the error message provide to help the user resolve the issue? → A: Current disk usage, space needed for next checkpoint, list of largest artifacts, and commands to manually clean or adjust policy.
+- Q: When the system buffers metrics to disk during a tracking backend outage, how should it handle the buffered data once the backend becomes available again? → A: Automatically replay with exponential backoff retry; keep buffer file until successful upload confirmed.
+- Q: When loading models from Hugging Face and the model source is temporarily unavailable or rate-limited, what retry strategy should the system use before failing? → A: Check local cache first; if unavailable, retry with exponential backoff up to 5 attempts; then fail.
+- Q: When the containerized environment is launched on a new machine, what is the expected maximum time for initial setup (pulling images, mounting data, etc.) before the environment is ready for training? → A: 15 minutes (moderate network, first-time setup).
+
+- Q: Default retention policy when not specified? → A: keep_last_n=1, keep_best_k=1, max_total_size=10GB
+- Q: Max retained best checkpoints per trial? → A: 2 (cap; co-best ties may exceed cap)
+## User Scenarios & Testing *(mandatory)*
+
+
+### User Story 1 - Run storage-optimized training/HPO with resume (Priority: P1)
+
+An ML engineer can run model training and hyperparameter optimization (HPO) without exhausting storage. The system retains only necessary checkpoints for resume and best-model preservation while continuously logging metrics.
+
+**Why this priority**: Enables reliable long-running experiments on limited storage while preserving observability and the ability to resume after interruption.
+
+**Independent Test**: Launch a training job with HPO and an aggressive retention policy; verify metrics are fully logged, only the latest N and best-k checkpoints are retained, and an interrupted job resumes successfully from the latest retained checkpoint.
+
+**Acceptance Scenarios**:
+
+1. **Given** a configured retention policy (e.g., keep last N and keep best K), **When** training produces checkpoints, **Then** the system prunes older non-best checkpoints while metrics remain available in experiment tracking.
+2. **Given** a running job is interrupted, **When** it is restarted, **Then** it resumes from the latest retained checkpoint and continues logging metrics without duplication.
+
+---
+
+### User Story 2 - Portable environment across machines (Priority: P2)
+
+An ML engineer can spin up a portable, containerized environment on different machines (workstation, server, cloud instance) and run training/HPO consistently.
+
+**Why this priority**: Reduces environment drift and speeds onboarding and reproducibility across hardware.
+
+**Independent Test**: On a fresh machine with a standard container runtime and moderate network connectivity, start the development/training container (including image pull and initialization) and successfully run a sample training with experiment tracking enabled, completing the entire process within 15 minutes.
+
+**Acceptance Scenarios**:
+
+1. **Given** a host with a supported container runtime, **When** the provided container environment is launched, **Then** training/HPO runs without dependency issues and can access data, accelerators, and tracking endpoints as configured.
+
+---
+
+### User Story 3 - Per-study test evaluation and JSON report (Priority: P3)
+
+A researcher can, for each HPO trial, evaluate the trial’s best model on the held-out test set and store a machine-readable JSON report containing the test metrics, the exact configuration used, and a reference to the model checkpoint.
+
+**Why this priority**: Ensures comparable, auditable results across trials and easy downstream analysis.
+
+**Independent Test**: After HPO completes, verify that every trial directory contains a JSON file with required fields (metrics, config, checkpoint reference) and that metrics correspond to evaluating the best checkpoint on the test set.
+
+**Acceptance Scenarios**:
+
+1. **Given** completed HPO trials, **When** the evaluation step runs, **Then** each trial's best model is evaluated on the test set (loaded from Hugging Face datasets with split="test") and a JSON file with metrics, config, and checkpoint reference is saved in the trial's directory.
+2. **Given** a tie in validation performance across checkpoints within a trial, **When** selecting the "best" model, **Then** all tied checkpoints are marked as co-best, retained, evaluated on the test set, and their references included in the JSON report as an array.
+
+---
+
+[Add more user stories as needed, each with an assigned priority]
+
+### Edge Cases
+
+- Storage near exhaustion mid-run → retention triggers proactively when available disk space drops below 10% of total capacity; if aggressive pruning cannot free sufficient space, job fails gracefully with detailed error message including: current disk usage, space needed for next checkpoint, list of largest artifacts (with sizes and paths), and actionable commands to manually clean artifacts or adjust retention policy; error logged to both JSON log file and stdout; all metrics to-date preserved in tracking.
+- Tracking backend unreachable temporarily → metrics buffered to disk; system automatically replays buffered metrics with exponential backoff retry when backend becomes available; buffer file retained until successful upload is confirmed; emit WARNING to JSON log and stdout when buffer exceeds 100MB; no hard limit, allowing training to continue even during extended tracking outages.
+- Model source unavailable or rate-limited → check local Hugging Face cache first; if model not cached, retry download with exponential backoff (increasing delays: 1s, 2s, 4s, 8s, 16s) up to 5 attempts; if all retries fail, terminate with actionable ERROR message logged to JSON log and stdout including cache location and manual download instructions.
+- Excessive checkpoint frequency → enforce minimum interval of one epoch between checkpoints to prevent churn and storage thrash.
+- Interrupted job during checkpoint write → use atomic write pattern (write to temporary file, then rename) to prevent corruption; on resume, validate checkpoint integrity via checksum/hash before loading; fall back to previous valid checkpoint if validation fails.
+- Trials with identical validation performance → keep all tied checkpoints and mark as co-best; retention policy must preserve all co-best checkpoints.
+- Test set leakage prevention → ensure evaluation uses strictly held-out test split from Hugging Face datasets (loaded via datasets library with split="test") and is run only after training/HPO concludes for a trial.
+
+## Requirements *(mandatory)*
+
+### Functional Requirements
+
+- **FR-001**: The training/HPO system MUST implement a storage retention policy that limits retained checkpoints/artifacts while guaranteeing ability to resume and preserving the best model(s).
+- **FR-002**: The retention policy MUST be configurable (e.g., keep last N, keep best K, maximum total size, checkpoint interval in epochs) and enforceable during long runs. If unspecified, defaults apply: keep_last_n=1, keep_best_k=1, keep_best_k_max=2, max_total_size=10GB (co-best ties may exceed cap).
+- **FR-003**: Metrics and metadata MUST be continuously logged to an experiment tracking system and remain intact regardless of artifact pruning.
+- **FR-004**: The system MUST support resuming training from the latest valid retained checkpoint without duplicating logged metrics; MUST validate checkpoint integrity (via checksum/hash) before loading and fall back to the previous valid checkpoint if corruption is detected.
+- **FR-005**: The system MUST load base and/or fine-tunable models from the Hugging Face model hub given user-specified model identifiers; MUST check local Hugging Face cache first; if not cached, MUST retry download with exponential backoff (delays: 1s, 2s, 4s, 8s, 16s) up to 5 attempts before failing with an actionable error message.
+- **FR-006**: Each HPO trial MUST maintain its own directory for artifacts and logs to ensure isolation and traceability.
+- **FR-007**: For every trial, the best model(s) (determined by maximizing a user-specified optimization metric such as "accuracy" or "val_f1"; when tied, all co-best checkpoints are preserved and marked) MUST be evaluated on the held-out test set.
+- **FR-008**: For every trial, a JSON report MUST be saved in the trial directory containing at least: test metrics (by name/value), full resolved configuration (including model id, data, seeds, hyperparameters), and references to the best checkpoint(s) (path or unique id; array when multiple co-best checkpoints exist).
+- **FR-009**: The system MUST prevent runaway storage growth by pruning immediately after checkpoint creation when limits are exceeded, without blocking metric logging.
+- **FR-010**: The system MUST expose dry-run and disabling options for checkpointing (e.g., evaluation-only) while still logging metrics.
+- **FR-011**: The system MUST provide deterministic seed control for reproducibility of trials where feasible.
+- **FR-012**: Auditability: users MUST be able to reconstruct training curves and trial outcomes from tracking data even after artifact pruning.
+- **FR-013**: The environment for training/HPO MUST be portable across machines using a containerized setup and documented mount/device requirements.
+- **FR-014**: Failure handling MUST be explicit: if retention cannot keep at least one resume-capable checkpoint and the best model, the job must stop with a detailed error message containing: current disk usage, space needed for the next checkpoint, a list of the largest artifacts (with sizes and paths), and actionable commands to manually clean artifacts or adjust the retention policy.
+- **FR-015**: The user-specified optimization metric (used to determine the "best" checkpoint) MUST be explicitly configured, validated, and recorded alongside outputs in the trial JSON report.
+- **FR-016**: All external dependencies, including the MLflow API and Hugging Face models, MUST be pinned to exact versions via Poetry (`poetry.lock`) as the source of truth. For Docker builds, an exported `requirements.txt` may be used for performance, but it MUST be generated from `poetry.lock` and kept in sync.
+- **FR-017**: When the experiment tracking backend is unreachable, the system MUST buffer metrics to disk; MUST automatically replay buffered metrics with exponential backoff retry when the backend becomes available; MUST retain the buffer file until successful upload is confirmed; MUST warn when buffered metrics exceed 100MB; MUST NOT impose a hard limit that would block training progress.
+- **FR-018**: The system MUST monitor available disk space and trigger proactive retention pruning when available space drops below 10% of total disk capacity; MUST attempt aggressive pruning before failing the job.
+- **FR-019**: The system MUST load all data (training, validation, and test) from a single Hugging Face dataset using a user-specified dataset identifier with appropriate split names (split="train", split="validation", split="test"), ensuring strict separation between splits.
+- **FR-020**: The system MUST emit warnings and errors to both a structured JSON log file (machine-readable, with timestamp, severity, context) and human-readable stdout; critical errors MUST be immediately visible in stdout.
+- **FR-021**: HPO trials MUST execute sequentially (one trial at a time), completing each trial's training, evaluation, and artifact cleanup before starting the next trial.
+- **FR-022**: The system MUST enforce a minimum checkpoint interval of one epoch (one complete pass through the training data) to prevent excessive storage churn and I/O overhead.
+- **FR-023**: The system MUST require the user to specify a single optimization metric name (e.g., "accuracy", "val_f1") to maximize when determining the best checkpoint; the metric MUST be validated to exist in logged metrics; higher values are always considered better.
+- **FR-024**: The system MUST use atomic checkpoint writes (write to temporary file, then atomic rename) to prevent partial/corrupted checkpoints from being created during interruptions.
+- **FR-025** (Optional): The system MAY generate a study-level summary JSON report that aggregates metrics across all trials and references the best trial's evaluation report. This is supplementary to per-trial reports and aids in cross-study comparison.
+
+### Key Entities *(include if feature involves data)*
+
+- **Trial**: Unique id, search parameters, resolved config, optimization metric name, logs, artifact directory, best checkpoint reference(s), status.
+- **Checkpoint**: Trial id, step/epoch, metrics snapshot, path/id, created_at, retained flag, co_best flag (true when tied for maximum value of the optimization metric), integrity_hash (checksum for validation on resume).
+- **RetentionPolicy**: keep_last_n, keep_best_k, keep_best_k_max=2, max_total_size, min_interval_epochs (minimum: 1 epoch), pruning_strategy, disk_space_threshold_percent (default: 10% of total capacity). Co-best ties may exceed cap.
+- **ExperimentRun**: Tracking id(s), metrics time series, params, tags.
+- **ModelSource**: Provider and model identifier(s) used for initialization.
+- **DataSource**: Hugging Face dataset identifier, split name (train/validation/test), version/revision.
+- **EvaluationReport**: JSON artifact with test metrics, config, checkpoint reference(s), and the optimization metric name used to determine best checkpoint.
+- **EnvironmentProfile**: Containerized environment constraints and capabilities required for portability.
+- **LogEvent**: Timestamp, severity (DEBUG/INFO/WARNING/ERROR/CRITICAL), message, structured context (trial_id, step, component), written to both JSON log file and human-readable stdout.
+
+## Assumptions
+
+- **A-001**: A typical HPO workload is assumed to be up to 1000 trials, with model sizes between 1-10GB and data sizes under 10GB.
+- **A-002**: The environment is assumed to have Hugging Face authentication pre-configured (e.g., via `huggingface-cli login`).
+- **A-003**: The MLflow experiment tracking backend is a local database file within the project directory, requiring no network authentication.
+- **A-004**: The containerized environment will be based on Docker.
+- **A-005**: All external dependencies, including the MLflow API and Hugging Face models, will be pinned to exact versions via Poetry (`poetry.lock`) as source of truth; Docker builds may use an exported `requirements.txt` generated from the lock file.
+- **A-006**: All training, validation, and test data reside in a single Hugging Face dataset with standard split names (train, validation, test).
+- **A-007**: Sequential trial execution is assumed, simplifying resource allocation and storage management (no concurrent trials competing for disk/memory/accelerators).
+- **A-008**: The optimization metric is always maximized (higher is better); users should transform metrics accordingly (e.g., log negative loss if loss minimization is desired).
+
+## Out of Scope
+
+- Data collection and initial labeling.
+- User interface (UI) for interacting with the model.
+- Business strategy and product management decisions.
+
+## Success Criteria *(mandatory)*
+
+### Measurable Outcomes
+
+- **SC-001**: Storage usage for checkpoints/artifacts is reduced by ≥60% versus naive “keep all” over equivalent runs, while preserving resume capability and best model(s).
+- **SC-002**: 100% of interrupted training jobs resume successfully from the latest retained checkpoint in ≤2 minutes setup time.
+- **SC-003**: 100% of metrics and parameters are present in the tracking system for all runs and trials; no missing time series due to pruning.
+- **SC-004**: For 100% of trials, a JSON evaluation report exists with required fields and reflects test-set evaluation of that trial’s best model.
+- **SC-005**: 100% of runs that specify valid model ids successfully initialize models from the Hugging Face hub.
+- **SC-006**: On a fresh supported machine with moderate network connectivity, the portable environment is operational and can execute a sample training within 15 minutes from setup start (including image pull, container launch, and environment initialization).

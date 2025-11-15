@@ -1,0 +1,18 @@
+# TextAttack augmentation configuration
+enabled: true
+pipeline: textattack_pipeline
+
+# Augmentation parameters
+ratio: 0.5
+max_aug_per_sample: 1
+seed: 42
+
+# TextAttack-specific settings
+aug_method: wordnet  # wordnet, embedding
+pct_words_to_swap: 0.1
+
+# Balance preservation
+preserve_balance: true
+
+# CRITICAL: Only augment training data
+train_only: true

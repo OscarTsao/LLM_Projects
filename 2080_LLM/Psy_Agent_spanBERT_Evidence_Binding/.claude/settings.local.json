@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(PYTHONPATH=. python3:*)",
+      "Bash(CUDA_VISIBLE_DEVICES:*)",
+      "Bash(CUDA_VISIBLE_DEVICES=\"\" PYTHONPATH=. python3 -c \"\nfrom src.data.dataset import CriteriaBindingDataset\nfrom src.data.dataset import create_label_mappings\n\n# Check labels in the dataset\ndataset = CriteriaBindingDataset(''data/examples/train.jsonl'', max_examples=3)\nprint(''Dataset examples:'')\nfor i in range(len(dataset)):\n    ex = dataset[i]\n    print(f''  {i}: label={ex.get(\"\"label\"\", \"\"none\"\")}, id={ex[\"\"id\"\"]}'')\n\n# Check label mappings\nlabel_mappings = create_label_mappings(dataset)\nprint(f''Label mappings: {label_mappings}'')\n\")",
+      "Bash(CUDA_VISIBLE_DEVICES=\"\" PYTHONPATH=. python3 -c \"\nfrom src.data.dataset import CriteriaBindingDataset\nfrom src.data.dataset import create_label_mappings\n\n# Check labels in the dataset\ndataset = CriteriaBindingDataset(''data/examples/train.jsonl'', max_examples=3)\nprint(''Dataset examples:'')\nfor i in range(len(dataset)):\n    ex = dataset[i]\n    print(f''  {i}: label={ex.get(\"\"label\"\", \"\"none\"\")}, id={ex[\"\"id\"\"]}'')\n\nprint(f''Dataset label_to_id: {dataset.label_to_id}'')\n\n# Check label mappings\nlabel_mappings = create_label_mappings(dataset)\nprint(f''Label mappings: {label_mappings}'')\n\")",
+      "Bash(CUDA_VISIBLE_DEVICES=\"\" PYTHONPATH=. python3 -m src.cli train --config test_config.yaml --log-level INFO --overrides train.epochs=1 logging.output_dir=test_outputs)",
+      "Bash(CUDA_VISIBLE_DEVICES=\"\" PYTHONPATH=. python3 -m src.cli --log-level INFO train --config test_config.yaml --overrides train.epochs=1 logging.output_dir=test_outputs)",
+      "Bash(CUDA_VISIBLE_DEVICES=\"\" PYTHONPATH=. timeout 120 python3 -m src.cli --log-level INFO train --config test_config.yaml --overrides train.epochs=1 logging.output_dir=test_outputs)",
+      "Bash(PYTHONPATH=. timeout 120 python3 -m src.cli --log-level INFO train --config test_config.yaml --overrides train.epochs=1 logging.output_dir=test_outputs)",
+      "Bash(PYTHONPATH=. timeout 90 python3 -m src.cli --log-level INFO train --config test_config.yaml --overrides train.epochs=1 logging.output_dir=test_outputs)",
+      "Bash(git init:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

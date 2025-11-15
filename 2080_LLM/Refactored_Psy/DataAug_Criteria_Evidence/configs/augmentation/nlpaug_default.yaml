@@ -1,0 +1,19 @@
+# NLPAug augmentation configuration (default)
+enabled: true
+pipeline: nlpaug_pipeline
+
+# Augmentation parameters
+ratio: 0.5  # Augment 50% of training data
+max_aug_per_sample: 1  # Maximum 1 augmented variant per sample
+seed: 42
+
+# NLPAug-specific settings
+aug_method: synonym  # synonym, insert, swap
+aug_min: 1
+aug_max: 3
+
+# Balance preservation
+preserve_balance: true
+
+# CRITICAL: Only augment training data
+train_only: true

@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Models and outputs
+*_model/
+*.pth
+*.pt
+*.bin
+*.pkl
+logs/
+outputs/
+checkpoints/
+hydra_outputs/
+.hydra/
+
+# Data (if sensitive)
+# Data/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*~

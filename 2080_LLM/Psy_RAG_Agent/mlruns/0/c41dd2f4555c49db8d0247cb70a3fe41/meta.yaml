@@ -1,0 +1,14 @@
+artifact_uri: file:///media/user/SSD1/YuNing/Psy_RAG_Agent/mlruns/0/c41dd2f4555c49db8d0247cb70a3fe41/artifacts
+end_time: 1758013629718
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c41dd2f4555c49db8d0247cb70a3fe41
+run_name: capable-auk-759
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1758013627983
+status: 3
+tags: []
+user_id: user

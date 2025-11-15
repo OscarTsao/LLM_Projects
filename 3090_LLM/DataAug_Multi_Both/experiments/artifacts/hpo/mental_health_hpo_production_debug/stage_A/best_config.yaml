@@ -1,0 +1,50 @@
+metric: 0.0
+params:
+  aug.method_0: nlp_contextual_insert
+  aug.method_1: nlp_word_split
+  aug.method_10: ta_checklist
+  aug.method_11: nlp_char_swap
+  aug.method_12: ta_word_swap_random
+  aug.method_13: nlp_ocr
+  aug.method_14: nlp_keyboard
+  aug.method_15: nlp_char_substitute
+  aug.method_16: nlp_ocr
+  aug.method_17: nlp_contextual_insert
+  aug.method_18: nlp_word_delete
+  aug.method_19: ta_deletion
+  aug.method_2: ta_eda
+  aug.method_20: nlp_keyboard
+  aug.method_21: ta_deletion
+  aug.method_22: nlp_word_split
+  aug.method_23: nlp_keyboard
+  aug.method_24: nlp_word_spelling
+  aug.method_3: ta_word_swap_embedding
+  aug.method_4: ta_eda
+  aug.method_5: ta_charswap
+  aug.method_6: nlp_word_antonym
+  aug.method_7: ta_wordnet
+  aug.method_8: nlp_word_substitute
+  aug.method_9: nlp_char_insert
+  aug.num_methods: 25
+  aug.prob: 0.4233589392465845
+  head.dropout: 0.02904180608409973
+  head.mlp.activation: relu
+  head.mlp.hidden_dim: 768
+  head.mlp.layernorm: false
+  head.mlp.layers: 3
+  head.type: mlp
+  loss.focal.alpha_pos: 0.39308947463495336
+  loss.focal.gamma: 1.8764339456056545
+  loss.name: focal
+  optim.lr_encoder: 1.6338208828908808e-05
+  optim.lr_head: 0.00015304852121831474
+  optim.name: adamw
+  optim.weight_decay: 0.009290082543999545
+  pooling: cls
+  pred.threshold.global: 0.2798695128633439
+  pred.threshold.policy: opt_global
+  sched.name: linear
+  sched.warmup_ratio: 0.013010318597055905
+  train.grad_clip_norm: 1.8977710745066665
+stage: stage_A
+threshold: 0.2798695128633439

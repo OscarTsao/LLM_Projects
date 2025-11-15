@@ -1,0 +1,20 @@
+{
+  "name": "DataAug_DeBERTa_Criteria",
+  "build": { "dockerfile": "Dockerfile", "context": ".." },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/DataAug_DeBERTa_Criteria,type=bind,consistency=cached",
+  "workspaceFolder": "/workspaces/DataAug_DeBERTa_Criteria",
+  "features": {},
+  "runArgs": ["--gpus", "all"],
+  "containerEnv": {
+    "NVIDIA_VISIBLE_DEVICES": "all",
+    "NVIDIA_DRIVER_CAPABILITIES": "compute,utility",
+    "POETRY_VIRTUALENVS_CREATE": "false",
+    "POETRY_VIRTUALENVS_IN_PROJECT": "false"
+  },
+  "remoteUser": "vscode",
+  "mounts": [
+    "type=volume,source=vscode-extensions,target=/home/vscode/.vscode-server/extensions"
+  ],
+  "postCreateCommand": "sudo chown -R vscode:vscode /workspaces/DataAug_DeBERTa_Criteria || true",
+  "overrideCommand": false
+}

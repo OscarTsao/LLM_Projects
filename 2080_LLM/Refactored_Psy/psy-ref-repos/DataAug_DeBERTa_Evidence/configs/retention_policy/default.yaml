@@ -1,0 +1,13 @@
+# Default retention policy configuration
+keep_last_n: 1  # Keep last N checkpoints
+keep_best_k: 1  # Keep best K checkpoints by optimization metric
+keep_best_k_max: 2  # Maximum co-best checkpoints to keep
+max_total_size: 10737418240  # 10GB in bytes
+
+# Proactive pruning threshold
+disk_threshold_percent: 10  # Trigger aggressive pruning when disk < 10%
+
+# Checkpoint validation
+validate_integrity: true  # Validate checkpoints with SHA256 hash
+atomic_writes: true  # Use atomic writes (temp file → rename)
+

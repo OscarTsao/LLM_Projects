@@ -1,0 +1,35 @@
+# Main training configuration
+defaults:
+  - model: mental_bert
+  - data: redsm5
+  - retention_policy: default
+  - _self_
+
+# Training parameters
+trainer:
+  max_epochs: 10
+  checkpoint_interval: 1  # Save checkpoint every N epochs
+  optimization_metric: "validation_f1_macro"  # Metric to optimize
+  
+# Seeding for reproducibility
+seed: 42
+
+# MLflow tracking
+mlflow:
+  experiment_name: "storage-optimized-hpo"
+  tracking_uri: "sqlite:///experiments/mlflow_db/mlflow.db"
+  
+# HPO configuration (optional, for Optuna sweeps)
+hpo:
+  enabled: false
+  n_trials: 100
+  study_name: "hpo_study_${now:%Y%m%d_%H%M%S}"
+  
+# Logging
+logging:
+  level: INFO
+  json_log_file: "experiments/logs/train_${now:%Y%m%d_%H%M%S}.json"
+  
+# Dry-run mode (no checkpointing, for evaluation only)
+dry_run: false
+

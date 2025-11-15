@@ -1,0 +1,250 @@
+# @package _global_.hpo
+# Memory-aware HPO configuration for GPU memory constraints
+#
+# FIXED PARAMETER SPACE: Uses most restrictive constraints (DeBERTa limits) for all models
+# to ensure consistent Optuna categorical distributions across all trials.
+#
+# All models use: max batch_size=64, max_length=[128, 256]
+# Model-specific optimizations (gradient checkpointing, etc.) are applied within these constraints
+# OOM errors are caught and handled gracefully with penalty values
+
+study_name: redsm5_hpo
+storage: ${env:OPTUNA_STORAGE_URL, null}
+direction: maximize
+n_trials: 500
+n_jobs: 1
+timeout: null
+
+sampler:
+  _target_: optuna.samplers.TPESampler
+  seed: 42
+  multivariate: true
+
+pruner:
+  _target_: optuna.pruners.MedianPruner
+  n_startup_trials: 5
+  n_warmup_steps: 100
+
+search_space:
+  # Training - Optimizer
+  training.optimizer.name:
+    distribution: categorical
+    choices: ["adamw", "lamb", "adafactor"]
+  training.optimizer.learning_rate:
+    distribution: loguniform
+    low: 1e-6
+    high: 5e-5
+  training.optimizer.weight_decay:
+    distribution: loguniform
+    low: 1e-5
+    high: 1e-1
+  training.optimizer.layerwise_lr_decay:
+    distribution: uniform
+    low: 0.8
+    high: 1.0
+  training.optimizer.eps:
+    distribution: loguniform
+    low: 1e-9
+    high: 1e-6
+
+  # Training - Scheduler
+  training.scheduler.name:
+    distribution: categorical
+    choices: ["linear", "cosine", "onecycle", "plateau", "polynomial"]
+  training.scheduler.warmup_ratio:
+    distribution: uniform
+    low: 0.0
+    high: 0.2
+  training.scheduler.cosine_cycles:
+    distribution: uniform
+    low: 0.25
+    high: 1.0
+  training.scheduler.onecycle_max_lr:
+    distribution: loguniform
+    low: 1e-5
+    high: 1e-4
+  training.scheduler.onecycle_pct_start:
+    distribution: uniform
+    low: 0.1
+    high: 0.5
+  training.scheduler.polynomial_power:
+    distribution: uniform
+    low: 0.5
+    high: 2.0
+  training.scheduler.plateau_patience:
+    distribution: categorical
+    choices: [1, 2, 3, 5]
+
+  # Training - Batch & Gradient (Fixed constraints for all models)
+  # Uses most restrictive constraints (DeBERTa limits) to ensure consistent distributions
+  training.batch_size:
+    distribution: categorical
+    choices:
+      - 8
+      - 16
+      - 32
+      - 64  # Maximum for memory safety across all models
+  training.val_batch_size:
+    distribution: categorical
+    choices:
+      - 8
+      - 16
+      - 32
+      - 64
+  training.test_batch_size:
+    distribution: categorical
+    choices:
+      - 8
+      - 16
+      - 32
+      - 64
+  training.gradient_accumulation_steps:
+    distribution: categorical
+    choices: [1, 2, 4, 8]
+  training.max_grad_norm:
+    distribution: uniform
+    low: 0.5
+    high: 5.0
+  # Training - Early Stopping
+  training.early_stopping.patience:
+    distribution: categorical
+    choices:
+      - 3
+      - 5
+      - 7
+      - 10
+      - 12
+      - 15
+      - 20
+
+  # Training - Focal Loss
+  training.focal.initial_gamma:
+    distribution: uniform
+    low: 1.0
+    high: 5.0
+  training.focal.alpha:
+    distribution: uniform
+    low: 0.1
+    high: 0.5
+  training.ema_decay:
+    distribution: uniform
+    low: 0.0
+    high: 0.9999
+
+  # Data (Fixed constraints for all models)
+  # Uses most restrictive constraints (DeBERTa limits) to ensure consistent distributions
+  data.max_length:
+    distribution: categorical
+    choices: [128, 256]  # Maximum lengths for memory safety across all models
+
+  # Model - Encoder
+  model.encoder.pretrained_model_name_or_path:
+    distribution: categorical
+    choices:
+      - roberta-base
+      - microsoft/deberta-base
+      - microsoft/deberta-v3-base
+      - nvidia/quality-classifier-deberta
+      - bert-base-uncased
+      - SpanBERT/spanbert-base-cased
+      - albert/albert-base-v2
+      - xlnet/xlnet-base-cased
+      - google/electra-base-discriminator
+      - OpenMed/OpenMed-NER-AnatomyDetect-ElectraMed-109M
+      - OpenMed/OpenMed-NER-ChemicalDetect-ElectraMed-33M
+  # Note: model.encoder.type is automatically set based on pretrained_model_name_or_path in hpo.py
+  model.encoder.freeze_encoder:
+    distribution: categorical
+    choices: [false, true]
+  model.encoder.pooling:
+    distribution: categorical
+    choices: ["cls", "mean"]
+  model.encoder.output_dropout:
+    distribution: uniform
+    low: 0.0
+    high: 0.5
+  model.encoder.lora.enabled:
+    distribution: categorical
+    choices: [false, true]
+  model.encoder.lora.r:
+    distribution: categorical
+    choices: [8, 16, 32]
+  model.encoder.lora.alpha:
+    distribution: categorical
+    choices: [16, 32, 64]
+  model.encoder.lora.dropout:
+    distribution: uniform
+    low: 0.0
+    high: 0.2
+  model.encoder.gradient_checkpointing:
+    distribution: categorical
+    choices: [false, true]  # Automatically enabled for memory-intensive trials
+  model.heads.symptom_labels.layers.num_layers:
+    distribution: categorical
+    choices: [1, 2]
+  model.heads.symptom_labels.layers.activation:
+    distribution: categorical
+    choices: ["tanh", "gelu", "leakyrelu", "relu", "silu", "mish", "elu"]
+  model.heads.symptom_labels.layers.dropout:
+    distribution: uniform
+    low: 0.0
+    high: 0.5
+  model.heads.symptom_labels.classifier_dropout:
+    distribution: uniform
+    low: 0.0
+    high: 0.5
+  model.heads.symptom_labels.label_smoothing:
+    distribution: uniform
+    low: 0.0
+    high: 0.2
+  model.heads.symptom_labels.loss.type:
+    distribution: categorical
+    choices: ["cross_entropy", "adaptive_focal", "hybrid"]
+  model.heads.symptom_labels.loss.cross_entropy_weight:
+    distribution: uniform
+    low: 0.5
+    high: 2.0
+  model.heads.symptom_labels.loss.adaptive_focal_weight:
+    distribution: uniform
+    low: 0.5
+    high: 2.0
+  model.heads.symptom_labels.thresholds.ANHEDONIA:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.APPETITE_CHANGE:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.COGNITIVE_ISSUES:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.DEPRESSED_MOOD:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.FATIGUE:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.PSYCHOMOTOR:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.SLEEP_ISSUES:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.SPECIAL_CASE:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.SUICIDAL_THOUGHTS:
+    distribution: uniform
+    low: 0.2
+    high: 0.8
+  model.heads.symptom_labels.thresholds.WORTHLESSNESS:
+    distribution: uniform
+    low: 0.2
+    high: 0.8

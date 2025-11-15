@@ -1,0 +1,21 @@
+name: redsm5
+channels:
+  - conda-forge
+  - pytorch
+  - nvidia
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch::pytorch>=2.1
+  - pytorch::pytorch-cuda=12.1
+  - pytorch::torchvision
+  - numpy
+  - pandas
+  - scikit-learn
+  - tqdm
+  - pip:
+      - -r requirements.txt
+variables:
+  MLFLOW_TRACKING_URI: http://localhost:5000
+  DVC_NO_ANALYTICS: "1"
+  PYTHONDONTWRITEBYTECODE: "1"

@@ -1,0 +1,54 @@
+# Field mapping configuration with STRICT validation rules
+# 
+# CRITICAL RULES (HIGHEST PRIORITY):
+# 1. status field -> ONLY for criteria labels
+# 2. cases field -> ONLY for evidence labels
+# 3. NO cross-contamination allowed - enforced by assertions
+
+# Posts table mapping
+posts:
+  post_id: "post_id"
+  text: "text"
+  user_id: "user_id"  # optional
+  created_at: "created_at"  # optional
+
+# Annotations table mapping
+annotations:
+  post_id: "post_id"
+  criterion_id: "criterion_id"
+  status: "status"  # ONLY for criteria task
+  cases: "cases"    # ONLY for evidence task
+  
+# Status field value mapping (for criteria labels)
+status_values:
+  positive: ["positive", "present", "true", "1", 1, True]
+  negative: ["negative", "absent", "false", "0", 0, False]
+  # Any other values will be dropped with a warning
+
+# Cases field structure (for evidence labels)
+cases_structure:
+  # Cases can be:
+  # - A list of dictionaries with: start_char, end_char, sentence_id, text
+  # - A stringified JSON list
+  # - An empty list (no evidence)
+  is_list: true
+  fields:
+    start_char: "start_char"
+    end_char: "end_char"
+    sentence_id: "sentence_id"
+    text: "text"
+
+# DSM criteria mapping
+dsm_criteria:
+  id: "id"
+  text: "text"
+  description: "description"  # optional
+
+# Validation settings
+validation:
+  strict_mode: true
+  allow_cross_contamination: false  # MUST be false
+  fail_on_invalid_criterion_id: true
+  fail_on_missing_post_id: true
+  drop_duplicates: true
+  warn_on_conflicts: true

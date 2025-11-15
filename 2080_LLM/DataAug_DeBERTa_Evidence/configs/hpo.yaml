@@ -1,0 +1,46 @@
+hpo:
+  storage: "sqlite:///optuna.db"
+  study_base_name: "deberta_v3_evidence"
+  direction: "maximize"
+  objective_metric: "val_ev_macro_f1"
+  total_trial_cap: 500
+  plateau_patience: 120
+  driver:
+    timeout_seconds: 604800
+    k_top: 5
+    global_seed: 42
+  stage_a:
+    name_suffix: "stage_a"
+    trials: 380
+    epochs: 100
+    timeout_ratio: 0.6
+    sampler:
+      type: "tpe"
+      seed: 42
+      params:
+        multivariate: true
+        group: true
+        n_startup_trials: 60
+        n_ei_candidates: 128
+    pruner:
+      type: "hyperband"
+      min_resource: 1
+      reduction_factor: 3
+  stage_b:
+    name_suffix: "stage_b"
+    trials: 120
+    epochs: 100
+    timeout_ratio: 0.4
+    sampler:
+      type: "tpe"
+      seed: 123
+      params:
+        multivariate: true
+        group: true
+        n_startup_trials: 30
+        n_ei_candidates: 128
+    pruner:
+      type: "percentile"
+      percentile: 25.0
+      n_startup_trials: 10
+      n_warmup_steps: 2

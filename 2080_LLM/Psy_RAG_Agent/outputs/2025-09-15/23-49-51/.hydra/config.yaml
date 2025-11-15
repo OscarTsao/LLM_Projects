@@ -1,0 +1,40 @@
+data:
+  translated_posts_path: Data/translated_posts.csv
+  criteria_path: Data/DSM-5/DSM_Criteria_Array_Fixed_Simplify.json
+  groundtruth_path: Data/Groundtruth/criteria_evaluation.csv
+output:
+  model_dir: ./hydra_dsm_model
+  save_best_only: true
+gpu:
+  auto_optimize: true
+training:
+  num_epochs: 15
+  batch_size: 64
+  learning_rate: 0.001
+  weight_decay: 0.01
+  test_size: 0.2
+  val_size: 0.1
+  random_state: 42
+  rtx_3090:
+    batch_size: 128
+    num_epochs: 20
+  standard_gpu:
+    batch_size: 64
+    num_epochs: 15
+  cpu:
+    batch_size: 32
+    num_epochs: 10
+model:
+  max_features: 5000
+  hidden_dim: 256
+  dropout_rate: 0.3
+  num_labels: 2
+  rtx_3090:
+    max_features: 8000
+    hidden_dim: 512
+  standard_gpu:
+    max_features: 5000
+    hidden_dim: 256
+  cpu:
+    max_features: 3000
+    hidden_dim: 128

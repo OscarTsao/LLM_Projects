@@ -1,0 +1,23 @@
+# Optimized config for RTX 5090 (32GB VRAM)
+pretrained_model_name: microsoft/deberta-base
+classifier_hidden_sizes: []
+classifier_dropout: 0.1
+max_seq_length: 256
+
+# Optimizer settings
+warmup_ratio: 0.1
+learning_rate: 2e-5
+weight_decay: 0.01
+optimizer: adamw_torch
+scheduler: linear
+adam_eps: 1e-8
+max_grad_norm: 1.0
+
+# Batch settings - optimized for 32GB VRAM
+batch_size: 64  # Larger batch for RTX 5090
+gradient_accumulation_steps: 2  # Effective batch = 128
+num_epochs: 5
+
+# Performance optimizations
+compile_model: true  # PyTorch 2.x compilation for speedup
+# Note: Mixed precision is automatically disabled for DeBERTa models due to overflow issues

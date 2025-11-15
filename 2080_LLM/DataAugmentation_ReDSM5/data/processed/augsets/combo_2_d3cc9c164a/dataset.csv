@@ -1,0 +1,700 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I efel so.,I efel so.,I feel so oppressed.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1955_1069_2
+I feel oprpessed.,I feel oprpessed.,I feel so oppressed.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1955_1069_2
+I was filled neergy.,I was filled neergy.,I was filled with energy.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_993_1060_1
+I wsa filled energy.,I wsa filled energy.,I was filled with energy.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_993_1060_1
+"I 100% know that if I have to go to colglee alnoe my family or any support gonna end up killnig. .. . Im keeping my self alive now, I can ' imagine being all by myself and dealing with my thoughts and emotions!","I 100% know that if I have to go to colglee alnoe my family or any support gonna end up killnig. .. . Im keeping my self alive now, I can ' imagine being all by myself and dealing with my thoughts and emotions!","I 100% know that if I have to go to college alone without my family or any support Im gonna end up killing myself....Im barely keeping my self alive now, I can't imagine being all by myself and dealing with my thoughts and emotions!",nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_156_366_1
+"I% know that if ahve to go to college without my family or any support Im gonna end up killing myself. .. . Im barely keeping my self now, I cna ' imagine being all by myeslf and dealing with my thougths and emotions!","I% know that if ahve to go to college without my family or any support Im gonna end up killing myself. .. . Im barely keeping my self now, I cna ' imagine being all by myeslf and dealing with my thougths and emotions!","I 100% know that if I have to go to college alone without my family or any support Im gonna end up killing myself....Im barely keeping my self alive now, I can't imagine being all by myself and dealing with my thoughts and emotions!",nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_156_366_1
+I ' m crying on teh.,I ' m crying on teh.,I'm crying on the floor.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2401_82_1
+I ' m criyng on the.,I ' m criyng on the.,I'm crying on the floor.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2401_82_1
+My ilfe is going.,My ilfe is going.,My life is going nowhere.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2455_114_1
+My is going nowheer.,My is going nowheer.,My life is going nowhere.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2455_114_1
+I stpo crying.,I stpo crying.,I cant stop crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2334_738_1
+I cant sotp.,I cant sotp.,I cant stop crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2334_738_1
+"It was after ym second, I realized I cannot feel sexual attraction (if I, it was very temporary ), and that I am probably asxeual due to the fatc that I just get disgusted with myself when it ot the sex part.","It was after ym second, I realized I cannot feel sexual attraction (if I, it was very temporary ), and that I am probably asxeual due to the fatc that I just get disgusted with myself when it ot the sex part.","It was only later after my second boyfriend, I realized I cannot feel sexual attraction (if I have, it was very temporary), and that I am probably asexual due to the fact that I just get disgusted with myself when it comes to the sex part.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,0,s_716_26_15
+"It was only later after escond boyfriend, I realized I cannot sexual attraction (if I, it was very temporary ), and that I am rpobably asexual due to the fact that I just disgusted wtih myself it comes to teh sex part.","It was only later after escond boyfriend, I realized I cannot sexual attraction (if I, it was very temporary ), and that I am rpobably asexual due to the fact that I just disgusted wtih myself it comes to teh sex part.","It was only later after my second boyfriend, I realized I cannot feel sexual attraction (if I have, it was very temporary), and that I am probably asexual due to the fact that I just get disgusted with myself when it comes to the sex part.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,0,s_716_26_15
+I odn ' t like.,I odn ' t like.,I don't like me.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_816_5
+I don ' t lkie.,I don ' t lkie.,I don't like me.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_816_5
+mI tired So,mI tired So,Im generally tired So,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2007_1467_0
+Im generally tierd,Im generally tierd,Im generally tired So,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2007_1467_0
+I ' cired.,I ' cired.,I've cried.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_145_86_2
+I ' rcied.,I ' rcied.,I've cried.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_145_86_2
+I begna to.,I begna to.,I began to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2815_1660_107
+I began rcy.,I began rcy.,I began to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2815_1660_107
+Imma kill myself nwo,Imma kill myself nwo,Imma go kill myself now,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2638_683_0
+Imma kill ymself now,Imma kill ymself now,Imma go kill myself now,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2638_683_0
+I lseep.,I lseep.,I hardly sleep.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_697_81_3
+Harldy sleep.,Harldy sleep.,I hardly sleep.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_697_81_3
+I am sda.,I am sda.,I am very sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_411_1189_1
+I veyr sad.,I veyr sad.,I am very sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_411_1189_1
+I kinda really asd,I kinda really asd,I feel kinda really sad,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_962_142_0
+I kinda relaly sad,I kinda relaly sad,I feel kinda really sad,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_962_142_0
+I cry more for oen.,I cry more for oen.,I cry more easily for one.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2035_91_1
+I cry more fro one.,I cry more fro one.,I cry more easily for one.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2035_91_1
+I ma very depressed.,I ma very depressed.,I am very depressed also.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_131_822_0
+I am very deperssed.,I am very deperssed.,I am very depressed also.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_131_822_0
+So tried,So tried,Im so tired,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2434_365_0
+This had crynig,This had crynig,This had me crying,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2464_412_0
+This had em,This had em,This had me crying,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2464_412_0
+Wnat to die,Wnat to die,I want to die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2118_413_1
+I ot die,I ot die,I want to die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2118_413_1
+I my liibdo.,I my liibdo.,I lost my libido.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2904_522_5
+I lots my.,I lots my.,I lost my libido.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2904_522_5
+I ujst cant enjoy.,I ujst cant enjoy.,I just cant enjoy anything.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1404_60_7
+I jsut cant enjoy.,I jsut cant enjoy.,I just cant enjoy anything.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1404_60_7
+Am benig tortured.,Am benig tortured.,I am being tortured.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1351_120_5
+Am being totrured.,Am being totrured.,I am being tortured.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1351_120_5
+I myself to slepe.,I myself to slepe.,I cried myself to sleep.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1692_755_113
+I creid myself to.,I creid myself to.,I cried myself to sleep.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1692_755_113
+I acn ' t focus.,I acn ' t focus.,I simply can't focus.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_1404_715_5
+I can ' t fcous.,I can ' t fcous.,I simply can't focus.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_1404_715_5
+hTis me feel guilty.,hTis me feel guilty.,This made me feel guilty.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_993_644_17
+This made em feel.,This made em feel.,This made me feel guilty.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_993_644_17
+i do wnat die,i do wnat die,i do want to die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_141_110_0
+i do ot die,i do ot die,i do want to die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_141_110_0
+Cyr erytime,Cyr erytime,I cry erytime,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_523_60_1
+I erytiem,I erytiem,I cry erytime,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_523_60_1
+i erally hate,i erally hate,i really hate myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1194_31_4
+i relaly hate,i relaly hate,i really hate myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1194_31_4
+I couldnt but rcy.,I couldnt but rcy.,I couldnt help but cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1599_64_59
+I couldnt help btu.,I couldnt help btu.,I couldnt help but cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1599_64_59
+I ' m qutie,I ' m qutie,I'm quite angry,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2188_1006_0
+I ' m anrgy,I ' m anrgy,I'm quite angry,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2188_1006_0
+I ' m itred.,I ' m itred.,I'm really tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_547_567_2
+I ' m tierd.,I ' m tierd.,I'm really tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_547_567_2
+I want the fo death,I want the fo death,I want the peace of death,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1404_850_1
+I awnt the of death,I awnt the of death,I want the peace of death,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1404_850_1
+"I work home, and I don ' t sleep well ofr hte msot part (I have insomnia nad completely sleep aids, and etnd not to give you a good night ' s rest, which results fatigue a few hours after waking up ), so at some point during the day, I usually get a little tired and have the urge ot just crawl into bed and finish work later (which I could do, but staying waake doing right then would be better ).","I work home, and I don ' t sleep well ofr hte msot part (I have insomnia nad completely sleep aids, and etnd not to give you a good night ' s rest, which results fatigue a few hours after waking up ), so at some point during the day, I usually get a little tired and have the urge ot just crawl into bed and finish work later (which I could do, but staying waake doing right then would be better ).","I work from home, and I don't sleep well for the most part (I have insomnia and completely rely on sleep aids, and they tend not to give you a good night's rest, which results in fatigue a few hours after waking up), so at some point during the day, I usually get a little tired and have the urge to just crawl into bed and finish my work later (which I could do, but staying awake and doing it right then would be better).",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_2292_402_1
+"I work home, adn I don ' t sleep well for the most part (I have insomnia and completely sleep aids, and tend not to give you a good night ' s rest, which results fatigue a fwe hours after waking up ), os at some point during the day, I usually get a little tierd and have the urge to just crawl inot bed nad finish work later (which I could do, but staying awake doing right then would be bteter ).","I work home, adn I don ' t sleep well for the most part (I have insomnia and completely sleep aids, and tend not to give you a good night ' s rest, which results fatigue a fwe hours after waking up ), os at some point during the day, I usually get a little tierd and have the urge to just crawl inot bed nad finish work later (which I could do, but staying awake doing right then would be bteter ).","I work from home, and I don't sleep well for the most part (I have insomnia and completely rely on sleep aids, and they tend not to give you a good night's rest, which results in fatigue a few hours after waking up), so at some point during the day, I usually get a little tired and have the urge to just crawl into bed and finish my work later (which I could do, but staying awake and doing it right then would be better).",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_2292_402_1
+I ahve no energy at.,I ahve no energy at.,I have no energy at all.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1455_72_50
+I haev no at all.,I haev no at all.,I have no energy at all.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1455_72_50
+Really rpoud myself,Really rpoud myself,Really proud of myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1605_228_1
+Really porud myself,Really porud myself,Really proud of myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1605_228_1
+Really pruod of,Really pruod of,Really proud of myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1605_228_1
+Relaly proud of,Relaly proud of,Really proud of myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1605_228_1
+I usleess.,I usleess.,I was useless.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1899_440_13
+Am very tried.,Am very tried.,I am very tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1030_1290_8
+Am veyr tired.,Am veyr tired.,I am very tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1030_1290_8
+"So here is case. . tI ' s been nearly 4 years, since i really don ' t feel like. . I am still interested in interested me before, but ym emoitons are so weak and i ma less sensitive to particular things / people.","So here is case. . tI ' s been nearly 4 years, since i really don ' t feel like. . I am still interested in interested me before, but ym emoitons are so weak and i ma less sensitive to particular things / people.","So here is the case.. It's been nearly 4 years, since i really don't feel like myself..I am still interested in activities that interested me before,but my emotions are so weak and i am much less sensitive to particular things/people.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1127_16_1
+"oS here is the caes. . It ' s been nealry 4 years, since i realyl ' t feel myself. . I am still in activities me before, but my emotions are so weak and i am much less sensitive to particular things / people.","oS here is the caes. . It ' s been nealry 4 years, since i realyl ' t feel myself. . I am still in activities me before, but my emotions are so weak and i am much less sensitive to particular things / people.","So here is the case.. It's been nearly 4 years, since i really don't feel like myself..I am still interested in activities that interested me before,but my emotions are so weak and i am much less sensitive to particular things/people.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1127_16_1
+"oS here is csae. . It ' s been nearly 4 years, since i really don ' t feel lkie. . I am still interested ni interested me before, but my emotions are so weak and i am less sensitive to particular things / people.","oS here is csae. . It ' s been nearly 4 years, since i really don ' t feel lkie. . I am still interested ni interested me before, but my emotions are so weak and i am less sensitive to particular things / people.","So here is the case.. It's been nearly 4 years, since i really don't feel like myself..I am still interested in activities that interested me before,but my emotions are so weak and i am much less sensitive to particular things/people.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1127_16_1
+"oS here is the caes. . It ' s been nealry 4 years, since i realyl ' t feel myself. . I am still in activities me before, but my emotions are so weak and i am much less sensitive to particular things / people.","oS here is the caes. . It ' s been nealry 4 years, since i realyl ' t feel myself. . I am still in activities me before, but my emotions are so weak and i am much less sensitive to particular things / people.","So here is the case.. It's been nearly 4 years, since i really don't feel like myself..I am still interested in activities that interested me before,but my emotions are so weak and i am much less sensitive to particular things/people.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1127_16_1
+I ' m to dei alone.,I ' m to dei alone.,I'm going to die alone.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1933_175_4
+I ' m to die aolne.,I ' m to die aolne.,I'm going to die alone.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1933_175_4
+I feel worthless ni.,I feel worthless ni.,I feel worthless in general.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1933_175_27
+I feel wotrhless in.,I feel wotrhless in.,I feel worthless in general.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1933_175_27
+I feel wotrhless in.,I feel wotrhless in.,I feel worthless in general.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1933_175_27
+I feel worthelss in.,I feel worthelss in.,I feel worthless in general.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1933_175_27
+I feel worthless ni.,I feel worthless ni.,I feel worthless in general.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1933_175_27
+I feel wotrhless in.,I feel wotrhless in.,I feel worthless in general.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1933_175_27
+Hating ym.,Hating ym.,Hating my failure.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2815_1585_9
+Hatign my.,Hatign my.,Hating my failure.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2815_1585_9
+"tI makes sad. ""","tI makes sad. ""","It makes me sad.""",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1115_951_1
+"It me sda. ""","It me sda. ""","It makes me sad.""",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1115_951_1
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1601_880_7
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1601_880_7
+I havne ' t in days.,I havne ' t in days.,I haven't slept in days.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_1535_1109_0
+I ' t selpt in days.,I ' t selpt in days.,I haven't slept in days.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_1535_1109_0
+Future gievs me,Future gievs me,Future gives me anxiety,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2013_92_0
+Gievs me anxiety,Gievs me anxiety,Future gives me anxiety,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2013_92_0
+Am. . sadnses,Am. . sadnses,I am.. sadness,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_855_1863_0
+Am. . sadenss,Am. . sadenss,I am.. sadness,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_855_1863_0
+Please please hlep,Please please hlep,Please please please help,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2006_107_0
+lPease please help,lPease please help,Please please please help,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2006_107_0
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2006_107_7
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2006_107_7
+I ' so tierd.,I ' so tierd.,I'm so tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2006_107_10
+I ' os tired.,I ' os tired.,I'm so tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2006_107_10
+I ' so itred.,I ' so itred.,I'm so tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2006_107_16
+I ' so tierd.,I ' so tierd.,I'm so tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2006_107_16
+I myeslf.,I myeslf.,I  hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_614_5
+Hate myslef.,Hate myslef.,I  hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_614_5
+Life si.,Life si.,Life is hell.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2415_614_6
+Lfie is.,Lfie is.,Life is hell.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2415_614_6
+I am than nanoyed.,I am than nanoyed.,I am more than annoyed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1296_12_9
+I am mroe than.,I am mroe than.,I am more than annoyed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1296_12_9
+Im so agnry.,Im so agnry.,Im so angry now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2953_1058_27
+oS angry now.,oS angry now.,Im so angry now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2953_1058_27
+"It has been rough school year for me with a lot fo that brought me the point of uncontrollable crying for two days in a row, migraines, muscle tnesion, and an to really get any work done with ym stduents.","It has been rough school year for me with a lot fo that brought me the point of uncontrollable crying for two days in a row, migraines, muscle tnesion, and an to really get any work done with ym stduents.","It has been a rough school year for me with a lot of changes that brought me to the point of uncontrollable crying for two days in a row, migraines, muscle tension, and an inability to really get any work done with my students.",nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_1190_67_2
+"It hsa been rough school year for me with a olt of that rbought me the point of uncontrollable crying for two days in a row, migraines, muscle tension, and an to really get any work done with my stuednts.","It hsa been rough school year for me with a olt of that rbought me the point of uncontrollable crying for two days in a row, migraines, muscle tension, and an to really get any work done with my stuednts.","It has been a rough school year for me with a lot of changes that brought me to the point of uncontrollable crying for two days in a row, migraines, muscle tension, and an inability to really get any work done with my students.",nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_1190_67_2
+I ' tarsh.,I ' tarsh.,I'm trash.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2130_82_12
+' m trsah.,' m trsah.,I'm trash.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2130_82_12
+I worthelss.,I worthelss.,I am worthless.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_2_3
+Am wotrhless.,Am wotrhless.,I am worthless.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_2_3
+mA hopeless.,mA hopeless.,I am hopeless.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2415_2_4
+Am hpoeless.,Am hpoeless.,I am hopeless.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2415_2_4
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_2_8
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_2_8
+Atetmpted suicide.,Atetmpted suicide.,I attempted suicide.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_982_722_0
+Attempted suciide.,Attempted suciide.,I attempted suicide.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_982_722_0
+Best I ever amde.,Best I ever amde.,Best decision I ever made.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1120_172_2
+Best I evre made.,Best I evre made.,Best decision I ever made.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1120_172_2
+I geuss I ' m,I geuss I ' m,I guess I'm depressed,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2007_693_0
+I ugess I ' m,I ugess I ' m,I guess I'm depressed,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2007_693_0
+I ' m inside otu.,I ' m inside otu.,I'm broken inside out.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1738_327_1
+I ' m broken niside.,I ' m broken niside.,I'm broken inside out.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1738_327_1
+I fetl guilty and.,I fetl guilty and.,I felt guilty and powerless.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1692_637_106
+I felt ugilty and.,I felt ugilty and.,I felt guilty and powerless.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1692_637_106
+I don ' t have a passion for anything I lost interest in most things the age of 10 (idk what happened to maybe some event ro one of my childhood operatoins something ogne wrong) after losing at 10; my time occuiped philosophy and just time mindlessly or on intellectual thinsg like science and math.,I don ' t have a passion for anything I lost interest in most things the age of 10 (idk what happened to maybe some event ro one of my childhood operatoins something ogne wrong) after losing at 10; my time occuiped philosophy and just time mindlessly or on intellectual thinsg like science and math.,I don't have a passion for anything I lost interest in most things about the age of 10 (idk what happened to me maybe some event or one of my childhood operations something gone wrong) after losing it at 10; my time became occupied with philosophy and just wasting time mindlessly or on intellectual things like science and math.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_212_394_1
+I don ' t have a passion for anything I lost interest in most things abotu the of 10 (idk what hpapened to me maybe some event or one of my childhood osmetihng gone worng) after losing at; time became occupied with philosophy and just wasting time or on intellectual things like science and math.,I don ' t have a passion for anything I lost interest in most things abotu the of 10 (idk what hpapened to me maybe some event or one of my childhood osmetihng gone worng) after losing at; time became occupied with philosophy and just wasting time or on intellectual things like science and math.,I don't have a passion for anything I lost interest in most things about the age of 10 (idk what happened to me maybe some event or one of my childhood operations something gone wrong) after losing it at 10; my time became occupied with philosophy and just wasting time mindlessly or on intellectual things like science and math.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_212_394_1
+I don ' t have a passion for anything I lost interest in most things the age of 10 (idk what happened to maybe some event ro one of my childhood operatoins something ogne wrong) after losing at 10; my time occuiped philosophy and just time mindlessly or on intellectual thinsg like science and math.,I don ' t have a passion for anything I lost interest in most things the age of 10 (idk what happened to maybe some event ro one of my childhood operatoins something ogne wrong) after losing at 10; my time occuiped philosophy and just time mindlessly or on intellectual thinsg like science and math.,I don't have a passion for anything I lost interest in most things about the age of 10 (idk what happened to me maybe some event or one of my childhood operations something gone wrong) after losing it at 10; my time became occupied with philosophy and just wasting time mindlessly or on intellectual things like science and math.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_212_394_1
+I don ' t have a passion for anything I lost interest in most things the age of 10 (idk what happened to maybe smoe event or one of my childhood operations something gone wrong) aftre losing at 01; my time occupied philosophy nad just time mindlessly or on intellectual things like scinece and math.,I don ' t have a passion for anything I lost interest in most things the age of 10 (idk what happened to maybe smoe event or one of my childhood operations something gone wrong) aftre losing at 01; my time occupied philosophy nad just time mindlessly or on intellectual things like scinece and math.,I don't have a passion for anything I lost interest in most things about the age of 10 (idk what happened to me maybe some event or one of my childhood operations something gone wrong) after losing it at 10; my time became occupied with philosophy and just wasting time mindlessly or on intellectual things like science and math.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_212_394_1
+' ve failed at ilfe.,' ve failed at ilfe.,I've failed at life.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2130_1123_14
+' ve failed ta life.,' ve failed ta life.,I've failed at life.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2130_1123_14
+I get erally.,I get erally.,I get really irritable.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_993_600_2
+I gte really.,I gte really.,I get really irritable.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_993_600_2
+I cnat eat anymore.,I cnat eat anymore.,I cant eat food anymore.,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,1,s_2815_1699_178
+I catn eat food.,I catn eat food.,I cant eat food anymore.,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,1,s_2815_1699_178
+Me cry every itme.,Me cry every itme.,Makes me cry every time.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2903_576_1
+Makes me cyr time.,Makes me cyr time.,Makes me cry every time.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2903_576_1
+Bets of my life.,Bets of my life.,Best decision of my life.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1913_223_1
+Decision fo my life.,Decision fo my life.,Best decision of my life.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1913_223_1
+I ' m etxremely.,I ' m etxremely.,I'm extremely unlovable.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1738_320_0
+I ' m exrtemely.,I ' m exrtemely.,I'm extremely unlovable.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1738_320_0
+I deserve be hatde.,I deserve be hatde.,I deserve to be hated.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1738_320_1
+I dseerve to hated.,I dseerve to hated.,I deserve to be hated.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1738_320_1
+I am extremely tam.,I am extremely tam.,I am extremely suicidal atm.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I am extremely amt.,I am extremely amt.,I am extremely suicidal atm.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2800_49_0
+mI about to up,mI about to up,Im about to give up,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2800_49_3
+Im abuot to up,Im abuot to up,Im about to give up,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2800_49_3
+Side effcets,Side effcets,Antidepressant side effects,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_1329_146_0
+iSde effects,iSde effects,Antidepressant side effects,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_1329_146_0
+I being depresesd.,I being depresesd.,I hate being depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1506_1_8
+I being derpessed.,I being derpessed.,I hate being depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1506_1_8
+Ive a lto of work.,Ive a lto of work.,Ive missed a lot of work.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_2023_576_6
+Ive a lot of wrok.,Ive a lot of wrok.,Ive missed a lot of work.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_2023_576_6
+vEery day I to die.,vEery day I to die.,Every day I wish to die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1483_222_23
+Every day I to ide.,Every day I to ide.,Every day I wish to die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1483_222_23
+nAd I would cry so.,nAd I would cry so.,And I would cry so hard.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2190_134_3
+Adn I would cry so.,Adn I would cry so.,And I would cry so hard.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2190_134_3
+I otu for my family.,I otu for my family.,I cry out for my family.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1692_774_55
+I out for my faimly.,I out for my faimly.,I cry out for my family.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1692_774_55
+I wanan kill,I wanan kill,I wanna kill myself,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1586_1434_1
+I kill msyelf,I kill msyelf,I wanna kill myself,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1586_1434_1
+Gonna kill ymself.,Gonna kill ymself.,Im gonna kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2139_27_8
+Im kill mysefl.,Im kill mysefl.,Im gonna kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2139_27_8
+Agreed I haet myself,Agreed I haet myself,Agreed I also hate myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1867_656_0
+Argeed I also hate,Argeed I also hate,Agreed I also hate myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1867_656_0
+I scucessful,I scucessful,I feel successful,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_276_620_0
+eFel successful,eFel successful,I feel successful,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_276_620_0
+yM self esteem is.,yM self esteem is.,My self esteem is gone.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_102_11
+yM self is gone.,yM self is gone.,My self esteem is gone.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_102_11
+yM self esteem is.,yM self esteem is.,My self esteem is gone.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_102_11
+My self esteem goen.,My self esteem goen.,My self esteem is gone.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_102_11
+"I fele so, so empty.","I fele so, so empty.","I feel so worthless, so empty.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1483_30_2
+"I feel so, so emtpy.","I feel so, so emtpy.","I feel so worthless, so empty.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1483_30_2
+"I fele so, so empty.","I fele so, so empty.","I feel so worthless, so empty.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1483_30_2
+"I feel so, so emtpy.","I feel so, so emtpy.","I feel so worthless, so empty.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1483_30_2
+"I feel os, so empty.","I feel os, so empty.","I feel so worthless, so empty.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1483_30_2
+"I feel so, so emtpy.","I feel so, so emtpy.","I feel so worthless, so empty.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1483_30_2
+"I ' atken / 50mg to get to sleep at night but I ' ve dfeinitely never experienced anything on ti before other than drowsy. .. so, like twenty minutes later I ' m getting in bed, and I turn on this noise ten hour youtube video I sometimes use ot help me sleep.","I ' atken / 50mg to get to sleep at night but I ' ve dfeinitely never experienced anything on ti before other than drowsy. .. so, like twenty minutes later I ' m getting in bed, and I turn on this noise ten hour youtube video I sometimes use ot help me sleep.","Occasionally I've taken 25/50mg to get to sleep at night but I've definitely never experienced anything on it before other than getting drowsy...so, like twenty minutes later I'm getting in bed, and I turn on this white noise ten hour youtube video I sometimes use to help me sleep.",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_1965_10_8
+"Occasionally I ' ve takne 25 / 50mg gte to sleep at nihgt but ' ve definitely never experienced anything it before other than getitng drowsy. .. so, like twenty minutes later I ' m getting bed, I turn on this white noise ten hour youtube video I sometimes to help me sleep.","Occasionally I ' ve takne 25 / 50mg gte to sleep at nihgt but ' ve definitely never experienced anything it before other than getitng drowsy. .. so, like twenty minutes later I ' m getting bed, I turn on this white noise ten hour youtube video I sometimes to help me sleep.","Occasionally I've taken 25/50mg to get to sleep at night but I've definitely never experienced anything on it before other than getting drowsy...so, like twenty minutes later I'm getting in bed, and I turn on this white noise ten hour youtube video I sometimes use to help me sleep.",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_1965_10_8
+Get tired real fats,Get tired real fats,I get tired real fast,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_17_969_1
+I egt tired real,I egt tired real,I get tired real fast,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_17_969_1
+But I am misearble.,But I am misearble.,But I am feeling miserable.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_600_3
+But I am msierable.,But I am msierable.,But I am feeling miserable.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_600_3
+"Some suicide attempts left mw crying qfter all the pain and ocne, the thought of my mother just at the other side of the door hse waking pu cheerfully the next mornnig, but again, living for others can only go so, and this is the where the point not cairng anymore if I can get rid fo this pain is stronger and coming closer again.","Some suicide attempts left mw crying qfter all the pain and ocne, the thought of my mother just at the other side of the door hse waking pu cheerfully the next mornnig, but again, living for others can only go so, and this is the where the point not cairng anymore if I can get rid fo this pain is stronger and coming closer again.","Some suicide attempts left mw crying qfter all the pain and once, the thought of my mother just at the other side of the door and she waking me up cheerfully the next morning, but again, living for others can only go so fqr, and this is the breaking point where the point of not caring anymore if I can get rid of this pain is becoming stronger and coming closer again.",nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_782_6_12
+"Some suicide attempts left mw crying qfter all the pain and once, the thought of my mother just at the other side of hte door she waking up cheerfully the next morning, but again, living for others can only go so, and htis si the where the piont not caring anymore fi I can get rid of this pain is tsronger and coming closer again.","Some suicide attempts left mw crying qfter all the pain and once, the thought of my mother just at the other side of hte door she waking up cheerfully the next morning, but again, living for others can only go so, and htis si the where the piont not caring anymore fi I can get rid of this pain is tsronger and coming closer again.","Some suicide attempts left mw crying qfter all the pain and once, the thought of my mother just at the other side of the door and she waking me up cheerfully the next morning, but again, living for others can only go so fqr, and this is the breaking point where the point of not caring anymore if I can get rid of this pain is becoming stronger and coming closer again.",nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_782_6_12
+I odn ' t Sex,I odn ' t Sex,I don't like Sex,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2456_821_1
+Dno ' t like Sex,Dno ' t like Sex,I don't like Sex,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2456_821_1
+I dno ' t anything.,I dno ' t anything.,I don't enjoy anything.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2415_550_8
+I don ' t aynthing.,I don ' t aynthing.,I don't enjoy anything.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2415_550_8
+Im still my decisino,Im still my decisino,Im still questioning my decision,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_2661_87_0
+Im still my dceision,Im still my dceision,Im still questioning my decision,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_2661_87_0
+yMself,yMself,Kill myself,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1201_307_0
+Myeslf,Myeslf,Kill myself,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1201_307_0
+I sad waitnig.,I sad waitnig.,I am sad waiting.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_577_923_1
+I asd waiting.,I asd waiting.,I am sad waiting.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_577_923_1
+Forveer,Forveer,Forever Alone,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2908_76_0
+I otday too.,I otday too.,I cried today too.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2035_67_1
+I todya too.,I todya too.,I cried today too.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2035_67_1
+i hate nwo.,i hate nwo.,i hate myself now.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2326_622_1
+i hate mysefl.,i hate mysefl.,i hate myself now.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2326_622_1
+I hate myeslf,I hate myeslf,Aaaaand i hate myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_683_112_0
+I haet myself,I haet myself,Aaaaand i hate myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_683_112_0
+"Tried to stay up longer past 3 pm yesterday but got way too tired and fell asleep until 11 and now I cant egt any sleep since Im not tired nda tics want to come out, but I cant let them since my mom will eb angry.","Tried to stay up longer past 3 pm yesterday but got way too tired and fell asleep until 11 and now I cant egt any sleep since Im not tired nda tics want to come out, but I cant let them since my mom will eb angry.","I tried to stay up longer past 3 pm yesterday but I got way too tired and fell asleep until 11 pm and now I cant get any sleep since Im not tired and my tics want to come out, but I cant let them since my mom will be angry.",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_2434_538_2
+"I treid to saty up longer past 3 mp yesterady but got way too tired and fell asleep pm and now I cant get any since Im not tired and my tics want to come out, but I cant let them my mom will be angry.","I treid to saty up longer past 3 mp yesterady but got way too tired and fell asleep pm and now I cant get any since Im not tired and my tics want to come out, but I cant let them my mom will be angry.","I tried to stay up longer past 3 pm yesterday but I got way too tired and fell asleep until 11 pm and now I cant get any sleep since Im not tired and my tics want to come out, but I cant let them since my mom will be angry.",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_2434_538_2
+"I ' ve done thinking as to why I may feel depressed, nad one thing that stood out si the fact that I ' m always looking for new things in my life flil some kind of hole or need has destructive, sa I will eat a lot just for the of eating because it feels good and different from feeling g depressed, or I ' ll just by random crap just because it new and the htsi gs I usde lkie to do, like programming or reading, I just dno ' find as fun anymore I ' m not sure if this si just a part of depression or if its something different.","I ' ve done thinking as to why I may feel depressed, nad one thing that stood out si the fact that I ' m always looking for new things in my life flil some kind of hole or need has destructive, sa I will eat a lot just for the of eating because it feels good and different from feeling g depressed, or I ' ll just by random crap just because it new and the htsi gs I usde lkie to do, like programming or reading, I just dno ' find as fun anymore I ' m not sure if this si just a part of depression or if its something different.","I've done some thinking as to why I may feel depressed, and one thing that stood out is the fact that I'm always looking for new things in my life to fill some kind of hole or need
+
+this has become destructive though, as I will eat a lot just for the sake of eating because it feels good and different from feeling g depressed, or I'll just by random crap just because it is new
+
+and the this gs I used to like to do, like programming or reading, I just don't find as fun anymore
+
+I'm not sure if this is just a part of depression or if its entirely something different.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1808_2_2
+"I ' ve done thinking as to why I may feel depressed, and one thing that stood out is hte aftc thta I ' m always looking for new things in my life fill some kind of hole ro need ahs destructive, as I iwll eat a lot just for the of eating because it feels ogod and differnet from feeling g depressed, or I ' ll just by random crap just because it new and the this gs I usde like to do, like programming or reading, I just don ' find as fun anymore I ' m not sure if this is just a part of depression or if its something different.","I ' ve done thinking as to why I may feel depressed, and one thing that stood out is hte aftc thta I ' m always looking for new things in my life fill some kind of hole ro need ahs destructive, as I iwll eat a lot just for the of eating because it feels ogod and differnet from feeling g depressed, or I ' ll just by random crap just because it new and the this gs I usde like to do, like programming or reading, I just don ' find as fun anymore I ' m not sure if this is just a part of depression or if its something different.","I've done some thinking as to why I may feel depressed, and one thing that stood out is the fact that I'm always looking for new things in my life to fill some kind of hole or need
+
+this has become destructive though, as I will eat a lot just for the sake of eating because it feels good and different from feeling g depressed, or I'll just by random crap just because it is new
+
+and the this gs I used to like to do, like programming or reading, I just don't find as fun anymore
+
+I'm not sure if this is just a part of depression or if its entirely something different.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1808_2_2
+And I was os.,And I was os.,And I was so tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1514_213_111
+nAd I so tired.,nAd I so tired.,And I was so tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1514_213_111
+I ' just not hpapy.,I ' just not hpapy.,I'm just not happy.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2143_312_17
+I ' juts not happy.,I ' juts not happy.,I'm just not happy.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2143_312_17
+To blame ubt myself.,To blame ubt myself.,Nobody to blame but myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2908_119_21
+To blame btu myself.,To blame btu myself.,Nobody to blame but myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2908_119_21
+I ' m cryign now.,I ' m cryign now.,I'm crying right now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_174_66_1
+I ' m crying rihgt.,I ' m crying rihgt.,I'm crying right now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_174_66_1
+truly awnt to die.,truly awnt to die.,i truly want to die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_8_309_1
+truly want ot die.,truly want ot die.,i truly want to die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_8_309_1
+"rihgt now, suicide.","rihgt now, suicide.","right now, commit suicide.",nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_8_309_2
+"rihgt now, commit.","rihgt now, commit.","right now, commit suicide.",nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_8_309_2
+I have afiled.,I have afiled.,I have always failed.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_95_6
+I have faield.,I have faield.,I have always failed.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_95_6
+So ont sad.,So ont sad.,Im so not sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2815_562_47
+Im so nto.,Im so nto.,Im so not sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2815_562_47
+"So sad, I cry veery.","So sad, I cry veery.","So sad, I cry every time.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1082_1_0
+"oS sad, I cry every.","oS sad, I cry every.","So sad, I cry every time.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1082_1_0
+"oS sad, I cry every.","oS sad, I cry every.","So sad, I cry every time.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1082_1_0
+"So asd, I cry every.","So asd, I cry every.","So sad, I cry every time.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1082_1_0
+Now I ' deperssed.,Now I ' deperssed.,Now I'm depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1276_718_3
+oNw I ' depressed.,oNw I ' depressed.,Now I'm depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1276_718_3
+And nwo ' m sad.,And nwo ' m sad.,And now I'm sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_18_228_26
+And I ' m sda.,And I ' m sda.,And now I'm sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_18_228_26
+I ' m ahppy.,I ' m ahppy.,I'm not happy.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1900_293_0
+I ' m hpapy.,I ' m hpapy.,I'm not happy.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1900_293_0
+I am RCYING.,I am RCYING.,I am fucking CRYING.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_74_207_1
+I ma CRYING.,I ma CRYING.,I am fucking CRYING.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_74_207_1
+I am in a idlemma.,I am in a idlemma.,I am in a constant dilemma.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_2415_1014_1
+I am ni a dilemma.,I am ni a dilemma.,I am in a constant dilemma.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_2415_1014_1
+I am loneyl now.,I am loneyl now.,I am very lonely now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2415_1014_9
+I am loenly now.,I am loenly now.,I am very lonely now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2415_1014_9
+Keep rcying.,Keep rcying.,I keep crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2100_307_1
+eKep crying.,eKep crying.,I keep crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2100_307_1
+i wnana,i wnana,i wanna die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_41_1224_0
+wanna ide,wanna ide,i wanna die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_41_1224_0
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1899_295_2
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1899_295_2
+aHve insomnia.,aHve insomnia.,I have insomnia.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_341_1177_1
+I insomnai.,I insomnai.,I have insomnia.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_341_1177_1
+I tierd.,I tierd.,I am tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_681_475_2
+I itred.,I itred.,I am tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_681_475_2
+I get tired eaisly.,I get tired eaisly.,I get tired very easily.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2669_4_3
+I get tired esaily.,I get tired esaily.,I get tired very easily.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2669_4_3
+Cry every itme,Cry every itme,I cry every time,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2023_1299_0
+Cry evrey time,Cry evrey time,I cry every time,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2023_1299_0
+I ' d ratehr myself.,I ' d ratehr myself.,I'd rather kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_342_141_4
+I ' d ratehr kill.,I ' d ratehr kill.,I'd rather kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_342_141_4
+Cried so hrad.,Cried so hrad.,I cried so hard.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1499_700_10
+Cired so hard.,Cired so hard.,I cried so hard.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1499_700_10
+lIl kill myself.,lIl kill myself.,Ill kill myself now.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_587_278_2
+Kill msyelf now.,Kill msyelf now.,Ill kill myself now.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_587_278_2
+"But now I feel like Im hitting wall, it becomes so frustrating I feel ilke I get bunrt out, and then end pu feeling like need force myself into however I just end up htinking about it all day and maybe do it last minute if that, and if I dotn do it i myself pu over it the next day and it becomes harder.","But now I feel like Im hitting wall, it becomes so frustrating I feel ilke I get bunrt out, and then end pu feeling like need force myself into however I just end up htinking about it all day and maybe do it last minute if that, and if I dotn do it i myself pu over it the next day and it becomes harder.","But now I feel like Im hitting a wall, it becomes so frustrating I feel like I get burnt out, and then end up feeling like I need to force myself into doing something however I just end up thinking about it all day and maybe do it last minute if that, and if I dont do it i really beat myself up over it the next day and it becomes harder.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1551_7_5
+"But now I feel like mI hitting wall, it becomes so frustrating I feel like I get burnt out, adn then end pu feeling like need force myself into however I just ned up htinking about it all day and maybe do it last minute if that, and if I dont do it i myself up over ti the next day and it becomes harder.","But now I feel like mI hitting wall, it becomes so frustrating I feel like I get burnt out, adn then end pu feeling like need force myself into however I just ned up htinking about it all day and maybe do it last minute if that, and if I dont do it i myself up over ti the next day and it becomes harder.","But now I feel like Im hitting a wall, it becomes so frustrating I feel like I get burnt out, and then end up feeling like I need to force myself into doing something however I just end up thinking about it all day and maybe do it last minute if that, and if I dont do it i really beat myself up over it the next day and it becomes harder.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1551_7_5
+I sepctacularly.,I sepctacularly.,I failed spectacularly.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1465_799_2
+I spectacualrly.,I spectacualrly.,I failed spectacularly.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1465_799_2
+I ' m deprsesed.,I ' m deprsesed.,I'm still depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2401_0_9
+I ' m depressde.,I ' m depressde.,I'm still depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2401_0_9
+yM life skills weak.,yM life skills weak.,My life skills are weak.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1738_394_8
+My life skills waek.,My life skills waek.,My life skills are weak.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1738_394_8
+"My body in constant pain, constant head aches, extreem heat flashes, no and off, , ect. . Worst of all my depression and anxiety has gotten so much worse which has led me to cutting suicidal thoughts.","My body in constant pain, constant head aches, extreem heat flashes, no and off, , ect. . Worst of all my depression and anxiety has gotten so much worse which has led me to cutting suicidal thoughts.","My body is in constant pain, constant head aches, extreme heat flashes, on and off fevers, nausea, etc.. Worst of all my depression and anxiety has gotten so much worse which has led me to cutting and suicidal thoughts.",nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_156_345_8
+I cyr I see this.,I cyr I see this.,I cry everytime I see this.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2000_29_0
+I cry I see htis.,I cry I see htis.,I cry everytime I see this.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2000_29_0
+closer suicdie,closer suicdie,closer to suicide,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2584_14_0
+lcoser to,lcoser to,closer to suicide,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2584_14_0
+I don ' t get enuogh,I don ' t get enuogh,I don't get enough sleep,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_1034_161_0
+I don ' t egt enough,I don ' t egt enough,I don't get enough sleep,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_1034_161_0
+I ' m qiute sad now.,I ' m qiute sad now.,I'm feeling quite sad now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1132_1004_0
+I ' m quite sad onw.,I ' m quite sad onw.,I'm feeling quite sad now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1132_1004_0
+I ' m nad sad. : (,I ' m nad sad. : (,I'm confused and sad. :(,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1086_415_8
+I ' m and sda. : (,I ' m and sda. : (,I'm confused and sad. :(,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1086_415_8
+lil start feeling extremely shitty about myself afterwards as i already hvae low self esteem lil start to like it something i said or if its my fault really affecting my mental health well like ill start to myself im the one fro thinking that seh always needs to act the same i do honestly dont even know.,lil start feeling extremely shitty about myself afterwards as i already hvae low self esteem lil start to like it something i said or if its my fault really affecting my mental health well like ill start to myself im the one fro thinking that seh always needs to act the same i do honestly dont even know.,ill start feeling extremely shitty about myself afterwards as i already have low self esteem ill start to feel like it was something i said or if its my fault its really affecting my mental health as well like ill start to myself im the toxic one for thinking that she always needs to act the same i do i honestly dont even know.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1194_0_4
+Wanetd cry.,Wanetd cry.,Wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1586_538_1
+Wanted ot.,Wanted ot.,Wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1586_538_1
+I am faliing.,I am faliing.,I am failing miserably.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_993_720_4
+I ma failing.,I ma failing.,I am failing miserably.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_993_720_4
+"Somedays are good some not. .. feel like copmlete failure to my family I can ' t even school right I can ' t even start my day right I feel like antyhing I do is wrong and I feel alone sure I have people I atlk to at school that clal friend but still feel alone I have on one close no to share this with and it eats me inside, I ' m 16 nad my life feels like a huge misatke like it was never meant to be I ' m only 16 why me why?","Somedays are good some not. .. feel like copmlete failure to my family I can ' t even school right I can ' t even start my day right I feel like antyhing I do is wrong and I feel alone sure I have people I atlk to at school that clal friend but still feel alone I have on one close no to share this with and it eats me inside, I ' m 16 nad my life feels like a huge misatke like it was never meant to be I ' m only 16 why me why?","Somedays are good some are not...I feel like a complete failure to my family I can't even do school right I can't even start my day right I feel like anything I do is wrong and I feel alone sure I have people I talk to at school that call me their friend but I still feel alone I have no one close no one to share this with and it eats me up inside, I'm 16 and my life feels like a huge mistake like it was never meant to be I'm only 16 why me why ?",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_931_428_1
+"Somedays are good some are not. .. I efel like a complete failure to family I can ' t do school right I can ' t even start my day I like anything I do is wrogn and I feel alone sure I have people I talk to at school that call me their friend but I still feel alone I have one close one ot share this with and it eats up, I ' m 16 and my life feles like a mistaek like ti was never meant to be I ' m only 16 hwy me why?","Somedays are good some are not. .. I efel like a complete failure to family I can ' t do school right I can ' t even start my day I like anything I do is wrogn and I feel alone sure I have people I talk to at school that call me their friend but I still feel alone I have one close one ot share this with and it eats up, I ' m 16 and my life feles like a mistaek like ti was never meant to be I ' m only 16 hwy me why?","Somedays are good some are not...I feel like a complete failure to my family I can't even do school right I can't even start my day right I feel like anything I do is wrong and I feel alone sure I have people I talk to at school that call me their friend but I still feel alone I have no one close no one to share this with and it eats me up inside, I'm 16 and my life feels like a huge mistake like it was never meant to be I'm only 16 why me why ?",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_931_428_1
+I ' m os very.,I ' m os very.,I'm so very lonely.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_356_60_8
+I ' os very lonely.,I ' os very lonely.,I'm so very lonely.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_356_60_8
+"When I met her I was in a derpessed state, I harming msyelf everyday and was almost going to kill myself, hten I met her, hes was os perfect she made me laugh for the first time in years, talked daily with me till dawn, she kept me away rfom all the thoughts, while we dated things kept better and better, I really thought I going to eb okay, but then she letf me, now I hate that I ever met her, I taht the memories keep ocming back, I hate that she moved so fast, I hate that I ' harming myself again, I hate that I ' m back to smoking and drinking, I hate that I ' m failing college, I haet that everything I do reminds me of her, I hate that she blocked, I hate, I hate everything.","When I met her I was in a derpessed state, I harming msyelf everyday and was almost going to kill myself, hten I met her, hes was os perfect she made me laugh for the first time in years, talked daily with me till dawn, she kept me away rfom all the thoughts, while we dated things kept better and better, I really thought I going to eb okay, but then she letf me, now I hate that I ever met her, I taht the memories keep ocming back, I hate that she moved so fast, I hate that I ' harming myself again, I hate that I ' m back to smoking and drinking, I hate that I ' m failing college, I haet that everything I do reminds me of her, I hate that she blocked, I hate, I hate everything.","When I met her I was in a depressed state, I was harming myself everyday and was almost going to kill myself, then I met her, she was so perfect she made me laugh for the first time in years, she talked daily with me till dawn, she kept me away from all the bad thoughts, while we dated things kept getting better and better, I really thought I was going to be okay, but then she left me, now I hate that I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I'm harming myself again, I hate that I'm back to smoking and drinking, I hate that I'm failing college, I hate that everything I do reminds me of her, I hate that she blocked me, I hate myself, I hate everything.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_293_38_1
+"When I met her I was in a derpessed state, I harming msyelf everyday and was almost going to kill myself, hten I met her, hes was os perfect she made me laugh for the first time in years, talked daily with me till dawn, she kept me away rfom all the thoughts, while we dated things kept better and better, I really thought I going to eb okay, but then she letf me, now I hate that I ever met her, I taht the memories keep ocming back, I hate that she moved so fast, I hate that I ' harming myself again, I hate that I ' m back to smoking and drinking, I hate that I ' m failing college, I haet that everything I do reminds me of her, I hate that she blocked, I hate, I hate everything.","When I met her I was in a derpessed state, I harming msyelf everyday and was almost going to kill myself, hten I met her, hes was os perfect she made me laugh for the first time in years, talked daily with me till dawn, she kept me away rfom all the thoughts, while we dated things kept better and better, I really thought I going to eb okay, but then she letf me, now I hate that I ever met her, I taht the memories keep ocming back, I hate that she moved so fast, I hate that I ' harming myself again, I hate that I ' m back to smoking and drinking, I hate that I ' m failing college, I haet that everything I do reminds me of her, I hate that she blocked, I hate, I hate everything.","When I met her I was in a depressed state, I was harming myself everyday and was almost going to kill myself, then I met her, she was so perfect she made me laugh for the first time in years, she talked daily with me till dawn, she kept me away from all the bad thoughts, while we dated things kept getting better and better, I really thought I was going to be okay, but then she left me, now I hate that I ever met her, I hate that the memories keep coming back, I hate that she moved on so fast, I hate that I'm harming myself again, I hate that I'm back to smoking and drinking, I hate that I'm failing college, I hate that everything I do reminds me of her, I hate that she blocked me, I hate myself, I hate everything.",nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_293_38_1
+Feel hopleess.,Feel hopleess.,I feel hopeless.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_993_743_9
+Feel hpoeless.,Feel hpoeless.,I feel hopeless.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_993_743_9
+I os pathetic.,I os pathetic.,I feel so pathetic.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_186_14
+I fele so.,I fele so.,I feel so pathetic.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_186_14
+I ' m a very perosn.,I ' m a very perosn.,I'm a very positive person.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_800_36_0
+I ' m a very pesron.,I ' m a very pesron.,I'm a very positive person.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_800_36_0
+I wnat cry.,I wnat cry.,I want to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2000_255_7
+I wnat to.,I wnat to.,I want to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2000_255_7
+I myslef,I myslef,I love myself,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2781_822_0
+I mysefl,I mysefl,I love myself,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2781_822_0
+I mysefl!,I mysefl!,I hate myself!,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2455_42_2
+I msyelf!,I msyelf!,I hate myself!,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2455_42_2
+I wihs I could.,I wihs I could.,I wish I could cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2679_40_0
+I wish I cyr.,I wish I cyr.,I wish I could cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2679_40_0
+I ' m fo myself. ..,I ' m fo myself. ..,I'm ashamed of myself...,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1609_616_1
+I ' m of msyelf. ..,I ' m of msyelf. ..,I'm ashamed of myself...,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1609_616_1
+"I have not ot sleeping hours do to thoughts, stress, in words emotions adn also night time the only time of day were it ' s pecae adn quite I tend to take a hour or so of that in. .. have a hard time falilng asleep at tiems and I really have a hard time asleep, I cna ' t tell you how many I could wake up in just one night!","I have not ot sleeping hours do to thoughts, stress, in words emotions adn also night time the only time of day were it ' s pecae adn quite I tend to take a hour or so of that in. .. have a hard time falilng asleep at tiems and I really have a hard time asleep, I cna ' t tell you how many I could wake up in just one night!","I have not to good sleeping hours do to thoughts, stress, in other words emotions and also night time is the only time of day were it's peace and quite so I tend to take a hour or so of that in... I have a hard time falling asleep at times and I really have a hard time staying asleep, I can't tell you how many times I could wake up in just one night!",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_586_904_1
+"I have not to good sleeping hours do thoughts, strses, in other words emotions and also night time the olny time of ady were it ' s peace and quite so I tend to take a hour so of that ni. .. I hard time falling at times and I really have hard time staynig aslepe, I can ' t tell you how many times I could wake up ni just one night!","I have not to good sleeping hours do thoughts, strses, in other words emotions and also night time the olny time of ady were it ' s peace and quite so I tend to take a hour so of that ni. .. I hard time falling at times and I really have hard time staynig aslepe, I can ' t tell you how many times I could wake up ni just one night!","I have not to good sleeping hours do to thoughts, stress, in other words emotions and also night time is the only time of day were it's peace and quite so I tend to take a hour or so of that in... I have a hard time falling asleep at times and I really have a hard time staying asleep, I can't tell you how many times I could wake up in just one night!",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_586_904_1
+Well nwo ' m crying.,Well nwo ' m crying.,Well now I'm crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_427_129_0
+Now I ' m rcying.,Now I ' m rcying.,Well now I'm crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_427_129_0
+Wnated to cry.,Wnated to cry.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2815_1455_66
+I to rcy.,I to rcy.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2815_1455_66
+I hate ymself.,I hate ymself.,I fucking hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2525_20_0
+I fucking haet.,I fucking haet.,I fucking hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2525_20_0
+"Am irrittaed, yes.","Am irrittaed, yes.","I am irritated, yes.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2625_148_0
+"I irritatde, yes.","I irritatde, yes.","I am irritated, yes.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2625_148_0
+Suiicde for me.,Suiicde for me.,Obvious suicide for me.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,0,s_2402_815_0
+Suicide for em.,Suicide for em.,Obvious suicide for me.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,0,s_2402_815_0
+Im just os.,Im just os.,Im just so unhappy.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1488_230_8
+mI just so.,mI just so.,Im just so unhappy.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1488_230_8
+I ta night.,I ta night.,I cry at night.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1488_230_13
+I at nigth.,I at nigth.,I cry at night.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1488_230_13
+I cry in sohwer.,I cry in sohwer.,I cry in the shower.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1488_230_14
+rCy in the shower.,rCy in the shower.,I cry in the shower.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1488_230_14
+Want ot die so much,Want ot die so much,I want to die so much,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2593_451_1
+I want ide so much,I want ide so much,I want to die so much,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2593_451_1
+I ' ll cyring.,I ' ll cyring.,I'll stop crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1701_714_34
+I ' ll cryign.,I ' ll cryign.,I'll stop crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1701_714_34
+Wanted to cyr.,Wanted to cyr.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2828_750_2
+I ot cry.,I ot cry.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2828_750_2
+I crynig.,I crynig.,I was crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1514_473_222
+I criyng.,I criyng.,I was crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1514_473_222
+I can noly blame.,I can noly blame.,I can only blame myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_284_50_0
+I acn only blame.,I acn only blame.,I can only blame myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_284_50_0
+I ' m in myslef.,I ' m in myslef.,I'm dissapointed in myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2402_918_2
+I ' m ni myself.,I ' m ni myself.,I'm dissapointed in myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2402_918_2
+its just that i cant to always rdag this sadness with me i know for sure that ti wont go away for while (cuz ofr that ot happen i would have change my whole) so i would just be better of feeling nothing.,its just that i cant to always rdag this sadness with me i know for sure that ti wont go away for while (cuz ofr that ot happen i would have change my whole) so i would just be better of feeling nothing.,its just that i cant bare to always drag this sadness with me and i know for sure that it wont go away for a while (cuz for that to happen i would have to change my whole personality) so i would just be better of feeling nothing.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_321_122_1
+its just that i cant bare to always drag htis sadness with and i konw for sure that ti wont go away for a while (cuz for that to happne would have to change my whole personality) so i just better of feeling.,its just that i cant bare to always drag htis sadness with and i konw for sure that ti wont go away for a while (cuz for that to happne would have to change my whole personality) so i just better of feeling.,its just that i cant bare to always drag this sadness with me and i know for sure that it wont go away for a while (cuz for that to happen i would have to change my whole personality) so i would just be better of feeling nothing.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_321_122_1
+I and fele suicidal.,I and fele suicidal.,I panic and feel suicidal.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_993_582_7
+I panic adn feel.,I panic adn feel.,I panic and feel suicidal.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_993_582_7
+I am exhaustde.,I am exhaustde.,I am so exhausted.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_697_17_12
+I am exhasuted.,I am exhasuted.,I am so exhausted.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_697_17_12
+i cried cride.,i cried cride.,i cried and cried.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2884_57_2
+i cried adn.,i cried adn.,i cried and cried.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2884_57_2
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1978_1068_1
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1978_1068_1
+I really myslef,I really myslef,I really hate myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2593_536_0
+I really ymself,I really ymself,I really hate myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2593_536_0
+"I feel ilke bursting into tears 24 hours a day (since even if I * don ' t * have a good reason for feelign like shit, my brain decides to do so just for hell fo it ), I wish I knew deal wiht it other than ym current that complete cessation of activity.","I feel ilke bursting into tears 24 hours a day (since even if I * don ' t * have a good reason for feelign like shit, my brain decides to do so just for hell fo it ), I wish I knew deal wiht it other than ym current that complete cessation of activity.","I feel like bursting into tears 24 hours a day (since even if I *don't* have a good reason for feeling like shit, my brain decides to do so just for the hell of it), and I wish I knew how to deal with it other than my current solution that involves complete cessation of activity.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2292_225_11
+"I feel like bursting into tears 24 hours a day (since even if I * don ' t * have a good reason for feeling like shit, my barin decdies to do so just for hell of it ), I wsih I knwe deal with it other than my current htat complete cessation of activity.","I feel like bursting into tears 24 hours a day (since even if I * don ' t * have a good reason for feeling like shit, my barin decdies to do so just for hell of it ), I wsih I knwe deal with it other than my current htat complete cessation of activity.","I feel like bursting into tears 24 hours a day (since even if I *don't* have a good reason for feeling like shit, my brain decides to do so just for the hell of it), and I wish I knew how to deal with it other than my current solution that involves complete cessation of activity.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2292_225_11
+aWs a bit restless.,aWs a bit restless.,I was a bit restless.,nlp_randword_delete+ta_char_neighbor,PSYCHOMOTOR,1,s_2606_671_3
+I aws bit restless.,I aws bit restless.,I was a bit restless.,nlp_randword_delete+ta_char_neighbor,PSYCHOMOTOR,1,s_2606_671_3
+i want to ide,i want to ide,i just want to die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2024_230_2
+just want ot die,just want ot die,i just want to die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2024_230_2
+I guilyt.,I guilyt.,I felt guilty.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_452_784_23
+I giulty.,I giulty.,I felt guilty.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_452_784_23
+Trying ot not kill.,Trying ot not kill.,Trying to not kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2822_443_1
+Trying to not klil.,Trying to not klil.,Trying to not kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2822_443_1
+Am alos restless.,Am alos restless.,I am also restless.,nlp_randword_delete+ta_char_neighbor,PSYCHOMOTOR,1,s_2139_45_8
+I am laso.,I am laso.,I am also restless.,nlp_randword_delete+ta_char_neighbor,PSYCHOMOTOR,1,s_2139_45_8
+I cry oto.,I cry oto.,I cry sometimes too.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2035_984_7
+Cry smoetimes too.,Cry smoetimes too.,I cry sometimes too.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2035_984_7
+I to die so umch.,I to die so umch.,I want to die so much.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_739_5_19
+I awnt to die much.,I awnt to die much.,I want to die so much.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_739_5_19
+I still nejoy.,I still nejoy.,I still enjoy it.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,0,s_2025_575_2
+I nejoy it.,I nejoy it.,I still enjoy it.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,0,s_2025_575_2
+Tdoay I feel just.,Tdoay I feel just.,Today I feel just tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_3003_343_1
+Today I feel ujst.,Today I feel ujst.,Today I feel just tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_3003_343_1
+I ma suicidal again.,I ma suicidal again.,I am feeling suicidal again.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_993_450_6
+I am suicdial again.,I am suicdial again.,I am feeling suicidal again.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_993_450_6
+I used to thigns.,I used to thigns.,I used to enjoy things.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_752_69_3
+I used to ejnoy.,I used to ejnoy.,I used to enjoy things.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_752_69_3
+I used to ejnoy.,I used to ejnoy.,I used to enjoy things.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_752_69_3
+I used ot things.,I used ot things.,I used to enjoy things.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_752_69_3
+"If you ' re just a worthless lump trying to slowly climb your way out fo the dark pit by getting a job, trying to someone who likes you, etc. .. . it ' s pretty hrad describe to normal thinking individuals you haven ' t been working no your or lese.","If you ' re just a worthless lump trying to slowly climb your way out fo the dark pit by getting a job, trying to someone who likes you, etc. .. . it ' s pretty hrad describe to normal thinking individuals you haven ' t been working no your or lese.","If you're just a worthless lump trying to slowly climb your way out of the dark pit by getting a job, trying to find someone who likes you, etc....it's pretty hard to describe to normal thinking individuals why you haven't been working on your skills or whatever else.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_186_171_7
+Im ocnstantly.,Im ocnstantly.,Im constantly tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,0,s_2028_17_5
+Im tried.,Im tried.,Im constantly tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,0,s_2028_17_5
+Alwyas angry,Alwyas angry,Im always angry,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1447_807_0
+Im angyr,Im angyr,Im always angry,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1447_807_0
+Now feel sda: (,Now feel sda: (,Now I feel sad :(,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_507_383_0
+oNw I feel: (,oNw I feel: (,Now I feel sad :(,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_507_383_0
+"Like, ' m tried.","Like, ' m tried.","Like, I'm tired.",nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2094_142_1
+"Like, ' m tierd.","Like, ' m tierd.","Like, I'm tired.",nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2094_142_1
+I ' hating ymself.,I ' hating ymself.,I'm hating myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1601_192_1
+I ' haitng myself.,I ' haitng myself.,I'm hating myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1601_192_1
+aCnt stop crying.,aCnt stop crying.,Cant stop crying tonight.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2023_201_0
+Cant sotp crying.,Cant sotp crying.,Cant stop crying tonight.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2023_201_0
+I have olst.,I have olst.,I have lost motivation.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2415_566_0
+I hvae lost.,I hvae lost.,I have lost motivation.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2415_566_0
+"Fro the past years I had been having issues with my partner, he would rarely initiate and would reciprocate if I idd, me feel unwanted undesirable, I gained weight, lost my fitness, I blamed it all on the lack of esx, I fiaxted in teh sex I wasn ' t having.","Fro the past years I had been having issues with my partner, he would rarely initiate and would reciprocate if I idd, me feel unwanted undesirable, I gained weight, lost my fitness, I blamed it all on the lack of esx, I fiaxted in teh sex I wasn ' t having.","For the past few years I had been having issues with my partner, he would rarely initiate and would never reciprocate if I did, making me feel unwanted and undesirable, I gained weight, lost my fitness level, I blamed it all on the lack of sex, I became fixated in the sex I wasn't having.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_976_103_3
+"For the past years I had been having issues with my partner, he would rarely initiate and would reciprocate if I did, me feel unwanted undesirable, I gainde weigth, lost ym fitness, I blamed it all on the lack of sex, I fixated in the sxe I wsan ' t having.","For the past years I had been having issues with my partner, he would rarely initiate and would reciprocate if I did, me feel unwanted undesirable, I gainde weigth, lost ym fitness, I blamed it all on the lack of sex, I fixated in the sxe I wsan ' t having.","For the past few years I had been having issues with my partner, he would rarely initiate and would never reciprocate if I did, making me feel unwanted and undesirable, I gained weight, lost my fitness level, I blamed it all on the lack of sex, I became fixated in the sex I wasn't having.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_976_103_3
+Wnated to cry.,Wnated to cry.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1044_58_40
+Wanted to cyr.,Wanted to cyr.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1044_58_40
+"Feels like a huge accomplishment, it feels more like a completely afilure in my life, and I ' ve dug a ohle that I can ' t get fo because of something thta I couldn ' t have controlled, maybe could ' ve controlled it. .. don ' t know any more.","Feels like a huge accomplishment, it feels more like a completely afilure in my life, and I ' ve dug a ohle that I can ' t get fo because of something thta I couldn ' t have controlled, maybe could ' ve controlled it. .. don ' t know any more.","Nothing feels like a huge accomplishment, it feels more like a completely failure in my life, and that I've dug a hole that I can't get out of because of something that I couldn't have controlled, or maybe I could've controlled it... I don't know any more.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_701_793_2
+"Feels like a huge accomplishment, it feels more like a completely failure life, adn ' ve dug a hole that I can ' t get out of because of something that I couldn ' t have controlled, or maybe I coudl ' ve cnotrolled it. .. I don ' t know ayn more.","Feels like a huge accomplishment, it feels more like a completely failure life, adn ' ve dug a hole that I can ' t get out of because of something that I couldn ' t have controlled, or maybe I coudl ' ve cnotrolled it. .. I don ' t know ayn more.","Nothing feels like a huge accomplishment, it feels more like a completely failure in my life, and that I've dug a hole that I can't get out of because of something that I couldn't have controlled, or maybe I could've controlled it... I don't know any more.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_701_793_2
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_888_447_2
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_888_447_2
+I for there minutes.,I for there minutes.,I cried for three minutes.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1499_540_49
+I for trhee minutes.,I for trhee minutes.,I cried for three minutes.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1499_540_49
+I haev hope for the.,I haev hope for the.,I have hope for the future.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1230_158_13
+I have hope ofr the.,I have hope ofr the.,I have hope for the future.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1230_158_13
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_28_0
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_28_0
+I myslef so much.,I myslef so much.,I hate myself so much.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_28_19
+I haet myself much.,I haet myself much.,I hate myself so much.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_28_19
+Thtas how low my is.,Thtas how low my is.,Thats how low my energy is.,nlp_randword_delete+ta_char_neighbor,FATIGUE,0,s_1404_116_13
+Thats how low my si.,Thats how low my si.,Thats how low my energy is.,nlp_randword_delete+ta_char_neighbor,FATIGUE,0,s_1404_116_13
+I haet my.,I haet my.,I hate my existence.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_120_10
+I hate existenec.,I hate existenec.,I hate my existence.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2415_120_10
+' m lseep deprived.,' m lseep deprived.,I'm sleep deprived.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_17_844_1
+I ' selep deprived.,I ' selep deprived.,I'm sleep deprived.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_17_844_1
+I don ' t aynthing.,I don ' t aynthing.,I don't enjoy anything.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2415_1024_4
+I don ' t anythign.,I don ' t anythign.,I don't enjoy anything.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_2415_1024_4
+I get irrittaed.,I get irrittaed.,I get irritated easily.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2415_1024_5
+I get irirtated.,I get irirtated.,I get irritated easily.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2415_1024_5
+"Yeah. .. don ' t know what sya but I feel like there ' s a "" high "", a pleasurable high that we from starving and overtime it becoems a suffering but still we try esek the saem pleasure we originally felt from it but can never.","Yeah. .. don ' t know what sya but I feel like there ' s a "" high "", a pleasurable high that we from starving and overtime it becoems a suffering but still we try esek the saem pleasure we originally felt from it but can never.","Yeah... don't know what to say but I feel like there's a ""high"", a pleasurable high that we get from starving and overtime it becomes a suffering but still we try to seek the same pleasure we originally felt from it but can never get again.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_258_149_0
+"Yeah. .. don ' t know what say but I feel like there ' s a "" hihg "", a pleasurable high that we from satrving and overtime it becomes a suffering but still we try seek the same pleasure ew originally felt from it ubt can never.","Yeah. .. don ' t know what say but I feel like there ' s a "" hihg "", a pleasurable high that we from satrving and overtime it becomes a suffering but still we try seek the same pleasure ew originally felt from it ubt can never.","Yeah... don't know what to say but I feel like there's a ""high"", a pleasurable high that we get from starving and overtime it becomes a suffering but still we try to seek the same pleasure we originally felt from it but can never get again.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_258_149_0
+I watn to die.,I watn to die.,I dont want to die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,0,s_804_60_0
+I dont ot die.,I dont ot die.,I dont want to die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,0,s_804_60_0
+Dont want to dei.,Dont want to dei.,I dont want to die.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_804_60_0
+I odnt to die.,I odnt to die.,I dont want to die.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_804_60_0
+' m os indecisive.,' m os indecisive.,I'm so indecisive.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_1933_177_2
+I ' os indecisive.,I ' os indecisive.,I'm so indecisive.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_1933_177_2
+"I ' ve eben severely depressed the last couple of weeks adn I feel like I ' m the fo one, I don ' t know how put I ' ve been feeling into words but I feel like I ' m on the brink of soem kind of emotional.","I ' ve eben severely depressed the last couple of weeks adn I feel like I ' m the fo one, I don ' t know how put I ' ve been feeling into words but I feel like I ' m on the brink of soem kind of emotional.","I've been severely depressed the last couple of weeks and I feel like I'm on the verge of one, I don't know how to put how I've been feeling into words but I feel like I'm on the brink of some kind of emotional collapse.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2595_453_2
+"I ' ve been severely depressed the last couple of weeks and I fele like I ' m teh of one, I don ' t know how put I ' ve been feeling into words but I feel like I ' m on hte birnk of some kind of emotional.","I ' ve been severely depressed the last couple of weeks and I fele like I ' m teh of one, I don ' t know how put I ' ve been feeling into words but I feel like I ' m on hte birnk of some kind of emotional.","I've been severely depressed the last couple of weeks and I feel like I'm on the verge of one, I don't know how to put how I've been feeling into words but I feel like I'm on the brink of some kind of emotional collapse.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2595_453_2
+Wanted to cyr.,Wanted to cyr.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2338_949_14
+I to rcy.,I to rcy.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2338_949_14
+I ' t sotp crying.,I ' t sotp crying.,I can't stop crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2815_952_3
+I ' t stop criyng.,I ' t stop criyng.,I can't stop crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2815_952_3
+I ahrdly cry.,I ahrdly cry.,I hardly ever cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2974_1910_9
+I hadrly ever.,I hadrly ever.,I hardly ever cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2974_1910_9
+I jsut sad.,I jsut sad.,I am just sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1681_1030_1
+mA just sad.,mA just sad.,I am just sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1681_1030_1
+Fali at my attempts,Fali at my attempts,I fail at my attempts,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1483_166_1
+I afil at my,I afil at my,I fail at my attempts,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1483_166_1
+I fail ta my,I fail ta my,I fail at my attempts,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1483_166_1
+I at ym attempts,I at ym attempts,I fail at my attempts,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1483_166_1
+I myslef,I myslef,I killed myself,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_265_7_0
+I mysefl,I mysefl,I killed myself,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_265_7_0
+This ahd crying,This ahd crying,This had me crying,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2464_411_0
+Tihs had me,Tihs had me,This had me crying,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2464_411_0
+I still fele lol,I still fele lol,I still feel guilty lol,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1499_89_12
+I stlil feel lol,I stlil feel lol,I still feel guilty lol,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1499_89_12
+I cried umch.,I cried umch.,I cried so much.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_337_141_2
+I rcied much.,I rcied much.,I cried so much.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_337_141_2
+I criyng.,I criyng.,I was crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1683_34_221
+' m crynig right now,' m crynig right now,I'm crying right now,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1355_237_2
+I ' m irght now,I ' m irght now,I'm crying right now,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1355_237_2
+Ima os hard.,Ima os hard.,Ima cry so hard.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1715_23_0
+Ima so ahrd.,Ima so ahrd.,Ima cry so hard.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1715_23_0
+Feeling of myslef,Feeling of myslef,Feeling proud of myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_2000_144_0
+Feeling of msyelf,Feeling of msyelf,Feeling proud of myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_2000_144_0
+Feeling of msyelf,Feeling of msyelf,Feeling proud of myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_2000_144_0
+Feeling of myslef,Feeling of myslef,Feeling proud of myself,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_2000_144_0
+I ' m alwyas,I ' m alwyas,I'm always angry,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1633_278_0
+I ' awlays angry,I ' awlays angry,I'm always angry,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1633_278_0
+eFlt like crying.,eFlt like crying.,I felt like crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1499_15_22
+Felt ilke crying.,Felt ilke crying.,I felt like crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1499_15_22
+I attemptde to kill.,I attemptde to kill.,I attempted to kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1135_282_56
+I attempted to klil.,I attempted to klil.,I attempted to kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1135_282_56
+I only lbame myself.,I only lbame myself.,I can only blame myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_891_797_86
+I only blaem myself.,I only blaem myself.,I can only blame myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_891_797_86
+I go to all my classes and try realyl hard to study all hte time but focusing is still hard because imdn wanders even without internet (which is why cutting has becmoe a strategy to get myself to focus again) I feel at this point dropping out is my only which i know make my parents furious.,I go to all my classes and try realyl hard to study all hte time but focusing is still hard because imdn wanders even without internet (which is why cutting has becmoe a strategy to get myself to focus again) I feel at this point dropping out is my only which i know make my parents furious.,I go to all my classes and try really hard to study all the time but focusing is still hard because my mind wanders even without touching the internet (which is why cutting has become a strategy to get myself to focus again) I feel like at this point dropping out is my only option which i know would make my parents furious.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1924_22_0
+I og to all my classes and try really hard ot study all the time but focusing is still hard ebcause my mind wanders even without touching the internte (which why cutting has become a strategy get to focus again) I feel like at this dropping out is ym only option which know make my parents furious.,I og to all my classes and try really hard ot study all the time but focusing is still hard ebcause my mind wanders even without touching the internte (which why cutting has become a strategy get to focus again) I feel like at this dropping out is ym only option which know make my parents furious.,I go to all my classes and try really hard to study all the time but focusing is still hard because my mind wanders even without touching the internet (which is why cutting has become a strategy to get myself to focus again) I feel like at this point dropping out is my only option which i know would make my parents furious.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1924_22_0
+Have omre energy.,Have omre energy.,I have more energy.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2065_472_7
+I haev energy.,I haev energy.,I have more energy.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2065_472_7
+.. .. I ' m cryign,.. .. I ' m cryign,....I'm definitely crying,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2603_13_0
+.. .. I ' m cyring,.. .. I ' m cyring,....I'm definitely crying,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2603_13_0
+"I don ' know what I need in life to enjoy it because currently od not ejnoy anything in ym life No matter how good my breafkast tastes, even if I something new that tastes good, I don ' t enjoy eating it.","I don ' know what I need in life to enjoy it because currently od not ejnoy anything in ym life No matter how good my breafkast tastes, even if I something new that tastes good, I don ' t enjoy eating it.","I don't know what I need in my life to enjoy it because currently I do not enjoy anything in my life No matter how good my breakfast tastes, even if I eat something new that tastes really good, I don't enjoy eating it.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1404_1080_10
+"I don ' know what I nede in life to enjoy it because currently od not enjoy anything in my life No matter how good my breakfast tastes, even if I somethnig new that atstes good, I don ' t enjoy eating it.","I don ' know what I nede in life to enjoy it because currently od not enjoy anything in my life No matter how good my breakfast tastes, even if I somethnig new that atstes good, I don ' t enjoy eating it.","I don't know what I need in my life to enjoy it because currently I do not enjoy anything in my life No matter how good my breakfast tastes, even if I eat something new that tastes really good, I don't enjoy eating it.",nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1404_1080_10
+I am AGNRY now.,I am AGNRY now.,I am fucking ANGRY now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_188_399_2
+I am ANGRY nwo.,I am ANGRY nwo.,I am fucking ANGRY now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_188_399_2
+Yet I depresesd.,Yet I depresesd.,Yet I am depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2139_3_2
+Yet I ma.,Yet I ma.,Yet I am depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2139_3_2
+oS I ' m tired.,oS I ' m tired.,So I'm pretty tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2908_105_3
+I ' m pretty tried.,I ' m pretty tried.,So I'm pretty tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2908_105_3
+I ' d myeslf.,I ' d myeslf.,I'd kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2647_24_1
+I ' d mysefl.,I ' d mysefl.,I'd kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2647_24_1
+Now I sda.,Now I sda.,Now I am sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1681_799_2
+I am sda.,I am sda.,Now I am sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1681_799_2
+lSeep good.,lSeep good.,I sleep good.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2255_242_0
+Slepe good.,Slepe good.,I sleep good.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2255_242_0
+nAgry and very upset,nAgry and very upset,Feeling angry and very upset,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_3075_23_0
+Angry nad very upset,Angry nad very upset,Feeling angry and very upset,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_3075_23_0
+Cry every itme,Cry every itme,I cry every time,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2023_824_0
+Cry evrey time,Cry evrey time,I cry every time,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2023_824_0
+I eta it the time,I eta it the time,I eat it all the time,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,0,s_634_65_0
+I eat it the itme,I eat it the itme,I eat it all the time,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,0,s_634_65_0
+I love meeting nwe.,I love meeting nwe.,I love meeting new people.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1773_564_2
+I olve meeting new.,I olve meeting new.,I love meeting new people.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1773_564_2
+I love meeting enw.,I love meeting enw.,I love meeting new people.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_1773_564_2
+I love meeting nwe.,I love meeting nwe.,I love meeting new people.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_1773_564_2
+Fear for teh future,Fear for teh future,I fear for the future,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_898_1730_1
+Fear for the futuer,Fear for the futuer,I fear for the future,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_898_1730_1
+I am big sda right.,I am big sda right.,I am big sad right now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2080_955_0
+I am big right nwo.,I am big right nwo.,I am big sad right now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2080_955_0
+Was sueful.,Was sueful.,I was useful.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1244_311_2
+I usfeul.,I usfeul.,I was useful.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1244_311_2
+So tried,So tried,Im so tired,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2434_208_0
+Always tierd.,Always tierd.,Im always tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_316_2
+lAways tired.,lAways tired.,Im always tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_316_2
+lAways tired.,lAways tired.,Im always tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_316_2
+Alawys tired.,Alawys tired.,Im always tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_316_2
+I ' m os now. .. ...,I ' m os now. .. ...,I'm so sad right now......,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_543_354_1
+I myself to selep.,I myself to selep.,I cried myself to sleep.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2606_888_3
+I myself to slepe.,I myself to slepe.,I cried myself to sleep.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2606_888_3
+' m ujst not hungry.,' m ujst not hungry.,I'm just not hungry.,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,1,s_1116_989_10
+I ' m ujst not.,I ' m ujst not.,I'm just not hungry.,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,1,s_1116_989_10
+i have no neergy.,i have no neergy.,i have no more energy.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2107_102_4
+i ahve more energy.,i ahve more energy.,i have no more energy.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2107_102_4
+i sxe.,i sxe.,i want sex.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,0,s_2107_102_15
+want esx.,want esx.,i want sex.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,0,s_2107_102_15
+I ' m never anmyore.,I ' m never anmyore.,I'm never hungry anymore.,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,1,s_71_327_1
+I ' m enver anymore.,I ' m enver anymore.,I'm never hungry anymore.,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,1,s_71_327_1
+Feel asd.,Feel asd.,I feel sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2286_168_4
+eFel sad.,eFel sad.,I feel sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2286_168_4
+I ujst can ' t stop.,I ujst can ' t stop.,I just can't stop crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_356_141_4
+I just can ' t stpo.,I just can ' t stpo.,I just can't stop crying.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_356_141_4
+I lsept pretty.,I lsept pretty.,I slept pretty well.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,0,s_1768_51_1
+I pretty wlel.,I pretty wlel.,I slept pretty well.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,0,s_1768_51_1
+I lsept pretty.,I lsept pretty.,I slept pretty well.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_1768_51_1
+I selpt pretty.,I selpt pretty.,I slept pretty well.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_1768_51_1
+I jsut can ' focus,I jsut can ' focus,I just can't focus,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1210_72_1
+I just ' t foucs,I just ' t foucs,I just can't focus,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1210_72_1
+Im tierd.,Im tierd.,Im physically tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_111_2
+mI physically.,mI physically.,Im physically tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_111_2
+I ' d kill myslef.,I ' d kill myslef.,I'd certainly kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1116_426_0
+I ' d ikll myself.,I ' d ikll myself.,I'd certainly kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1116_426_0
+Im veyr.,Im veyr.,Im very tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,0,s_804_829_4
+mI very.,mI very.,Im very tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,0,s_804_829_4
+i sipmly want to.,i sipmly want to.,i simply want to die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2584_3_15
+i ismply to die.,i ismply to die.,i simply want to die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2584_3_15
+Feel like a ubrden,Feel like a ubrden,I feel like a burden,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2139_196_0
+I feel a bruden,I feel a bruden,I feel like a burden,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2139_196_0
+Cnanot concentrate.,Cnanot concentrate.,I cannot concentrate.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1021_34_170
+Cannot concenrtate.,Cannot concenrtate.,I cannot concentrate.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_1021_34_170
+I ' sad nwo.,I ' sad nwo.,I'm sad now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1012_884_1
+I ' sad onw.,I ' sad onw.,I'm sad now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1012_884_1
+"Makes asd, though.","Makes asd, though.","Makes me sad,though.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_785_92_1
+"Makes sda, though.","Makes sda, though.","Makes me sad,though.",nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_785_92_1
+I never uesd cry.,I never uesd cry.,I never used to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_708_249_0
+I never sued cry.,I never sued cry.,I never used to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_708_249_0
+I afil times.,I afil times.,I fail many times.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_41_1679_13
+I fail amny.,I fail amny.,I fail many times.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_41_1679_13
+hTen I get.,hTen I get.,Then I get sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_3044_666_2
+Then gte sad.,Then gte sad.,Then I get sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_3044_666_2
+Cyr most nights.,Cyr most nights.,I cry most nights.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1625_727_6
+I cyr most.,I cyr most.,I cry most nights.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1625_727_6
+My life is fialure,My life is fialure,My life is a failure,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1877_87_0
+My lfie is failure,My lfie is failure,My life is a failure,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1877_87_0
+I ' m atcually.,I ' m atcually.,I'm actually depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1170_361_2
+I ' m actulaly.,I ' m actulaly.,I'm actually depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1170_361_2
+"I desperately sleep but every single fucking time that ' thing ' taps adn bangs, fear if lseep it iwll come out of the fireplace and decorate room in ym remains, my world is spinning, I ' m going to to sleep tonight.","I desperately sleep but every single fucking time that ' thing ' taps adn bangs, fear if lseep it iwll come out of the fireplace and decorate room in ym remains, my world is spinning, I ' m going to to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,0,s_2544_1099_12
+I hvae sleep too.,I hvae sleep too.,I have sleep problems too.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,0,s_2502_62_2
+I have sleep oto.,I have sleep oto.,I have sleep problems too.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,0,s_2502_62_2
+I being opitmistic.,I being opitmistic.,I like being optimistic.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_996_489_0
+I being otpimistic.,I being otpimistic.,I like being optimistic.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_996_489_0
+I feeling depressde.,I feeling depressde.,I am feeling depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_993_781_1
+I am feeilng.,I am feeilng.,I am feeling depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_993_781_1
+I ahve all interest.,I ahve all interest.,I have lost all interest.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_993_781_12
+I have lal interest.,I have lal interest.,I have lost all interest.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_993_781_12
+i ' m vrey i will.,i ' m vrey i will.,i'm very hopeful i will.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2640_8_1
+i ' m veyr i will.,i ' m veyr i will.,i'm very hopeful i will.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2640_8_1
+How asd I really.,How asd I really.,How sad I really am.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_356_57_2
+How sad I realyl.,How sad I realyl.,How sad I really am.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_356_57_2
+I ' m msyelf! [,I ' m msyelf! [,I'm killing myself ![,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1082_1774_0
+I ' m myeslf! [,I ' m myeslf! [,I'm killing myself ![,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1082_1774_0
+i am anrgy all time.,i am anrgy all time.,i am angry all the time.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2107_89_1
+i am all teh time.,i am all teh time.,i am angry all the time.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2107_89_1
+i fatigeud.,i fatigeud.,i get fatigued.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2107_89_4
+get faitgued.,get faitgued.,i get fatigued.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_2107_89_4
+I ' m os..,I ' m os..,I'm so sad..,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1620_705_3
+' m so asd..,' m so asd..,I'm so sad..,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1620_705_3
+All I seem ot do is.,All I seem ot do is.,All I seem to do is fail.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_329_8_2
+All I ot do is fail.,All I ot do is fail.,All I seem to do is fail.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_329_8_2
+I cry myslef to,I cry myslef to,I cry myself to sleep,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2487_330_0
+I cry ymself to,I cry ymself to,I cry myself to sleep,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2487_330_0
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_105_1
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_356_105_1
+I no longer wnat to.,I no longer wnat to.,I no longer want to live.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_356_105_5
+I no longer awnt to.,I no longer awnt to.,I no longer want to live.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_356_105_5
+I want to ide.,I want to ide.,I want to fucking die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_356_105_17
+I watn to die.,I watn to die.,I want to fucking die.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_356_105_17
+I begin cyr.,I begin cyr.,I begin to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1779_24_136
+I begni to.,I begni to.,I begin to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_1779_24_136
+Best edcision I made,Best edcision I made,Best decision I ever made,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_299_1841_1
+Best decision I veer,Best decision I veer,Best decision I ever made,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,0,s_299_1841_1
+Physically tried.,Physically tried.,Im physically tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_895_2
+Im pyhsically.,Im pyhsically.,Im physically tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_895_2
+I ' m fucking ta it.,I ' m fucking ta it.,I'm fucking sad at it.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2025_321_1
+I ' m fucking at ti.,I ' m fucking at ti.,I'm fucking sad at it.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_2025_321_1
+I ahte myself: ' /,I ahte myself: ' /,"I only hate myself 
+
+:'/",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1134_121_0
+I htae myself: ' /,I htae myself: ' /,"I only hate myself 
+
+:'/",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1134_121_0
+i dperession.,i dperession.,i have depression.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2107_11_2
+have depressino.,have depressino.,i have depression.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_2107_11_2
+See no futuer.,See no futuer.,I see no future.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1625_520_0
+I see on.,I see on.,I see no future.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1625_520_0
+"I can ' t concentrate, I odn ' t care about getting good, I don ' t go to class b / c I can ' t egt out of bed, I feel sick when I get a bad grade or don ' t knwo something, I alone in the classroom, or i ' t be able ot compelte class so then i start thinking about my future how i won ' t graduate because can ' t complete the coursework, so i won ' t job, won ' t get a house, be broke, no oen will want marry me, can ' t provide for family, friends hate me, etc, the list goes and on and on it.","I can ' t concentrate, I odn ' t care about getting good, I don ' t go to class b / c I can ' t egt out of bed, I feel sick when I get a bad grade or don ' t knwo something, I alone in the classroom, or i ' t be able ot compelte class so then i start thinking about my future how i won ' t graduate because can ' t complete the coursework, so i won ' t job, won ' t get a house, be broke, no oen will want marry me, can ' t provide for family, friends hate me, etc, the list goes and on and on it.","I can't concentrate, I don't care about getting good grades, I don't go to class b/c I can't get out of bed, I feel sick when I get a bad grade or don't know something, I feel alone in the classroom, or i won't be able to complete a class so then i start thinking about my future and how i won't graduate because i can't complete the coursework, so i won't get a job, won't get a house, be broke, no one will want to marry me, can't provide for family, friends hate me, etc, the list goes and on and on it goes.",nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_134_349_3
+"Can ' t concentrate, I dno ' t about getting good grades, I don ' t go to class b / c I can ' t gte out of bed, I feel sick when I get a bda or don ' t know something, I feel alone in classroom, ro i ' t eb able to complete class so then i start thinking about my future and how i won ' t because i acn ' t complete the coursework, so i won ' t get a job, won ' t get a house, be broke, no one want to marry me, can ' t provide family, friends htae me, , teh list goes and on and on it goes.","Can ' t concentrate, I dno ' t about getting good grades, I don ' t go to class b / c I can ' t gte out of bed, I feel sick when I get a bda or don ' t know something, I feel alone in classroom, ro i ' t eb able to complete class so then i start thinking about my future and how i won ' t because i acn ' t complete the coursework, so i won ' t get a job, won ' t get a house, be broke, no one want to marry me, can ' t provide family, friends htae me, , teh list goes and on and on it goes.","I can't concentrate, I don't care about getting good grades, I don't go to class b/c I can't get out of bed, I feel sick when I get a bad grade or don't know something, I feel alone in the classroom, or i won't be able to complete a class so then i start thinking about my future and how i won't graduate because i can't complete the coursework, so i won't get a job, won't get a house, be broke, no one will want to marry me, can't provide for family, friends hate me, etc, the list goes and on and on it goes.",nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_134_349_3
+"Since I ' ve came hmoe my have been the, stopping me from going to sleep because I ' ve been too scared to, so I ' been staying up at liek 3 - 4 ni the morinng to completey xehaust me, but I wake up around 7 - 8 to get for my course which starts at 9: 30 and on till 4.","Since I ' ve came hmoe my have been the, stopping me from going to sleep because I ' ve been too scared to, so I ' been staying up at liek 3 - 4 ni the morinng to completey xehaust me, but I wake up around 7 - 8 to get for my course which starts at 9: 30 and on till 4.","But since I've came home my nightmares have been the same, stopping me from going to sleep because I've been too scared to, so I've been staying up at like 3-4 in the morning to completey exhaust me, but I always wake up around 7-8 to get ready for my course which starts at 9:30 and carries on till 4.",nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_2402_721_4
+I enjyo anything.,I enjyo anything.,I cannot enjoy anything.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1404_105_5
+I cannto enjoy.,I cannto enjoy.,I cannot enjoy anything.,nlp_randword_delete+ta_char_neighbor,ANHEDONIA,1,s_1404_105_5
+I just catn anymore.,I just catn anymore.,I just cant focus anymore.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_1404_105_21
+I jsut cant anymore.,I jsut cant anymore.,I just cant focus anymore.,nlp_randword_delete+ta_char_neighbor,COGNITIVE_ISSUES,1,s_1404_105_21
+Always tierd.,Always tierd.,Im always tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_105_22
+lAways tired.,lAways tired.,Im always tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_105_22
+Alawys tired.,Alawys tired.,Im always tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_105_22
+Always tierd.,Always tierd.,Im always tired.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_105_22
+I jsut lost my.,I jsut lost my.,I just lost my energy.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_105_33
+I lots my energy.,I lots my energy.,I just lost my energy.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_105_33
+Wyh is my so low?,Wyh is my so low?,Why is my energy so low?,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_105_36
+Is my eneryg so low?,Is my eneryg so low?,Why is my energy so low?,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_105_36
+' m so sda.,' m so sda.,I'm so sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_349_414_0
+I ' m sda.,I ' m sda.,I'm so sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_349_414_0
+I nevre myself.,I nevre myself.,I never blame myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1738_359_1
+I blame ymself.,I blame ymself.,I never blame myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1738_359_1
+I myeslf.,I myeslf.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_697_348_8
+I mysefl.,I mysefl.,I hate myself.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_697_348_8
+Gulit and shame me.,Gulit and shame me.,Guilt and shame grips me.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2139_39_13
+And shaem grips me.,And shaem grips me.,Guilt and shame grips me.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_2139_39_13
+"lal I know the depression is too comfortable and I ' m afraid to even leave it, maybe ' s why, but I dont know for sure or maybe its because I ' m overweight I can never achieve ym goals of losing weight, I always fuck up evrey tiem try.","lal I know the depression is too comfortable and I ' m afraid to even leave it, maybe ' s why, but I dont know for sure or maybe its because I ' m overweight I can never achieve ym goals of losing weight, I always fuck up evrey tiem try.","for all I know the depression is too comfortable and I'm afraid to even leave it, maybe that's why, but I dont know for sure
+
+or maybe its because I'm overweight and I can never achieve my goals of losing weight, I always fuck up every time I try.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1808_50_7
+"all I know the depression is too comfortable and I ' m afraid ot even leave it, maybe ' s why, but I dont konw for sure or maybe tis because I ' m overweight I can never achieve my goals of losing weight, I always fuck pu every time try.","all I know the depression is too comfortable and I ' m afraid ot even leave it, maybe ' s why, but I dont konw for sure or maybe tis because I ' m overweight I can never achieve my goals of losing weight, I always fuck pu every time try.","for all I know the depression is too comfortable and I'm afraid to even leave it, maybe that's why, but I dont know for sure
+
+or maybe its because I'm overweight and I can never achieve my goals of losing weight, I always fuck up every time I try.",nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1808_50_7
+' m Sad Todya. ..,' m Sad Todya. ..,I'm Sad Today...,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1609_626_0
+I ' m Todya. ..,I ' m Todya. ..,I'm Sad Today...,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1609_626_0
+' m os depressed.,' m os depressed.,I'm so depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_655_6_31
+I ' os depressed.,I ' os depressed.,I'm so depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_655_6_31
+Im going ot kill.,Im going ot kill.,Im going to kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2340_50_0
+mI going to kill.,mI going to kill.,Im going to kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_2340_50_0
+hTat means im.,hTat means im.,That means im worthless.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_1139_25
+That maens im.,That maens im.,That means im worthless.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_1139_25
+I gulity,I gulity,I feel guilty,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_172_0
+I guitly,I guitly,I feel guilty,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_172_0
+Think I failde.,Think I failde.,I think I failed.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_172_3
+Think I afiled.,Think I afiled.,I think I failed.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1404_172_3
+I have no to tsudy.,I have no to tsudy.,I have no energy to study.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_90_5
+I haev no energy to.,I haev no energy to.,I have no energy to study.,nlp_randword_delete+ta_char_neighbor,FATIGUE,1,s_1404_90_5
+I my abliity to cry.,I my abliity to cry.,I lost my ability to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_3028_530_0
+I olst my to cry.,I olst my to cry.,I lost my ability to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,0,s_3028_530_0
+Want to dei,Want to dei,I want to die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1404_827_2
+I ot die,I ot die,I want to die,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1404_827_2
+' m not suicdial.,' m not suicdial.,I'm not suicidal.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,0,s_975_79_1
+I ' m suciidal.,I ' m suciidal.,I'm not suicidal.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,0,s_975_79_1
+I ' d ratehr kill.,I ' d ratehr kill.,I'd rather kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1858_13_3
+I ' d kill myslef.,I ' d kill myslef.,I'd rather kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1858_13_3
+I selep for hours.,I selep for hours.,I sleep for 23 hours.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_1287_438_0
+I sleep ofr hours.,I sleep ofr hours.,I sleep for 23 hours.,nlp_randword_delete+ta_char_neighbor,SLEEP_ISSUES,1,s_1287_438_0
+I happinses.,I happinses.,I feel happiness.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2815_1588_1
+I happienss.,I happienss.,I feel happiness.,nlp_randword_delete+ta_char_neighbor,SPECIAL_CASE,1,s_2815_1588_1
+All my fial,All my fial,All my experiments fail,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1051_25_0
+All my experimnets,All my experimnets,All my experiments fail,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_1051_25_0
+I dont wnat to live.,I dont wnat to live.,I dont want to live anymore.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1404_218_0
+I dnot want to live.,I dnot want to live.,I dont want to live anymore.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_1404_218_0
+I ot cry.,I ot cry.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1581_1025_35
+I to rcy.,I to rcy.,I wanted to cry.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1581_1025_35
+I can ' t eta or.,I can ' t eta or.,I can't eat or sleep.,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,1,s_888_1741_6
+I can ' t or lseep.,I can ' t or lseep.,I can't eat or sleep.,nlp_randword_delete+ta_char_neighbor,APPETITE_CHANGE,1,s_888_1741_6
+Got deperssed.,Got deperssed.,I got depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1155_17_13
+Got depresesd.,Got depresesd.,I got depressed.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1155_17_13
+Im miserabel.,Im miserabel.,Im constantly miserable.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_697_53_1
+mI constantly.,mI constantly.,Im constantly miserable.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_697_53_1
+mI constantly.,mI constantly.,Im constantly miserable.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_697_53_1
+Im miserabel.,Im miserabel.,Im constantly miserable.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,1,s_697_53_1
+Im consatntly.,Im consatntly.,Im constantly sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_697_53_3
+Im ocnstantly.,Im ocnstantly.,Im constantly sad.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_697_53_3
+I cant kill msyelf.,I cant kill msyelf.,I cant outright kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_781_179_16
+I catn kill myself.,I catn kill myself.,I cant outright kill myself.,nlp_randword_delete+ta_char_neighbor,SUICIDAL_THOUGHTS,1,s_781_179_16
+I ' m sda now.,I ' m sda now.,I'm actually sad now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1636_312_2
+I ' m sad nwo.,I ' m sad nwo.,I'm actually sad now.,nlp_randword_delete+ta_char_neighbor,DEPRESSED_MOOD,1,s_1636_312_2
+I super giulty.,I super giulty.,I FEEL super guilty.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1899_203_41
+I EFEL super.,I EFEL super.,I FEEL super guilty.,nlp_randword_delete+ta_char_neighbor,WORTHLESSNESS,0,s_1899_203_41

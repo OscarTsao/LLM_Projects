@@ -1,0 +1,533 @@
+================================================================================
+COMPREHENSIVE REPOSITORY INVENTORY SUMMARY
+PSY Agents NO-AUG to Augmentation Pipeline
+================================================================================
+
+CREATED: October 26, 2025
+LOCATION: /media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Criteria_Evidence
+PURPOSE: Production readiness audit and transformation roadmap
+
+================================================================================
+1. DIRECTORY STRUCTURE OVERVIEW
+================================================================================
+
+ROOT DIRECTORIES:
+├── src/                    - Source code (TWO parallel implementations - 904KB duplication)
+│   ├── psy_agents_noaug/   - ACTIVE (5,356 LOC) - CLI + augmentation + architectures
+│   └── Project/            - DUPLICATE (800 LOC) - Used by standalone scripts
+├── configs/                - Hydra YAML configuration (12 groups, 27 files)
+├── scripts/                - Entry point scripts (17 Python scripts)
+├── tests/                  - Test suite (24 test files + benchmarks)
+├── docs/                   - Documentation (guides, analysis)
+└── Makefile               - CLI shortcuts (60+ targets)
+
+KEY STATISTICS:
+- Total Python files: 100+
+- Total lines of code: ~15,000 (src) + ~5,000 (scripts) + ~2,000 (tests)
+- Test coverage: 67/69 passing (97.1%), 31% code coverage
+- Configuration files: 27 YAML files across 12 groups
+- Augmentation methods: 28+ (16 nlpaug + 12 textattack)
+
+================================================================================
+2. PYTHON PACKAGES & STRUCTURE
+================================================================================
+
+MAIN PACKAGE: psy_agents_noaug (5,356 LOC)
+
+augmentation/             (~500 LOC, 4 files)
+  - pipeline.py          (156 LOC) - Orchestration + seeding
+  - registry.py          (300+ LOC) - Augmenter unification
+  - tfidf_cache.py       (150+ LOC) - Cache management
+  STATUS: CURRENTLY UNUSED - dead code
+
+architectures/           (~4,000 LOC, 70+ files)
+  - criteria/            - Binary classification (PRODUCTION-READY)
+  - evidence/            - Span extraction
+  - share/               - Shared encoder + dual heads
+  - joint/               - Dual encoders + fusion
+  Each contains:
+    ├── models/          - Model implementation
+    ├── data/            - Dataset loader
+    ├── engine/          - Train/eval orchestration
+    └── utils/           - Seed, checkpoint, logging, MLflow, Optuna
+
+data/                    (~1,500 LOC, 6 files)
+  - groundtruth.py       (500+ LOC) ⭐ CRITICAL - STRICT field validation
+  - loaders.py           (376 LOC) - ReDSM5DataLoader
+  - datasets.py          (300+ LOC) - Classification/Span datasets
+  - splits.py            (180 LOC) - Train/val/test splitting
+  - augmentation_utils.py (150+ LOC) - Augmentation integration
+  - classification_loader.py (200+ LOC) - Legacy wrapper
+  STATUS: ✓ PRODUCTION-READY
+
+hpo/                     (~350 LOC, 2 files)
+  - optuna_runner.py     (352 LOC) - OptunaRunner + search space builder
+  STATUS: ✓ PRODUCTION-READY
+
+models/                  (~500 LOC, 4 files)
+  - encoders.py          (263 LOC) - Transformer encoder wrapper
+  - criteria_head.py     (132 LOC) - Binary classification head
+  - evidence_head.py     (132 LOC) - Span prediction head
+
+training/                (~1,100 LOC, 4 files)
+  - train_loop.py        (556 LOC) ⭐ CORE - Trainer class (AMP, early stopping)
+  - evaluate.py          (451 LOC) - Evaluator class
+  - setup.py             (118 LOC) - Setup utilities
+  STATUS: ✓ PRODUCTION-READY
+
+utils/                   (~800 LOC, 7 files)
+  - reproducibility.py   (198 LOC) - Seeds + device utils
+  - mlflow_utils.py      (346 LOC) - MLflow tracking
+  - logging*.py          (188 LOC) - Logging setup
+  STATUS: ✓ PRODUCTION-READY
+
+cli.py                   (250+ LOC) ⭐ ENTRY POINT
+  - Typer-based CLI
+  - Commands: train, tune, show_best
+  STATUS: ✓ READY (needs training backend wiring)
+
+================================================================================
+3. ENTRY POINTS & INTERFACES
+================================================================================
+
+CLI COMMAND:
+  python -m psy_agents_noaug.cli train --agent criteria --epochs 3
+  python -m psy_agents_noaug.cli tune --agent criteria --study my-study --n-trials 200
+
+MAKEFILE TARGETS (60+):
+  make train                    - Standalone training
+  make hpo-s0 HPO_TASK=criteria - Multi-stage HPO stage 0
+  make tune-criteria-max        - Maximal HPO (800 trials)
+  make full-hpo-all             - All 4 architectures sequentially
+  make test                     - Run pytest
+  make eval                     - Evaluate checkpoint
+
+PYTHON SCRIPTS (17 total):
+  scripts/train_criteria.py      ✓ PRODUCTION-READY (416 LOC)
+  scripts/eval_criteria.py       ✓ PRODUCTION-READY (306 LOC)
+  scripts/tune_max.py           ✓ PRODUCTION-READY (600+ LOC) - Maximal HPO
+  scripts/run_hpo_stage.py      ✓ PRODUCTION-READY (300+ LOC) - Multi-stage HPO
+  scripts/run_all_hpo.py        ✓ PRODUCTION-READY (200+ LOC) - All architectures
+  + 12 utility scripts
+
+================================================================================
+4. DATA FLOW PIPELINE
+================================================================================
+
+INGESTION SOURCES:
+  - HuggingFace: irlab-udc/redsm5 (PREFERRED)
+  - Local CSV: data/raw/redsm5/{posts,annotations}.csv
+
+DATA LOADING:
+  ReDSM5DataLoader (src/psy_agents_noaug/data/loaders.py)
+    ├── load_posts() → DataFrame
+    ├── load_annotations() → DataFrame
+    └── load_dsm_criteria() → DataFrame
+
+⭐ STRICT FIELD VALIDATION (groundtruth.py):
+  Criteria Task:
+    - Input: annotations.status field
+    - _assert_field_usage(field, "status", "Criteria labels")
+    - Output: binary labels (0/1)
+    - ENFORCED: Fails with AssertionError if violated
+
+  Evidence Task:
+    - Input: annotations.cases field
+    - _assert_field_usage(field, "cases", "Evidence labels")
+    - Output: span list [{start_char, end_char, sentence_id, text}]
+    - ENFORCED: Fails with AssertionError if violated
+
+FIELD MAPPING CONFIG (configs/data/field_map.yaml):
+  annotations:
+    status: "status"        # ← ONLY for criteria
+    cases: "cases"          # ← ONLY for evidence
+  status_values:
+    positive: [positive, present, true, 1, True]
+    negative: [negative, absent, false, 0, False]
+  validation:
+    strict_mode: true
+    allow_cross_contamination: false  # MUST REMAIN false
+
+DATASET CONSTRUCTION:
+  ClassificationDataset → Tokenization → DataLoader
+  Tokenization Modes:
+    - Eager: Pre-tokenize at construction (default)
+    - Lazy: Defer to collate_fn (for augmentation)
+
+AUGMENTATION HOOKS (CURRENTLY UNUSED):
+  Pipeline configured but not called in training paths
+  Available in: datasets.py, classification_loader.py, augmentation_utils.py
+  Methods available: 28+ (nlpaug + textattack)
+
+DATA VALIDATION TESTS:
+  test_groundtruth.py - CRITICAL field separation tests
+  test_loaders.py - Data loader validation
+  test_integration.py - End-to-end workflows
+
+================================================================================
+5. HPO SYSTEM (HYPERPARAMETER OPTIMIZATION)
+================================================================================
+
+THREE EXECUTION MODES:
+
+MODE 1: MULTI-STAGE HPO (Progressive Refinement)
+  Stage 0: Sanity check (8 trials)
+  Stage 1: Coarse search (20 trials)
+  Stage 2: Fine search (50 trials)
+  Stage 3: Refit on train+val (best config from stage 2)
+  Runner: scripts/run_hpo_stage.py
+  Config: configs/hpo/stage{0,1,2,3}*.yaml
+  Make targets: make hpo-s{0,1,2}, make refit
+
+MODE 2: MAXIMAL HPO (Single Large Run)
+  Criteria: 800 trials
+  Evidence: 1200 trials
+  Share: 600 trials
+  Joint: 600 trials
+  Runner: scripts/tune_max.py
+  Make targets: make tune-{criteria,evidence,share,joint}-max
+
+MODE 3: SUPER-MAX HPO (Ultra-Long Run)
+  Criteria: 5000 trials, 100 epochs
+  Evidence: 8000 trials, 100 epochs
+  Share: 3000 trials, 100 epochs
+  Joint: 3000 trials, 100 epochs
+  Total: ~19,000 trials
+  Make targets: make tune-{criteria,evidence,share,joint}-supermax
+
+SEARCH SPACE:
+  Tokenizer: max_length (128-1024), doc_stride, use_fast
+  Batch size: [8, 12, 16, 24, 32, 48, 64]
+  Gradient accumulation: [1, 2, 3, 4, 6, 8]
+  Optimizer: [adamw, adamw_8bit, adafactor, lion]
+  Learning rate: 5e-6 to 3e-4 (log scale)
+  Scheduler: [linear, cosine, cosine_restart, polynomial, one_cycle]
+  Model: [bert-base, bert-large, roberta-base/large, deberta-v3-base/large, electra, xlm-roberta]
+  Loss (Classification): [ce, ce_label_smooth, focal]
+  Loss (Span): [qa_ce, qa_ce_ls, qa_focal]
+  Pooling: [cls, mean, max, attn]
+  Activation: [gelu, relu, silu]
+  Null policy (Evidence): [none, threshold, ratio, calibrated]
+  Reranker (Evidence): [sum, product, softmax]
+
+OPTUNA FEATURES:
+  Sampler: TPESampler (default) or NSGAIISampler (multi-objective)
+  Pruner: HyperbandPruner or PatientPruner
+  Storage: SQLite (_optuna/noaug.db) or PostgreSQL
+  Optuna version: 4.5.0+
+
+MLFLOW INTEGRATION:
+  Experiment: "NoAug_Criteria_Evidence"
+  Metrics: loss, accuracy, F1, precision, recall
+  Artifacts: checkpoints, configs
+  Backend: SQLite (mlflow.db) or custom URI
+
+================================================================================
+6. AUGMENTATION PIPELINE
+================================================================================
+
+ARCHITECTURE:
+  pipeline.py    - AugmenterPipeline orchestration + deterministic seeding
+  registry.py    - AugmenterWrapper + method registration
+  tfidf_cache.py - TF-IDF model caching
+
+SUPPORTED AUGMENTATION METHODS (28 total):
+
+  nlpaug (16 methods):
+    Char-level:
+      - KeyboardAug, OcrAug, RandomCharAug
+    Word-level:
+      - RandomWordAug, SpellingAug, SynonymAug, AntonymAug
+      - ContextualWordEmbsAug, ContextualWordEmbsForSentenceAug
+      - BackTranslationAug, ReservedAug, TfIdfAug
+      - + several contextual variants
+
+  textattack (12 methods):
+    - CharSwapAugmenter, CheckListAugmenter, DeletionAugmenter
+    - EasyDataAugmenter, SwapAugmenter, SynonymInsertionAugmenter
+    - WordNetAugmenter, + additional recipes
+
+AUGMENTATION CONFIGURATION (configs/augmentation/default.yaml):
+  lib: "none"                 # none|nlpaug|textattack|both
+  methods: ["all"]            # Method names or "all"
+  p_apply: 0.15              # Probability of applying per sample
+  ops_per_sample: 1          # Sequential augmentations per sample
+  max_replace_ratio: 0.3     # Max percentage of text to replace
+
+INTEGRATION POINTS:
+  1. Dataset level (datasets.py):
+     - ClassificationDataset accepts augmenter parameter
+     - Lazy tokenization mode enables on-the-fly augmentation
+
+  2. Collate function (classification_loader.py):
+     - Apply augmentation before tokenization
+     - Batch-level processing
+
+  3. CLI (cli.py):
+     - Accepts --aug-lib, --aug-methods, --aug-p-apply flags
+     - Arguments: aug_lib, aug_methods, aug_p_apply, aug_ops_per_sample, aug_max_replace
+
+CURRENT STATUS: ⚠️ UNUSED
+  - Code exists but is NEVER CALLED in production training paths
+  - Dependencies installed (nlpaug, textattack) but not utilized
+  - Dataset classes have augmenter parameter but rarely instantiate it
+  - CLI has flags but doesn't wire to training
+  - Test suite includes augmentation tests but not in main training loop
+  - Contradicts project name "NO-AUG"
+
+================================================================================
+7. TEST COVERAGE (24 test files + benchmarks)
+================================================================================
+
+CORE VALIDATION:
+  test_groundtruth.py        ⭐ CRITICAL - Field separation validation
+  test_loaders.py            - Data loader functionality
+  test_integration.py        - End-to-end workflows
+
+TRAINING TESTS:
+  test_training_smoke.py     - Training pipeline smoke tests
+  test_train_smoke.py        - Alternative training tests
+  test_arch_shapes.py        - Model output shapes validation
+  test_head_space.py         - Head configuration space
+
+AUGMENTATION TESTS (9 files):
+  test_augmentation_registry.py          - Augmenter registration
+  test_augmentation_utils.py             - Utilities
+  test_pipeline_comprehensive.py         - Full pipeline
+  test_pipeline_extended.py              - Extended scenarios
+  test_pipeline_integration.py           - Integration
+  test_pipeline_scope.py                 - Scope validation
+  test_tfidf_cache.py                    - TF-IDF caching
+  test_tfidf_cache_extended.py           - Extended TF-IDF
+
+HPO TESTS:
+  test_hpo_config.py         - HPO configuration validation
+  test_hpo_integration.py    - HPO integration
+
+CLI & MISC TESTS:
+  test_cli_flags.py          - CLI argument parsing
+  test_qa_null_policy.py     - Null span handling
+  test_seed_determinism.py   - Reproducibility
+  test_smoke.py              - Basic smoke tests
+  test_perf_contract.py      - Performance contracts
+  test_mlflow_artifacts.py   - MLflow tracking
+
+BENCHMARKS:
+  test_benchmarks/test_performance_regression.py - Performance tracking
+
+TEST STATUS:
+  Passing: 67/69 (97.1%)
+  Coverage: 31% code coverage
+  Configuration: pytest with coverage tracking
+
+================================================================================
+8. CONFIGURATION SYSTEM (Hydra)
+================================================================================
+
+COMPOSITION (configs/config.yaml):
+  defaults:
+    - data: hf_redsm5
+    - model: roberta_base
+    - training: default
+    - task: criteria
+    - hpo: stage0_sanity
+
+CONFIG GROUPS (12 total, 27 files):
+
+  augmentation/              (1 file)
+    - default.yaml
+
+  data/                      (3 files) ⭐ CRITICAL
+    - field_map.yaml         - Field validation rules
+    - hf_redsm5.yaml         - HuggingFace source
+    - local_csv.yaml         - Local CSV source
+
+  model/                     (3 files)
+    - bert_base.yaml
+    - roberta_base.yaml
+    - deberta_v3_base.yaml
+
+  task/                      (2 files)
+    - criteria.yaml
+    - evidence.yaml
+
+  training/                  (3 files)
+    - default.yaml           - Standard settings
+    - optimized.yaml         - Performance-tuned
+    - supermax_optimized.yaml - Super-max HPO config
+
+  hpo/                       (6 files)
+    - stage0_sanity.yaml
+    - stage1_coarse.yaml
+    - stage2_fine.yaml
+    - stage3_refit.yaml
+    - stage_a_baseline.yaml
+    - stage_b_augmentation.yaml
+
+  criteria/, evidence/, share/, joint/  (8 files total)
+    - train.yaml
+    - hpo.yaml
+
+FIELD MAPPING (configs/data/field_map.yaml) - CRITICAL:
+  posts:
+    post_id, text, user_id, created_at
+  annotations:
+    post_id, criterion_id
+    status: "status"        # ← ONLY for criteria
+    cases: "cases"          # ← ONLY for evidence
+  status_values:
+    positive: [positive, present, true, 1, True]
+    negative: [negative, absent, false, 0, False]
+  validation:
+    strict_mode: true
+    allow_cross_contamination: false  # MUST REMAIN false
+
+OVERRIDE EXAMPLES:
+  python -m psy_agents_noaug.cli train task=evidence
+  python -m psy_agents_noaug.cli train training.batch_size=32 training.learning_rate=3e-5
+  python -m psy_agents_noaug.cli train -m model=bert_base,roberta_base,deberta_v3_base
+  python scripts/run_hpo_stage.py hpo=stage1_coarse task=evidence model=deberta_v3_base
+
+================================================================================
+9. CRITICAL FINDINGS & ISSUES
+================================================================================
+
+ISSUE #1: DUPLICATE ARCHITECTURE IMPLEMENTATION (904 KB)
+  Location: src/Project/ vs src/psy_agents_noaug/architectures/
+  Size: 376 KB (Project) + 528 KB (psy_agents_noaug)
+  Impact:
+    - Code duplication risk
+    - Maintenance burden
+    - Potential divergence
+    - Wasted disk space
+  Current usage:
+    - src/Project/ used by: train_criteria.py, eval_criteria.py
+    - src/psy_agents_noaug/architectures/ has engines but NOT used by CLI
+  Resolution: Consolidate to single implementation
+  Effort: 2-4 hours
+
+ISSUE #2: UNUSED AUGMENTATION CODE (100+ KB)
+  Location: src/psy_agents_noaug/augmentation/, tests/test_augmentation_*.py
+  Size: 32 KB code + 55 KB tests
+  Dependencies: nlpaug, textattack (30+ MB installed)
+  Impact:
+    - Dead code contradicts project name "NO-AUG"
+    - Unused dependencies slow pip install
+    - Code maintenance burden for unused feature
+  Current status:
+    - Code exists but NEVER CALLED in production training
+    - CLI has flags but doesn't wire to training
+    - Dataset accepts augmenter but rarely instantiates it
+  Resolution: Either activate in training or remove entirely
+  Effort: 1-2 hours (removal) or 4-6 hours (activation)
+
+ISSUE #3: PACKAGE NAMING (psy_agents_noaug)
+  Current: "NO-AUG" naming throughout
+  Files affected: 140 occurrences across 62 files
+  High-priority changes:
+    - Package name: psy_agents_noaug
+    - Experiment: NoAug_Criteria_Evidence
+    - Storage path: _optuna/noaug.db
+  Recommended rename: psy_agents_aug or psy_agents
+  Effort: 3-4 hours (with testing)
+
+FIELD SEPARATION (✓ CORRECTLY IMPLEMENTED):
+  Status: ✓ CORRECT and ENFORCED
+  Rule:
+    - Criteria ONLY uses status field
+    - Evidence ONLY uses cases field
+  Implementation: _assert_field_usage() in groundtruth.py
+  Testing: Comprehensive tests in test_groundtruth.py
+  Priority: MAINTAIN THIS BEHAVIOR - DO NOT CHANGE
+
+PRODUCTION-READY COMPONENTS:
+  ✓ src/psy_agents_noaug/data/groundtruth.py - STRICT validation
+  ✓ src/psy_agents_noaug/training/train_loop.py - Trainer (AMP)
+  ✓ src/psy_agents_noaug/training/evaluate.py - Evaluation
+  ✓ scripts/train_criteria.py - Standalone training
+  ✓ scripts/eval_criteria.py - Standalone evaluation
+  ✓ scripts/tune_max.py - Maximal HPO
+  ✓ MLflow integration (metrics + artifacts)
+  ✓ Test suite (97.1% passing)
+
+================================================================================
+10. NAMING AUDIT - "noaug" REFERENCES
+================================================================================
+
+TOTAL OCCURRENCES: 140 matches across 62 files
+
+BREAKDOWN:
+  - Package imports: ~100 (from psy_agents_noaug import ...)
+  - Experiment names: ~20 (NoAug_Criteria_Evidence)
+  - Comments/docstrings: ~20 (NO-AUG baseline)
+
+CRITICAL FILES TO RENAME:
+  1. src/psy_agents_noaug/ → src/psy_agents_aug/
+  2. pyproject.toml - package name + include path
+  3. Makefile - environment variables
+  4. scripts/ - imports and experiment names
+  5. tests/ - imports
+  6. docs/ - documentation links
+  7. MLflow experiment: "NoAug_Criteria_Evidence" → "Criteria_Evidence_Augmented"
+  8. Optuna storage: "sqlite:///_.optuna/noaug.db" → "sqlite:///_.optuna/augmented.db"
+
+RENAME STRATEGY:
+  Step 1: Rename directory (git mv)
+  Step 2: Update pyproject.toml
+  Step 3: Global find-replace (psy_agents_noaug → psy_agents_aug)
+  Step 4: Update configuration experiment/study names
+  Step 5: Update documentation
+  Step 6: Run full test suite
+  Estimated effort: 3-4 hours including testing
+
+================================================================================
+11. SUMMARY TABLE
+================================================================================
+
+Component                Status      Files  LOC    Notes
+────────────────────────────────────────────────────────────────────────────
+Core Data Pipeline      ✓ READY     6      1.5K   STRICT field validation
+Augmentation            ✗ UNUSED    4      500    Dead code, 28+ methods
+Architectures (active)  ✓ READY     20     2K     Criteria production-ready
+Architectures (dup)     ⚠️ DUPLICATE 20     1K     904 KB duplication with Project/
+Training Loop           ✓ READY     4      1.1K   AMP, early stopping, MLflow
+HPO System              ✓ READY     7      ~800   Multi-stage, maximal, super-max
+Tests                   ✓ READY     24     ~2K    97.1% passing, field validation
+Configs                 ✓ READY     27     ~30    Hydra-based, composable
+Scripts                 ✓ READY     17     ~3K    2 production, 5 HPO runners
+CLI                     ✓ READY     1      250    Typer-based, minimal deps
+────────────────────────────────────────────────────────────────────────────
+
+================================================================================
+12. IMMEDIATE ACTION ITEMS
+================================================================================
+
+PRIORITY 1 (Before Production):
+  1. Consolidate duplicate architectures (src/Project → psy_agents_noaug)
+  2. Decide on augmentation (activate in training OR remove code)
+  3. Run comprehensive test suite
+  4. Verify field separation enforcement
+
+PRIORITY 2 (Production Polish):
+  1. Rename package from "noaug" to "aug"
+  2. Update all documentation
+  3. Update experiment/study naming
+  4. Update project description/README
+
+PRIORITY 3 (Post-Production):
+  1. Load testing and stress testing
+  2. Edge case testing
+  3. Performance benchmarking
+  4. Documentation audit
+
+================================================================================
+REFERENCES
+================================================================================
+
+Full Details:    INVENTORY.md (1139 lines)
+Quick Reference: INVENTORY_QUICK_REFERENCE.md (139 lines)
+Repository:     /media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Criteria_Evidence
+Last Updated:   2025-10-26
+Maintained By:  YuNing Chen
+
+================================================================================

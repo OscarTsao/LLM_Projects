@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-10-24T17:23:42.580686",
+  "env": {
+    "python": "3.13.7",
+    "os": "Linux",
+    "os_version": "Linux-5.15.0-160-generic-x86_64-with-glibc2.35",
+    "cpu_cores": 8,
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 2080"
+  },
+  "registry": {
+    "expected": 28,
+    "status": "PASS"
+  },
+  "tests": {
+    "total": 39,
+    "passed": 37,
+    "failed": 0,
+    "skipped": 2,
+    "error": 0,
+    "xfailed": 0
+  },
+  "determinism": {
+    "status": "PARTIAL"
+  },
+  "evidence_only": {
+    "status": "PASS"
+  },
+  "quality_filter": {
+    "status": "PASS"
+  },
+  "sharding": {
+    "status": "PASS"
+  },
+  "manifest_integrity": {
+    "status": "PASS"
+  },
+  "performance": {
+    "cpu_rows_per_sec": 3.33,
+    "gpu_rows_per_sec": 1.45,
+    "disk_cache_speedup": 1.59,
+    "multiprocessing_speedup": 0.38
+  },
+  "overall": "PASS"
+}

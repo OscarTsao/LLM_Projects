@@ -1,0 +1,139 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I hate that i'm watchword rn.,I hate that i'm watchword rn.,I hate that i am crying rn.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_321_219_4
+I hate that i'm shout rn.,I hate that i'm shout rn.,I hate that i am crying rn.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_321_219_4
+I'm very distressing.,I'm very distressing.,I am very sad.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_411_1189_1
+I'm very pitiful.,I'm very pitiful.,I am very sad.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_411_1189_1
+I've constitute feeling down on and off.,I've constitute feeling down on and off.,I have been feeling down on and off.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2035_91_6
+I've been feeling down on and away.,I've been feeling down on and away.,I have been feeling down on and off.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2035_91_6
+I'm very grim also.,I'm very grim also.,I am very depressed also.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_131_822_0
+I'm very demoralize also.,I'm very demoralize also.,I am very depressed also.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_131_822_0
+I'm being rack.,I'm being rack.,I am being tortured.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,0,s_1351_120_5
+I'm organism tortured.,I'm organism tortured.,I am being tortured.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,0,s_1351_120_5
+That's whole I've energy for after work.,That's whole I've energy for after work.,That's all I have energy for after work.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1483_10_2
+That's all I've energy for after lick.,That's all I've energy for after lick.,That's all I have energy for after work.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1483_10_2
+I've no vitality at all.,I've no vitality at all.,I have no energy at all.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1455_72_50
+I've nobelium energy at all.,I've nobelium energy at all.,I have no energy at all.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1455_72_50
+I follow scared I won't be a successful man in the future,I follow scared I won't be a successful man in the future,I am scared I will not be a successful man in the future,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_65_110_0
+I'm rattling tired.,I'm rattling tired.,I am very tired.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1030_1290_8
+I'm very timeworn.,I'm very timeworn.,I am very tired.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1030_1290_8
+I'm.. gloominess,I'm.. gloominess,I am.. sadness,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_855_1863_0
+I'm.. lugubriousness,I'm.. lugubriousness,I am.. sadness,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_855_1863_0
+I'm more than rag.,I'm more than rag.,I am more than annoyed.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_1296_12_9
+I'm more than irritate.,I'm more than irritate.,I am more than annoyed.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_1296_12_9
+Then I'd get really angry at sentence.,Then I'd get really angry at sentence.,Then I would get really angry at times.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_84_60_2
+Then I'd engender really angry at times.,Then I'd engender really angry at times.,Then I would get really angry at times.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_84_60_2
+I'm extremely self-destructive atm.,I'm extremely self-destructive atm.,I am extremely suicidal atm.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I'm exceedingly suicidal atm.,I'm exceedingly suicidal atm.,I am extremely suicidal atm.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_2800_49_0
+I've already planned my own felo-de-se.,I've already planned my own felo-de-se.,I have already planned my own suicide.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_1989_742_0
+I've already design my own suicide.,I've already design my own suicide.,I have already planned my own suicide.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_1989_742_0
+And I'd cry so punishing.,And I'd cry so punishing.,And I would cry so hard.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2190_134_3
+And I'd cry so arduous.,And I'd cry so arduous.,And I would cry so hard.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2190_134_3
+But I'm feeling low-down.,But I'm feeling low-down.,But I am feeling miserable.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_2415_600_3
+But I'm sense miserable.,But I'm sense miserable.,But I am feeling miserable.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_2415_600_3
+I'm distressing waiting.,I'm distressing waiting.,I am sad waiting.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_577_923_1
+I'm sad expect.,I'm sad expect.,I am sad waiting.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_577_923_1
+I've issues inward focusing and attention.,I've issues inward focusing and attention.,I have issues in focusing and attention.,ta_contraction+ta_wordswap_wordnet,COGNITIVE_ISSUES,0,s_2257_110_29
+I've issues in center and attention.,I've issues in center and attention.,I have issues in focusing and attention.,ta_contraction+ta_wordswap_wordnet,COGNITIVE_ISSUES,0,s_2257_110_29
+I bevel focus and i've no energy.,I bevel focus and i've no energy.,I cant focus and i have no energy.,ta_contraction+ta_wordswap_wordnet,COGNITIVE_ISSUES,1,s_1404_729_2
+I chamfer focus and i've no energy.,I chamfer focus and i've no energy.,I cant focus and i have no energy.,ta_contraction+ta_wordswap_wordnet,COGNITIVE_ISSUES,1,s_1404_729_2
+I just don't think I'd like to populate anymore.,I just don't think I'd like to populate anymore.,I just don't think I would like to live anymore.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I just don't retrieve I'd like to live anymore.,I just don't retrieve I'd like to live anymore.,I just don't think I would like to live anymore.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I've always miscarry.,I've always miscarry.,I have always failed.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_356_95_6
+I've forever failed.,I've forever failed.,I have always failed.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_356_95_6
+I'm nookie CRYING.,I'm nookie CRYING.,I am fucking CRYING.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_74_207_1
+I'm nooky CRYING.,I'm nooky CRYING.,I am fucking CRYING.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_74_207_1
+I'm Indiana a constant dilemma.,I'm Indiana a constant dilemma.,I am in a constant dilemma.,ta_contraction+ta_wordswap_wordnet,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm in a unvarying dilemma.,I'm in a unvarying dilemma.,I am in a constant dilemma.,ta_contraction+ta_wordswap_wordnet,COGNITIVE_ISSUES,0,s_2415_1014_1
+I'm selfsame lonely now.,I'm selfsame lonely now.,I am very lonely now.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm very lonely immediately.,I'm very lonely immediately.,I am very lonely now.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2415_1014_9
+I'm kinda angry completely the time.,I'm kinda angry completely the time.,I am kinda angry all the time.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_1749_859_23
+I'm kinda angry all the clip.,I'm kinda angry all the clip.,I am kinda angry all the time.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_1749_859_23
+I'm tire.,I'm tire.,I am tired.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_681_475_2
+I'd really like some exempt energy right now.,I'd really like some exempt energy right now.,I would really like some free energy right now.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_969_1077_3
+I'd really like some free energy right today.,I'd really like some free energy right today.,I would really like some free energy right now.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_969_1077_3
+i've nothing to be for personally.,i've nothing to be for personally.,i have nothing to live for personally.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_699_4_6
+i've naught to live for personally.,i've naught to live for personally.,i have nothing to live for personally.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_699_4_6
+I'm very focalise on sex.,I'm very focalise on sex.,I am very focused on sex.,ta_contraction+ta_wordswap_wordnet,SPECIAL_CASE,1,s_731_903_4
+I'm very focused along sex.,I'm very focused along sex.,I am very focused on sex.,ta_contraction+ta_wordswap_wordnet,SPECIAL_CASE,1,s_731_903_4
+Wow it knows how distressing I'm,Wow it knows how distressing I'm,Wow it knows how sad I am,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_694_827_0
+Wow it cognise how sad I'm,Wow it cognise how sad I'm,Wow it knows how sad I am,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_694_827_0
+I'm flunk miserably.,I'm flunk miserably.,I am failing miserably.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_993_720_4
+I'm bomb miserably.,I'm bomb miserably.,I am failing miserably.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_993_720_4
+Even my low botheration days I've no energy.,Even my low botheration days I've no energy.,Even my low pain days I have no energy.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1749_905_17
+"I'm steamed, yes.","I'm steamed, yes.","I am irritated, yes.",ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2625_148_0
+"I'm gravel, yes.","I'm gravel, yes.","I am irritated, yes.",ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2625_148_0
+"I've indeed much guilt and remorse, Danny.","I've indeed much guilt and remorse, Danny.","I have so much guilt and remorse, Danny.",ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,0,s_1674_10_490
+Some nights I'd bewilder no sleep at all.,Some nights I'd bewilder no sleep at all.,Some nights I would get no sleep at all.,ta_contraction+ta_wordswap_wordnet,SLEEP_ISSUES,0,s_697_322_2
+Some nights I'd aim no sleep at all.,Some nights I'd aim no sleep at all.,Some nights I would get no sleep at all.,ta_contraction+ta_wordswap_wordnet,SLEEP_ISSUES,0,s_697_322_2
+I've encounter comfort in my sadness,I've encounter comfort in my sadness,I have found comfort in my sadness,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_2415_116_0
+I've get comfort in my sadness,I've get comfort in my sadness,I have found comfort in my sadness,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_2415_116_0
+I'm so discharge.,I'm so discharge.,I am so exhausted.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_697_17_12
+I'm so deplete.,I'm so deplete.,I am so exhausted.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_697_17_12
+I'm besides restless.,I'm besides restless.,I am also restless.,ta_contraction+ta_wordswap_wordnet,PSYCHOMOTOR,1,s_2139_45_8
+I'm also uneasy.,I'm also uneasy.,I am also restless.,ta_contraction+ta_wordswap_wordnet,PSYCHOMOTOR,1,s_2139_45_8
+I'm flavor suicidal again.,I'm flavor suicidal again.,I am feeling suicidal again.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_993_450_6
+I'm sense suicidal again.,I'm sense suicidal again.,I am feeling suicidal again.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_993_450_6
+I've mixed-up motivation.,I've mixed-up motivation.,I have lost motivation.,ta_contraction+ta_wordswap_wordnet,ANHEDONIA,1,s_2415_566_0
+I've disoriented motivation.,I've disoriented motivation.,I have lost motivation.,ta_contraction+ta_wordswap_wordnet,ANHEDONIA,1,s_2415_566_0
+Mentally I've no vigor either.,Mentally I've no vigor either.,Mentally I have no energy either.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1404_852_6
+Mentally I've no muscularity either.,Mentally I've no muscularity either.,Mentally I have no energy either.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1404_852_6
+I've hope for the futurity.,I've hope for the futurity.,I have hope for the future.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_1230_158_13
+I've trust for the future.,I've trust for the future.,I have hope for the future.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_1230_158_13
+I've no unrivaled to blame but myself.,I've no unrivaled to blame but myself.,I have no one to blame but myself.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_1955_911_1
+I've no one to rap but myself.,I've no one to rap but myself.,I have no one to blame but myself.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_1955_911_1
+Maybe a undecomposed future that i could've,Maybe a undecomposed future that i could've,Maybe a better future that i could have,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe a unspoilt future that i could've,Maybe a unspoilt future that i could've,Maybe a better future that i could have,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2401_24_0
+Maybe a unspoilt future that i could've,Maybe a unspoilt future that i could've,Maybe a better future that i could have,ta_contraction+ta_wordswap_wordnet,SPECIAL_CASE,1,s_2401_24_0
+Maybe a undecomposed future that i could've,Maybe a undecomposed future that i could've,Maybe a better future that i could have,ta_contraction+ta_wordswap_wordnet,SPECIAL_CASE,1,s_2401_24_0
+I'm just distressing.,I'm just distressing.,I am just sad.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_1681_1030_1
+I'm equitable sad.,I'm equitable sad.,I am just sad.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_1681_1030_1
+"I didnt reckon I'd cry, but I did.","I didnt reckon I'd cry, but I did.","I didnt think I would cry, but I did.",ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_3066_1007_7
+"I didnt consider I'd cry, but I did.","I didnt consider I'd cry, but I did.","I didnt think I would cry, but I did.",ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_3066_1007_7
+I've more vim.,I've more vim.,I have more energy.,ta_contraction+ta_wordswap_wordnet,SPECIAL_CASE,1,s_2065_472_7
+I've more push.,I've more push.,I have more energy.,ta_contraction+ta_wordswap_wordnet,SPECIAL_CASE,1,s_2065_472_7
+I'm ass ANGRY now.,I'm ass ANGRY now.,I am fucking ANGRY now.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_188_399_2
+I'm fucking raging now.,I'm fucking raging now.,I am fucking ANGRY now.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_188_399_2
+Yet I'm downhearted.,Yet I'm downhearted.,Yet I am depressed.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2139_3_2
+Yet I'm demoralize.,Yet I'm demoralize.,Yet I am depressed.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2139_3_2
+I'm such an fractious dick.,I'm such an fractious dick.,I am such an irritable dick.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_1749_691_5
+I'm such an irritable peter.,I'm such an irritable peter.,I am such an irritable dick.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_1749_691_5
+I'm anxious much of the clock.,I'm anxious much of the clock.,I am anxious much of the time.,ta_contraction+ta_wordswap_wordnet,PSYCHOMOTOR,1,s_716_38_24
+I'm anxious much of the clip.,I'm anxious much of the clip.,I am anxious much of the time.,ta_contraction+ta_wordswap_wordnet,PSYCHOMOTOR,1,s_716_38_24
+Now I'm deplorable.,Now I'm deplorable.,Now I am sad.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_1681_799_2
+Now I'm lamentable.,Now I'm lamentable.,Now I am sad.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_1681_799_2
+"span my heart, I'd cry sometimes.","span my heart, I'd cry sometimes.","Cross my heart, I would cry sometimes.",ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_469_428_1
+"Cross my heart, I'd exclaim sometimes.","Cross my heart, I'd exclaim sometimes.","Cross my heart, I would cry sometimes.",ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_469_428_1
+I'm big sad correct now.,I'm big sad correct now.,I am big sad right now.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2080_955_0
+I'm adult sad right now.,I'm adult sad right now.,I am big sad right now.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2080_955_0
+Oh yea I'd like to fail,Oh yea I'd like to fail,Oh yea I would like to die,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_2781_521_0
+Oh yea I'd like to exit,Oh yea I'd like to exit,Oh yea I would like to die,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_2781_521_0
+i've no more get-up-and-go.,i've no more get-up-and-go.,i have no more energy.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_2107_102_4
+i've no more push.,i've no more push.,i have no more energy.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_2107_102_4
+"i desperately need slumber but every single fucking time that 'thing' intercept and bangs, I fear if i sleep it'll come out of the fireplace and decorate my room in my cadaver, my world is spinning, I'm going to try to sleep tonight.","i desperately need slumber but every single fucking time that 'thing' intercept and bangs, I fear if i sleep it'll come out of the fireplace and decorate my room in my cadaver, my world is spinning, I'm going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",ta_contraction+ta_wordswap_wordnet,SLEEP_ISSUES,0,s_2544_1099_12
+I've sleep problems overly.,I've sleep problems overly.,I have sleep problems too.,ta_contraction+ta_wordswap_wordnet,SLEEP_ISSUES,0,s_2502_62_2
+I've nap problems too.,I've nap problems too.,I have sleep problems too.,ta_contraction+ta_wordswap_wordnet,SLEEP_ISSUES,0,s_2502_62_2
+I've miscarry all my previous attempts.,I've miscarry all my previous attempts.,I have failed all my previous attempts.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_2409_43_9
+I've failed wholly my previous attempts.,I've failed wholly my previous attempts.,I have failed all my previous attempts.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_2409_43_9
+I'm feeling dispirit.,I'm feeling dispirit.,I am feeling depressed.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_993_781_1
+I'm feeling blue.,I'm feeling blue.,I am feeling depressed.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_993_781_1
+I've mixed-up all interest.,I've mixed-up all interest.,I have lost all interest.,ta_contraction+ta_wordswap_wordnet,ANHEDONIA,1,s_993_781_12
+I've lost completely interest.,I've lost completely interest.,I have lost all interest.,ta_contraction+ta_wordswap_wordnet,ANHEDONIA,1,s_993_781_12
+I've a very hardtime clear decisions.,I've a very hardtime clear decisions.,I have a very hardtime making decisions.,ta_contraction+ta_wordswap_wordnet,COGNITIVE_ISSUES,1,s_759_88_0
+I've a very hardtime pretend decisions.,I've a very hardtime pretend decisions.,I have a very hardtime making decisions.,ta_contraction+ta_wordswap_wordnet,COGNITIVE_ISSUES,1,s_759_88_0
+i'm very promising i'll.,i'm very promising i'll.,i'm very hopeful i will.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_2640_8_1
+i'm real hopeful i'll.,i'm real hopeful i'll.,i'm very hopeful i will.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,0,s_2640_8_1
+one am not suicidal and I'd never be',one am not suicidal and I'd never be',I am not suicidal and I would never be',ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,0,s_2476_278_1
+ace am not suicidal and I'd never be',ace am not suicidal and I'd never be',I am not suicidal and I would never be',ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,0,s_2476_278_1
+i'm angry wholly the time.,i'm angry wholly the time.,i am angry all the time.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2107_89_1
+i'm angry entirely the time.,i'm angry entirely the time.,i am angry all the time.,ta_contraction+ta_wordswap_wordnet,DEPRESSED_MOOD,1,s_2107_89_1
+"I've always felt middling guilty about the amount that I not only sleep talk but kip shout, actually, I pretty much only sleep cry... If I'm shouting angrily at someone in my dream then chances are I'll shout it KO'd loud too, waking us both up.","I've always felt middling guilty about the amount that I not only sleep talk but kip shout, actually, I pretty much only sleep cry... If I'm shouting angrily at someone in my dream then chances are I'll shout it KO'd loud too, waking us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_2727_538_0
+I think I'd rather fair shoot myself.,I think I'd rather fair shoot myself.,I think I would rather just shoot myself.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I think I'd rather just sprout myself.,I think I'd rather just sprout myself.,I think I would rather just shoot myself.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_1294_455_7
+I'm scarce tired at this point.,I'm scarce tired at this point.,I am just tired at this point.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_592_276_0
+I'm equitable tired at this point.,I'm equitable tired at this point.,I am just tired at this point.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_592_276_0
+I've no energy to analyze.,I've no energy to analyze.,I have no energy to study.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1404_90_5
+I've no vim to study.,I've no vim to study.,I have no energy to study.,ta_contraction+ta_wordswap_wordnet,FATIGUE,1,s_1404_90_5
+iodine dont want to suicide because I'd feel guilty.,iodine dont want to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to felo-de-se because I'd feel guilty.,I dont want to felo-de-se because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction+ta_wordswap_wordnet,SUICIDAL_THOUGHTS,1,s_1404_218_6
+I dont want to felo-de-se because I'd feel guilty.,I dont want to felo-de-se because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_1404_218_6
+iodine dont want to suicide because I'd feel guilty.,iodine dont want to suicide because I'd feel guilty.,I dont want to suicide because I would feel guilty.,ta_contraction+ta_wordswap_wordnet,WORTHLESSNESS,1,s_1404_218_6

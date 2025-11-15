@@ -1,0 +1,6 @@
+train_path: "data/redsm5/train.jsonl"
+dev_path: "data/redsm5/dev.jsonl"
+test_path: "data/redsm5/test.jsonl"
+num_workers: 6
+prefetch_factor: 8
+persistent_workers: true

@@ -1,0 +1,94 @@
+version: '3.8'
+
+services:
+  # PostgreSQL database for MLflow backend
+  postgres:
+    image: postgres:15-alpine
+    container_name: redsm5-postgres
+    environment:
+      POSTGRES_USER: mlflow
+      POSTGRES_PASSWORD: mlflow
+      POSTGRES_DB: mlflow
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - redsm5-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U mlflow"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # MLflow tracking server
+  mlflow:
+    build:
+      context: .
+      dockerfile: mlflow.Dockerfile
+    container_name: redsm5-mlflow
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      MLFLOW_BACKEND_STORE_URI: postgresql://mlflow:mlflow@postgres:5432/mlflow
+      MLFLOW_ARTIFACT_ROOT: /mlflow/artifacts
+    volumes:
+      - mlflow-artifacts:/mlflow/artifacts
+    ports:
+      - "5000:5000"
+    networks:
+      - redsm5-network
+    command: >
+      mlflow server
+      --backend-store-uri postgresql://mlflow:mlflow@postgres:5432/mlflow
+      --default-artifact-root /mlflow/artifacts
+      --host 0.0.0.0
+      --port 5000
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Main development container
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: redsm5-dev
+    depends_on:
+      mlflow:
+        condition: service_healthy
+    environment:
+      MLFLOW_TRACKING_URI: http://mlflow:5000
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: mlflow
+      POSTGRES_PASSWORD: mlflow
+      POSTGRES_DB: mlflow
+      PYTHONDONTWRITEBYTECODE: 1
+      PYTHONUNBUFFERED: 1
+      DVC_NO_ANALYTICS: 1
+    volumes:
+      - ../..:/workspaces:cached
+      - mlflow-artifacts:/mlflow/artifacts
+    working_dir: /workspaces/${localWorkspaceFolderBasename}
+    command: sleep infinity
+    networks:
+      - redsm5-network
+    runtime: nvidia
+    shm_size: 1gb
+    ipc: host
+    ports:
+      - "8888:8888"  # Jupyter
+      - "6006:6006"  # TensorBoard
+      - "8080:8080"  # Optuna Dashboard
+
+volumes:
+  postgres-data:
+  mlflow-artifacts:
+
+networks:
+  redsm5-network:
+    driver: bridge

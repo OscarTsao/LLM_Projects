@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:
+    extends:
+      file: .devcontainer/docker-compose.yml
+      service: app
+
+  mlflow:
+    extends:
+      file: .devcontainer/docker-compose.yml
+      service: mlflow

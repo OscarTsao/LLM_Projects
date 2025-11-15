@@ -1,0 +1,236 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EvaluationReport",
+  "description": "Per-trial JSON evaluation report with test set metrics and configuration snapshot",
+  "type": "object",
+  "required": [
+    "report_id",
+    "trial_id",
+    "generated_at",
+    "config",
+    "optimization_metric_name",
+    "best_validation_score",
+    "evaluated_checkpoints",
+    "test_metrics"
+  ],
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique report identifier"
+    },
+    "trial_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Foreign key to trial"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Report generation timestamp"
+    },
+    "config": {
+      "type": "object",
+      "description": "Full trial configuration (TrialConfig snapshot for reproducibility)",
+      "$comment": "Refer to config_schema.yaml for complete schema"
+    },
+    "optimization_metric_name": {
+      "type": "string",
+      "examples": ["val_f1_macro", "val_f1_micro", "val_accuracy"],
+      "description": "Name of the metric optimized during training"
+    },
+    "best_validation_score": {
+      "type": "number",
+      "description": "Best validation score achieved on optimization metric"
+    },
+    "evaluated_checkpoints": {
+      "type": "array",
+      "minItems": 1,
+      "description": "List of checkpoint metadata for all checkpoints evaluated on test set (includes co-best if applicable)",
+      "items": {
+        "type": "object",
+        "required": ["checkpoint_id", "path", "epoch", "validation_metric", "co_best"],
+        "properties": {
+          "checkpoint_id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Checkpoint identifier"
+          },
+          "path": {
+            "type": "string",
+            "description": "Relative or absolute path to checkpoint file"
+          },
+          "epoch": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Epoch number when checkpoint was saved"
+          },
+          "step": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Global training step"
+          },
+          "validation_metric": {
+            "type": "number",
+            "description": "Optimization metric value on validation set"
+          },
+          "co_best": {
+            "type": "boolean",
+            "description": "True if tied for best validation metric with other checkpoints"
+          }
+        }
+      }
+    },
+    "test_metrics": {
+      "type": "object",
+      "required": ["criteria_matching", "evidence_binding"],
+      "description": "Test set evaluation metrics for both tasks",
+      "properties": {
+        "criteria_matching": {
+          "type": "object",
+          "required": ["accuracy", "f1_macro", "f1_micro", "precision_macro", "recall_macro", "per_criterion"],
+          "description": "Criteria matching classification metrics",
+          "properties": {
+            "accuracy": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Overall accuracy"
+            },
+            "f1_macro": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Macro-averaged F1 score across criteria"
+            },
+            "f1_micro": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Micro-averaged F1 score"
+            },
+            "precision_macro": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Macro-averaged precision"
+            },
+            "recall_macro": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Macro-averaged recall"
+            },
+            "per_criterion": {
+              "type": "object",
+              "description": "Per-criterion metrics (keys are criterion IDs 0-8)",
+              "patternProperties": {
+                "^criterion_[0-8]$": {
+                  "type": "object",
+                  "required": ["f1", "precision", "recall", "support"],
+                  "properties": {
+                    "f1": {
+                      "type": "number",
+                      "minimum": 0.0,
+                      "maximum": 1.0
+                    },
+                    "precision": {
+                      "type": "number",
+                      "minimum": 0.0,
+                      "maximum": 1.0
+                    },
+                    "recall": {
+                      "type": "number",
+                      "minimum": 0.0,
+                      "maximum": 1.0
+                    },
+                    "support": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "description": "Number of test examples for this criterion"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "evidence_binding": {
+          "type": "object",
+          "required": ["exact_match", "f1", "char_f1", "null_span_accuracy"],
+          "description": "Evidence span extraction metrics",
+          "properties": {
+            "exact_match": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Proportion of exact span matches (start and end both correct)"
+            },
+            "f1": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Token-level F1 score (span overlap)"
+            },
+            "char_f1": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Character-level F1 score"
+            },
+            "null_span_accuracy": {
+              "type": "number",
+              "minimum": 0.0,
+              "maximum": 1.0,
+              "description": "Accuracy of predicting null span (no evidence cases)"
+            },
+            "per_criterion_span_f1": {
+              "type": "object",
+              "description": "Optional: Per-criterion span F1 scores",
+              "patternProperties": {
+                "^criterion_[0-8]$": {
+                  "type": "number",
+                  "minimum": 0.0,
+                  "maximum": 1.0
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "training_summary": {
+      "type": "object",
+      "description": "Optional: Summary statistics from training",
+      "properties": {
+        "total_training_time_seconds": {
+          "type": "number",
+          "minimum": 0.0
+        },
+        "total_epochs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "final_train_loss": {
+          "type": "number"
+        },
+        "num_checkpoints_created": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "num_checkpoints_pruned": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "peak_gpu_memory_mb": {
+          "type": "number",
+          "minimum": 0.0
+        }
+      }
+    },
+    "report_file_path": {
+      "type": "string",
+      "description": "Path to this JSON report file"
+    }
+  }
+}

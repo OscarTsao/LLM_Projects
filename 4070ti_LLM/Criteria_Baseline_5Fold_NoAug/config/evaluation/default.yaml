@@ -1,0 +1,2 @@
+checkpoint: ${paths.output_dir}/fold_1/best_model.pt
+fold_index: 1

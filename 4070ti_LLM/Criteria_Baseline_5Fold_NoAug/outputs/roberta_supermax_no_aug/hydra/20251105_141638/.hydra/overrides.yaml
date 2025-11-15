@@ -1,0 +1,11 @@
+- training.auto_resume=false
+- training.batch_size=32
+- training.gradient_accumulation_steps=1
+- training.num_workers=12
+- training.prefetch_factor=8
+- training.pin_memory_device=cuda
+- training.non_blocking_transfers=true
+- training.enable_tf32=true
+- training.cudnn_benchmark=true
+- model.use_gradient_checkpointing=false
+- logging.save_every_epochs=0

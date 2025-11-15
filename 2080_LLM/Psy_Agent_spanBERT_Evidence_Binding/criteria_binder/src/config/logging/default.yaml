@@ -1,0 +1,6 @@
+output_dir: "outputs/run1"
+wandb: false
+project: "criteria_binder"
+run_name: "spanbert_base"
+seed: 42
+log_level: INFO

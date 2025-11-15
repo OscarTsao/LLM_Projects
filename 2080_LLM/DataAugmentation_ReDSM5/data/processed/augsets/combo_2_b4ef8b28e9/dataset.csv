@@ -1,0 +1,33 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I'm very sda.,I'm very sda.,I am very sad.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,0,s_411_1189_1
+I'm evry sad.,I'm evry sad.,I am very sad.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,0,s_411_1189_1
+I'm benig tortured.,I'm benig tortured.,I am being tortured.,ta_char_neighbor+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm ebing tortured.,I'm ebing tortured.,I am being tortured.,ta_char_neighbor+ta_contraction,WORTHLESSNESS,0,s_1351_120_5
+I'm very itred.,I'm very itred.,I am very tired.,ta_char_neighbor+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm evry tired.,I'm evry tired.,I am very tired.,ta_char_neighbor+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm.. asdness,I'm.. asdness,I am.. sadness,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I'm.. sandess,I'm.. sandess,I am.. sadness,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I'm worthlses.,I'm worthlses.,I am worthless.,ta_char_neighbor+ta_contraction,WORTHLESSNESS,1,s_2415_2_3
+I'm hpoeless.,I'm hpoeless.,I am hopeless.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_2415_2_4
+I'm ohpeless.,I'm ohpeless.,I am hopeless.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_2415_2_4
+I'm sda waiting.,I'm sda waiting.,I am sad waiting.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I'm sad waiitng.,I'm sad waiitng.,I am sad waiting.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,0,s_577_923_1
+I'm fukcing CRYING.,I'm fukcing CRYING.,I am fucking CRYING.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm fcuking CRYING.,I'm fcuking CRYING.,I am fucking CRYING.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_74_207_1
+I'm itred.,I'm itred.,I am tired.,ta_char_neighbor+ta_contraction,FATIGUE,1,s_681_475_2
+I'm tierd.,I'm tierd.,I am tired.,ta_char_neighbor+ta_contraction,FATIGUE,1,s_681_475_2
+"I'm irritatde, yes.","I'm irritatde, yes.","I am irritated, yes.",ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+"I'm irritaetd, yes.","I'm irritaetd, yes.","I am irritated, yes.",ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_2625_148_0
+I'm so exhaustde.,I'm so exhaustde.,I am so exhausted.,ta_char_neighbor+ta_contraction,FATIGUE,1,s_697_17_12
+I'm so ehxausted.,I'm so ehxausted.,I am so exhausted.,ta_char_neighbor+ta_contraction,FATIGUE,1,s_697_17_12
+I'm also restlses.,I'm also restlses.,I am also restless.,ta_char_neighbor+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm aslo restless.,I'm aslo restless.,I am also restless.,ta_char_neighbor+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm ujst sad.,I'm ujst sad.,I am just sad.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_1681_1030_1
+I'm just sda.,I'm just sda.,I am just sad.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_1681_1030_1
+I've more neergy.,I've more neergy.,I have more energy.,ta_char_neighbor+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I've more eenrgy.,I've more eenrgy.,I have more energy.,ta_char_neighbor+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+Yet I'm dperessed.,Yet I'm dperessed.,Yet I am depressed.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,1,s_2139_3_2
+Now I'm asd.,Now I'm asd.,Now I am sad.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,0,s_1681_799_2
+"I desperately need sleep but every single fucking time that 'hting' taps and bangs, I fear if i sleep it'll come out of the firepalce and decorate my room in ym remaisn, my world is spinning, I'm going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'hting' taps and bangs, I fear if i sleep it'll come out of the firepalce and decorate my room in ym remaisn, my world is spinning, I'm going to try to sleep tonight.","I desperately need sleep but every single fucking time that 'thing' taps and bangs, I fear if i sleep it will come out of the fireplace and decorate my room in my remains, my world is spinning, I'm going to try to sleep tonight.",ta_char_neighbor+ta_contraction,SLEEP_ISSUES,0,s_2544_1099_12
+i've depressoin.,i've depressoin.,i have depression.,ta_char_neighbor+ta_contraction,DEPRESSED_MOOD,0,s_2107_11_2
+"I've always felt pretty guilty about hte amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting agnrily at soemone ni my dream then chances are I'll shout it out loud too, waking us both up.","I've always felt pretty guilty about hte amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting agnrily at soemone ni my dream then chances are I'll shout it out loud too, waking us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",ta_char_neighbor+ta_contraction,WORTHLESSNESS,1,s_2727_538_0

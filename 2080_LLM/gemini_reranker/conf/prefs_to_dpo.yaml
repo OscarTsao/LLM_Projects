@@ -1,0 +1,6 @@
+seed: 42
+input_path: demo_data/redsm5/judgments_mock.jsonl
+output_path: ${hydra:run.dir}/dpo_dataset.jsonl
+sample_rate: 1.0
+max_pairs: null
+shuffle: false

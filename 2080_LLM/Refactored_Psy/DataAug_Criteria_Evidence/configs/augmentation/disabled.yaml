@@ -1,0 +1,14 @@
+# Augmentation disabled (for baseline comparison)
+enabled: false
+pipeline: nlpaug_pipeline
+
+# Augmentation parameters (not used when disabled)
+ratio: 0.0
+max_aug_per_sample: 1
+seed: 42
+
+# Balance preservation
+preserve_balance: true
+
+# CRITICAL: Only augment training data
+train_only: true

@@ -1,0 +1,13 @@
+post_text,evidence,evidence_original,source_combo,DSM5_symptom,status,sentence_id
+I hatOe tMhat i'm crvying rn.,I hatOe tMhat i'm crvying rn.,I hate that i am crying rn.,nlp_randchar_ins+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I Ihate Pthat i'm 4crying rn.,I Ihate Pthat i'm 4crying rn.,I hate that i am crying rn.,nlp_randchar_ins+ta_contraction,DEPRESSED_MOOD,1,s_321_219_4
+I'm veEry tDired.,I'm veEry tDired.,I am very tired.,nlp_randchar_ins+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm vedry Rtired.,I'm vedry Rtired.,I am very tired.,nlp_randchar_ins+ta_contraction,FATIGUE,1,s_1030_1290_8
+I'm. . sadnesTs,I'm. . sadnesTs,I am.. sadness,nlp_randchar_ins+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I'm. . saxdness,I'm. . saxdness,I am.. sadness,nlp_randchar_ins+ta_contraction,DEPRESSED_MOOD,1,s_855_1863_0
+I jus6t don ' t think I'd liyke to ylive anymoKre.,I jus6t don ' t think I'd liyke to ylive anymoKre.,I just don't think I would like to live anymore.,nlp_randchar_ins+ta_contraction,SUICIDAL_THOUGHTS,1,s_2415_738_1
+I'm alsio resytless.,I'm alsio resytless.,I am also restless.,nlp_randchar_ins+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I'm alsQo restlOess.,I'm alsQo restlOess.,I am also restless.,nlp_randchar_ins+ta_contraction,PSYCHOMOTOR,1,s_2139_45_8
+I've mogre enerQgy.,I've mogre enerQgy.,I have more energy.,nlp_randchar_ins+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+I've monre energyy.,I've monre energyy.,I have more energy.,nlp_randchar_ins+ta_contraction,SPECIAL_CASE,1,s_2065_472_7
+"I ' ve always felt xpretty guilty about the aSmount thkat I not onKly sleep ta@lk but sleep Qshout, actualJly, I pretty Gmuch only sleep shout. .. If I ' m shouting angrily at someone in my dreaim tthen chances are I'll shout it out loud too, waking us both up.","I ' ve always felt xpretty guilty about the aSmount thkat I not onKly sleep ta@lk but sleep Qshout, actualJly, I pretty Gmuch only sleep shout. .. If I ' m shouting angrily at someone in my dreaim tthen chances are I'll shout it out loud too, waking us both up.","I've always felt pretty guilty about the amount that I not only sleep talk but sleep shout, actually, I pretty much only sleep shout... If I'm shouting angrily at someone in my dream then chances are I will shout it out loud too, waking us both up.",nlp_randchar_ins+ta_contraction,WORTHLESSNESS,1,s_2727_538_0

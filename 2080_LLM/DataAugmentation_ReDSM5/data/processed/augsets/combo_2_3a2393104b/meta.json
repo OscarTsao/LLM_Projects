@@ -1,0 +1,25 @@
+{
+  "combo_methods": [
+    "nlp_randchar_ins",
+    "nlp_randword_sub"
+  ],
+  "combo_id": "3a2393104b",
+  "variants_per_sample": 2,
+  "seed": 42,
+  "rows": 1405,
+  "source_input": "/experiment/YuNing/DataAugmentation_ReDSM5/Data/ReDSM5/redsm5_annotations.csv",
+  "columns": [
+    "post_text",
+    "evidence",
+    "evidence_original",
+    "source_combo",
+    "DSM5_symptom",
+    "status",
+    "sentence_id"
+  ],
+  "timing": {
+    "duration_seconds": 41.97147607803345,
+    "rows_per_second": 33.47511394453218,
+    "rows_skipped": 0
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "DataAug DeBERTa FourAgents",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": ["--gpus=all"],
+  "remoteUser": "vscode",
+  "mounts": [
+    "source=pip-cache,target=/home/vscode/.cache/pip,type=volume"
+  ],
+  "containerEnv": {
+    "PYTHONUNBUFFERED": "1"
+  },
+  "postCreateCommand": "python -m pip install --upgrade pip && bash scripts/install_torch.sh && python -m pip install --no-cache-dir -r requirements.txt",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "python.formatting.provider": "black",
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": [
+          "tests"
+        ]
+      }
+    }
+  }
+}

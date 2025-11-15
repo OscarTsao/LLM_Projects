@@ -1,0 +1,4 @@
+# configs/suggest/voi.yaml
+top_k: 3
+uncertain_low: 0.35
+uncertain_high: 0.65

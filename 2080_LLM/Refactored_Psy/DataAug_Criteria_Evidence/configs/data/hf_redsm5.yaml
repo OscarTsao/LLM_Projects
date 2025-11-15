@@ -1,0 +1,23 @@
+# HuggingFace ReDSM-5 dataset configuration with augmentation hooks
+
+source: "huggingface"
+hf_dataset_name: "irlab-udc/redsm5"
+
+field_map: "configs/data/field_map.yaml"
+dsm_criteria: "data/raw/redsm5/dsm_criteria.json"
+output_dir: "data/processed"
+
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+
+hf_cache_dir: null
+data_dir: null
+
+augment:
+  enabled: ${augmentation.enabled}
+  pipeline: ${augmentation.pipeline}
+  ratio: ${augmentation.ratio}
+  max_aug_per_sample: ${augmentation.max_aug_per_sample}
+  seed: ${augmentation.seed}
+  train_only: true

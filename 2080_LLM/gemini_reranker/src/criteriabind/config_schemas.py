@@ -1,0 +1,382 @@
+"""Typed configuration schemas validated from Hydra DictConfigs."""
+
+from __future__ import annotations
+
+import re
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Literal, Optional
+
+from omegaconf import DictConfig, OmegaConf
+from omegaconf.errors import InterpolationResolutionError
+from pydantic import BaseModel, Field, ValidationInfo, field_validator
+
+
+_NOW_PATTERN = re.compile(r"\${now:([^}]+)}")
+class RelativePathError(ValueError):
+    """Raised when a configuration path is expected to be relative."""
+
+    def __init__(self) -> None:
+        super().__init__("path must be relative")
+
+
+class NumWorkersStringError(ValueError):
+    """Raised when a string num_workers override is invalid."""
+
+    def __init__(self) -> None:
+        super().__init__('num_workers string must be "auto"')
+
+
+class NumWorkersNegativeError(ValueError):
+    """Raised when num_workers is negative."""
+
+    def __init__(self) -> None:
+        super().__init__("num_workers cannot be negative")
+
+
+def _normalize_string(value: str) -> str:
+    """Replace Hydra placeholders that are unavailable outside runtime."""
+
+    def _replace_now(match: re.Match[str]) -> str:
+        fmt = match.group(1)
+        return datetime.now(tz=timezone.utc).strftime(fmt)
+
+    interpolated = _NOW_PATTERN.sub(_replace_now, value)
+    def _resolve_run_dir() -> str:
+        try:  # pragma: no cover - depends on Hydra runtime
+            from hydra.core.hydra_config import HydraConfig
+
+            return HydraConfig.get().runtime.output_dir
+        except Exception:
+            return "hydra_run"
+
+    run_dir = _resolve_run_dir()
+    return (
+        interpolated.replace("${hydra:job.name}", "hydra_job")
+        .replace("${hydra.job.name}", "hydra_job")
+        .replace("${hydra:run.dir}", run_dir)
+        .replace("${hydra.run.dir}", run_dir)
+    )
+
+
+class MlflowConfig(BaseModel):
+    tracking_uri: str = Field(
+        ...,
+        description="MLflow tracking URI, e.g. sqlite:///mlflow.db",
+    )
+    experiment_name: str = Field(
+        ...,
+        description="Experiment name registered with MLflow.",
+    )
+    run_name: str | None = Field(
+        None,
+        description="Readable run identifier for mlflow.start_run; defaults to Hydra job name.",
+    )
+    artifact_root: Path = Field(
+        ...,
+        description="Root directory for artifact persistence.",
+    )
+    autolog: bool = Field(
+        True,
+        description="Enable MLflow autologging when supported.",
+    )
+
+    @classmethod
+    @field_validator("artifact_root")
+    def _artifact_root_relative(cls, value: Path) -> Path:
+        if value.is_absolute():
+            raise RelativePathError
+        return value
+
+
+class HardwareConfig(BaseModel):
+    device: Literal["auto", "cpu", "cuda"] = "auto"
+    compile: bool = True
+    amp_dtype: Literal["fp16", "bf16", "none"] = "bf16"
+    grad_accum_steps: int = Field(1, ge=1)
+    gradient_checkpointing: bool = True
+    num_workers: str | int = Field("auto", description="Either 'auto' or an explicit worker count.")
+    persistent_workers: bool = True
+    prefetch_factor: int = Field(4, ge=1)
+    pin_memory: bool = True
+    tf32: bool = True
+    fused_adamw: bool = True
+    cudnn_benchmark: bool = True
+
+    @classmethod
+    @field_validator("num_workers", mode="before")
+    def _normalize_workers(cls, value: str | int) -> str | int:
+        if isinstance(value, str):
+            lowered = value.lower()
+            if lowered != "auto":
+                raise NumWorkersStringError
+            return lowered
+        if value < 0:
+            raise NumWorkersNegativeError
+        return value
+
+
+class DataMappingConfig(BaseModel):
+    """Column mapping for heterogeneous raw datasets."""
+
+    sample_id: Optional[str] = None
+    note: str = "note_text"
+    criterion_id: Optional[str] = None
+    criterion_name: str = "criterion"
+    criterion_definition: Optional[str] = None
+    split: Optional[str] = None
+    evidence_span_start: Optional[str] = None
+    evidence_span_end: Optional[str] = None
+    metadata: dict[str, str] = Field(default_factory=dict)
+
+
+class DataConfig(BaseModel):
+    name: str
+    path: Path
+    source: Literal["jsonl", "csv", "parquet", "huggingface"] = "jsonl"
+    path_or_name: str | Path | None = None
+    file_pattern: Optional[str] = None
+    split_by_note_hash: bool = True
+    max_samples: int | None = None
+    cache_dir: Path = Path(".cache/data")
+    tokenizer_name: str
+    padding: Literal["longest", "max_length"] = "longest"
+    truncation: bool = True
+    max_length: int = Field(512, ge=8)
+    bucketed_batches: bool = True
+    pairwise_filename: str = "pairs_{split}.jsonl"
+    listwise_filename: str = "listwise_{split}.jsonl"
+    mapping: DataMappingConfig = DataMappingConfig()
+    shuffle_seed: Optional[int] = None
+
+    @classmethod
+    @field_validator("path", "cache_dir")
+    def _relative_paths(cls, value: Path) -> Path:
+        if value.is_absolute():
+            raise RelativePathError
+        return value
+
+    @classmethod
+    @field_validator("path_or_name")
+    def _validate_path_or_name(cls, value: str | Path | None) -> str | Path | None:
+        # Allow absolute paths for convenience (external datasets)
+        return value
+
+
+class ModelConfig(BaseModel):
+    model_name: str
+    tokenizer_name: str
+    from_pretrained_path: Path | None = Field(
+        None,
+        description="Optional checkpoint directory when warm starting from a local run.",
+    )
+
+
+class TrainConfig(BaseModel):
+    task: Literal["criteria_ranker", "evidence_span"]
+    lr: float = Field(..., gt=0)
+    weight_decay: float = Field(0.0, ge=0.0)
+    batch_size_per_device: int = Field(..., gt=0)
+    max_steps: int = Field(..., gt=0)
+    warmup_ratio: float = Field(0.0, ge=0.0, lt=1.0)
+    scheduler: Literal["cosine", "linear", "constant"] = "cosine"
+    eval_every_steps: int = Field(100, gt=0)
+    save_every_steps: int = Field(200, ge=0)
+    metric: Literal["map@10", "f1_at_iou"] = "map@10"
+    early_stop_patience: int = Field(5, ge=1)
+    save_top_k: int = Field(1, ge=0)
+    margin: float = Field(0.0, ge=0.0)
+    benchmark_steps: int | None = Field(None, ge=1)
+
+
+class JudgeConfig(BaseModel):
+    provider: Literal["mock", "gemini"] = "mock"
+    model: Optional[str] = None
+    temperature: float = 0.0
+    top_p: float = 1.0
+    top_k: Optional[int] = None
+    max_output_tokens: int = 256
+    batch_size: int = Field(32, gt=0)
+    parallelism: int = Field(1, ge=1)
+    max_retries: int = Field(3, ge=0)
+    retry_base: float = Field(1.5, gt=0.0)
+    timeout_s: int = Field(30, ge=1)
+    json_mode: bool = True
+    response_mime: str = "application/json"
+    jobs_path: Path
+    out_path: Path
+    log_path: Path
+    api_key: Optional[str] = None
+    max_concurrency: int = Field(1, ge=1)
+    sample_rate: float = Field(1.0, ge=0.0, le=1.0)
+    max_requests_per_minute: Optional[int] = Field(None, ge=1)
+    max_total_cost_usd: Optional[float] = Field(None, ge=0.0)
+    dry_run: bool = False
+    fallback_to_mock: bool = False
+    cache_uri: Optional[Path] = None
+    vertex_enabled: bool = False
+    vertex_project: Optional[str] = None
+    vertex_location: Optional[str] = None
+    vertex_model: Optional[str] = None
+
+
+class PairBuilderWeightConfig(BaseModel):
+    margin: bool = True
+
+
+class PairBuilderConfig(BaseModel):
+    mode: Literal["pairwise", "listwise", "both"] = "both"
+    neg_sampling: Literal["all", "topM"] = "all"
+    top_m: Optional[int] = Field(None, ge=1)
+    weight: PairBuilderWeightConfig = PairBuilderWeightConfig()
+    judgments_path: Path
+    pairwise_path: Path
+    listwise_path: Path
+    metadata_path: Path
+
+
+class CandidateGenConfig(BaseModel):
+    k: int = Field(8, ge=1, le=16)
+    min_char: Optional[int] = Field(24, ge=0)
+    max_char: Optional[int] = Field(480, ge=1)
+    jobs_path: Path
+    metrics_path: Optional[Path] = None
+
+    @classmethod
+    @field_validator("max_char")
+    def _max_char_positive(cls, value: Optional[int]) -> Optional[int]:
+        if value is not None and value <= 0:
+            raise ValueError("candidate_gen.max_char must be positive when provided")
+        return value
+
+    @classmethod
+    @field_validator("max_char")
+    def _min_leq_max(cls, value: Optional[int], info: ValidationInfo) -> Optional[int]:
+        min_char = info.data.get("min_char")
+        if (
+            value is not None
+            and isinstance(min_char, int)
+            and min_char is not None
+            and min_char > value
+        ):
+            raise ValueError("candidate_gen.min_char must be <= candidate_gen.max_char")
+        return value
+
+
+class AppConfig(BaseModel):
+    model_config = {"extra": "ignore"}
+
+    seed: int = 42
+    project_name: str = "gemini_reranker"
+    output_dir: Path = Path("outputs/default")
+    mlflow: MlflowConfig
+    hardware: HardwareConfig
+    data: DataConfig
+    model: ModelConfig
+    train: TrainConfig
+    judge: JudgeConfig
+    candidate_gen: CandidateGenConfig
+    pair_builder: PairBuilderConfig
+
+    @classmethod
+    @field_validator("output_dir")
+    def _output_relative(cls, value: Path) -> Path:
+        if value.is_absolute():
+            raise RelativePathError
+        return value
+
+
+def _replace_placeholders(obj: object) -> object:
+    if isinstance(obj, dict):
+        return {key: _replace_placeholders(value) for key, value in obj.items()}
+    if isinstance(obj, list):
+        return [_replace_placeholders(value) for value in obj]
+    if isinstance(obj, str):
+        return _normalize_string(obj)
+    return obj
+
+
+def parse_config(cfg: DictConfig) -> AppConfig:
+    """Validate the Hydra DictConfig into a typed :class:`AppConfig`."""
+
+    try:
+        container = OmegaConf.to_container(cfg, resolve=True)
+    except InterpolationResolutionError:
+        container = OmegaConf.to_container(cfg, resolve=False)
+        container = _replace_placeholders(container)
+        # Attempt resolving again for remaining builtin resolvers.
+        container = OmegaConf.to_container(OmegaConf.create(container), resolve=True)
+
+    container = _replace_placeholders(container)
+    return AppConfig.model_validate(container)
+
+
+# ---------------------------------------------------------------------------
+# DPO configuration
+# ---------------------------------------------------------------------------
+
+
+class LoraConfig(BaseModel):
+    use_lora: bool = True
+    r: int = Field(16, ge=1)
+    alpha: int = Field(32, ge=1)
+    dropout: float = Field(0.05, ge=0.0, le=1.0)
+    target_modules: list[str] = Field(default_factory=lambda: ["q_proj", "k_proj", "v_proj", "o_proj"])
+
+
+class DPOHardwareConfig(BaseModel):
+    device: Literal["auto", "cpu", "cuda"] = "auto"
+    gradient_checkpointing: bool = True
+    batch_size_per_device: int = Field(1, ge=1)
+    gradient_accumulation_steps: int = Field(8, ge=1)
+    max_length: int = Field(2048, ge=128)
+    bf16: bool = True
+    fp16: bool = False
+    lora: LoraConfig = LoraConfig()
+
+
+class DPOTrainConfig(BaseModel):
+    learning_rate: float = Field(5e-6, gt=0)
+    beta: float = Field(0.1, gt=0)
+    max_steps: int | None = Field(1000, ge=1)
+    warmup_ratio: float = Field(0.1, ge=0.0, le=1.0)
+    logging_steps: int = Field(10, ge=1)
+    save_steps: int = Field(200, ge=1)
+    eval_steps: int | None = Field(None, ge=1)
+    num_train_epochs: float | None = Field(None, gt=0)
+    deepspeed_config: Path | None = None
+
+
+class DPOModelConfig(BaseModel):
+    base_model_path: str
+    reference_model_path: str | None = None
+    tokenizer_name: str | None = None
+    trust_remote_code: bool = False
+
+
+class DPODataConfig(BaseModel):
+    path_or_name: str
+    max_samples: int | None = Field(None, ge=1)
+    shuffle_seed: int | None = None
+    format: Literal["jsonl"] = "jsonl"
+
+
+class DPOConfig(BaseModel):
+    seed: int = 42
+    output_dir: Path
+    mlflow: MlflowConfig
+    hardware: DPOHardwareConfig
+    train: DPOTrainConfig
+    model: DPOModelConfig
+    data: DPODataConfig
+
+
+def parse_dpo_config(cfg: DictConfig) -> DPOConfig:
+    try:
+        container = OmegaConf.to_container(cfg, resolve=True)
+    except InterpolationResolutionError:
+        container = OmegaConf.to_container(cfg, resolve=False)
+        container = _replace_placeholders(container)
+        container = OmegaConf.to_container(OmegaConf.create(container), resolve=True)
+    container = _replace_placeholders(container)
+    return DPOConfig.model_validate(container)

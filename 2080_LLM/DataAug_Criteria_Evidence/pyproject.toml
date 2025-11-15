@@ -1,0 +1,190 @@
+[project]
+name = "noaug-criteria-evidence"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.26",
+  "torch>=2.2",
+  "transformers>=4.44",
+  "tokenizers>=0.15",
+  "optuna~=4.5.0",
+  "mlflow>=2.14",
+  "typer>=0.12",
+  "pydantic>=2.8",
+  "scikit-learn>=1.4",
+  "datasets>=2.20",
+  "evaluate>=0.4",
+  "nlpaug>=1.1.11",
+  "textattack>=0.3.10",
+  "nltk>=3.8",
+  "psutil (>=7.1.1,<8.0.0)",
+  "pynvml (>=13.0.1,<14.0.0)",
+  "psycopg2-binary (>=2.9.11,<3.0.0)",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=4.1",
+  "ruff>=0.6",
+  "black>=24.0",
+  "mypy>=1.9",
+]
+
+[project.scripts]
+psy-agents = "psy_agents_noaug.cli:main"
+
+[tool.poetry]
+name = "psy_agents_noaug"
+version = "0.1.0"
+description = "NO-AUG baseline for Criteria and Evidence extraction from clinical text"
+authors = ["Research Team"]
+readme = "README.md"
+packages = [{include = "psy_agents_noaug", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.10,<3.12"
+torch = ">=2.6.0,<3.0"
+transformers = ">=4.44,<5.0"
+hydra-core = ">=1.3.0,<2.0"
+mlflow = ">=3.1.0,<4.0"
+optuna = ">=4.5.0,<5.0"
+pandas = ">=2.0.0,<3.0"
+numpy = ">=1.26,<2.0"
+scikit-learn = ">=1.4,<2.0"
+datasets = ">=2.20,<3.0"
+tokenizers = ">=0.15,<1.0"
+typer = ">=0.12,<1.0"
+pydantic = ">=2.8,<3.0"
+evaluate = ">=0.4,<1.0"
+nlpaug = ">=1.1.11,<2.0"
+textattack = ">=0.3.10,<1.0"
+nltk = ">=3.8,<4.0"
+peft = ">=0.10.0,<1.0"
+pyyaml = ">=6.0,<7.0"
+
+# Optional optimizer dependencies (SUPERMAX Phase 4)
+lion-pytorch = {version = ">=0.1.2,<1.0", optional = true}
+bitsandbytes = {version = ">=0.41.0,<1.0", optional = true}
+
+[tool.poetry.extras]
+optimizers = ["lion-pytorch", "bitsandbytes"]
+all = ["lion-pytorch", "bitsandbytes"]
+
+[tool.poetry.group.dev.dependencies]
+ruff = ">=0.6,<0.8"
+black = ">=24.0,<25.0"
+isort = ">=5.12.0,<6.0"
+pytest = ">=8.0,<9.0"
+pytest-cov = ">=4.1.0,<6.0"
+pytest-mock = ">=3.11.1,<4.0"
+pre-commit = ">=3.3.0,<4.0"
+bandit = ">=1.7.5,<2.0"
+mypy = ">=1.9,<2.0"
+pip-audit = ">=2.6,<3.0"
+pip-licenses = ">=4.3,<5.0"
+pipdeptree = ">=2.13,<3.0"
+types-PyYAML = "*"
+types-requests = "*"
+types-setuptools = "*"
+types-tqdm = "*"
+pandas-stubs = "*"
+hypothesis = ">=6.98,<7.0"
+
+[tool.poetry.scripts]
+psy-agents = "psy_agents_noaug.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "PL",  # pylint
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "ERA", # eradicate
+    "PIE", # flake8-pie
+    "PT",  # flake8-pytest-style
+    "RET", # flake8-return
+    "SIM", # flake8-simplify
+    "TCH", # flake8-type-checking
+    "TRY", # tryceratops
+]
+ignore = [
+    "E501",    # line too long (handled by formatter)
+    "PLR0913", # too many arguments
+    "PLR0912", # too many branches
+    "PLR0915", # too many statements
+    "PLR0911", # too many return statements
+    "TRY003",  # long exception messages
+    "PLR2004", # magic value comparison
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["PLR2004", "S101"]
+"__init__.py" = ["F401"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v --tb=short"
+markers = [
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')",
+]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]
+
+[tool.coverage.run]
+source = ["src/psy_agents_noaug"]
+omit = [
+    "*/tests/*",
+    "*/test_*.py",
+    "*/__pycache__/*",
+    "*/conftest.py",
+]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "def __str__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+    "class .*\\bProtocol\\):",
+    "@(abc\\.)?abstractmethod",
+]
+precision = 2
+show_missing = true
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv", "venv"]
+skips = ["B101"]  # assert_used - we use asserts in tests

@@ -1,0 +1,16 @@
+metric: 0.6573114005772315
+params:
+  aug.num_methods: 25
+  aug.prob: 0.4233589392465845
+  head.dropout: 0.02904180608409973
+  head.type: mlp
+  loss.focal.alpha_pos: 0.39308947463495336
+  loss.focal.gamma: 1.8764339456056545
+  loss.name: focal
+  optim.lr_encoder: 1.6338208828908808e-05
+  optim.lr_head: 0.00015304852121831474
+  optim.weight_decay: 0.009290082543999545
+  pooling: cls
+  sched.warmup_ratio: 0.013010318597055905
+stage: stage_B
+threshold: 0.5960000000000001

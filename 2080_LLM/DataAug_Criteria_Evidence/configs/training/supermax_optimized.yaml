@@ -1,0 +1,47 @@
+# Super-Max HPO Optimized Training Config
+# Target: >90% GPU utilization, <90% RAM usage
+# Hardware: RTX 4090 24GB, 62GB RAM, 20 CPU cores
+
+num_epochs: 100  # Supermax uses 100 epochs
+batch_size: 64  # Increased from 16 for better GPU utilization
+eval_batch_size: 128  # Larger eval batch (no gradients)
+learning_rate: 2.0e-5
+weight_decay: 0.01
+max_length: 512
+gradient_clip: 1.0
+gradient_accumulation_steps: 1  # No accumulation needed with larger batch
+
+scheduler:
+  type: "cosine"
+  warmup_ratio: 0.06
+
+optimizer:
+  name: "adamw"
+  betas: [0.9, 0.999]
+  eps: 1.0e-8
+
+amp:
+  enabled: true
+  dtype: "bfloat16"  # Better for Ampere+ GPUs (RTX 4090)
+
+early_stopping:
+  metric: "val_f1_macro"
+  mode: "max"
+  patience: 20  # Supermax uses patience=20
+  min_delta: 0.0001
+
+logging_steps: 50  # More frequent logging
+eval_steps: 500
+
+# DataLoader Optimization for Maximum Throughput
+num_workers: 16  # Increased for parallel data loading (20 cores available)
+pin_memory: true  # Essential for GPU training
+persistent_workers: true  # Keep workers alive
+prefetch_factor: 4  # Increased prefetch (2→4)
+
+# Speed Optimization (disable for HPO)
+deterministic: false  # Disable for ~20% speedup
+cudnn_benchmark: true  # Enable auto-tuning for speed
+
+# Device
+device: "cuda"

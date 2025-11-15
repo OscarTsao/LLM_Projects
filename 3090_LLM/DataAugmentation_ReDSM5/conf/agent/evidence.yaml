@@ -1,0 +1,42 @@
+# Configuration for evidence binding agent
+
+# Model settings
+model_name: google-bert/bert-base-uncased
+max_seq_length: 512
+dropout: 0.1
+
+# Evidence-specific settings
+label_smoothing: 0.0
+max_span_length: 50
+span_threshold: 0.5
+use_crf: false
+
+# Training
+learning_rate: 2e-5
+weight_decay: 0.01
+warmup_ratio: 0.1
+batch_size: 32
+gradient_accumulation_steps: 1
+num_epochs: 100
+max_grad_norm: 1.0
+
+# Optimizer
+optimizer: adamw_torch  # adamw_torch, adamw_hf
+adam_eps: 1e-8
+
+# Scheduler
+scheduler: linear  # linear, cosine, polynomial
+
+# Hardware optimizations
+use_amp: true
+use_compile: false
+use_gradient_checkpointing: true
+
+# Early stopping
+early_stopping_patience: 10
+metric_for_best_model: span_f1
+
+# Data paths
+posts_path: Data/ReDSM5/redsm5_posts.csv
+annotations_path: Data/ReDSM5/redsm5_annotations.csv
+criteria_path: null  # Use default criteria descriptions

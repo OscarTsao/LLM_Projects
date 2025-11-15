@@ -1,0 +1,6 @@
+# @package _global_
+
+cv:
+  n_splits: 5
+  shuffle: false  # GroupKFold doesn't support shuffle
+  random_state: 1337
