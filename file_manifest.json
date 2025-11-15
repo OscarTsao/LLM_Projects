@@ -1,0 +1,1476 @@
+{
+  "metadata": {
+    "total_files": 163,
+    "base_path": "/home/user/LLM_Projects",
+    "timestamp": "2025-11-15"
+  },
+  "files": [
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0000/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0000/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0000",
+      "trial_id": "trial_0000"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0001/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0001/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0001",
+      "trial_id": "trial_0001"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0002/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0002/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0002",
+      "trial_id": "trial_0002"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0003/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0003/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0003",
+      "trial_id": "trial_0003"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0004/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0004/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0004",
+      "trial_id": "trial_0004"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0005/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0005/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0005",
+      "trial_id": "trial_0005"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0006/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0006/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0006",
+      "trial_id": "trial_0006"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0007/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0007/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0007",
+      "trial_id": "trial_0007"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0008/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0008/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0008",
+      "trial_id": "trial_0008"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0009/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0009/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0009",
+      "trial_id": "trial_0009"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0010/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0010/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0010",
+      "trial_id": "trial_0010"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0011/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0011/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0011",
+      "trial_id": "trial_0011"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0013/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0013/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0013",
+      "trial_id": "trial_0013"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0014/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0014/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0014",
+      "trial_id": "trial_0014"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0015/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0015/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0015",
+      "trial_id": "trial_0015"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0017/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0017/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0017",
+      "trial_id": "trial_0017"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0019/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0019/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0019",
+      "trial_id": "trial_0019"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0020/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0020/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0020",
+      "trial_id": "trial_0020"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0021/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0021/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0021",
+      "trial_id": "trial_0021"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0023/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0023/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0023",
+      "trial_id": "trial_0023"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0026/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0026/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0026",
+      "trial_id": "trial_0026"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0027/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0027/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0027",
+      "trial_id": "trial_0027"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0029/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0029/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0029",
+      "trial_id": "trial_0029"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0034/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0034/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0034",
+      "trial_id": "trial_0034"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0037/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0037/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0037",
+      "trial_id": "trial_0037"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0038/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0038/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0038",
+      "trial_id": "trial_0038"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0045/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0045/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0045",
+      "trial_id": "trial_0045"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0046/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0046/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0046",
+      "trial_id": "trial_0046"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0049/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0049/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0049",
+      "trial_id": "trial_0049"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0050/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0050/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0050",
+      "trial_id": "trial_0050"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0051/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0051/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0051",
+      "trial_id": "trial_0051"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0054/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0054/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0054",
+      "trial_id": "trial_0054"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0056/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0056/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0056",
+      "trial_id": "trial_0056"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0058/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0058/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0058",
+      "trial_id": "trial_0058"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0059/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0059/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0059",
+      "trial_id": "trial_0059"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0060/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0060/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0060",
+      "trial_id": "trial_0060"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0061/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0061/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0061",
+      "trial_id": "trial_0061"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0062/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0062/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0062",
+      "trial_id": "trial_0062"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0064/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0064/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0064",
+      "trial_id": "trial_0064"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0066/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0066/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0066",
+      "trial_id": "trial_0066"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0067/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0067/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0067",
+      "trial_id": "trial_0067"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0068/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0068/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0068",
+      "trial_id": "trial_0068"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0069/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0069/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0069",
+      "trial_id": "trial_0069"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0070/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0070/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0070",
+      "trial_id": "trial_0070"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0071/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0071/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0071",
+      "trial_id": "trial_0071"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0072/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0072/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0072",
+      "trial_id": "trial_0072"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0073/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0073/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0073",
+      "trial_id": "trial_0073"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0075/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0075/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0075",
+      "trial_id": "trial_0075"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0076/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0076/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0076",
+      "trial_id": "trial_0076"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0077/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0077/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0077",
+      "trial_id": "trial_0077"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0078/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0078/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0078",
+      "trial_id": "trial_0078"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0081/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0081/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0081",
+      "trial_id": "trial_0081"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0082/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0082/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0082",
+      "trial_id": "trial_0082"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0083/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0083/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0083",
+      "trial_id": "trial_0083"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0086/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0086/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0086",
+      "trial_id": "trial_0086"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0089/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0089/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0089",
+      "trial_id": "trial_0089"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0090/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0090/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0090",
+      "trial_id": "trial_0090"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0091/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0091/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0091",
+      "trial_id": "trial_0091"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0093/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0093/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0093",
+      "trial_id": "trial_0093"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0095/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0095/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0095",
+      "trial_id": "trial_0095"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0096/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0096/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0096",
+      "trial_id": "trial_0096"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0097/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0097/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0097",
+      "trial_id": "trial_0097"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0098/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0098/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0098",
+      "trial_id": "trial_0098"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0099/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0099/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0099",
+      "trial_id": "trial_0099"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0100/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0100/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0100",
+      "trial_id": "trial_0100"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0101/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0101/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0101",
+      "trial_id": "trial_0101"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0102/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0102/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0102",
+      "trial_id": "trial_0102"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0106/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0106/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0106",
+      "trial_id": "trial_0106"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0108/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0108/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0108",
+      "trial_id": "trial_0108"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0111/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0111/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0111",
+      "trial_id": "trial_0111"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0112/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0112/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0112",
+      "trial_id": "trial_0112"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0114/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0114/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0114",
+      "trial_id": "trial_0114"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0115/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0115/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0115",
+      "trial_id": "trial_0115"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0116/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0116/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0116",
+      "trial_id": "trial_0116"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0119/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0119/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0119",
+      "trial_id": "trial_0119"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0120/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0120/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0120",
+      "trial_id": "trial_0120"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0125/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0125/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0125",
+      "trial_id": "trial_0125"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0126/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0126/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0126",
+      "trial_id": "trial_0126"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0127/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0127/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0127",
+      "trial_id": "trial_0127"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0128/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0128/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0128",
+      "trial_id": "trial_0128"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0131/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0131/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0131",
+      "trial_id": "trial_0131"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/2080_LLM/DataAug_Multi_Evidence/experiments/trial_123e4567-e89b-12d3-a456-426614174000/evaluation_report.json",
+      "relative_path": "2080_LLM/DataAug_Multi_Evidence/experiments/trial_123e4567-e89b-12d3-a456-426614174000/evaluation_report.json",
+      "project_path": "2080_LLM/DataAug_Multi_Evidence",
+      "gpu_model": "2080_LLM",
+      "project_name": "DataAug_Multi_Evidence",
+      "experiment_id": "trial_trial_123e4567-e89b-12d3-a456-426614174000",
+      "trial_id": "trial_123e4567-e89b-12d3-a456-426614174000"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0000/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0000/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0000",
+      "trial_id": "trial_0000"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0001/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0001/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0001",
+      "trial_id": "trial_0001"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0002/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0002/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0002",
+      "trial_id": "trial_0002"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0003/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0003/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0003",
+      "trial_id": "trial_0003"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0004/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0004/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0004",
+      "trial_id": "trial_0004"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0005/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0005/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0005",
+      "trial_id": "trial_0005"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0006/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0006/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0006",
+      "trial_id": "trial_0006"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0007/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0007/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0007",
+      "trial_id": "trial_0007"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0008/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0008/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0008",
+      "trial_id": "trial_0008"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0009/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0009/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0009",
+      "trial_id": "trial_0009"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0010/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0010/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0010",
+      "trial_id": "trial_0010"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0011/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0011/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0011",
+      "trial_id": "trial_0011"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0013/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0013/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0013",
+      "trial_id": "trial_0013"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0014/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0014/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0014",
+      "trial_id": "trial_0014"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0015/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0015/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0015",
+      "trial_id": "trial_0015"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0017/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0017/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0017",
+      "trial_id": "trial_0017"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0019/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0019/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0019",
+      "trial_id": "trial_0019"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0020/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0020/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0020",
+      "trial_id": "trial_0020"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0021/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0021/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0021",
+      "trial_id": "trial_0021"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0023/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0023/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0023",
+      "trial_id": "trial_0023"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0026/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0026/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0026",
+      "trial_id": "trial_0026"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0027/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0027/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0027",
+      "trial_id": "trial_0027"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0029/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0029/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0029",
+      "trial_id": "trial_0029"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0034/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0034/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0034",
+      "trial_id": "trial_0034"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0037/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0037/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0037",
+      "trial_id": "trial_0037"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0038/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0038/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0038",
+      "trial_id": "trial_0038"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0045/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0045/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0045",
+      "trial_id": "trial_0045"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0046/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0046/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0046",
+      "trial_id": "trial_0046"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0049/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0049/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0049",
+      "trial_id": "trial_0049"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0050/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0050/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0050",
+      "trial_id": "trial_0050"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0051/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0051/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0051",
+      "trial_id": "trial_0051"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0054/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0054/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0054",
+      "trial_id": "trial_0054"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0056/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0056/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0056",
+      "trial_id": "trial_0056"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0058/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0058/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0058",
+      "trial_id": "trial_0058"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0059/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0059/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0059",
+      "trial_id": "trial_0059"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0060/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0060/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0060",
+      "trial_id": "trial_0060"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0061/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0061/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0061",
+      "trial_id": "trial_0061"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0062/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0062/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0062",
+      "trial_id": "trial_0062"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0064/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0064/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0064",
+      "trial_id": "trial_0064"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0066/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0066/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0066",
+      "trial_id": "trial_0066"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0067/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0067/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0067",
+      "trial_id": "trial_0067"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0068/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0068/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0068",
+      "trial_id": "trial_0068"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0069/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0069/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0069",
+      "trial_id": "trial_0069"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0070/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0070/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0070",
+      "trial_id": "trial_0070"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0071/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0071/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0071",
+      "trial_id": "trial_0071"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0072/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0072/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0072",
+      "trial_id": "trial_0072"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0073/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0073/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0073",
+      "trial_id": "trial_0073"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0075/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0075/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0075",
+      "trial_id": "trial_0075"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0076/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0076/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0076",
+      "trial_id": "trial_0076"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0077/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0077/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0077",
+      "trial_id": "trial_0077"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0078/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0078/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0078",
+      "trial_id": "trial_0078"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0081/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0081/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0081",
+      "trial_id": "trial_0081"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0082/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0082/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0082",
+      "trial_id": "trial_0082"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0083/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0083/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0083",
+      "trial_id": "trial_0083"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0086/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0086/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0086",
+      "trial_id": "trial_0086"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0089/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0089/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0089",
+      "trial_id": "trial_0089"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0090/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0090/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0090",
+      "trial_id": "trial_0090"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0091/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0091/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0091",
+      "trial_id": "trial_0091"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0093/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0093/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0093",
+      "trial_id": "trial_0093"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0095/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0095/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0095",
+      "trial_id": "trial_0095"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0096/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0096/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0096",
+      "trial_id": "trial_0096"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0097/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0097/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0097",
+      "trial_id": "trial_0097"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0098/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0098/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0098",
+      "trial_id": "trial_0098"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0099/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0099/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0099",
+      "trial_id": "trial_0099"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0100/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0100/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0100",
+      "trial_id": "trial_0100"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0101/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0101/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0101",
+      "trial_id": "trial_0101"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0102/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0102/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0102",
+      "trial_id": "trial_0102"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0106/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0106/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0106",
+      "trial_id": "trial_0106"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0108/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0108/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0108",
+      "trial_id": "trial_0108"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0111/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0111/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0111",
+      "trial_id": "trial_0111"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0112/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0112/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0112",
+      "trial_id": "trial_0112"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0114/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0114/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0114",
+      "trial_id": "trial_0114"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0115/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0115/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0115",
+      "trial_id": "trial_0115"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0116/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0116/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0116",
+      "trial_id": "trial_0116"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0119/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0119/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0119",
+      "trial_id": "trial_0119"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0120/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0120/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0120",
+      "trial_id": "trial_0120"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0125/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0125/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0125",
+      "trial_id": "trial_0125"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0126/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0126/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0126",
+      "trial_id": "trial_0126"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0127/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0127/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0127",
+      "trial_id": "trial_0127"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0128/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0128/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0128",
+      "trial_id": "trial_0128"
+    },
+    {
+      "file_path": "/home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0131/evaluation_report.json",
+      "relative_path": "4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0131/evaluation_report.json",
+      "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+      "gpu_model": "4090_LLM",
+      "project_name": "DataAug_DeBERTa_Evidence",
+      "experiment_id": "trial_trial_0131",
+      "trial_id": "trial_0131"
+    }
+  ]
+}

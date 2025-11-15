@@ -1,0 +1,487 @@
+{
+  "CriteriaAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents",
+      "main_files": [
+        "src/agents/criteria_agent.py",
+        "src/criteria/aggregate.py"
+      ],
+      "classes": ["CriteriaAgent"],
+      "functions": ["aggregate", "build_criteria_results"],
+      "io_spec": {
+        "input": "List[Dict] predictions",
+        "output": "List[Dict] aggregated criteria results"
+      },
+      "features": {
+        "model_type": "Rule-based aggregator",
+        "supported_ops": ["aggregation", "inference"],
+        "config": "configs/criteria/aggregator.yaml"
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "High-level aggregation interface"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5",
+      "main_files": [
+        "src/agents/criteria_matching.py",
+        "src/agents/base.py"
+      ],
+      "classes": ["CriteriaMatchingAgent", "FocalLoss", "AdaptiveFocalLoss"],
+      "functions": ["forward", "predict", "tokenize_inputs", "predict_batch"],
+      "io_spec": {
+        "input": "input_ids (batch_size, seq_len), attention_mask (batch_size, seq_len)",
+        "output": "AgentOutput with predictions (0/1), confidence, logits, probabilities"
+      },
+      "features": {
+        "model_type": "BERT/DeBERTa + Adaptive Focal Loss",
+        "supported_ops": ["train", "eval", "inference"],
+        "loss_types": ["bce", "focal", "adaptive_focal"],
+        "hardware_optimization": ["gradient_checkpointing", "torch.compile", "AMP"],
+        "config": {
+          "model_name": "google-bert/bert-base-uncased",
+          "max_seq_length": 512,
+          "alpha": 0.25,
+          "gamma": 2.0
+        }
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Production-ready with adaptive focal loss for class imbalance"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/4090_LLM/NoAug_Criteria_Evidence",
+      "main_files": [
+        "src/psy_agents_noaug/architectures/criteria/models/model.py",
+        "src/Project/Criteria/model.py",
+        "scripts/train_criteria.py",
+        "scripts/eval_criteria.py"
+      ],
+      "classes": ["Model", "ClassificationHead", "SequencePooler"],
+      "functions": ["forward", "train_epoch", "evaluate", "predict"],
+      "io_spec": {
+        "input": "Tokenized post-criteria pairs",
+        "output": "Binary classification logits (2 classes: present/absent)"
+      },
+      "features": {
+        "model_type": "BERT/RoBERTa/DeBERTa with configurable heads",
+        "supported_ops": ["train", "eval", "inference", "hpo"],
+        "architectures": ["criteria", "evidence", "share", "joint"],
+        "config_system": "Hydra with field_map.yaml for strict validation",
+        "hpo_system": ["multi-stage", "maximal"],
+        "hardware_optimization": ["gradient_checkpointing", "mixed precision"]
+      },
+      "status": "mainline",
+      "todos": ["Consolidate architecture implementations"],
+      "notes": "Production-ready with strict field separation and comprehensive HPO"
+    }
+  ],
+  "EvidenceAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents",
+      "main_files": [
+        "src/agents/evidence_agent.py",
+        "src/evidence/train_pairclf.py"
+      ],
+      "classes": ["EvidenceAgent"],
+      "functions": ["train", "infer"],
+      "io_spec": {
+        "input": "dataset, config_path, output_dir",
+        "output": "Dict with training or inference results"
+      },
+      "features": {
+        "model_type": "Pair classifier for evidence extraction",
+        "supported_ops": ["train", "inference"],
+        "config": "configs/evidence/pairclf.yaml"
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "High-level interface delegating to pairwise logic"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5",
+      "main_files": [
+        "src/agents/evidence_binding.py",
+        "src/agents/multi_agent_pipeline.py"
+      ],
+      "classes": ["EvidenceBindingAgent"],
+      "functions": ["forward", "predict", "_extract_spans", "decode_spans"],
+      "io_spec": {
+        "input": "input_ids, attention_mask",
+        "output": "AgentOutput with evidence_spans, confidence, decoded text"
+      },
+      "features": {
+        "model_type": "BERT/DeBERTa with dual span prediction (start/end)",
+        "supported_ops": ["train", "eval", "inference"],
+        "span_extraction": "Threshold-based matching with max_span_length",
+        "max_span_length": 50,
+        "span_threshold": 0.5,
+        "loss_fn": "BCEWithLogitsLoss"
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Token-level span extraction with MultiAgentPipeline integration"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/4090_LLM/NoAug_Criteria_Evidence",
+      "main_files": [
+        "src/psy_agents_noaug/architectures/evidence/models/model.py",
+        "src/Project/Evidence/model.py"
+      ],
+      "classes": ["Model", "SpanPredictionHead"],
+      "functions": ["forward", "train_epoch", "evaluate"],
+      "io_spec": {
+        "input": "Tokenized post-criteria pairs",
+        "output": "Span logits (start and end positions)"
+      },
+      "features": {
+        "model_type": "BERT/RoBERTa/DeBERTa with span prediction",
+        "supported_ops": ["train", "eval", "inference", "hpo"],
+        "task": "Evidence span extraction"
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Part of joint criteria+evidence system"
+    }
+  ],
+  "RAGAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_RAG",
+      "main_files": [
+        "src/models/rag_pipeline.py",
+        "src/models/embedding_model.py",
+        "src/models/spanbert_model.py",
+        "src/models/faiss_index.py"
+      ],
+      "classes": ["RAGPipeline", "BGEEmbeddingModel", "SpanBERTModel", "FAISSIndex"],
+      "functions": ["build_index", "retrieve_candidates", "predict", "encode_texts"],
+      "io_spec": {
+        "input": "posts_path, criteria_path, top_k=10",
+        "output": "RAGResult with CriteriaMatch list"
+      },
+      "features": {
+        "embedding_model": "BAAI/bge-m3",
+        "spanbert_model": "SpanBERT/spanbert-base-cased",
+        "retrieval_backend": "FAISS",
+        "similarity_threshold": 0.7,
+        "spanbert_threshold": 0.5,
+        "supported_ops": ["inference"]
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Retrieval-Augmented Generation using FAISS and SpanBERT"
+    }
+  ],
+  "RerankerAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/4090_LLM/gemini_reranker",
+      "main_files": [
+        "src/criteriabind/models.py",
+        "src/criteriabind/train/train_criteria_ranker.py",
+        "src/criteriabind/train/train_evidence_span.py",
+        "src/criteriabind/gemini_judge.py"
+      ],
+      "classes": ["CrossEncoderRanker", "SpanExtractor", "QASpanModel", "GeminiJudge"],
+      "functions": ["forward", "predict", "judge_candidates", "encode_pair"],
+      "io_spec": {
+        "input": "candidates (List[Candidate]), criterion (str)",
+        "output": "Ranked candidates or best-of-k decision"
+      },
+      "features": {
+        "ranking_loss": "RankNet (pairwise) or hinge loss",
+        "tracks": ["Track A (criteria)", "Track B (evidence)"],
+        "judge": "Gemini API with JSON mode, two-pass consistency",
+        "data_pipeline": "Candidate Gen -> Gemini Judge -> Pair Builder -> Training",
+        "supported_ops": ["train", "inference", "candidate_generation"],
+        "training_features": {
+          "optimizer": "AdamW",
+          "scheduler": "cosine with warmup",
+          "mixed_precision": "fp16/bf16",
+          "mlflow_logging": true
+        }
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Production-ready with comprehensive CLAUDE.md documentation"
+    }
+  ],
+  "JointAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/4090_LLM/NoAug_Criteria_Evidence",
+      "main_files": [
+        "src/psy_agents_noaug/architectures/joint/models/model.py",
+        "src/Project/Joint/model.py"
+      ],
+      "classes": ["Model", "JointOutput", "MultiTaskLoss"],
+      "functions": ["forward", "train_epoch", "evaluate"],
+      "io_spec": {
+        "input": "Tokenized post-criteria pairs",
+        "output": "JointOutput with criteria logits + evidence start/end logits"
+      },
+      "features": {
+        "model_type": "Dual encoders with fusion layer",
+        "supported_ops": ["train", "eval", "inference", "hpo"],
+        "task_weights": {
+          "criteria_loss_weight": 0.5,
+          "evidence_loss_weight": 0.5
+        },
+        "shared_encoder": true
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Multi-task learning with dual encoders; no data augmentation"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5",
+      "main_files": [
+        "src/agents/multi_agent_pipeline.py"
+      ],
+      "classes": ["MultiAgentPipeline", "PipelineOutput"],
+      "functions": ["forward", "predict"],
+      "io_spec": {
+        "input": "input_ids, attention_mask, run_evidence (bool)",
+        "output": "PipelineOutput with criteria + evidence results"
+      },
+      "features": {
+        "pipeline_flow": "Criteria matching -> Evidence binding (conditional)",
+        "supported_ops": ["inference"],
+        "conditioning": "Evidence extracted only for positive matches"
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Sequential pipeline with conditional branching"
+    }
+  ],
+  "PsyAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Agent",
+      "main_files": [
+        "src/psy_agent.py",
+        "src/dialogue_manager.py"
+      ],
+      "classes": ["PsyAgent", "DialogueManager"],
+      "functions": ["run_dialogue", "generate_response", "manage_conversation"],
+      "io_spec": {
+        "input": "Patient message (text)",
+        "output": "Therapist response (text)"
+      },
+      "features": {
+        "dialogue_type": "patient-therapist conversation",
+        "supported_ops": ["inference", "dialogue_management"],
+        "integrations": ["criteria_matching", "evidence_extraction", "risk_detection"]
+      },
+      "status": "prototype",
+      "todos": ["Add context memory", "Implement turn management"],
+      "notes": "Main dialogue orchestrator for multi-agent system"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/3090_LLM/Psy_Agent_one_by_one",
+      "main_files": [
+        "src/psy_agent_sequential.py",
+        "src/question_selector.py"
+      ],
+      "classes": ["SequentialPsyAgent", "QuestionSelector"],
+      "functions": ["ask_next_question", "select_question"],
+      "io_spec": {
+        "input": "Conversation history",
+        "output": "Next question to ask"
+      },
+      "features": {
+        "mode": "One-by-one question asking",
+        "supported_ops": ["inference"]
+      },
+      "status": "prototype",
+      "todos": [],
+      "notes": "Sequential question mode"
+    }
+  ],
+  "RAGClassifier": [
+    {
+      "project_path": "/home/user/LLM_Projects/3090_LLM/Psy_RAG_Agent",
+      "main_files": [
+        "src/spanbert_classifier.py",
+        "src/rag_spanbert_classifier.py",
+        "src/basic_classifier.py"
+      ],
+      "classes": ["SpanBERTClassifier", "RAGSpanBERTClassifier", "BasicClassifier"],
+      "functions": ["forward", "train", "evaluate", "predict_batch"],
+      "io_spec": {
+        "input": "Post text + Criteria text (tokenized)",
+        "output": "Binary classification logits"
+      },
+      "features": {
+        "model_type": "SpanBERT with classification head",
+        "supported_ops": ["train", "eval", "inference"],
+        "framework": "PyTorch + Hugging Face",
+        "metrics": ["F1", "accuracy", "confusion_matrix"]
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Multiple classifier variants: RAG, Basic, Minimal"
+    }
+  ],
+  "LLMCriteriaAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/4090_LLM/LLM_Criteria_Gemma",
+      "main_files": [
+        "src/training/train.py",
+        "src/training/train_gemma_hydra.py",
+        "src/models/gemma_model.py"
+      ],
+      "classes": ["GemmaClassifier", "LLMCriteriaModel"],
+      "functions": ["forward", "train", "evaluate", "predict"],
+      "io_spec": {
+        "input": "Post text + Criterion text",
+        "output": "Binary classification (match/not-match)"
+      },
+      "features": {
+        "base_model": "Google Gemma (2B, 7B, etc.)",
+        "training_mode": "SFT or LORA",
+        "supported_ops": ["train", "eval", "inference"],
+        "quantization": "8-bit with BitsAndBytes",
+        "optimization": "LORA parameter-efficient training",
+        "config_system": "Hydra"
+      },
+      "status": "prototype",
+      "todos": ["Optimize inference latency"],
+      "notes": "LLM-based alternative to BERT classifiers"
+    }
+  ],
+  "LLMEvidenceAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/4090_LLM/LLM_Evidence_Gemma",
+      "main_files": [
+        "src/training/train_llm_classifier.py",
+        "src/training/train_gemma_qa_hydra.py",
+        "src/models/llm_classification.py"
+      ],
+      "classes": ["LLMClassificationModel", "GemmaQAModel"],
+      "functions": ["forward", "generate_span", "train", "evaluate"],
+      "io_spec": {
+        "input": "Post text + Criterion + prompt template",
+        "output": "Generated evidence span or classification"
+      },
+      "features": {
+        "base_model": "Google Gemma (2B, 7B, etc.)",
+        "training_modes": ["Causal LM", "Encoderized classification"],
+        "inference_modes": ["QA-style generation", "Classification"],
+        "supported_ops": ["train", "eval", "inference"],
+        "optimization": ["LORA", "8-bit quantization"]
+      },
+      "status": "prototype",
+      "todos": ["Improve span quality"],
+      "notes": "LLM-based evidence extraction with QA or classification modes"
+    }
+  ],
+  "SuggestionAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents",
+      "main_files": [
+        "src/agents/suggestion_agent.py",
+        "src/suggestion/voi.py"
+      ],
+      "classes": ["SuggestionAgent"],
+      "functions": ["enrich", "attach_suggestions", "suggest_for_post"],
+      "io_spec": {
+        "input": "criteria_results, grouped_predictions",
+        "output": "Enriched criteria_results with suggestions"
+      },
+      "features": {
+        "strategy": "Value of Information (VOI)",
+        "top_k": 3,
+        "uncertain_band": "(0.4, 0.6)",
+        "supported_ops": ["inference"]
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Suggests which questions to ask next based on uncertainty"
+    }
+  ],
+  "EvaluationAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents",
+      "main_files": [
+        "src/agents/evaluation_agent.py",
+        "src/eval/metrics.py",
+        "src/eval/calibration.py"
+      ],
+      "classes": ["EvaluationAgent"],
+      "functions": [
+        "evaluate",
+        "compute_evidence_metrics",
+        "compute_criteria_metrics",
+        "fit_temperature_scaling",
+        "run_gate_check"
+      ],
+      "io_spec": {
+        "input": "predictions, criteria_results, dataset",
+        "output": "Dict with val_metrics, test_metrics, calibration paths"
+      },
+      "features": {
+        "metrics": ["evidence metrics", "criteria metrics", "calibration metrics"],
+        "quality_gates": ["neg_precision_min", "criteria_auroc_min", "ece_max"],
+        "supported_ops": ["evaluation", "quality gating"]
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Comprehensive evaluation with temperature scaling and gate checking"
+    }
+  ],
+  "SharedArchitecture": [
+    {
+      "project_path": "/home/user/LLM_Projects/4090_LLM/NoAug_Criteria_Evidence",
+      "main_files": [
+        "src/psy_agents_noaug/architectures/share/models/model.py",
+        "src/Project/Share/model.py"
+      ],
+      "classes": ["Model", "SharedEncoder"],
+      "functions": ["forward", "train_epoch", "evaluate"],
+      "io_spec": {
+        "input": "Tokenized post-criteria pairs",
+        "output": "Joint output with criteria and evidence logits"
+      },
+      "features": {
+        "model_type": "Single shared encoder with dual task heads",
+        "supported_ops": ["train", "eval", "inference", "hpo"],
+        "encoder_sharing": true,
+        "separate_heads": ["criteria classification", "evidence span"]
+      },
+      "status": "mainline",
+      "todos": [],
+      "notes": "Parameter-efficient variant with shared encoder"
+    }
+  ],
+  "summary": {
+    "total_agent_types": 14,
+    "total_projects": 31,
+    "key_agent_types": [
+      "CriteriaAgent (5+ implementations)",
+      "EvidenceAgent (5+ implementations)",
+      "RAGAgent (2 implementations)",
+      "RerankerAgent (gemini_reranker)",
+      "JointAgent (2 implementations)",
+      "PsyAgent (dialogue orchestrator)",
+      "RAGClassifier (4 variants)",
+      "LLMCriteriaAgent (Gemma-based)",
+      "LLMEvidenceAgent (Gemma-based)",
+      "SuggestionAgent (VOI-based)",
+      "EvaluationAgent (metrics & gating)"
+    ],
+    "design_patterns": [
+      "Rule-based aggregators (CriteriaAgent)",
+      "Neural classifiers (BERT, DeBERTa)",
+      "LLM-based approaches (Gemma)",
+      "RAG/Retrieval-based",
+      "Reranker/preference learning",
+      "Multi-task learning",
+      "Pipeline composition"
+    ],
+    "common_features": {
+      "supported_models": ["BERT", "RoBERTa", "DeBERTa", "SpanBERT", "Gemma"],
+      "training_frameworks": ["PyTorch", "Hugging Face Transformers", "Hydra"],
+      "config_systems": ["Hydra", "YAML", "Pydantic", "argparse"],
+      "optimization_techniques": ["AMP/Mixed Precision", "Gradient Checkpointing", "LORA", "8-bit Quantization"],
+      "supported_operations": ["train", "eval", "inference", "hpo", "candidate_generation", "dialogue"]
+    }
+  }
+}
