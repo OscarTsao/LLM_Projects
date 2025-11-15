@@ -1,0 +1,12 @@
+pretrained_model_name: microsoft/deberta-v3-base
+max_seq_length: 256
+classifier_hidden_sizes:
+  - 768
+  - 384
+  - 256
+dropout: 0.2600340105889054
+loss_type: bce
+alpha: 0.25
+gamma: 2.0
+delta: 1.0
+use_gradient_checkpointing: false

@@ -1,0 +1,9 @@
+# @package _global_
+
+train:
+  epochs: 10
+  folds: 5
+  batch_size: 16
+  lr: 2e-5
+  logging:
+    out_dir: outputs/full_5fold_${now:%Y%m%d_%H%M%S}

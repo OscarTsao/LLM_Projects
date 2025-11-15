@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/models/multi_task_model.py
+# hypothesis_version: 6.140.3
+
+[0.5, 512, 'criteria_head', 'criteria_kwargs', 'encoder', 'encoder_kwargs', 'evidence_head', 'evidence_kwargs', 'get_model_info', 'max_span_length', 'num_labels', 'pooling_strategy', 'total_parameters', 'trainable_parameters']

@@ -1,0 +1,11 @@
+labels:
+  - depressed_mood
+  - diminished_interest
+  - weight_appetite_change
+  - sleep_disturbance
+  - psychomotor
+  - fatigue
+  - worthlessness_guilt
+  - concentration_indecision
+  - suicidality
+drop_labels: []

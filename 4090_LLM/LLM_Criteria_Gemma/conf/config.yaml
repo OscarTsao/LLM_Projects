@@ -1,0 +1,34 @@
+defaults:
+  - data: redsm5
+  - train: default
+  - model: deberta_v3_base
+  - experiment: null
+  - _self_
+
+project:
+  name: redsm5_sentence_classification
+  description: Sentence-level multi-label classification for ReDSM5 with post aggregation.
+
+task:
+  num_labels: 10
+  label_names:
+    - DEPRESSED_MOOD
+    - ANHEDONIA
+    - APPETITE_CHANGE
+    - SLEEP_ISSUES
+    - PSYCHOMOTOR
+    - FATIGUE
+    - WORTHLESSNESS
+    - COGNITIVE_ISSUES
+    - SUICIDAL_THOUGHTS
+    - SPECIAL_CASE
+
+hydra:
+  run:
+    dir: ${train.logging.out_dir}
+  sweep:
+    dir: ${train.logging.out_dir}/multirun
+    subdir: ${hydra.job.num}_${hydra.job.id}
+
+print_config: true
+resolve: true

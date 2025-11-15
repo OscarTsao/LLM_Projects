@@ -1,0 +1,15 @@
+artifact_uri: file:///media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Multi_Evidence/experiments/mlflow_db/948315556304772784/6734e3d0d9d643ed8085294c4fb7736d/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '948315556304772784'
+lifecycle_stage: active
+run_id: 6734e3d0d9d643ed8085294c4fb7736d
+run_name: study::mental_health_hpo_2025_10
+run_uuid: 6734e3d0d9d643ed8085294c4fb7736d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1761035059456
+status: 1
+tags: []
+user_id: cvrlab308

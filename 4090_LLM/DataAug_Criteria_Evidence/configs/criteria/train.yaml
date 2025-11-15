@@ -1,0 +1,59 @@
+defaults:
+  - _self_
+
+project: criteria
+
+dataset:
+  path: data/redsm5/redsm5_annotations.csv
+  text_column: sentence_text
+  label_column: status
+  max_length: 256
+  num_workers: 4
+
+model:
+  pretrained_model: bert-base-uncased
+  classifier_dropout: 0.1
+  classifier_layer_num: 1
+  classifier_hidden_dims: []
+
+training:
+  epochs: 10
+  learning_rate: 2e-5
+  train_batch_size: 16
+  eval_batch_size: 32
+  gradient_accumulation: 1
+  max_grad_norm: 1.0
+  logging_steps: 50
+  seed: 42
+  optimizer:
+    name: adamw
+    weight_decay: 0.01
+  scheduler:
+    name: linear
+    warmup_steps: 0
+  monitor_metric: val_f1_macro
+  monitor_mode: max
+
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment: Criteria
+  artifact_location: null
+  tags:
+    project: criteria
+
+optuna:
+  storage: sqlite:///optuna.db
+  study_name: criteria_hpo
+  direction: maximize
+
+hydra:
+  run:
+    dir: outputs/criteria/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: outputs/criteria/multirun
+    subdir: ${hydra.job.num}
+## Training overrides for Criteria task
+#
+# Use with Hydra composition to tailor epochs, batch sizes and runtime knobs
+# for Criteria experiments. Pairs with configs/task/criteria.yaml and a model
+# config under configs/model/.

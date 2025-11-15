@@ -1,0 +1,7 @@
+tracking_uri: ${oc.env:MLFLOW_TRACKING_URI,postgresql+psycopg2:///mlflow.db}
+registry_uri: ${logging.tracking_uri}
+experiment_name: evidence_qa
+run_name_template: "{data}-{model}"
+artifact_location: ${paths.artifacts_dir}
+tags: {}
+log_models: true

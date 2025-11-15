@@ -1,0 +1,7 @@
+{
+  "num_folds": 5,
+  "random_seed": 42,
+  "total_examples": 1615,
+  "num_symptoms": 10,
+  "include_negatives": false
+}

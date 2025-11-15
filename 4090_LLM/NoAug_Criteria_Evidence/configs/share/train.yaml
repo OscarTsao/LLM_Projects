@@ -1,0 +1,70 @@
+defaults:
+  - _self_
+
+project: share
+
+dataset:
+  path: data/processed/redsm5_matched_evidence.csv
+  context_column: post_text
+  answer_column: sentence_text
+  label_column: status
+  max_length: 512
+  num_workers: 10
+  pin_memory: true
+  persistent_workers: true
+  prefetch_factor: 4
+
+model:
+  pretrained_model: bert-base-uncased
+  criteria:
+    dropout: 0.1
+    layer_num: 1
+    hidden_dims: []
+  evidence:
+    dropout: 0.1
+
+training:
+  epochs: 3
+  learning_rate: 2e-5
+  train_batch_size: 16
+  eval_batch_size: 32
+  gradient_accumulation: 1
+  max_grad_norm: 1.0
+  logging_steps: 50
+  seed: 42
+  deterministic: false
+  cudnn_benchmark: true
+  amp_dtype: float16
+  tf32_enabled: true
+  compile_model: true
+  compile_mode: reduce-overhead
+  loss_weights:
+    criteria: 1.0
+    evidence: 1.0
+  optimizer:
+    name: adamw
+    weight_decay: 0.01
+  scheduler:
+    name: linear
+    warmup_steps: 0
+  monitor_metric: validation_joint_score
+  monitor_mode: max
+
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment: Share
+  artifact_location: null
+  tags:
+    project: share
+
+optuna:
+  storage: sqlite:///optuna.db
+  study_name: share_hpo
+  direction: maximize
+
+hydra:
+  run:
+    dir: outputs/share/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: outputs/share/multirun
+    subdir: ${hydra.job.num}

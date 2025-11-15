@@ -1,0 +1,234 @@
+--- a/src/psy_agents_noaug/training/train_loop.py
++++ b/src/psy_agents_noaug/training/train_loop.py
+@@ -1,12 +1,14 @@
+ """Comprehensive training loop with MLflow, AMP, and early stopping."""
+ 
+ import time
++from collections import defaultdict
+ from pathlib import Path
+ 
+ import mlflow
+ import numpy as np
+ import torch
+ import torch.nn as nn
+ from torch.amp import GradScaler, autocast
+ from torch.utils.data import DataLoader
++from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, roc_auc_score
+ from tqdm import tqdm
+ 
++from psy_agents_noaug.utils.system_metrics import SystemMetricsLogger
++
+ 
+ class Trainer:
+     """
+@@ -45,6 +49,8 @@ class Trainer:
+         early_stopping_mode: str = "max",
+         min_delta: float = 0.0001,
+         logging_steps: int = 100,
++        log_system_metrics: bool = True,
++        system_metrics_interval: int = 10,
+     ):
+         """
+         Initialize trainer.
+@@ -69,6 +75,8 @@ class Trainer:
+             early_stopping_mode: Mode for early stopping (max or min)
+             min_delta: Minimum change to qualify as improvement
+             logging_steps: Log metrics every N steps
++            log_system_metrics: Enable system resource monitoring
++            system_metrics_interval: Log system metrics every N steps
+         """
+         self.model = model
+         self.train_loader = train_loader
+@@ -103,6 +111,11 @@ class Trainer:
+         self.epochs_without_improvement = 0
+         self.training_history = []
+         self.global_step = 0
++        self.batch_metrics_accumulator = defaultdict(list)
++
++        # System metrics logger
++        self.log_system_metrics = log_system_metrics
++        self.system_metrics_interval = system_metrics_interval
++        self.system_logger = SystemMetricsLogger() if log_system_metrics else None
+ 
+     def train_epoch(self, epoch: int) -> dict[str, float]:
+         """
+@@ -118,6 +131,8 @@ class Trainer:
+ 
+         total_loss = 0.0
+         correct = 0
+         total = 0
++        batch_times = []
++        step_losses = []
+ 
+         pbar = tqdm(
+             self.train_loader, desc=f"Epoch {epoch + 1}/{self.num_epochs}", leave=False
+@@ -125,6 +140,7 @@ class Trainer:
+ 
+         for batch_idx, batch in enumerate(pbar):
++            batch_start_time = time.time()
+             # Move batch to device
+             input_ids = batch["input_ids"].to(self.device)
+             attention_mask = batch["attention_mask"].to(self.device)
+@@ -166,16 +182,66 @@ class Trainer:
+ 
+                 self.optimizer.zero_grad()
++
++                # Calculate batch metrics
++                batch_time = time.time() - batch_start_time
++                batch_times.append(batch_time)
++                batch_loss = loss.item() * self.gradient_accumulation_steps
++                step_losses.append(batch_loss)
++
++                # Calculate batch accuracy
++                with torch.no_grad():
++                    batch_preds = torch.argmax(logits, dim=-1)
++                    batch_correct = (batch_preds == labels).sum().item()
++                    batch_accuracy = batch_correct / labels.size(0)
++
+                 self.global_step += 1
+ 
+-                # Log to MLflow
++                # Step-level logging to MLflow
+                 if self.global_step % self.logging_steps == 0:
++                    # Get GPU metrics if available
++                    gpu_metrics = {}
++                    if torch.cuda.is_available():
++                        gpu_metrics = {
++                            "system/gpu_memory_allocated_gb": torch.cuda.memory_allocated()
++                            / 1e9,
++                            "system/gpu_memory_reserved_gb": torch.cuda.memory_reserved()
++                            / 1e9,
++                        }
++                        # Try to get utilization if pynvml is available
++                        try:
++                            import pynvml
++
++                            pynvml.nvmlInit()
++                            handle = pynvml.nvmlDeviceGetHandleByIndex(0)
++                            util = pynvml.nvmlDeviceGetUtilizationRates(handle)
++                            gpu_metrics["system/gpu_utilization_percent"] = util.gpu
++                        except (ImportError, Exception):
++                            pass
++
+                     mlflow.log_metrics(
+                         {
+-                            "train_loss_step": loss.item()
+-                            * self.gradient_accumulation_steps,
+-                            "learning_rate": self.optimizer.param_groups[0]["lr"],
++                            "train/loss_step": batch_loss,
++                            "train/accuracy_step": batch_accuracy,
++                            "train/learning_rate": self.optimizer.param_groups[0]["lr"],
++                            "train/batch_time_seconds": batch_time,
++                            **gpu_metrics,
+                         },
+                         step=self.global_step,
+                     )
++
++                    # Log system metrics periodically
++                    if (
++                        self.system_logger
++                        and self.global_step % self.system_metrics_interval == 0
++                    ):
++                        self.system_logger.log_metrics(step=self.global_step)
++            else:
++                # Track time even without optimizer step
++                batch_time = time.time() - batch_start_time
++                batch_times.append(batch_time)
+ 
+             # Track metrics
+             total_loss += loss.item() * self.gradient_accumulation_steps
+@@ -193,9 +259,24 @@ class Trainer:
+ 
+         avg_loss = total_loss / max(len(self.train_loader), 1)
+         accuracy = correct / total
++
++        # Calculate epoch statistics
++        epoch_metrics = {
++            "epoch/train_loss": avg_loss,
++            "epoch/train_accuracy": accuracy,
++            "epoch/train_avg_batch_time": (
++                sum(batch_times) / len(batch_times) if batch_times else 0
++            ),
++            "epoch/train_total_batches": len(self.train_loader),
++        }
++
++        # Log epoch-level training summary
++        mlflow.log_metrics(
++            epoch_metrics,
++            step=epoch,
++        )
+ 
+         return {
+             "train_loss": avg_loss,
+             "train_accuracy": accuracy,
+         }
+@@ -271,6 +352,20 @@ class Trainer:
+             "val_recall_macro": recall_macro,
+             "val_auroc_macro": auroc_macro,
+         }
++
++        # Log epoch-level validation summary to MLflow
++        val_epoch_metrics = {
++            f"epoch/val_{k.replace('val_', '')}": v
++            for k, v in return_dict.items()
++            if v is not None
++        }
++        mlflow.log_metrics(
++            val_epoch_metrics,
++            step=self.global_step
++            // len(self.train_loader),  # Convert global step to epoch
++        )
++
++        return return_dict
+ 
+     def save_checkpoint(
+         self, epoch: int, metrics: dict[str, float], is_best: bool = False
+@@ -340,10 +435,24 @@ class Trainer:
+             metrics = {**train_metrics, **val_metrics}
+             metrics["epoch"] = epoch + 1
+             metrics["lr"] = self.optimizer.param_groups[0]["lr"]
+-            metrics["epoch_time"] = time.time() - epoch_start
++            epoch_duration = time.time() - epoch_start
++            metrics["epoch_time"] = epoch_duration
+ 
+-            # Log to MLflow
+-            mlflow.log_metrics(metrics, step=epoch)
++            # Log comprehensive epoch summary to MLflow
++            epoch_summary = {
++                "epoch/number": epoch + 1,
++                "epoch/duration_seconds": epoch_duration,
++                "epoch/learning_rate": metrics["lr"],
++                "epoch/train_loss": train_metrics["train_loss"],
++                "epoch/train_accuracy": train_metrics["train_accuracy"],
++                "epoch/val_loss": val_metrics["val_loss"],
++                "epoch/val_accuracy": val_metrics["val_accuracy"],
++                "epoch/val_f1_macro": val_metrics["val_f1_macro"],
++                "epoch/val_f1_micro": val_metrics["val_f1_micro"],
++            }
++            mlflow.log_metrics(epoch_summary, step=epoch)
+ 
+             # Save history
+             self.training_history.append(metrics)
+@@ -375,11 +484,18 @@ class Trainer:
+                 break
+ 
+-        # Log best metrics
++        # Log final training summary
++        final_summary = {
++            f"final/best_{self.early_stopping_metric}": self.best_metric_value,
++            "final/total_epochs": len(self.training_history),
++            "final/total_steps": self.global_step,
++            "final/early_stopped": self.epochs_without_improvement >= self.patience,
++        }
+         mlflow.log_metrics(
+-            {
+-                f"best_{self.early_stopping_metric}": self.best_metric_value,
+-                "total_epochs": len(self.training_history),
+-            }
++            final_summary
+         )
+ 
+         return {
++            f"best_{self.early_stopping_metric}": self.best_metric_value,
++            "total_epochs": len(self.training_history),
++        }

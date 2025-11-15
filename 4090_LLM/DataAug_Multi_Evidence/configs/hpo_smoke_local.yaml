@@ -1,0 +1,97 @@
+# Minimal HPO smoke configuration using a local path and synthetic dataset
+
+study:
+  name: smoke_hpo_local
+  direction: maximize
+  n_trials: 2
+  timeout: 600
+
+# Search space kept tiny for a fast end-to-end validation
+search_space:
+  model_id:
+    type: categorical
+    choices:
+      - prajjwal1/bert-tiny
+
+  evidence_head_type:
+    type: categorical
+    choices: [start_end_linear]
+
+  optimizer:
+    type: categorical
+    choices: [adamw, sgd]
+
+  # Optimizer-specific parameters (conditionally sampled)
+  weight_decay:
+    type: float
+    low: 0.0
+    high: 0.01
+
+  momentum:
+    type: float
+    low: 0.0
+    high: 0.2
+
+  nesterov:
+    type: bool
+
+  adam_beta1:
+    type: float
+    low: 0.85
+    high: 0.95
+
+  adam_beta2:
+    type: float
+    low: 0.98
+    high: 0.999
+
+  learning_rate:
+    type: loguniform
+    low: 1.0e-5
+    high: 5.0e-5
+
+  batch_size:
+    type: categorical
+    choices: [4]
+
+  epochs:
+    type: categorical
+    choices: [1]
+
+  evidence_dropout:
+    type: float
+    low: 0.1
+    high: 0.2
+
+fixed:
+  optimization_metric: val_span_f1
+  seed: 42
+
+# Dataset definition for local CSV usage
+dataset:
+  config_path: configs/data/dataset.yaml
+
+# Data loader / synthetic dataset controls
+# When local_path is present, the optimizer will generate a synthetic dataset
+# for quick smoke testing to avoid external downloads.
+data:
+  local_path: Data/redsm5
+  num_workers: 0
+
+# Training/runtime controls for a fast smoke run
+training:
+  output_dir: experiments/smoke_hpo_local
+  early_stopping_patience: 1
+  metric_for_best_model: val_span_f1
+  use_scheduler: false
+  gradient_accumulation_steps: 1
+  synthetic_train_size: 64
+  synthetic_val_size: 32
+  seq_len: 64
+
+mlflow:
+  experiment_name: mental_health_hpo_smoke
+  tracking_uri: file://experiments/mlflow_db
+
+resources:
+  num_workers: 0

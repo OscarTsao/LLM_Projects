@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/utils/logger_factory.py
+# hypothesis_version: 6.140.3
+
+['%Y-%m-%d %H:%M:%S', 'INFO', 'experiments/logs', 'logger_factory']

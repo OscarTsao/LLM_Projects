@@ -1,0 +1,109 @@
+search_space:
+  method:
+    type: categorical
+    values: [full_ft, lora, qlora]
+  model_id:
+    type: categorical
+    values:
+      - meta-llama/Llama-3.1-8B
+      - meta-llama/Llama-3.2-1B
+      - Qwen/Qwen2.5-7B
+      - Qwen/Qwen2.5-14B
+  optimizer:
+    type: categorical
+    values: [adamw, adafactor, lion]
+  scheduler:
+    type: categorical
+    values: [linear, cosine, cosine_wr, polynomial]
+  loss_type:
+    type: categorical
+    values: [bce, focal]
+  class_weighting:
+    type: categorical
+    values: [none, inv, sqrt_inv]
+  truncation_strategy:
+    type: categorical
+    values: [single, window_pool]
+  pooler:
+    type: categorical
+    values: [max, mean, logit_sum]
+  gradient_checkpointing:
+    type: categorical
+    values: [true, false]
+  calibration:
+    type: categorical
+    values: [none, temperature]
+  lr:
+    type: loguniform
+    low: 5.0e-6
+    high: 5.0e-4
+  weight_decay:
+    type: uniform
+    low: 0.0
+    high: 0.1
+  warmup_ratio:
+    type: uniform
+    low: 0.0
+    high: 0.2
+  per_device_train_batch_size:
+    type: categorical
+    values: [1, 2, 4, 8]
+  per_device_eval_batch_size:
+    type: categorical
+    values: [1, 2, 4, 8]
+  grad_accum:
+    type: categorical
+    values: [1, 2, 4, 8, 16, 32]
+  epochs:
+    type: categorical
+    values: [3, 4, 5, 6, 8, 10]
+  label_smoothing:
+    type: uniform
+    low: 0.0
+    high: 0.1
+  focal_gamma:
+    type: categorical
+    values: [1.0, 1.5, 2.0, 2.5, 3.0]
+  max_length:
+    type: categorical
+    values: [1024, 2048, 4096, 8192]
+  doc_stride:
+    type: categorical
+    values: [128, 256, 512]
+  lora_r:
+    type: categorical
+    values: [8, 16, 32]
+  lora_alpha:
+    type: categorical
+    values: [16, 32, 64]
+  lora_dropout:
+    type: categorical
+    values: [0.0, 0.05, 0.1]
+  fourbit:
+    type: categorical
+    values: [nf4, fp4]
+  double_quant:
+    type: categorical
+    values: [true, false]
+  compute_dtype:
+    type: categorical
+    values: [fp16, bf16]
+  freeze_layers:
+    type: categorical
+    values: [0, 2, 4]
+conditions:
+  - when:
+      method: full_ft
+    then:
+      include: [freeze_layers]
+      exclude: [lora_r, lora_alpha, lora_dropout, fourbit, double_quant, compute_dtype]
+  - when:
+      method: lora
+    then:
+      include: [lora_r, lora_alpha, lora_dropout]
+      exclude: [freeze_layers, fourbit, double_quant, compute_dtype]
+  - when:
+      method: qlora
+    then:
+      include: [lora_r, lora_alpha, lora_dropout, fourbit, double_quant, compute_dtype]
+      exclude: [freeze_layers]

@@ -1,0 +1,29 @@
+# XLNet Base Configuration
+# Generalized Autoregressive Pretraining for Language Understanding
+# Paper: https://arxiv.org/abs/1906.08237
+
+name: "xlnet-base-cased"
+
+# Model architecture
+hidden_size: 768
+num_attention_heads: 12
+num_hidden_layers: 12
+intermediate_size: 3072
+max_position_embeddings: 512
+
+# XLNet-specific
+mem_len: 512  # Memory length for recurrence mechanism
+reuse_len: 256  # Length of reusable segment
+
+# Training configuration
+gradient_checkpointing: false
+dropout: 0.1
+attention_dropout: 0.1
+
+# Notes:
+# - Permutation language modeling (PLM) instead of masked LM
+# - Bidirectional context without masking artifacts
+# - Segment recurrence mechanism for longer contexts
+# - Case-sensitive (preserves capitalization)
+# - Higher memory usage than BERT due to recurrence mechanism
+# - May benefit from longer sequences (>512 tokens)

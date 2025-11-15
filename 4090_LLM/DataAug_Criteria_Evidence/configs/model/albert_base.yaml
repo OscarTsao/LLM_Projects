@@ -1,0 +1,27 @@
+# ALBERT Base v2 Configuration
+# A Lite BERT for Self-supervised Learning of Language Representations
+# Paper: https://arxiv.org/abs/1909.11942
+
+name: "albert-base-v2"
+
+# Model architecture
+hidden_size: 768
+num_attention_heads: 12
+num_hidden_layers: 12
+intermediate_size: 3072
+max_position_embeddings: 512
+
+# ALBERT-specific
+embedding_size: 128  # Factorized embedding parameterization
+num_hidden_groups: 1  # Cross-layer parameter sharing
+
+# Training configuration
+gradient_checkpointing: false
+dropout: 0.1
+attention_dropout: 0.1
+
+# Notes:
+# - 18× fewer parameters than BERT-base due to factorized embeddings
+# - Parameter sharing across layers reduces memory footprint
+# - Good choice for limited GPU memory scenarios
+# - May be slower than BERT due to parameter sharing overhead

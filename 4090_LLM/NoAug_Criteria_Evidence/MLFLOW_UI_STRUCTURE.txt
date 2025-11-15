@@ -1,0 +1,255 @@
+================================================================================
+MLFLOW UI STRUCTURE - VISUAL REFERENCE
+================================================================================
+
+TRAINING RUN METRICS
+================================================================================
+
+Step-Indexed Metrics (x-axis = global_step)
+────────────────────────────────────────────
+  train/loss_step              ──┬──────── Per-batch training loss
+  train/accuracy_step            │         Per-batch training accuracy
+  train/learning_rate            │         Learning rate per step
+  train/batch_time_seconds       │         Time per batch (seconds)
+                                 │
+  system/gpu_memory_allocated_gb │         GPU memory allocated (GB)
+  system/gpu_memory_reserved_gb  │         GPU memory reserved (GB)
+  system/gpu_utilization_percent │         GPU utilization (0-100%)
+  system/cpu_percent             │         CPU usage (0-100%)
+  system/memory_used_gb          │         RAM used (GB)
+  system/memory_available_gb     └─────── RAM available (GB)
+
+Epoch-Indexed Metrics (x-axis = epoch)
+──────────────────────────────────────
+  epoch/number                   ──┬──────── Epoch number (1, 2, 3, ...)
+  epoch/duration_seconds           │         Time per epoch (seconds)
+  epoch/learning_rate              │         Learning rate at epoch end
+                                   │
+  epoch/train_loss                 │         Average training loss
+  epoch/train_accuracy             │         Training accuracy
+  epoch/train_avg_batch_time       │         Average batch time
+  epoch/train_total_batches        │         Total batches in epoch
+                                   │
+  epoch/val_loss                   │         Validation loss
+  epoch/val_accuracy               │         Validation accuracy
+  epoch/val_f1_macro               │         Validation F1 (macro)
+  epoch/val_f1_micro               │         Validation F1 (micro)
+  epoch/val_precision_macro        │         Validation precision
+  epoch/val_recall_macro           │         Validation recall
+  epoch/val_auroc_macro            └─────── Validation AUROC
+
+Scalar Metrics (no indexing)
+────────────────────────────
+  final/best_val_f1_macro        ──┬──────── Best validation F1 achieved
+  final/total_epochs               │         Total epochs trained
+  final/total_steps                │         Total optimization steps
+  final/early_stopped              └─────── Boolean: early stopping triggered
+
+
+HPO PARENT RUN METRICS
+================================================================================
+
+Scalar Metrics (study summary)
+──────────────────────────────
+  best_val_f1_macro              ──┬──────── Best metric across all trials
+  best_trial_number                │         Trial number of best result
+  total_trials                     │         Total trials run
+  completed_trials                 │         Successfully completed trials
+  pruned_trials                    │         Trials pruned early
+  failed_trials                    └─────── Trials that failed
+
+Parameters (best trial)
+───────────────────────
+  best_hpo/learning_rate         ──┬──────── Best learning rate found
+  best_hpo/batch_size              │         Best batch size found
+  best_hpo/warmup_ratio            │         Best warmup ratio found
+  best_hpo/weight_decay            │         Best weight decay found
+  ...                              └─────── All hyperparameters from best trial
+
+Artifacts
+─────────
+  hpo_trials_history.csv         ──┬──────── CSV with all trial results
+  hpo_optimization_history.html    └─────── Interactive optimization plot
+
+
+HPO TRIAL RUN METRICS (nested under parent)
+================================================================================
+
+Trial-Specific Metrics
+──────────────────────
+  trial/val_f1_macro             ──┬──────── Final validation metric for trial
+  trial/number                     └─────── Trial number
+
+Parameters
+──────────
+  hpo/learning_rate              ──┬──────── Hyperparameters for this trial
+  hpo/batch_size                   │
+  hpo/warmup_ratio                 │
+  hpo/weight_decay                 │
+  trial_number                     │         Trial number
+  study_name                       └─────── Study name
+
+Plus ALL training metrics:
+  train/*                        ──┬──────── All step-level training metrics
+  epoch/*                          │         All epoch-level metrics
+  system/*                         │         All system metrics
+  final/*                          └─────── Final training summary
+
+
+MODEL REGISTRY
+================================================================================
+
+Model: criteria_classifier
+├── Version 1
+│   ├── Stage: Production
+│   ├── Tags:
+│   │   ├── task: criteria
+│   │   ├── f1_macro: 0.856
+│   │   ├── encoder: roberta-base
+│   │   └── date: 2025-01-25
+│   ├── Description: "RoBERTa model for criteria classification..."
+│   ├── Signature: (input_ids, attention_mask) -> logits
+│   └── Artifacts:
+│       └── model/
+│
+├── Version 2
+│   ├── Stage: Staging
+│   └── ...
+│
+└── Version 3
+    ├── Stage: Archived
+    └── ...
+
+
+MLFLOW UI NAVIGATION
+================================================================================
+
+Experiments Tab
+───────────────
+├── training_criteria
+│   ├── Run: criteria_roberta_2025-01-25
+│   │   └── Metrics: train/*, epoch/*, system/*, final/*
+│   └── Run: criteria_deberta_2025-01-24
+│       └── ...
+│
+└── hpo_criteria
+    └── Run: HPO_criteria_stage2 (parent)
+        ├── Metrics: best_*, total_*, completed_*, pruned_*, failed_*
+        ├── Parameters: best_hpo/*
+        ├── Artifacts: hpo_trials_history.csv, plots
+        └── Nested Runs:
+            ├── trial_0001
+            │   └── Metrics: trial/*, train/*, epoch/*, system/*, final/*
+            ├── trial_0002
+            └── ...
+
+Models Tab
+──────────
+└── criteria_classifier
+    ├── Version 1 (Production)
+    ├── Version 2 (Staging)
+    └── Version 3 (Archived)
+
+
+METRIC FILTERING IN UI
+================================================================================
+
+Filter by Prefix:
+─────────────────
+  train/*        → All step-level training metrics
+  epoch/*        → All epoch-level summaries
+  system/*       → All system resource metrics
+  trial/*        → All HPO trial results
+  final/*        → Final training summaries
+
+Filter by Index:
+────────────────
+  Step-indexed   → train/*, system/* (x-axis = global_step)
+  Epoch-indexed  → epoch/* (x-axis = epoch number)
+  Scalar         → final/*, best_*, total_* (no x-axis)
+
+
+TYPICAL CHART CONFIGURATIONS
+================================================================================
+
+Training Loss Over Steps:
+  Metric: train/loss_step
+  X-axis: Step
+  Chart: Line chart
+  Use: Monitor batch-level training progress
+
+Validation F1 Over Epochs:
+  Metric: epoch/val_f1_macro
+  X-axis: Epoch
+  Chart: Line chart
+  Use: Monitor model performance per epoch
+
+GPU Memory Over Steps:
+  Metric: system/gpu_memory_allocated_gb
+  X-axis: Step
+  Chart: Line chart
+  Use: Monitor GPU memory usage during training
+
+HPO Optimization Progress:
+  Parent run artifact: hpo_optimization_history.html
+  Chart: Interactive Plotly chart
+  Use: Visualize HPO search progress
+
+Trial Comparison:
+  View: Compare nested runs
+  Metrics: trial/val_f1_macro
+  Parameters: hpo/*
+  Use: Compare hyperparameter combinations
+
+
+EXAMPLE QUERIES IN MLFLOW UI
+================================================================================
+
+Find best training run:
+  1. Go to Experiments tab
+  2. Select experiment
+  3. Sort by "final/best_val_f1_macro" descending
+  4. Top run is best
+
+Compare HPO trials:
+  1. Go to HPO parent run
+  2. Click "Show nested runs"
+  3. Compare by "trial/val_f1_macro"
+  4. View "hpo/*" parameters for best trials
+
+Check system resource usage:
+  1. Go to run detail
+  2. Click "Metrics" tab
+  3. Filter by "system/*"
+  4. View GPU/CPU/memory charts over time
+
+Find models in production:
+  1. Go to Models tab
+  2. Click model name
+  3. Filter by Stage: "Production"
+  4. View version details and metrics
+
+
+PROGRAMMATIC ACCESS
+================================================================================
+
+Get best run:
+  import mlflow
+  runs = mlflow.search_runs(
+      experiment_names=["training_criteria"],
+      order_by=["metrics.final/best_val_f1_macro DESC"]
+  )
+  best_run = runs.iloc[0]
+
+Load registered model:
+  model_uri = "models:/criteria_classifier/Production"
+  model = mlflow.pytorch.load_model(model_uri)
+
+Get trial history:
+  parent_run = mlflow.get_run(parent_run_id)
+  trials_csv = mlflow.artifacts.download_artifacts(
+      run_id=parent_run_id,
+      artifact_path="hpo_trials_history.csv"
+  )
+
+================================================================================

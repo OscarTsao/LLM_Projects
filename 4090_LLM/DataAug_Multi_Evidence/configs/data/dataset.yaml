@@ -1,0 +1,16 @@
+dataset:
+  id: csv
+  data_files:
+    train: Data/redsm5/redsm5_annotations.csv
+  splits:
+    train: train
+    validation: validation
+    test: test
+  streaming: false
+  cache_dir: Data/hf_cache
+  # Since the dataset doesn't have pre-defined splits, we need to split manually
+  # Train: 70%, Validation: 15%, Test: 15%
+  split_percentages:
+    train: 0.7
+    validation: 0.15
+    test: 0.15

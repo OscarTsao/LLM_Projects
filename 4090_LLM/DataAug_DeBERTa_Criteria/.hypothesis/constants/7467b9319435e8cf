@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/hpo/trial_executor.py
+# hypothesis_version: 6.140.3
+
+[0.0, 1e-12, 'HPO progress', 'Trial %s failed: %s', 'TrialExecutor', 'TrialResult', 'TrialSpec', 'best_metric', 'best_trial_id', 'completion_rate', 'component', 'duration_seconds', 'elapsed_seconds', 'end', 'eta_seconds', 'event', 'hpo', 'set_tag', 'stage', 'start', 'trial_index', 'trial_total']

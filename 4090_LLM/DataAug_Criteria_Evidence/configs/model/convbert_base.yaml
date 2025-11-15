@@ -1,0 +1,26 @@
+# ConvBERT Base Configuration
+# Improving BERT with Span-based Dynamic Convolution
+# Paper: https://arxiv.org/abs/2008.02496
+
+name: "YituTech/conv-bert-base"
+
+# Model architecture
+hidden_size: 768
+num_attention_heads: 12
+num_hidden_layers: 12
+intermediate_size: 3072
+max_position_embeddings: 512
+
+# ConvBERT-specific
+conv_kernel_size: 9  # Span-based dynamic convolution kernel
+
+# Training configuration
+gradient_checkpointing: false
+dropout: 0.1
+attention_dropout: 0.1
+
+# Notes:
+# - Replaces some self-attention heads with dynamic convolutions
+# - Better at capturing local dependencies than pure attention
+# - More parameter-efficient than BERT (same performance with fewer params)
+# - Good for tasks where local context is important (e.g., NER, evidence extraction)

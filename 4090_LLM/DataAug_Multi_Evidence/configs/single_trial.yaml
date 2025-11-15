@@ -1,0 +1,81 @@
+# Single Trial Configuration
+# Use this for debugging, development, or running a specific configuration
+
+trial:
+  trial_id: debug_trial_001
+
+# Model configuration
+model:
+  model_id: google-bert/bert-base-uncased
+  evidence_head_type: start_end_linear
+  evidence_dropout: 0.2
+
+# Loss configuration
+loss:
+  loss_function: bce
+  label_smoothing: 0.1
+  class_weights: true
+  # focal_gamma: 2.0  # Uncomment if using focal/hybrid loss
+  # hybrid_weight_alpha: 0.5  # Uncomment if using hybrid loss
+
+# Training hyperparameters
+training:
+  learning_rate: 5.0e-5
+  batch_size: 16
+  accumulation_steps: 2
+  epochs: 100
+  optimizer: adamw
+  weight_decay: 0.01
+
+  # Learning rate schedule
+  warmup_ratio: 0.1
+  layer_wise_lr_decay: 0.95
+  differential_lr_ratio: 0.5
+
+# Activation function
+activation: gelu
+
+# Regularization
+regularization:
+  adversarial_epsilon: 0.0
+
+# Data augmentation
+augmentation:
+  methods: []  # e.g., [synonym, back_translation]
+  prob: 0.0
+
+# Optimization
+optimization:
+  metric: val_span_f1  # Metric to track for best checkpoint
+
+# Checkpoint management
+checkpoints:
+  keep_last_n: 3
+  keep_best_k: 5
+  max_checkpoint_size_gb: 50.0
+
+# Reproducibility
+seed: 42
+
+# Dataset configuration
+dataset:
+  config_path: configs/data/dataset.yaml
+
+# MLflow tracking
+mlflow:
+  experiment_name: mental_health_debug
+  tracking_uri: file://experiments/mlflow_db
+
+# Output directory
+output_dir: experiments/trial_debug
+
+# Resource settings
+resources:
+  num_workers: 4
+  pin_memory: true
+
+# Logging
+logging:
+  level: INFO
+  log_interval: 10  # Log every N batches
+  eval_interval: 1  # Evaluate every N epochs

@@ -1,0 +1,9 @@
+mlflow:
+  tracking_uri: "sqlite:///mlflow.db"
+  experiment_name: "deberta_v3_evidence"
+  artifact_location: "./mlruns"
+  buffer:
+    dir: "./artifacts/mlflow_buffer"
+    backoff_initial: 1.0
+    backoff_max: 60.0
+    max_records_per_replay: 200

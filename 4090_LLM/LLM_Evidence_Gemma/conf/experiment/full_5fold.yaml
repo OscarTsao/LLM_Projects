@@ -1,0 +1,18 @@
+# @package _global_
+
+# Full 5-fold CV configuration
+
+cv:
+  num_folds: 5
+  recreate_splits: false
+
+training:
+  num_epochs: 100
+  batch_size: 1
+  gradient_accumulation_steps: 4
+  early_stopping_patience: 20
+  optimizer: adamw_8bit
+
+model:
+  freeze_encoder: false
+  use_gradient_checkpointing: true

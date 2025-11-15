@@ -1,0 +1,142 @@
+================================================================================
+WITH-AUG HPO: DETAILED BEST HYPERPARAMETERS
+================================================================================
+
+
+CRITERIA - Trial #719 (Val F1: 0.709586)
+================================================================================
+Total Parameters: 29
+
+ 1. aug.antonym_guard                        = 0.000000e+00
+ 2. aug.enabled                              = 1.000000
+ 3. aug.max_replace                          = 0.250000
+ 4. aug.method_strategy                      = 0.000000e+00
+ 5. aug.ops_per_sample                       = 1.000000
+ 6. aug.p_apply                              = 0.250000
+ 7. head.activation                          = 0.000000e+00
+ 8. head.dropout                             = 0.100000
+ 9. head.hidden_dim                          = 384.000000
+10. head.hidden_mult                         = 1.000000
+11. head.n_layers                            = 2.000000
+12. head.pooling                             = 2.000000
+13. model.gradient_checkpointing             = 1.000000
+14. model.name                               = 6.000000
+15. null.ratio                               = 0.447075
+16. null.strategy                            = 1.000000
+17. null.temperature                         = 1.621328
+18. null.threshold                           = 0.650314
+19. optim.lr                                 = 4.512088e-04
+20. optim.name                               = 1.000000
+21. optim.weight_decay                       = 0.003199
+22. reg.label_smoothing                      = 0.058359
+23. reg.max_grad_norm                        = 3.000000
+24. sched.name                               = 0.000000e+00
+25. sched.warmup_ratio                       = 0.198211
+26. tok.max_length                           = 256.000000
+27. train.amp                                = 0.000000e+00
+28. train.batch_size                         = 3.000000
+29. train.grad_accum                         = 1.000000
+
+
+EVIDENCE - Trial #1044 (Val F1: 0.704023)
+================================================================================
+Total Parameters: 24
+
+ 1. aug.enabled                              = 0.000000e+00
+ 2. head.activation                          = 0.000000e+00
+ 3. head.dropout                             = 0.200000
+ 4. head.hidden_dim                          = 1.024000e+03
+ 5. head.hidden_mult                         = 2.000000
+ 6. head.n_layers                            = 1.000000
+ 7. head.pooling                             = 1.000000
+ 8. model.gradient_checkpointing             = 0.000000e+00
+ 9. model.name                               = 0.000000e+00
+10. null.ratio                               = 0.791225
+11. null.strategy                            = 3.000000
+12. null.temperature                         = 0.740952
+13. null.threshold                           = 0.661536
+14. optim.lr                                 = 7.969038e-05
+15. optim.name                               = 4.000000
+16. optim.weight_decay                       = 0.007057
+17. reg.label_smoothing                      = 0.016612
+18. reg.max_grad_norm                        = 2.000000
+19. sched.name                               = 0.000000e+00
+20. sched.warmup_ratio                       = 0.142555
+21. tok.max_length                           = 320.000000
+22. train.amp                                = 0.000000e+00
+23. train.batch_size                         = 1.000000
+24. train.grad_accum                         = 0.000000e+00
+
+
+SHARE - Trial #718 (Val F1: 0.858516)
+================================================================================
+Total Parameters: 29
+
+ 1. aug.antonym_guard                        = 1.000000
+ 2. aug.enabled                              = 1.000000
+ 3. aug.max_replace                          = 0.400000
+ 4. aug.method_strategy                      = 0.000000e+00
+ 5. aug.ops_per_sample                       = 3.000000
+ 6. aug.p_apply                              = 0.100000
+ 7. head.activation                          = 2.000000
+ 8. head.dropout                             = 0.100000
+ 9. head.hidden_dim                          = 768.000000
+10. head.hidden_mult                         = 2.000000
+11. head.n_layers                            = 2.000000
+12. head.pooling                             = 0.000000e+00
+13. model.gradient_checkpointing             = 1.000000
+14. model.name                               = 5.000000
+15. null.ratio                               = 0.301487
+16. null.strategy                            = 3.000000
+17. null.temperature                         = 1.881284
+18. null.threshold                           = 0.168541
+19. optim.lr                                 = 3.050633e-04
+20. optim.name                               = 1.000000
+21. optim.weight_decay                       = 0.004003
+22. reg.label_smoothing                      = 0.058639
+23. reg.max_grad_norm                        = 1.000000
+24. sched.name                               = 4.000000
+25. sched.warmup_ratio                       = 0.193387
+26. tok.max_length                           = 128.000000
+27. train.amp                                = 1.000000
+28. train.batch_size                         = 3.000000
+29. train.grad_accum                         = 2.000000
+
+
+JOINT - Trial #474 (Val F1: 0.839714)
+================================================================================
+Total Parameters: 29
+
+ 1. aug.antonym_guard                        = 1.000000
+ 2. aug.enabled                              = 1.000000
+ 3. aug.max_replace                          = 0.300000
+ 4. aug.method_strategy                      = 2.000000
+ 5. aug.ops_per_sample                       = 2.000000
+ 6. aug.p_apply                              = 0.100000
+ 7. head.activation                          = 0.000000e+00
+ 8. head.dropout                             = 0.150000
+ 9. head.hidden_dim                          = 1.024000e+03
+10. head.hidden_mult                         = 2.000000
+11. head.n_layers                            = 2.000000
+12. head.pooling                             = 0.000000e+00
+13. model.gradient_checkpointing             = 1.000000
+14. model.name                               = 1.000000
+15. null.ratio                               = 0.776128
+16. null.strategy                            = 0.000000e+00
+17. null.temperature                         = 0.817904
+18. null.threshold                           = 0.107459
+19. optim.lr                                 = 1.194728e-04
+20. optim.name                               = 1.000000
+21. optim.weight_decay                       = 3.677982e-04
+22. reg.label_smoothing                      = 0.126275
+23. reg.max_grad_norm                        = 1.000000
+24. sched.name                               = 1.000000
+25. sched.warmup_ratio                       = 0.081070
+26. tok.max_length                           = 320.000000
+27. train.amp                                = 1.000000
+28. train.batch_size                         = 2.000000
+29. train.grad_accum                         = 2.000000
+
+================================================================================
+Complete configurations saved to: hpo_best_configs_summary.json
+================================================================================

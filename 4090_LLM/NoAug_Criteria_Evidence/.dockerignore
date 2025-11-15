@@ -1,0 +1,38 @@
+# Prevent accidental recreation of root Docker files
+# This project uses .devcontainer/ for all containerization
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Data
+data/
+mlruns/
+outputs/
+*.db
+
+# Git
+.git/
+.gitignore

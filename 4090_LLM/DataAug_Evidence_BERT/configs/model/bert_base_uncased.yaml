@@ -1,0 +1,11 @@
+pretrained_model_name: bert-base-uncased
+tokenizer_name: ${model.pretrained_model_name}
+use_fast_tokenizer: true
+head:
+  num_layers: 1
+  hidden_size: 384
+  dropout: 0.1
+  activation: gelu
+  layer_norm: false
+freeze_base_model: false
+

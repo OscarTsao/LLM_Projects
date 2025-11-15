@@ -1,0 +1,17 @@
+data:
+  dataset_id: "local/smoke"
+  revision: "0"
+  splits:
+    train: "train"
+    validation: "validation"
+    test: "test"
+  cache_dir: "./Data/cache"
+  token_cache_dir: "./Data/token_cache"
+  fields:
+    text: "text"
+    evidence: "evidence"
+    evidence_label: "evidence_label"
+    criteria_label: "criteria_label"
+  max_examples: null
+  smoke_dataset_size: 32
+  stratify: false

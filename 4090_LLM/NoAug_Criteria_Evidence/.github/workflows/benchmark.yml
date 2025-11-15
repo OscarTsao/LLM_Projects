@@ -1,0 +1,60 @@
+name: Performance Benchmarks
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+      
+      - name: Install dependencies
+        run: |
+          poetry install --no-interaction
+      
+      - name: Run DataLoader benchmark
+        run: |
+          poetry run python scripts/bench_dataloader.py --num-workers 4 --batch-size 32
+        continue-on-error: true
+      
+      - name: Run augmentation profiling
+        run: |
+          poetry run python scripts/profile_augmentation.py --num-samples 1000
+        continue-on-error: true
+      
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v4
+        with:
+          name: benchmark-results
+          path: |
+            benchmark_*.json
+            profiling_*.csv
+          retention-days: 30
+      
+      - name: Create benchmark summary
+        run: |
+          echo "## Performance Benchmark Results" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Date**: $(date -u)" >> $GITHUB_STEP_SUMMARY
+          echo "**System**: Ubuntu Latest (GitHub Actions)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f benchmark_dataloader_results.json ]; then
+            echo "### DataLoader Throughput" >> $GITHUB_STEP_SUMMARY
+            cat benchmark_dataloader_results.json >> $GITHUB_STEP_SUMMARY || true
+          fi

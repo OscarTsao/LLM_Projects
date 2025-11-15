@@ -1,0 +1,29 @@
+{
+  "fold": 1,
+  "train_size": 1292,
+  "val_size": 323,
+  "train_symptom_distribution": {
+    "WORTHLESSNESS": 304,
+    "DEPRESSED_MOOD": 297,
+    "SUICIDAL_THOUGHTS": 155,
+    "FATIGUE": 129,
+    "ANHEDONIA": 127,
+    "SLEEP_ISSUES": 89,
+    "SPECIAL_CASE": 74,
+    "COGNITIVE_ISSUES": 51,
+    "APPETITE_CHANGE": 38,
+    "PSYCHOMOTOR": 28
+  },
+  "val_symptom_distribution": {
+    "WORTHLESSNESS": 76,
+    "DEPRESSED_MOOD": 75,
+    "SUICIDAL_THOUGHTS": 38,
+    "FATIGUE": 33,
+    "ANHEDONIA": 32,
+    "SLEEP_ISSUES": 22,
+    "SPECIAL_CASE": 18,
+    "COGNITIVE_ISSUES": 12,
+    "APPETITE_CHANGE": 10,
+    "PSYCHOMOTOR": 7
+  }
+}

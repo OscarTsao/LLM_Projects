@@ -1,0 +1,150 @@
+# HPO Study Configuration
+# This configuration defines the hyperparameter search space for Optuna
+
+study:
+  name: mental_health_hpo_2025_10
+  direction: maximize  # Maximize validation metrics
+  n_trials: 500
+  timeout: 604800  # 1 week (7 days) in seconds
+
+# Search space for hyperparameters
+search_space:
+  # Model selection
+  model_id:
+    type: categorical
+    choices:
+      - google-bert/bert-base-uncased
+      - microsoft/deberta-v3-base
+      - allenai/longformer-base-4096
+      - mental/mental-bert-base-uncased
+
+  # Evidence head architecture
+  evidence_head_type:
+    type: categorical
+    choices:
+      - start_end_linear
+      - start_end_mlp
+      - biaffine
+
+  # Loss function
+  loss_function:
+    type: categorical
+    choices:
+      - bce
+      - weighted_bce
+      - focal
+      - hybrid
+
+  # Focal loss parameters (conditional on loss_function)
+  focal_gamma:
+    type: float
+    low: 1.0
+    high: 5.0
+
+  # Hybrid loss parameters (conditional on loss_function=hybrid)
+  hybrid_weight_alpha:
+    type: float
+    low: 0.1
+    high: 0.9
+
+  # Activation function
+  activation:
+    type: categorical
+    choices:
+      - gelu
+      - silu
+      - relu
+      - mish
+
+  # Learning rate (log scale)
+  learning_rate:
+    type: loguniform
+    low: 1.0e-6
+    high: 1.0e-4
+
+  # Batch size
+  batch_size:
+    type: categorical
+    choices: [8, 16, 32]
+
+  # Gradient accumulation
+  accumulation_steps:
+    type: categorical
+    choices: [1, 2, 4]
+
+  # Training epochs
+  epochs:
+    type: categorical
+    choices: [100]
+
+  # Regularization
+  evidence_dropout:
+    type: float
+    low: 0.1
+    high: 0.5
+
+  weight_decay:
+    type: float
+    low: 0.0
+    high: 0.1
+
+  layer_wise_lr_decay:
+    type: float
+    low: 0.8
+    high: 0.99
+
+  differential_lr_ratio:
+    type: float
+    low: 0.1
+    high: 1.0
+
+  warmup_ratio:
+    type: float
+    low: 0.0
+    high: 0.2
+
+  # Data augmentation
+  augmentation_prob:
+    type: float
+    low: 0.0
+    high: 0.5
+
+# Fixed parameters (not tuned)
+fixed:
+  optimization_metric: val_span_f1
+  optimizer: adamw
+  label_smoothing: 0.1
+  adversarial_epsilon: 0.0
+  class_weights: true
+
+  # Checkpoint retention
+  keep_last_n: 3
+  keep_best_k: 5
+  max_checkpoint_size_gb: 50.0
+
+  # Reproducibility
+  seed: 42
+
+  # Augmentation methods (fixed to empty for initial studies)
+  augmentation_methods: []
+
+# Dataset configuration (reference to data config)
+dataset:
+  config_path: configs/data/dataset.yaml
+
+# MLflow tracking
+mlflow:
+  experiment_name: mental_health_hpo
+  tracking_uri: file://experiments/mlflow_db
+
+# Resource constraints
+resources:
+  max_memory_gb: 32
+  gpu_memory_fraction: 0.9
+  num_workers: 16
+
+# Early stopping for trials
+pruning:
+  enabled: true
+  patience: 20
+  min_delta: 0.001

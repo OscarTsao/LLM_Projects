@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/models/heads/criteria_matching.py
+# hypothesis_version: 6.140.3
+
+[-1000000000.0, 0.0, 1e-09, 0.1, 0.5, 1.0, 768, 'cls', 'dropout', 'hidden_size', 'last_hidden_state', 'max', 'mean', 'num_labels', 'pooling_strategy', 'threshold']

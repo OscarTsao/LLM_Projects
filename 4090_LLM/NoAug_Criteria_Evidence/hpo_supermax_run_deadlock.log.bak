@@ -1,0 +1,81 @@
+[0;34m======================================================================
+  Running Super-Max HPO for ALL Architectures Sequentially
+======================================================================[0m 
+
+[0;33mSequence: Criteria → Evidence → Share → Joint[0m 
+[0;33mTotal trials: ~19,000 (5000+8000+3000+3000)[0m 
+[0;33mEstimated time: ~80-120 hours with PAR=4[0m 
+
+[0;32mStarting...[0m 
+
+[0;34m[1/4] Running Criteria (5000 trials)...[0m 
+make[1]: Entering directory '/media/user/SSD1/YuNing/NoAug_Criteria_Evidence'
+[0;34mRunning SUPER-MAX HPO for Criteria...[0m 
+Trials: 5000 | Parallel: 4 | Epochs: 100 | Patience: 20
+PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python HPO_EPOCHS=100 HPO_PATIENCE=20 poetry run python scripts/tune_max.py \
+	--agent criteria --study noaug-criteria-supermax \
+	--n-trials 5000 --parallel 4 \
+	--outdir ./_runs
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``group`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/_experimental.py:32: ExperimentalWarning: Argument ``constant_liar`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py:729: ExperimentalWarning: PatientPruner is experimental (supported from v2.8.0). The interface can change in the future.
+  return PatientPruner(hb, patience=2)
+[I 2025-10-24 15:58:29,235] Using an existing study with name 'noaug-criteria-supermax' instead of creating a new one.
+[I 2025-10-24 15:58:29,671] Trial 14 pruned. Pruned: Large model with bsz=64, accum=1 (effective_batch=64) likely causes OOM (24GB GPU limit)
+[I 2025-10-24 15:58:30,125] Trial 12 pruned. Pruned: Large model with bsz=64, accum=2 (effective_batch=128) likely causes OOM (24GB GPU limit)
+[W 2025-10-24 15:58:30,751] Trial 13 failed with parameters: {'seed': 32515, 'model.name': 'roberta-base', 'tok.max_length': 192, 'tok.doc_stride': 64, 'tok.use_fast': True, 'train.batch_size': 32, 'train.grad_accum': 4, 'optim.name': 'adamw', 'optim.lr': 1.5043311947941e-05, 'optim.weight_decay': 3.5562969964786234e-05, 'optim.beta1': 0.8417667382755916, 'optim.beta2': 0.9994164684553518, 'optim.eps': 2.421987115718546e-07, 'sched.name': 'linear', 'sched.warmup_ratio': 0.03242397375259696, 'train.clip_grad': 1.2561475181586792, 'model.dropout': 0.4122465846965264, 'model.attn_dropout': 0.07839442936589802, 'train.grad_checkpointing': False, 'train.freeze_encoder_layers': 6, 'optim.layerwise_lr_decay': 0.9671673099826282, 'head.pooling': 'attn', 'head.layers': 2, 'head.hidden': 1536, 'head.activation': 'gelu', 'head.dropout': 0.2990085499055374, 'loss.cls.type': 'ce', 'loss.cls.label_smoothing': 0.04223194769970271, 'loss.cls.balance': 'none'} because of the following error: ImportError("cannot import name 'OnnxConfig' from 'transformers.onnx' (/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/onnx/__init__.py)").
+Traceback (most recent call last):
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/optuna/study/_optimize.py", line 201, in _run_trial
+    value_or_values = func(trial)
+                      ^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 768, in _obj
+    res = run_training_eval(cfg, {"on_epoch": _cb})
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/media/user/SSD1/YuNing/NoAug_Criteria_Evidence/scripts/tune_max.py", line 495, in run_training_eval
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 1093, in from_pretrained
+    config = AutoConfig.from_pretrained(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 1360, in from_pretrained
+    config_class = CONFIG_MAPPING[config_dict["model_type"]]
+                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 1053, in __getitem__
+    if hasattr(self._modules[module_name], value):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2317, in __getattr__
+    module = self._get_module(self._class_to_module[name])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2347, in _get_module
+    raise e
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/utils/import_utils.py", line 2345, in _get_module
+    return importlib.import_module("." + module_name, self.__name__)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/models/roberta/configuration_roberta.py", line 22, in <module>
+    from ...onnx import OnnxConfig
+ImportError: cannot import name 'OnnxConfig' from 'transformers.onnx' (/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/onnx/__init__.py)
+[W 2025-10-24 15:58:30,915] Trial 13 failed with value None.
+[I 2025-10-24 15:58:31,833] Trial 17 pruned. Pruned: Large model with bsz=48, accum=8 (effective_batch=384) likely causes OOM (24GB GPU limit)
+/home/user/miniforge3/envs/llmhe/lib/python3.12/site-packages/transformers/convert_slow_tokenizer.py:564: UserWarning: The sentencepiece tokenizer that you are converting to a fast tokenizer uses the byte fallback option which is not implemented in the fast tokenizers. In practice this means that the fast version of the tokenizer can produce unknown tokens whereas the sentencepiece version would have converted these unknown tokens into a sequence of byte tokens matching the original piece of text.
+  warnings.warn(
+✓ Configuration validation passed
+  Agent: criteria
+  Epochs: 100 | Patience: 20
+  Output: ./_runs
+[HPO] agent=criteria epochs=100 storage=sqlite:////media/user/SSD1/YuNing/NoAug_Criteria_Evidence/_optuna/noaug.db
+[HPO] Study 'noaug-criteria-supermax' is compatible. Resuming optimization.
+make[1]: *** [Makefile:364: tune-criteria-supermax] Terminated
+make: *** [Makefile:409: tune-all-supermax] Terminated

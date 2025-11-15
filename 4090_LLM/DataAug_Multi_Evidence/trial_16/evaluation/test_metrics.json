@@ -1,0 +1,19 @@
+{
+  "trial_id": "trial_16",
+  "checkpoint_path": "/media/cvrlab308/cvrlab308_4090/YuNing/DataAug_Multi_Evidence/trial_16/checkpoints/checkpoint_epoch004_step000230.pt",
+  "generated_at": "2025-10-22T07:29:56.592947+00:00",
+  "device": "cpu",
+  "prediction_rows": 302,
+  "checkpoint_epoch": 4,
+  "checkpoint_step": 230,
+  "test_metrics": {
+    "evidence_binding": {
+      "span_f1": 0.8112210729965027,
+      "precision": 0.8112582781456954,
+      "recall": 0.8111846946284033,
+      "exact_match": 0.8079470198675497,
+      "char_f1": 0.9923633205735674,
+      "null_span_accuracy": 0.0
+    }
+  }
+}

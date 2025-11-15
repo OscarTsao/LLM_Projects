@@ -1,0 +1,25 @@
+# Criteria extraction task configuration
+#
+# Aligns with groundtruth produced by data/groundtruth.py:
+# - labels come from the 'status' field only (STRICT rule)
+
+name: "criteria"
+type: "binary_classification"
+
+# Canonical columns produced by groundtruth.py
+label_column: "label"
+status_column: "status"
+criterion_column: "criterion_id"
+post_id_column: "post_id"
+
+# Evaluation metrics to compute
+metrics:
+  - "accuracy"
+  - "precision_macro"
+  - "recall_macro"
+  - "f1_macro"
+  - "auroc_macro"
+
+loss:
+  name: "cross_entropy"
+  class_weights: null

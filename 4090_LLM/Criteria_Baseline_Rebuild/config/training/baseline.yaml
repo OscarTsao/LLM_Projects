@@ -1,0 +1,17 @@
+num_epochs: 100
+batch_size: 8
+eval_batch_size: 12
+learning_rate: 2.7835311559047116e-05
+weight_decay: 0.011876220358933333
+warmup_ratio: 0.010807685068278328
+adam_eps: 9.692253480596113e-09
+gradient_accumulation_steps: 1
+max_grad_norm: 2.137977796123785
+early_stopping_patience: 10
+metric_for_best: f1
+use_amp: true
+auto_resume: true
+resume_checkpoint: null
+num_workers: null
+prefetch_factor: null
+persistent_workers: null

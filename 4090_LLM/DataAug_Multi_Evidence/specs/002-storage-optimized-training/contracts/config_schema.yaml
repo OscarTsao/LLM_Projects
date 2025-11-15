@@ -1,0 +1,235 @@
+# HPO Configuration Schema
+# Defines the search space and runtime configuration for trials
+
+title: TrialConfig
+description: Complete hyperparameter and configuration schema for a single HPO trial
+type: object
+
+required:
+  - trial_id
+  - model_id
+  - evidence_head_type
+  - loss_function
+  - activation
+  - optimization_metric
+  - learning_rate
+  - batch_size
+  - epochs
+  - seed
+
+properties:
+  # Identifiers
+  trial_id:
+    type: string
+    format: uuid
+    description: Unique trial identifier
+
+  timestamp:
+    type: string
+    format: date-time
+    description: Trial creation timestamp
+
+  # Model Architecture
+  model_id:
+    type: string
+    enum:
+      # BERT family
+      - google-bert/bert-base-uncased
+      - google-bert/bert-large-uncased
+      - google-bert/bert-large-uncased-whole-word-masking-finetuned-squad
+      # DeBERTa
+      - nvidia/quality-classifier-deberta
+      - microsoft/deberta-v3-base
+      - microsoft/deberta-v3-large
+      # SpanBERT
+      - SpanBERT/spanbert-base-cased
+      - SpanBERT/spanbert-large-cased
+      # XLM-RoBERTa
+      - FacebookAI/xlm-roberta-base
+      - FacebookAI/roberta-large
+      - FacebookAI/xlm-roberta-large
+      - FacebookAI/xlm-roberta-large-finetuned-conll03-english
+      # ELECTRA
+      - google/electra-base-discriminator
+      - OpenMed/OpenMed-NER-AnatomyDetect-ElectraMed-109M
+      - OpenMed/OpenMed-NER-ChemicalDetect-ElectraMed-33M
+      # Longformer
+      - allenai/longformer-base-4096
+      - allenai/longformer-base-4096-extra.pos.embd.only
+      - allenai/longformer-large-4096-extra.pos.embd.only
+      - allenai/longformer-large-4096-finetuned-triviaqa
+      - allenai/longformer-large-4096
+      - allenai/longformer-scico
+      # BigBird
+      - google/bigbird-roberta-base
+      - google/bigbird-roberta-large
+      # BioBERT
+      - dmis-lab/biobert-large-cased-v1.1
+      - dmis-lab/biobert-v1.1
+      # ClinicalBERT
+      - medicalai/ClinicalBERT
+      # Mental Health Domain
+      - mental/mental-bert-base-uncased
+      - mnaylor/psychbert-cased
+      - mnaylor/psychbert-finetuned-mentalhealth
+      - mnaylor/psychbert-finetuned-multiclass
+    description: Hugging Face model identifier
+
+  # Input formatting removed for evidence-only pipeline
+
+  # Evidence Binding Head Configuration
+  evidence_head_type:
+    type: string
+    enum: [start_end_linear, start_end_mlp, biaffine, bio_crf, sentence_reranker]
+    description: Architecture for evidence span extraction
+
+  evidence_dropout:
+    type: number
+    minimum: 0.1
+    maximum: 0.5
+    description: Dropout rate in evidence head
+
+  # Multi-task coupling removed for evidence-only pipeline
+
+  # Loss Function
+  loss_function:
+    type: string
+    enum: [bce, weighted_bce, focal, adaptive_focal, hybrid]
+    description: Loss function for training
+
+  hybrid_weight_alpha:
+    type: number
+    minimum: 0.1
+    maximum: 0.9
+    description: Weight for hybrid loss (α*bce + (1-α)*focal) (required if loss_function=hybrid)
+
+  focal_gamma:
+    type: number
+    minimum: 1.0
+    maximum: 5.0
+    description: Focusing parameter for focal loss (required for focal/adaptive_focal/hybrid)
+
+  label_smoothing:
+    type: number
+    minimum: 0.0
+    maximum: 0.2
+    description: Label smoothing factor
+
+  # Data Augmentation
+  augmentation_methods:
+    type: array
+    items:
+      type: string
+      enum: [synonym, insert, swap, back_translation, char_perturb]
+    uniqueItems: true
+    description: TextAttack augmentation methods to apply (can be empty list for no augmentation)
+
+  augmentation_prob:
+    type: number
+    minimum: 0.0
+    maximum: 0.5
+    description: Per-example probability of applying augmentation
+
+  # Activation Function
+  activation:
+    type: string
+    enum: [gelu, silu, swish, relu, leakyrelu, mish, tanh]
+    description: Activation function for MLP layers
+
+  # Regularization
+  layer_wise_lr_decay:
+    type: number
+    minimum: 0.8
+    maximum: 0.99
+    description: Learning rate decay factor for lower layers
+
+  differential_lr_ratio:
+    type: number
+    minimum: 0.1
+    maximum: 1.0
+    description: Ratio of encoder LR to head LR (encoder_lr / head_lr)
+
+  warmup_ratio:
+    type: number
+    minimum: 0.0
+    maximum: 0.2
+    description: Proportion of training for linear warmup
+
+  adversarial_epsilon:
+    type: number
+    minimum: 0.0
+    maximum: 0.01
+    description: Adversarial perturbation magnitude (0 = no adversarial training)
+
+  class_weights:
+    type: boolean
+    description: Whether to apply class weighting to loss
+
+  # Training Hyperparameters
+  learning_rate:
+    type: number
+    minimum: 0.000001  # 1e-6
+    maximum: 0.0001    # 1e-4
+    description: Base learning rate (log scale recommended for search)
+
+  batch_size:
+    type: integer
+    enum: [8, 16, 32]
+    description: Training batch size
+
+  accumulation_steps:
+    type: integer
+    enum: [1, 2, 4]
+    description: Gradient accumulation steps (effective_batch_size = batch_size * accumulation_steps)
+
+  epochs:
+    type: integer
+    enum: [10, 20, 30]
+    description: Number of training epochs
+
+  optimizer:
+    type: string
+    enum: [adam, adamw]
+    default: adamw
+    description: Optimizer choice
+
+  weight_decay:
+    type: number
+    minimum: 0.0
+    maximum: 0.1
+    description: Weight decay (L2 regularization)
+
+  # Optimization Metric
+  optimization_metric:
+    type: string
+    examples: [val_span_f1, val_accuracy]
+    description: Metric to optimize (maximized per spec assumption A-008)
+
+  # Checkpoint Retention Policy
+  keep_last_n:
+    type: integer
+    minimum: 1
+    default: 3
+    description: Keep last N checkpoints
+
+  keep_best_k:
+    type: integer
+    minimum: 1
+    default: 5
+    description: Keep best K checkpoints by optimization metric
+
+  max_checkpoint_size_gb:
+    type: number
+    minimum: 0.1
+    default: 50.0
+    description: Maximum total checkpoint disk usage per trial (GB)
+
+  # Reproducibility
+  seed:
+    type: integer
+    minimum: 0
+    description: Random seed for reproducibility
+
+# Conditional Dependencies (YAML doesn't support native conditional validation, but these are logical rules to enforce in code)
+# IF loss_function == "hybrid" THEN hybrid_weight_alpha MUST be specified
+# IF loss_function IN ["focal", "adaptive_focal", "hybrid"] THEN focal_gamma MUST be specified

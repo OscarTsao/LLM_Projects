@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/cli/train.py
+# hypothesis_version: 6.140.3
+
+[2e-05, 1337, '--batch-size', '--config', '--experiments-dir', '--keep-best-k', '--keep-last-n', '--learning-rate', '--max-epochs', '--model-name', '--n-trials', '--resume/--no-resume', '--seed', '--study-name', '--trial-dir', '--trial-id', '1.0.0', 'Batch size', 'Learning rate', '__main__', 'dual-agent', 'experiments', 'mental-bert', 'trial_*', 'validation_f1_macro']

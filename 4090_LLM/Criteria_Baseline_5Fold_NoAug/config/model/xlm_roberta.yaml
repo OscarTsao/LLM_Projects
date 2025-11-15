@@ -1,0 +1,12 @@
+pretrained_model_name: xlm-roberta-base
+max_seq_length: 160
+classifier_hidden_sizes:
+  - 384
+dropout: 0.24752388097258377
+base_model_dropout: 0.24752388097258377
+base_model_attention_dropout: 0.1068400619645917
+loss_type: adaptive_focal
+alpha: 0.25
+gamma: 2.0
+delta: 1.0
+use_gradient_checkpointing: false

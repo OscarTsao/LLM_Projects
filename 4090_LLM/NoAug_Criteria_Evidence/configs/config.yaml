@@ -1,0 +1,40 @@
+# Main configuration file for PSY Agents NO-AUG
+
+defaults:
+  - data: hf_redsm5
+  - model: roberta_base
+  - training: optimized
+  - task: criteria
+  - hpo: stage0_sanity
+  - _self_
+
+project:
+  name: "psy-agents-noaug"
+
+seed: 42
+
+paths:
+  outputs: "outputs"
+  mlruns: "mlruns"
+  mlflow_db: "mlflow.db"
+  optuna: "optuna.db"
+
+mlflow:
+  tracking_uri: "sqlite:///${paths.mlflow_db}"
+  artifact_location: "${paths.mlruns}"
+  experiment_name: "${project.name}-${task.name}-${data.source}"
+  run_name: null
+  tags:
+    repo: "${project.name}"
+    task: "${task.name}"
+    encoder: "${model.encoder_name}"
+
+logging:
+  level: INFO
+
+hydra:
+  run:
+    dir: "outputs/hydra/${now:%Y-%m-%d_%H-%M-%S}"
+  sweep:
+    dir: "outputs/hydra/multirun/${now:%Y-%m-%d_%H-%M-%S}"
+    subdir: "${hydra.job.num}"

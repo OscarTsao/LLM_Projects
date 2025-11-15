@@ -1,0 +1,298 @@
+=== Continuous HPO Monitor Started at Sat Oct 18 01:47:37 PM CST 2025 ===
+
+[Sat Oct 18 01:47:37 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 01:47:37 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 4
+✓ Trials Pruned: 10
+✓ Total Trials: 14 / 380 (Stage A)
+✓ [32m[I 2025-10-18 13:46:41,009][0m Trial 13 finished with value: 0.4444444444444444 and parameters: {'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 7.345340153697028e-06, 'opt.lr_head': 9.931670973408442e-05, 'opt.wd': 0.00013214583524101325, 'sched.type': 'linear', 'sched.warmup_ratio': 0.16883408979383943, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 1, 'head.evidence.hidden': 512, 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.02078642952519605, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.014986794936338976, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.04037069042458968, 'loss.cw': 'inverse_freq', 'mtl.w_ev': 0.5690408472900506, 'aug.simple.combo': 'CheckList|CLARE', 'aug.simple.compose': 'sequence', 'aug.simple.CheckList.p_token': 0.15172699018071767, 'aug.simple.CheckList.tpe': 2, 'aug.simple.CLARE.p_token': 0.24559637101456838, 'aug.simple.CLARE.tpe': 1, 'aug.ta.combo': 'TextFoolerJin2019', 'aug.ta.TextFoolerJin2019.p_token': 0.2544585540437554, 'aug.ta.TextFoolerJin2019.tpe': 0, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 13:45:27,236][0m Trial 11 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 13:45:43,305][0m Trial 12 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 13:46:41,009][0m Trial 13 finished with value: 0.4444444444444444 and parameters: {'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 7.345340153697028e-06, 'opt.lr_head': 9.931670973408442e-05, 'opt.wd': 0.00013214583524101325, 'sched.type': 'linear', 'sched.warmup_ratio': 0.16883408979383943, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 1, 'head.evidence.hidden': 512, 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.02078642952519605, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.014986794936338976, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.04037069042458968, 'loss.cw': 'inverse_freq', 'mtl.w_ev': 0.5690408472900506, 'aug.simple.combo': 'CheckList|CLARE', 'aug.simple.compose': 'sequence', 'aug.simple.CheckList.p_token': 0.15172699018071767, 'aug.simple.CheckList.tpe': 2, 'aug.simple.CLARE.p_token': 0.24559637101456838, 'aug.simple.CLARE.tpe': 1, 'aug.ta.combo': 'TextFoolerJin2019', 'aug.ta.TextFoolerJin2019.p_token': 0.2544585540437554, 'aug.ta.TextFoolerJin2019.tpe': 0, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 13 with value: 0.4444444444444444.[0m
+
+=== End of Status Report ===
+[Sat Oct 18 01:47:37 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 01:57:37 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 01:57:37 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 9
+✓ Trials Pruned: 21
+✓ Total Trials: 30 / 380 (Stage A)
+✓ [32m[I 2025-10-18 13:54:36,897][0m Trial 21 finished with value: 0.35555555555555557 and parameters: {'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 32, 'train.ga': 8, 'train.max_len': 256, 'train.clip': 0.0, 'train.compile': True, 'optim.optimizer': 'lion', 'opt.lr_enc': 3.7839806301193836e-05, 'opt.lr_head': 0.0005195983066625707, 'opt.wd': 0.005106295318760902, 'sched.type': 'one_cycle', 'sched.warmup_ratio': 0.15477593114603128, 'head.evidence.pooler': 'mean', 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.19225566382240628, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.07001204877665884, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.06626940142061015, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.4122732862063897, 'aug.simple.combo': 'CharSwap|Embedding', 'aug.simple.compose': 'one_of', 'aug.simple.CharSwap.p_token': 0.11868288137987988, 'aug.simple.CharSwap.tpe': 1, 'aug.simple.Embedding.p_token': 0.15545704463470783, 'aug.simple.Embedding.tpe': 1, 'aug.ta.combo': 'IGAWang2019', 'aug.ta.IGAWang2019.p_token': 0.06278384536052518, 'aug.ta.IGAWang2019.tpe': 0, 'aug.compose_cross_family': 'attack_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 13:56:41,230][0m Trial 27 pruned. Pruned at epoch 9[0m
+[32m[I 2025-10-18 13:57:06,742][0m Trial 28 pruned. Pruned at epoch 3[0m
+[32m[I 2025-10-18 13:57:22,099][0m Trial 29 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 01:57:37 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 02:07:37 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 02:07:37 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 11
+✓ Trials Pruned: 39
+✓ Total Trials: 50 / 380 (Stage A)
+✓ [32m[I 2025-10-18 14:06:23,495][0m Trial 46 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 8, 'train.ga': 8, 'train.max_len': 384, 'train.clip': 0.0, 'train.compile': True, 'optim.optimizer': 'adamw', 'opt.lr_enc': 4.637043763563263e-05, 'opt.lr_head': 0.0009344809501582097, 'opt.wd': 0.1443878973775133, 'sched.type': 'one_cycle', 'sched.warmup_ratio': 0.10500986804907693, 'head.evidence.pooler': 'cls', 'head.evidence.type': 'linear', 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.4195498493998058, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'attention', 'head.criteria.attn_dim': 128, 'head.criteria.type': 'mlp', 'head.criteria.layers': 1, 'head.criteria.hidden': 512, 'head.criteria.act': 'tanh', 'head.criteria.dropout': 0.044067215488345746, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.03636353056746775, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.5141391072246626, 'aug.simple.combo': 'EDA|BackTranslation', 'aug.simple.compose': 'sequence', 'aug.simple.EDA.p_token': 0.2924547161584462, 'aug.simple.EDA.tpe': 2, 'aug.simple.BackTranslation.p_token': 0.28065093927348944, 'aug.simple.BackTranslation.tpe': 2, 'aug.ta.combo': 'PWWSRen2019', 'aug.ta.PWWSRen2019.p_token': 0.09938897641961957, 'aug.ta.PWWSRen2019.tpe': 2, 'aug.compose_cross_family': 'serial_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 14:06:55,090][0m Trial 47 pruned. Pruned at epoch 3[0m
+[32m[I 2025-10-18 14:07:15,253][0m Trial 48 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 14:07:30,226][0m Trial 49 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 02:07:37 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 02:17:37 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 02:17:37 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 15
+✓ Trials Pruned: 47
+✓ Total Trials: 62 / 380 (Stage A)
+✓ [32m[I 2025-10-18 14:16:48,682][0m Trial 61 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'bf16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 512, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 2.7949960779203087e-05, 'opt.lr_head': 0.0022080752502459263, 'opt.wd': 0.08055493784541187, 'sched.type': 'linear', 'sched.warmup_ratio': 0.03765836502229925, 'head.evidence.pooler': 'attention', 'head.evidence.attn_dim': 384, 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.23135856858597376, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.06346640394275561, 'head.criteria.norm': 'none', 'loss.ls': 0.0718434669212948, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.5766756460296234, 'aug.simple.combo': 'Embedding|BackTranslation', 'aug.simple.compose': 'sequence', 'aug.simple.Embedding.p_token': 0.2811646523955617, 'aug.simple.Embedding.tpe': 1, 'aug.simple.BackTranslation.p_token': 0.07926610324546567, 'aug.simple.BackTranslation.tpe': 1, 'aug.ta.combo': 'Kuleshov2017', 'aug.ta.Kuleshov2017.p_token': 0.08171820701577333, 'aug.ta.Kuleshov2017.tpe': 1, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 14:13:40,199][0m Trial 59 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'bf16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 512, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 3.361864968133415e-05, 'opt.lr_head': 0.002630144398398181, 'opt.wd': 0.08657183601283852, 'sched.type': 'linear', 'sched.warmup_ratio': 0.04933128936895557, 'head.evidence.pooler': 'attention', 'head.evidence.attn_dim': 256, 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.22030155702958737, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.17611548753537265, 'head.criteria.norm': 'none', 'loss.ls': 0.0398313795194134, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.6047737502972388, 'aug.simple.combo': 'EDA', 'aug.simple.compose': 'sequence', 'aug.simple.EDA.p_token': 0.05812164917254124, 'aug.simple.EDA.tpe': 1, 'aug.ta.combo': 'Kuleshov2017', 'aug.ta.Kuleshov2017.p_token': 0.2766633242379997, 'aug.ta.Kuleshov2017.tpe': 0, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 13 with value: 0.4444444444444444.[0m
+[32m[I 2025-10-18 14:15:12,946][0m Trial 60 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 512, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 7.256777061605962e-06, 'opt.lr_head': 6.639925077255059e-05, 'opt.wd': 0.0001789867050661593, 'sched.type': 'linear', 'sched.warmup_ratio': 0.14834616914647497, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 1, 'head.evidence.hidden': 512, 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.03602114632217422, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.010906635395839227, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.011069613964853491, 'loss.cw': 'inverse_freq', 'mtl.w_ev': 0.5943889480858516, 'aug.simple.combo': 'BackTranslation|CLARE', 'aug.simple.compose': 'sequence', 'aug.simple.BackTranslation.p_token': 0.06383995423460238, 'aug.simple.BackTranslation.tpe': 1, 'aug.simple.CLARE.p_token': 0.06763751592747365, 'aug.simple.CLARE.tpe': 2, 'aug.ta.combo': 'TextFoolerJin2019', 'aug.ta.TextFoolerJin2019.p_token': 0.24158782013934754, 'aug.ta.TextFoolerJin2019.tpe': 1, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 13 with value: 0.4444444444444444.[0m
+[32m[I 2025-10-18 14:16:48,682][0m Trial 61 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'bf16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 512, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 2.7949960779203087e-05, 'opt.lr_head': 0.0022080752502459263, 'opt.wd': 0.08055493784541187, 'sched.type': 'linear', 'sched.warmup_ratio': 0.03765836502229925, 'head.evidence.pooler': 'attention', 'head.evidence.attn_dim': 384, 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.23135856858597376, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.06346640394275561, 'head.criteria.norm': 'none', 'loss.ls': 0.0718434669212948, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.5766756460296234, 'aug.simple.combo': 'Embedding|BackTranslation', 'aug.simple.compose': 'sequence', 'aug.simple.Embedding.p_token': 0.2811646523955617, 'aug.simple.Embedding.tpe': 1, 'aug.simple.BackTranslation.p_token': 0.07926610324546567, 'aug.simple.BackTranslation.tpe': 1, 'aug.ta.combo': 'Kuleshov2017', 'aug.ta.Kuleshov2017.p_token': 0.08171820701577333, 'aug.ta.Kuleshov2017.tpe': 1, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 13 with value: 0.4444444444444444.[0m
+
+=== End of Status Report ===
+[Sat Oct 18 02:17:37 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 02:27:37 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 02:27:37 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 18
+✓ Trials Pruned: 60
+✓ Total Trials: 78 / 380 (Stage A)
+✓ [32m[I 2025-10-18 14:27:04,955][0m Trial 76 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 32, 'train.ga': 2, 'train.max_len': 512, 'train.clip': 0.5, 'train.compile': False, 'optim.optimizer': 'adamw', 'opt.lr_enc': 9.796253579909104e-06, 'opt.lr_head': 0.00011721023193702063, 'opt.wd': 0.0010209978594184676, 'sched.type': 'one_cycle', 'sched.warmup_ratio': 0.09125232644150943, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 3, 'head.evidence.hidden': 512, 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.16108937331898956, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'max', 'head.criteria.type': 'mlp', 'head.criteria.layers': 2, 'head.criteria.hidden': 1024, 'head.criteria.act': 'tanh', 'head.criteria.dropout': 0.4680287030820634, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.1976986412616319, 'loss.cw': 'none', 'mtl.w_ev': 0.5874832683261825, 'aug.simple.combo': 'BackTranslation|CLARE', 'aug.simple.compose': 'sequence', 'aug.simple.BackTranslation.p_token': 0.19684246714389425, 'aug.simple.BackTranslation.tpe': 0, 'aug.simple.CLARE.p_token': 0.16245099767610716, 'aug.simple.CLARE.tpe': 2, 'aug.ta.combo': 'PWWSRen2019', 'aug.ta.PWWSRen2019.p_token': 0.24853364043306808, 'aug.ta.PWWSRen2019.tpe': 1, 'aug.compose_cross_family': 'attack_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 14:25:25,893][0m Trial 75 pruned. Pruned at epoch 9[0m
+[32m[I 2025-10-18 14:27:04,955][0m Trial 76 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 32, 'train.ga': 2, 'train.max_len': 512, 'train.clip': 0.5, 'train.compile': False, 'optim.optimizer': 'adamw', 'opt.lr_enc': 9.796253579909104e-06, 'opt.lr_head': 0.00011721023193702063, 'opt.wd': 0.0010209978594184676, 'sched.type': 'one_cycle', 'sched.warmup_ratio': 0.09125232644150943, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 3, 'head.evidence.hidden': 512, 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.16108937331898956, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'max', 'head.criteria.type': 'mlp', 'head.criteria.layers': 2, 'head.criteria.hidden': 1024, 'head.criteria.act': 'tanh', 'head.criteria.dropout': 0.4680287030820634, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.1976986412616319, 'loss.cw': 'none', 'mtl.w_ev': 0.5874832683261825, 'aug.simple.combo': 'BackTranslation|CLARE', 'aug.simple.compose': 'sequence', 'aug.simple.BackTranslation.p_token': 0.19684246714389425, 'aug.simple.BackTranslation.tpe': 0, 'aug.simple.CLARE.p_token': 0.16245099767610716, 'aug.simple.CLARE.tpe': 2, 'aug.ta.combo': 'PWWSRen2019', 'aug.ta.PWWSRen2019.p_token': 0.24853364043306808, 'aug.ta.PWWSRen2019.tpe': 1, 'aug.compose_cross_family': 'attack_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+[32m[I 2025-10-18 14:27:21,343][0m Trial 77 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 02:27:37 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 02:37:37 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 02:37:37 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 21
+✓ Trials Pruned: 74
+✓ Total Trials: 95 / 380 (Stage A)
+✓ [32m[I 2025-10-18 14:34:30,205][0m Trial 87 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 8, 'train.ga': 8, 'train.max_len': 384, 'train.clip': 1.0, 'train.compile': True, 'optim.optimizer': 'adamw', 'opt.lr_enc': 3.058210146262065e-05, 'opt.lr_head': 0.000777515465634253, 'opt.wd': 0.017485938684987677, 'sched.type': 'one_cycle', 'sched.warmup_ratio': 0.09462179310548953, 'head.evidence.pooler': 'max', 'head.evidence.type': 'linear', 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.3487577601239086, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'attention', 'head.criteria.attn_dim': 384, 'head.criteria.type': 'mlp', 'head.criteria.layers': 3, 'head.criteria.hidden': 256, 'head.criteria.act': 'gelu', 'head.criteria.dropout': 0.1504085687359626, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.021867909840634886, 'loss.cw': 'none', 'mtl.w_ev': 0.3887027117282999, 'aug.simple.combo': 'EDA|BackTranslation', 'aug.simple.compose': 'sequence', 'aug.simple.EDA.p_token': 0.12129664900251196, 'aug.simple.EDA.tpe': 2, 'aug.simple.BackTranslation.p_token': 0.27643919765911196, 'aug.simple.BackTranslation.tpe': 2, 'aug.ta.combo': 'CheckList2020', 'aug.ta.CheckList2020.p_token': 0.10807241352411316, 'aug.ta.CheckList2020.tpe': 2, 'aug.compose_cross_family': 'attack_then_serial'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 14:36:13,411][0m Trial 92 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 14:36:28,954][0m Trial 93 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 14:36:53,736][0m Trial 94 pruned. Pruned at epoch 3[0m
+
+=== End of Status Report ===
+[Sat Oct 18 02:37:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 02:47:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 02:47:38 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 25
+✓ Trials Pruned: 82
+✓ Total Trials: 107 / 380 (Stage A)
+✓ [32m[I 2025-10-18 14:47:16,479][0m Trial 106 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': True, 'train.amp': 'bf16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 384, 'train.clip': 0.0, 'train.compile': True, 'optim.optimizer': 'lion', 'opt.lr_enc': 1.9127265161552795e-05, 'opt.lr_head': 0.0008895695177060584, 'opt.wd': 0.006058373812047154, 'sched.type': 'linear', 'sched.warmup_ratio': 0.02120728646390497, 'head.evidence.pooler': 'max', 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.35669146178013605, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.09649054755696589, 'head.criteria.norm': 'none', 'loss.ls': 0.059047609253989684, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.6091518237543825, 'aug.simple.combo': 'EDA|BackTranslation', 'aug.simple.compose': 'sequence', 'aug.simple.EDA.p_token': 0.09973244494875959, 'aug.simple.EDA.tpe': 1, 'aug.simple.BackTranslation.p_token': 0.06517076723767058, 'aug.simple.BackTranslation.tpe': 1, 'aug.ta.combo': 'Kuleshov2017', 'aug.ta.Kuleshov2017.p_token': 0.18665373491591775, 'aug.ta.Kuleshov2017.tpe': 1, 'aug.compose_cross_family': 'attack_then_serial'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 14:44:40,511][0m Trial 104 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': True, 'train.amp': 'bf16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 384, 'train.clip': 0.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 2.4086711649713737e-05, 'opt.lr_head': 0.001454218092596453, 'opt.wd': 0.0896981403317314, 'sched.type': 'linear', 'sched.warmup_ratio': 0.053261462040807964, 'head.evidence.pooler': 'max', 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.2318143490612294, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.08166502157213687, 'head.criteria.norm': 'none', 'loss.ls': 0.056369939083650865, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.5950755315044877, 'aug.simple.combo': 'EDA', 'aug.simple.compose': 'sequence', 'aug.simple.EDA.p_token': 0.21932517158391485, 'aug.simple.EDA.tpe': 2, 'aug.ta.combo': 'Kuleshov2017', 'aug.ta.Kuleshov2017.p_token': 0.28899501470651806, 'aug.ta.Kuleshov2017.tpe': 1, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 13 with value: 0.4444444444444444.[0m
+[32m[I 2025-10-18 14:45:33,786][0m Trial 105 pruned. Pruned at epoch 9[0m
+[32m[I 2025-10-18 14:47:16,479][0m Trial 106 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': True, 'train.amp': 'bf16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 384, 'train.clip': 0.0, 'train.compile': True, 'optim.optimizer': 'lion', 'opt.lr_enc': 1.9127265161552795e-05, 'opt.lr_head': 0.0008895695177060584, 'opt.wd': 0.006058373812047154, 'sched.type': 'linear', 'sched.warmup_ratio': 0.02120728646390497, 'head.evidence.pooler': 'max', 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.35669146178013605, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.09649054755696589, 'head.criteria.norm': 'none', 'loss.ls': 0.059047609253989684, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.6091518237543825, 'aug.simple.combo': 'EDA|BackTranslation', 'aug.simple.compose': 'sequence', 'aug.simple.EDA.p_token': 0.09973244494875959, 'aug.simple.EDA.tpe': 1, 'aug.simple.BackTranslation.p_token': 0.06517076723767058, 'aug.simple.BackTranslation.tpe': 1, 'aug.ta.combo': 'Kuleshov2017', 'aug.ta.Kuleshov2017.p_token': 0.18665373491591775, 'aug.ta.Kuleshov2017.tpe': 1, 'aug.compose_cross_family': 'attack_then_serial'}. Best is trial 13 with value: 0.4444444444444444.[0m
+
+=== End of Status Report ===
+[Sat Oct 18 02:47:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 02:57:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 02:57:38 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 28
+✓ Trials Pruned: 96
+✓ Total Trials: 124 / 380 (Stage A)
+✓ [32m[I 2025-10-18 14:56:46,667][0m Trial 122 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'bf16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 512, 'train.clip': 0.5, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 3.330713980092175e-05, 'opt.lr_head': 0.002131219347497331, 'opt.wd': 0.05994286146591053, 'sched.type': 'linear', 'sched.warmup_ratio': 0.10306476419049009, 'head.evidence.pooler': 'attention', 'head.evidence.attn_dim': 128, 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.13325421404620147, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'attention', 'head.criteria.attn_dim': 512, 'head.criteria.type': 'linear', 'head.criteria.act': 'relu', 'head.criteria.dropout': 0.17025054870916026, 'head.criteria.norm': 'none', 'loss.ls': 0.021018506169332516, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.5990176020647472, 'aug.simple.combo': 'EDA', 'aug.simple.compose': 'sequence', 'aug.simple.EDA.p_token': 0.13390231106022532, 'aug.simple.EDA.tpe': 2, 'aug.ta.combo': 'Kuleshov2017', 'aug.ta.Kuleshov2017.p_token': 0.1581917704270484, 'aug.ta.Kuleshov2017.tpe': 1, 'aug.compose_cross_family': 'serial_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 14:55:10,281][0m Trial 121 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 14:56:46,667][0m Trial 122 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': False, 'train.amp': 'bf16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 512, 'train.clip': 0.5, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 3.330713980092175e-05, 'opt.lr_head': 0.002131219347497331, 'opt.wd': 0.05994286146591053, 'sched.type': 'linear', 'sched.warmup_ratio': 0.10306476419049009, 'head.evidence.pooler': 'attention', 'head.evidence.attn_dim': 128, 'head.evidence.type': 'linear', 'head.evidence.act': 'gelu', 'head.evidence.dropout': 0.13325421404620147, 'head.evidence.norm': 'none', 'head.criteria.pooler': 'attention', 'head.criteria.attn_dim': 512, 'head.criteria.type': 'linear', 'head.criteria.act': 'relu', 'head.criteria.dropout': 0.17025054870916026, 'head.criteria.norm': 'none', 'loss.ls': 0.021018506169332516, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.5990176020647472, 'aug.simple.combo': 'EDA', 'aug.simple.compose': 'sequence', 'aug.simple.EDA.p_token': 0.13390231106022532, 'aug.simple.EDA.tpe': 2, 'aug.ta.combo': 'Kuleshov2017', 'aug.ta.Kuleshov2017.p_token': 0.1581917704270484, 'aug.ta.Kuleshov2017.tpe': 1, 'aug.compose_cross_family': 'serial_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+[32m[I 2025-10-18 14:57:02,794][0m Trial 123 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 02:57:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 03:07:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 03:07:38 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 30
+✓ Trials Pruned: 104
+✓ Total Trials: 134 / 380 (Stage A)
+✓ [32m[I 2025-10-18 15:00:01,123][0m Trial 126 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': True, 'train.amp': 'bf16', 'train.bs': 8, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 1.0869589067853822e-05, 'opt.lr_head': 0.00011430740491573612, 'opt.wd': 0.0053914359885428925, 'sched.type': 'cosine', 'sched.warmup_ratio': 0.11260177464212524, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 3, 'head.evidence.hidden': 256, 'head.evidence.act': 'silu', 'head.evidence.dropout': 0.29017795477828334, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'max', 'head.criteria.type': 'mlp', 'head.criteria.layers': 2, 'head.criteria.hidden': 256, 'head.criteria.act': 'gelu', 'head.criteria.dropout': 0.0058115780961901856, 'head.criteria.norm': 'none', 'loss.ls': 0.07818910461184894, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.310656345548053, 'aug.simple.combo': 'CheckList', 'aug.simple.compose': 'one_of', 'aug.simple.CheckList.p_token': 0.2770209217649636, 'aug.simple.CheckList.tpe': 2, 'aug.ta.combo': 'HotFlipEbrahimi2017', 'aug.ta.HotFlipEbrahimi2017.p_token': 0.06645746084078845, 'aug.ta.HotFlipEbrahimi2017.tpe': 2, 'aug.compose_cross_family': 'serial_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 15:01:54,550][0m Trial 131 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:21,569][0m Trial 132 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:45,085][0m Trial 133 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 03:07:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 03:17:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 03:17:38 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 30
+✓ Trials Pruned: 104
+✓ Total Trials: 134 / 380 (Stage A)
+✓ [32m[I 2025-10-18 15:00:01,123][0m Trial 126 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': True, 'train.amp': 'bf16', 'train.bs': 8, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 1.0869589067853822e-05, 'opt.lr_head': 0.00011430740491573612, 'opt.wd': 0.0053914359885428925, 'sched.type': 'cosine', 'sched.warmup_ratio': 0.11260177464212524, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 3, 'head.evidence.hidden': 256, 'head.evidence.act': 'silu', 'head.evidence.dropout': 0.29017795477828334, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'max', 'head.criteria.type': 'mlp', 'head.criteria.layers': 2, 'head.criteria.hidden': 256, 'head.criteria.act': 'gelu', 'head.criteria.dropout': 0.0058115780961901856, 'head.criteria.norm': 'none', 'loss.ls': 0.07818910461184894, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.310656345548053, 'aug.simple.combo': 'CheckList', 'aug.simple.compose': 'one_of', 'aug.simple.CheckList.p_token': 0.2770209217649636, 'aug.simple.CheckList.tpe': 2, 'aug.ta.combo': 'HotFlipEbrahimi2017', 'aug.ta.HotFlipEbrahimi2017.p_token': 0.06645746084078845, 'aug.ta.HotFlipEbrahimi2017.tpe': 2, 'aug.compose_cross_family': 'serial_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 15:01:54,550][0m Trial 131 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:21,569][0m Trial 132 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:45,085][0m Trial 133 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 03:17:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 03:27:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 03:27:38 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 30
+✓ Trials Pruned: 104
+✓ Total Trials: 134 / 380 (Stage A)
+✓ [32m[I 2025-10-18 15:00:01,123][0m Trial 126 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': True, 'train.amp': 'bf16', 'train.bs': 8, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 1.0869589067853822e-05, 'opt.lr_head': 0.00011430740491573612, 'opt.wd': 0.0053914359885428925, 'sched.type': 'cosine', 'sched.warmup_ratio': 0.11260177464212524, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 3, 'head.evidence.hidden': 256, 'head.evidence.act': 'silu', 'head.evidence.dropout': 0.29017795477828334, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'max', 'head.criteria.type': 'mlp', 'head.criteria.layers': 2, 'head.criteria.hidden': 256, 'head.criteria.act': 'gelu', 'head.criteria.dropout': 0.0058115780961901856, 'head.criteria.norm': 'none', 'loss.ls': 0.07818910461184894, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.310656345548053, 'aug.simple.combo': 'CheckList', 'aug.simple.compose': 'one_of', 'aug.simple.CheckList.p_token': 0.2770209217649636, 'aug.simple.CheckList.tpe': 2, 'aug.ta.combo': 'HotFlipEbrahimi2017', 'aug.ta.HotFlipEbrahimi2017.p_token': 0.06645746084078845, 'aug.ta.HotFlipEbrahimi2017.tpe': 2, 'aug.compose_cross_family': 'serial_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 15:01:54,550][0m Trial 131 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:21,569][0m Trial 132 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:45,085][0m Trial 133 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 03:27:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 03:37:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 03:37:38 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 30
+✓ Trials Pruned: 104
+✓ Total Trials: 134 / 380 (Stage A)
+✓ [32m[I 2025-10-18 15:00:01,123][0m Trial 126 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': True, 'train.amp': 'bf16', 'train.bs': 8, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 1.0869589067853822e-05, 'opt.lr_head': 0.00011430740491573612, 'opt.wd': 0.0053914359885428925, 'sched.type': 'cosine', 'sched.warmup_ratio': 0.11260177464212524, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 3, 'head.evidence.hidden': 256, 'head.evidence.act': 'silu', 'head.evidence.dropout': 0.29017795477828334, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'max', 'head.criteria.type': 'mlp', 'head.criteria.layers': 2, 'head.criteria.hidden': 256, 'head.criteria.act': 'gelu', 'head.criteria.dropout': 0.0058115780961901856, 'head.criteria.norm': 'none', 'loss.ls': 0.07818910461184894, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.310656345548053, 'aug.simple.combo': 'CheckList', 'aug.simple.compose': 'one_of', 'aug.simple.CheckList.p_token': 0.2770209217649636, 'aug.simple.CheckList.tpe': 2, 'aug.ta.combo': 'HotFlipEbrahimi2017', 'aug.ta.HotFlipEbrahimi2017.p_token': 0.06645746084078845, 'aug.ta.HotFlipEbrahimi2017.tpe': 2, 'aug.compose_cross_family': 'serial_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 15:01:54,550][0m Trial 131 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:21,569][0m Trial 132 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:45,085][0m Trial 133 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 03:37:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 03:47:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 03:47:38 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 30
+✓ Trials Pruned: 104
+✓ Total Trials: 134 / 380 (Stage A)
+✓ [32m[I 2025-10-18 15:00:01,123][0m Trial 126 finished with value: 0.26666666666666666 and parameters: {'encoder.gc': True, 'train.amp': 'bf16', 'train.bs': 8, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 1.0869589067853822e-05, 'opt.lr_head': 0.00011430740491573612, 'opt.wd': 0.0053914359885428925, 'sched.type': 'cosine', 'sched.warmup_ratio': 0.11260177464212524, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 3, 'head.evidence.hidden': 256, 'head.evidence.act': 'silu', 'head.evidence.dropout': 0.29017795477828334, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'max', 'head.criteria.type': 'mlp', 'head.criteria.layers': 2, 'head.criteria.hidden': 256, 'head.criteria.act': 'gelu', 'head.criteria.dropout': 0.0058115780961901856, 'head.criteria.norm': 'none', 'loss.ls': 0.07818910461184894, 'loss.cw': 'sqrt_inverse', 'mtl.w_ev': 0.310656345548053, 'aug.simple.combo': 'CheckList', 'aug.simple.compose': 'one_of', 'aug.simple.CheckList.p_token': 0.2770209217649636, 'aug.simple.CheckList.tpe': 2, 'aug.ta.combo': 'HotFlipEbrahimi2017', 'aug.ta.HotFlipEbrahimi2017.p_token': 0.06645746084078845, 'aug.ta.HotFlipEbrahimi2017.tpe': 2, 'aug.compose_cross_family': 'serial_only'}. Best is trial 13 with value: 0.4444444444444444.[0m
+✓ No Errors Detected
+
+Latest Trial Activity:
+[32m[I 2025-10-18 15:01:54,550][0m Trial 131 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:21,569][0m Trial 132 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:45,085][0m Trial 133 pruned. Pruned at epoch 1[0m
+
+=== End of Status Report ===
+[Sat Oct 18 03:47:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 03:57:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 03:57:38 PM CST 2025 ===
+
+✓ HPO Process: RUNNING
+✓ Trials Completed: 31
+✓ Trials Pruned: 104
+✓ Total Trials: 135 / 380 (Stage A)
+✓ [32m[I 2025-10-18 15:57:29,257][0m Trial 0 finished with value: 0.26666666666666666 and parameters: {'structure.id': 0, 'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 7.345340153697028e-06, 'opt.lr_head': 9.931670973408442e-05, 'opt.wd': 0.00013214583524101325, 'sched.type': 'linear', 'sched.warmup_ratio': 0.16883408979383943, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 1, 'head.evidence.hidden': 512, 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.02078642952519605, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.014986794936338976, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.04037069042458968, 'loss.cw': 'inverse_freq', 'mtl.w_ev': 0.5690408472900506, 'aug.simple.combo': 'CLARE|CheckList', 'aug.simple.compose': 'sequence', 'aug.simple.CheckList.p_token': 0.15172699018071767, 'aug.simple.CheckList.tpe': 2, 'aug.simple.CLARE.p_token': 0.24559637101456838, 'aug.simple.CLARE.tpe': 1, 'aug.ta.combo': 'TextFoolerJin2019', 'aug.ta.TextFoolerJin2019.p_token': 0.2544585540437554, 'aug.ta.TextFoolerJin2019.tpe': 0, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 0 with value: 0.26666666666666666.[0m
+
+⚠ Recent Errors Detected:
+[33m[W 2025-10-18 15:57:33,113][0m Trial 1 failed because of the following error: ValueError('CategoricalDistribution does not support dynamic value space.')[0m
+Traceback (most recent call last):
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+Traceback (most recent call last):
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+
+Latest Trial Activity:
+[32m[I 2025-10-18 15:02:21,569][0m Trial 132 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:45,085][0m Trial 133 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:57:29,257][0m Trial 0 finished with value: 0.26666666666666666 and parameters: {'structure.id': 0, 'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 7.345340153697028e-06, 'opt.lr_head': 9.931670973408442e-05, 'opt.wd': 0.00013214583524101325, 'sched.type': 'linear', 'sched.warmup_ratio': 0.16883408979383943, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 1, 'head.evidence.hidden': 512, 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.02078642952519605, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.014986794936338976, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.04037069042458968, 'loss.cw': 'inverse_freq', 'mtl.w_ev': 0.5690408472900506, 'aug.simple.combo': 'CLARE|CheckList', 'aug.simple.compose': 'sequence', 'aug.simple.CheckList.p_token': 0.15172699018071767, 'aug.simple.CheckList.tpe': 2, 'aug.simple.CLARE.p_token': 0.24559637101456838, 'aug.simple.CLARE.tpe': 1, 'aug.ta.combo': 'TextFoolerJin2019', 'aug.ta.TextFoolerJin2019.p_token': 0.2544585540437554, 'aug.ta.TextFoolerJin2019.tpe': 0, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 0 with value: 0.26666666666666666.[0m
+
+=== End of Status Report ===
+[Sat Oct 18 03:57:38 PM CST 2025] Next check in 10 minutes...
+
+[Sat Oct 18 04:07:38 PM CST 2025] ========== Status Check ==========
+=== HPO Status Report Sat Oct 18 04:07:38 PM CST 2025 ===
+
+✗ HPO Process: NOT RUNNING
+✓ Trials Completed: 31
+✓ Trials Pruned: 104
+✓ Total Trials: 135 / 380 (Stage A)
+✓ [32m[I 2025-10-18 15:57:29,257][0m Trial 0 finished with value: 0.26666666666666666 and parameters: {'structure.id': 0, 'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 7.345340153697028e-06, 'opt.lr_head': 9.931670973408442e-05, 'opt.wd': 0.00013214583524101325, 'sched.type': 'linear', 'sched.warmup_ratio': 0.16883408979383943, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 1, 'head.evidence.hidden': 512, 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.02078642952519605, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.014986794936338976, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.04037069042458968, 'loss.cw': 'inverse_freq', 'mtl.w_ev': 0.5690408472900506, 'aug.simple.combo': 'CLARE|CheckList', 'aug.simple.compose': 'sequence', 'aug.simple.CheckList.p_token': 0.15172699018071767, 'aug.simple.CheckList.tpe': 2, 'aug.simple.CLARE.p_token': 0.24559637101456838, 'aug.simple.CLARE.tpe': 1, 'aug.ta.combo': 'TextFoolerJin2019', 'aug.ta.TextFoolerJin2019.p_token': 0.2544585540437554, 'aug.ta.TextFoolerJin2019.tpe': 0, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 0 with value: 0.26666666666666666.[0m
+
+⚠ Recent Errors Detected:
+[33m[W 2025-10-18 15:57:33,113][0m Trial 1 failed because of the following error: ValueError('CategoricalDistribution does not support dynamic value space.')[0m
+Traceback (most recent call last):
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+Traceback (most recent call last):
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+make: *** [Makefile:76: hpo] Error 1
+
+Latest Trial Activity:
+[32m[I 2025-10-18 15:02:21,569][0m Trial 132 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:02:45,085][0m Trial 133 pruned. Pruned at epoch 1[0m
+[32m[I 2025-10-18 15:57:29,257][0m Trial 0 finished with value: 0.26666666666666666 and parameters: {'structure.id': 0, 'encoder.gc': False, 'train.amp': 'fp16', 'train.bs': 16, 'train.ga': 4, 'train.max_len': 256, 'train.clip': 1.0, 'train.compile': False, 'optim.optimizer': 'lion', 'opt.lr_enc': 7.345340153697028e-06, 'opt.lr_head': 9.931670973408442e-05, 'opt.wd': 0.00013214583524101325, 'sched.type': 'linear', 'sched.warmup_ratio': 0.16883408979383943, 'head.evidence.pooler': 'max', 'head.evidence.type': 'mlp', 'head.evidence.layers': 1, 'head.evidence.hidden': 512, 'head.evidence.act': 'relu', 'head.evidence.dropout': 0.02078642952519605, 'head.evidence.norm': 'layernorm', 'head.criteria.pooler': 'cls', 'head.criteria.type': 'linear', 'head.criteria.act': 'silu', 'head.criteria.dropout': 0.014986794936338976, 'head.criteria.norm': 'layernorm', 'loss.ls': 0.04037069042458968, 'loss.cw': 'inverse_freq', 'mtl.w_ev': 0.5690408472900506, 'aug.simple.combo': 'CLARE|CheckList', 'aug.simple.compose': 'sequence', 'aug.simple.CheckList.p_token': 0.15172699018071767, 'aug.simple.CheckList.tpe': 2, 'aug.simple.CLARE.p_token': 0.24559637101456838, 'aug.simple.CLARE.tpe': 1, 'aug.ta.combo': 'TextFoolerJin2019', 'aug.ta.TextFoolerJin2019.p_token': 0.2544585540437554, 'aug.ta.TextFoolerJin2019.tpe': 0, 'aug.compose_cross_family': 'serial_then_attack'}. Best is trial 0 with value: 0.26666666666666666.[0m
+
+=== End of Status Report ===
+[Sat Oct 18 04:07:38 PM CST 2025] WARNING: HPO process not found!
+[Sat Oct 18 04:07:38 PM CST 2025] Checking for errors...
+[33m[W 2025-10-18 15:57:33,113][0m Trial 1 failed because of the following error: ValueError('CategoricalDistribution does not support dynamic value space.')[0m
+Traceback (most recent call last):
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+Traceback (most recent call last):
+    raise ValueError(
+ValueError: CategoricalDistribution does not support dynamic value space.
+make: *** [Makefile:76: hpo] Error 1
+[Sat Oct 18 04:07:38 PM CST 2025] Process stopped. Please investigate.

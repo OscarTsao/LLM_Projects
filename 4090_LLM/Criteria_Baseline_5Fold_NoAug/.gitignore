@@ -1,0 +1,6 @@
+__pycache__/
+.venv/
+mlruns/
+mlflow.db
+mlflow.db-journal
+outputs/

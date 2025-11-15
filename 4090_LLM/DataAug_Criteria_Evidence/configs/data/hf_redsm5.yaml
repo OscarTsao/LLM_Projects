@@ -1,0 +1,21 @@
+# HuggingFace ReDSM-5 dataset configuration
+
+source: "huggingface"
+hf_dataset_name: "irlab-udc/redsm5"
+
+# Canonical file layout
+field_map: "configs/data/field_map.yaml"
+dsm_criteria: "data/raw/redsm5/dsm_criteria.json"
+output_dir: "data/processed"
+
+# Split handling (grouped by post_id when HF split metadata absent)
+train_ratio: 0.7
+val_ratio: 0.15
+test_ratio: 0.15
+
+# Optional overrides for caching and local mirroring
+hf_cache_dir: null  # e.g., "${env:HF_HOME,null}"
+data_dir: null      # Optional local override for HF cache fallback
+## Hugging Face dataset configuration (ReDSM-5)
+#
+# Controls dataset name/splits/cache for loading posts and annotations from HF.

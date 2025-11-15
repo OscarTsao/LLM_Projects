@@ -1,0 +1,28 @@
+# RedSM5 dataset configuration (local copy)
+dataset_id: "local/redsm5"
+
+local_data:
+  posts_file: "Data/redsm5/redsm5_posts.csv"
+  annotations_file: "Data/redsm5/redsm5_annotations.csv"
+  groundtruth_file: "Data/groundtruth/redsm5_ground_truth.csv"
+  split_seed: 1337
+  split_ratios:
+    train: 0.7
+    validation: 0.15
+    test: 0.15
+
+# Data splits
+splits:
+  train: "train"
+  validation: "validation"
+  test: "test"
+  
+# Data loading
+batch_size: 16
+num_workers: 4
+prefetch_factor: 2
+
+# Preprocessing
+max_length: 512
+truncation: true
+padding: "max_length"

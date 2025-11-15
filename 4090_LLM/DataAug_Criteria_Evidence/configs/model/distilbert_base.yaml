@@ -1,0 +1,24 @@
+# DistilBERT Base Configuration
+# Distilled version of BERT: smaller, faster, cheaper
+# Paper: https://arxiv.org/abs/1910.01108
+
+name: "distilbert-base-uncased"
+
+# Model architecture (distilled from BERT)
+hidden_size: 768
+num_attention_heads: 12
+num_hidden_layers: 6  # 50% of BERT layers
+intermediate_size: 3072
+max_position_embeddings: 512
+
+# Training configuration
+gradient_checkpointing: false
+dropout: 0.1
+attention_dropout: 0.1
+
+# Notes:
+# - 40% smaller than BERT-base (66M → 40M parameters)
+# - 60% faster inference
+# - Retains 97% of BERT's language understanding
+# - Best choice for production deployment with tight latency/memory constraints
+# - No token type embeddings (uses positional embeddings only)

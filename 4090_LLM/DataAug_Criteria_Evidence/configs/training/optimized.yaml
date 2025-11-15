@@ -1,0 +1,79 @@
+# Optimized Training Configuration for Maximum Speed and Reproducibility
+# Based on PyTorch 2025 best practices
+
+# Basic training parameters
+num_epochs: 10
+batch_size: 16
+eval_batch_size: 32
+learning_rate: 2.0e-5
+weight_decay: 0.01
+max_length: 512
+gradient_clip: 1.0
+gradient_accumulation_steps: 1
+
+# Optimizer configuration
+optimizer:
+  name: "adamw"
+  betas: [0.9, 0.999]
+  eps: 1.0e-8
+
+# Learning rate scheduler
+scheduler:
+  type: "cosine"  # Options: linear, cosine, cosine_with_restarts, polynomial, constant
+  warmup_ratio: 0.06  # 6% of training steps
+  num_cycles: 1  # For cosine_with_restarts
+
+# Mixed Precision Training (AMP)
+# Best Practices:
+# - BFloat16: More stable, no gradient scaling needed, requires Ampere+ GPU
+# - Float16: Needs gradient scaling, works on older GPUs
+# - Choose based on GPU compute capability
+amp:
+  enabled: true
+  dtype: "float16"  # Options: float16, bfloat16
+  # For Ampere (8.0+) GPUs: Consider using bfloat16
+  # For older GPUs: Use float16
+
+# Early Stopping
+early_stopping:
+  metric: "val_f1_macro"  # Metric to monitor
+  mode: "max"  # max for metrics to maximize, min for loss
+  patience: 3  # Number of epochs without improvement
+  min_delta: 0.0001  # Minimum change to qualify as improvement
+
+# Logging
+logging_steps: 100  # Log training metrics every N steps
+eval_steps: 500  # Evaluate on validation set every N steps
+
+# Reproducibility Settings
+# For reproducibility: deterministic=true, cudnn_benchmark=false
+# For speed: deterministic=false, cudnn_benchmark=true
+deterministic: true  # Full reproducibility (slower)
+cudnn_benchmark: false  # Deterministic algorithm selection
+
+# DataLoader Optimization
+# Best Practices (2025):
+# - num_workers: Start with 2x CPU cores per GPU, tune for best performance
+# - pin_memory: Always true for GPU training (faster host->device transfer)
+# - persistent_workers: True to avoid reinitializing workers each epoch
+# - prefetch_factor: Default of 2 is usually optimal
+num_workers: 8  # Adjust based on CPU cores (set to 0 to disable multiprocessing)
+pin_memory: true  # Always true for GPU training
+persistent_workers: true  # Keep workers alive between epochs (requires num_workers > 0)
+prefetch_factor: 2  # Batches prefetched per worker (only used if num_workers > 0)
+
+# Hardware-Specific Settings
+device: "cuda"  # cuda, cpu, or specific device like cuda:0
+
+# Gradient Checkpointing (Trade memory for computation)
+# Enable for large models that don't fit in GPU memory
+gradient_checkpointing: false
+
+# Compilation (PyTorch 2.0+)
+# torch.compile for faster training (experimental)
+compile_model: false  # Set to true for PyTorch 2.0+ with compatible models
+
+# Additional Optimizations
+# TF32 mode (Ampere+ GPUs) - automatically enabled by PyTorch
+# Provides near-FP32 accuracy with FP16 speed
+tf32_enabled: true  # Only effective on Ampere (8.0+) and later GPUs

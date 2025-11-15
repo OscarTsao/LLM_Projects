@@ -1,0 +1,24 @@
+# DeBERTa v3 base configuration
+name: "microsoft/deberta-v3-base"
+type: "huggingface"
+
+# Model architecture
+encoder:
+  model_id: "microsoft/deberta-v3-base"
+  cache_dir: "~/.cache/huggingface"
+  
+# Task heads
+heads:
+  criteria_matching:
+    num_labels: 9  # Number of mental health criteria
+    dropout: 0.1
+    
+  evidence_binding:
+    max_span_length: 512
+    dropout: 0.1
+    
+# Training hyperparameters
+learning_rate: 2e-5
+weight_decay: 0.01
+warmup_steps: 500
+max_grad_norm: 1.0

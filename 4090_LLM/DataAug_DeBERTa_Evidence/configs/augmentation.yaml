@@ -1,0 +1,69 @@
+augmentation:
+  seed: 42
+  apply_to: "evidence"
+  sample_limit: 10
+  artifact_subdir: "augmentation"
+  simple:
+    compose: "one_of"
+    enabled_mask:
+      EDA: false
+      CharSwap: false
+      Embedding: false
+      BackTranslation: false
+      CheckList: false
+      CLARE: false
+    params:
+      EDA:
+        p_token: 0.1
+        tpe: 1
+      CharSwap:
+        p_token: 0.1
+        tpe: 1
+      Embedding:
+        p_token: 0.1
+        tpe: 1
+      BackTranslation:
+        p_token: 0.1
+        tpe: 1
+      CheckList:
+        p_token: 0.1
+        tpe: 1
+      CLARE:
+        p_token: 0.1
+        tpe: 1
+  ta:
+    enabled_mask:
+      TextFoolerJin2019: false
+      PWWSRen2019: false
+      DeepWordBugGao2018: false
+      HotFlipEbrahimi2017: false
+      IGAWang2019: false
+      Kuleshov2017: false
+      CheckList2020: false
+      BAEGarg2019: false
+    params:
+      TextFoolerJin2019:
+        p_token: 0.1
+        tpe: 1
+      PWWSRen2019:
+        p_token: 0.1
+        tpe: 1
+      DeepWordBugGao2018:
+        p_token: 0.1
+        tpe: 1
+      HotFlipEbrahimi2017:
+        p_token: 0.1
+        tpe: 1
+      IGAWang2019:
+        p_token: 0.1
+        tpe: 1
+      Kuleshov2017:
+        p_token: 0.1
+        tpe: 1
+      CheckList2020:
+        p_token: 0.1
+        tpe: 1
+      BAEGarg2019:
+        p_token: 0.1
+        tpe: 1
+  compose_cross_family: "attack_only"

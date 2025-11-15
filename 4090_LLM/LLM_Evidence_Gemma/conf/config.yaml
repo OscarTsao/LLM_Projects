@@ -1,0 +1,72 @@
+# Main configuration for LLM_Evidence_Gemma
+
+defaults:
+  - _self_
+  - experiment: full_5fold
+
+# Model configuration
+model:
+  name: google/gemma-2-2b  # or google/gemma-2-9b, google/gemma-2-27b
+  freeze_encoder: false
+  hidden_dropout_prob: 0.1
+  use_gradient_checkpointing: true
+  use_qlora: false
+  lora_r: 64
+  lora_alpha: 16
+  lora_dropout: 0.05
+  lora_target_modules: null
+
+# Data configuration
+data:
+  data_dir: data/redsm5
+  cv_splits_dir: data/cv_splits
+  max_length: 512
+  random_seed: 42
+  include_negatives: false  # Whether to include status=0 examples
+  use_cached_dataset: true
+  cache_dir: ${data.data_dir}/cache
+  overwrite_cache: false
+
+# Cross-validation configuration
+cv:
+  enabled: true
+  num_folds: 5
+  stratified: true
+  recreate_splits: false  # Set to true to regenerate splits
+  start_fold: 0  # Resume helper: skip folds < start_fold when history exists
+
+resume:
+  enabled: false
+  start_fold: 0  # 0 = train all folds, N = skip [0, N-1] if histories exist
+
+# Training configuration
+training:
+  num_epochs: 100
+  batch_size: 4
+  gradient_accumulation_steps: 1
+  learning_rate: 2e-5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  max_grad_norm: 1.0
+  early_stopping_patience: 20
+  use_amp: true  # Automatic Mixed Precision (bfloat16)
+  amp_dtype: bfloat16  # Options: bfloat16, float16
+  optimizer: adamw  # Options: adamw, adamw_8bit
+
+# Output configuration
+output_dir: outputs/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+# Experiment tracking (optional)
+experiment_tracking:
+  use_mlflow: false
+  use_wandb: false
+  experiment_name: gemma_evidence_qa
+  run_name: null  # Auto-generated if null
+
+# Hydra configuration
+hydra:
+  run:
+    dir: ${output_dir}
+  sweep:
+    dir: outputs/multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}
+    subdir: ${hydra.job.num}

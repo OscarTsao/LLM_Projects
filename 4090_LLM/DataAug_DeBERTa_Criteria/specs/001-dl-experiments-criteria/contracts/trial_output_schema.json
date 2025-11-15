@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TrialEvaluationReport",
+  "type": "object",
+  "properties": {
+    "trial_id": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "optimization_metric_name": { "type": "string" },
+    "best_validation_score": { "type": "number" },
+    "decision_thresholds": {
+      "type": "object",
+      "properties": {
+        "criteria": {
+          "type": "array",
+          "items": { "type": "number" }
+        },
+        "evidence": {
+          "type": "object",
+          "properties": {
+            "null_threshold": { "type": "number" },
+            "min_span_score": { "type": "number" }
+          },
+          "required": []
+        }
+      },
+      "required": []
+    },
+    "test_metrics": {
+      "type": "object",
+      "properties": {
+        "criteria_matching": {
+          "type": "object",
+          "properties": {
+            "macro_f1": { "type": "number" },
+            "macro_pr_auc": { "type": "number" },
+            "per_criterion": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": { "type": "string" },
+                  "f1": { "type": "number" },
+                  "precision": { "type": "number" },
+                  "recall": { "type": "number" },
+                  "pr_auc": { "type": "number" },
+                  "confusion_matrix": {
+                    "type": "array",
+                    "items": {
+                      "type": "array",
+                      "items": { "type": "number" },
+                      "minItems": 2,
+                      "maxItems": 2
+                    },
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                },
+                "required": ["id", "f1", "precision", "recall"]
+              }
+            }
+          }
+        },
+        "evidence_binding": { "type": "object" }
+      }
+    }
+  },
+  "required": ["trial_id", "generated_at", "optimization_metric_name", "decision_thresholds"]
+}

@@ -1,0 +1,56 @@
+defaults:
+  - _self_
+
+project: evidence
+
+dataset:
+  path: data/processed/redsm5_matched_evidence.csv
+  context_column: post_text
+  answer_column: sentence_text
+  max_length: 512
+  num_workers: 4
+
+model:
+  pretrained_model: bert-base-uncased
+  dropout: 0.1
+
+training:
+  epochs: 3
+  learning_rate: 3e-5
+  train_batch_size: 8
+  eval_batch_size: 16
+  gradient_accumulation: 1
+  max_grad_norm: 1.0
+  logging_steps: 50
+  seed: 42
+  optimizer:
+    name: adamw
+    weight_decay: 0.01
+  scheduler:
+    name: linear
+    warmup_steps: 0
+  monitor_metric: validation_span_em
+  monitor_mode: max
+
+mlflow:
+  tracking_uri: sqlite:///mlflow.db
+  experiment: Evidence
+  artifact_location: null
+  tags:
+    project: evidence
+
+optuna:
+  storage: sqlite:///optuna.db
+  study_name: evidence_hpo
+  direction: maximize
+
+hydra:
+  run:
+    dir: outputs/evidence/${now:%Y-%m-%d}/${now:%H-%M-%S}
+  sweep:
+    dir: outputs/evidence/multirun
+    subdir: ${hydra.job.num}
+## Training overrides for Evidence task
+#
+# Use with Hydra composition to tailor epochs, batch sizes and runtime knobs
+# for Evidence experiments. Aligns with STRICT groundtruth derived from 'cases'.

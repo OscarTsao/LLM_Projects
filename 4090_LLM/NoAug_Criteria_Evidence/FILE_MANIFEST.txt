@@ -1,0 +1,263 @@
+NO-AUG REPOSITORY FILE MANIFEST
+================================
+
+Generated: 2025-10-23
+Location: /experiment/YuNing/Refactored_Psy/NoAug_Criteria_Evidence/
+
+CONFIGURATION FILES
+-------------------
+./pyproject.toml                          Poetry dependencies and project metadata
+./Makefile                                Common tasks and commands
+./.gitignore                              Git ignore patterns
+./.pre-commit-config.yaml                 Pre-commit hook configuration
+./setup.sh                                Automated setup script (executable)
+
+DOCUMENTATION
+-------------
+./README.md                               Main documentation
+./SETUP_SUMMARY.md                        Complete setup documentation
+./QUICK_START.md                          Quick start guide
+./FILE_MANIFEST.txt                       This file
+
+SOURCE CODE - PACKAGE (src/psy_agents_noaug/)
+----------------------------------------------
+./src/psy_agents_noaug/__init__.py                  Package initialization (v0.1.0)
+./src/psy_agents_noaug/cli.py                       Command-line interface
+
+MODEL ARCHITECTURES (src/psy_agents_noaug/architectures/)
+---------------------------------------------------------
+./src/psy_agents_noaug/architectures/__init__.py         Architecture namespace
+./src/psy_agents_noaug/architectures/criteria/           Criteria-only pipeline
+./src/psy_agents_noaug/architectures/evidence/           Evidence span pipeline
+./src/psy_agents_noaug/architectures/share/              Shared encoder pipeline
+./src/psy_agents_noaug/architectures/joint/              Dual-encoder fusion pipeline
+./src/psy_agents_noaug/architectures/utils/              Shared helpers (artifacts, DSM text)
+
+DATA MODULE (src/psy_agents_noaug/data/)
+-----------------------------------------
+./src/psy_agents_noaug/data/__init__.py             Module initialization
+./src/psy_agents_noaug/data/loaders.py              ReDSM5Loader, DSMCriteriaLoader
+./src/psy_agents_noaug/data/splits.py               DataSplitter for train/val/test
+./src/psy_agents_noaug/data/groundtruth.py          GroundTruthValidator & Generator
+
+MODELS MODULE (src/psy_agents_noaug/models/)
+---------------------------------------------
+./src/psy_agents_noaug/models/__init__.py           Module initialization
+./src/psy_agents_noaug/models/encoders.py           Transformer encoders (BERT, RoBERTa, DeBERTa)
+./src/psy_agents_noaug/models/criteria_head.py      Criteria classification head
+./src/psy_agents_noaug/models/evidence_head.py      Evidence classification head
+
+TRAINING MODULE (src/psy_agents_noaug/training/)
+-------------------------------------------------
+./src/psy_agents_noaug/training/__init__.py         Module initialization
+./src/psy_agents_noaug/training/train_loop.py       Trainer with MLflow & early stopping
+./src/psy_agents_noaug/training/evaluate.py         Evaluator with comprehensive metrics
+
+HPO MODULE (src/psy_agents_noaug/hpo/)
+---------------------------------------
+./src/psy_agents_noaug/hpo/__init__.py              Module initialization
+./src/psy_agents_noaug/hpo/optuna_runner.py         OptunaHPO for hyperparameter optimization
+
+UTILS MODULE (src/psy_agents_noaug/utils/)
+-------------------------------------------
+./src/psy_agents_noaug/utils/__init__.py            Module initialization
+./src/psy_agents_noaug/utils/reproducibility.py     Seed setting & device management
+./src/psy_agents_noaug/utils/logging.py             Logger setup
+./src/psy_agents_noaug/utils/mlflow_utils.py        MLflow integration utilities
+
+HYDRA CONFIGURATIONS (configs/)
+-------------------------------
+./configs/config.yaml                               Main composition config
+
+DATA CONFIGS (configs/data/)
+----------------------------
+./configs/data/hf_redsm5.yaml                       HuggingFace dataset config
+./configs/data/local_csv.yaml                       Local CSV dataset config
+./configs/data/field_map.yaml                       STRICT field mapping rules
+
+MODEL CONFIGS (configs/model/)
+------------------------------
+./configs/model/bert_base.yaml                      BERT-base configuration
+./configs/model/roberta_base.yaml                   RoBERTa-base configuration
+./configs/model/deberta_v3_base.yaml                DeBERTa-v3-base configuration
+
+TRAINING CONFIGS (configs/training/)
+------------------------------------
+./configs/training/default.yaml                     Default training hyperparameters
+
+HPO CONFIGS (configs/hpo/)
+--------------------------
+./configs/hpo/stage0_sanity.yaml                    Stage 0: Sanity check (3 trials)
+./configs/hpo/stage1_coarse.yaml                    Stage 1: Coarse search (20 trials)
+./configs/hpo/stage2_fine.yaml                      Stage 2: Fine search (30 trials)
+./configs/hpo/stage3_refit.yaml                     Stage 3: Refit best (1 trial)
+
+TASK CONFIGS (configs/task/)
+----------------------------
+./configs/task/criteria.yaml                        Criteria task config (status field)
+./configs/task/evidence.yaml                        Evidence task config (cases field)
+
+SCRIPTS (scripts/)
+------------------
+./scripts/make_groundtruth.py                       Generate ground truth (executable)
+./scripts/run_hpo_stage.py                          Run HPO stages (executable)
+./scripts/train_best.py                             Train with best params (executable)
+./scripts/export_metrics.py                         Export MLflow metrics (executable)
+
+TESTS (tests/)
+--------------
+./tests/__init__.py                                 Test package initialization
+./tests/test_groundtruth.py                         STRICT validation rule tests
+./tests/test_loaders.py                             Data loader tests
+./tests/test_training_smoke.py                      Training pipeline smoke tests
+./tests/test_hpo_config.py                          HPO configuration validation tests
+
+DATA (data/)
+------------
+./data/raw/redsm5/dsm_criteria.json                 DSM-5 criteria definitions (copied from source)
+./data/processed/                                    Generated splits and ground truth files
+
+KEY FEATURES
+------------
+1. STRICT Data Validation
+   - Criteria task: ONLY status field
+   - Evidence task: ONLY cases field
+   - GroundTruthValidator enforces separation
+   - Tests verify no cross-contamination
+
+2. Multi-Stage HPO
+   - Stage 0: Sanity check (3 trials)
+   - Stage 1: Coarse search (20 trials)
+   - Stage 2: Fine search (30 trials)
+   - Stage 3: Refit best (1 trial)
+
+3. Model Support
+   - BERT (base/large)
+   - RoBERTa (base/large)
+   - DeBERTa-v3 (base/large)
+   - Configurable pooling (CLS/mean)
+   - Freeze/finetune options
+
+4. Training Infrastructure
+   - MLflow experiment tracking
+   - Early stopping
+   - Gradient clipping
+   - Learning rate scheduling
+   - Comprehensive metrics
+
+5. Reproducibility
+   - Fixed random seeds
+   - Deterministic CUDA
+   - Configuration versioning
+   - Test coverage
+
+6. Development Tools
+   - Pre-commit hooks (ruff, black, isort)
+   - Makefile for common tasks
+   - Automated setup script
+   - Comprehensive tests
+
+DEPENDENCIES (from pyproject.toml)
+----------------------------------
+Core:
+  - torch >= 2.0.0
+  - transformers >= 4.30.0
+  - hydra-core >= 1.3.0
+  - mlflow >= 2.5.0
+  - optuna >= 3.2.0
+  - pandas >= 2.0.0
+  - numpy >= 1.24.0
+  - scikit-learn >= 1.3.0
+  - datasets >= 2.13.0
+  - nlpaug >= 1.1.11 (for comparison only - NOT used)
+
+Development:
+  - ruff >= 0.1.0
+  - black >= 23.7.0
+  - isort >= 5.12.0
+  - pytest >= 7.4.0
+  - pre-commit >= 3.3.0
+
+MAKEFILE TARGETS
+----------------
+Installation:
+  - make install                    Install dependencies
+  - make install-dev                Install with dev dependencies
+  - make pre-commit-install         Install pre-commit hooks
+
+Testing:
+  - make test                       Run all tests
+  - make test-groundtruth           Run ground truth tests
+
+Code Quality:
+  - make lint                       Run linters
+  - make format                     Format code
+  - make format-check               Check formatting
+  - make pre-commit-run             Run all pre-commit hooks
+
+Data:
+  - make groundtruth-criteria       Generate criteria ground truth
+  - make groundtruth-evidence       Generate evidence ground truth
+
+HPO:
+  - make hpo-sanity                 Run stage 0 (sanity)
+  - make hpo-coarse                 Run stage 1 (coarse)
+  - make hpo-fine                   Run stage 2 (fine)
+  - make hpo-refit                  Run stage 3 (refit)
+
+Training:
+  - make train-best                 Train with best params
+  - make export-metrics             Export MLflow metrics
+
+Cleanup:
+  - make clean                      Remove generated files
+
+USAGE EXAMPLES
+--------------
+1. Initial setup:
+   ./setup.sh
+
+2. Generate ground truth:
+   make groundtruth-criteria INPUT=./data/raw/redsm5/train.csv
+
+3. Run HPO pipeline:
+   make hpo-sanity TASK=criteria MODEL=bert_base
+   make hpo-coarse TASK=criteria MODEL=bert_base
+   make hpo-fine TASK=criteria MODEL=bert_base
+   make hpo-refit TASK=criteria MODEL=bert_base
+
+4. Train best model:
+   make train-best STUDY=./outputs/hpo/study.pkl TASK=criteria
+
+5. Export results:
+   make export-metrics EXPERIMENT=noaug_baseline OUTPUT=./results.csv
+
+IMPORTANT NOTES
+---------------
+1. This is the NO-AUG baseline (no data augmentation)
+2. STRICT field validation enforced (status->criteria, cases->evidence)
+3. All random seeds fixed for reproducibility (default: 42)
+4. MLflow tracking enabled for all experiments
+5. Comprehensive test coverage for critical functionality
+
+VERIFICATION COMMANDS
+---------------------
+Check structure:
+  ls -la src/psy_agents_noaug/
+  ls -la configs/
+  ls -la scripts/
+  ls -la tests/
+
+Run tests:
+  make test
+
+View DSM criteria:
+  cat data/raw/redsm5/dsm_criteria.json
+
+Check dependencies:
+  poetry show
+
+View MLflow experiments:
+  mlflow ui --backend-store-uri ./mlruns
+
+End of Manifest

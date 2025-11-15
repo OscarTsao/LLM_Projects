@@ -1,0 +1,54 @@
+This patch enhances MLflow logging for production use with comprehensive metrics tracking.
+
+ENHANCEMENTS:
+1. Step-level logging in training loop (train loss, accuracy, LR, GPU metrics per batch)
+2. Epoch-level summaries (comprehensive training/validation metrics)
+3. HPO trial-level logging (nested runs for each trial with full params and metrics)
+4. System metrics module (CPU, memory, GPU utilization, temperature)
+5. Model registry support (register models with signatures, stages, tags)
+
+FILES MODIFIED:
+- src/psy_agents_noaug/training/train_loop.py
+- src/psy_agents_noaug/hpo/optuna_runner.py
+- src/psy_agents_noaug/utils/mlflow_utils.py
+
+FILES CREATED:
+- src/psy_agents_noaug/utils/system_metrics.py
+
+REQUIRED DEPENDENCIES (add to pyproject.toml):
+- psutil (for system metrics)
+- pynvml (optional, for detailed GPU metrics)
+- pandas (for HPO trial history export)
+
+MLFLOW UI HIERARCHY:
+Experiment
+├── HPO_study_name (parent run)
+│   ├── Metrics: best_val_f1_macro, total_trials, completed_trials, etc.
+│   ├── Parameters: best_hpo/* (best hyperparameters)
+│   ├── Artifacts: hpo_trials_history.csv, plots
+│   └── Nested Runs:
+│       ├── trial_0001
+│       │   ├── Metrics: trial/val_f1_macro, train/loss_step, epoch/*, system/*
+│       │   ├── Parameters: hpo/* (trial hyperparameters)
+│       │   └── Artifacts: checkpoints, config
+│       ├── trial_0002
+│       └── ...
+└── Regular Training Runs
+    ├── Metrics: train/*, epoch/*, system/*, final/*
+    ├── Parameters: model, training, data configs
+    └── Artifacts: checkpoints, config.yaml
+
+USAGE:
+1. Training with system metrics:
+   trainer = Trainer(..., log_system_metrics=True, system_metrics_interval=10)
+   
+2. Register model after training:
+   from psy_agents_noaug.utils.mlflow_utils import register_model
+   register_model(model, "criteria_model", sample_input, stage="Production")
+   
+3. HPO with nested runs:
+   runner.optimize(..., mlflow_experiment_name="hpo_criteria")
+
+BACKWARD COMPATIBILITY:
+All changes are backward compatible. Existing code will work without modifications.
+New features are opt-in via parameters.

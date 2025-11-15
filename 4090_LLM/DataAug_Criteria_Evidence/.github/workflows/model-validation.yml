@@ -1,0 +1,74 @@
+name: Model Validation
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+      - 'scripts/**'
+      - 'configs/**'
+  workflow_dispatch:
+    inputs:
+      task:
+        description: 'Task to validate (criteria/evidence)'
+        required: true
+        default: 'criteria'
+        type: choice
+        options:
+          - criteria
+          - evidence
+          - share
+          - joint
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.10"
+
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+      with:
+        version: 1.7.1
+        virtualenvs-create: true
+        virtualenvs-in-project: true
+
+    - name: Install dependencies
+      run: |
+        poetry install --no-interaction
+
+    - name: Download HuggingFace data
+      env:
+        HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      run: |
+        poetry run python -m psy_agents_noaug.cli make_groundtruth data=hf_redsm5
+
+    - name: Run quick training (smoke test)
+      run: |
+        poetry run python -m psy_agents_noaug.cli train \
+          task=${{ github.event.inputs.task || 'criteria' }} \
+          model=roberta_base \
+          training.num_epochs=1 \
+          training.batch_size=16
+
+    - name: Validate quality gates
+      run: |
+        poetry run python scripts/validate_quality_gates.py \
+          --checkpoint outputs/checkpoints/best_checkpoint.pt \
+          --task ${{ github.event.inputs.task || 'criteria' }}
+
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: validation-results
+        path: |
+          outputs/
+          mlruns/
+        retention-days: 7

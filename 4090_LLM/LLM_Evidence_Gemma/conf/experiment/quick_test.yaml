@@ -1,0 +1,16 @@
+# @package _global_
+
+# Quick test configuration (5 folds, 100 epochs)
+
+cv:
+  num_folds: 5
+  recreate_splits: false
+
+training:
+  num_epochs: 100
+  batch_size: 4
+  early_stopping_patience: 20
+
+model:
+  freeze_encoder: true  # Faster training
+  use_gradient_checkpointing: false

@@ -1,0 +1,68 @@
+# WITH-AUG HPO Best Configurations
+# Extracted: November 7, 2025
+# Source: _optuna/*_with_aug.db
+
+# ============================================================================
+# CRITERIA ARCHITECTURE - Trial #719 (Val F1: 0.7096)
+# ============================================================================
+criteria:
+  best_trial: 719
+  validation_f1: 0.709586
+  hyperparameters:
+    # See hpo_best_configs_summary.json for full 29 parameters
+    # Key parameters will be extracted below
+
+# ============================================================================
+# EVIDENCE ARCHITECTURE - Trial #1044 (Val F1: 0.7040)
+# ============================================================================
+evidence:
+  best_trial: 1044
+  validation_f1: 0.704023
+  hyperparameters:
+    # See hpo_best_configs_summary.json for full 24 parameters
+    # Key parameters will be extracted below
+
+# ============================================================================
+# SHARE ARCHITECTURE - Trial #718 (Val F1: 0.8585) - BEST OVERALL
+# ============================================================================
+share:
+  best_trial: 718
+  validation_f1: 0.858516
+  hyperparameters:
+    # See hpo_best_configs_summary.json for full 29 parameters
+    # Key parameters will be extracted below
+
+# ============================================================================
+# JOINT ARCHITECTURE - Trial #474 (Val F1: 0.8397)
+# ============================================================================
+joint:
+  best_trial: 474
+  validation_f1: 0.839714
+  hyperparameters:
+    # See hpo_best_configs_summary.json for full 29 parameters
+    # Key parameters will be extracted below
+
+# ============================================================================
+# USAGE INSTRUCTIONS
+# ============================================================================
+#
+# To refit these configurations on train+val data:
+#
+# python scripts/refit_from_topk.py \
+#     --config hpo_best_configs_summary.json \
+#     --arch <criteria|evidence|share|joint> \
+#     --output ./checkpoints/with_aug_refitted/
+#
+# To extract detailed parameters from JSON:
+#
+# python -c "
+# import json
+# with open('hpo_best_configs_summary.json') as f:
+#     data = json.load(f)
+#     for arch, info in data.items():
+#         print(f'{arch.upper()}:')
+#         for param, value in info['params'].items():
+#             print(f'  {param}: {value}')
+# "
+#
+# ============================================================================

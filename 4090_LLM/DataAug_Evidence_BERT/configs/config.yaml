@@ -1,0 +1,15 @@
+defaults:
+  - data: redsm5
+  - model: bert_base_uncased
+  - training: default
+  - logging: mlflow
+  - hpo: default
+  - _self_
+
+seed: 42
+
+paths:
+  project_root: ${hydra:runtime.cwd}
+  data_dir: ${paths.project_root}/data
+  artifacts_dir: ${paths.project_root}/mlruns
+

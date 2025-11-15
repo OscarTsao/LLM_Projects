@@ -1,0 +1,20 @@
+# RedSM5 dataset configuration
+dataset_id: "irlab-udc/redsm5"
+revision: "main"  # Optional: pin to specific revision
+
+# Data splits
+splits:
+  train: "train"
+  validation: "validation"
+  test: "test"
+  
+# Data loading
+batch_size: 16
+num_workers: 4
+prefetch_factor: 2
+
+# Preprocessing
+max_length: 512
+truncation: true
+padding: "max_length"
+

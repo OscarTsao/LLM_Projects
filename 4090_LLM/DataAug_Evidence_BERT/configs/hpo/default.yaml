@@ -1,0 +1,49 @@
+enabled: true
+study_name: evidence_qa_hpo
+storage: ${oc.env:OPTUNA_STORAGE,sqlite:///optuna.db}
+direction: maximize
+metric_name: f1
+n_trials: 20
+timeout: null
+sampler: tpe
+pruner:
+  type: median
+params:
+  learning_rate:
+    target: training.learning_rate
+    type: float
+    low: 1e-5
+    high: 5e-5
+    log: true
+  weight_decay:
+    target: training.weight_decay
+    type: float
+    low: 0.0
+    high: 0.1
+  warmup_ratio:
+    target: training.warmup_ratio
+    type: float
+    low: 0.0
+    high: 0.2
+  head_num_layers:
+    target: model.head.num_layers
+    type: int
+    low: 1
+    high: 3
+  head_hidden_size:
+    target: model.head.hidden_size
+    type: categorical
+    choices: [256, 384, 512]
+  head_dropout:
+    target: model.head.dropout
+    type: float
+    low: 0.05
+    high: 0.3
+  per_device_train_batch_size:
+    target: training.per_device_train_batch_size
+    type: categorical
+    choices: [4, 8]
+  gradient_accumulation_steps:
+    target: training.gradient_accumulation_steps
+    type: categorical
+    choices: [1, 2, 4]

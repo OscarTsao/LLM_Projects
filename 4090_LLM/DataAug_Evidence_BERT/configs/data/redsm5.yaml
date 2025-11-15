@@ -1,0 +1,14 @@
+name: redsm5
+context_column: text
+post_id_column: post_id
+annotation_path: ${paths.data_dir}/redsm5/redsm5_annotations.csv
+post_path: ${paths.data_dir}/redsm5/redsm5_posts.csv
+question_template: "What evidence supports the DSM-5 symptom: {symptom}?"
+positive_status_value: 1
+train_ratio: 0.8
+val_ratio: 0.1
+max_context_length: 512
+stride: 128
+padding: max_length
+max_answer_length: 64
+version: 1

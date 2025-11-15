@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/utils/logging.py
+# hypothesis_version: 6.140.3
+
+[1000000000, '%Y-%m-%d %H:%M:%S', '***', ', ', 'Bearer ***', '[redacted-email]', 'args', 'component', 'created', 'exc_info', 'exc_text', 'filename', 'funcName', 'hf_***', 'levelname', 'levelno', 'lineno', 'logs', 'midnight', 'module', 'msecs', 'msg', 'name', 'pathname', 'process', 'processName', 'relativeCreated', 'sk-***', 'stack_info', 'stacklevel', 'thread', 'threadName', 'trial_id', 'utf-8']

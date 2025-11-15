@@ -1,0 +1,22 @@
+defaults:
+  - dataset: baseline
+  - model: xlm_roberta
+  - training: baseline
+  - logging: default
+  - mlflow: local
+  - evaluation: default
+  - _self_
+
+seed: 12530
+
+paths:
+  output_dir: outputs/xlm_roberta_no_aug
+
+hydra:
+  job:
+    chdir: false
+  run:
+    dir: ${paths.output_dir}/hydra/${now:%Y%m%d_%H%M%S}
+  sweep:
+    dir: ${paths.output_dir}/hydra/multirun
+    subdir: ${hydra.job.num}

@@ -1,0 +1,4 @@
+# file: /experiment/YuNing/DataAug_Multi_Both/src/dataaug_multi_both/training/checkpoint_manager.py
+# hypothesis_version: 6.140.3
+
+[1e-12, 1e-09, 0.1, 1.0, 1024, '**/*', '-inf', '.ckpt_tmp_', '.meta.json', 'CheckpointManager', 'CheckpointMetadata', 'CheckpointRecord', 'StorageCapacityError', 'StorageStats', 'code_version', 'compatibility', 'created_at', 'epoch', 'extra', 'head_configuration', 'is_best', 'metric_value', 'model_signature', 'r', 'rb', 'sha256', 'size_bytes', 'utf-8', 'w', 'wb']
