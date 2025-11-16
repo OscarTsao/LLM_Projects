@@ -1,0 +1,106 @@
+================================================================================
+LLM_PROJECTS 實驗結果分析報告
+================================================================================
+生成日期: 2025-11-15 14:28:30
+分析的實驗總數: 163
+項目數: 3
+
+================================================================================
+1. 項目總體統計
+================================================================================
+
+項目: 2080_LLM/DataAug_DeBERTa_Evidence
+  - 實驗總數: 81
+  - 最佳實驗: trial_trial_0021
+  - 最佳指標值: 0.457143
+    evidence_macro_f1: 0.457143
+    evidence_accuracy: 0.571429
+    criteria_macro_f1: 0.000000
+    criteria_accuracy: 0.000000
+    overall_macro_f1_mean: 0.228571
+    val_evidence_macro_f1: 0.355556
+  - 增強方法分布:
+    case_variation: 75 個實驗
+    no_change: 6 個實驗
+  - 前 5 個最佳實驗:
+    1. trial_trial_0021 - 增強: case_variation - 主指標: 0.457143
+    2. trial_trial_0119 - 增強: case_variation - 主指標: 0.457143
+    3. trial_trial_0013 - 增強: case_variation - 主指標: 0.333333
+    4. trial_trial_0006 - 增強: case_variation - 主指標: 0.333333
+    5. trial_trial_0115 - 增強: case_variation - 主指標: 0.317460
+
+項目: 2080_LLM/DataAug_Multi_Evidence
+  - 實驗總數: 1
+  - 最佳實驗: trial_trial_123e4567-e89b-12d3-a456-426614174000
+  - 最佳指標值: 0.000000
+    span_f1: 0.000000
+    precision: 0.000000
+    recall: 0.000000
+  - 增強方法分布:
+    none: 1 個實驗
+  - 前 5 個最佳實驗:
+    1. trial_trial_123e4567-e89b-12d3-a456-426614174000 - 增強: none - 主指標: 0.000000
+
+項目: 4090_LLM/DataAug_DeBERTa_Evidence
+  - 實驗總數: 81
+  - 最佳實驗: trial_trial_0021
+  - 最佳指標值: 0.457143
+    evidence_macro_f1: 0.457143
+    evidence_accuracy: 0.571429
+    criteria_macro_f1: 0.000000
+    criteria_accuracy: 0.000000
+    overall_macro_f1_mean: 0.228571
+    val_evidence_macro_f1: 0.355556
+  - 增強方法分布:
+    case_variation: 75 個實驗
+    no_change: 6 個實驗
+  - 前 5 個最佳實驗:
+    1. trial_trial_0021 - 增強: case_variation - 主指標: 0.457143
+    2. trial_trial_0119 - 增強: case_variation - 主指標: 0.457143
+    3. trial_trial_0013 - 增強: case_variation - 主指標: 0.333333
+    4. trial_trial_0006 - 增強: case_variation - 主指標: 0.333333
+    5. trial_trial_0115 - 增強: case_variation - 主指標: 0.317460
+
+================================================================================
+2. 增強方法總體統計
+================================================================================
+case_variation: 150 個實驗 (92.0%)
+no_change: 12 個實驗 (7.4%)
+none: 1 個實驗 (0.6%)
+
+================================================================================
+3. 最佳實驗詳細信息
+================================================================================
+
+項目: 2080_LLM/DataAug_DeBERTa_Evidence
+最佳實驗ID: trial_trial_0021
+完整路徑: /home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0021/evaluation_report.json
+增強方法: case_variation
+指標詳情:
+  evidence_macro_f1: 0.457143
+  evidence_accuracy: 0.571429
+  criteria_macro_f1: 0.000000
+  criteria_accuracy: 0.000000
+  overall_macro_f1_mean: 0.228571
+  val_evidence_macro_f1: 0.355556
+
+項目: 2080_LLM/DataAug_Multi_Evidence
+最佳實驗ID: trial_trial_123e4567-e89b-12d3-a456-426614174000
+完整路徑: /home/user/LLM_Projects/2080_LLM/DataAug_Multi_Evidence/experiments/trial_123e4567-e89b-12d3-a456-426614174000/evaluation_report.json
+增強方法: none
+指標詳情:
+  span_f1: 0.000000
+  precision: 0.000000
+  recall: 0.000000
+
+項目: 4090_LLM/DataAug_DeBERTa_Evidence
+最佳實驗ID: trial_trial_0021
+完整路徑: /home/user/LLM_Projects/4090_LLM/DataAug_DeBERTa_Evidence/experiments/trial_0021/evaluation_report.json
+增強方法: case_variation
+指標詳情:
+  evidence_macro_f1: 0.457143
+  evidence_accuracy: 0.571429
+  criteria_macro_f1: 0.000000
+  criteria_accuracy: 0.000000
+  overall_macro_f1_mean: 0.228571
+  val_evidence_macro_f1: 0.355556

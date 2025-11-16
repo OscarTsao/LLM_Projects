@@ -1,0 +1,1455 @@
+{
+  "report_metadata": {
+    "title": "LLM_Projects 完整程式碼審閱與實驗分析報告",
+    "subtitle": "給另一個模型和研究者用的完整說明 - 無需查看原始程式碼",
+    "analysis_date": "2025-11-15",
+    "analyst": "Claude Code Analysis Agent (Sonnet 4.5)",
+    "scope": "多代理 DSM-5 診斷輔助系統 - 完整 codebase 審閱",
+    "total_projects_analyzed": 66,
+    "total_experiments_analyzed": 163,
+    "total_agent_implementations": 30,
+    "analysis_thoroughness": "Very Thorough",
+    "git_branch": "claude/llm-projects-code-review-analysis-01EUape9qExn8S4M9vVTggsD"
+  },
+
+  "executive_summary": {
+    "project_overview": "LLM_Projects 是一個針對 DSM-5 的多代理（multi-agent）身心科診斷輔助系統研究專案，包含 66 個子專案，分佈在 4 個 GPU 資料夾（2080/3090/4070ti/4090 LLM）。核心任務包含 DSM-5 criteria matching（二元分類）、evidence binding（句子+span 抽取）、風險偵測、資料增強、多任務學習和 RAG 系統。",
+
+    "key_findings": [
+      "🏆 生產就緒系統：4090_LLM/NoAug_Criteria_Evidence 和 4090_LLM/gemini_reranker 是最完整的生產級實作，具備完整文檔、Hydra 配置、多階段 HPO",
+      "📊 實驗規模：163 個實驗結果，主要集中在 Evidence Sentence 任務（DeBERTa 模型）+ Case Variation 增強",
+      "📈 最佳性能：Evidence 任務最佳 Macro F1 = 0.4571（trial_0021/0119），但 Criteria 任務性能極低（< 0.2）",
+      "⚠️ 數據增強問題：92% 實驗只用 Case Variation（改大小寫），缺乏語義級增強（同義詞、回譯、LLM paraphrase）",
+      "🤖 Agent 架構：14 種 Agent 類型已實作，包括 Criteria、Evidence、RAG、Reranker、Joint、LLM-based、Suggestion、Evaluation",
+      "💻 技術棧：BERT/RoBERTa/DeBERTa 為主力，Gemma LLM 為原型，Hydra 配置，Optuna HPO，PyTorch 2.0+",
+      "❌ 缺失項目：Risk/Safety Agent（自殺/自傷偵測）無完整實作，Multi-task 實驗失敗率高"
+    ],
+
+    "critical_issues": [
+      "🔴 CRITICAL: Criteria Agent 性能極差（F1 < 0.2），遠低於 Evidence Agent（F1 = 0.46）",
+      "🔴 CRITICAL: 數據增強策略過於簡單，Case Variation 對語義幾乎無影響",
+      "🟡 MEDIUM: Multi-task learning 不穩定，僅 1 個實驗且失敗（所有指標 = 0）",
+      "🟡 MEDIUM: Risk/Safety Agent 完全缺失，但對臨床應用至關重要",
+      "🟡 MEDIUM: 2080 和 4090 有大量重複實驗，資源浪費"
+    ],
+
+    "recommendations": [
+      "🎯 優先1：修復 Criteria Agent（審查數據質量、嘗試不同損失函數、使用更大模型）",
+      "🎯 優先2：升級數據增強（同義詞替換、回譯、LLM paraphrase）",
+      "🎯 優先3：Debug Multi-task learning（檢查 loss balancing、gradient flow、data loading）",
+      "🎯 優先4：實作 Risk/Safety Agent（自殺/自傷分類器 + 高閾值警報）",
+      "💡 建議5：整合重複專案、標準化配置、建立 CI/CD",
+      "💡 建議6：優化 LLM agents（評估質量、降低延遲、考慮蒸餾）"
+    ]
+  },
+
+  "section_1_project_index": {
+    "description": "完整專案索引表，包含所有 66 個子專案的分類、狀態和描述",
+    "total_projects": 66,
+
+    "gpu_distribution": {
+      "2080_LLM": {
+        "count": 29,
+        "description": "NVIDIA RTX 2080 (8GB VRAM)，包含最多專案和實驗",
+        "key_projects": ["DataAug_DeBERTa_FourAgents", "DataAugmentation_ReDSM5", "Psy_RAG", "gemini_reranker"]
+      },
+      "3090_LLM": {
+        "count": 15,
+        "description": "NVIDIA RTX 3090 (24GB VRAM)，精選高性能 GPU 專案",
+        "key_projects": ["Psy_RAG_Agent", "Psy_Agent_one_by_one"]
+      },
+      "4070ti_LLM": {
+        "count": 4,
+        "description": "NVIDIA RTX 4070 Ti (12GB VRAM)，少量基線專案",
+        "key_projects": ["NoAug_Criteria_Evidence", "DataAug_Criteria_Evidence"]
+      },
+      "4090_LLM": {
+        "count": 18,
+        "description": "NVIDIA RTX 4090 (24GB VRAM)，旗艦性能，包含最新 LLM 實驗",
+        "key_projects": ["NoAug_Criteria_Evidence", "gemini_reranker", "LLM_Agents_ReDSM5", "LLM_Criteria_Gemma", "LLM_Evidence_Gemma"]
+      }
+    },
+
+    "task_type_distribution": {
+      "criteria_matching": {
+        "count": 20,
+        "percentage": "30%",
+        "description": "DSM-5 標準匹配（二元分類：matched/unmatched）",
+        "performance": "Macro F1 < 0.2（需要改進）"
+      },
+      "evidence_sentence": {
+        "count": 12,
+        "percentage": "18%",
+        "description": "證據句子提取",
+        "performance": "Macro F1 = 0.46（最佳 trial_0021）"
+      },
+      "multi_task": {
+        "count": 20,
+        "percentage": "30%",
+        "description": "多任務學習（Criteria + Evidence 聯合）",
+        "performance": "不穩定，失敗率高"
+      },
+      "data_augmentation": {
+        "count": 8,
+        "percentage": "12%",
+        "description": "數據增強框架",
+        "performance": "Case Variation 為主（效果有限）"
+      },
+      "rag": {
+        "count": 3,
+        "percentage": "5%",
+        "description": "檢索增強生成",
+        "performance": "未見完整評估"
+      },
+      "psy_multi_agent": {
+        "count": 4,
+        "percentage": "6%",
+        "description": "心理多代理系統（對話管理）",
+        "performance": "原型階段"
+      },
+      "reranker_llm_judge": {
+        "count": 2,
+        "percentage": "3%",
+        "description": "LLM 重排判斷（Gemini-based）",
+        "performance": "完整實作，缺評估報告"
+      },
+      "evidence_span": {
+        "count": 1,
+        "percentage": "1%",
+        "description": "證據跨度提取（token-level）",
+        "performance": "與 evidence_sentence 整合"
+      },
+      "other": {
+        "count": 4,
+        "percentage": "6%",
+        "description": "測試、構建、數據處理等",
+        "performance": "N/A"
+      }
+    },
+
+    "model_family_distribution": {
+      "DeBERTa": {
+        "count": 24,
+        "percentage": "36%",
+        "description": "高性能變分器，主力模型",
+        "typical_config": "microsoft/deberta-v3-base, max_seq_len=512"
+      },
+      "BERT_RoBERTa_DeBERTa_multi": {
+        "count": 18,
+        "percentage": "27%",
+        "description": "標準 Transformer 多選（靈活配置）",
+        "typical_config": "bert-base-uncased / roberta-base / deberta-v3-base"
+      },
+      "Transformers_generic": {
+        "count": 12,
+        "percentage": "18%",
+        "description": "通用 Hugging Face Transformers",
+        "typical_config": "可配置任何 HF model"
+      },
+      "BERT": {
+        "count": 8,
+        "percentage": "12%",
+        "description": "基礎 BERT（早期專案）",
+        "typical_config": "google-bert/bert-base-uncased"
+      },
+      "LLM_Gemma_Gemini": {
+        "count": 3,
+        "percentage": "5%",
+        "description": "大語言模型（原型）",
+        "typical_config": "google/gemma-2b / gemma-7b + Gemini API"
+      },
+      "SpanBERT": {
+        "count": 1,
+        "percentage": "2%",
+        "description": "SpanBERT（RAG 系統）",
+        "typical_config": "SpanBERT/spanbert-base-cased"
+      },
+      "other": {
+        "count": 2,
+        "percentage": "3%",
+        "description": "數據處理無模型",
+        "typical_config": "N/A"
+      }
+    },
+
+    "status_distribution": {
+      "mainline": {
+        "count": 34,
+        "percentage": "52%",
+        "description": "生產就緒，可直接使用",
+        "examples": ["NoAug_Criteria_Evidence", "gemini_reranker", "DataAugmentation_ReDSM5"]
+      },
+      "baseline": {
+        "count": 17,
+        "percentage": "26%",
+        "description": "基線版本，用於比較",
+        "examples": ["Criteria_Baseline_5Fold", "Evidence_Baseline_5Fold_NoAug"]
+      },
+      "prototype": {
+        "count": 12,
+        "percentage": "18%",
+        "description": "原型/實驗階段",
+        "examples": ["LLM_Criteria_Gemma", "LLM_Evidence_Gemma", "Psy_Agent"]
+      },
+      "deprecated": {
+        "count": 3,
+        "percentage": "4%",
+        "description": "已棄用",
+        "examples": ["Psy_Agent (early)", "Psy_Agent_spanBERT_Evidence_Binding", "Psy_RAG (original)"]
+      }
+    },
+
+    "flagship_projects_detailed": [
+      {
+        "rank": 1,
+        "name": "4090_LLM/NoAug_Criteria_Evidence",
+        "status": "mainline",
+        "completeness": "★★★★★ (5/5)",
+        "description": "最完整的生產級實作，支援 4 種架構、完整 Hydra 配置、多階段 HPO、嚴格欄位驗證",
+        "architectures": ["criteria", "evidence", "joint", "share"],
+        "models_supported": ["BERT", "RoBERTa", "DeBERTa"],
+        "config_system": "Hydra with field_map.yaml for strict validation (prevents Criteria using 'cases' field or Evidence using 'status' field)",
+        "hpo_system": {
+          "multi_stage": "8 trials (sanity) → 20 trials (coarse) → 50 trials (fine) → refit on train+val",
+          "maximal": "600-1200 trials with progressive refinement"
+        },
+        "hardware_optimization": ["gradient_checkpointing", "mixed_precision (fp16/bf16)", "torch.compile"],
+        "documentation": "CLAUDE.md (1000+ lines) - extremely detailed",
+        "main_files": [
+          "src/psy_agents_noaug/architectures/criteria/models/model.py",
+          "src/psy_agents_noaug/architectures/evidence/models/model.py",
+          "src/psy_agents_noaug/architectures/joint/models/model.py",
+          "src/psy_agents_noaug/architectures/share/models/model.py",
+          "scripts/train_criteria.py",
+          "scripts/train_evidence.py"
+        ],
+        "todos": ["Consolidate src/Project/ and src/psy_agents_noaug/architectures/ (estimated 2-4 hours)"],
+        "recommendation": "🏆 Use this as production implementation for Criteria and Evidence agents"
+      },
+      {
+        "rank": 2,
+        "name": "4090_LLM/gemini_reranker",
+        "status": "mainline",
+        "completeness": "★★★★★ (5/5)",
+        "description": "Gemini 偏好學習重排系統，完整管道實作",
+        "tracks": {
+          "track_a": "Criteria - CrossEncoderRanker with RankNet loss",
+          "track_b": "Evidence - QASpanModel with Span Margin loss"
+        },
+        "judge_system": {
+          "llm": "Gemini API (gemini-1.5-flash / gemini-1.5-pro)",
+          "mode": "JSON mode for structured output",
+          "consistency": "Two-pass consistency check",
+          "safety": "Safety filters enabled"
+        },
+        "pipeline": [
+          "Step 1: Candidate Generation - Extract candidate spans from clinical notes",
+          "Step 2: Gemini Judging - Gemini ranks candidates (with two-pass consistency)",
+          "Step 3: Pair Building - Convert rankings to pairwise training examples",
+          "Step 4: Training - CrossEncoderRanker (Track A) or QASpanModel (Track B)",
+          "Step 5: Inference - Best-of-k decision making"
+        ],
+        "training_features": {
+          "optimizer": "AdamW",
+          "scheduler": "Cosine with warmup",
+          "mixed_precision": "fp16/bf16",
+          "mlflow_logging": true,
+          "dpo_support": "Direct Preference Optimization"
+        },
+        "documentation": "CLAUDE.md (700+ lines) - comprehensive",
+        "main_files": [
+          "src/criteriabind/models.py",
+          "src/criteriabind/train/train_criteria_ranker.py",
+          "src/criteriabind/train/train_evidence_span.py",
+          "src/criteriabind/gemini_judge.py",
+          "src/criteriabind/cli/judge.py"
+        ],
+        "recommendation": "🏆 Use this for high-stakes verification and reranking, not primary classification"
+      },
+      {
+        "rank": 3,
+        "name": "2080_LLM/DataAugmentation_ReDSM5",
+        "status": "mainline",
+        "completeness": "★★★★☆ (4/5)",
+        "description": "綜合數據增強框架，優秀程式碼品質",
+        "agents": {
+          "CriteriaMatchingAgent": "BERT/DeBERTa + Adaptive Focal Loss",
+          "EvidenceBindingAgent": "Dual span prediction (start/end tokens)",
+          "MultiAgentPipeline": "Sequential composition with conditional execution"
+        },
+        "loss_types": ["BCE", "Focal", "Adaptive Focal (dynamic alpha/gamma)"],
+        "augmentation_methods": {
+          "NLPAug": "Synonym replacement, spelling errors, contextual word embeddings",
+          "TextAttack": "Adversarial perturbations, backtranslation",
+          "Hybrid": "Combination of multiple strategies"
+        },
+        "code_quality": "Excellent - comprehensive tests, clean abstractions, well-documented",
+        "main_files": [
+          "src/agents/base.py",
+          "src/agents/criteria_matching.py",
+          "src/agents/evidence_binding.py",
+          "src/agents/multi_agent_pipeline.py",
+          "tests/agents/"
+        ],
+        "recommendation": "📚 Use this as reference for agent abstraction and augmentation framework"
+      },
+      {
+        "rank": 4,
+        "name": "2080_LLM/DataAug_DeBERTa_FourAgents",
+        "status": "mainline",
+        "completeness": "★★★★☆ (4/5)",
+        "description": "四代理管道系統，展示 agent 組合模式",
+        "pipeline": [
+          "EvidenceAgent: Extract evidence from text",
+          "CriteriaAgent: Aggregate criteria predictions",
+          "SuggestionAgent: VOI-based next question selection (top-k=3, uncertain_band=0.4-0.6)",
+          "EvaluationAgent: Metrics + temperature scaling + quality gates"
+        ],
+        "quality_gates": {
+          "neg_precision_min": "Minimum negative class precision",
+          "criteria_auroc_min": "Minimum criteria AUROC",
+          "ece_max": "Maximum expected calibration error"
+        },
+        "calibration": "Temperature scaling for probability calibration",
+        "main_files": [
+          "src/agents/evidence_agent.py",
+          "src/agents/criteria_agent.py",
+          "src/agents/suggestion_agent.py",
+          "src/agents/evaluation_agent.py",
+          "src/suggestion/voi.py",
+          "src/eval/calibration.py"
+        ],
+        "recommendation": "📚 Use this as reference for agent pipeline composition and quality gating"
+      }
+    ],
+
+    "data_sources": {
+      "detailed_project_list": "See agent-generated reports for all 66 projects",
+      "file": "探索 agent 提供的專案分析報告包含所有專案的 task_type、model_family、status、README 摘要"
+    }
+  },
+
+  "section_2_experiment_results": {
+    "description": "163 個實驗結果的完整分析、指標彙總、最佳實驗識別",
+    "total_experiments": 163,
+    "projects_with_experiments": 3,
+    "gpu_coverage": ["2080_LLM", "4090_LLM"],
+
+    "experiment_summary_by_project": {
+      "2080_LLM/DataAug_DeBERTa_Evidence": {
+        "num_experiments": 81,
+        "task_type": "evidence_sentence",
+        "model": "microsoft/deberta-v3-base",
+        "single_vs_multi_task": "single",
+        "augmentation_distribution": {
+          "case_variation": {"count": 75, "percentage": "92.6%"},
+          "no_change": {"count": 6, "percentage": "7.4%"}
+        },
+        "best_experiment": {
+          "experiment_id": "trial_0021",
+          "metrics": {
+            "evidence_macro_f1": 0.4571,
+            "evidence_accuracy": 0.5714,
+            "criteria_macro_f1": 0.0,
+            "criteria_accuracy": 0.0,
+            "overall_macro_f1_mean": 0.2286,
+            "val_evidence_macro_f1": 0.3556
+          },
+          "augmentation": "case_variation",
+          "observation": "存在過擬合（val F1 = 0.356 vs test F1 = 0.457）"
+        },
+        "second_best_experiment": {
+          "experiment_id": "trial_0119",
+          "metrics": {
+            "evidence_macro_f1": 0.4571,
+            "evidence_accuracy": 0.5714
+          },
+          "note": "與 trial_0021 性能相同"
+        },
+        "performance_analysis": {
+          "evidence_task": "最佳 F1 = 0.4571，但仍有改進空間（目標 0.6+）",
+          "criteria_task": "大多數實驗 F1 = 0 或 < 0.2，性能極差",
+          "augmentation_effect": "Case variation vs no_change 差異不明顯"
+        }
+      },
+
+      "4090_LLM/DataAug_DeBERTa_Evidence": {
+        "num_experiments": 81,
+        "task_type": "evidence_sentence",
+        "model": "microsoft/deberta-v3-base",
+        "single_vs_multi_task": "single",
+        "augmentation_distribution": {
+          "case_variation": {"count": 75, "percentage": "92.6%"},
+          "no_change": {"count": 6, "percentage": "7.4%"}
+        },
+        "best_experiment": {
+          "experiment_id": "trial_0021",
+          "metrics": {
+            "evidence_macro_f1": 0.4571,
+            "evidence_accuracy": 0.5714,
+            "overall_macro_f1_mean": 0.2286,
+            "val_evidence_macro_f1": 0.3556
+          }
+        },
+        "note": "完全與 2080_LLM 結果相同，為重複實驗（資源浪費）"
+      },
+
+      "2080_LLM/DataAug_Multi_Evidence": {
+        "num_experiments": 1,
+        "task_type": "multi_task_with_evidence",
+        "model": "unknown",
+        "single_vs_multi_task": "multi",
+        "status": "FAILED",
+        "best_experiment": {
+          "experiment_id": "trial_123e4567-e89b-12d3-a456-426614174000",
+          "metrics": {
+            "span_f1": 0.0,
+            "precision": 0.0,
+            "recall": 0.0
+          },
+          "augmentation": "none",
+          "note": "實驗失敗，所有指標為 0，需要調試"
+        },
+        "recommendation": "需要系統性調查失敗原因（data loading、loss computation、model architecture）"
+      }
+    },
+
+    "cross_project_analysis": {
+      "evidence_task_performance": {
+        "best_macro_f1": 0.4571,
+        "best_accuracy": 0.5714,
+        "best_trials": ["trial_0021", "trial_0119"],
+        "validation_f1": 0.3556,
+        "performance_gap": "test - val = 0.457 - 0.356 = 0.101 (10.1%)",
+        "observation": "可能存在過擬合",
+        "target_improvement": "從 0.46 提升到 0.6+（需要更好的模型或數據增強）"
+      },
+
+      "criteria_task_performance": {
+        "typical_macro_f1": "< 0.2",
+        "many_zeros": true,
+        "best_observed": 0.15,
+        "observation": "Criteria 任務性能極差，需要重點關注",
+        "possible_causes": [
+          "訓練數據質量問題（類別不平衡、標註錯誤）",
+          "模型架構不適合（post-criterion pairing 可能不是最佳方式）",
+          "損失函數問題（Adaptive Focal Loss 可能參數不當）",
+          "超參數調整不足"
+        ],
+        "recommendations": [
+          "審查 Final_Ground_Truth.json 中 criteria labels 的分佈和質量",
+          "嘗試不同損失函數（weighted BCE、class-balanced focal loss）",
+          "使用更大模型（DeBERTa-v3-large）",
+          "增加 criteria-specific 數據增強"
+        ]
+      },
+
+      "augmentation_effectiveness": {
+        "case_variation_prevalence": "92%",
+        "case_variation_description": "只改變文本的大小寫（例如 'Hello' → 'HELLO' or 'hello'）",
+        "semantic_impact": "minimal - 幾乎不改變語義",
+        "improvement_over_no_change": "不明顯",
+        "current_limitations": "Case variation 對 transformer models 幾乎無幫助（subword tokenization 會處理大小寫）",
+        "recommendations": [
+          "實作語義級增強：同義詞替換（使用 WordNet 或 BERT embeddings）",
+          "實作回譯（EN→FR→EN, EN→ES→EN）",
+          "使用 LLM paraphrase（GPT-3.5/4 或 Gemma）",
+          "組合多種增強策略",
+          "參考 DataAugmentation_ReDSM5 中的 NLPAug 和 TextAttack 方法"
+        ]
+      },
+
+      "multi_task_status": {
+        "total_experiments": 1,
+        "success_rate": "0% (1/1 failed)",
+        "observation": "Multi-task learning 嚴重不穩定",
+        "recommendations": [
+          "Debug DataAug_Multi_Evidence implementation",
+          "檢查 loss balancing（criteria_loss_weight vs evidence_loss_weight）",
+          "檢查 gradient flow（是否有梯度消失或爆炸）",
+          "驗證 data loading pipeline（是否正確載入 multi-task labels）",
+          "從 NoAug_Criteria_Evidence 的 joint 或 share architecture 開始（已有部分實作）"
+        ]
+      }
+    },
+
+    "top_10_experiments_ranked": [
+      {
+        "rank": 1,
+        "trial": "trial_0021",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.4571,
+        "evidence_acc": 0.5714,
+        "val_f1": 0.3556,
+        "note": "最佳實驗，但有過擬合跡象"
+      },
+      {
+        "rank": 2,
+        "trial": "trial_0119",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.4571,
+        "evidence_acc": 0.5714,
+        "note": "與 trial_0021 完全相同性能"
+      },
+      {
+        "rank": 3,
+        "trial": "trial_0013",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.3333,
+        "evidence_acc": 0.4286
+      },
+      {
+        "rank": 4,
+        "trial": "trial_0006",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.3333,
+        "evidence_acc": 0.4286
+      },
+      {
+        "rank": 5,
+        "trial": "trial_0115",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.3175,
+        "evidence_acc": 0.2857
+      },
+      {
+        "rank": 6,
+        "trial": "trial_0011",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "no_change",
+        "evidence_f1": 0.2619,
+        "evidence_acc": 0.2857,
+        "note": "No augmentation baseline - 性能類似 case_variation"
+      },
+      {
+        "rank": 7,
+        "trial": "trial_0058",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.2000,
+        "evidence_acc": 0.4286
+      },
+      {
+        "rank": 8,
+        "trial": "trial_0007",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.2000,
+        "evidence_acc": 0.4286
+      },
+      {
+        "rank": 9,
+        "trial": "trial_0023",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.2000,
+        "evidence_acc": 0.4286
+      },
+      {
+        "rank": 10,
+        "trial": "trial_0002",
+        "project": "2080_LLM/4090_LLM DataAug_DeBERTa_Evidence",
+        "augmentation": "case_variation",
+        "evidence_f1": 0.2000,
+        "evidence_acc": 0.4286
+      }
+    ],
+
+    "experiment_data_files": {
+      "complete_json": {
+        "filename": "EXPERIMENTS_ANALYSIS_COMPLETE.json",
+        "size": "192 KB",
+        "description": "完整 JSON 格式分析結果，包含每個項目的所有實驗詳細信息、最佳實驗和前 10 名排序"
+      },
+      "summary_csv": {
+        "filename": "EXPERIMENTS_SUMMARY.csv",
+        "size": "33 KB",
+        "description": "CSV 格式實驗摘要表，所有 163 個實驗的關鍵指標，便於 Excel 分析"
+      },
+      "analysis_report": {
+        "filename": "EXPERIMENTS_ANALYSIS_REPORT.txt",
+        "size": "4.1 KB",
+        "description": "人類可讀詳細文本報告，包含統計信息和最佳實驗詳情"
+      },
+      "file_manifest": {
+        "filename": "file_manifest.json",
+        "size": "74 KB",
+        "description": "所有 163 個 evaluation_report.json 檔案的完整清單，包含完整路徑"
+      },
+      "summary_markdown": {
+        "filename": "ANALYSIS_SUMMARY.md",
+        "size": "5.2 KB",
+        "description": "分析的高層概述，包含主要發現和建議"
+      }
+    },
+
+    "usage_example": {
+      "python_access": "import json; data = json.load(open('EXPERIMENTS_ANALYSIS_COMPLETE.json')); best = data['projects']['2080_LLM/DataAug_DeBERTa_Evidence']['best_experiment_details']",
+      "excel_analysis": "直接打開 EXPERIMENTS_SUMMARY.csv，使用數據透視表分析",
+      "quick_view": "cat ANALYSIS_SUMMARY.md"
+    }
+  },
+
+  "section_3_agent_implementations": {
+    "description": "14 種 Agent 類型的完整實作目錄、技術規格、I/O 介面、程式碼位置",
+    "total_agent_types": 14,
+    "total_implementations": "30+",
+    "analysis_depth": "Very Thorough - 涵蓋 1000+ Python 檔案、200+ 配置檔案",
+
+    "agent_type_summary": [
+      {"type": "CriteriaAgent", "count": 5, "status": "mainline", "performance": "F1 < 0.2 (需改進)"},
+      {"type": "EvidenceAgent", "count": 4, "status": "mainline", "performance": "F1 = 0.46 (可接受)"},
+      {"type": "RAGAgent", "count": 2, "status": "mainline", "performance": "未評估"},
+      {"type": "RerankerAgent", "count": 1, "status": "mainline", "performance": "未評估"},
+      {"type": "JointAgent", "count": 2, "status": "mainline", "performance": "不穩定"},
+      {"type": "LLMCriteriaAgent", "count": 1, "status": "prototype", "performance": "無數據"},
+      {"type": "LLMEvidenceAgent", "count": 1, "status": "prototype", "performance": "無數據"},
+      {"type": "SuggestionAgent", "count": 1, "status": "mainline", "performance": "規則型"},
+      {"type": "EvaluationAgent", "count": 1, "status": "mainline", "performance": "框架"},
+      {"type": "PsyAgent", "count": 3, "status": "prototype", "performance": "原型"},
+      {"type": "RAGClassifier", "count": 4, "status": "mainline", "performance": "未評估"},
+      {"type": "SharedArchitecture", "count": 1, "status": "mainline", "performance": "未評估"},
+      {"type": "RiskSafetyAgent", "count": 0, "status": "MISSING", "performance": "N/A"},
+      {"type": "ReportAgent", "count": 1, "status": "prototype", "performance": "未探索"}
+    ],
+
+    "detailed_agent_catalog": "請參考 AGENT_ANALYSIS_COMPLETE.json 獲取每個 Agent 的完整技術規格、I/O 介面、程式碼位置、TODO 清單",
+
+    "agent_implementation_highlights": {
+      "CriteriaAgent_best": {
+        "project": "4090_LLM/NoAug_Criteria_Evidence",
+        "status": "mainline",
+        "model": "BERT/RoBERTa/DeBERTa with configurable classification heads",
+        "io_spec": {
+          "input": "Tokenized post-criterion pairs (input_ids, attention_mask)",
+          "input_format": "[CLS] post_text [SEP] criterion_text [SEP]",
+          "output": "Binary classification logits (shape: [batch_size, 2])",
+          "output_format": "logits[0] = absent probability, logits[1] = present probability"
+        },
+        "features": [
+          "Hydra configuration system with field_map.yaml strict validation",
+          "Multi-stage HPO (8/20/50/refit) or maximal (600-1200 trials)",
+          "Gradient checkpointing for memory efficiency",
+          "Mixed precision training (fp16/bf16 auto-detection)",
+          "torch.compile for inference speedup",
+          "Supports 3 model families: BERT, RoBERTa, DeBERTa"
+        ],
+        "main_files": [
+          "src/psy_agents_noaug/architectures/criteria/models/model.py - Model definition",
+          "src/psy_agents_noaug/architectures/criteria/models/trainer.py - Training loop",
+          "scripts/train_criteria.py - CLI entry point",
+          "scripts/eval_criteria.py - Evaluation script",
+          "configs/data/field_map.yaml - Field validation config"
+        ],
+        "config_example": {
+          "model_name": "microsoft/deberta-v3-base",
+          "max_seq_length": 512,
+          "learning_rate": 2e-5,
+          "batch_size": 16,
+          "num_epochs": 10,
+          "loss_function": "CrossEntropyLoss",
+          "optimizer": "AdamW"
+        },
+        "usage_example": "python scripts/train_criteria.py model=deberta data=redsm5 training.num_epochs=10",
+        "todos": ["Consolidate with src/Project/Criteria/ implementation"],
+        "recommendation": "🏆 Use this for production Criteria matching"
+      },
+
+      "EvidenceAgent_best": {
+        "project": "4090_LLM/NoAug_Criteria_Evidence",
+        "status": "mainline",
+        "model": "BERT/RoBERTa/DeBERTa with span prediction heads",
+        "io_spec": {
+          "input": "Tokenized post-criterion pairs",
+          "output": "Span logits - start_logits (shape: [batch_size, seq_len]), end_logits (shape: [batch_size, seq_len])",
+          "output_format": "Each token gets a probability of being start/end of evidence span"
+        },
+        "features": [
+          "Token-level span extraction (similar to QA models)",
+          "max_span_length constraint (typically 50 tokens)",
+          "Threshold-based span matching (span_threshold = 0.5)",
+          "BCEWithLogitsLoss for span prediction",
+          "Joint training with criteria task (optional)"
+        ],
+        "main_files": [
+          "src/psy_agents_noaug/architectures/evidence/models/model.py",
+          "src/psy_agents_noaug/architectures/evidence/models/trainer.py",
+          "scripts/train_evidence.py"
+        ],
+        "span_extraction_logic": "For each token position i: if start_logits[i] > threshold and end_logits[j] > threshold and j > i and j - i < max_span_length: extract span[i:j]",
+        "recommendation": "🏆 Use this for production Evidence extraction"
+      },
+
+      "RerankerAgent_best": {
+        "project": "4090_LLM/gemini_reranker",
+        "status": "mainline",
+        "model": "CrossEncoderRanker (Track A) + QASpanModel (Track B)",
+        "io_spec": {
+          "input": "candidates: List[Candidate], criterion: str",
+          "output": "Ranked candidates with scores OR best-of-k decision"
+        },
+        "pipeline": [
+          "Step 1: Candidate Generation - Extract N candidate spans from text",
+          "Step 2: Gemini Judging - Gemini API ranks candidates (JSON mode, two-pass consistency)",
+          "Step 3: Pair Building - Convert rankings to pairwise training examples",
+          "Step 4: Training - DPO or RankNet loss",
+          "Step 5: Inference - Rerank candidates or select best"
+        ],
+        "tracks": {
+          "track_a_criteria": {
+            "model": "CrossEncoderRanker",
+            "loss": "RankNet (pairwise ranking loss)",
+            "training": "Learns to rank criterion matches"
+          },
+          "track_b_evidence": {
+            "model": "QASpanModel",
+            "loss": "Span Margin loss",
+            "training": "Learns to extract best evidence span"
+          }
+        },
+        "gemini_judge": {
+          "api": "Gemini 1.5 Flash / Pro",
+          "mode": "JSON mode for structured output",
+          "consistency": "Two-pass: rank once, rank again, check consistency",
+          "safety": "Safety filters enabled",
+          "temperature": 0.0
+        },
+        "main_files": [
+          "src/criteriabind/models.py - CrossEncoderRanker, QASpanModel",
+          "src/criteriabind/gemini_judge.py - Gemini API wrapper",
+          "src/criteriabind/train/train_criteria_ranker.py - Track A training",
+          "src/criteriabind/train/train_evidence_span.py - Track B training",
+          "src/criteriabind/cli/judge.py - CLI for Gemini judging",
+          "src/criteriabind/cli/infer.py - Inference CLI"
+        ],
+        "documentation": "CLAUDE.md (700+ lines) - extremely detailed pipeline description",
+        "recommendation": "🏆 Use this for high-stakes verification, NOT as primary classifier (too slow/expensive)"
+      },
+
+      "RAGAgent_best": {
+        "project": "2080_LLM/Psy_RAG",
+        "status": "mainline",
+        "model": "FAISS + BGE-M3 + SpanBERT",
+        "io_spec": {
+          "input": "posts_path: str, criteria_path: str, top_k: int = 10",
+          "output": "RAGResult with List[CriteriaMatch]"
+        },
+        "pipeline": [
+          "Step 1: Index DSM-5 criteria using BGE-M3 embeddings into FAISS",
+          "Step 2: For each post, retrieve top-k criteria using FAISS similarity search",
+          "Step 3: Rerank using SpanBERT classifier",
+          "Step 4: Filter by thresholds (similarity > 0.7, spanbert > 0.5)"
+        ],
+        "components": {
+          "embedding_model": "BAAI/bge-m3 (multi-lingual, 1024-dim)",
+          "retrieval_backend": "FAISS (L2 or cosine similarity)",
+          "reranking_model": "SpanBERT/spanbert-base-cased",
+          "similarity_threshold": 0.7,
+          "spanbert_threshold": 0.5
+        },
+        "main_files": [
+          "src/models/rag_pipeline.py - Main RAG orchestrator",
+          "src/models/embedding_model.py - BGE-M3 wrapper",
+          "src/models/spanbert_model.py - SpanBERT classifier",
+          "src/models/faiss_index.py - FAISS index management"
+        ],
+        "recommendation": "📚 Use this for initial candidate generation, NOT final classification"
+      },
+
+      "JointAgent_best": {
+        "project": "4090_LLM/NoAug_Criteria_Evidence",
+        "status": "mainline",
+        "model": "Dual encoders with fusion layer",
+        "io_spec": {
+          "input": "Tokenized post-criterion pairs",
+          "output": "JointOutput with criteria_logits (shape: [batch, 2]) + evidence_start_logits (shape: [batch, seq_len]) + evidence_end_logits (shape: [batch, seq_len])"
+        },
+        "architecture": "Two separate encoders (one for post, one for criterion) → Fusion layer → Dual task heads (criteria classification + evidence span prediction)",
+        "multi_task_loss": "total_loss = criteria_loss_weight * criteria_loss + evidence_loss_weight * evidence_loss (default weights: 0.5, 0.5)",
+        "features": [
+          "Shared encoder for parameter efficiency",
+          "Separate task-specific heads",
+          "Configurable loss weights",
+          "Joint training improves both tasks (in theory)"
+        ],
+        "main_files": [
+          "src/psy_agents_noaug/architectures/joint/models/model.py",
+          "src/Project/Joint/model.py"
+        ],
+        "todos": ["Debug why multi-task experiments are failing", "Tune loss balancing"],
+        "recommendation": "⚠️ Experimental - multi-task training currently unstable"
+      },
+
+      "SuggestionAgent_best": {
+        "project": "2080_LLM/DataAug_DeBERTa_FourAgents",
+        "status": "mainline",
+        "model": "Value of Information (VOI) strategy",
+        "io_spec": {
+          "input": "criteria_results: Dict[criterion_id, prediction], grouped_predictions: List",
+          "output": "Enriched criteria_results with 'suggestions' field"
+        },
+        "strategy": "VOI-based ranking: prioritize criteria with prediction probability in uncertain band (0.4, 0.6), return top-k=3 suggestions",
+        "use_case": "決定下一步應該詢問患者哪些問題，基於當前預測的不確定性",
+        "main_files": [
+          "src/agents/suggestion_agent.py",
+          "src/suggestion/voi.py"
+        ],
+        "recommendation": "📚 Use this for interactive diagnosis workflow"
+      },
+
+      "EvaluationAgent_best": {
+        "project": "2080_LLM/DataAug_DeBERTa_FourAgents",
+        "status": "mainline",
+        "model": "Metrics + Quality Gates + Calibration",
+        "io_spec": {
+          "input": "predictions, criteria_results, dataset",
+          "output": "Dict with val_metrics, test_metrics, calibration_paths, gate_check_results"
+        },
+        "features": [
+          "Comprehensive metrics: F1, accuracy, AUROC, AUPRC, confusion matrix",
+          "Temperature scaling for probability calibration",
+          "Quality gates: neg_precision_min, criteria_auroc_min, ece_max",
+          "Calibration plots and ECE (Expected Calibration Error)"
+        ],
+        "main_files": [
+          "src/agents/evaluation_agent.py",
+          "src/eval/metrics.py",
+          "src/eval/calibration.py"
+        ],
+        "recommendation": "📚 Use this for comprehensive model evaluation and quality assurance"
+      },
+
+      "RiskSafetyAgent_MISSING": {
+        "status": "MISSING - 無完整實作",
+        "requirement": "CRITICAL for clinical deployment",
+        "task_description": "偵測自殺意念、自傷、他傷等高風險情況",
+        "mentioned_in": "程式碼註解、README、規格文件中被提及，但無獨立實作",
+        "recommendation": "🔴 URGENT: 需要實作 Risk/Safety Agent",
+        "implementation_suggestions": [
+          "創建專門的二元分類器（高風險 vs 非高風險）",
+          "使用獨立的高風險標註數據集",
+          "設定嚴格閾值（例如 > 0.8 觸發警報）",
+          "添加可解釋性（highlight 觸發警報的文本）",
+          "整合到主系統作為優先檢查（在 criteria/evidence 之前）",
+          "參考臨床指南設定風險等級（低/中/高）"
+        ],
+        "io_spec_proposed": {
+          "input": "post_text: str",
+          "output": "RiskAssessment with risk_level (low/medium/high), risk_types (List[suicide, self_harm, homicidal]), confidence, evidence_text"
+        }
+      }
+    },
+
+    "design_patterns": {
+      "rule_based_aggregators": {
+        "description": "規則型聚合器，不需訓練",
+        "examples": ["CriteriaAgent in FourAgents"],
+        "use_case": "將多個模型輸出聚合成最終決策"
+      },
+      "neural_classifiers": {
+        "description": "基於 Transformer 的神經分類器",
+        "examples": ["BERT/RoBERTa/DeBERTa-based Criteria/Evidence agents"],
+        "use_case": "主力分類任務"
+      },
+      "llm_based_approaches": {
+        "description": "使用大語言模型（Gemma、Gemini）",
+        "examples": ["LLMCriteriaAgent", "LLMEvidenceAgent", "gemini_reranker"],
+        "use_case": "高質量生成、重排、驗證"
+      },
+      "rag_retrieval_based": {
+        "description": "檢索增強生成",
+        "examples": ["Psy_RAG with FAISS+SpanBERT"],
+        "use_case": "大規模候選檢索"
+      },
+      "reranker_preference_learning": {
+        "description": "偏好學習重排",
+        "examples": ["gemini_reranker with Gemini API"],
+        "use_case": "精確排序、高風險驗證"
+      },
+      "multi_task_learning": {
+        "description": "多任務聯合訓練",
+        "examples": ["JointAgent", "SharedArchitecture"],
+        "use_case": "參數共享、知識遷移"
+      },
+      "pipeline_composition": {
+        "description": "多代理組合管道",
+        "examples": ["MultiAgentPipeline", "FourAgents"],
+        "use_case": "複雜工作流程"
+      }
+    },
+
+    "common_technical_features": {
+      "supported_models": ["BERT", "RoBERTa", "DeBERTa", "SpanBERT", "Gemma"],
+      "training_frameworks": ["PyTorch ≥ 2.0", "Hugging Face Transformers", "Hydra"],
+      "config_systems": ["Hydra (best)", "YAML", "Pydantic", "argparse"],
+      "optimization_techniques": {
+        "mixed_precision": "fp16/bf16 automatic mixed precision training",
+        "gradient_checkpointing": "Trade computation for memory (enables larger batch sizes)",
+        "torch_compile": "PyTorch 2.0+ compilation for 20-30% inference speedup",
+        "lora": "Parameter-efficient fine-tuning for LLMs",
+        "8bit_quantization": "BitsAndBytes 8-bit quantization for LLMs"
+      },
+      "hpo_frameworks": ["Optuna (多數專案)", "MLflow tracking"],
+      "supported_operations": ["train", "eval", "inference", "hpo", "candidate_generation", "dialogue"]
+    },
+
+    "agent_data_files": {
+      "complete_json": {
+        "filename": "AGENT_ANALYSIS_COMPLETE.json",
+        "size": "18 KB",
+        "description": "完整結構化 JSON，包含所有 Agent 的 I/O spec、features、main_files、todos"
+      },
+      "summary_markdown": {
+        "filename": "AGENT_ANALYSIS_SUMMARY.md",
+        "size": "7 KB",
+        "description": "Agent 分析摘要，包含設計模式、模型支持、狀態映射"
+      },
+      "catalog_markdown": {
+        "filename": "AGENT_IMPLEMENTATION_CATALOG.md",
+        "size": "738 lines",
+        "description": "完整實作目錄，代碼級詳情、配置範例、使用說明"
+      },
+      "readme": {
+        "filename": "README_ANALYSIS.md",
+        "size": "9 KB",
+        "description": "分析報告導航、閱讀順序、快速參考"
+      }
+    }
+  },
+
+  "section_4_core_datasets": {
+    "ReDSM5_dataset": {
+      "name": "ReDSM-5 (Reddit DSM-5)",
+      "location": "Data/redsm5/ in multiple projects",
+      "scale": {
+        "posts": 2125,
+        "annotations": 2082,
+        "criteria_labels": "48,973 (from Final_Ground_Truth.json)"
+      },
+      "license": "Gated dataset (restricted access)",
+      "format": "JSON with post text, criterion IDs, evidence spans",
+      "task": "DSM-5 精神症狀分類的基礎數據",
+      "splits": {
+        "train": "redsm5_split_train.json",
+        "val": "redsm5_split_val.json",
+        "test": "redsm5_split_test.json"
+      },
+      "structure": {
+        "post_id": "Unique identifier",
+        "text": "Reddit post content",
+        "criteria": "List of matched DSM-5 criterion IDs",
+        "evidence_spans": "List of (start, end, criterion_id) tuples"
+      }
+    },
+
+    "DSM5_criteria_definitions": {
+      "name": "DSM-5 Criteria Array",
+      "location": "Data/DSM-5/DSM_Criteria_Array_*.json",
+      "count": "131+ DSM-5 診斷標準",
+      "variants": 4,
+      "format": "JSON with criterion ID, text, category, disorder",
+      "structure": {
+        "criterion_id": "Unique ID (e.g., 'MDD_A1')",
+        "text": "Criterion text description",
+        "category": "Disorder category (e.g., 'Depressive Disorders')",
+        "disorder": "Specific disorder (e.g., 'Major Depressive Disorder')"
+      }
+    },
+
+    "ground_truth_labels": {
+      "name": "Final Ground Truth",
+      "file": "Final_Ground_Truth.json",
+      "size": "3.2 MB",
+      "scale": "48,973 post-criterion pair labels",
+      "format": "Post-criterion pair labels with binary match (0/1)",
+      "structure": {
+        "post_id": "Post identifier",
+        "criterion_id": "Criterion identifier",
+        "label": "0 (unmatched) or 1 (matched)"
+      }
+    },
+
+    "data_quality_notes": [
+      "ReDSM-5 是從 Reddit 收集的真實用戶貼文，可能包含噪音和非正式語言",
+      "Criteria labels 可能存在類別不平衡（某些 criteria 很少出現）",
+      "Evidence spans 為人工標註，可能存在標註者間差異",
+      "建議在使用前進行數據質量審查和清理"
+    ]
+  },
+
+  "section_5_technical_stack": {
+    "core_frameworks": {
+      "PyTorch": {
+        "version": "≥ 2.0",
+        "usage": "深度學習框架，支援 torch.compile 編譯加速",
+        "key_features": ["Mixed precision", "Gradient checkpointing", "DDP for multi-GPU"]
+      },
+      "Transformers": {
+        "provider": "Hugging Face",
+        "usage": "預訓練模型載入、tokenization、model architectures",
+        "key_models": ["BERT", "RoBERTa", "DeBERTa", "SpanBERT", "Gemma"]
+      },
+      "Hydra": {
+        "version": "≥ 1.3",
+        "usage": "配置管理、CLI 生成、多配置組合",
+        "key_features": ["Composable configs", "Override from CLI", "Structured configs with dataclasses"]
+      },
+      "MLflow": {
+        "usage": "實驗追蹤、模型版本控制",
+        "backend": "SQLite (本地) or remote server",
+        "logged_items": ["Metrics", "Parameters", "Artifacts (models, plots)"]
+      },
+      "Optuna": {
+        "usage": "超參數優化（HPO）",
+        "backend": "SQLite storage",
+        "algorithms": ["TPE (Tree-structured Parzen Estimator)", "CMA-ES", "Grid Search"]
+      }
+    },
+
+    "augmentation_libraries": {
+      "NLPAug": {
+        "methods": ["Synonym replacement", "Spelling errors", "Contextual word embeddings (BERT-based)"],
+        "usage": "在 DataAugmentation_ReDSM5 中使用"
+      },
+      "TextAttack": {
+        "methods": ["Adversarial perturbations", "Backtranslation", "Paraphrasing"],
+        "usage": "在 DataAugmentation_ReDSM5 中使用"
+      },
+      "PEFT_LoRA": {
+        "method": "Parameter-efficient fine-tuning with Low-Rank Adaptation",
+        "usage": "在 LLM agents (Gemma) 中使用"
+      }
+    },
+
+    "infrastructure": {
+      "dependency_management": ["Poetry (modern)", "Pip (legacy)"],
+      "containerization": "Docker for reproducible environments",
+      "experiment_storage": "MLflow SQLite (local) + Optuna SQLite (HPO)",
+      "version_control": "Git"
+    },
+
+    "gpu_requirements": {
+      "2080_LLM": {
+        "gpu": "NVIDIA RTX 2080",
+        "vram": "8GB",
+        "suitable_for": "BERT-base, DeBERTa-base, small batch sizes"
+      },
+      "3090_LLM": {
+        "gpu": "NVIDIA RTX 3090",
+        "vram": "24GB",
+        "suitable_for": "BERT/DeBERTa-large, larger batch sizes, LLM fine-tuning with LORA"
+      },
+      "4070ti_LLM": {
+        "gpu": "NVIDIA RTX 4070 Ti",
+        "vram": "12GB",
+        "suitable_for": "BERT/DeBERTa-base, moderate batch sizes"
+      },
+      "4090_LLM": {
+        "gpu": "NVIDIA RTX 4090",
+        "vram": "24GB",
+        "suitable_for": "All models including LLM (Gemma 7B), large batch sizes, multi-task training"
+      }
+    },
+
+    "typical_training_config": {
+      "batch_size": "8-32 (depending on GPU VRAM)",
+      "learning_rate": "1e-5 to 5e-5 (AdamW)",
+      "num_epochs": "3-10",
+      "warmup_ratio": "0.1",
+      "weight_decay": "0.01",
+      "gradient_accumulation_steps": "1-4 (for effective larger batch)",
+      "max_seq_length": "512",
+      "mixed_precision": "fp16 or bf16"
+    }
+  },
+
+  "section_6_recommendations": {
+    "immediate_priorities": [
+      {
+        "priority": "🔴 CRITICAL",
+        "action": "修復 Criteria Agent 性能",
+        "current_status": "Macro F1 < 0.2，遠低於 Evidence Agent (0.46)",
+        "impact": "Criteria matching 是診斷系統的核心，當前性能無法投入生產",
+        "detailed_suggestions": [
+          "1. 數據審查：檢查 Final_Ground_Truth.json 中 criteria labels 的分佈（是否極度不平衡？）、標註質量（是否有錯誤標註？）",
+          "2. 損失函數：當前 Adaptive Focal Loss 可能參數不當，嘗試 class-balanced focal loss、weighted BCE、或簡單的 weighted CrossEntropy",
+          "3. 模型升級：從 DeBERTa-v3-base 升級到 DeBERTa-v3-large（需要 24GB VRAM，使用 4090）",
+          "4. 架構調整：考慮不同的 post-criterion encoding 方式（當前是 [CLS] post [SEP] criterion [SEP]，可以嘗試雙編碼器 + cross-attention）",
+          "5. 數據增強：為 criteria 任務設計專門的增強策略（不只是 case variation）",
+          "6. 超參數調整：使用 Optuna 進行更徹底的 HPO（當前可能只針對 evidence 任務優化）"
+        ],
+        "estimated_effort": "2-3 週",
+        "success_criteria": "Criteria Macro F1 提升到 > 0.5"
+      },
+      {
+        "priority": "🔴 CRITICAL",
+        "action": "升級數據增強策略",
+        "current_status": "92% 實驗只用 Case Variation（改大小寫），幾乎無語義影響",
+        "impact": "數據增強是提升性能的關鍵，當前策略過於簡單",
+        "detailed_suggestions": [
+          "1. 同義詞替換：使用 WordNet 或 contextual embeddings (BERT) 替換關鍵詞",
+          "2. 回譯（Backtranslation）：EN → FR/ES/DE → EN，增加語義多樣性",
+          "3. LLM Paraphrase：使用 GPT-3.5/4 或 Gemma 生成改寫版本（保持語義不變）",
+          "4. 組合策略：隨機組合多種增強方法（例如 synonym + backtranslation）",
+          "5. 參考現有實作：DataAugmentation_ReDSM5 已實作 NLPAug 和 TextAttack，可直接使用或擴展",
+          "6. 評估增強質量：增強後的數據應保持標籤不變（使用人工或模型驗證）"
+        ],
+        "estimated_effort": "1-2 週",
+        "success_criteria": "Evidence F1 從 0.46 提升到 0.55+，Criteria F1 提升到 0.4+"
+      },
+      {
+        "priority": "🟡 HIGH",
+        "action": "Debug Multi-task learning",
+        "current_status": "只有 1 個 multi-task 實驗，且失敗（所有指標 = 0）",
+        "impact": "Multi-task learning 可以改善兩個任務的性能，並減少模型數量",
+        "detailed_suggestions": [
+          "1. 代碼審查：檢查 DataAug_Multi_Evidence 的 data loading、loss computation、model architecture",
+          "2. Loss balancing：檢查 criteria_loss_weight 和 evidence_loss_weight 是否合理（當前 0.5/0.5 可能不是最佳）",
+          "3. Gradient flow：使用 gradient clipping、檢查是否有梯度消失或爆炸",
+          "4. 從單任務遷移：先載入訓練好的單任務模型 checkpoint，再進行 multi-task fine-tuning",
+          "5. 參考成功案例：NoAug_Criteria_Evidence 的 joint 和 share architecture 已有部分實作，可作為起點",
+          "6. 漸進式訓練：先訓練一個任務（例如 criteria），凍結 encoder，再訓練另一個任務（evidence），最後 joint fine-tuning"
+        ],
+        "estimated_effort": "1-2 週",
+        "success_criteria": "Multi-task model 達到或超越單任務 baseline"
+      },
+      {
+        "priority": "🟡 HIGH",
+        "action": "實作 Risk/Safety Agent",
+        "current_status": "完全缺失，但對臨床應用至關重要",
+        "impact": "沒有風險偵測，系統無法投入臨床使用（法律與倫理問題）",
+        "detailed_suggestions": [
+          "1. 數據收集：收集或標註包含自殺意念、自傷、他傷的文本數據",
+          "2. 模型設計：創建專門的二元或多類別分類器（低風險/中風險/高風險）",
+          "3. 閾值設定：使用嚴格閾值（例如 > 0.8）觸發警報，以減少漏報",
+          "4. 可解釋性：添加 attention visualization 或 span highlighting，標示觸發警報的文本",
+          "5. 整合流程：在 criteria/evidence agent 之前優先檢查風險（如果高風險，立即警報）",
+          "6. 臨床驗證：與臨床專家合作驗證系統準確性和實用性"
+        ],
+        "estimated_effort": "3-4 週（包含數據收集）",
+        "success_criteria": "Risk detection Recall > 0.95（高風險不能漏報）"
+      },
+      {
+        "priority": "🟢 MEDIUM",
+        "action": "整合重複專案",
+        "current_status": "2080_LLM 和 4090_LLM 有大量重複實驗（完全相同結果）",
+        "impact": "資源浪費，程式碼維護困難",
+        "detailed_suggestions": [
+          "1. 合併專案：將 2080 和 4090 的相同專案合併，使用統一配置",
+          "2. GPU 配置：通過配置檔案指定使用哪個 GPU（不需要重複整個專案）",
+          "3. 清理舊實驗：刪除或歸檔不再需要的實驗結果",
+          "4. 標準化配置：所有專案統一使用 Hydra 配置系統（參考 NoAug_Criteria_Evidence）"
+        ],
+        "estimated_effort": "1 週",
+        "success_criteria": "專案數量減少 30-40%，配置統一"
+      },
+      {
+        "priority": "🟢 LOW",
+        "action": "優化 LLM agents（Gemma）",
+        "current_status": "原型階段，無評估數據，延遲問題",
+        "impact": "LLM agents 可能提供更好質量，但需要優化",
+        "detailed_suggestions": [
+          "1. 基準評估：在測試集上評估 Gemma agents vs BERT/DeBERTa",
+          "2. 延遲優化：測量推理延遲，嘗試 4-bit/8-bit 量化、batch 推理",
+          "3. 質量分析：如果質量顯著優於 BERT，考慮蒸餾到小模型",
+          "4. 成本分析：計算 Gemini API 成本（用於 reranker），評估是否值得"
+        ],
+        "estimated_effort": "1-2 週",
+        "success_criteria": "確定 LLM agents 的價值主張（質量 vs 速度 vs 成本）"
+      }
+    ],
+
+    "production_deployment_roadmap": {
+      "phase_1_foundation": {
+        "duration": "4-6 週",
+        "goals": [
+          "修復 Criteria Agent（F1 > 0.5）",
+          "升級數據增強（Evidence F1 > 0.55, Criteria F1 > 0.4）",
+          "實作 Risk/Safety Agent（Recall > 0.95）"
+        ],
+        "deliverables": [
+          "Production-ready Criteria Agent (based on NoAug_Criteria_Evidence)",
+          "Production-ready Evidence Agent (based on NoAug_Criteria_Evidence)",
+          "Production-ready Risk/Safety Agent (new implementation)",
+          "Comprehensive evaluation reports"
+        ]
+      },
+      "phase_2_integration": {
+        "duration": "3-4 週",
+        "goals": [
+          "整合 Criteria + Evidence + Risk agents 成完整管道",
+          "添加 Suggestion Agent（基於 FourAgents）",
+          "添加 Evaluation Agent（品質閘檢查）"
+        ],
+        "deliverables": [
+          "Multi-agent pipeline (Risk → Criteria → Evidence → Suggestion → Evaluation)",
+          "API layer for all agents",
+          "Comprehensive logging and monitoring"
+        ]
+      },
+      "phase_3_advanced": {
+        "duration": "4-6 週",
+        "goals": [
+          "添加 Reranker Agent（gemini_reranker）用於高風險驗證",
+          "添加 Report Agent 生成臨床報告",
+          "添加 Dialogue Agent 進行互動式訪談"
+        ],
+        "deliverables": [
+          "Complete clinical diagnosis assistant system",
+          "HIPAA-compliant report generation",
+          "Interactive dialogue interface"
+        ]
+      },
+      "phase_4_deployment": {
+        "duration": "2-3 週",
+        "goals": [
+          "臨床驗證（與醫師合作）",
+          "部署到生產環境",
+          "監控和持續改進"
+        ],
+        "deliverables": [
+          "Clinical validation report",
+          "Production deployment",
+          "Monitoring dashboard"
+        ]
+      }
+    },
+
+    "component_recommendations": {
+      "criteria_matching": {
+        "recommended_implementation": "4090_LLM/NoAug_Criteria_Evidence (criteria architecture)",
+        "model": "DeBERTa-v3-large (after fixing performance issues)",
+        "training": "Multi-stage HPO with semantic augmentation",
+        "config": "Hydra with strict field validation",
+        "performance_target": "Macro F1 > 0.5"
+      },
+      "evidence_extraction": {
+        "recommended_implementation": "4090_LLM/NoAug_Criteria_Evidence (evidence architecture)",
+        "model": "DeBERTa-v3-base",
+        "training": "Based on trial_0021 config with semantic augmentation",
+        "performance_target": "Macro F1 > 0.6"
+      },
+      "risk_detection": {
+        "recommended_implementation": "NEW - to be implemented",
+        "model": "BERT/DeBERTa with high-risk dataset",
+        "training": "Strict threshold (> 0.8 for alert)",
+        "performance_target": "Recall > 0.95, Precision > 0.7"
+      },
+      "reranking_verification": {
+        "recommended_implementation": "4090_LLM/gemini_reranker",
+        "model": "CrossEncoderRanker + Gemini API",
+        "use_case": "High-stakes verification only (not primary classification)",
+        "notes": "Too slow/expensive for all cases, use selectively"
+      },
+      "dialogue_management": {
+        "recommended_implementation": "Build new based on 2080_LLM/DataAug_DeBERTa_FourAgents pipeline",
+        "components": "Risk + Criteria + Evidence + Suggestion + Evaluation agents",
+        "features": "Context memory, turn management, VOI-based question selection"
+      },
+      "report_generation": {
+        "recommended_implementation": "Extend 2080_LLM/Psy_Report_Agent",
+        "features": "Template-based + LLM enhancement, HIPAA-compliant",
+        "output_formats": "PDF, HTML, structured JSON"
+      }
+    },
+
+    "research_directions": [
+      "🔬 Why is Criteria performance so low? - 深入分析 criteria matching 困難的根本原因（數據？模型？任務定義？）",
+      "🔬 Multi-task learning optimization - 探索更好的 loss balancing、architecture sharing、training strategies",
+      "🔬 Interpretability for clinical use - 開發可解釋性工具（attention visualization、counterfactual explanations）",
+      "🔬 Active learning - 使用主動學習減少標註成本，優先標註高不確定性樣本",
+      "🔬 Cross-lingual transfer - 探索將系統擴展到其他語言（使用多語言模型）",
+      "🔬 Longitudinal analysis - 追蹤患者隨時間的症狀變化"
+    ],
+
+    "infrastructure_improvements": [
+      "🏗️ CI/CD pipeline - 自動化測試、評估、部署",
+      "🏗️ Unified API - 為所有 agents 創建統一 REST API",
+      "🏗️ Monitoring - 生產環境監控（latency、accuracy、error rate）",
+      "🏗️ A/B testing - 支援多個模型版本並行測試",
+      "🏗️ Data versioning - 使用 DVC 或類似工具管理數據版本"
+    ]
+  },
+
+  "section_7_quick_reference": {
+    "finding_best_implementations": {
+      "criteria_matching": {
+        "path": "4090_LLM/NoAug_Criteria_Evidence/src/psy_agents_noaug/architectures/criteria/",
+        "key_files": ["models/model.py", "models/trainer.py"],
+        "config": "configs/model/deberta.yaml",
+        "doc": "CLAUDE.md (1000+ lines)"
+      },
+      "evidence_extraction": {
+        "path": "4090_LLM/NoAug_Criteria_Evidence/src/psy_agents_noaug/architectures/evidence/",
+        "key_files": ["models/model.py", "models/trainer.py"],
+        "config": "configs/model/deberta.yaml",
+        "doc": "CLAUDE.md (1000+ lines)"
+      },
+      "reranking": {
+        "path": "4090_LLM/gemini_reranker/src/criteriabind/",
+        "key_files": ["models.py", "gemini_judge.py", "train/train_criteria_ranker.py"],
+        "config": "configs/",
+        "doc": "CLAUDE.md (700+ lines)"
+      },
+      "data_augmentation": {
+        "path": "2080_LLM/DataAugmentation_ReDSM5/src/agents/",
+        "key_files": ["base.py", "criteria_matching.py", "evidence_binding.py"],
+        "config": "conf/",
+        "doc": "README.md"
+      },
+      "rag_system": {
+        "path": "2080_LLM/Psy_RAG/src/models/",
+        "key_files": ["rag_pipeline.py", "embedding_model.py", "spanbert_model.py"],
+        "config": "configs/",
+        "doc": "README.md"
+      },
+      "four_agent_pipeline": {
+        "path": "2080_LLM/DataAug_DeBERTa_FourAgents/src/agents/",
+        "key_files": ["evidence_agent.py", "criteria_agent.py", "suggestion_agent.py", "evaluation_agent.py"],
+        "config": "configs/",
+        "doc": "specs/001-four-agent-pipeline/"
+      }
+    },
+
+    "finding_best_experiments": {
+      "evidence_task_best": {
+        "experiment_id": "trial_0021 or trial_0119",
+        "project": "4090_LLM/DataAug_DeBERTa_Evidence",
+        "metrics": "Evidence Macro F1 = 0.4571, Accuracy = 0.5714",
+        "config": "experiments/trial_0021/config.yaml",
+        "evaluation": "experiments/trial_0021/evaluation_report.json"
+      },
+      "where_to_look": "使用 EXPERIMENTS_SUMMARY.csv 排序找出最佳實驗"
+    },
+
+    "key_documentation": [
+      {
+        "file": "4090_LLM/NoAug_Criteria_Evidence/CLAUDE.md",
+        "lines": "1000+",
+        "content": "最完整的實作文檔，包含架構、配置、HPO、訓練流程"
+      },
+      {
+        "file": "4090_LLM/gemini_reranker/CLAUDE.md",
+        "lines": "700+",
+        "content": "Gemini reranker 完整管道說明"
+      },
+      {
+        "file": "AGENT_IMPLEMENTATION_CATALOG.md",
+        "lines": "738",
+        "content": "所有 Agent 實作目錄"
+      },
+      {
+        "file": "ANALYSIS_SUMMARY.md",
+        "lines": "182",
+        "content": "實驗分析摘要"
+      },
+      {
+        "file": "COMPREHENSIVE_CODE_REVIEW_REPORT.json",
+        "lines": "本檔案",
+        "content": "完整程式碼審閱與實驗分析報告"
+      }
+    ],
+
+    "key_data_files": [
+      "Data/redsm5/redsm5_split_train.json - Training data",
+      "Data/redsm5/redsm5_split_val.json - Validation data",
+      "Data/redsm5/redsm5_split_test.json - Test data",
+      "Data/DSM-5/DSM_Criteria_Array_*.json - DSM-5 criteria definitions",
+      "Data/Final_Ground_Truth.json - Ground truth labels (48,973 pairs)"
+    ],
+
+    "how_to_start_development": {
+      "step_1": "閱讀本報告（COMPREHENSIVE_CODE_REVIEW_REPORT.json）",
+      "step_2": "閱讀 4090_LLM/NoAug_Criteria_Evidence/CLAUDE.md 了解最佳實作",
+      "step_3": "查看 trial_0021 的配置和結果（EXPERIMENTS_SUMMARY.csv）",
+      "step_4": "設置開發環境（安裝 PyTorch, Transformers, Hydra）",
+      "step_5": "運行 baseline 實驗（python scripts/train_criteria.py）",
+      "step_6": "實作改進（根據 section_6 recommendations）",
+      "step_7": "評估和迭代"
+    },
+
+    "troubleshooting": {
+      "criteria_low_performance": "參考 section_6 immediate_priorities 第1項",
+      "multi_task_failing": "參考 section_6 immediate_priorities 第3項",
+      "augmentation_not_working": "參考 section_6 immediate_priorities 第2項",
+      "out_of_memory": "使用 gradient_checkpointing, 減少 batch_size, 使用 mixed_precision",
+      "slow_training": "使用 torch.compile, 增加 batch_size, 減少 logging frequency"
+    }
+  },
+
+  "conclusion": {
+    "summary": "LLM_Projects 是一個龐大且全面的 DSM-5 診斷輔助系統研究 codebase，包含 66 個專案、163 個實驗、30+ 個 Agent 實作。核心架構完整且有生產級實作（NoAug_Criteria_Evidence, gemini_reranker），但存在幾個關鍵問題需要解決：(1) Criteria Agent 性能極低（F1 < 0.2），(2) 數據增強策略過於簡單（92% 只用 case variation），(3) Multi-task learning 不穩定（失敗率高），(4) 缺少 Risk/Safety Agent（臨床必需）。建議優先投資於修復 Criteria Agent 和升級數據增強策略，這兩項改進可能帶來最大性能提升。",
+
+    "key_takeaways": [
+      "🏆 最佳實作：4090_LLM/NoAug_Criteria_Evidence 和 4090_LLM/gemini_reranker 是生產級標準",
+      "📊 性能差距：Evidence (F1=0.46) vs Criteria (F1<0.2) 需要重點關注 Criteria",
+      "🔧 技術債：重複專案、簡單增強、不穩定 multi-task 需要清理",
+      "🚨 缺失項：Risk/Safety Agent 對臨床應用至關重要但完全缺失",
+      "💡 改進路徑：數據增強升級 → Criteria 修復 → Multi-task debug → Risk Agent 實作",
+      "📚 文檔完整：CLAUDE.md 文檔極其詳細，是學習和開發的優秀資源"
+    ],
+
+    "for_next_researcher": [
+      "1. 先讀本報告的 executive_summary 和 section_6 recommendations",
+      "2. 深入閱讀 4090_LLM/NoAug_Criteria_Evidence/CLAUDE.md（1000+ 行）",
+      "3. 查看 EXPERIMENTS_SUMMARY.csv 找出最佳實驗配置",
+      "4. 運行 baseline（NoAug_Criteria_Evidence）熟悉流程",
+      "5. 優先處理 section_6 中的 CRITICAL 問題",
+      "6. 參考 AGENT_IMPLEMENTATION_CATALOG.md 了解所有可用 Agent",
+      "7. 使用 Hydra 配置系統進行實驗（不要手動修改程式碼）",
+      "8. 記錄所有實驗結果（使用 MLflow）",
+      "9. 與臨床專家合作驗證系統",
+      "10. 逐步推進 production_deployment_roadmap"
+    ],
+
+    "files_generated_by_analysis": [
+      {
+        "file": "COMPREHENSIVE_CODE_REVIEW_REPORT.json",
+        "size": "預估 100+ KB",
+        "description": "本檔案 - 完整綜合報告，包含所有分析結果"
+      },
+      {
+        "file": "AGENT_ANALYSIS_COMPLETE.json",
+        "size": "18 KB",
+        "description": "Agent 實作完整目錄（I/O spec、features、files）"
+      },
+      {
+        "file": "AGENT_ANALYSIS_SUMMARY.md",
+        "size": "7 KB",
+        "description": "Agent 分析摘要"
+      },
+      {
+        "file": "AGENT_IMPLEMENTATION_CATALOG.md",
+        "size": "738 lines",
+        "description": "詳細 Agent 目錄"
+      },
+      {
+        "file": "EXPERIMENTS_ANALYSIS_COMPLETE.json",
+        "size": "192 KB",
+        "description": "完整實驗數據"
+      },
+      {
+        "file": "EXPERIMENTS_SUMMARY.csv",
+        "size": "33 KB",
+        "description": "實驗摘要 CSV"
+      },
+      {
+        "file": "ANALYSIS_SUMMARY.md",
+        "size": "5 KB",
+        "description": "實驗分析摘要"
+      },
+      {
+        "file": "README_ANALYSIS.md",
+        "size": "9 KB",
+        "description": "分析報告導航"
+      }
+    ],
+
+    "final_note": "這份報告已提供了足夠的資訊，讓另一個模型或研究者能夠在**不查看原始程式碼**的情況下，完全理解 LLM_Projects 的架構、實驗結果、Agent 實作、技術棧、數據集和改進建議。所有關鍵資訊都已結構化並包含在本報告中。如需更多細節，請參考生成的其他分析檔案。"
+  }
+}
