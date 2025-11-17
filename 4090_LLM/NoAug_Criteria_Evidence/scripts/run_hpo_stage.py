@@ -162,8 +162,39 @@ def main(cfg: DictConfig):
                 tokenizer=tokenizer,
                 max_length=params.get("max_length", 256),
             )
+        elif cfg.task.name == "evidence":
+            from Project.Evidence.data.dataset import EvidenceDataset
+
+            dataset_path = project_root / "data" / "processed" / "redsm5_matched_evidence.csv"
+            dataset = EvidenceDataset(
+                csv_path=dataset_path,
+                tokenizer=tokenizer,
+                max_length=params.get("max_length", 512),
+            )
+        elif cfg.task.name == "joint":
+            from Project.Joint.data.dataset import JointDataset
+
+            criteria_path = project_root / "data" / "redsm5" / "redsm5_annotations.csv"
+            evidence_path = project_root / "data" / "processed" / "redsm5_matched_evidence.csv"
+            dataset = JointDataset(
+                criteria_csv_path=criteria_path,
+                evidence_csv_path=evidence_path,
+                tokenizer=tokenizer,
+                max_length=params.get("max_length", 512),
+            )
+        elif cfg.task.name == "share":
+            from Project.Share.data.dataset import ShareDataset
+
+            criteria_path = project_root / "data" / "redsm5" / "redsm5_annotations.csv"
+            evidence_path = project_root / "data" / "processed" / "redsm5_matched_evidence.csv"
+            dataset = ShareDataset(
+                criteria_csv_path=criteria_path,
+                evidence_csv_path=evidence_path,
+                tokenizer=tokenizer,
+                max_length=params.get("max_length", 512),
+            )
         else:
-            raise NotImplementedError(f"Task {cfg.task.name} not implemented yet")
+            raise NotImplementedError(f"Task {cfg.task.name} not implemented")
 
         # Split dataset (80/10/10)
         train_size = int(0.8 * len(dataset))
@@ -194,12 +225,39 @@ def main(cfg: DictConfig):
             **dataloader_kwargs,
         )
 
-        # Create model
-        model = Model(
-            model_name=cfg.model.name,
-            num_labels=2,
-            dropout=params.get("dropout", 0.1),
-        ).to(device)
+        # Create model based on task
+        if cfg.task.name == "criteria":
+            model = Model(
+                model_name=cfg.model.name,
+                num_labels=2,
+                dropout=params.get("dropout", 0.1),
+            ).to(device)
+        elif cfg.task.name == "evidence":
+            from Project.Evidence.models.model import Model as EvidenceModel
+
+            model = EvidenceModel(
+                model_name=cfg.model.name,
+                dropout_prob=params.get("dropout", 0.1),
+            ).to(device)
+        elif cfg.task.name == "joint":
+            from Project.Joint.models.model import Model as JointModel
+
+            model = JointModel(
+                criteria_model_name=cfg.model.name,
+                evidence_model_name=cfg.model.name,
+                criteria_num_labels=2,
+                criteria_dropout=params.get("dropout", 0.1),
+                evidence_dropout=params.get("dropout", 0.1),
+            ).to(device)
+        elif cfg.task.name == "share":
+            from Project.Share.models.model import Model as ShareModel
+
+            model = ShareModel(
+                model_name=cfg.model.name,
+                criteria_num_labels=2,
+                criteria_dropout=params.get("dropout", 0.1),
+                evidence_dropout=params.get("dropout", 0.1),
+            ).to(device)
 
         # Create optimizer
         optimizer = optim.AdamW(
@@ -210,8 +268,6 @@ def main(cfg: DictConfig):
 
         # Training loop
         num_epochs = cfg.hpo.num_epochs
-        criterion = nn.CrossEntropyLoss()
-
         best_val_f1 = 0.0
 
         for epoch in range(num_epochs):
@@ -220,11 +276,39 @@ def main(cfg: DictConfig):
             for batch in train_loader:
                 input_ids = batch["input_ids"].to(device)
                 attention_mask = batch["attention_mask"].to(device)
-                labels = batch["labels"].to(device)
 
                 optimizer.zero_grad()
-                logits = model(input_ids, attention_mask)
-                loss = criterion(logits, labels)
+
+                if cfg.task.name == "criteria":
+                    labels = batch["labels"].to(device)
+                    logits = model(input_ids, attention_mask)
+                    criterion = nn.CrossEntropyLoss()
+                    loss = criterion(logits, labels)
+                elif cfg.task.name == "evidence":
+                    start_positions = batch["start_positions"].to(device)
+                    end_positions = batch["end_positions"].to(device)
+                    start_logits, end_logits = model(input_ids, attention_mask)
+                    criterion = nn.CrossEntropyLoss()
+                    start_loss = criterion(start_logits, start_positions)
+                    end_loss = criterion(end_logits, end_positions)
+                    loss = (start_loss + end_loss) / 2
+                elif cfg.task.name in ["joint", "share"]:
+                    criteria_labels = batch["criteria_labels"].to(device)
+                    start_positions = batch["start_positions"].to(device)
+                    end_positions = batch["end_positions"].to(device)
+                    outputs = model(input_ids, attention_mask)
+
+                    # Outputs are: (criteria_logits, start_logits, end_logits)
+                    criteria_logits = outputs[0]
+                    start_logits = outputs[1]
+                    end_logits = outputs[2]
+
+                    criterion = nn.CrossEntropyLoss()
+                    criteria_loss = criterion(criteria_logits, criteria_labels)
+                    start_loss = criterion(start_logits, start_positions)
+                    end_loss = criterion(end_logits, end_positions)
+                    loss = (criteria_loss + start_loss + end_loss) / 3
+
                 loss.backward()
                 optimizer.step()
 
@@ -237,13 +321,37 @@ def main(cfg: DictConfig):
                 for batch in val_loader:
                     input_ids = batch["input_ids"].to(device)
                     attention_mask = batch["attention_mask"].to(device)
-                    labels = batch["labels"].to(device)
 
-                    logits = model(input_ids, attention_mask)
-                    preds = torch.argmax(logits, dim=-1)
+                    if cfg.task.name == "criteria":
+                        labels = batch["labels"].to(device)
+                        logits = model(input_ids, attention_mask)
+                        preds = torch.argmax(logits, dim=-1)
+                        all_preds.extend(preds.cpu().tolist())
+                        all_labels.extend(labels.cpu().tolist())
+                    elif cfg.task.name == "evidence":
+                        start_positions = batch["start_positions"].to(device)
+                        end_positions = batch["end_positions"].to(device)
+                        start_logits, end_logits = model(input_ids, attention_mask)
+                        start_preds = torch.argmax(start_logits, dim=-1)
+                        end_preds = torch.argmax(end_logits, dim=-1)
 
-                    all_preds.extend(preds.cpu().tolist())
-                    all_labels.extend(labels.cpu().tolist())
+                        # For span prediction, we need to compute F1 differently
+                        # Here we use exact match as a proxy
+                        for sp, ep, st, et in zip(
+                            start_preds.cpu().tolist(),
+                            end_preds.cpu().tolist(),
+                            start_positions.cpu().tolist(),
+                            end_positions.cpu().tolist(),
+                        ):
+                            all_preds.append(1 if (sp == st and ep == et) else 0)
+                            all_labels.append(1)
+                    elif cfg.task.name in ["joint", "share"]:
+                        criteria_labels = batch["criteria_labels"].to(device)
+                        outputs = model(input_ids, attention_mask)
+                        criteria_logits = outputs[0]
+                        preds = torch.argmax(criteria_logits, dim=-1)
+                        all_preds.extend(preds.cpu().tolist())
+                        all_labels.extend(criteria_labels.cpu().tolist())
 
             # Calculate F1 score
             from sklearn.metrics import f1_score
