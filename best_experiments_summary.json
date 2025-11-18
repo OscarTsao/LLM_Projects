@@ -1,0 +1,91 @@
+{
+  "multi_task_criteria_evidence": {
+    "deberta_multi_mixed": {
+      "best_experiment_id": "trial_0119",
+      "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+      "primary_metric": "macro_f1_mean",
+      "primary_metric_value": 0.2841269841269841,
+      "metrics": {
+        "evidence_macro_f1": 0.45714285714285713,
+        "evidence_accuracy": 0.5714285714285714,
+        "criteria_macro_f1": 0.1111111111111111,
+        "criteria_accuracy": 0.2857142857142857,
+        "macro_f1_mean": 0.2841269841269841
+      },
+      "model_name": "microsoft/deberta-base",
+      "config_summary": "aug=mixed"
+    }
+  },
+  "unknown": {
+    "unknown_single_mixed": {
+      "best_experiment_id": "trial_0043_best",
+      "project_path": "3090_LLM/DataAugmentation_Evaluation",
+      "primary_metric": "accuracy",
+      "primary_metric_value": 0.8940843074743181,
+      "metrics": {
+        "accuracy": 0.8940843074743181,
+        "precision": 0.8431752178121975,
+        "recall": 0.8640873015873016,
+        "f1": 0.8535031847133758,
+        "roc_auc": 0.9423411605229789
+      },
+      "model_name": "unknown",
+      "config_summary": "aug=mixed"
+    }
+  },
+  "evidence_sentence": {
+    "unknown_single_mixed": {
+      "best_experiment_id": "test_metrics",
+      "project_path": "2080_LLM/DataAugmentation_Evaluation",
+      "primary_metric": "f1",
+      "primary_metric_value": 0.8197424892703863,
+      "metrics": {
+        "accuracy": 0.8809776833156217,
+        "precision": 0.8925233644859814,
+        "recall": 0.7579365079365079,
+        "f1": 0.8197424892703863,
+        "roc_auc": 0.9426633761861035
+      },
+      "model_name": "unknown",
+      "config_summary": "aug=mixed"
+    }
+  },
+  "criteria_matching": {
+    "unknown_single_none": {
+      "best_experiment_id": "test_metrics",
+      "project_path": "4070ti_LLM/Criteria_Baseline_5Fold_NoAug",
+      "primary_metric": "accuracy",
+      "primary_metric_value": 0.9079685746352413,
+      "metrics": {
+        "accuracy": 0.9079685746352413,
+        "f1_macro": 0.4758823529411765,
+        "precision": 0.0,
+        "precision_macro": 0.45398428731762064,
+        "recall": 0.0,
+        "recall_macro": 0.5,
+        "f1": 0.0,
+        "auc": 0.5115427390367847
+      },
+      "model_name": "unknown",
+      "config_summary": "aug=none"
+    },
+    "roberta_single_none": {
+      "best_experiment_id": "fold_2",
+      "project_path": "4070ti_LLM/Criteria_Baseline_5Fold_NoAug",
+      "primary_metric": "accuracy",
+      "primary_metric_value": 0.9079685746352413,
+      "metrics": {
+        "accuracy": 0.9079685746352413,
+        "f1_macro": 0.4758823529411765,
+        "precision": 0.0,
+        "precision_macro": 0.45398428731762064,
+        "recall": 0.0,
+        "recall_macro": 0.5,
+        "f1": 0.0,
+        "auc": 0.5115427390367847
+      },
+      "model_name": "roberta-base",
+      "config_summary": "aug=none"
+    }
+  }
+}

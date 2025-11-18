@@ -1,0 +1,198 @@
+====================================================================================================
+                              EXPERIMENTAL RESULTS ANALYSIS REPORT
+====================================================================================================
+
+Generated: 2025-11-15 15:15:39
+Base Path: /home/user/LLM_Projects
+
+====================================================================================================
+1. OVERALL STATISTICS
+====================================================================================================
+
+Total Experiments: 360
+
+Experiments by Task Type:
+----------------------------------------------------------------------------------------------------
+  multi_task_criteria_evidence                      :  324
+  criteria_matching                                 :   20
+  unknown                                           :   10
+  reranker                                          :    4
+  evidence_sentence                                 :    2
+
+Experiments by Model Family:
+----------------------------------------------------------------------------------------------------
+  deberta                                           :  324
+  unknown                                           :   26
+  roberta                                           :   10
+
+Experiments by GPU Type:
+----------------------------------------------------------------------------------------------------
+  2080                                              :  168
+  4090                                              :  164
+  4070ti                                            :   20
+  3090                                              :    8
+
+Experiments by Data Augmentation:
+----------------------------------------------------------------------------------------------------
+  mixed                                             :  340
+  none                                              :   20
+
+====================================================================================================
+2. PERFORMANCE LEADERBOARDS
+====================================================================================================
+
+
+Top 10 criteria_matching Experiments (by macro_f1):
+----------------------------------------------------------------------------------------------------
+ 1. 0.4759 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | test_metrics   
+     Model: unknown                                  Aug: none           
+ 2. 0.4759 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | fold_2         
+     Model: roberta-base                             Aug: none           
+ 3. 0.4754 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | test_metrics   
+     Model: unknown                                  Aug: none           
+ 4. 0.4754 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | fold_3         
+     Model: roberta-base                             Aug: none           
+ 5. 0.4747 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | test_metrics   
+     Model: unknown                                  Aug: none           
+ 6. 0.4747 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | fold_4         
+     Model: roberta-base                             Aug: none           
+ 7. 0.4737 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | test_metrics   
+     Model: unknown                                  Aug: none           
+ 8. 0.4737 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | fold_1         
+     Model: roberta-base                             Aug: none           
+ 9. 0.4731 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | test_metrics   
+     Model: unknown                                  Aug: none           
+10. 0.4731 (f1_macro       ) | 4070ti_LLM/Criteria_Baseline_5Fold_NoAug | fold_5         
+     Model: roberta-base                             Aug: none           
+
+
+Top 10 evidence_sentence Experiments (by f1):
+----------------------------------------------------------------------------------------------------
+ 1. 0.8197 (f1             ) | 2080_LLM/DataAugmentation_Evaluation     | test_metrics   
+     Model: unknown                                  Aug: mixed          
+
+
+Top 10 evidence_span Experiments:
+  No experiments found for this task type.
+
+
+Top 10 multi_task_criteria_evidence Experiments (by macro_f1_mean):
+----------------------------------------------------------------------------------------------------
+ 1. 0.2841 (macro_f1_mean  ) | 2080_LLM/DataAug_DeBERTa_Evidence        | trial_0119     
+     Model: microsoft/deberta-base                   Aug: mixed          
+ 2. 0.2841 (macro_f1_mean  ) | 4090_LLM/DataAug_DeBERTa_Evidence        | trial_0119     
+     Model: microsoft/deberta-base                   Aug: mixed          
+ 3. 0.2417 (macro_f1_mean  ) | 2080_LLM/DataAug_DeBERTa_Evidence        | trial_0006     
+     Model: microsoft/deberta-base                   Aug: mixed          
+ 4. 0.2417 (macro_f1_mean  ) | 4090_LLM/DataAug_DeBERTa_Evidence        | trial_0006     
+     Model: microsoft/deberta-base                   Aug: mixed          
+ 5. 0.2286 (macro_f1_mean  ) | 2080_LLM/DataAug_DeBERTa_Evidence        | trial_0021     
+     Model: microsoft/deberta-base                   Aug: mixed          
+ 6. 0.2286 (macro_f1_mean  ) | 4090_LLM/DataAug_DeBERTa_Evidence        | trial_0021     
+     Model: microsoft/deberta-base                   Aug: mixed          
+ 7. 0.2222 (macro_f1_mean  ) | 2080_LLM/DataAug_DeBERTa_Evidence        | trial_0013     
+     Model: microsoft/deberta-base                   Aug: mixed          
+ 8. 0.2222 (macro_f1_mean  ) | 4090_LLM/DataAug_DeBERTa_Evidence        | trial_0013     
+     Model: microsoft/deberta-base                   Aug: mixed          
+ 9. 0.1900 (macro_f1_mean  ) | 2080_LLM/DataAug_DeBERTa_Evidence        | trial_0115     
+     Model: microsoft/deberta-base                   Aug: mixed          
+10. 0.1900 (macro_f1_mean  ) | 4090_LLM/DataAug_DeBERTa_Evidence        | trial_0115     
+     Model: microsoft/deberta-base                   Aug: mixed          
+
+
+Top 10 reranker Experiments:
+  No valid metrics found.
+
+====================================================================================================
+3. KEY FINDINGS
+====================================================================================================
+
+Data Augmentation Impact Analysis:
+----------------------------------------------------------------------------------------------------
+
+====================================================================================================
+4. BEST CONFIGURATIONS BY TASK
+====================================================================================================
+
+
+CRITERIA_MATCHING:
+----------------------------------------------------------------------------------------------------
+
+  Configuration: unknown_single_none
+    Experiment: test_metrics
+    Project: 4070ti_LLM/Criteria_Baseline_5Fold_NoAug
+    Model: unknown
+    Primary Metric: accuracy = 0.9080
+    Config: aug=none
+
+  Configuration: roberta_single_none
+    Experiment: fold_2
+    Project: 4070ti_LLM/Criteria_Baseline_5Fold_NoAug
+    Model: roberta-base
+    Primary Metric: accuracy = 0.9080
+    Config: aug=none
+
+
+EVIDENCE_SENTENCE:
+----------------------------------------------------------------------------------------------------
+
+  Configuration: unknown_single_mixed
+    Experiment: test_metrics
+    Project: 2080_LLM/DataAugmentation_Evaluation
+    Model: unknown
+    Primary Metric: f1 = 0.8197
+    Config: aug=mixed
+
+
+MULTI_TASK_CRITERIA_EVIDENCE:
+----------------------------------------------------------------------------------------------------
+
+  Configuration: deberta_multi_mixed
+    Experiment: trial_0119
+    Project: 2080_LLM/DataAug_DeBERTa_Evidence
+    Model: microsoft/deberta-base
+    Primary Metric: macro_f1_mean = 0.2841
+    Config: aug=mixed
+
+
+UNKNOWN:
+----------------------------------------------------------------------------------------------------
+
+  Configuration: unknown_single_mixed
+    Experiment: trial_0043_best
+    Project: 3090_LLM/DataAugmentation_Evaluation
+    Model: unknown
+    Primary Metric: accuracy = 0.8941
+    Config: aug=mixed
+
+====================================================================================================
+5. RECOMMENDATIONS
+====================================================================================================
+
+Based on the experimental results:
+
+1. Top Performing Models:
+----------------------------------------------------------------------------------------------------
+   roberta             : Average score 0.4746 (n=5)
+
+2. Best Data Augmentation Methods:
+----------------------------------------------------------------------------------------------------
+   mixed               : Average score 0.8200 (n=8)
+   none                : Average score 0.4746 (n=10)
+
+3. GPU Performance Comparison:
+----------------------------------------------------------------------------------------------------
+   2080                : Average score 0.8422 (n=3)
+   3090                : Average score 0.7949 (n=4)
+   4070ti              : Average score 0.4746 (n=10)
+   4090                : Average score 0.8535 (n=1)
+
+4. Recommended Next Steps:
+----------------------------------------------------------------------------------------------------
+   a. Focus development on the top-performing model families
+   b. Continue using effective data augmentation methods that show >5% improvement
+   c. For multi-task models, investigate configurations with macro_f1_mean > 0.7
+   d. Consider ensemble approaches combining top-3 models from each task
+   e. Retire or deprioritize configurations with consistent scores < 0.5
+   f. Archive low-performing experiments to focus compute resources
+

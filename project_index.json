@@ -1,0 +1,569 @@
+[
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Criteria_Agent_Training",
+    "project_name": "Criteria_Agent_Training",
+    "task_type": "criteria_matching",
+    "model_family": "spanbert",
+    "status": "unknown",
+    "readme_summary": "This project implements a neural network classifier to determine whether social media posts match specific DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition) criteria. The..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Criteria_Baseline_5Fold",
+    "project_name": "Criteria_Baseline_5Fold",
+    "task_type": "criteria_matching",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "Minimal training and evaluation scripts that reproduce the 0.8535 macro-F1 criteria classifier taken from `DataAugmentation_Evaluation` Optuna trial `0043`. The project points at the assets copied ..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Criteria_Baseline_5Fold_NoAug",
+    "project_name": "Criteria_Baseline_5Fold_NoAug",
+    "task_type": "criteria_matching",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "Minimal training and evaluation scripts that reproduce the 0.8535 macro-F1 criteria classifier taken from `DataAugmentation_Evaluation` Optuna trial `0043`. The pipeline now reads directly from the..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Criteria_Baseline_Rebuild",
+    "project_name": "Criteria_Baseline_Rebuild",
+    "task_type": "criteria_matching",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "Minimal training and evaluation scripts that reproduce the 0.8535 macro-F1 criteria classifier taken from `DataAugmentation_Evaluation` Optuna trial `0043`. The project points at the assets copied ..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Criteria_Evidence_Agent",
+    "project_name": "Criteria_Evidence_Agent",
+    "task_type": "multi_task_criteria_evidence",
+    "model_family": "deberta",
+    "status": "unknown",
+    "readme_summary": "Multi-label classification system for mental health symptom detection using transformer encoders (BERT, RoBERTa, DeBERTa) with evidence extraction capabilities. Built with PyTorch, Hydra for config..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Criteria_Evidence_Agent_Jupyter",
+    "project_name": "Criteria_Evidence_Agent_Jupyter",
+    "task_type": "multi_task_criteria_evidence",
+    "model_family": "deberta",
+    "status": "prototype",
+    "readme_summary": "Multi-label classification system for mental health symptom detection using transformer encoders (BERT, RoBERTa, DeBERTa) with evidence extraction capabilities. Built with PyTorch, Hydra for config..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAug_Criteria_Evidence",
+    "project_name": "DataAug_Criteria_Evidence",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "python -m venv .venv && source .venv/bin/activate"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAug_DeBERTa_Both",
+    "project_name": "DataAug_DeBERTa_Both",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAug_DeBERTa_Criteria",
+    "project_name": "DataAug_DeBERTa_Criteria",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAug_DeBERTa_Evidence",
+    "project_name": "DataAug_DeBERTa_Evidence",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "DataAug DeBERTa Evidence"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAug_DeBERTa_FourAgents",
+    "project_name": "DataAug_DeBERTa_FourAgents",
+    "task_type": "rag",
+    "model_family": "deberta",
+    "status": "mainline",
+    "readme_summary": "This package contains **Spec Kit‑style documentation** and **config templates** for a non‑conversational four‑agent pipeline:"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAug_Multi_Both",
+    "project_name": "DataAug_Multi_Both",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAug_Multi_Criteria",
+    "project_name": "DataAug_Multi_Criteria",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAug_Multi_Evidence",
+    "project_name": "DataAug_Multi_Evidence",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAugmentation_Evaluation",
+    "project_name": "DataAugmentation_Evaluation",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "A machine learning system for psychiatric diagnosis classification using BERT-based models with advanced data augmentation strategies and multi-agent architecture."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/DataAugmentation_ReDSM5",
+    "project_name": "DataAugmentation_ReDSM5",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "A research project for augmenting and training BERT-based models for DSM-5 symptom classification from Reddit posts. This project implements multiple text augmentation strategies (NLPAug, TextAttac..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Evidence_Sentence_NoAug",
+    "project_name": "Evidence_Sentence_NoAug",
+    "task_type": "evidence_sentence",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "Minimal template for ML experiments using PyTorch, Transformers, Hydra, MLflow, and"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Psy_Agent",
+    "project_name": "Psy_Agent",
+    "task_type": "psy_multi_agent",
+    "model_family": "llama",
+    "status": "mainline",
+    "readme_summary": "Project: Psy_Agent"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Psy_Agent_spanBERT_Evidence_Binding",
+    "project_name": "Psy_Agent_spanBERT_Evidence_Binding",
+    "task_type": "psy_multi_agent",
+    "model_family": "spanbert",
+    "status": "mainline",
+    "readme_summary": "Project: Psy_Agent_spanBERT_Evidence_Binding"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Psy_RAG",
+    "project_name": "Psy_RAG",
+    "task_type": "rag",
+    "model_family": "spanbert",
+    "status": "mainline",
+    "readme_summary": "Project: Psy_RAG"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Psy_RAG_Agent",
+    "project_name": "Psy_RAG_Agent",
+    "task_type": "rag",
+    "model_family": "spanbert",
+    "status": "mainline",
+    "readme_summary": "This project implements a neural network classifier to determine whether social media posts match specific DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition) criteria. The..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Psy_Report_Agent",
+    "project_name": "Psy_Report_Agent",
+    "task_type": "psy_multi_agent",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "Project: Psy_Report_Agent"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Psy_redsm5_Criteria_Evidence_Agent",
+    "project_name": "Psy_redsm5_Criteria_Evidence_Agent",
+    "task_type": "psy_multi_agent",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "- BERT-based pairwise classifier for Reddit posts and DSM-5 Major Depressive Disorder criteria."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Refactored_Psy",
+    "project_name": "Refactored_Psy",
+    "task_type": "other",
+    "model_family": "deberta",
+    "status": "mainline",
+    "readme_summary": "This directory contains a comprehensive psychiatric symptom classification system with two production-ready target directories and 14 reference source repositories. The project focuses on using tra..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/Test_ReDSM5_Groundtruth",
+    "project_name": "Test_ReDSM5_Groundtruth",
+    "task_type": "other",
+    "model_family": "bert",
+    "status": "prototype",
+    "readme_summary": "An advanced BERT-based pairwise classification system for automated identification of DSM-5 Major Depressive Disorder criteria evidence in Reddit posts. This research system employs sophisticated m..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/gemini_reranker",
+    "project_name": "gemini_reranker",
+    "task_type": "reranker_llm_judge",
+    "model_family": "llm_reranker",
+    "status": "unknown",
+    "readme_summary": "Hydra-driven pipelines for preference-based reranking and span extraction using Gemini-provided labels and MLflow tracking. The repository ships with an offline baseline checkpoint, deterministic d..."
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/redsm5_augmentation",
+    "project_name": "redsm5_augmentation",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "Project: redsm5_augmentation"
+  },
+  {
+    "gpu_group": "2080_LLM",
+    "project_path": "2080_LLM/redsm5_build",
+    "project_name": "redsm5_build",
+    "task_type": "other",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "Project: redsm5_build"
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Criteria_Agent_Training",
+    "project_name": "Criteria_Agent_Training",
+    "task_type": "criteria_matching",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "This project implements a neural network classifier to determine whether social media posts match specific DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition) criteria. The..."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Criteria_Evidence_Agent",
+    "project_name": "Criteria_Evidence_Agent",
+    "task_type": "multi_task_criteria_evidence",
+    "model_family": "deberta",
+    "status": "unknown",
+    "readme_summary": "Multi-label classification system for mental health symptom detection using transformer encoders (BERT, RoBERTa, DeBERTa) with evidence extraction capabilities. Built with PyTorch, Hydra for config..."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/DataAug_DeBERTa_Criteria",
+    "project_name": "DataAug_DeBERTa_Criteria",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "Single-agent criteria detection pipeline for mental-health posts. The system fine-tunes a fixed `microsoft/deberta-v3-base` encoder with configurable classification heads, loss functions, and predi..."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/DataAug_Multi_Both",
+    "project_name": "DataAug_Multi_Both",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta",
+    "status": "mainline",
+    "readme_summary": "Deep learning framework for multi-task mental health criteria detection with hyperparameter optimization."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/DataAugmentation_Evaluation",
+    "project_name": "DataAugmentation_Evaluation",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "Project: DataAugmentation_Evaluation"
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/DataAugmentation_ReDSM5",
+    "project_name": "DataAugmentation_ReDSM5",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "A research project for augmenting and training BERT-based models for DSM-5 symptom classification from Reddit posts. This project implements multiple text augmentation strategies (NLPAug, TextAttac..."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Evidence_Sentence_NoAug",
+    "project_name": "Evidence_Sentence_NoAug",
+    "task_type": "evidence_sentence",
+    "model_family": "deberta_v3",
+    "status": "baseline",
+    "readme_summary": "5-fold cross-validation training pipeline for binary evidence classification using DeBERTa-v3-base on the ReDSM5 dataset. This implementation uses NSP-style criterion-sentence pairing to classify w..."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/NoAug_Criteria_Evidence",
+    "project_name": "NoAug_Criteria_Evidence",
+    "task_type": "multi_task_criteria_evidence",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "python -m venv .venv && source .venv/bin/activate"
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Psy_Agent",
+    "project_name": "Psy_Agent",
+    "task_type": "psy_multi_agent",
+    "model_family": "llama",
+    "status": "mainline",
+    "readme_summary": "Project: Psy_Agent"
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Psy_Agent_one_by_one",
+    "project_name": "Psy_Agent_one_by_one",
+    "task_type": "psy_multi_agent",
+    "model_family": "llama",
+    "status": "mainline",
+    "readme_summary": "Project: Psy_Agent_one_by_one"
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Psy_Agent_spanBERT_Evidence_Binding",
+    "project_name": "Psy_Agent_spanBERT_Evidence_Binding",
+    "task_type": "psy_multi_agent",
+    "model_family": "spanbert",
+    "status": "mainline",
+    "readme_summary": "Fine-tuning SpanBERT (`SpanBERT/spanbert-base-cased`) to identify evidential spans inside Reddit mental-health posts. The pipeline uses Hugging Face Transformers, PyTorch, Hydra for configuration, ..."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Psy_RAG",
+    "project_name": "Psy_RAG",
+    "task_type": "rag",
+    "model_family": "spanbert",
+    "status": "mainline",
+    "readme_summary": "Project: Psy_RAG"
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Psy_RAG_Agent",
+    "project_name": "Psy_RAG_Agent",
+    "task_type": "rag",
+    "model_family": "spanbert",
+    "status": "mainline",
+    "readme_summary": "This project implements a neural network classifier to determine whether social media posts match specific DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition) criteria. The..."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Psy_redsm5_Criteria_Evidence_Agent",
+    "project_name": "Psy_redsm5_Criteria_Evidence_Agent",
+    "task_type": "psy_multi_agent",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "- BERT-based pairwise classifier for Reddit posts and DSM-5 Major Depressive Disorder criteria."
+  },
+  {
+    "gpu_group": "3090_LLM",
+    "project_path": "3090_LLM/Test_ReDSM5_Groundtruth",
+    "project_name": "Test_ReDSM5_Groundtruth",
+    "task_type": "other",
+    "model_family": "bert",
+    "status": "prototype",
+    "readme_summary": "An advanced BERT-based pairwise classification system for automated identification of DSM-5 Major Depressive Disorder criteria evidence in Reddit posts. This research system employs sophisticated m..."
+  },
+  {
+    "gpu_group": "4070ti_LLM",
+    "project_path": "4070ti_LLM/Criteria_Baseline_5Fold_NoAug",
+    "project_name": "Criteria_Baseline_5Fold_NoAug",
+    "task_type": "criteria_matching",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "Minimal training and evaluation scripts that reproduce the 0.8535 macro-F1 criteria classifier taken from `DataAugmentation_Evaluation` Optuna trial `0043`. The pipeline now reads directly from the..."
+  },
+  {
+    "gpu_group": "4070ti_LLM",
+    "project_path": "4070ti_LLM/DataAug_Criteria_Evidence",
+    "project_name": "DataAug_Criteria_Evidence",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "python -m venv .venv && source .venv/bin/activate"
+  },
+  {
+    "gpu_group": "4070ti_LLM",
+    "project_path": "4070ti_LLM/Evidence_Baseline_5Fold_NoAug",
+    "project_name": "Evidence_Baseline_5Fold_NoAug",
+    "task_type": "evidence_sentence",
+    "model_family": "roberta",
+    "status": "baseline",
+    "readme_summary": "Lightweight training and evaluation scripts that reproduce the best `noaug-criteria-supermax` Optuna trial (`trial 1951`) from the **NoAug_Criteria_Evidence** search. The pipeline keeps the origina..."
+  },
+  {
+    "gpu_group": "4070ti_LLM",
+    "project_path": "4070ti_LLM/NoAug_Criteria_Evidence",
+    "project_name": "NoAug_Criteria_Evidence",
+    "task_type": "multi_task_criteria_evidence",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "python -m venv .venv && source .venv/bin/activate"
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/Criteria_Baseline_5Fold_NoAug",
+    "project_name": "Criteria_Baseline_5Fold_NoAug",
+    "task_type": "criteria_matching",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "Minimal training and evaluation scripts that reproduce the 0.8535 macro-F1 criteria classifier taken from `DataAugmentation_Evaluation` Optuna trial `0043`. The pipeline now reads directly from the..."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/Criteria_Baseline_Rebuild",
+    "project_name": "Criteria_Baseline_Rebuild",
+    "task_type": "criteria_matching",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "Minimal training and evaluation scripts that reproduce the 0.8535 macro-F1 criteria classifier taken from `DataAugmentation_Evaluation` Optuna trial `0043`. The project points at the assets copied ..."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/DataAug_Criteria_Evidence",
+    "project_name": "DataAug_Criteria_Evidence",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "python -m venv .venv && source .venv/bin/activate"
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/DataAug_DeBERTa_Both",
+    "project_name": "DataAug_DeBERTa_Both",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta",
+    "status": "mainline",
+    "readme_summary": "Storage-optimised, two-stage HPO pipeline for mental-health criteria detection."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/DataAug_DeBERTa_Criteria",
+    "project_name": "DataAug_DeBERTa_Criteria",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/DataAug_DeBERTa_Evidence",
+    "project_name": "DataAug_DeBERTa_Evidence",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "DataAug DeBERTa Evidence"
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/DataAug_Evidence_BERT",
+    "project_name": "DataAug_Evidence_BERT",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "bert",
+    "status": "unknown",
+    "readme_summary": "Project: DataAug_Evidence_BERT"
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/DataAug_Multi_Both",
+    "project_name": "DataAug_Multi_Both",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/DataAug_Multi_Criteria",
+    "project_name": "DataAug_Multi_Criteria",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/DataAug_Multi_Evidence",
+    "project_name": "DataAug_Multi_Evidence",
+    "task_type": "data_augmentation_pipeline",
+    "model_family": "deberta_v3",
+    "status": "mainline",
+    "readme_summary": "Storage-optimized multi-task NLP training & HPO project."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/Evidence_Baseline_5Fold_NoAug",
+    "project_name": "Evidence_Baseline_5Fold_NoAug",
+    "task_type": "evidence_sentence",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "Minimal training and evaluation scripts that reproduce the 0.8535 macro-F1 criteria classifier taken from `DataAugmentation_Evaluation` Optuna trial `0043`. The pipeline now reads directly from the..."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/LLM_Agents_ReDSM5",
+    "project_name": "LLM_Agents_ReDSM5",
+    "task_type": "other",
+    "model_family": "llama",
+    "status": "unknown",
+    "readme_summary": "Fine-tune decoder-only LLMs (Llama/Qwen) with a Hugging Face classification head for multi-label DSM-5 symptom classification on the ReDSM5 dataset. The project supports full fine-tuning, LoRA, and..."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/LLM_Criteria_Gemma",
+    "project_name": "LLM_Criteria_Gemma",
+    "task_type": "criteria_matching",
+    "model_family": "gemma",
+    "status": "unknown",
+    "readme_summary": "This repository provides a reproducible pipeline for sentence-level DSM-5 criteria detection on the ReDSM5 dataset. It includes configurable encoder baselines, post-level aggregation strategies, OO..."
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/LLM_Evidence_Gemma",
+    "project_name": "LLM_Evidence_Gemma",
+    "task_type": "evidence_sentence",
+    "model_family": "gemma",
+    "status": "unknown",
+    "readme_summary": "Extractive Question Answering for DSM-5 Depression Evidence using Gemma Models"
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/NoAug_Criteria_Evidence",
+    "project_name": "NoAug_Criteria_Evidence",
+    "task_type": "multi_task_criteria_evidence",
+    "model_family": "bert",
+    "status": "baseline",
+    "readme_summary": "python -m venv .venv && source .venv/bin/activate"
+  },
+  {
+    "gpu_group": "4090_LLM",
+    "project_path": "4090_LLM/gemini_reranker",
+    "project_name": "gemini_reranker",
+    "task_type": "reranker_llm_judge",
+    "model_family": "llm_reranker",
+    "status": "unknown",
+    "readme_summary": "Hydra-driven pipelines for preference-based reranking and span extraction using Gemini-provided labels and MLflow tracking. The repository ships with an offline baseline checkpoint, deterministic d..."
+  }
+]

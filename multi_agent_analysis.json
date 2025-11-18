@@ -1,0 +1,930 @@
+{
+  "analysis_metadata": {
+    "analysis_date": "2025-11-15",
+    "analyzed_path": "/home/user/LLM_Projects",
+    "total_projects_scanned": 90,
+    "gpu_environments": ["2080_LLM", "3090_LLM", "4070ti_LLM", "4090_LLM"]
+  },
+
+  "CriteriaAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5",
+      "main_files": [
+        "src/agents/criteria_matching.py",
+        "src/training/train_criteria.py",
+        "src/training/train_criteria_optuna.py",
+        "src/training/evaluate_criteria.py"
+      ],
+      "classes": ["CriteriaMatchingAgent", "FocalLoss", "AdaptiveFocalLoss"],
+      "functions": ["forward", "predict", "predict_batch", "get_loss", "tokenize_inputs", "create_criteria_matching_agent"],
+      "io_spec": {
+        "input": {
+          "posts": "List[str]",
+          "criteria": "List[str]",
+          "input_ids": "torch.Tensor",
+          "attention_mask": "torch.Tensor"
+        },
+        "output": {
+          "predictions": "torch.Tensor (bool)",
+          "confidence": "torch.Tensor (float)",
+          "logits": "torch.Tensor",
+          "probabilities": "torch.Tensor",
+          "metadata": "Dict[str, Any]"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["training", "inference", "batch_predict", "evaluation", "hpo"],
+      "model_support": ["deberta-v3", "roberta", "bert", "xlm-roberta"],
+      "preprocessing": ["tokenization", "text_pair_encoding", "max_length_truncation", "padding"],
+      "postprocessing": ["sigmoid", "threshold_tuning", "focal_loss", "adaptive_focal_loss"],
+      "status": "production_ready",
+      "completeness_score": 95,
+      "missing_features": ["api_server", "streaming_inference"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch", "hydra-core", "omegaconf", "optuna"],
+      "config_system": "hydra",
+      "integration_notes": "使用 BERT-based encoder + 分類頭，支援 Focal Loss 處理類別不平衡。可用於判斷 post-criteria 是否匹配。需約 2-4GB GPU 記憶體。支援 gradient checkpointing 和 mixed precision 訓練。",
+      "training_info": {
+        "loss_functions": ["BCE", "FocalLoss", "AdaptiveFocalLoss"],
+        "optimizers": ["AdamW"],
+        "schedulers": ["linear_with_warmup", "cosine"],
+        "best_practices": "使用 AdaptiveFocalLoss 處理極度不平衡的資料集"
+      }
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents",
+      "main_files": [
+        "src/agents/criteria_agent.py",
+        "src/criteria/aggregate.py",
+        "src/suggestion/voi.py"
+      ],
+      "classes": ["CriteriaAgent"],
+      "functions": ["aggregate", "__init__"],
+      "io_spec": {
+        "input": {
+          "predictions": "List[Dict]",
+          "top_k": "int",
+          "uncertain_band": "Tuple[float, float]"
+        },
+        "output": {
+          "results": "List[Dict] with criteria_results and suggestions"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["inference", "aggregation", "suggestion_attachment"],
+      "model_support": ["any_pretrained_classifier"],
+      "preprocessing": ["none"],
+      "postprocessing": ["aggregation", "group_by_post", "attach_suggestions"],
+      "status": "production_ready",
+      "completeness_score": 80,
+      "missing_features": ["training", "evaluation"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["yaml"],
+      "config_system": "yaml",
+      "integration_notes": "這是一個 aggregator agent，負責將多個 criteria predictions 聚合並附加 suggestions。是 multi-agent pipeline 的一部分。"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Agent",
+      "main_files": [
+        "src/Agent/Criteria_Agent.py",
+        "src/Agent/Criteria_Agent_per_criterion.py",
+        "dsm-5_Criteria_Matching.py"
+      ],
+      "classes": ["TAIDE based LLM Agent"],
+      "functions": ["run_baseline", "run_rag", "build_baseline_prompt", "build_rag_prompt", "create_retriever"],
+      "io_spec": {
+        "input": {
+          "posts": "List[str]",
+          "criteria": "List[CriteriaNamedTuple]",
+          "retriever_type": "str (sparse/dense/hybrid)"
+        },
+        "output": {
+          "results": "List[str] LLM generated answers",
+          "retrieved_criteria": "List[List[Tuple[str, float]]]"
+        }
+      },
+      "api_type": "cli",
+      "capabilities": ["inference", "rag_retrieval", "baseline_prompting", "batch_processing"],
+      "model_support": ["TAIDE", "quantized_llm"],
+      "preprocessing": ["rag_retrieval", "sparse_retrieval_bm25", "dense_retrieval_bge", "hybrid_retrieval"],
+      "postprocessing": ["llm_generation", "csv_saving"],
+      "status": "prototype",
+      "completeness_score": 70,
+      "missing_features": ["training", "evaluation", "api_server", "fine_tuning"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["torch", "transformers", "tqdm"],
+      "config_system": "argparse",
+      "integration_notes": "使用 LLM (TAIDE) + RAG 進行 criteria 匹配。支援三種 retriever：sparse (BM25)、dense (BGE+FAISS)、hybrid。適合用於 zero-shot 或 few-shot 場景。需要大量 GPU 記憶體（約 8-16GB）。"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_Criteria",
+      "main_files": [
+        "src/dataaug_multi_both/cli/train.py",
+        "tests/unit/test_criteria_matching.py"
+      ],
+      "classes": ["CriteriaModel (inferred)"],
+      "functions": ["train", "evaluate", "predict"],
+      "io_spec": {
+        "input": {
+          "post": "str",
+          "criterion": "str"
+        },
+        "output": {
+          "match": "bool",
+          "confidence": "float"
+        }
+      },
+      "api_type": "cli",
+      "capabilities": ["training", "evaluation", "hpo"],
+      "model_support": ["deberta-v3"],
+      "preprocessing": ["tokenization", "data_augmentation"],
+      "postprocessing": ["sigmoid", "threshold_optimization"],
+      "status": "production_ready",
+      "completeness_score": 90,
+      "missing_features": ["api_server"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch", "hydra-core"],
+      "config_system": "hydra",
+      "integration_notes": "DeBERTa-v3 based criteria matching with data augmentation support. 支援 HPO 和 MLflow tracking。"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Criteria_Agent_Training",
+      "main_files": [
+        "Data/Groundtruth/criteria_evaluation.csv",
+        "Data/DSM-5/DSM_Criteria_Array_Fixed.json"
+      ],
+      "classes": ["BasicClassifier (inferred)"],
+      "functions": ["train", "evaluate"],
+      "io_spec": {
+        "input": "post-criteria pairs",
+        "output": "classification results"
+      },
+      "api_type": "script",
+      "capabilities": ["training", "evaluation"],
+      "model_support": ["bert", "roberta"],
+      "preprocessing": ["tokenization"],
+      "postprocessing": ["classification"],
+      "status": "incomplete",
+      "completeness_score": 50,
+      "missing_features": ["inference", "api", "documentation"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch"],
+      "config_system": "none",
+      "integration_notes": "基礎的訓練專案，主要用於實驗。不建議用於生產環境。"
+    }
+  ],
+
+  "EvidenceAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5",
+      "main_files": [
+        "src/agents/evidence_binding.py",
+        "src/training/train_evidence.py",
+        "src/training/train_evidence_optuna.py",
+        "src/training/evaluate_evidence.py",
+        "src/data/evidence_loader.py"
+      ],
+      "classes": ["EvidenceBindingAgent"],
+      "functions": ["forward", "predict", "predict_batch", "get_loss", "tokenize_inputs", "_extract_spans", "decode_spans", "create_evidence_binding_agent"],
+      "io_spec": {
+        "input": {
+          "posts": "List[str]",
+          "criteria": "List[str]",
+          "input_ids": "torch.Tensor",
+          "attention_mask": "torch.Tensor"
+        },
+        "output": {
+          "predictions": "List[List[Tuple[int, int]]] - spans",
+          "confidence": "torch.Tensor",
+          "logits": "Dict[start: Tensor, end: Tensor]",
+          "probabilities": "Dict[start: Tensor, end: Tensor]",
+          "decoded_spans": "List[List[str]]"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["training", "inference", "batch_predict", "evaluation", "hpo", "span_extraction"],
+      "model_support": ["deberta-v3", "roberta", "bert", "spanbert"],
+      "preprocessing": ["tokenization", "text_pair_encoding", "max_length_truncation"],
+      "postprocessing": ["sigmoid", "span_extraction", "span_decoding", "threshold_tuning", "label_smoothing"],
+      "status": "production_ready",
+      "completeness_score": 95,
+      "missing_features": ["api_server"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch", "hydra-core", "omegaconf", "optuna"],
+      "config_system": "hydra",
+      "integration_notes": "使用 QA-style 的 span prediction。預測 start/end positions 來抽取 evidence spans。支援 label smoothing 和 max_span_length 限制。可與 CriteriaAgent 配合形成完整的 pipeline。需約 2-4GB GPU 記憶體。",
+      "training_info": {
+        "loss_functions": ["BCEWithLogitsLoss", "BCEWithLogitsLoss + label_smoothing"],
+        "span_extraction": "threshold-based matching of start/end positions",
+        "max_span_length": "configurable, typically 50 tokens"
+      }
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents",
+      "main_files": [
+        "src/agents/evidence_agent.py",
+        "src/evidence/train_pairclf.py",
+        "src/evidence/infer_pairclf.py",
+        "src/hpo/evidence_hpo.py"
+      ],
+      "classes": ["EvidenceAgent"],
+      "functions": ["train", "infer", "__init__"],
+      "io_spec": {
+        "input": {
+          "dataset": "Dataset",
+          "output_dir": "Path",
+          "seed": "Optional[int]",
+          "hparams": "Optional[Dict[str, Any]]"
+        },
+        "output": {
+          "training_results": "Dict[str, Any]",
+          "inference_results": "Dict[str, Any]"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["training", "inference", "hpo"],
+      "model_support": ["deberta-v3", "roberta"],
+      "preprocessing": ["pairwise_classification"],
+      "postprocessing": ["classification"],
+      "status": "production_ready",
+      "completeness_score": 85,
+      "missing_features": ["api_server", "span_extraction"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch", "yaml"],
+      "config_system": "yaml",
+      "integration_notes": "這是一個 high-level wrapper，封裝了 evidence training 和 inference。使用 pairwise classification 方式。"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Agent",
+      "main_files": [
+        "src/Agent/Evidence_Agent.py"
+      ],
+      "classes": ["LLM Evidence Agent"],
+      "functions": ["extract_evidence"],
+      "io_spec": {
+        "input": {
+          "post": "str",
+          "matched_criteria": "List[Dict]"
+        },
+        "output": {
+          "evidence_spans": "List[str]"
+        }
+      },
+      "api_type": "function",
+      "capabilities": ["inference", "llm_based_extraction"],
+      "model_support": ["TAIDE"],
+      "preprocessing": ["rag_context_retrieval"],
+      "postprocessing": ["llm_generation"],
+      "status": "prototype",
+      "completeness_score": 60,
+      "missing_features": ["training", "evaluation", "batch_processing", "api"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["torch", "transformers"],
+      "config_system": "none",
+      "integration_notes": "使用 LLM 從 post 中抽取支持 criteria 的 evidence。基於 RAG 方法。實驗性質，未完整實作。"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Agent_spanBERT_Evidence_Binding",
+      "main_files": [
+        "criteria_binder/src/training/train.py",
+        "criteria_binder/src/training/eval.py"
+      ],
+      "classes": ["SpanBERTModel", "EvidenceBindingModel"],
+      "functions": ["train", "evaluate", "predict_spans"],
+      "io_spec": {
+        "input": {
+          "post": "str",
+          "criterion": "str"
+        },
+        "output": {
+          "spans": "List[Tuple[int, int]]",
+          "confidence": "float"
+        }
+      },
+      "api_type": "script",
+      "capabilities": ["training", "evaluation", "inference"],
+      "model_support": ["spanbert"],
+      "preprocessing": ["tokenization", "span_annotation"],
+      "postprocessing": ["span_extraction"],
+      "status": "production_ready",
+      "completeness_score": 85,
+      "missing_features": ["api_server", "batch_inference"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch"],
+      "config_system": "yaml",
+      "integration_notes": "專門使用 SpanBERT 進行 evidence span extraction。支援訓練和評估。"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/gemini_reranker",
+      "main_files": [
+        "src/criteriabind/models/span_extractor.py",
+        "src/criteriabind/train_evidence_span.py"
+      ],
+      "classes": ["SpanExtractor"],
+      "functions": ["forward", "compute_loss", "enable_gradient_checkpointing"],
+      "io_spec": {
+        "input": {
+          "inputs": "Dict[str, torch.Tensor]"
+        },
+        "output": {
+          "start_logits": "torch.Tensor",
+          "end_logits": "torch.Tensor"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["training", "inference"],
+      "model_support": ["deberta-v3", "roberta", "bert"],
+      "preprocessing": ["tokenization"],
+      "postprocessing": ["span_extraction", "crossentropy_loss"],
+      "status": "production_ready",
+      "completeness_score": 90,
+      "missing_features": ["batch_inference_api"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch"],
+      "config_system": "dataclass_config",
+      "integration_notes": "QA-style span predictor。簡潔的實作，使用 AutoModel + Linear layer。支援 gradient checkpointing。"
+    }
+  ],
+
+  "RAGAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_RAG",
+      "main_files": [
+        "src/models/rag_pipeline.py",
+        "src/models/rag_evaluator.py",
+        "src/models/comparison_rag_pipeline.py",
+        "src/models/embedding_model.py",
+        "src/models/faiss_index.py",
+        "src/models/spanbert_model.py"
+      ],
+      "classes": ["RAGPipeline", "BGEEmbeddingModel", "FAISSIndex", "SpanBERTModel", "CriteriaMatch", "RAGResult"],
+      "functions": ["build_index", "load_index", "process_post", "process_posts_batch", "evaluate_posts", "get_statistics", "save_results"],
+      "io_spec": {
+        "input": {
+          "post_text": "str",
+          "post_id": "int",
+          "posts": "List[Dict]"
+        },
+        "output": {
+          "post_id": "int",
+          "post_text": "str",
+          "matched_criteria": "List[CriteriaMatch]",
+          "total_matches": "int",
+          "processing_time": "float"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["inference", "batch_processing", "index_building", "evaluation", "statistics"],
+      "model_support": ["bge-m3", "spanbert-base-cased"],
+      "preprocessing": ["embedding_generation", "faiss_indexing", "criteria_retrieval"],
+      "postprocessing": ["spanbert_filtering", "ranking", "statistics"],
+      "status": "production_ready",
+      "completeness_score": 92,
+      "missing_features": ["training", "fine_tuning", "api_server"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch", "faiss-gpu", "numpy", "pandas"],
+      "config_system": "constructor_parameters",
+      "integration_notes": "完整的 RAG pipeline：使用 BGE-M3 做 embedding，FAISS 做檢索，SpanBERT 做 reranking/filtering。支援 IVFFlat index 和 cosine similarity。可處理大規模 criteria 檢索。需要 GPU 支援（約 4-8GB）。pipeline 包含兩階段：retrieval + reranking。",
+      "performance": {
+        "similarity_threshold": 0.7,
+        "spanbert_threshold": 0.5,
+        "top_k": 10,
+        "index_type": "IVFFlat",
+        "metric": "cosine"
+      }
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_RAG_Agent",
+      "main_files": [
+        "rag_spanbert_classifier.py",
+        "rag_retrieval.py",
+        "quick_rag_test.py",
+        "test_rag_system.py"
+      ],
+      "classes": ["DSMCriteriaRetriever", "RAGDSMCriteriaDataset"],
+      "functions": ["get_retrieved_criteria_for_classification", "build_index", "retrieve"],
+      "io_spec": {
+        "input": {
+          "post": "str",
+          "top_k": "int",
+          "threshold": "float"
+        },
+        "output": {
+          "retrieved_criteria": "Dict[str, str]",
+          "scores": "List[float]"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["inference", "retrieval", "classification"],
+      "model_support": ["bge", "spanbert"],
+      "preprocessing": ["embedding", "faiss_retrieval"],
+      "postprocessing": ["classification"],
+      "status": "production_ready",
+      "completeness_score": 85,
+      "missing_features": ["training", "evaluation_metrics"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch", "faiss", "sklearn"],
+      "config_system": "constructor",
+      "integration_notes": "RAG retriever 搭配 SpanBERT classifier。支援 top-k retrieval 和 threshold filtering。可用於 classification task。"
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Agent",
+      "main_files": [
+        "src/Utils/RAG.py",
+        "taide_dsm5_rag_fixed.py"
+      ],
+      "classes": ["SparseRetriever", "DenseRetriever", "HybridRetriever"],
+      "functions": ["retrieve", "retrieve_with_texts"],
+      "io_spec": {
+        "input": {
+          "query": "str",
+          "top_k": "int"
+        },
+        "output": {
+          "retrieved": "List[Tuple[str, float]]"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["retrieval", "sparse_search", "dense_search", "hybrid_search"],
+      "model_support": ["bge-base-en-v1.5", "bm25"],
+      "preprocessing": ["tfidf", "embedding"],
+      "postprocessing": ["score_combination"],
+      "status": "production_ready",
+      "completeness_score": 88,
+      "missing_features": ["index_persistence", "batch_retrieval"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["scikit-learn", "torch", "transformers", "faiss"],
+      "config_system": "constructor",
+      "integration_notes": "三種 retriever：Sparse (BM25/TF-IDF)、Dense (BGE embedding + FAISS)、Hybrid (weighted combination)。可用於 LLM 的 RAG pipeline。"
+    }
+  ],
+
+  "RerankerAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/gemini_reranker",
+      "main_files": [
+        "src/criteriabind/judge/gemini.py",
+        "src/criteriabind/models/ranker.py",
+        "src/criteriabind/candidate_generation.py",
+        "src/criteriabind/pair_builder.py"
+      ],
+      "classes": ["GeminiJudge", "CrossEncoderRanker", "GeminiCache"],
+      "functions": ["batch", "score", "_call_gemini", "_build_prompt", "compute_loss", "forward"],
+      "io_spec": {
+        "input": {
+          "jobs": "Iterable[JudgingJob]",
+          "candidates": "List[Candidate]",
+          "criterion_text": "str",
+          "note_text": "str"
+        },
+        "output": {
+          "judgments": "List[Judgment]",
+          "best_idx": "int",
+          "preferences": "List[Preference]",
+          "ranking": "List[int]",
+          "evidence_spans": "List[EvidenceSpan]",
+          "rationale": "str"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["llm_judging", "preference_learning", "training", "inference", "caching", "batch_processing"],
+      "model_support": ["gemini-1.5-pro", "gemini-2.5-flash", "deberta-v3", "roberta"],
+      "preprocessing": ["candidate_generation", "prompt_building"],
+      "postprocessing": ["json_parsing", "preference_extraction", "pairwise_ranking", "softplus_loss", "hinge_loss"],
+      "status": "production_ready",
+      "completeness_score": 98,
+      "missing_features": [],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["google-generativeai", "vertexai", "transformers", "torch", "sqlite3"],
+      "config_system": "pydantic_dataclass",
+      "integration_notes": "這是一個完整的 LLM-as-Judge + Cross-Encoder ranker 系統。Gemini Judge 用於產生 preference labels，CrossEncoderRanker 用於訓練 BERT-based reranker。支援 caching（SQLite）、retry logic、concurrent processing、budget control。可用於 preference learning pipeline。訓練使用 pairwise ranking loss（RankNet 或 hinge loss）。非常適合用於 criteria matching 的 reranking。",
+      "features": {
+        "gemini_judge": [
+          "JSON mode enforcement",
+          "Two-pass consistency checking",
+          "Safety filtering",
+          "Exponential backoff retry",
+          "SQLite caching",
+          "Vertex AI support",
+          "Cost tracking",
+          "Rate limiting"
+        ],
+        "cross_encoder": [
+          "Pairwise ranking",
+          "RankNet loss",
+          "Hinge loss with margin",
+          "Baseline checkpoint loading",
+          "Gradient checkpointing",
+          "Weight support for importance sampling"
+        ]
+      }
+    }
+  ],
+
+  "SuggestionAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents",
+      "main_files": [
+        "src/agents/suggestion_agent.py",
+        "src/suggestion/voi.py"
+      ],
+      "classes": ["SuggestionAgent"],
+      "functions": ["enrich", "attach_suggestions", "suggest_for_post"],
+      "io_spec": {
+        "input": {
+          "criteria_results": "List[Dict]",
+          "grouped_predictions": "Dict[str, List[Dict]]",
+          "top_k": "int",
+          "uncertain_band": "Tuple[float, float]"
+        },
+        "output": {
+          "enriched_results": "None (in-place modification)"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["suggestion_generation", "uncertainty_detection", "voi_calculation"],
+      "model_support": ["any"],
+      "preprocessing": ["none"],
+      "postprocessing": ["voi_ranking", "uncertainty_filtering"],
+      "status": "production_ready",
+      "completeness_score": 85,
+      "missing_features": ["standalone_api", "batch_processing"],
+      "todos": [],
+      "errors": [],
+      "dependencies": [],
+      "config_system": "constructor",
+      "integration_notes": "用於生成 next-question suggestions。基於 Value of Information (VoI) 概念。識別 uncertain predictions（在 uncertain_band 內）並建議最有價值的問題。與 CriteriaAgent 整合使用。"
+    }
+  ],
+
+  "EvaluationAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents",
+      "main_files": [
+        "src/agents/evaluation_agent.py",
+        "src/eval/metrics.py",
+        "src/eval/calibration.py",
+        "src/eval/report.py"
+      ],
+      "classes": ["EvaluationAgent"],
+      "functions": ["evaluate", "run_gate_check", "compute_evidence_metrics", "compute_criteria_metrics", "fit_temperature_scaling"],
+      "io_spec": {
+        "input": {
+          "predictions": "List[Dict]",
+          "criteria_results": "List[Dict]",
+          "dataset": "Iterable[Dict]",
+          "evaluation_dir": "Path"
+        },
+        "output": {
+          "val_metrics": "Path",
+          "test_metrics": "Path",
+          "calibration": "Path"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["evaluation", "metrics_computation", "calibration", "gate_checking"],
+      "model_support": ["any"],
+      "preprocessing": ["none"],
+      "postprocessing": ["temperature_scaling", "threshold_optimization", "metrics_aggregation"],
+      "status": "production_ready",
+      "completeness_score": 90,
+      "missing_features": ["advanced_calibration_methods"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["subprocess"],
+      "config_system": "constructor",
+      "integration_notes": "用於評估 criteria 和 evidence agents 的性能。計算 metrics（precision, recall, F1, AUROC, ECE）。支援 temperature scaling 校準。可執行 gate checks 確保模型品質。"
+    }
+  ],
+
+  "PatientDialogAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Agent",
+      "main_files": [
+        "src/Agent/Patient_Agent.py"
+      ],
+      "classes": ["PatientAgent"],
+      "functions": ["respond", "generate_response"],
+      "io_spec": {
+        "input": {
+          "counselor_question": "str",
+          "patient_profile": "Dict"
+        },
+        "output": {
+          "patient_response": "str"
+        }
+      },
+      "api_type": "function",
+      "capabilities": ["llm_dialog", "patient_simulation"],
+      "model_support": ["TAIDE"],
+      "preprocessing": ["profile_context"],
+      "postprocessing": ["llm_generation"],
+      "status": "prototype",
+      "completeness_score": 40,
+      "missing_features": ["training", "evaluation", "state_management", "api", "documentation"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["torch", "transformers"],
+      "config_system": "none",
+      "integration_notes": "使用 LLM 模擬病患在對話中的角色。基於病患 profile 產生回應。實驗性質，未完整實作。需要 TAIDE 模型支援。"
+    }
+  ],
+
+  "CounselorDialogAgent": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Agent",
+      "main_files": [
+        "src/Agent/Counselor_Agent.py"
+      ],
+      "classes": ["CounselorAgent"],
+      "functions": ["guide_conversation", "ask_question"],
+      "io_spec": {
+        "input": {
+          "patient_response": "str",
+          "diagnosis_state": "Dict"
+        },
+        "output": {
+          "next_question": "str"
+        }
+      },
+      "api_type": "function",
+      "capabilities": ["conversation_guidance", "question_generation"],
+      "model_support": ["rule_based", "llm"],
+      "preprocessing": ["state_analysis"],
+      "postprocessing": ["question_selection"],
+      "status": "prototype",
+      "completeness_score": 35,
+      "missing_features": ["training", "evaluation", "strategy_optimization", "api", "full_implementation"],
+      "todos": [],
+      "errors": [],
+      "dependencies": [],
+      "config_system": "none",
+      "integration_notes": "設計用於引導病患對話以收集診斷資訊。未完整實作，僅有架構。需要與 SuggestionAgent 整合。"
+    }
+  ],
+
+  "MultiAgentPipeline": [
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5",
+      "main_files": [
+        "src/agents/multi_agent_pipeline.py",
+        "tests/agents/test_multi_agent_pipeline.py"
+      ],
+      "classes": ["MultiAgentPipeline", "JointTrainingModel", "PipelineOutput"],
+      "functions": ["forward", "predict", "predict_batch", "to"],
+      "io_spec": {
+        "input": {
+          "input_ids": "torch.Tensor",
+          "attention_mask": "torch.Tensor",
+          "run_evidence": "bool"
+        },
+        "output": {
+          "criteria_match": "torch.Tensor",
+          "criteria_confidence": "torch.Tensor",
+          "criteria_probabilities": "torch.Tensor",
+          "evidence_spans": "Optional[List[List[Tuple[int, int]]]]",
+          "evidence_confidence": "Optional[torch.Tensor]",
+          "evidence_text": "Optional[List[List[str]]]",
+          "overall_confidence": "torch.Tensor"
+        }
+      },
+      "api_type": "class_method",
+      "capabilities": ["sequential_pipeline", "joint_training", "cascaded_inference"],
+      "model_support": ["deberta-v3", "roberta", "bert"],
+      "preprocessing": ["tokenization"],
+      "postprocessing": ["span_filtering", "confidence_aggregation"],
+      "status": "production_ready",
+      "completeness_score": 95,
+      "missing_features": ["api_server", "async_processing"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch"],
+      "config_system": "dataclass",
+      "integration_notes": "完整的 multi-agent pipeline：結合 CriteriaMatchingAgent 和 EvidenceBindingAgent。支援兩種模式：(1) sequential pipeline - 先 criteria matching，正樣本才做 evidence binding；(2) joint training - shared encoder 或 separate encoders。可選擇是否共享 BERT encoder。支援 multi-task loss。這是將多個 agents 整合的標準方式。",
+      "modes": {
+        "sequential": "criteria_agent -> evidence_agent (conditional)",
+        "joint_shared": "shared_bert -> [criteria_head, evidence_heads]",
+        "joint_separate": "separate encoders with multi-task loss"
+      }
+    },
+    {
+      "project_path": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_Evaluation",
+      "main_files": [
+        "src/agents/multi_agent_pipeline.py",
+        "tests/agents/test_multi_agent_pipeline.py"
+      ],
+      "classes": ["MultiAgentPipeline"],
+      "functions": ["run_pipeline", "evaluate_pipeline"],
+      "io_spec": {
+        "input": "post-criteria pairs",
+        "output": "full pipeline results"
+      },
+      "api_type": "class_method",
+      "capabilities": ["pipeline_orchestration", "evaluation"],
+      "model_support": ["multiple"],
+      "preprocessing": ["data_preparation"],
+      "postprocessing": ["results_aggregation"],
+      "status": "production_ready",
+      "completeness_score": 88,
+      "missing_features": ["async_support"],
+      "todos": [],
+      "errors": [],
+      "dependencies": ["transformers", "torch"],
+      "config_system": "hydra",
+      "integration_notes": "用於 evaluation 的 multi-agent pipeline。與 DataAugmentation_ReDSM5 類似但側重於評估。"
+    }
+  ],
+
+  "OtherAgents": [
+    {
+      "agent_type": "TranslationAgent",
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Agent",
+      "main_files": [
+        "src/Agent/Translation_Agent.py"
+      ],
+      "classes": ["TranslationAgent"],
+      "functions": ["translate"],
+      "io_spec": {
+        "input": {
+          "text": "str",
+          "source_lang": "str",
+          "target_lang": "str"
+        },
+        "output": {
+          "translated_text": "str"
+        }
+      },
+      "api_type": "function",
+      "capabilities": ["translation"],
+      "model_support": ["translation_model"],
+      "status": "prototype",
+      "completeness_score": 30,
+      "missing_features": ["implementation", "api", "evaluation"],
+      "integration_notes": "用於翻譯。未完整實作。"
+    }
+  ],
+
+  "NotFoundAgents": {
+    "RiskAgent": {
+      "status": "not_found",
+      "searched_patterns": ["risk", "safety", "suicide", "self_harm"],
+      "notes": "未找到專門的風險/安全評估 Agent。這個功能可能需要從頭開發，或者整合到其他 Agent 中（例如作為 Criteria Agent 的一個特殊 criteria 類別）。"
+    },
+    "PatientGraphAgent": {
+      "status": "not_found",
+      "searched_patterns": ["graph", "gnn", "patient_graph", "relationship"],
+      "notes": "未找到 GNN 或病患關係圖相關的實作。若需要此功能，需要從頭開發。可考慮使用 PyG (PyTorch Geometric) 或 DGL (Deep Graph Library)。"
+    },
+    "ReportAgent": {
+      "status": "empty_directory",
+      "project_path": "/home/user/LLM_Projects/2080_LLM/Psy_Report_Agent",
+      "notes": "Psy_Report_Agent 目錄存在但是空的。報告生成功能可能需要開發，或者使用 template-based 或 LLM-based 方法。"
+    }
+  },
+
+  "IntegrationRecommendations": {
+    "high_priority_agents": [
+      {
+        "agent": "CriteriaAgent",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5/src/agents/criteria_matching.py",
+        "reason": "最完整的實作，支援多種 loss functions，有完整的訓練和評估流程",
+        "gpu_memory": "2-4GB",
+        "deployment_readiness": "production_ready"
+      },
+      {
+        "agent": "EvidenceAgent",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5/src/agents/evidence_binding.py",
+        "reason": "完整的 span extraction 實作，與 CriteriaAgent 配合良好",
+        "gpu_memory": "2-4GB",
+        "deployment_readiness": "production_ready"
+      },
+      {
+        "agent": "RAGAgent",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/Psy_RAG/src/models/rag_pipeline.py",
+        "reason": "完整的 RAG pipeline，包含 embedding、indexing、retrieval、reranking",
+        "gpu_memory": "4-8GB",
+        "deployment_readiness": "production_ready"
+      },
+      {
+        "agent": "RerankerAgent",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/gemini_reranker",
+        "reason": "LLM-as-Judge + Cross-Encoder，非常適合 preference learning",
+        "gpu_memory": "2-4GB (Cross-Encoder), API-based (Gemini)",
+        "deployment_readiness": "production_ready"
+      },
+      {
+        "agent": "MultiAgentPipeline",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5/src/agents/multi_agent_pipeline.py",
+        "reason": "標準的 multi-agent 整合方式，支援 sequential 和 joint training",
+        "gpu_memory": "4-8GB",
+        "deployment_readiness": "production_ready"
+      }
+    ],
+    "medium_priority_agents": [
+      {
+        "agent": "SuggestionAgent",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents/src/agents/suggestion_agent.py",
+        "reason": "基於 VoI 的 suggestion generation，適合 active learning",
+        "deployment_readiness": "production_ready"
+      },
+      {
+        "agent": "EvaluationAgent",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/DataAug_DeBERTa_FourAgents/src/agents/evaluation_agent.py",
+        "reason": "完整的評估和校準功能",
+        "deployment_readiness": "production_ready"
+      }
+    ],
+    "low_priority_agents": [
+      {
+        "agent": "PatientDialogAgent",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/Psy_Agent/src/Agent/Patient_Agent.py",
+        "reason": "實驗性質，需要大量開發工作",
+        "deployment_readiness": "prototype"
+      },
+      {
+        "agent": "CounselorDialogAgent",
+        "recommended_implementation": "/home/user/LLM_Projects/2080_LLM/Psy_Agent/src/Agent/Counselor_Agent.py",
+        "reason": "未完整實作，需要從頭開發",
+        "deployment_readiness": "prototype"
+      }
+    ],
+    "agents_to_develop": [
+      {
+        "agent": "RiskAgent",
+        "development_approach": "可作為 CriteriaAgent 的特殊子類，專門處理自殺、自傷、他傷等風險 criteria",
+        "estimated_effort": "medium",
+        "dependencies": ["CriteriaAgent", "specialized_risk_dataset"]
+      },
+      {
+        "agent": "PatientGraphAgent",
+        "development_approach": "使用 PyG 或 DGL 建立病患-症狀-criteria 的知識圖譜",
+        "estimated_effort": "high",
+        "dependencies": ["graph_construction", "GNN_training", "knowledge_base"]
+      },
+      {
+        "agent": "ReportAgent",
+        "development_approach": "template-based 或 LLM-based 報告生成",
+        "estimated_effort": "low-medium",
+        "dependencies": ["report_templates", "llm_for_generation"]
+      }
+    ]
+  },
+
+  "DeploymentConsiderations": {
+    "gpu_requirements": {
+      "minimum": "RTX 2080 (8GB) - 可運行單個 BERT-based agent",
+      "recommended": "RTX 3090 (24GB) - 可同時運行多個 agents 或 larger models",
+      "optimal": "RTX 4090 (24GB) - 最佳性能，支援 LLM-based agents"
+    },
+    "model_serving": {
+      "options": [
+        "FastAPI + uvicorn - 適合 RESTful API",
+        "Triton Inference Server - 適合高吞吐量",
+        "TorchServe - PyTorch 官方方案"
+      ],
+      "batch_processing": "建議使用 batch inference 提升吞吐量"
+    },
+    "scalability": {
+      "horizontal": "可將不同 agents 部署在不同機器/GPU",
+      "vertical": "使用 gradient checkpointing 和 mixed precision 減少記憶體使用",
+      "caching": "RAG retrieval 和 LLM responses 都應該 cache"
+    }
+  },
+
+  "CodeQualityAssessment": {
+    "best_practices_projects": [
+      "/home/user/LLM_Projects/2080_LLM/DataAugmentation_ReDSM5",
+      "/home/user/LLM_Projects/2080_LLM/gemini_reranker",
+      "/home/user/LLM_Projects/2080_LLM/Psy_RAG"
+    ],
+    "common_patterns": {
+      "config_management": "Hydra (preferred), YAML, dataclass",
+      "training_framework": "PyTorch + Transformers",
+      "experiment_tracking": "MLflow",
+      "hyperparameter_optimization": "Optuna",
+      "testing": "pytest",
+      "documentation": "AGENTS.md, CLAUDE.md files present"
+    },
+    "areas_for_improvement": [
+      "API server implementations - 大多數 agents 缺少 FastAPI/Flask wrappers",
+      "Async processing - 缺少 async/await 支援",
+      "Containerization - 少數專案有 Docker，但不完整",
+      "CI/CD - 缺少自動化測試和部署 pipelines",
+      "Documentation - 部分專案文檔不完整"
+    ]
+  }
+}

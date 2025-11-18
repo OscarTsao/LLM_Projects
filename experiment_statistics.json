@@ -1,0 +1,308 @@
+{
+  "analysis_metadata": {
+    "generated_at": "2025-11-15",
+    "analyzer_version": "2.0",
+    "base_path": "/home/user/LLM_Projects",
+    "total_experiments": 360,
+    "total_files_processed": 193,
+    "unique_projects": 7,
+    "unique_experiment_ids": 90
+  },
+  "overall_statistics": {
+    "by_task_type": {
+      "multi_task_criteria_evidence": {
+        "total": 324,
+        "val": 162,
+        "test": 162,
+        "best_score": 0.2841,
+        "best_metric": "macro_f1_mean",
+        "best_experiment": "trial_0119",
+        "best_project": "2080_LLM/DataAug_DeBERTa_Evidence"
+      },
+      "criteria_matching": {
+        "total": 20,
+        "val": 10,
+        "test": 10,
+        "best_score": 0.4759,
+        "best_metric": "f1_macro",
+        "best_experiment": "fold_2",
+        "best_project": "4070ti_LLM/Criteria_Baseline_5Fold_NoAug"
+      },
+      "evidence_sentence": {
+        "total": 2,
+        "val": 1,
+        "test": 1,
+        "best_score": 0.8197,
+        "best_metric": "f1",
+        "best_experiment": "test_metrics",
+        "best_project": "2080_LLM/DataAugmentation_Evaluation"
+      },
+      "reranker": {
+        "total": 4,
+        "val": 2,
+        "test": 2,
+        "best_score": null,
+        "best_metric": "ndcg",
+        "note": "No valid NDCG metrics found"
+      },
+      "unknown": {
+        "total": 10,
+        "val": 5,
+        "test": 5,
+        "best_score": 0.8941,
+        "best_metric": "accuracy"
+      }
+    },
+    "by_model_family": {
+      "deberta": {
+        "total_experiments": 324,
+        "test_experiments": 162,
+        "avg_performance": 0.122,
+        "min_performance": 0.0741,
+        "max_performance": 0.2841,
+        "std_performance": 0.045,
+        "primary_task": "multi_task_criteria_evidence"
+      },
+      "roberta": {
+        "total_experiments": 10,
+        "test_experiments": 5,
+        "avg_performance": 0.4746,
+        "min_performance": 0.4731,
+        "max_performance": 0.4759,
+        "std_performance": 0.0011,
+        "primary_task": "criteria_matching"
+      },
+      "unknown": {
+        "total_experiments": 26,
+        "test_experiments": 13,
+        "note": "Model information not recorded in evaluation files"
+      }
+    },
+    "by_gpu_type": {
+      "2080": {
+        "total_experiments": 168,
+        "test_experiments": 84,
+        "projects": ["DataAug_DeBERTa_Evidence", "DataAugmentation_Evaluation", "gemini_reranker"],
+        "avg_performance": 0.8422,
+        "note": "Average calculated from 3 valid test experiments"
+      },
+      "4090": {
+        "total_experiments": 164,
+        "test_experiments": 82,
+        "projects": ["DataAug_DeBERTa_Evidence", "gemini_reranker"],
+        "avg_performance": 0.8535,
+        "note": "Average calculated from 1 valid test experiment"
+      },
+      "4070ti": {
+        "total_experiments": 20,
+        "test_experiments": 10,
+        "projects": ["Criteria_Baseline_5Fold_NoAug"],
+        "avg_performance": 0.4746
+      },
+      "3090": {
+        "total_experiments": 8,
+        "test_experiments": 4,
+        "projects": ["DataAugmentation_Evaluation"],
+        "avg_performance": 0.7949
+      }
+    },
+    "by_augmentation": {
+      "mixed": {
+        "total_experiments": 340,
+        "test_experiments": 170,
+        "avg_performance": 0.82,
+        "note": "Includes various augmentation strategies - heterogeneous"
+      },
+      "none": {
+        "total_experiments": 20,
+        "test_experiments": 10,
+        "avg_performance": 0.4746,
+        "note": "Pure baseline without data augmentation"
+      }
+    }
+  },
+  "top_performers": {
+    "criteria_matching": [
+      {
+        "rank": 1,
+        "score": 0.4759,
+        "metric": "f1_macro",
+        "model": "roberta-base",
+        "project": "4070ti_LLM/Criteria_Baseline_5Fold_NoAug",
+        "experiment": "fold_2",
+        "augmentation": "none"
+      },
+      {
+        "rank": 2,
+        "score": 0.4754,
+        "metric": "f1_macro",
+        "model": "roberta-base",
+        "project": "4070ti_LLM/Criteria_Baseline_5Fold_NoAug",
+        "experiment": "fold_3",
+        "augmentation": "none"
+      },
+      {
+        "rank": 3,
+        "score": 0.4747,
+        "metric": "f1_macro",
+        "model": "roberta-base",
+        "project": "4070ti_LLM/Criteria_Baseline_5Fold_NoAug",
+        "experiment": "fold_4",
+        "augmentation": "none"
+      }
+    ],
+    "evidence_sentence": [
+      {
+        "rank": 1,
+        "score": 0.8197,
+        "metric": "f1",
+        "model": "unknown",
+        "project": "2080_LLM/DataAugmentation_Evaluation",
+        "experiment": "test_metrics",
+        "augmentation": "mixed"
+      }
+    ],
+    "multi_task_criteria_evidence": [
+      {
+        "rank": 1,
+        "score": 0.2841,
+        "metric": "macro_f1_mean",
+        "model": "microsoft/deberta-base",
+        "project": "2080_LLM/DataAug_DeBERTa_Evidence",
+        "experiment": "trial_0119",
+        "augmentation": "mixed",
+        "details": {
+          "evidence_macro_f1": 0.4571,
+          "criteria_macro_f1": 0.1111,
+          "evidence_accuracy": 0.5714,
+          "criteria_accuracy": 0.2857
+        }
+      },
+      {
+        "rank": 2,
+        "score": 0.2417,
+        "metric": "macro_f1_mean",
+        "model": "microsoft/deberta-base",
+        "project": "2080_LLM/DataAug_DeBERTa_Evidence",
+        "experiment": "trial_0006",
+        "augmentation": "mixed"
+      },
+      {
+        "rank": 3,
+        "score": 0.2286,
+        "metric": "macro_f1_mean",
+        "model": "microsoft/deberta-base",
+        "project": "2080_LLM/DataAug_DeBERTa_Evidence",
+        "experiment": "trial_0021",
+        "augmentation": "mixed"
+      }
+    ]
+  },
+  "key_findings": {
+    "1_multi_task_underperformance": {
+      "issue": "Multi-task models show significantly lower performance (best: 0.284) compared to typical NLP benchmarks (>0.7)",
+      "evidence_subtask_performance": 0.457,
+      "criteria_subtask_performance": 0.111,
+      "hypothesis": [
+        "Task difficulty - criteria matching is inherently harder",
+        "Insufficient training data",
+        "Suboptimal task weighting in loss function",
+        "Need for task-specific learning rates",
+        "Possible architecture issues"
+      ]
+    },
+    "2_baseline_stability": {
+      "observation": "RoBERTa baseline shows excellent stability across 5-fold CV",
+      "mean_f1": 0.4746,
+      "std": 0.0011,
+      "conclusion": "Reliable baseline established for criteria matching"
+    },
+    "3_evidence_task_success": {
+      "observation": "Evidence sentence extraction performs well (F1: 0.820)",
+      "contrast_with_multi_task": "Evidence in multi-task: 0.457 vs. single-task: 0.820",
+      "hypothesis": "Multi-task interference or different data/model setup"
+    },
+    "4_augmentation_effect_unclear": {
+      "issue": "Cannot fairly compare due to confounding variables",
+      "confounds": [
+        "Different tasks (multi-task vs. single-task)",
+        "Different models (DeBERTa vs. RoBERTa)",
+        "Different projects and data splits"
+      ],
+      "recommendation": "Need controlled A/B testing with same model and task"
+    },
+    "5_hpo_inefficiency": {
+      "observation": "132 DeBERTa trials but best score only 0.284",
+      "optuna_trials": 132,
+      "improvement_over_worst": 0.21,
+      "recommendation": "Analyze parameter space coverage and narrow search range"
+    }
+  },
+  "recommendations": {
+    "immediate_actions": [
+      "Investigate multi-task low performance - check data quality and task weights",
+      "Establish baseline suite for all tasks with standardized models (BERT/RoBERTa/DeBERTa)",
+      "Conduct controlled A/B test for data augmentation effects"
+    ],
+    "short_term_improvements": [
+      "Optimize multi-task architecture (try different shared layer designs)",
+      "Improve HPO strategy based on trial analysis",
+      "Standardize experiment tracking with MLflow"
+    ],
+    "medium_term_goals": [
+      "Explore alternative approaches (prompt-based, few-shot)",
+      "Implement ensemble methods",
+      "Archive low-performing experiments and reallocate resources"
+    ],
+    "priority_ranking": [
+      "1. Fix multi-task underperformance (highest impact)",
+      "2. Build comprehensive baseline suite (foundation)",
+      "3. Systematic augmentation testing (scientific rigor)",
+      "4. Optimize HPO efficiency (resource utilization)"
+    ]
+  },
+  "data_quality_notes": {
+    "missing_information": [
+      "Many experiments lack model_name field",
+      "Missing hyperparameter details in most experiments",
+      "No training time or convergence information",
+      "Reranker experiments missing NDCG metrics"
+    ],
+    "inconsistencies": [
+      "Different JSON schemas across projects",
+      "Inconsistent metric naming (f1 vs f1_score vs macro_f1)",
+      "Mix of validation and test results in same files"
+    ],
+    "improvements_needed": [
+      "Standardize evaluation_report.json schema",
+      "Always record model name, hyperparameters, and training metadata",
+      "Use experiment tracking platform (MLflow/W&B) for consistency"
+    ]
+  },
+  "generated_files": {
+    "all_experiments.json": {
+      "description": "Complete list of all 360 experiments with full details",
+      "size_lines": 7945,
+      "format": "JSON array of experiment objects"
+    },
+    "best_experiments_summary.json": {
+      "description": "Best configuration for each task type",
+      "size_lines": 90,
+      "format": "JSON object organized by task type"
+    },
+    "EXPERIMENT_ANALYSIS_REPORT.txt": {
+      "description": "Text-based statistical report with leaderboards",
+      "size_lines": 198,
+      "format": "Plain text with tables"
+    },
+    "COMPREHENSIVE_EXPERIMENT_SUMMARY.md": {
+      "description": "Detailed analysis report in Markdown with action items",
+      "size_lines": 352,
+      "format": "Markdown with tables and sections"
+    },
+    "experiment_statistics.json": {
+      "description": "Quick reference statistics and findings (this file)",
+      "format": "Structured JSON for programmatic access"
+    }
+  }
+}
